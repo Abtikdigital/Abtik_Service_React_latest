@@ -240,6 +240,7 @@ const ProjectFunding = () => {
                          text-white lg:text-white
                          paragraph !text-white
                          max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
+                         style={{fontFamily:"Montserrat Alternates"}}
                     >
                         Transform your project vision into reality with specialized funding solutions.
                         Access ₹1 crore to ₹500 crore financing with milestone-based disbursement,
@@ -364,7 +365,9 @@ const ProjectFunding = () => {
                     >
                         What Is Project Funding?
                     </h2>
-                    <p className="paragraph !text-white mx-auto text-left">
+                    <p className="paragraph !text-white mx-auto text-left"
+                    style={{fontFamily:"Montserrat Alternates"}}
+                    >
                         Project Funding is specialized financing designed to support specific projects from 
                         conception to completion. Unlike traditional working capital loans, project funding 
                         involves structured financing with phased disbursement linked to project milestones, 
@@ -540,7 +543,9 @@ const ProjectFunding = () => {
                     Project Funding Benefits & Requirements
                 </h2>
                 <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
-                    <p className="text-sm md:text-base text-gray-600 text-center">
+                    <p className="text-sm md:text-base text-gray-600 text-center"
+                    style={{fontFamily:"Montserrat Alternates"}}
+                    >
                         Project funding provides comprehensive financial support with structured disbursement, 
                         flexible repayment terms, and specialized features designed to match project implementation 
                         timelines and cash flow generation patterns.

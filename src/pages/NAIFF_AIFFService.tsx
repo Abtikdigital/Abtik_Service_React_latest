@@ -240,6 +240,7 @@ const NAIFFAIFF = () => {
                          text-white lg:text-white
                          paragraph !text-white
                          max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
+                           style={{fontFamily:"Montserrat Alternates"}}
                     >
                         Scale your innovative business with strategic equity investments from NAIFF/AIFF funds.
                         Access ₹50 lakh to ₹50 crore funding along with expert guidance,
@@ -364,7 +365,9 @@ const NAIFFAIFF = () => {
                     >
                         What Is NAIFF/AIFF Investment?
                     </h2>
-                    <p className="paragraph !text-white mx-auto text-left">
+                    <p className="paragraph !text-white mx-auto text-left"
+                      style={{fontFamily:"Montserrat Alternates"}}
+                    >
                         National Alternative Investment Fund (NAIFF) and Alternative Investment Fund (AIFF) are 
                         specialized investment vehicles designed to provide equity funding to innovative startups, 
                         MSMEs, and growth-stage companies. These funds focus on venture capital, private equity, 
@@ -495,7 +498,9 @@ const NAIFFAIFF = () => {
                     NAIFF/AIFF Benefits & Requirements
                 </h2>
                 <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
-                    <p className="text-sm md:text-base text-gray-600 text-center">
+                    <p className="text-sm md:text-base text-gray-600 text-center"
+                      style={{fontFamily:"Montserrat Alternates"}}
+                    >
                         NAIFF/AIFF investments provide not just capital but strategic value addition through expertise, 
                         networks, and guidance to accelerate business growth and market penetration.
                     </p>

@@ -240,6 +240,7 @@ const PMEGP = () => {
                          text-white lg:text-white
                          paragraph !text-white
                          max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
+                         style={{fontFamily:"Montserrat Alternates"}}
                     >
                         Launch your manufacturing or service business with PMEGP scheme benefits.
                         Get up to ₹25 lakh funding with government subsidy and create employment
@@ -364,7 +365,9 @@ const PMEGP = () => {
                     >
                         What Is PMEGP Scheme?
                     </h2>
-                    <p className="paragraph !text-white mx-auto text-left">
+                    <p className="paragraph !text-white mx-auto text-left"
+                    style={{fontFamily:"Montserrat Alternates"}}
+                    >
                         Prime Minister's Employment Generation Programme (PMEGP) is a flagship credit-linked
                         subsidy scheme launched by the Government of India to generate employment through
                         establishment of micro enterprises in manufacturing, service, and trading sectors.
@@ -495,7 +498,9 @@ const PMEGP = () => {
                     PMEGP Benefits & Eligibility
                 </h2>
                 <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
-                    <p className="text-sm md:text-base text-gray-600 text-center">
+                    <p className="text-sm md:text-base text-gray-600 text-center"
+                    style={{fontFamily:"Montserrat Alternates"}}
+                    >
                         PMEGP scheme offers comprehensive financial support with government subsidy to establish
                         micro enterprises and generate sustainable employment opportunities.
                     </p>

@@ -208,7 +208,13 @@ const TDCompliance = () => {
                         Stay 100% Tax Compliant with{" "}
                         <span className="text-[#3CA2E2] font-extrabold block sm:inline">TDS (Tax Deducted at Source)</span> Services
                     </h1>
-                    <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-white paragraph max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0">
+                    <p className="text-sm sm:text-base md:text-lg lg:text-xl
+                         leading-relaxed sm:leading-relaxed md:leading-relaxed
+                         text-white lg:text-white
+                         paragraph !text-white
+                         max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
+                    style={{fontFamily:"Montserrat Alternates"}}
+                    >
                         Complete TDS compliance and quarterly TDS return filing—avoid penalties, protect deductions, and build trust with timely and accurate processes.
                     </p>
                     <div className="pt-2 sm:pt-4">
@@ -306,7 +312,9 @@ const TDCompliance = () => {
                     <h2 className="sub-heading text-white text-left" style={{ fontFamily: "Anton" }}>
                         What Is TDS Compliance?
                     </h2>
-                    <p className="paragraph !text-white mx-auto text-left">
+                    <p className="paragraph !text-white mx-auto text-left"
+                    style={{fontFamily:"Montserrat Alternates"}}
+                    >
                         TDS compliance means deducting the right tax at source, depositing it on time, filing quarterly returns, and providing TDS certificates to payees—ensuring you meet all requirements under the Income Tax Act and avoid penalties.
                     </p>
                 </div>
@@ -324,7 +332,9 @@ const TDCompliance = () => {
                     Who Needs TDS Compliance?
                 </h2>
                 <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
-                    <p className="text-sm md:text-base text-gray-600 text-center">
+                    <p className="text-sm md:text-base text-gray-600 text-center"
+                    style={{fontFamily:"Montserrat Alternates"}}
+                    >
                         Every business, firm, or government entity making designated payments (salary, contract, rent, etc.) above the prescribed TDS threshold is required to deduct TDS and file returns, as per the Indian Income Tax Act.
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

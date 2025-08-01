@@ -240,6 +240,7 @@ const DroplineOverdraft = () => {
                          text-white lg:text-white
                          paragraph !text-white
                          max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
+                           style={{fontFamily:"Montserrat Alternates"}}
                     >
                         Achieve disciplined debt reduction with structured dropline overdraft facilities.
                         Enjoy reducing credit limits and decreasing interest costs while
@@ -364,7 +365,9 @@ const DroplineOverdraft = () => {
                     >
                         What Is Dropline Overdraft?
                     </h2>
-                    <p className="paragraph !text-white mx-auto text-left">
+                    <p className="paragraph !text-white mx-auto text-left"
+                      style={{fontFamily:"Montserrat Alternates"}}
+                    >
                         Dropline Overdraft is a structured credit facility where the overdraft limit reduces 
                         automatically at predetermined intervals over the facility tenure. Unlike traditional 
                         overdrafts with fixed limits, dropline overdrafts ensure systematic debt reduction through 
@@ -496,7 +499,9 @@ const DroplineOverdraft = () => {
                     Dropline Overdraft Benefits & Features
                 </h2>
                 <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
-                    <p className="text-sm md:text-base text-gray-600 text-center">
+                    <p className="text-sm md:text-base text-gray-600 text-center"
+                      style={{fontFamily:"Montserrat Alternates"}}
+                    >
                         Dropline Overdraft combines the flexibility of overdraft facilities with structured debt 
                         reduction, ensuring disciplined repayment while maintaining operational cash flow support 
                         for sustainable business growth.

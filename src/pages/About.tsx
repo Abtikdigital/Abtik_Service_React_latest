@@ -164,6 +164,7 @@ const About = () => {
                          text-white lg:text-white
                          paragraph !text-white
                          max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
+                         style={{fontFamily:"Montserrat Alternates"}}
             >
               Empowering Businesses through Comprehensive Solutions From Fund
               Management to Legal Compliance, We've Got You Covered at Abtik
@@ -218,7 +219,9 @@ const About = () => {
               >
                 {index === 0 ? "Our Vision" : "Our Mission"}
               </h2>
-              <p className="paragraph  ">
+              <p className="paragraph  "
+              style={{fontFamily:"Montserrat Alternates"}}
+              >
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. In
                 quidem ipsa voluptate architecto quisquam reprehenderit rem,
                 totam, facere rerum cum harum cumque explicabo dolorum a ex? Hic
@@ -257,7 +260,7 @@ const About = () => {
                   >
                     Why Choose Abtik
                   </h2>
-                  <p className="paragraph  ">
+                  <p className="paragraph  " style={{fontFamily:"Montserrat Alternates"}}>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. In
                     quidem ipsa voluptate architecto quisquam reprehenderit rem,
                     totam, facere rerum cum harum cumque explicabo dolorum a ex? Hic

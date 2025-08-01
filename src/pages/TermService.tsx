@@ -240,6 +240,7 @@ const TermLoan = () => {
                          text-white lg:text-white
                          paragraph !text-white
                          max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
+                         style={{fontFamily:"Montserrat Alternates"}}
                     >
                         Achieve your financial goals with structured term loan solutions.
                         Access ₹1 lakh to ₹50 crore funding with competitive rates from 7.50%,
@@ -364,7 +365,9 @@ const TermLoan = () => {
                     >
                         What Is Term Loan?
                     </h2>
-                    <p className="paragraph !text-white mx-auto text-left">
+                    <p className="paragraph !text-white mx-auto text-left"
+                    style={{fontFamily:"Montserrat Alternates"}}
+                    >
                         A Term Loan is a structured credit facility where a predetermined amount is disbursed to
                         the borrower for a specific period with fixed monthly EMIs. Unlike revolving credit facilities,
                         term loans offer predictable repayment schedules and are ideal for asset acquisition, business
@@ -540,7 +543,9 @@ const TermLoan = () => {
                     Term Loan Benefits & Eligibility
                 </h2>
                 <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
-                    <p className="text-sm md:text-base text-gray-600 text-center">
+                    <p className="text-sm md:text-base text-gray-600 text-center"
+                    style={{fontFamily:"Montserrat Alternates"}}
+                    >
                         Term loans provide structured financing with predictable repayment schedules, making them
                         ideal for businesses and individuals requiring planned financial support for specific purposes
                         with competitive interest rates and flexible terms.

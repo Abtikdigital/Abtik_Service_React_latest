@@ -185,7 +185,13 @@ const AnnualCompliance = () => {
                         Stay Legally Flawless with{" "}
                         <span className="text-[#3CA2E2] font-extrabold block sm:inline">Annual Company Compliance</span>
                     </h1>
-                    <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-white paragraph max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0">
+                    <p className="text-sm sm:text-base md:text-lg lg:text-xl
+                         leading-relaxed sm:leading-relaxed md:leading-relaxed
+                         text-white lg:text-white
+                         paragraph !text-white
+                         max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
+                      style={{fontFamily:"Montserrat Alternates"}}
+                    >
                         Keep your company or LLP 100% compliant with statutory annual filings, ROC returns, meetings, and ITR—all managed & filed by Abtik experts.
                     </p>
                     <div className="pt-2 sm:pt-4">
@@ -294,7 +300,9 @@ const AnnualCompliance = () => {
                     Who Must Do Annual Compliance?
                 </h2>
                 <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
-                    <p className="text-sm md:text-base text-gray-600 text-center">
+                    <p className="text-sm md:text-base text-gray-600 text-center"
+                      style={{fontFamily:"Montserrat Alternates"}}
+                    >
                         Every entity registered under the Companies Act, LLP Act, or as OPC/Section 8 (NGO) must file statutory returns and hold meetings, irrespective of turnover or profit.
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

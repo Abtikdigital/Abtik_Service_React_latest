@@ -240,6 +240,7 @@ const CMEGP = () => {
                          text-white lg:text-white
                          paragraph !text-white
                          max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
+                           style={{fontFamily:"Montserrat Alternates"}}
                     >
                         Modernize your manufacturing unit with advanced technology upgradation.
                         Get 15% capital subsidy up to ₹15 lakh and enhance your business
@@ -364,7 +365,9 @@ const CMEGP = () => {
                     >
                         What Is CMEGP Scheme?
                     </h2>
-                    <p className="paragraph !text-white mx-auto text-left">
+                    <p className="paragraph !text-white mx-auto text-left"
+                      style={{fontFamily:"Montserrat Alternates"}}
+                    >
                         Credit-linked Capital Subsidy for Technology Upgradation (CMEGP) is a government
                         scheme designed to facilitate technology upgradation of micro and small enterprises.
                         The scheme provides 15% upfront capital subsidy on institutional finance for
@@ -495,7 +498,9 @@ const CMEGP = () => {
                     CMEGP Benefits & Eligibility
                 </h2>
                 <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
-                    <p className="text-sm md:text-base text-gray-600 text-center">
+                    <p className="text-sm md:text-base text-gray-600 text-center"
+                      style={{fontFamily:"Montserrat Alternates"}}
+                    >
                         CMEGP scheme enables existing micro and small enterprises to upgrade their technology
                         with financial support, improving their manufacturing capabilities and market competitiveness.
                     </p>

@@ -240,6 +240,8 @@ const CGTMSE = () => {
                          text-white lg:text-white
                          paragraph !text-white
                          max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
+
+                           style={{fontFamily:"Montserrat Alternates"}}
                     >
                         Get collateral-free business loans up to ₹2 crore with CGTMSE guarantee coverage.
                         Eliminate the need for third-party guarantees and access credit easily
@@ -364,7 +366,9 @@ const CGTMSE = () => {
                     >
                         What Is CGTMSE Scheme?
                     </h2>
-                    <p className="paragraph !text-white mx-auto text-left">
+                    <p className="paragraph !text-white mx-auto text-left"
+                      style={{fontFamily:"Montserrat Alternates"}}
+                    >
                         Credit Guarantee Fund Trust for Micro and Small Enterprises (CGTMSE) is a unique scheme
                         launched by the Government of India to provide collateral-free credit guarantee to micro
                         and small enterprises. The scheme guarantees loans up to ₹2 crore without requiring any
@@ -495,7 +499,9 @@ const CGTMSE = () => {
                     CGTMSE Benefits & Eligibility
                 </h2>
                 <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
-                    <p className="text-sm md:text-base text-gray-600 text-center">
+                    <p className="text-sm md:text-base text-gray-600 text-center"
+                      style={{fontFamily:"Montserrat Alternates"}}
+                    >
                         CGTMSE provides comprehensive credit guarantee support, enabling micro and small enterprises
                         to access formal banking credit without traditional collateral security requirements.
                     </p>

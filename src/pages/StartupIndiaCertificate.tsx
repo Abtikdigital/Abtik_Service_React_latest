@@ -230,8 +230,13 @@ const StartupIndiaCertificate = () => {
                     </h1>
                     <p
                         className="text-sm sm:text-base md:text-lg lg:text-xl
-                         leading-relaxed text-white paragraph max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
-                    >
+                         leading-relaxed sm:leading-relaxed md:leading-relaxed
+                         text-white lg:text-white
+                         paragraph !text-white
+                         max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
+                   
+                   style={{fontFamily:"Montserrat Alternates"}}
+                   >
                         Get DPIIT Startup India recognition, tax holidays, investor preference, patent rebates, and a gateway to exclusive government incentives with Abtik’s expert assistance.
                     </p>
                     <div className="pt-2 sm:pt-4">
@@ -348,7 +353,9 @@ const StartupIndiaCertificate = () => {
                     >
                         What Is Startup India Certificate?
                     </h2>
-                    <p className="paragraph !text-white mx-auto text-left">
+                    <p className="paragraph !text-white mx-auto text-left"
+                    style={{fontFamily:"Montserrat Alternates"}}
+                    >
                         The Startup India Certificate is an official DPIIT recognition for innovative businesses under 10 years old in India.
                         With this certificate, startups enjoy tax breaks, IP fee rebates, funding access, government tenders, and easier statutory compliance. Let Abtik guide your recognition and unlock every benefit.
                     </p>
@@ -369,7 +376,9 @@ const StartupIndiaCertificate = () => {
                     Eligibility & Key Features
                 </h2>
                 <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
-                    <p className="text-sm md:text-base text-gray-600 text-center">
+                    <p className="text-sm md:text-base text-gray-600 text-center"
+                    style={{fontFamily:"Montserrat Alternates"}}
+                    >
                         To be considered for Startup India DPIIT recognition, your business must meet the following requirements.
                         Official recognition brings a host of strategic and financial advantages, powering your growth story.
                     </p>

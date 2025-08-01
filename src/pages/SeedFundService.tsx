@@ -239,6 +239,7 @@ const SeedFund = () => {
                          text-white lg:text-white
                          paragraph !text-white
                          max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
+                         style={{fontFamily:"Montserrat Alternates"}}
                     >
                         Transform your innovative ideas into reality with strategic seed funding.
                         Our expert team connects you with the right investors and guides you
@@ -363,7 +364,9 @@ const SeedFund = () => {
                     >
                         What Is Seed Funding?
                     </h2>
-                    <p className="paragraph !text-white mx-auto text-left">
+                    <p className="paragraph !text-white mx-auto text-left"
+                    style={{fontFamily:"Montserrat Alternates"}}
+                    >
                         Seed funding is the initial capital investment used to start a business.
                         It represents the first official equity funding stage and helps entrepreneurs
                         transform their innovative ideas into viable businesses. This early-stage
@@ -494,7 +497,7 @@ const SeedFund = () => {
                     Seed Fund Benefits & Eligibility
                 </h2>
                 <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
-                    <p className="text-sm md:text-base text-gray-600 text-center">
+                    <p className="text-sm md:text-base text-gray-600 text-center" style={{fontFamily:"Montserrat Alternates"}}>
                         Seed funding provides essential capital and strategic support to transform your business idea into a market-ready product while building a strong foundation for growth.
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

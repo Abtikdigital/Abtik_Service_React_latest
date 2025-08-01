@@ -240,6 +240,7 @@ const Overdraft = () => {
                          text-white lg:text-white
                          paragraph !text-white
                          max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
+                           style={{fontFamily:"Montserrat Alternates"}}
                     >
                         Bridge your cash flow gaps with flexible overdraft facilities.
                         Access instant funds up to ₹5 crore limit and pay interest only
@@ -364,7 +365,9 @@ const Overdraft = () => {
                     >
                         What Is Bank Overdraft Facility?
                     </h2>
-                    <p className="paragraph !text-white mx-auto text-left">
+                    <p className="paragraph !text-white mx-auto text-left"
+                      style={{fontFamily:"Montserrat Alternates"}}
+                    >
                         Bank Overdraft is a flexible credit facility that allows account holders to withdraw 
                         more money than available in their account balance up to a pre-approved limit. It serves 
                         as an instant financial safety net for managing temporary cash flow shortages, unexpected 

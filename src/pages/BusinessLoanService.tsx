@@ -240,6 +240,7 @@ const BusinessLoan = () => {
                          text-white lg:text-white
                          paragraph !text-white
                          max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
+                           style={{fontFamily:"Montserrat Alternates"}}
                     >
                         Fund your business growth with secured and unsecured loan options.
                         Access ₹1 lakh to ₹50 crore funding with competitive interest rates,
@@ -364,7 +365,9 @@ const BusinessLoan = () => {
                     >
                         What Are Business Loans?
                     </h2>
-                    <p className="paragraph !text-white mx-auto text-left">
+                    <p className="paragraph !text-white mx-auto text-left"
+                      style={{fontFamily:"Montserrat Alternates"}}
+                    >
                         Business loans are financial products designed to provide capital for various business 
                         needs including expansion, working capital, equipment purchase, and operational expenses. 
                         Available in both secured (requiring collateral) and unsecured (no collateral) formats, 
@@ -495,7 +498,9 @@ const BusinessLoan = () => {
                     Business Loan Benefits & Requirements
                 </h2>
                 <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
-                    <p className="text-sm md:text-base text-gray-600 text-center">
+                    <p className="text-sm md:text-base text-gray-600 text-center"
+                      style={{fontFamily:"Montserrat Alternates"}}
+                    >
                         Business loans provide essential capital for growth, expansion, and operational needs 
                         with flexible terms and competitive rates tailored to your business requirements.
                     </p>

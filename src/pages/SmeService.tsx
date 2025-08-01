@@ -240,6 +240,7 @@ const SMELoan = () => {
                          text-white lg:text-white
                          paragraph !text-white
                          max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
+                         style={{fontFamily:"Montserrat Alternates"}}
                     >
                         Fuel your SME growth with specialized financing solutions.
                         Access ₹10 lakh to ₹25 crore funding with competitive rates,
@@ -364,7 +365,7 @@ const SMELoan = () => {
                     >
                         What Is SME Loan?
                     </h2>
-                    <p className="paragraph !text-white mx-auto text-left">
+                    <p className="paragraph !text-white mx-auto text-left" style={{fontFamily:"Montserrat Alternates"}}>
                         SME Loans are specialized financing products designed specifically for Small and Medium 
                         Enterprises to address their unique capital requirements. These loans provide flexible 
                         funding solutions for business expansion, working capital management, equipment purchase, 
@@ -540,7 +541,7 @@ const SMELoan = () => {
                     SME Loan Benefits & Eligibility
                 </h2>
                 <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
-                    <p className="text-sm md:text-base text-gray-600 text-center">
+                    <p className="text-sm md:text-base text-gray-600 text-center" style={{fontFamily:"Montserrat Alternates"}}>
                         SME loans provide comprehensive financial support tailored to small and medium enterprises, 
                         offering competitive rates, flexible terms, and quick access to capital for sustainable 
                         business growth and expansion.

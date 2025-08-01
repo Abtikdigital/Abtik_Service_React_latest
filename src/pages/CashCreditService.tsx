@@ -240,6 +240,7 @@ const CashCredit = () => {
                          text-white lg:text-white
                          paragraph !text-white
                          max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
+                           style={{fontFamily:"Montserrat Alternates"}}
                     >
                         Manage your business cash flow with flexible Cash Credit facilities.
                         Withdraw funds as needed up to ₹50 crore limit and pay interest
@@ -364,7 +365,9 @@ const CashCredit = () => {
                     >
                         What Is Cash Credit Facility?
                     </h2>
-                    <p className="paragraph !text-white mx-auto text-left">
+                    <p className="paragraph !text-white mx-auto text-left"
+                      style={{fontFamily:"Montserrat Alternates"}}
+                    >
                         Cash Credit is a revolving working capital facility that provides businesses with 
                         flexible access to funds up to a sanctioned limit. Unlike term loans, businesses 
                         can withdraw, repay, and re-withdraw funds multiple times within the approved limit, 
@@ -496,7 +499,9 @@ const CashCredit = () => {
                     Cash Credit Benefits & Requirements
                 </h2>
                 <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
-                    <p className="text-sm md:text-base text-gray-600 text-center">
+                    <p className="text-sm md:text-base text-gray-600 text-center"
+                      style={{fontFamily:"Montserrat Alternates"}}
+                    >
                         Cash Credit facilities provide the ultimate flexibility in working capital management, 
                         allowing businesses to optimize their cash flow and interest costs while maintaining 
                         operational efficiency throughout business cycles.

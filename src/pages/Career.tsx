@@ -227,6 +227,7 @@ const Career = () => {
                          text-white lg:text-white
                          paragraph !text-white
                          max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
+                         style={{fontFamily:"Montserrat Alternates"}}
             >
               Empowering Businesses through Comprehensive Solutions From Fund
               Management to Legal Compliance, We've Got You Covered at Abtik
@@ -273,7 +274,9 @@ const Career = () => {
                     Career Opportunities at <br />
                     Abtik Services
                   </h2>
-                  <p className="paragraph text-center md:text-left">
+                  <p className="paragraph text-center md:text-left"
+                  style={{fontFamily:"Montserrat Alternates"}}
+                  >
                     Join our innovative team and be part of a company that's
                     transforming the business landscape. We offer exciting
                     opportunities for growth, learning, and making a meaningful

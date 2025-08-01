@@ -240,6 +240,8 @@ const TrademarkFiling = () => {
                          text-white lg:text-white
                          paragraph !text-white
                          max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
+
+                         style={{fontFamily:"Montserrat Alternates"}}
                     >
                         Secure your brand identity with comprehensive trademark filing and registration services.
                         Get nationwide legal protection, exclusive rights, and prevent unauthorized use of your
@@ -364,7 +366,9 @@ const TrademarkFiling = () => {
                     >
                         What Is Trademark Registration?
                     </h2>
-                    <p className="paragraph !text-white mx-auto text-left">
+                    <p className="paragraph !text-white mx-auto text-left"
+                    style={{fontFamily:"Montserrat Alternates"}}
+                    >
                         Trademark registration is the legal process of securing exclusive rights to use a distinctive
                         mark, symbol, word, phrase, logo, or design that identifies and distinguishes your goods or
                         services from competitors. It provides nationwide protection, prevents unauthorized use, and
@@ -539,7 +543,9 @@ const TrademarkFiling = () => {
                     Trademark Benefits & Requirements
                 </h2>
                 <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
-                    <p className="text-sm md:text-base text-gray-600 text-center">
+                    <p className="text-sm md:text-base text-gray-600 text-center"
+                    style={{fontFamily:"Montserrat Alternates"}}
+                    >
                         Trademark registration provides comprehensive legal protection for your brand identity,
                         ensuring exclusive rights and preventing unauthorized use while building valuable business
                         assets that enhance credibility and market presence.

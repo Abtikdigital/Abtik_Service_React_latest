@@ -191,7 +191,13 @@ const GSTRegistrationFiling = () => {
                         Get GST Registration & Filing Done{" "}
                         <span className="text-[#3CA2E2] font-extrabold block sm:inline">100% Compliant</span>
                     </h1>
-                    <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-white paragraph max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0">
+                    <p className="text-sm sm:text-base md:text-lg lg:text-xl
+                         leading-relaxed sm:leading-relaxed md:leading-relaxed
+                         text-white lg:text-white
+                         paragraph !text-white
+                         max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
+                      style={{fontFamily:"Montserrat Alternates"}}
+                    >
                         Register your business for GST and stay compliant with all latest return filing rules and deadlines. Abtik provides complete start-to-finish GST support for your growth.
                     </p>
                     <div className="pt-2 sm:pt-4">
@@ -292,7 +298,9 @@ const GSTRegistrationFiling = () => {
                     Who Needs GST Registration?
                 </h2>
                 <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
-                    <p className="text-sm md:text-base text-gray-600 text-center">
+                    <p className="text-sm md:text-base text-gray-600 text-center"
+                      style={{fontFamily:"Montserrat Alternates"}}
+                    >
                         All Indian businesses crossing turnover limits, conducting interstate trade, or engaging in e-commerce must register for GST as per law. Registration provides access to tax credits, interstate supply, and compliance with 2025 rules.
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

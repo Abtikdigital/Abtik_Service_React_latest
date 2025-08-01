@@ -52,7 +52,7 @@ const TradeLicenseCertificate = lazy(() => import("./pages/TradeLicence"))
 // Tax Compliance
 const GSTRegistrationFiling = lazy(() => import("./pages/GstRegistration_Filling"))
 const TdsCompliance = lazy(() => import('./pages/TdsCompliance'))
-const AnnualCompliance = lazy(() => import("./pages/AnnuanComplaince"))
+const AnnualCompliance = lazy(() => import("./pages/AnnualComplaince"))
 
 // Businness Registration
 const PrivateLimited = lazy(() => import("./pages/PrivateLimitedService"))

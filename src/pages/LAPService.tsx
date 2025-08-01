@@ -240,6 +240,7 @@ const LoanAgainstProperty = () => {
                          text-white lg:text-white
                          paragraph !text-white
                          max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
+                           style={{fontFamily:"Montserrat Alternates"}}
                     >
                         Transform your property into instant capital with our LAP solutions.
                         Get up to ₹15 crore funding at competitive rates with flexible
@@ -364,7 +365,9 @@ const LoanAgainstProperty = () => {
                     >
                         What Is Loan Against Property?
                     </h2>
-                    <p className="paragraph !text-white mx-auto text-left">
+                    <p className="paragraph !text-white mx-auto text-left"
+                      style={{fontFamily:"Montserrat Alternates"}}
+                    >
                         Loan Against Property (LAP) is a secured loan where borrowers can leverage their
                         residential, commercial, or industrial property as collateral to access substantial
                         funding. Unlike selling the property, borrowers retain ownership and usage rights
@@ -541,7 +544,9 @@ const LoanAgainstProperty = () => {
                     LAP Benefits & Eligibility
                 </h2>
                 <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
-                    <p className="text-sm md:text-base text-gray-600 text-center">
+                    <p className="text-sm md:text-base text-gray-600 text-center"
+                      style={{fontFamily:"Montserrat Alternates"}}
+                    >
                         Loan Against Property offers the perfect balance of substantial funding and competitive
                         rates, allowing you to unlock your property's value while retaining ownership for any
                         financial requirement.

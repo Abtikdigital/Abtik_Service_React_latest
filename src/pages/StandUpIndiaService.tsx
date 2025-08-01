@@ -240,6 +240,7 @@ const StandUpIndia = () => {
                          text-white lg:text-white
                          paragraph !text-white
                          max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
+                         style={{fontFamily:"Montserrat Alternates"}}
                     >
                         Start your entrepreneurial journey with Stand-Up India scheme benefits.
                         Get loans from ₹10 lakh to ₹1 crore for SC/ST and women entrepreneurs
@@ -364,7 +365,9 @@ const StandUpIndia = () => {
                     >
                         What Is Stand-Up India Scheme?
                     </h2>
-                    <p className="paragraph !text-white mx-auto text-left">
+                    <p className="paragraph !text-white mx-auto text-left"
+                    style={{fontFamily:"Montserrat Alternates"}}
+                    >
                         Stand-Up India is a flagship initiative launched by the Government of India to promote
                         entrepreneurship among SC/ST and women entrepreneurs. The scheme facilitates bank loans
                         between ₹10 lakh to ₹1 crore for setting up greenfield enterprises in manufacturing,
@@ -495,7 +498,9 @@ const StandUpIndia = () => {
                     Stand-Up India Benefits & Eligibility
                 </h2>
                 <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
-                    <p className="text-sm md:text-base text-gray-600 text-center">
+                    <p className="text-sm md:text-base text-gray-600 text-center"
+                      style={{fontFamily:"Montserrat Alternates"}}
+                    >
                         Stand-Up India empowers SC/ST and women entrepreneurs with comprehensive financial support
                         and mentorship to establish successful greenfield enterprises across various sectors.
                     </p>

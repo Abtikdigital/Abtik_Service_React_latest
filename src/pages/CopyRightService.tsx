@@ -241,6 +241,7 @@ const CopyrightFiling = () => {
                          text-white lg:text-white
                          paragraph !text-white
                          max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
+                           style={{fontFamily:"Montserrat Alternates"}}
                     >
                         Protect your original creative works with comprehensive copyright registration services.
                         Get legal ownership proof, enforce your rights against infringement, and secure
@@ -365,7 +366,9 @@ const CopyrightFiling = () => {
                     >
                         What Is Copyright Registration?
                     </h2>
-                    <p className="paragraph !text-white mx-auto text-left">
+                    <p className="paragraph !text-white mx-auto text-left"
+                      style={{fontFamily:"Montserrat Alternates"}}
+                    >
                         Copyright registration is the legal process of formally recording your original creative work
                         with the copyright office to establish public evidence of ownership. While copyright protection
                         exists automatically when you create original work, registration provides additional legal
@@ -541,7 +544,9 @@ const CopyrightFiling = () => {
                     Copyright Benefits & Registration Process
                 </h2>
                 <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
-                    <p className="text-sm md:text-base text-gray-600 text-center">
+                    <p className="text-sm md:text-base text-gray-600 text-center"
+                      style={{fontFamily:"Montserrat Alternates"}}
+                    >
                         Copyright registration provides comprehensive legal protection for your original creative works,
                         enabling enforcement of rights, recovery of damages, and establishing public ownership records
                         that enhance your intellectual property portfolio value.

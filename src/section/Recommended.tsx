@@ -91,7 +91,9 @@ const Recommended = () => {
       >
         Recommended For You
       </h2>
-      <p className="paragraph text-center">
+      <p className="paragraph text-center"
+      style={{fontFamily:"Montserrat Alternates"}}
+      >
         Top-picked services for your business goals—get exactly what you need, when you need it.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-6">

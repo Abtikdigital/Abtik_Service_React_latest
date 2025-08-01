@@ -240,6 +240,7 @@ const UdyamRegistration = () => {
                          text-white lg:text-white
                          paragraph !text-white
                          max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
+                         style={{fontFamily:"Montserrat Alternates"}}
                     >
                         Get your official MSME registration through Udyam portal completely free.
                         Access government schemes, subsidies, credit facilities, and unlock
@@ -364,7 +365,9 @@ const UdyamRegistration = () => {
                     >
                         What Is Udyam Registration?
                     </h2>
-                    <p className="paragraph !text-white mx-auto text-left">
+                    <p className="paragraph !text-white mx-auto text-left"
+                    style={{fontFamily:"Montserrat Alternates"}}
+                    >
                         Udyam Registration is the new online registration process for Micro, Small and Medium 
                         Enterprises (MSMEs) launched by the Ministry of MSME, Government of India. It replaced 
                         the earlier Udyog Aadhaar registration system and provides a unique Udyam Registration 
@@ -539,7 +542,9 @@ const UdyamRegistration = () => {
                     Udyam Registration Benefits & Process
                 </h2>
                 <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
-                    <p className="text-sm md:text-base text-gray-600 text-center">
+                    <p className="text-sm md:text-base text-gray-600 text-center"
+                    style={{fontFamily:"Montserrat Alternates"}}
+                    >
                         Udyam Registration opens doors to numerous government schemes, financial benefits, 
                         and business opportunities specifically designed to support and promote MSME growth.
                     </p>

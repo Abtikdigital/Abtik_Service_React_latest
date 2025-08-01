@@ -241,6 +241,7 @@ const PatentFiling = () => {
                          text-white lg:text-white
                          paragraph !text-white
                          max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
+                           style={{fontFamily:"Montserrat Alternates"}}
                     >
                         Protect your innovations with expert patent filing and prosecution services.
                         Secure government-backed intellectual property rights and unlock commercial opportunities for your invention.
@@ -364,7 +365,9 @@ const PatentFiling = () => {
                     >
                         What Is Patent Registration?
                     </h2>
-                    <p className="paragraph !text-white mx-auto text-left">
+                    <p className="paragraph !text-white mx-auto text-left"
+                      style={{fontFamily:"Montserrat Alternates"}}
+                    >
                         Patent registration secures exclusive legal rights to your novel invention, protecting your ideas against unauthorized manufacture, sale, or distribution. A granted patent fosters commercialization, supports R&D investments, and allows you to take legal action if your technology is copied. It is a powerful business asset for startups and established companies alike.
                     </p>
                 </div>
@@ -534,7 +537,9 @@ const PatentFiling = () => {
                     Patent Benefits & Requirements
                 </h2>
                 <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
-                    <p className="text-sm md:text-base text-gray-600 text-center">
+                    <p className="text-sm md:text-base text-gray-600 text-center"
+                      style={{fontFamily:"Montserrat Alternates"}}
+                    >
                         Patent registration provides exclusive nationwide rights, creates a high entry barrier for competition, and enables monetary returns through licensing or sale, driving innovation and business growth.
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

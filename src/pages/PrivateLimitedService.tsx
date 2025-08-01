@@ -196,7 +196,13 @@ const PvtLtdRegistration = () => {
                             Pvt Ltd Business Registration
                         </span>
                     </h1>
-                    <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-white paragraph max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0">
+                    <p className="text-sm sm:text-base md:text-lg lg:text-xl
+                         leading-relaxed sm:leading-relaxed md:leading-relaxed
+                         text-white lg:text-white
+                         paragraph !text-white
+                         max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
+                    style={{fontFamily:"Montserrat Alternates"}}
+                    >
                         Incorporate your Private Limited Company the fastest, easiest, and most compliant way with Abtik. Get legal, tax, and brand benefits from day one.
                     </p>
                     <div className="pt-2 sm:pt-4">
@@ -292,7 +298,9 @@ const PvtLtdRegistration = () => {
                     <h2 className="sub-heading text-white text-left" style={{ fontFamily: "Anton" }}>
                         What Is a Private Limited Company?
                     </h2>
-                    <p className="paragraph !text-white mx-auto text-left">
+                    <p className="paragraph !text-white mx-auto text-left"
+                    style={{fontFamily:"Montserrat Alternates"}}
+                    >
                         A Private Limited Company is a legally registered business structure best suited for startups and growth-focused businesses in India. It provides credibility, shields personal assets from risk, and is preferred by investors, government schemes, and global partners.
                     </p>
                 </div>
@@ -311,7 +319,9 @@ const PvtLtdRegistration = () => {
                     Who Can Register a Pvt Ltd Company?
                 </h2>
                 <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
-                    <p className="text-sm md:text-base text-gray-600 text-center">
+                    <p className="text-sm md:text-base text-gray-600 text-center"
+                    style={{fontFamily:"Montserrat Alternates"}}
+                    >
                         Any Indian or foreign national (residing in India or overseas), with minimum 2 directors/shareholders, can register. NRIs and corporate shareholders are allowed. No minimum capital is required—₹1 is enough.
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

@@ -140,6 +140,7 @@ const Blog = () => {
                          text-white lg:text-white
                          paragraph !text-white
                          max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
+                         style={{fontFamily:"Montserrat Alternates"}}
             >
               Empowering Businesses through Comprehensive Solutions From Fund
               Management to Legal Compliance, We've Got You Covered at Abtik
@@ -175,7 +176,9 @@ const Blog = () => {
           >
             New Blog's
           </h2>
-          <p className="paragraph text-center">
+          <p className="paragraph text-center"
+          style={{fontFamily:"Montserrat Alternates"}}
+          >
             {" "}
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, qui.
           </p>

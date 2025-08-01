@@ -187,7 +187,13 @@ const LLPRegistration = () => {
                             LLP (Limited Liability Partnership)
                         </span> Easily &amp; Legally!
                     </h1>
-                    <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-white paragraph max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0">
+                    <p className="text-sm sm:text-base md:text-lg lg:text-xl
+                         leading-relaxed sm:leading-relaxed md:leading-relaxed
+                         text-white lg:text-white
+                         paragraph !text-white
+                         max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
+                      style={{fontFamily:"Montserrat Alternates"}}
+                    >
                         Start your LLP the right way—get quick name approval, partner DPINs, and all filings managed by Abtik for minimum hassle and full compliance.
                     </p>
                     <div className="pt-2 sm:pt-4">
@@ -283,7 +289,9 @@ const LLPRegistration = () => {
                     <h2 className="sub-heading text-white text-left" style={{ fontFamily: "Anton" }}>
                         What Is a Limited Liability Partnership (LLP)?
                     </h2>
-                    <p className="paragraph !text-white mx-auto text-left">
+                    <p className="paragraph !text-white mx-auto text-left"
+                      style={{fontFamily:"Montserrat Alternates"}}
+                    >
                         LLPs blend the flexibility of a partnership with the credibility of a company. With limited personal exposure, simple compliance, and minimal cost, LLP is perfect for professionals, startups, and SMEs.
                     </p>
                 </div>
@@ -302,7 +310,9 @@ const LLPRegistration = () => {
                     Who Can Register an LLP?
                 </h2>
                 <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
-                    <p className="text-sm md:text-base text-gray-600 text-center">
+                    <p className="text-sm md:text-base text-gray-600 text-center"
+                      style={{fontFamily:"Montserrat Alternates"}}
+                    >
                         Any two individuals or entities (resident or NRI/Foreign) can form an LLP, at least one partner must be a resident in India. There is no minimum capital requirement, and both professionals and entrepreneurs can benefit equally.
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

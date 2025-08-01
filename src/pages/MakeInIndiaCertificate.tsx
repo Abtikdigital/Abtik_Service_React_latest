@@ -211,7 +211,13 @@ const MakeInIndiaCertificate = () => {
                             Make in India Certificate
                         </span>
                     </h1>
-                    <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-white paragraph max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0">
+                    <p className="text-sm sm:text-base md:text-lg lg:text-xl
+                         leading-relaxed sm:leading-relaxed md:leading-relaxed
+                         text-white lg:text-white
+                         paragraph !text-white
+                         max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
+                      style={{fontFamily:"Montserrat Alternates"}}
+                    >
                         Prove your products are truly Indian, access special incentives, and get preference in public procurement—Abtik makes certification simple, fast, and 100% Compliant.
                     </p>
                     <div className="pt-2 sm:pt-4">
@@ -318,7 +324,9 @@ const MakeInIndiaCertificate = () => {
                     >
                         What Is Make in India Certificate?
                     </h2>
-                    <p className="paragraph !text-white mx-auto text-left">
+                    <p className="paragraph !text-white mx-auto text-left"
+                      style={{fontFamily:"Montserrat Alternates"}}
+                    >
                         The Make in India (MII) Certificate certifies that your products or services are manufactured or sourced in accordance with government’s local content policy, unlocking government incentives, bid preference, and global markets. It is mandatory for GeM and most government/public tenders[5][7][12].
                     </p>
                 </div>
@@ -337,7 +345,9 @@ const MakeInIndiaCertificate = () => {
                     Who Can Get MII Certificate?
                 </h2>
                 <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
-                    <p className="text-sm md:text-base text-gray-600 text-center">
+                    <p className="text-sm md:text-base text-gray-600 text-center"
+                      style={{fontFamily:"Montserrat Alternates"}}
+                    >
                         Any Indian manufacturer, OEM, or service provider making in-country value addition (as defined in PPP-MII order) can get certified and unlock government-backed advantages.
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

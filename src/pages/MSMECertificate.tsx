@@ -213,7 +213,13 @@ const MSMECertificate = () => {
                             MSME Certificate
                         </span>
                     </h1>
-                    <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-white paragraph max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0">
+                    <p className="text-sm sm:text-base md:text-lg lg:text-xl
+                         leading-relaxed sm:leading-relaxed md:leading-relaxed
+                         text-white lg:text-white
+                         paragraph !text-white
+                         max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
+                    style={{fontFamily:"Montserrat Alternates"}}
+                    >
                         Get Udyam MSME registration for priority lending, patent rebates, government schemes, and exclusive business advantages with Abtik support.
                     </p>
                     <div className="pt-2 sm:pt-4">
@@ -330,7 +336,9 @@ const MSMECertificate = () => {
                     >
                         What Is MSME Certificate?
                     </h2>
-                    <p className="paragraph !text-white mx-auto text-left">
+                    <p className="paragraph !text-white mx-auto text-left"
+                      style={{fontFamily:"Montserrat Alternates"}}
+                    >
                         MSME (Udyam) Registration certifies your business as Micro, Small, or Medium Enterprise with the Government of India, providing instant eligibility for a broad spectrum of government benefits, low-cost finance, market access, and IP support—the gateway to prioritized growth in India’s new economy.
                     </p>
                 </div>
@@ -350,7 +358,9 @@ const MSMECertificate = () => {
                     Eligibility & Recognition Criteria
                 </h2>
                 <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
-                    <p className="text-sm md:text-base text-gray-600 text-center">
+                    <p className="text-sm md:text-base text-gray-600 text-center"
+                      style={{fontFamily:"Montserrat Alternates"}}
+                    >
                         Any business within investment and turnover limits defined by the government (including sole proprietorship, partnership, LLP, or company) can benefit from MSME/Udyam registration.
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

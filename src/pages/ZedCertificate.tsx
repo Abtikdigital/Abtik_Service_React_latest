@@ -208,7 +208,13 @@ const ZEDCertificate = () => {
                             ZED Certification
                         </span>
                     </h1>
-                    <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-white paragraph max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0">
+                    <p className="text-sm sm:text-base md:text-lg lg:text-xl
+                         leading-relaxed sm:leading-relaxed md:leading-relaxed
+                         text-white lg:text-white
+                         paragraph !text-white
+                         max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
+                           style={{fontFamily:"Montserrat Alternates"}}
+                         >
                         Achieve global quality, reduce environmental impact, and unlock subsidies and government tenders—Abtik helps you earn your ZED Certificate quickly and compliantly.
                     </p>
                     <div className="pt-2 sm:pt-4">
@@ -315,7 +321,7 @@ const ZEDCertificate = () => {
                     >
                         What Is ZED Certificate?
                     </h2>
-                    <p className="paragraph !text-white mx-auto text-left">
+                    <p className="paragraph !text-white mx-auto text-left" style={{fontFamily:"Montserrat Alternates"}}>
                         The ZED (Zero Defect Zero Effect) Certification recognizes manufacturing MSMEs that achieve best-in-class quality and minimize their environmental impact ("Zero Defect" in product, "Zero Effect" on environment)—helping Indian businesses stand out in global supply chains and domestic tenders.
                     </p>
                 </div>
@@ -334,7 +340,7 @@ const ZEDCertificate = () => {
                     Who Is Eligible for ZED?
                 </h2>
                 <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
-                    <p className="text-sm md:text-base text-gray-600 text-center">
+                    <p className="text-sm md:text-base text-gray-600 text-center" style={{fontFamily:"Montserrat Alternates"}}>
                         ZED covers all Indian manufacturing MSMEs aiming for global quality and green compliance.
                         Services, trading and large companies are generally not eligible.
                     </p>

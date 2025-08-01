@@ -240,6 +240,7 @@ const MudraLoan = () => {
                          text-white lg:text-white
                          paragraph !text-white
                          max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
+                           style={{fontFamily:"Montserrat Alternates"}}
                     >
                         Fund your micro enterprise dreams with PMMY Mudra loans.
                         Get collateral-free loans up to ₹10 lakh for manufacturing,
@@ -364,7 +365,9 @@ const MudraLoan = () => {
                     >
                         What Is PMMY Mudra Loan?
                     </h2>
-                    <p className="paragraph !text-white mx-auto text-left">
+                    <p className="paragraph !text-white mx-auto text-left"
+                      style={{fontFamily:"Montserrat Alternates"}}
+                    >
                         Pradhan Mantri Mudra Yojana (PMMY) is a flagship scheme launched by the Government of India
                         to provide collateral-free loans up to ₹10 lakh to non-corporate, non-farm micro enterprises.
                         The scheme supports millions of proprietorship and partnership firms in manufacturing, service,
@@ -539,7 +542,9 @@ const MudraLoan = () => {
                     Mudra Loan Benefits & Eligibility
                 </h2>
                 <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
-                    <p className="text-sm md:text-base text-gray-600 text-center">
+                    <p className="text-sm md:text-base text-gray-600 text-center"
+                      style={{fontFamily:"Montserrat Alternates"}}
+                    >
                         PMMY Mudra loans provide comprehensive financial support to micro enterprises with collateral-free 
                         credit, enabling millions of entrepreneurs to access formal banking and grow their businesses.[8]
                     </p>

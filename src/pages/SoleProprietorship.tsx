@@ -187,7 +187,13 @@ const SoleProprietorRegistration = () => {
                             Sole Proprietor Business Registration
                         </span>
                     </h1>
-                    <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-white paragraph max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0">
+                    <p className="text-sm sm:text-base md:text-lg lg:text-xl
+                         leading-relaxed sm:leading-relaxed md:leading-relaxed
+                         text-white lg:text-white
+                         paragraph !text-white
+                         max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
+                    style={{fontFamily:"Montserrat Alternates"}}
+                    >
                         Kickstart your small business or freelance venture as a sole proprietor. Fastest, lowest-cost, owner-controlled—Abtik gets your GST, Udyam, and bank proof ready in record time.
                     </p>
                     <div className="pt-2 sm:pt-4">
@@ -283,7 +289,9 @@ const SoleProprietorRegistration = () => {
                     <h2 className="sub-heading text-white text-left" style={{ fontFamily: "Anton" }}>
                         What Is Sole Proprietorship Registration?
                     </h2>
-                    <p className="paragraph !text-white mx-auto text-left">
+                    <p className="paragraph !text-white mx-auto text-left"
+                    style={{fontFamily:"Montserrat Alternates"}}
+                    >
                         The sole proprietorship model is perfect for millions of Indian small businesses, traders, and freelancers. With the right supporting documents and registrations, you can open bank accounts, acquire licenses, and access credit or MSME benefits—Abtik makes it effortless.
                     </p>
                 </div>
@@ -301,7 +309,9 @@ const SoleProprietorRegistration = () => {
                     Who Can Register a Sole Proprietorship?
                 </h2>
                 <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
-                    <p className="text-sm md:text-base text-gray-600 text-center">
+                    <p className="text-sm md:text-base text-gray-600 text-center"
+                    style={{fontFamily:"Montserrat Alternates"}}
+                    >
                         Any Indian citizen with a valid PAN/Aadhaar, and address proof for business premises, can start a sole proprietorship. No minimum capital or partners required—instant eligibility for GST, Udyam & Shops Act registrations.
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

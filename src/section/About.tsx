@@ -48,7 +48,9 @@ const About = () => {
           >
             About Abtik
           </h2>
-          <p className="paragraph">
+          <p className="paragraph"
+          style={{fontFamily:"Montserrat Alternatess"}}
+          >
             Abtik Group of Companies is a trusted consultancy dedicated to
             empowering startups, MSMEs, and professionals across India. We
             provide end-to-end business support—from registrations, government

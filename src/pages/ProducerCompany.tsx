@@ -192,7 +192,13 @@ const ProducerCompanyRegistration = () => {
                             Producer Company Registration
                         </span>
                     </h1>
-                    <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-white paragraph max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0">
+                    <p className="text-sm sm:text-base md:text-lg lg:text-xl
+                         leading-relaxed sm:leading-relaxed md:leading-relaxed
+                         text-white lg:text-white
+                         paragraph !text-white
+                         max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
+                    style={{fontFamily:"Montserrat Alternates"}}
+                    >
                         Register a Producer Company—India’s premier model for modern farmer and agri-business collectives. Get legal status, business benefits, and seamless Abtik support.
                     </p>
                     <div className="pt-2 sm:pt-4">
@@ -284,7 +290,9 @@ const ProducerCompanyRegistration = () => {
                     <h2 className="sub-heading text-white text-left" style={{ fontFamily: "Anton" }}>
                         What Is a Producer Company?
                     </h2>
-                    <p className="paragraph !text-white mx-auto text-left">
+                    <p className="paragraph !text-white mx-auto text-left"
+                    style={{fontFamily:"Montserrat Alternates"}}
+                    >
                         Producer Companies empower farmer, artisan, and producer groups with modern company benefits—single structure, collective profit, government schemes, and zero personal risk. Most FPOs/FPCs in India now use Producer Company registration for maximum legal recognition and market access.
                     </p>
                 </div>
@@ -300,7 +308,9 @@ const ProducerCompanyRegistration = () => {
                     Who Can Register a Producer Company?
                 </h2>
                 <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
-                    <p className="text-sm md:text-base text-gray-600 text-center">
+                    <p className="text-sm md:text-base text-gray-600 text-center"
+                    style={{fontFamily:"Montserrat Alternates"}}
+                    >
                         You can form a Producer Company if you meet these criteria:
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

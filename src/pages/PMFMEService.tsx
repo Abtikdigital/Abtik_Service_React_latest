@@ -240,6 +240,7 @@ const PMFME = () => {
                          text-white lg:text-white
                          paragraph !text-white
                          max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
+                         style={{fontFamily:"Montserrat Alternates"}}
                     >
                         Transform your food processing dreams into reality with PMFME scheme benefits.
                         Get up to ₹10 lakh funding with 35% government subsidy and formalize your
@@ -364,7 +365,9 @@ const PMFME = () => {
                     >
                         What Is PMFME Scheme?
                     </h2>
-                    <p className="paragraph !text-white mx-auto text-left">
+                    <p className="paragraph !text-white mx-auto text-left"
+                    style={{fontFamily:"Montserrat Alternates"}}
+                    >
                         PM Formalization of Micro Food Processing Enterprises (PMFME) is a centrally
                         sponsored scheme designed to support micro food processing enterprises in the
                         unorganized sector. The scheme aims to help them transition to the formal sector
@@ -495,7 +498,9 @@ const PMFME = () => {
                     PMFME Benefits & Eligibility
                 </h2>
                 <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
-                    <p className="text-sm md:text-base text-gray-600 text-center">
+                    <p className="text-sm md:text-base text-gray-600 text-center"
+                    style={{fontFamily:"Montserrat Alternates"}}
+                    >
                         PMFME scheme provides comprehensive support for establishing and formalizing micro food
                         processing enterprises with financial assistance, technology support, and market linkages.
                     </p>
