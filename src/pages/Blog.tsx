@@ -1,10 +1,9 @@
 import Mainlayout from "../section/Mainlayout";
 import BgImage from "../assets/Blog/bgImg.svg";
-import Image1 from "../assets/Blog/Image1.png";
-import { useNavigate } from "react-router-dom";
+
 import { useDispatch } from "react-redux";
 import { motion, useInView } from "framer-motion";
-import { useRef, useEffect, useState, memo } from "react";
+import { useRef,  memo } from "react";
 import NewBlog from "../section/NewBlog";
 
 const Blog = () => {
@@ -12,88 +11,12 @@ const Blog = () => {
   const handleOpenDialog = () => {
     dispatch({ type: "open" });
   };
-  const blogs = [
-    {
-      title: "Title1",
-      description:
-        "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
-      img: Image1,
-      slug: "test",
-    },
-    {
-      title: "Title1",
-      description:
-        "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
-      img: Image1,
-      slug: "",
-    },
-    {
-      title: "Title1",
-      description:
-        "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
-      img: Image1,
-      slug: "",
-    },
-    {
-      title: "Title1",
-      description:
-        "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
-      img: Image1,
-      slug: "",
-    },
-    {
-      title: "Title1",
-      description:
-        "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
-      img: Image1,
-      slug: "",
-    },
-    {
-      title: "Title1",
-      description:
-        "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
-      img: Image1,
-      slug: "/",
-    },
-    {
-      title: "Title1",
-      description:
-        "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
-      img: Image1,
-      slug: "/",
-    },
-    {
-      title: "Title1",
-      description:
-        "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
-      img: Image1,
-      slug: "/",
-    },
-  ];
-  const nav = useNavigate();
+
+ 
 
   // Hero
   const refHero = useRef(null);
   const isInViewHero = useInView(refHero, { once: true, amount: 0.1 });
-
-  // Blog Section
-  const refBlog = useRef(null);
-  const isInViewBlog = useInView(refBlog, { once: true, amount: 0.1});
-  const [cols, setCols] = useState(1);
-
-  useEffect(() => {
-    const updateCols = () => {
-      setCols(window.innerWidth >= 768 ? 4 : 1);
-    };
-    updateCols();
-    window.addEventListener("resize", updateCols);
-    return () => window.removeEventListener("resize", updateCols);
-  }, []);
-
-  const getDelay = (index: number) => {
-    const row = Math.floor(index / cols);
-    return 0.5 + row * 0.5; // Start after section's animation (0.5s), stagger rows by 0.5s
-  };
 
   return (
     <>
