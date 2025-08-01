@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect, useState, memo } from "react";
+import NewBlog from "../section/NewBlog";
 
 const Blog = () => {
   const dispatch = useDispatch();
@@ -153,7 +154,7 @@ const Blog = () => {
                               text-sm sm:text-base md:text-lg
                               px-6 sm:px-8 md:px-10 lg:px-12
                               py-3 sm:py-3.5 md:py-4
-                              hover:scale-105 transition-transform duration-300
+                               transition-transform duration-300
                               shadow-lg hover:shadow-xl"
               >
                 Schedule a call
@@ -163,56 +164,7 @@ const Blog = () => {
         </section>
 
         {/* Blog Section */}
-        <motion.section
-          ref={refBlog}
-          initial={{ y: 100, opacity: 0 }}
-          animate={isInViewBlog ? { y: 0, opacity: 1 } : {}}
-          transition={{ duration: 0.5 }}
-          className="px-7 md:px-14 py-7 space-y-6 bg-[#f7f7f7]"
-        >
-          <h2
-            style={{ fontFamily: "Anton" }}
-            className="sub-heading  text-center bg-gradient-to-t from-[#3CA2E2] to-[#052EAA] bg-clip-text text-transparent"
-          >
-            New Blog's
-          </h2>
-          <p className="paragraph text-center"
-          style={{fontFamily:"Montserrat Alternates"}}
-          >
-            {" "}
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, qui.
-          </p>
-          <div className="grid md:grid-cols-4 space-y-6 gap-6">
-            {blogs?.map((blog, index) => (
-              <motion.div
-                key={index}
-                initial={{ y: 50, opacity: 0 }}
-                animate={isInViewBlog ? { y: 0, opacity: 1 } : {}}
-                transition={{ duration: 0.5, delay: getDelay(index) }}
-                className="space-y-3"
-              >
-                <img src={blog?.img} />
-                <h2
-                  className=" text-xl text-[#3CA2E2] font-semibold"
-                  style={{ fontFamily: "Montserrat Alternates" }}
-                >
-                  {blog?.title}
-                </h2>
-                <p className=" paragraph">{blog?.description}</p>
-                <div>
-                  <button
-                    className="custom-btn "
-                    onClick={() => {
-                      nav(`/expandedBlog/${blog?.slug}`);
-                    }}
-                  >
-                    Explore
-                  </button>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.section>
+        <NewBlog/>
       </Mainlayout>
     </>
   );

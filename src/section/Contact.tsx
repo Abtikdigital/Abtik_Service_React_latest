@@ -139,7 +139,7 @@ const Contact = () => {
               <input
                 {...register("name", validationRules.name)}
                 placeholder="Enter Your Name"
-                className={`bg-[#ECEFF4] rounded-lg w-full p-2.5 focus:outline-2 transition-all duration-0  ${
+                className={`bg-[#ECEFF4] rounded-lg w-full p-3 focus:outline-2 transition-all duration-0  ${
                   errors.name
                     ? "outline-red-500 border-red-500"
                     : "outline-[#2178B5] hover:outline-2"
@@ -159,7 +159,7 @@ const Contact = () => {
                 {...register("email", validationRules.email)}
                 type="email"
                 placeholder="Enter Your Email"
-                className={`bg-[#ECEFF4] rounded-lg w-full p-2.5 focus:outline-2 transition-all duration-0 ${
+                className={`bg-[#ECEFF4] rounded-lg w-full p-3 focus:outline-2 transition-all duration-0 ${
                   errors.email
                     ? "outline-red-500 border-red-500"
                     : "outline-[#2178B5] hover:outline-2"
@@ -178,7 +178,7 @@ const Contact = () => {
               <textarea
                 {...register("message", validationRules.message)}
                 placeholder="Enter Your Message"
-                className={`bg-[#ECEFF4] rounded-lg w-full p-2.5 overflow-auto h-24 max-h-32 resize-none transition-all duration-0 ${
+                className={`bg-[#ECEFF4] rounded-lg w-full p-3 overflow-auto h-24 max-h-32 resize-none transition-all duration-0 ${
                   errors.message
                     ? "outline-red-500 border-red-500"
                     : "outline-[#2178B5] hover:outline-2"
@@ -197,7 +197,7 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`custom-btn w-full text-center !py-3 transition-all duration-200  ${
+                className={`custom-btn w-full text-center !py-3  transition-shadow duration-300  ${
                   isSubmitting
                   ? "opacity-50 cursor-not-allowed"
                   : "hover:transform hover:scale-105"

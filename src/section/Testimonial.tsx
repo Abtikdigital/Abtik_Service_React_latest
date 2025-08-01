@@ -165,7 +165,7 @@ const Card: React.FC<CardProps> = ({ testimonial, position, windowWidth }) => {
     zIndex = 30;
     transformStyle = "translateY(0)";
   } else if (position === "prev") {
-    styles = "scale-75 opacity-70";
+    styles = "scale-75   opacity-70";
     zIndex = 20;
     transformStyle = windowWidth < 640 ? "translateY(-35px)" : "translateY(-60px)";
   } else if (position === "next") {

@@ -136,12 +136,12 @@ const MakeInIndiaCertificate = () => {
         {
             icon: FileText,
             title: "Assess Local Content",
-            description: "Review your manufacturing/assembly process and calculate Indian content percentage as per PPP-MII Order, 2017[7][8]."
+            description: "Review your manufacturing/assembly process and calculate Indian content percentage as per PPP-MII Order, 2017."
         },
         {
             icon: Shield,
             title: "Self or CA Certification",
-            description: "Generate a certificate in prescribed MII format—self-certified for standard tenders, CA-certified for bids over ₹10 Crores[5][7][11]."
+            description: "Generate a certificate in prescribed MII format—self-certified for standard tenders, CA-certified for bids over ₹10 Crores."
         },
         {
             icon: Award,
@@ -155,27 +155,27 @@ const MakeInIndiaCertificate = () => {
         {
             icon: TrendingUp,
             title: "Bid Preference",
-            description: "Class-I/II local suppliers get priority and may win government contracts even when not L1[5][9]."
+            description: "Class-I/II local suppliers get priority and may win government contracts even when not L1."
         },
         {
             icon: DollarSign,
             title: "Access to Incentives",
-            description: "Eligible for tax breaks, export incentives, and subsidies reserved for local manufacturers[5][8]."
+            description: "Eligible for tax breaks, export incentives, and subsidies reserved for local manufacturers."
         },
         {
             icon: Users,
             title: "Brand Credibility",
-            description: "Build trust with buyers—MII means quality, legal compliance, and speedy support[6][8]."
+            description: "Build trust with buyers—MII means quality, legal compliance, and speedy support."
         },
         {
             icon: Award,
             title: "Market Expansion",
-            description: "Boost eligibility for trade fairs, global tenders, and export opportunities with government backing[5][9]."
+            description: "Boost eligibility for trade fairs, global tenders, and export opportunities with government backing."
         },
         {
             icon: Shield,
             title: "Support for MSMEs",
-            description: "MSMEs get equal footing against large/foreign competitors—empowered to scale up faster[5][8]."
+            description: "MSMEs get equal footing against large/foreign competitors—empowered to scale up faster."
         }
     ];
 
@@ -223,7 +223,7 @@ const MakeInIndiaCertificate = () => {
                     <div className="pt-2 sm:pt-4">
                         <button
                             onClick={handleOpenDialog}
-                            className="custom-btn text-sm sm:text-base md:text-lg px-6 sm:px-8 md:px-10 lg:px-12 py-3 sm:py-3.5 md:py-4 hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-xl"
+                            className="custom-btn text-sm sm:text-base md:text-lg px-6 sm:px-8 md:px-10 lg:px-12 py-3 sm:py-3.5 md:py-4  transition-transform duration-300 shadow-lg hover:shadow-xl"
                         >
                             Apply for Make in India Certificate
                         </button>

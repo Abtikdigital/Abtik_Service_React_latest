@@ -3,84 +3,98 @@ import Image1 from "../assets/OurService/Img1.svg";
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect, useState, memo } from "react";
 
+const services = [
+  {
+    title: "Title1",
+    description: "description",
+    img: Image1,
+    path: "/",
+  },
+  {
+    title: "Title1",
+    description: "description",
+    img: Image1,
+    path: "/",
+  },
+  {
+    title: "Title1",
+    description: "description",
+    img: Image1,
+    path: "/",
+  },
+  {
+    title: "Title1",
+    description: "description",
+    img: Image1,
+    path: "/",
+  },
+  {
+    title: "Title1",
+    description: "description",
+    img: Image1,
+    path: "/",
+  },
+  {
+    title: "Title1",
+    description: "description",
+    img: Image1,
+    path: "/",
+  },
+  {
+    title: "Title1",
+    description: "description",
+    img: Image1,
+    path: "/",
+  },
+  {
+    title: "Title1",
+    description: "description",
+    img: Image1,
+    path: "/",
+  },
+];
+
 const OurService = () => {
   const nav = useNavigate();
-  const services = [
-    {
-      title: "Title1",
-      description: "description",
-      img: Image1,
-      path: "/",
-    },
-    {
-      title: "Title1",
-      description: "description",
-      img: Image1,
-      path: "/",
-    },
-    {
-      title: "Title1",
-      description: "description",
-      img: Image1,
-      path: "/",
-    },
-    {
-      title: "Title1",
-      description: "description",
-      img: Image1,
-      path: "/",
-    },
-    {
-      title: "Title1",
-      description: "description",
-      img: Image1,
-      path: "/",
-    },
-    {
-      title: "Title1",
-      description: "description",
-      img: Image1,
-      path: "/",
-    },
-    {
-      title: "Title1",
-      description: "description",
-      img: Image1,
-      path: "/",
-    },
-    {
-      title: "Title1",
-      description: "description",
-      img: Image1,
-      path: "/",
-    },
-  ];
 
-  const [cols, setCols] = useState(1);
+  // Responsive column tracking
+  const getCols = () => {
+    const width = window.innerWidth;
+    if (width >= 1280) return 4;
+    else if (width >= 1024) return 3;
+    else if (width >= 768) return 2;
+    return 1;
+  };
 
+  const [cols, setCols] = useState(getCols());
+  const [rows, setRows] = useState(1);
+
+  // Responsive cols/rows updating
   useEffect(() => {
     const updateCols = () => {
-      const width = window.innerWidth;
-      if (width >= 1280) setCols(4); // xl
-      else if (width >= 1024) setCols(3); // lg
-      else if (width >= 768) setCols(2); // md
-      else setCols(1);
+      const newCols = getCols();
+      setCols(newCols);
+      setRows(prevRows => {
+        const visible = prevRows * cols;
+        return Math.ceil(visible / newCols) || 1;
+      });
     };
-    updateCols();
     window.addEventListener("resize", updateCols);
     return () => window.removeEventListener("resize", updateCols);
-  }, []);
+    // eslint-disable-next-line
+  }, [cols]);
 
-  const HandleClick = (path: any) => {
-    nav(path);
-  };
+  const HandleClick = (path:any) => nav(path);
 
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.1 });
 
-  const getDelay = (index: number) => {
+  const itemsToShow = rows * cols;
+  const canLoadMore = itemsToShow < services.length;
+
+  const getDelay = (index:number) => {
     const row = Math.floor(index / cols);
-    return 0.5 + row * 0.5; // Start after section's animation (0.5s), stagger rows by 0.5s
+    return 0.1 + row * 0.1; // Start after section animation, stagger rows
   };
 
   return (
@@ -100,13 +114,14 @@ const OurService = () => {
         >
           Our Service
         </h2>
-        <p className="paragraph text-center"
-        style={{fontFamily:"Montserrat Alternates"}}
+        <p
+          className="paragraph text-center"
+          style={{ fontFamily: "Montserrat Alternates" }}
         >
           “Smart business solutions—from registration to funding, licensing & certification—all in one place.”
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-6">
-          {services.map((service: any, index: number) => (
+          {services.slice(0, itemsToShow).map((service, index) => (
             <motion.div
               key={index}
               initial={{ y: 50, opacity: 0 }}
@@ -114,16 +129,14 @@ const OurService = () => {
               transition={{ duration: 0.5, delay: getDelay(index) }}
               className="space-y-4"
             >
-              <img src={service.img} className="w-full" />
+              <img src={service.img} className="w-full" alt={service.title} />
               <h2 className="text-center text-xl text-[#3CA2E2] font-semibold">
                 {service?.title}
               </h2>
               <p className="text-center paragraph">{service?.description}</p>
               <div className="text-center">
                 <button
-                  onClick={() => {
-                    HandleClick(service?.path);
-                  }}
+                  onClick={() => HandleClick(service?.path)}
                   className="custom-btn w-full max-w-[120px] !py-3 mx-auto"
                 >
                   Explore
@@ -132,6 +145,17 @@ const OurService = () => {
             </motion.div>
           ))}
         </div>
+        {canLoadMore && (
+          <div className="flex justify-center mt-6">
+            <button
+              className="custom-btn"
+              type="button"
+              onClick={() => setRows(r => r + 1)}
+            >
+              Load More
+            </button>
+          </div>
+        )}
       </div>
     </motion.section>
   );

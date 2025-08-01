@@ -225,7 +225,7 @@ const MSMECertificate = () => {
                     <div className="pt-2 sm:pt-4">
                         <button
                             onClick={handleOpenDialog}
-                            className="custom-btn text-sm sm:text-base md:text-lg px-6 sm:px-8 md:px-10 lg:px-12 py-3 sm:py-3.5 md:py-4 hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-xl"
+                            className="custom-btn text-sm sm:text-base md:text-lg px-6 sm:px-8 md:px-10 lg:px-12 py-3 sm:py-3.5 md:py-4  transition-transform duration-300 shadow-lg hover:shadow-xl"
                         >
                             Apply for MSME Certificate
                         </button>

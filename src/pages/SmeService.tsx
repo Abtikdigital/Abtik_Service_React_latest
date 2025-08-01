@@ -728,7 +728,7 @@ const SMELoan = () => {
                                 onClick={() => toggleIsExpanded(index)}
                             >
                                 <span>{data.question}</span>
-                                <button className="border-2 p-1 transition-all duration-300 hover:scale-105 h-8 w-8 flex justify-center items-center border-[#052EAA] rounded-lg text-[#052EAA]">
+                                <button className="border-2 p-1 transition-all duration-300  h-8 w-8 flex justify-center items-center border-[#052EAA] rounded-lg text-[#052EAA]">
                                     {isExpanded.isOpen && isExpanded.index === index ? (
                                         <ArrowRight className="w-5 h-5" />
                                     ) : (
