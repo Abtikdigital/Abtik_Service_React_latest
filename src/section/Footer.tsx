@@ -122,7 +122,7 @@ const Footer = () => {
                 Seed Fund
               </Link>
               <Link
-                to={"/"}
+                to={"/services/legal/trademark-registration"}
                 className="text-sm font-semibold text-[#4D4D4D] hover:underline hover:text-gray-950 cursor-pointer duration-300"
               >
                 Trade Mark Registration
