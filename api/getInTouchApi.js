@@ -94,7 +94,7 @@ const getInTouchValidationSchema = joi.object({
 });
 
 // TRANSPORTER
-const transporter = nodemailer.createTransporter({
+const transporter = nodemailer.createTransport({
   host: SMTP_HOST_NAME,
   auth: {
     user: SMTP_MAIL,
