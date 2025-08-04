@@ -1,37 +1,40 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect, useState, memo } from "react";
 import { useNavigate } from "react-router-dom";
-import Image1 from "../assets/Blog/Image1.png";
+import Image1 from "../assets/Blog/budget 2025.jpeg";
+import Image2 from "../assets/Blog/2nd blog.jpeg";
+import Image3 from "../assets/Blog/3rd blog.png";
+import Image4 from "../assets/Blog/4th blog.jpeg";
 
 const blogs = [
   {
-    title: "Title1",
+    title: "Budget 2025: A Strategic Shift for MSMEs",
     description:
-      "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
+      "India’s Union Budget 2025 has set",
     img: Image1,
     slug: "test",
   },
   // ... other blog objects ...
   {
-    title: "Title1",
+    title: "India’s Startups Get a Boost: Budget 2025 Unlocks New Pathways",
     description:
-      "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
-    img: Image1,
+      "First-time entrepreneurs are front",
+    img: Image2,
     slug: "/",
   },
    {
-    title: "Title1",
+    title: " Budget 2025 Simplifies the Journey for New Founders",
     description:
-      "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
-    img: Image1,
+      "For first-time entrepreneurs, Budget",
+    img: Image3,
     slug: "test",
   },
   // ... other blog objects ...
   {
-    title: "Title1",
+    title: " A Budget That Strengthens Local Industries and Women-Led Enterprises",
     description:
-      "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
-    img: Image1,
+      "Budget 2025 goes beyond metro",
+    img: Image4,
     slug: "/",
   },
    {

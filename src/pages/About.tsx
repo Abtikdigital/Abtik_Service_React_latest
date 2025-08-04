@@ -235,11 +235,12 @@ const About = () => {
               <p
                 className="paragraph  "
                 style={{ fontFamily: "Montserrat Alternates" }}
-              >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. In
-                quidem ipsa voluptate architecto quisquam reprehenderit rem,
-                totam, facere rerum cum harum cumque explicabo dolorum a ex? Hic
-                officiis dolore aliquam!
+              >{
+                index==0?
+                
+                "To become the most trusted growth partner for every small and medium business in India — by making government support, digital transformation, and business compliance simple, accessible, and result-driven. We believe growth should never be limited by lack of guidance or opportunity."
+                :"At Abtik, our mission is to simplify business growth. From government schemes and funding to branding, legal support, and digital services — we handle it all. With 50,000+ businesses served, we’re your trusted partner for turning ideas into impact."
+              }
               </p>
               <div>
                 <img loading="lazy" src={Image1} className="rounded-4xl" />

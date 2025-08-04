@@ -2,7 +2,9 @@ import { memo, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import Mainlayout from "../section/Mainlayout";
 import BgImage from "../assets/ExpandedBlog/bgImg.svg";
-import Image1 from "../assets/Blog/Image1.png";
+import Image1 from "../assets/Blog/budget 2025.jpeg";
+import Image2 from "../assets/Blog/2nd blog.png";
+import Image3 from "../assets/Blog/3rd blog.png";
 import { useDispatch } from "react-redux";
 
 interface BlogListItem {
@@ -31,14 +33,7 @@ const ExpandedBlog = () => {
     {
       title: "Budget 2025: A Strategic Shift for MSMEs",
       description:
-        `Budget 2025 marks a turning point for India’s micro, small, and medium enterprises. With a focused allocation of ₹23,100 crore, the government has moved beyond symbolic gestures—bringing targeted, structural support for MSMEs to scale sustainably.
-
-
-Key measures like the expansion of the Credit Guarantee Fund Scheme, introduction of MSME credit cards, and reduction of import duties on essential raw materials signal a deliberate move toward financial inclusivity and ease of business.
-
-Equally noteworthy is the emphasis on rural enterprise development—supporting sectors like khadi, handicrafts, and toy manufacturing. These are not just economic moves; they reflect an intent to strengthen India’s grassroots industries for global competitiveness.
-
-Budget 2025 doesn't just support MSMEs—it empowers them to lead.`,
+        `India’s Union Budget 2025 has set a bold tone for the future of Micro, Small, and Medium Enterprises (MSMEs). With ₹23,100 crore allocated directly to support this backbone of the Indian economy, the government is finally moving from symbolic announcements to actionable, structural reforms.`,
 
       img: Image1,
       slug: "test",
@@ -47,43 +42,65 @@ Budget 2025 doesn't just support MSMEs—it empowers them to lead.`,
       category: "Marketing",
       list: [
         {
-          title: "Key Digital Marketing Trends",
+          title: "Focused Financial Allocation: ₹23,100 Crore for MSMEs",
           lists: [
-            "AI-powered personalization for better customer targeting",
-            "Voice search optimization for smart devices",
-            "Interactive content engagement strategies",
+            "Long-term vision for scalability and global competitiveness",
+            "₹23,100 crore allocation for MSME support",
+            "Structural approach rather than one-time relief packages",
           ],
           description:
-            "These trends are revolutionizing how businesses connect with their audiences and drive meaningful engagement across all digital platforms.",
+            "For years, MSMEs have demanded more than just recognition—they’ve needed real, accessible support. The 2025 Budget delivers that with a dedicated allocation that targets growth, sustainability, and resilience.",
         },
         {
-          title: "Implementation Strategies",
+          title: "Major Reforms Driving the Shift",
           lists: [
-            "Data-driven decision making processes",
-            "Multi-channel integration approaches",
-            "Customer journey optimization techniques",
+            "Expansion of the Credit Guarantee Fund Scheme",
+            "Introduction of MSME Credit Cards",
+            "Reduction of Import Duties on Essential Raw Materials",
           ],
           description:
-            "Successful implementation requires a strategic approach that aligns with your business objectives and target audience needs while maintaining consistent brand messaging.",
+            "Several key announcements in Budget 2025 highlight a firm commitment to making business easier, credit more accessible, and systems more transparent for MSMEs:",
         },
       ],
     },
     {
-      title: "Building Scalable Startup Solutions",
+      title: "India’s Startups Get a Boost: Budget 2025 Unlocks New Pathways",
       description:
-        "Learn how to build technology solutions that grow with your startup from day one to enterprise level.",
-      img: Image1,
+        "Startups are no longer fringe players—they are now central to India’s economic story. Budget 2025 backs this shift with tax reliefs, easier capital access, and major investments in innovation.",
+      img: Image2,
       slug: "scalable-startup-solutions",
       date: "July 18, 2024",
       readTime: "7 min read",
       category: "Technology",
-      list: [],
+      list: [
+        {
+          title: "Key Budget Highlights for Startups",
+          lists: [
+            "Extended tax benefits for eligible startups",
+            "Simplified capital gains tax structure",
+            "Launch of a ₹1,000 Cr Innovation Fund focused on: 1. Artificial Intelligence (AI) 2. Biotechnology 3. Sustainable Technology",
+          ],
+          description:
+            "For years, MSMEs have demanded more than just recognition—they’ve needed real, accessible support. The 2025 Budget delivers that with a dedicated allocation that targets growth, sustainability, and resilience.",
+        },
+         {
+          title: "Expanding Innovation Beyond Metro Cities",
+          lists: [
+            "More incubation programs in Tier 2 & Tier 3 cities",
+            "Push for geographic diversity in startup growth",
+            "Eased regulatory environment for new founders",
+            "Greater access to institutional funding",
+          ],
+          description:
+            "",
+        },
+      ],
     },
     {
-      title: "Legal Compliance for Modern Businesses",
+      title: "Budget 2025 Simplifies the Journey for New Founders",
       description:
-        "Navigate the complex world of business compliance with our comprehensive guide and expert insights.",
-      img: Image1,
+        "First-time entrepreneurs are front and center in Budget 2025. With a streamlined digital portal and structured mentorship, starting up in India just got easier—and faster.",
+      img: Image3,
       slug: "legal-compliance-guide",
       date: "July 15, 2024",
       readTime: "6 min read",
@@ -91,26 +108,68 @@ Budget 2025 doesn't just support MSMEs—it empowers them to lead.`,
       list: [],
     },
     {
-      title: "Fund Management Best Practices",
+      title: "Single Window Portal: One Platform, Many Solutions",
       description:
-        "Optimize your fund management strategies with proven methodologies and cutting-edge tools.",
+        "The newly announced ‘Single Window’ digital portal allows new founders to:",
       img: Image1,
       slug: "fund-management-practices",
       date: "July 12, 2024",
       readTime: "8 min read",
       category: "Finance",
-      list: [],
+      list: [
+         {
+          title: "The newly announced ‘Single Window’ digital portal allows new founders to:",
+          lists: [
+            "Register their startups",
+            "File intellectual property (IP) claims",
+            "Manage compliance—all in one place",
+          ],
+          description:
+            "",
+        },
+        {
+          title: "Structured Mentorship Through SIDBI",
+          lists: [
+            "Connects early-stage entrepreneurs with seasoned experts",
+            "Offers guidance during crucial growth phases",
+            "Helps bridge the gap between idea and execution",
+          ],
+          description:
+            "Budget 2025 also introduces a reimagined mentorship framework under SIDBI:",
+        },
+      ],
     },
     {
-      title: "Customer Success Stories: Transformation Journey",
+      title: "A Budget That Strengthens Local Industries and Women-Led Enterprises",
       description:
-        "Real stories of how businesses transformed their operations with our comprehensive solutions.",
+        "Budget 2025 goes beyond metro-focused development—championing rural industries, tribal crafts, and women-led businesses as key engines of growth.",
       img: Image1,
       slug: "customer-success-stories",
       date: "July 10, 2024",
       readTime: "4 min read",
       category: "Case Study",
-      list: [],
+      list: [
+         {
+          title: "Empowering Local & Artisan-Driven Enterprises",
+          lists: [
+            "Targeted investments in khadi clusters, tribal crafts, and agri-based units",
+            "Support for women-led micro-enterprises",
+            "Promotion of cultural and handmade goods for export potential",
+          ],
+          description:
+            "",
+        },
+         {
+          title: "Real Enablers, Not Just Incentives",
+          lists: [
+            "Solar-powered tools for rural productivity",
+            "Cold storage support for agri-entrepreneurs",
+            "Digital training programs for micro-entrepreneurs in small towns",
+          ],
+          description:
+            "",
+        },
+      ],
     },
     {
       title: "Innovation in Business Process Automation",
