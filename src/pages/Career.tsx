@@ -188,8 +188,8 @@ const Career = () => {
       formData.append("noticePeriod", data.noticePeriod);
       formData.append("resume", file);
 
-      // Submit to API
-      const response = await axios.post("/api/careerApi.js", formData, {
+      // Submit to API (removed .js extension)
+      const response = await axios.post("/api/careerApi", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
@@ -201,7 +201,7 @@ const Career = () => {
         await Swal.fire({
           icon: "success",
           title: "Application Submitted!",
-          text: "Thank you for applying! We will review your application and get back to you soon.",
+          text: response.data.message || "Thank you for applying! We will review your application and get back to you soon.",
           confirmButtonText: "Great!",
           confirmButtonColor: "#052EAA",
           allowOutsideClick: false,
@@ -215,9 +215,12 @@ const Career = () => {
       }
     } catch (error: any) {
       console.error("Submission error:", error);
+      console.error("Error response:", error.response?.data);
 
       const errorMessage =
-        error.response?.data?.message || "Error while inserting data";
+        error.response?.data?.message || 
+        error.response?.data?.error ||
+        "Error while submitting application. Please try again.";
 
       await Swal.fire({
         icon: "error",
@@ -279,7 +282,7 @@ const Career = () => {
           }}
         >
           <div className="absolute inset-0 bg-black/20 lg:bg-transparent"></div>
-
+          
           <motion.div
             initial={{ y: 100, opacity: 0 }}
             animate={isInViewHero ? { y: 0, opacity: 1 } : {}}
@@ -395,7 +398,7 @@ const Career = () => {
             >
               Job Openings At Abtik
             </h2>
-
+            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 justify-center items-center">
               {jobOpenings?.map((job, index) => (
                 <motion.div

@@ -8,9 +8,7 @@ import formidable from "formidable";
 const { SMTP_HOST_NAME, SMTP_PORT, SECURE, MONGODB_URI, SMTP_MAIL, SMTP_PASS } =
   process.env;
 
-// -----------------------------
 // MONGOOSE CONNECTION
-// -----------------------------
 let cached = null;
 const dbConnection = async () => {
   try {
@@ -29,9 +27,7 @@ const dbConnection = async () => {
   }
 };
 
-// -----------------------------
 // SCHEMA & MODEL
-// -----------------------------
 const careerSchema = mongoose.Schema(
   {
     jobTitle: { type: String, required: true },
@@ -39,7 +35,6 @@ const careerSchema = mongoose.Schema(
     email: {
       type: String,
       required: true,
-      unique: true,
       lowercase: true,
       trim: true,
     },
@@ -55,9 +50,7 @@ const careerSchema = mongoose.Schema(
 const careerModel =
   mongoose.models.careerModel || mongoose.model("careerModel", careerSchema);
 
-// -----------------------------
 // VALIDATION SCHEMA
-// -----------------------------
 const careerValidationSchema = joi.object({
   jobTitle: joi.string().required(),
   fullName: joi.string().required(),
@@ -72,10 +65,8 @@ const careerValidationSchema = joi.object({
   noticePeriod: joi.string().required(),
 });
 
-// -----------------------------
 // NODEMAILER TRANSPORT
-// -----------------------------
-const transporter = nodemailer.createTransport({
+const transporter = nodemailer.createTransporter({
   host: SMTP_HOST_NAME,
   port: Number(SMTP_PORT),
   secure: SECURE === "true",
@@ -85,18 +76,22 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-// -----------------------------
-// EMAIL SENDING
-// -----------------------------
+// EMAIL SENDING FUNCTION
 const sendMail = async (from, to, subject, html, attachments = []) => {
-  const info = await transporter.sendMail({
-    from,
-    to,
-    subject,
-    html,
-    attachments,
-  });
-  console.log("Mail sent:", info.messageId);
+  try {
+    const info = await transporter.sendMail({
+      from,
+      to,
+      subject,
+      html,
+      attachments,
+    });
+    console.log("Mail sent:", info.messageId);
+    return info;
+  } catch (error) {
+    console.error("Email sending error:", error);
+    throw error;
+  }
 };
 
 // Firm Template
@@ -143,8 +138,8 @@ const firmTemplate = (userInfo) => {
           }
           .header {
             text-align: center;
-            background: #f56015;
-            background: linear-gradient(135deg, #f56015, #ffa94d);
+            background: #052EAA;
+            background: linear-gradient(135deg, #052EAA, #3CA2E2);
             padding: 35px 20px;
             color: white;
             font-size: 32px;
@@ -154,7 +149,7 @@ const firmTemplate = (userInfo) => {
           }
           .header-divider {
             height: 8px;
-            background: #ffb367;
+            background: #3CA2E2;
             background: linear-gradient(90deg, rgba(255,255,255,0.2), rgba(255,255,255,0.5), rgba(255,255,255,0.2));
           }
           .content {
@@ -179,8 +174,8 @@ const firmTemplate = (userInfo) => {
             line-height: 1.6;
           }
           .highlight {
-            background-color: rgba(245, 96, 21, 0.08);
-            border-left: 4px solid #f56015;
+            background-color: rgba(5, 46, 170, 0.08);
+            border-left: 4px solid #052EAA;
             padding: 15px;
           }
           table {
@@ -191,12 +186,12 @@ const firmTemplate = (userInfo) => {
             border-radius: 14px;
             overflow: hidden;
             margin: 25px 0;
-            box-shadow: 0 5px 15px rgba(245, 96, 21, 0.08);
+            box-shadow: 0 5px 15px rgba(5, 46, 170, 0.08);
             font-size: 16px;
           }
           th {
-            background: #f56015;
-            background: linear-gradient(to right, #f56015, #f87e42);
+            background: #052EAA;
+            background: linear-gradient(to right, #052EAA, #3CA2E2);
             color: #ffffff;
             width: 30%;
             font-weight: 600;
@@ -220,7 +215,7 @@ const firmTemplate = (userInfo) => {
             background-color: #fafafa;
           }
           a {
-            color: #f56015;
+            color: #052EAA;
             text-decoration: none;
             font-weight: 500;
           }
@@ -258,11 +253,11 @@ const firmTemplate = (userInfo) => {
       </head>
       <body>
         <div class="email-wrapper">
-          <div class="header">Abtik-Digital</div>
+          <div class="header">Abtik Services</div>
           <div class="header-divider"></div>
           <div class="content">
             <h2><span class="emoji">📋</span> New Career Application Submission</h2>
-            <p class="highlight">A candidate has submitted an application via the Abtik-Digital website. Please review their details below and respond promptly.</p>
+            <p class="highlight">A candidate has submitted an application via the Abtik Services website. Please review their details below and respond promptly.</p>
             <table>
               <tr>
                 <th>Full Name</th>
@@ -286,11 +281,11 @@ const firmTemplate = (userInfo) => {
               </tr>
               <tr>
                 <th>Expected CTC</th>
-                <td>${expectedCtc}</td>
+                <td>₹${expectedCtc}</td>
               </tr>
               <tr>
                 <th>Current CTC</th>
-                <td>${currentCtc}</td>
+                <td>₹${currentCtc}</td>
               </tr>
               <tr>
                 <th>Notice Period</th>
@@ -319,14 +314,13 @@ const firmTemplate = (userInfo) => {
 const userTemplate = (userInfo) => {
   try {
     let { fullName } = userInfo;
-    const subject = "Thank You for Applying to Abtik-Digital";
     return `
     <!DOCTYPE html>
     <html>
       <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>${subject}</title>
+        <title>Thank You for Applying to Abtik Services</title>
         <style>
           body, html {
             margin: 0;
@@ -351,8 +345,8 @@ const userTemplate = (userInfo) => {
           }
           .header {
             text-align: center;
-            background: #f56015;
-            background: linear-gradient(135deg, #f56015, #ffa94d);
+            background: #052EAA;
+            background: linear-gradient(135deg, #052EAA, #3CA2E2);
             padding: 35px 20px;
             color: white;
             font-size: 32px;
@@ -361,7 +355,7 @@ const userTemplate = (userInfo) => {
           }
           .header-divider {
             height: 8px;
-            background: #ffb367;
+            background: #3CA2E2;
             background: linear-gradient(90deg, rgba(255,255,255,0.2), rgba(255,255,255,0.5), rgba(255,255,255,0.2));
           }
           .content {
@@ -386,8 +380,8 @@ const userTemplate = (userInfo) => {
             line-height: 1.6;
           }
           .highlight {
-            background-color: rgba(245, 96, 21, 0.08);
-            border-left: 4px solid #f56015;
+            background-color: rgba(5, 46, 170, 0.08);
+            border-left: 4px solid #052EAA;
             padding: 15px;
             margin-bottom: 25px;
           }
@@ -400,12 +394,12 @@ const userTemplate = (userInfo) => {
           }
           .message-box h3 {
             margin-top: 0;
-            color: #f56015;
+            color: #052EAA;
             font-size: 18px;
           }
           .button {
             display: inline-block;
-            background: linear-gradient(to right, #f56015, #f87e42);
+            background: linear-gradient(to right, #052EAA, #3CA2E2);
             color: white;
             text-decoration: none;
             padding: 12px 28px;
@@ -434,7 +428,7 @@ const userTemplate = (userInfo) => {
           .social-links a {
             display: inline-block;
             margin: 0 10px;
-            color: #f56015;
+            color: #052EAA;
             text-decoration: none;
           }
           .footer-note {
@@ -459,29 +453,29 @@ const userTemplate = (userInfo) => {
       </head>
       <body>
         <div class="email-wrapper">
-          <div class="header">Abtik-Digital</div>
+          <div class="header">Abtik Services</div>
           <div class="header-divider"></div>
           <div class="content">
-            <h2><span class="emoji">✅</span> ${subject}</h2>
-            <p class="highlight">Dear ${fullName}, thank you for applying to Abtik-Digital!</p>
+            <h2><span class="emoji">✅</span> Thank You for Applying to Abtik Services</h2>
+            <p class="highlight">Dear ${fullName}, thank you for applying to Abtik Services!</p>
             <p>We have received your career application, and our team will review it shortly.</p>
             <div class="message-box">
               <h3>What happens next?</h3>
               <p>We will contact you within 24-48 business hours if your profile matches our requirements. Thank you for your interest in joining our team!</p>
             </div>
             <p>In the meantime, feel free to explore our website for more information about our company and opportunities.</p>
-            <center><a href="https://www.abtikdigital.com" class="button">Visit Our Website</a></center>
+            <center><a href="https://www.abtikservices.com" class="button">Visit Our Website</a></center>
             <div class="divider"></div>
-            <p>If you have any urgent questions, please don't hesitate to call us at <strong>+91 1234567890</strong>.</p>
+            <p>If you have any urgent questions, please don't hesitate to contact us.</p>
           </div>
           <div class="footer">
             <div class="social-links">
-              <a href="https://www.linkedin.com/company/abtik-digitals/">LinkedIn</a> • 
-              <a href="https://www.instagram.com/abtik.digital">Instagram</a> • 
-              <a href="https://www.facebook.com/abtikdigital">Facebook</a>
+              <a href="#">LinkedIn</a> • 
+              <a href="#">Instagram</a> • 
+              <a href="#">Facebook</a>
             </div>
-            Thank you for choosing Abtik-Digital.
-            <span class="footer-note">© 2025 Abtik-Digital. All rights reserved.</span>
+            Thank you for choosing Abtik Services.
+            <span class="footer-note">© 2025 Abtik Services. All rights reserved.</span>
           </div>
         </div>
       </body>
@@ -493,134 +487,166 @@ const userTemplate = (userInfo) => {
 };
 
 export const config = {
-  api: { bodyParser: false }, // Needed for formidable
+  api: { 
+    bodyParser: false,
+    sizeLimit: '4mb',
+  },
 };
 
 const handler = async (req, res) => {
   if (req.method !== "POST") {
     return res
       .status(405)
-      .json({ isSuccess: false, message: "Only POST allowed" });
+      .json({ isSuccess: false, message: "Only POST method allowed" });
   }
 
   try {
     await dbConnection();
 
+    // Configure formidable with better error handling
     const form = formidable({
       keepExtensions: true,
       maxFileSize: 3 * 1024 * 1024, // 3MB limit
+      multiples: false,
+      uploadDir: '/tmp',
+      filter: ({ name, originalFilename, mimetype }) => {
+        return name === 'resume' && mimetype && (
+          mimetype.includes('pdf') || 
+          mimetype.includes('msword') || 
+          mimetype.includes('document')
+        );
+      }
     });
 
-    form.parse(req, async (err, fields, files) => {
-      if (err) {
-        return res
-          .status(400)
-          .json({
-            isSuccess: false,
-            message: "Form parse error",
-            error: err.message,
-          });
-      }
+    // Parse form data with promise wrapper
+    const parseForm = () => {
+      return new Promise((resolve, reject) => {
+        form.parse(req, (err, fields, files) => {
+          if (err) {
+            reject(err);
+          } else {
+            resolve([fields, files]);
+          }
+        });
+      });
+    };
 
-      const formData = {
-        jobTitle: fields.jobTitle?.[0] || fields.jobTitle,
-        fullName: fields.fullName?.[0] || fields.fullName,
-        email: fields.email?.[0] || fields.email,
-        contactNumber: fields.contactNumber?.[0] || fields.contactNumber,
-        experience: fields.experience?.[0] || fields.experience,
-        expectedCtc: fields.expectedCtc?.[0] || fields.expectedCtc,
-        currentCtc: fields.currentCtc?.[0] || fields.currentCtc,
-        noticePeriod: fields.noticePeriod?.[0] || fields.noticePeriod,
-      };
+    const [fields, files] = await parseForm();
 
-      // Validate form data
-      const { error } = careerValidationSchema.validate(formData);
-      if (error) {
-        return res
-          .status(400)
-          .json({
-            isSuccess: false,
-            message: "Validation error",
-            error: error.message,
-          });
-      }
+    // Extract fields properly
+    const formData = {};
+    Object.keys(fields).forEach(key => {
+      formData[key] = Array.isArray(fields[key]) ? fields[key][0] : fields[key];
+    });
 
-      // Check for duplicate email
-      const exists = await careerModel.findOne({ email: formData.email });
-      if (exists) {
-        return res
-          .status(409)
-          .json({ isSuccess: false, message: "Email already exists" });
-      }
+    console.log("Parsed form data:", formData);
+    console.log("Files received:", Object.keys(files));
 
-      // Resume validation
-      const resume = Array.isArray(files.resume)
-        ? files.resume[0]
-        : files.resume;
-      
-      if (!resume || !fs.existsSync(resume.filepath)) {
-        return res
-          .status(400)
-          .json({ isSuccess: false, message: "Resume file is required" });
-      }
+    // Validate form data
+    const { error } = careerValidationSchema.validate(formData);
+    if (error) {
+      return res.status(400).json({
+        isSuccess: false,
+        message: "Validation error",
+        error: error.details[0].message,
+      });
+    }
 
-      // Validate file type (optional - add PDF/DOC validation)
-      const allowedTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
-      if (!allowedTypes.includes(resume.mimetype)) {
-        return res
-          .status(400)
-          .json({ isSuccess: false, message: "Only PDF and DOC files are allowed" });
-      }
+    // Check for duplicate email (optional)
+    const exists = await careerModel.findOne({ email: formData.email });
+    if (exists) {
+      return res.status(409).json({ 
+        isSuccess: false, 
+        message: "Application with this email already exists" 
+      });
+    }
 
-      // Save applicant data to database
-      const newEntry = new careerModel(formData);
-      await newEntry.save();
+    // Handle resume file
+    const resume = files.resume;
+    if (!resume) {
+      return res.status(400).json({ 
+        isSuccess: false, 
+        message: "Resume file is required" 
+      });
+    }
 
-      // Prepare resume attachment
-      const resumeBuffer = fs.readFileSync(resume.filepath);
-      const resumeAttachment = {
-        filename: resume.originalFilename || "resume.pdf",
-        content: resumeBuffer,
-      };
+    const resumeFile = Array.isArray(resume) ? resume[0] : resume;
+    
+    if (!resumeFile || !fs.existsSync(resumeFile.filepath)) {
+      return res.status(400).json({ 
+        isSuccess: false, 
+        message: "Resume file upload failed" 
+      });
+    }
 
-      // Send emails in parallel
+    // Validate file type
+    const allowedTypes = [
+      'application/pdf', 
+      'application/msword', 
+      'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+    ];
+    
+    if (!allowedTypes.includes(resumeFile.mimetype)) {
+      return res.status(400).json({ 
+        isSuccess: false, 
+        message: "Only PDF, DOC, and DOCX files are allowed" 
+      });
+    }
+
+    // Save to database
+    const newEntry = new careerModel(formData);
+    await newEntry.save();
+
+    // Prepare email attachment
+    const resumeBuffer = fs.readFileSync(resumeFile.filepath);
+    const resumeAttachment = {
+      filename: resumeFile.originalFilename || "resume.pdf",
+      content: resumeBuffer,
+    };
+
+    // Send emails
+    try {
       await Promise.all([
-        // Email to company with resume attachment
         sendMail(
           SMTP_MAIL,
           SMTP_MAIL,
-          "New Career Application",
+          `New Career Application - ${formData.fullName}`,
           firmTemplate(formData),
           [resumeAttachment]
         ),
-        // Confirmation email to user
         sendMail(
           SMTP_MAIL,
           formData.email,
-          "Thank You for Applying to Abtik-Digital",
+          "Thank You for Applying to Abtik Services",
           userTemplate(formData)
         ),
       ]);
+    } catch (emailError) {
+      console.error("Email sending failed:", emailError);
+      // Don't fail the entire request if email fails
+    }
 
-      // Clean up temporary file
-      try {
-        fs.unlinkSync(resume.filepath);
-      } catch (cleanupErr) {
-        console.warn("Temp file cleanup failed:", cleanupErr.message);
+    // Clean up temporary file
+    try {
+      if (fs.existsSync(resumeFile.filepath)) {
+        fs.unlinkSync(resumeFile.filepath);
       }
+    } catch (cleanupErr) {
+      console.warn("Temp file cleanup failed:", cleanupErr.message);
+    }
 
-      return res
-        .status(201)
-        .json({
-          isSuccess: true,
-          message: "Application submitted successfully",
-        });
+    return res.status(201).json({
+      isSuccess: true,
+      message: "Application submitted successfully! We will review your application and get back to you soon.",
     });
+
   } catch (err) {
     console.error("Server Error:", err);
-    return res
-      .status(500)
-      .json({ isSuccess: false, message: "Server error", error: err.message });
+    return res.status(500).json({ 
+      isSuccess: false, 
+      message: "Internal server error. Please try again later.",
+      error: process.env.NODE_ENV === 'development' ? err.message : undefined
+    });
   }
 };
 
