@@ -1,4 +1,12 @@
-import Image1 from "../assets/Recommended/Img1.svg";
+import Image1 from "../assets/Recommended/starup.jpg";
+import Image2 from "../assets/Recommended/seed.jpeg";
+import Image3 from "../assets/Recommended/msme.jpeg";
+import Image4 from "../assets/Recommended/nbfc.jpeg";
+import Image5 from "../assets/Recommended/pmegp.jpeg";
+import Image6 from "../assets/Recommended/naiif.jpeg";
+import Image7 from "../assets/Recommended/gst tax.jpg";
+import Image8 from "../assets/Recommended/Img1.svg";
+import Image9 from "../assets/Recommended/Img1.svg";
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect, useState, memo } from "react";
 
@@ -11,37 +19,37 @@ const recommendedData = [
   },
   {
     title: "Seed Fund Scheme",
-    img: Image1,
+    img: Image2,
     description:
       "An initiative under Startup India that provides early-stage funding through government-approved incubators. It helps promising startups access vital capital to scale.",
   },
   {
     title: "MSME Loan",
-    img: Image1,
+    img: Image3,
     description:
       "Loans provided to Micro, Small, and Medium Enterprises under various central and state government schemes. These help businesses grow and maintain healthy cash flow.",
   },
   {
     title: "NBFC Loan",
-    img: Image1,
+    img: Image4,
     description:
       "Loans provided by Non-Banking Financial Companies with simplified documentation and eligibility. These are tailored for startups and growing enterprises.",
   },
   {
     title: "PMEGP Loan",
-    img: Image1,
+    img: Image5,
     description:
       "A credit-linked subsidy scheme by the Government of India that supports new micro-enterprises in the manufacturing or service sectors, including interest subsidies.",
   },
   {
     title: "NAIIF Loan",
-    img: Image1,
+    img: Image6,
     description:
       "Equity-based funding made available through SEBI-registered Alternative Investment Funds (AIFs) under the National Alternative Investment and Infrastructure Fund (NAIIF).",
   },
   {
     title: "GST & Tax Compliance",
-    img: Image1,
+    img: Image7,
     description:
       "GST registration, monthly and annual return filings, income tax filing, TDS management, and audit preparation. Ensures your business always stays compliant.",
   },

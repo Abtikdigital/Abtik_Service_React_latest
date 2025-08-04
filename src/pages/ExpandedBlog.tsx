@@ -29,9 +29,17 @@ const ExpandedBlog = () => {
   };
   const blogsData: BlogData[] = [
     {
-      title: "The Future of Digital Marketing: Trends and Strategies",
+      title: "Budget 2025: A Strategic Shift for MSMEs",
       description:
-        "Discover the latest trends and strategies that are shaping the digital marketing landscape in 2024 and beyond.",
+        `Budget 2025 marks a turning point for India’s micro, small, and medium enterprises. With a focused allocation of ₹23,100 crore, the government has moved beyond symbolic gestures—bringing targeted, structural support for MSMEs to scale sustainably.
+
+
+Key measures like the expansion of the Credit Guarantee Fund Scheme, introduction of MSME credit cards, and reduction of import duties on essential raw materials signal a deliberate move toward financial inclusivity and ease of business.
+
+Equally noteworthy is the emphasis on rural enterprise development—supporting sectors like khadi, handicrafts, and toy manufacturing. These are not just economic moves; they reflect an intent to strengthen India’s grassroots industries for global competitiveness.
+
+Budget 2025 doesn't just support MSMEs—it empowers them to lead.`,
+
       img: Image1,
       slug: "test",
       date: "July 20, 2024",
