@@ -6,7 +6,7 @@ import {
     Mail,
     MapPin,
     Phone,
-   
+
     Headset,
     ArrowUpRight,
     ArrowRight,
@@ -25,7 +25,8 @@ import { memo, useState } from "react";
 import { useDispatch } from "react-redux";
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
-
+import { HeadProvider, Meta, Title } from "react-head";
+import seoData from "../data/seoData.json";
 const Overdraft = () => {
     const dispatch = useDispatch();
     const handleOpenDialog = () => {
@@ -197,527 +198,536 @@ const Overdraft = () => {
     const isInViewContact = useInView(refContact, { once: true, amount: 0.4 });
 
     return (
-        <Mainlayout>
-            {/* Hero Section */}
-            <section
-                ref={refHero}
-                className="flex justify-center items-center h-[70vh] sm:h-[80vh] lg:h-[85vh] xl:h-screen 
+        <>
+            <HeadProvider>
+                <Title>{seoData?.overdraftService?.title}</Title>
+                <Meta name="description" content={seoData?.overdraftService?.description} />
+                <Meta name="keyword" content={seoData?.overdraftService?.keyword} />
+                <Meta name="robots" content={seoData?.overdraftService?.robots} />
+            </HeadProvider>
+
+            <Mainlayout>
+                {/* Hero Section */}
+                <section
+                    ref={refHero}
+                    className="flex justify-center items-center h-[70vh] sm:h-[80vh] lg:h-[85vh] xl:h-screen 
                     lg:justify-end lg:items-center bg-center bg-cover 
                     px-4 sm:px-6 md:px-8 lg:px-12 xl:px-14
                     relative overflow-hidden"
-                style={{
-                    backgroundImage: `url(${BgImage})`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                    backgroundRepeat: "no-repeat",
-                }}
-            >
-                <div className="absolute inset-0 bg-black/20 lg:bg-transparent"></div>
-                <motion.div
-                    initial={{ y: 100, opacity: 0 }}
-                    animate={isInViewHero ? { y: 0, opacity: 1 } : {}}
-                    transition={{ duration: 0.5 }}
-                    className="relative z-10 w-full max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-none lg:w-1/2 
+                    style={{
+                        backgroundImage: `url(${BgImage})`,
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
+                        backgroundRepeat: "no-repeat",
+                    }}
+                >
+                    <div className="absolute inset-0 bg-black/20 lg:bg-transparent"></div>
+                    <motion.div
+                        initial={{ y: 100, opacity: 0 }}
+                        animate={isInViewHero ? { y: 0, opacity: 1 } : {}}
+                        transition={{ duration: 0.5 }}
+                        className="relative z-10 w-full max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-none lg:w-1/2 
                         space-y-4 sm:space-y-5 md:space-y-6 lg:space-y-8
                         text-center lg:text-left"
-                >
-                    <h1
-                        className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 
+                    >
+                        <h1
+                            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 
                           font-bold leading-tight sm:leading-tight md:leading-tight lg:leading-tight
                           text-white lg:text-inherit tracking-wide
                           main-heading"
-                        style={{ fontFamily: "Anton" }}
-                    >
-                        Secure{" "}
-                        <span className="text-[#3CA2E2] font-extrabold block sm:inline">
-                            Bank Overdraft
-                        </span>{" "}
-                        Facility Today
-                    </h1>
-                    <p
-                        className="text-sm sm:text-base md:text-lg lg:text-xl
+                            style={{ fontFamily: "Anton" }}
+                        >
+                            Secure{" "}
+                            <span className="text-[#3CA2E2] font-extrabold block sm:inline">
+                                Bank Overdraft
+                            </span>{" "}
+                            Facility Today
+                        </h1>
+                        <p
+                            className="text-sm sm:text-base md:text-lg lg:text-xl
                          leading-relaxed sm:leading-relaxed md:leading-relaxed
                          text-white lg:text-white
                          paragraph !text-white
                          max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
-                           style={{fontFamily:"Montserrat Alternates"}}
-                    >
-                        Bridge your cash flow gaps with flexible overdraft facilities.
-                        Access instant funds up to ₹5 crore limit and pay interest only
-                        on the amount utilized for optimal financial management.
-                    </p>
-                    <div className="pt-2 sm:pt-4">
-                        <button
-                            onClick={handleOpenDialog}
-                            className="custom-btn 
+                            style={{ fontFamily: "Montserrat Alternates" }}
+                        >
+                            Bridge your cash flow gaps with flexible overdraft facilities.
+                            Access instant funds up to ₹5 crore limit and pay interest only
+                            on the amount utilized for optimal financial management.
+                        </p>
+                        <div className="pt-2 sm:pt-4">
+                            <button
+                                onClick={handleOpenDialog}
+                                className="custom-btn 
                               text-sm sm:text-base md:text-lg
                               px-6 sm:px-8 md:px-10 lg:px-12
                               py-3 sm:py-3.5 md:py-4
                                transition-transform duration-300
                               shadow-lg hover:shadow-xl"
-                        >
-                            Apply for Overdraft
-                        </button>
-                    </div>
-                </motion.div>
-            </section>
+                            >
+                                Apply for Overdraft
+                            </button>
+                        </div>
+                    </motion.div>
+                </section>
 
-            {/* Get In Touch Section */}
-            <motion.section
-                ref={refTouch}
-                initial={{ y: 100, opacity: 0 }}
-                animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
-                transition={{ duration: 0.5 }}
-                className="flex flex-col md:flex-row gap-8 bg-[#f7f7f7] py-16 px-7 md:px-14"
-            >
-                <motion.div
-                    initial={{ y: 50, opacity: 0 }}
+                {/* Get In Touch Section */}
+                <motion.section
+                    ref={refTouch}
+                    initial={{ y: 100, opacity: 0 }}
                     animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
-                    transition={{ duration: 0.5, delay: getTouchDelay(0) }}
-                    className="w-full md:w-[300px] flex-shrink-0 bg-gradient-to-br from-blue-100 to-blue-200 p-6 rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
+                    transition={{ duration: 0.5 }}
+                    className="flex flex-col md:flex-row gap-8 bg-[#f7f7f7] py-16 px-7 md:px-14"
                 >
-                    <h3
-                        className="text-lg sm:text-xl font-semibold text-gray-800 mb-4"
-                        style={{ fontFamily: "Montserrat Alternates" }}
+                    <motion.div
+                        initial={{ y: 50, opacity: 0 }}
+                        animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
+                        transition={{ duration: 0.5, delay: getTouchDelay(0) }}
+                        className="w-full md:w-[300px] flex-shrink-0 bg-gradient-to-br from-blue-100 to-blue-200 p-6 rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
                     >
-                        Get in Touch
-                    </h3>
-                    <div className="space-y-4">
-                        <a
-                            href="tel:+919876543210"
-                            className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
-                            aria-label="Call us at +91 98765 43210"
+                        <h3
+                            className="text-lg sm:text-xl font-semibold text-gray-800 mb-4"
+                            style={{ fontFamily: "Montserrat Alternates" }}
                         >
-                            <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
-                                <Phone className="w-5 h-5 text-white" />
-                            </span>
-                            <div>
-                                <p className="text-base text-gray-700 font-semibold">
-                                    Call Anytime
-                                </p>
-                                <p className="text-xs text-gray-600">+91 98765 43210</p>
-                            </div>
-                        </a>
-                        <a
-                            href="mailto:info@abtik.com"
-                            className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
-                            aria-label="Email us at info@abtik.com"
-                        >
-                            <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
-                                <Mail className="w-5 h-5 text-white" />
-                            </span>
-                            <div>
-                                <p className="text-base text-gray-700 font-semibold">
-                                    Write Email
-                                </p>
-                                <p className="text-xs text-gray-600">info@abtik.com</p>
-                            </div>
-                        </a>
-                        <a
-                            href="https://www.google.com/maps?q=123+Business+Hub,+New+Delhi,+India"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
-                            aria-label="Visit us at 123 Business Hub, New Delhi, India"
-                        >
-                            <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
-                                <MapPin className="w-5 h-5 text-white" />
-                            </span>
-                            <div>
-                                <p className="text-base text-gray-700 font-semibold ">
-                                    Visit Us Anytime
-                                </p>
-                                <p className="text-xs text-gray-600">
-                                    123 Business Hub,
-                                    <br />
-                                    New Delhi, India
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-                </motion.div>
-                <motion.div
-                    initial={{ y: 50, opacity: 0 }}
-                    animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
-                    transition={{ duration: 0.5, delay: getTouchDelay(1) }}
-                    className="flex-grow bg-gradient-to-r from-[#3CA2E2] to-[#052EAA] rounded-2xl flex items-center justify-center h-full"
-                >
-                    <img
-                        src={Image1}
-                        alt="Bank Overdraft illustration"
-                        className="max-h-80 w-full rounded-lg object-contain p-4"
-                    />
-                </motion.div>
-            </motion.section>
+                            Get in Touch
+                        </h3>
+                        <div className="space-y-4">
+                            <a
+                                href="tel:+919876543210"
+                                className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
+                                aria-label="Call us at +91 98765 43210"
+                            >
+                                <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
+                                    <Phone className="w-5 h-5 text-white" />
+                                </span>
+                                <div>
+                                    <p className="text-base text-gray-700 font-semibold">
+                                        Call Anytime
+                                    </p>
+                                    <p className="text-xs text-gray-600">+91 98765 43210</p>
+                                </div>
+                            </a>
+                            <a
+                                href="mailto:info@abtik.com"
+                                className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
+                                aria-label="Email us at info@abtik.com"
+                            >
+                                <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
+                                    <Mail className="w-5 h-5 text-white" />
+                                </span>
+                                <div>
+                                    <p className="text-base text-gray-700 font-semibold">
+                                        Write Email
+                                    </p>
+                                    <p className="text-xs text-gray-600">info@abtik.com</p>
+                                </div>
+                            </a>
+                            <a
+                                href="https://www.google.com/maps?q=123+Business+Hub,+New+Delhi,+India"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
+                                aria-label="Visit us at 123 Business Hub, New Delhi, India"
+                            >
+                                <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
+                                    <MapPin className="w-5 h-5 text-white" />
+                                </span>
+                                <div>
+                                    <p className="text-base text-gray-700 font-semibold ">
+                                        Visit Us Anytime
+                                    </p>
+                                    <p className="text-xs text-gray-600">
+                                        123 Business Hub,
+                                        <br />
+                                        New Delhi, India
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    </motion.div>
+                    <motion.div
+                        initial={{ y: 50, opacity: 0 }}
+                        animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
+                        transition={{ duration: 0.5, delay: getTouchDelay(1) }}
+                        className="flex-grow bg-gradient-to-r from-[#3CA2E2] to-[#052EAA] rounded-2xl flex items-center justify-center h-full"
+                    >
+                        <img
+                            src={Image1}
+                            alt="Bank Overdraft illustration"
+                            className="max-h-80 w-full rounded-lg object-contain p-4"
+                        />
+                    </motion.div>
+                </motion.section>
 
-            {/* What is Overdraft */}
-            <motion.section
-                ref={refOverdraft}
-                initial={{ y: 100, opacity: 0 }}
-                animate={isInViewOverdraft ? { y: 0, opacity: 1 } : {}}
-                transition={{ duration: 0.5 }}
-                className="px-7 md:px-14 bg-[#f7f7f7] py-8"
-            >
-                <div className="bg-gradient-to-t from-[#3CA2E2] to-[#052EAA] rounded-4xl p-8 md:p-12 space-y-4 text-center">
-                    <h2
-                        className="sub-heading text-white text-left"
+                {/* What is Overdraft */}
+                <motion.section
+                    ref={refOverdraft}
+                    initial={{ y: 100, opacity: 0 }}
+                    animate={isInViewOverdraft ? { y: 0, opacity: 1 } : {}}
+                    transition={{ duration: 0.5 }}
+                    className="px-7 md:px-14 bg-[#f7f7f7] py-8"
+                >
+                    <div className="bg-gradient-to-t from-[#3CA2E2] to-[#052EAA] rounded-4xl p-8 md:p-12 space-y-4 text-center">
+                        <h2
+                            className="sub-heading text-white text-left"
+                            style={{ fontFamily: "Anton" }}
+                        >
+                            What Is Bank Overdraft Facility?
+                        </h2>
+                        <p className="paragraph !text-white mx-auto text-left"
+                            style={{ fontFamily: "Montserrat Alternates" }}
+                        >
+                            Bank Overdraft is a flexible credit facility that allows account holders to withdraw
+                            more money than available in their account balance up to a pre-approved limit. It serves
+                            as an instant financial safety net for managing temporary cash flow shortages, unexpected
+                            expenses, and business opportunities. The facility operates seamlessly with your existing
+                            bank account, providing immediate access to funds whenever needed while charging interest
+                            only on the amount utilized, making it a cost-effective solution for short-term financing needs.
+                        </p>
+                    </div>
+                </motion.section>
+
+                {/* Overdraft Structure Section */}
+                <motion.section
+                    ref={refOverdraftStructure}
+                    initial={{ y: 100, opacity: 0 }}
+                    animate={isInViewOverdraftStructure ? { y: 0, opacity: 1 } : {}}
+                    transition={{ duration: 0.5 }}
+                    className="px-7 md:px-14 bg-[#f7f7f7] py-8"
+                >
+                    <h2 className="sub-heading text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
                         style={{ fontFamily: "Anton" }}
                     >
-                        What Is Bank Overdraft Facility?
+                        Overdraft Facility Types
                     </h2>
-                    <p className="paragraph !text-white mx-auto text-left"
-                      style={{fontFamily:"Montserrat Alternates"}}
+
+                    <div className="mt-8 bg-white rounded-4xl p-4 md:p-8 shadow-md">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            {/* Personal Overdraft Card */}
+                            <motion.div
+                                initial={{ y: 50, opacity: 0 }}
+                                animate={isInViewOverdraftStructure ? { y: 0, opacity: 1 } : {}}
+                                transition={{ duration: 0.5, delay: 0.5 }}
+                                className="bg-gradient-to-br from-blue-50 to-white p-6 rounded-3xl border-2 border-blue-100 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+                            >
+                                <div className="flex items-center justify-center mb-4">
+                                    <div className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
+                                        <Banknote className="w-8 h-8 text-white" />
+                                    </div>
+                                </div>
+                                <div className="text-center mb-4">
+                                    <h3
+                                        className="text-xl font-bold text-gray-800 mb-3"
+                                        style={{ fontFamily: "Montserrat Alternates" }}
+                                    >
+                                        Personal Overdraft
+                                    </h3>
+                                    <div className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
+                                        <p className="text-2xl font-bold">₹25K - ₹50L</p>
+                                        <p className="text-xs opacity-90">For individuals</p>
+                                    </div>
+                                </div>
+                                <ul className="space-y-2 text-xs text-gray-700">
+                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                        <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                        <span>Quick approval for salary account holders</span>
+                                    </li>
+                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                        <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                        <span>Interest rates: 12-24% per annum</span>
+                                    </li>
+                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                        <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                        <span>No collateral required up to certain limits</span>
+                                    </li>
+                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                        <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                        <span>Instant activation through mobile banking</span>
+                                    </li>
+                                </ul>
+                            </motion.div>
+
+                            {/* Business Overdraft Card */}
+                            <motion.div
+                                initial={{ y: 50, opacity: 0 }}
+                                animate={isInViewOverdraftStructure ? { y: 0, opacity: 1 } : {}}
+                                transition={{ duration: 0.5, delay: 0.7 }}
+                                className="bg-gradient-to-br from-blue-50 to-white p-6 rounded-3xl border-2 border-blue-100 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+                            >
+                                <div className="flex items-center justify-center mb-4">
+                                    <div className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
+                                        <ArrowUpDown className="w-8 h-8 text-white" />
+                                    </div>
+                                </div>
+                                <div className="text-center mb-4">
+                                    <h3
+                                        className="text-xl font-bold text-gray-800 mb-3"
+                                        style={{ fontFamily: "Montserrat Alternates" }}
+                                    >
+                                        Business Overdraft
+                                    </h3>
+                                    <div className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
+                                        <p className="text-2xl font-bold">₹1L - ₹5Cr</p>
+                                        <p className="text-xs opacity-90">For businesses</p>
+                                    </div>
+                                </div>
+                                <ul className="space-y-2 text-xs text-gray-700">
+                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                        <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                        <span>Higher limits for business requirements</span>
+                                    </li>
+                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                        <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                        <span>Interest rates: 10-18% per annum</span>
+                                    </li>
+                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                        <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                        <span>Secured against business assets/property</span>
+                                    </li>
+                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                        <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                        <span>Ideal for working capital management</span>
+                                    </li>
+                                </ul>
+                            </motion.div>
+                        </div>
+                    </div>
+                </motion.section>
+
+                {/* Overdraft Benefits Section */}
+                <motion.section
+                    ref={refOverdraftBenefits}
+                    initial={{ y: 100, opacity: 0 }}
+                    animate={isInViewOverdraftBenefits ? { y: 0, opacity: 1 } : {}}
+                    transition={{ duration: 0.5 }}
+                    className="px-7 md:px-14 bg-[#f7f7f7] py-8"
+                >
+                    <h2 className="sub-heading text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
+                        style={{ fontFamily: "Anton" }}
                     >
-                        Bank Overdraft is a flexible credit facility that allows account holders to withdraw 
-                        more money than available in their account balance up to a pre-approved limit. It serves 
-                        as an instant financial safety net for managing temporary cash flow shortages, unexpected 
-                        expenses, and business opportunities. The facility operates seamlessly with your existing 
-                        bank account, providing immediate access to funds whenever needed while charging interest 
-                        only on the amount utilized, making it a cost-effective solution for short-term financing needs.
-                    </p>
-                </div>
-            </motion.section>
-
-            {/* Overdraft Structure Section */}
-            <motion.section
-                ref={refOverdraftStructure}
-                initial={{ y: 100, opacity: 0 }}
-                animate={isInViewOverdraftStructure ? { y: 0, opacity: 1 } : {}}
-                transition={{ duration: 0.5 }}
-                className="px-7 md:px-14 bg-[#f7f7f7] py-8"
-            >
-                <h2 className="sub-heading text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                    style={{ fontFamily: "Anton" }}
-                >
-                    Overdraft Facility Types
-                </h2>
-
-                <div className="mt-8 bg-white rounded-4xl p-4 md:p-8 shadow-md">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        {/* Personal Overdraft Card */}
-                        <motion.div
-                            initial={{ y: 50, opacity: 0 }}
-                            animate={isInViewOverdraftStructure ? { y: 0, opacity: 1 } : {}}
-                            transition={{ duration: 0.5, delay: 0.5 }}
-                            className="bg-gradient-to-br from-blue-50 to-white p-6 rounded-3xl border-2 border-blue-100 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
-                        >
-                            <div className="flex items-center justify-center mb-4">
-                                <div className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
-                                    <Banknote className="w-8 h-8 text-white" />
-                                </div>
-                            </div>
-                            <div className="text-center mb-4">
+                        Overdraft Benefits & Eligibility
+                    </h2>
+                    <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
+                        <p className="text-sm md:text-base text-gray-600 text-center">
+                            Bank Overdraft provides the ultimate flexibility in financial management, offering instant
+                            access to funds while maintaining cost efficiency by charging interest only on utilized amounts.
+                        </p>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <motion.div
+                                initial={{ y: 50, opacity: 0 }}
+                                animate={isInViewOverdraftBenefits ? { y: 0, opacity: 1 } : {}}
+                                transition={{ duration: 0.5, delay: 0.5 }}
+                                className="space-y-4"
+                            >
                                 <h3
-                                    className="text-xl font-bold text-gray-800 mb-3"
+                                    className="text-lg font-semibold text-gray-800"
                                     style={{ fontFamily: "Montserrat Alternates" }}
                                 >
-                                    Personal Overdraft
+                                    Key Benefits
                                 </h3>
-                                <div className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
-                                    <p className="text-2xl font-bold">₹25K - ₹50L</p>
-                                    <p className="text-xs opacity-90">For individuals</p>
-                                </div>
-                            </div>
-                            <ul className="space-y-2 text-xs text-gray-700">
-                                <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
-                                    <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>Quick approval for salary account holders</span>
-                                </li>
-                                <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
-                                    <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>Interest rates: 12-24% per annum</span>
-                                </li>
-                                <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
-                                    <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>No collateral required up to certain limits</span>
-                                </li>
-                                <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
-                                    <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>Instant activation through mobile banking</span>
-                                </li>
-                            </ul>
-                        </motion.div>
-
-                        {/* Business Overdraft Card */}
-                        <motion.div
-                            initial={{ y: 50, opacity: 0 }}
-                            animate={isInViewOverdraftStructure ? { y: 0, opacity: 1 } : {}}
-                            transition={{ duration: 0.5, delay: 0.7 }}
-                            className="bg-gradient-to-br from-blue-50 to-white p-6 rounded-3xl border-2 border-blue-100 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
-                        >
-                            <div className="flex items-center justify-center mb-4">
-                                <div className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
-                                    <ArrowUpDown className="w-8 h-8 text-white" />
-                                </div>
-                            </div>
-                            <div className="text-center mb-4">
+                                <ul className="space-y-2 text-sm text-gray-600">
+                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                        <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                        <span>Instant access to funds without prior approval.</span>
+                                    </li>
+                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                        <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                        <span>Interest charged only on overdrawn amount.</span>
+                                    </li>
+                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                        <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                        <span>No fixed EMIs or repayment schedule.</span>
+                                    </li>
+                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                        <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                        <span>Automatic renewal based on account conduct.</span>
+                                    </li>
+                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                        <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                        <span>Seamless integration with existing account.</span>
+                                    </li>
+                                </ul>
+                            </motion.div>
+                            <motion.div
+                                initial={{ y: 50, opacity: 0 }}
+                                animate={isInViewOverdraftBenefits ? { y: 0, opacity: 1 } : {}}
+                                transition={{ duration: 0.5, delay: 0.7 }}
+                                className="space-y-4"
+                            >
                                 <h3
-                                    className="text-xl font-bold text-gray-800 mb-3"
+                                    className="text-lg font-semibold text-gray-800"
                                     style={{ fontFamily: "Montserrat Alternates" }}
                                 >
-                                    Business Overdraft
+                                    Eligibility Criteria
                                 </h3>
-                                <div className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
-                                    <p className="text-2xl font-bold">₹1L - ₹5Cr</p>
-                                    <p className="text-xs opacity-90">For businesses</p>
+                                <ul className="space-y-2 text-sm text-gray-600">
+                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                        <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                        <span>Existing bank account holder for minimum period.</span>
+                                    </li>
+                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                        <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                        <span>Good credit score and account conduct.</span>
+                                    </li>
+                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                        <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                        <span>Regular income or business cash flows.</span>
+                                    </li>
+                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                        <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                        <span>No recent defaults or bounced payments.</span>
+                                    </li>
+                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                        <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                        <span>Adequate security for higher limits.</span>
+                                    </li>
+                                </ul>
+                            </motion.div>
+                        </div>
+                    </div>
+                </motion.section>
+
+                {/* Abtik Process Section */}
+                <motion.section
+                    ref={refProcess}
+                    initial={{ y: 100, opacity: 0 }}
+                    animate={isInViewProcess ? { y: 0, opacity: 1 } : {}}
+                    transition={{ duration: 0.5 }}
+                    className="px-7 md:px-14 bg-[#f7f7f7] py-8"
+                >
+                    <h2 className="sub-heading text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
+                        style={{ fontFamily: "Anton" }}
+                    >
+                        How Abtik Helps You Get Overdraft
+                    </h2>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                        {processData?.map((process, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ y: 50, opacity: 0 }}
+                                animate={isInViewProcess ? { y: 0, opacity: 1 } : {}}
+                                transition={{ duration: 0.5, delay: getProcessDelay(index) }}
+                                className="bg-white p-6 rounded-4xl shadow-md text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
+                            >
+                                <div className="mb-4 inline-block p-3 bg-gradient-to-r from-blue-100 to-blue-200 rounded-full">
+                                    <process.icon className="w-8 h-8" />
                                 </div>
-                            </div>
-                            <ul className="space-y-2 text-xs text-gray-700">
-                                <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
-                                    <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>Higher limits for business requirements</span>
-                                </li>
-                                <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
-                                    <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>Interest rates: 10-18% per annum</span>
-                                </li>
-                                <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
-                                    <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>Secured against business assets/property</span>
-                                </li>
-                                <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
-                                    <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>Ideal for working capital management</span>
-                                </li>
-                            </ul>
-                        </motion.div>
+                                <h3
+                                    className="text-lg font-semibold text-gray-800 mb-2"
+                                    style={{ fontFamily: "Montserrat Alternates" }}
+                                >
+                                    {process.title}
+                                </h3>
+                                <p className="text-sm text-gray-600">{process.description}</p>
+                            </motion.div>
+                        ))}
                     </div>
-                </div>
-            </motion.section>
+                </motion.section>
 
-            {/* Overdraft Benefits Section */}
-            <motion.section
-                ref={refOverdraftBenefits}
-                initial={{ y: 100, opacity: 0 }}
-                animate={isInViewOverdraftBenefits ? { y: 0, opacity: 1 } : {}}
-                transition={{ duration: 0.5 }}
-                className="px-7 md:px-14 bg-[#f7f7f7] py-8"
-            >
-                <h2 className="sub-heading text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                    style={{ fontFamily: "Anton" }}
+                {/* Benefits Section */}
+                <motion.section
+                    ref={refBenefits}
+                    initial={{ y: 100, opacity: 0 }}
+                    animate={isInViewBenefits ? { y: 0, opacity: 1 } : {}}
+                    transition={{ duration: 0.5 }}
+                    className="px-7 md:px-14 bg-[#f7f7f7] py-8 "
                 >
-                    Overdraft Benefits & Eligibility
-                </h2>
-                <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
-                    <p className="text-sm md:text-base text-gray-600 text-center">
-                        Bank Overdraft provides the ultimate flexibility in financial management, offering instant 
-                        access to funds while maintaining cost efficiency by charging interest only on utilized amounts.
-                    </p>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <motion.div
-                            initial={{ y: 50, opacity: 0 }}
-                            animate={isInViewOverdraftBenefits ? { y: 0, opacity: 1 } : {}}
-                            transition={{ duration: 0.5, delay: 0.5 }}
-                            className="space-y-4"
-                        >
-                            <h3
-                                className="text-lg font-semibold text-gray-800"
-                                style={{ fontFamily: "Montserrat Alternates" }}
+                    <h2 className="sub-heading text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
+                        style={{ fontFamily: "Anton" }}
+                    >
+                        Why Choose Abtik for Overdraft
+                    </h2>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                        {benefitsData?.map((benefit, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ y: 50, opacity: 0 }}
+                                animate={isInViewBenefits ? { y: 0, opacity: 1 } : {}}
+                                transition={{ duration: 0.5, delay: getBenefitsDelay(index) }}
+                                className="bg-white p-6 rounded-4xl shadow-md text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
                             >
-                                Key Benefits
-                            </h3>
-                            <ul className="space-y-2 text-sm text-gray-600">
-                                <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
-                                    <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>Instant access to funds without prior approval.</span>
-                                </li>
-                                <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
-                                    <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>Interest charged only on overdrawn amount.</span>
-                                </li>
-                                <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
-                                    <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>No fixed EMIs or repayment schedule.</span>
-                                </li>
-                                <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
-                                    <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>Automatic renewal based on account conduct.</span>
-                                </li>
-                                <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
-                                    <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>Seamless integration with existing account.</span>
-                                </li>
-                            </ul>
-                        </motion.div>
-                        <motion.div
-                            initial={{ y: 50, opacity: 0 }}
-                            animate={isInViewOverdraftBenefits ? { y: 0, opacity: 1 } : {}}
-                            transition={{ duration: 0.5, delay: 0.7 }}
-                            className="space-y-4"
-                        >
-                            <h3
-                                className="text-lg font-semibold text-gray-800"
-                                style={{ fontFamily: "Montserrat Alternates" }}
-                            >
-                                Eligibility Criteria
-                            </h3>
-                            <ul className="space-y-2 text-sm text-gray-600">
-                                <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
-                                    <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>Existing bank account holder for minimum period.</span>
-                                </li>
-                                <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
-                                    <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>Good credit score and account conduct.</span>
-                                </li>
-                                <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
-                                    <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>Regular income or business cash flows.</span>
-                                </li>
-                                <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
-                                    <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>No recent defaults or bounced payments.</span>
-                                </li>
-                                <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
-                                    <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>Adequate security for higher limits.</span>
-                                </li>
-                            </ul>
-                        </motion.div>
+                                <div className="mb-4 inline-block p-3 bg-gradient-to-r from-blue-100 to-blue-200 rounded-full">
+                                    <benefit.icon className="w-8 h-8" />
+                                </div>
+                                <h3
+                                    className="text-lg font-semibold text-gray-800 mb-2"
+                                    style={{ fontFamily: "Montserrat Alternates" }}
+                                >
+                                    {benefit.title}
+                                </h3>
+                                <p className="text-sm text-gray-600">{benefit.description}</p>
+                            </motion.div>
+                        ))}
                     </div>
-                </div>
-            </motion.section>
+                </motion.section>
 
-            {/* Abtik Process Section */}
-            <motion.section
-                ref={refProcess}
-                initial={{ y: 100, opacity: 0 }}
-                animate={isInViewProcess ? { y: 0, opacity: 1 } : {}}
-                transition={{ duration: 0.5 }}
-                className="px-7 md:px-14 bg-[#f7f7f7] py-8"
-            >
-                <h2 className="sub-heading text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                    style={{ fontFamily: "Anton" }}
+                {/* FAQ Section */}
+                <motion.section
+                    ref={refFAQ}
+                    initial={{ y: 100, opacity: 0 }}
+                    animate={isInViewFAQ ? { y: 0, opacity: 1 } : {}}
+                    transition={{ duration: 0.5 }}
+                    className="bg-[#f7f7f7]  py-8 md:py-16 space-y-6"
                 >
-                    How Abtik Helps You Get Overdraft
-                </h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-                    {processData?.map((process, index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ y: 50, opacity: 0 }}
-                            animate={isInViewProcess ? { y: 0, opacity: 1 } : {}}
-                            transition={{ duration: 0.5, delay: getProcessDelay(index) }}
-                            className="bg-white p-6 rounded-4xl shadow-md text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
-                        >
-                            <div className="mb-4 inline-block p-3 bg-gradient-to-r from-blue-100 to-blue-200 rounded-full">
-                                <process.icon className="w-8 h-8" />
-                            </div>
-                            <h3
-                                className="text-lg font-semibold text-gray-800 mb-2"
-                                style={{ fontFamily: "Montserrat Alternates" }}
+                    <h1 className="sub-heading bg-gradient-to-t text-center  bg-clip-text from-[#3CA2E2] to-[#052EAA] text-transparent"
+                        style={{ fontFamily: "Anton" }}
+                    >
+                        Frequently Asked Questions
+                    </h1>
+                    <div
+                        className="px-6  md:px-24 space-y-4 "
+                        style={{ fontFamily: "Montserrat Alternates" }}
+                    >
+                        {faq.map((data, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ y: 50, opacity: 0 }}
+                                animate={isInViewFAQ ? { y: 0, opacity: 1 } : {}}
+                                transition={{ duration: 0.1, delay: getFaqDelay(index) }}
+                                className="bg-white rounded-lg shadow-sm border border-gray-100 transition-all duration-300"
                             >
-                                {process.title}
-                            </h3>
-                            <p className="text-sm text-gray-600">{process.description}</p>
-                        </motion.div>
-                    ))}
-                </div>
-            </motion.section>
+                                <h2
+                                    className={`p-2.5 px-4 relative cursor-pointer flex items-center justify-between  text-base font-medium ${isExpanded.isOpen && isExpanded.index === index
+                                        ? "border-b border-gray-200"
+                                        : ""
+                                        }`}
+                                    onClick={() => toggleIsExpanded(index)}
+                                >
+                                    <span>{data.question}</span>
+                                    <button className="border-2 p-1 transition-all duration-300 hover:scale-105 h-8 w-8 flex justify-center items-center border-[#052EAA] rounded-lg text-[#052EAA]">
+                                        {isExpanded.isOpen && isExpanded.index === index ? (
+                                            <ArrowRight className="w-5 h-5" />
+                                        ) : (
+                                            <ArrowUpRight className="w-5 h-5" />
+                                        )}
+                                    </button>
+                                </h2>
+                                <div
+                                    className={`overflow-hidden transition-all duration-500 ease-in-out ${isExpanded.isOpen && isExpanded.index === index
+                                        ? "max-h-96 opacity-100"
+                                        : "max-h-0 opacity-0"
+                                        }`}
+                                >
+                                    <p className="p-4 bg-gradient-to-t rounded-b-lg from-[#052EAA] to-[#3CA2E2] text-white">
+                                        {data.answer}
+                                    </p>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
+                </motion.section>
 
-            {/* Benefits Section */}
-            <motion.section
-                ref={refBenefits}
-                initial={{ y: 100, opacity: 0 }}
-                animate={isInViewBenefits ? { y: 0, opacity: 1 } : {}}
-                transition={{ duration: 0.5 }}
-                className="px-7 md:px-14 bg-[#f7f7f7] py-8 "
-            >
-                <h2 className="sub-heading text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                    style={{ fontFamily: "Anton" }}
+                {/* Contact Section */}
+                <motion.section
+                    ref={refContact}
+                    initial={{ y: 100, opacity: 0 }}
+                    animate={isInViewContact ? { y: 0, opacity: 1 } : {}}
+                    transition={{ duration: 0.5 }}
                 >
-                    Why Choose Abtik for Overdraft
-                </h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-                    {benefitsData?.map((benefit, index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ y: 50, opacity: 0 }}
-                            animate={isInViewBenefits ? { y: 0, opacity: 1 } : {}}
-                            transition={{ duration: 0.5, delay: getBenefitsDelay(index) }}
-                            className="bg-white p-6 rounded-4xl shadow-md text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
-                        >
-                            <div className="mb-4 inline-block p-3 bg-gradient-to-r from-blue-100 to-blue-200 rounded-full">
-                                <benefit.icon className="w-8 h-8" />
-                            </div>
-                            <h3
-                                className="text-lg font-semibold text-gray-800 mb-2"
-                                style={{ fontFamily: "Montserrat Alternates" }}
-                            >
-                                {benefit.title}
-                            </h3>
-                            <p className="text-sm text-gray-600">{benefit.description}</p>
-                        </motion.div>
-                    ))}
-                </div>
-            </motion.section>
-
-            {/* FAQ Section */}
-            <motion.section
-                ref={refFAQ}
-                initial={{ y: 100, opacity: 0 }}
-                animate={isInViewFAQ ? { y: 0, opacity: 1 } : {}}
-                transition={{ duration: 0.5 }}
-                className="bg-[#f7f7f7]  py-8 md:py-16 space-y-6"
-            >
-                <h1 className="sub-heading bg-gradient-to-t text-center  bg-clip-text from-[#3CA2E2] to-[#052EAA] text-transparent"
-                    style={{ fontFamily: "Anton" }}
-                >
-                    Frequently Asked Questions
-                </h1>
-                <div
-                    className="px-6  md:px-24 space-y-4 "
-                    style={{ fontFamily: "Montserrat Alternates" }}
-                >
-                    {faq.map((data, index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ y: 50, opacity: 0 }}
-                            animate={isInViewFAQ ? { y: 0, opacity: 1 } : {}}
-                            transition={{ duration: 0.1, delay: getFaqDelay(index) }}
-                            className="bg-white rounded-lg shadow-sm border border-gray-100 transition-all duration-300"
-                        >
-                            <h2
-                                className={`p-2.5 px-4 relative cursor-pointer flex items-center justify-between  text-base font-medium ${isExpanded.isOpen && isExpanded.index === index
-                                    ? "border-b border-gray-200"
-                                    : ""
-                                    }`}
-                                onClick={() => toggleIsExpanded(index)}
-                            >
-                                <span>{data.question}</span>
-                                <button className="border-2 p-1 transition-all duration-300 hover:scale-105 h-8 w-8 flex justify-center items-center border-[#052EAA] rounded-lg text-[#052EAA]">
-                                    {isExpanded.isOpen && isExpanded.index === index ? (
-                                        <ArrowRight className="w-5 h-5" />
-                                    ) : (
-                                        <ArrowUpRight className="w-5 h-5" />
-                                    )}
-                                </button>
-                            </h2>
-                            <div
-                                className={`overflow-hidden transition-all duration-500 ease-in-out ${isExpanded.isOpen && isExpanded.index === index
-                                    ? "max-h-96 opacity-100"
-                                    : "max-h-0 opacity-0"
-                                    }`}
-                            >
-                                <p className="p-4 bg-gradient-to-t rounded-b-lg from-[#052EAA] to-[#3CA2E2] text-white">
-                                    {data.answer}
-                                </p>
-                            </div>
-                        </motion.div>
-                    ))}
-                </div>
-            </motion.section>
-
-            {/* Contact Section */}
-            <motion.section
-                ref={refContact}
-                initial={{ y: 100, opacity: 0 }}
-                animate={isInViewContact ? { y: 0, opacity: 1 } : {}}
-                transition={{ duration: 0.5 }}
-            >
-                <Contact />
-            </motion.section>
-        </Mainlayout>
+                    <Contact />
+                </motion.section>
+            </Mainlayout>
+        </>
     );
 };
 

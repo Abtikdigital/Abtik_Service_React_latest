@@ -6,7 +6,7 @@ import {
     Mail,
     MapPin,
     Phone,
-  
+
     Headset,
     ArrowUpRight,
     ArrowRight,
@@ -15,17 +15,18 @@ import {
     DollarSign,
     TrendingUp,
     Users,
-  
+
     Shield,
     Leaf,
     Tractor,
-   
+
 } from "lucide-react";
 import { memo, useState } from "react";
 import { useDispatch } from "react-redux";
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
-
+import { HeadProvider, Meta, Title } from "react-head";
+import seoData from "../data/seoData.json";
 const AgriSURE = () => {
     const dispatch = useDispatch();
     const handleOpenDialog = () => {
@@ -196,7 +197,13 @@ const AgriSURE = () => {
     const refContact = useRef(null);
     const isInViewContact = useInView(refContact, { once: true, amount: 0.4 });
 
-    return (
+    return (<>
+        <HeadProvider>
+            <Title>{seoData?.agrisureService?.title}</Title>
+            <Meta name="description" content={seoData?.agrisureService?.description} />
+            <Meta name="keyword" content={seoData?.agrisureService?.keyword} />
+            <Meta name="robots" content={seoData?.agrisureService?.robots} />
+        </HeadProvider>
         <Mainlayout>
             {/* Hero Section */}
             <section
@@ -240,7 +247,7 @@ const AgriSURE = () => {
                          text-white lg:text-white
                          paragraph !text-white
                          max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
-                           style={{fontFamily:"Montserrat Alternates"}}
+                        style={{ fontFamily: "Montserrat Alternates" }}
                     >
                         Transform agriculture with AgriSURE funding support. Access up to ₹25 crore
                         investment from the ₹750 crore government fund for innovative agritech
@@ -366,13 +373,13 @@ const AgriSURE = () => {
                         What Is AgriSURE Fund?
                     </h2>
                     <p className="paragraph !text-white mx-auto text-left"
-                      style={{fontFamily:"Montserrat Alternates"}}
+                        style={{ fontFamily: "Montserrat Alternates" }}
                     >
-                        AgriSURE (Agri Fund for Start-ups & Rural Enterprises) is a pioneering ₹750 crore 
-                        Category-II Alternative Investment Fund launched by the Government of India and NABARD 
-                        to revolutionize the agricultural landscape. This innovative fund focuses on supporting 
-                        technology-driven, high-risk, high-impact ventures in agriculture and allied sectors, 
-                        providing both equity and debt financing to fuel growth and foster innovation in the 
+                        AgriSURE (Agri Fund for Start-ups & Rural Enterprises) is a pioneering ₹750 crore
+                        Category-II Alternative Investment Fund launched by the Government of India and NABARD
+                        to revolutionize the agricultural landscape. This innovative fund focuses on supporting
+                        technology-driven, high-risk, high-impact ventures in agriculture and allied sectors,
+                        providing both equity and debt financing to fuel growth and foster innovation in the
                         agricultural and rural startup ecosystem.[2][5]
                     </p>
                 </div>
@@ -500,10 +507,10 @@ const AgriSURE = () => {
                 </h2>
                 <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
                     <p className="text-sm md:text-base text-gray-600 text-center"
-                      style={{fontFamily:"Montserrat Alternates"}}
+                        style={{ fontFamily: "Montserrat Alternates" }}
                     >
-                        AgriSURE provides comprehensive support to agricultural startups and rural enterprises 
-                        through substantial funding, strategic guidance, and access to agricultural value chains 
+                        AgriSURE provides comprehensive support to agricultural startups and rural enterprises
+                        through substantial funding, strategic guidance, and access to agricultural value chains
                         for transforming India's agricultural landscape.[22]
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -721,6 +728,7 @@ const AgriSURE = () => {
                 <Contact />
             </motion.section>
         </Mainlayout>
+    </>
     );
 };
 

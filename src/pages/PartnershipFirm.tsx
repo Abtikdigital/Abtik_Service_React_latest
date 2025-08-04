@@ -20,7 +20,8 @@ import { memo, useState } from "react";
 import { useDispatch } from "react-redux";
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
-
+import { HeadProvider, Meta, Title } from "react-head";
+import seoData from "../data/seoData.json";
 const PartnershipRegistration = () => {
     const dispatch = useDispatch();
     const handleOpenDialog = () => { dispatch({ type: "open" }); };
@@ -166,7 +167,14 @@ const PartnershipRegistration = () => {
         }
     ];
 
-    return (
+    return (<>
+    
+          <HeadProvider>
+        <Title>{seoData?.partnershipService?.title}</Title>
+        <Meta name="description" content={seoData?.partnershipService?.description} />
+        <Meta name="keyword" content={seoData?.partnershipService?.keyword} />
+        <Meta name="robots" content={seoData?.partnershipService?.robots} />
+      </HeadProvider>
         <Mainlayout>
             {/* Hero Section */}
             <section ref={refHero}
@@ -449,6 +457,7 @@ const PartnershipRegistration = () => {
                 <Contact />
             </motion.section>
         </Mainlayout>
+    </>
     );
 };
 

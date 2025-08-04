@@ -20,7 +20,8 @@ import { memo, useState } from "react";
 import { useDispatch } from "react-redux";
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
-
+import { HeadProvider, Meta, Title } from "react-head";
+import seoData from "../data/seoData.json";
 const ZEDCertificate = () => {
     const dispatch = useDispatch();
     const handleOpenDialog = () => {
@@ -61,7 +62,7 @@ const ZEDCertificate = () => {
         },
     ];
 
-    const toggleIsExpanded = (index:number) => {
+    const toggleIsExpanded = (index: number) => {
         setIsExpanded((prev) =>
             prev.index === index && prev.isOpen ? { isOpen: false, index: -1 } : { isOpen: true, index }
         );
@@ -80,7 +81,7 @@ const ZEDCertificate = () => {
         window.addEventListener("resize", updateCols);
         return () => window.removeEventListener("resize", updateCols);
     }, []);
-    const getTouchDelay = (index:number) => {
+    const getTouchDelay = (index: number) => {
         const row = Math.floor(index / touchCols);
         return 0.5 + row * 0.5;
     };
@@ -100,7 +101,7 @@ const ZEDCertificate = () => {
         window.addEventListener("resize", updateCols);
         return () => window.removeEventListener("resize", updateCols);
     }, []);
-    const getProcessDelay = (index:number) => {
+    const getProcessDelay = (index: number) => {
         const row = Math.floor(index / processCols);
         return 0.5 + row * 0.5;
     };
@@ -114,14 +115,14 @@ const ZEDCertificate = () => {
         window.addEventListener("resize", updateCols);
         return () => window.removeEventListener("resize", updateCols);
     }, []);
-    const getBenefitsDelay = (index:number) => {
+    const getBenefitsDelay = (index: number) => {
         const row = Math.floor(index / benefitsCols);
         return 0.5 + row * 0.5;
     };
 
     const refFAQ = useRef(null);
     const isInViewFAQ = useInView(refFAQ, { once: true, amount: 0.1 });
-    const getFaqDelay = (index:number) => {
+    const getFaqDelay = (index: number) => {
         const row = Math.floor(index / 1);
         return 0.2 + row * 0.1;
     };
@@ -177,7 +178,14 @@ const ZEDCertificate = () => {
         },
     ];
 
-    return (
+    return (<>
+
+        <HeadProvider>
+            <Title>{seoData?.zedCertificateService?.title}</Title>
+            <Meta name="description" content={seoData?.zedCertificateService?.description} />
+            <Meta name="keyword" content={seoData?.zedCertificateService?.keyword} />
+            <Meta name="robots" content={seoData?.zedCertificateService?.robots} />
+        </HeadProvider>
         <Mainlayout>
             {/* Hero Section */}
             <section
@@ -213,8 +221,8 @@ const ZEDCertificate = () => {
                          text-white lg:text-white
                          paragraph !text-white
                          max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
-                           style={{fontFamily:"Montserrat Alternates"}}
-                         >
+                        style={{ fontFamily: "Montserrat Alternates" }}
+                    >
                         Achieve global quality, reduce environmental impact, and unlock subsidies and government tenders—Abtik helps you earn your ZED Certificate quickly and compliantly.
                     </p>
                     <div className="pt-2 sm:pt-4">
@@ -321,7 +329,7 @@ const ZEDCertificate = () => {
                     >
                         What Is ZED Certificate?
                     </h2>
-                    <p className="paragraph !text-white mx-auto text-left" style={{fontFamily:"Montserrat Alternates"}}>
+                    <p className="paragraph !text-white mx-auto text-left" style={{ fontFamily: "Montserrat Alternates" }}>
                         The ZED (Zero Defect Zero Effect) Certification recognizes manufacturing MSMEs that achieve best-in-class quality and minimize their environmental impact ("Zero Defect" in product, "Zero Effect" on environment)—helping Indian businesses stand out in global supply chains and domestic tenders.
                     </p>
                 </div>
@@ -340,7 +348,7 @@ const ZEDCertificate = () => {
                     Who Is Eligible for ZED?
                 </h2>
                 <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
-                    <p className="text-sm md:text-base text-gray-600 text-center" style={{fontFamily:"Montserrat Alternates"}}>
+                    <p className="text-sm md:text-base text-gray-600 text-center" style={{ fontFamily: "Montserrat Alternates" }}>
                         ZED covers all Indian manufacturing MSMEs aiming for global quality and green compliance.
                         Services, trading and large companies are generally not eligible.
                     </p>
@@ -533,6 +541,7 @@ const ZEDCertificate = () => {
                 <Contact />
             </motion.section>
         </Mainlayout>
+    </>
     );
 };
 

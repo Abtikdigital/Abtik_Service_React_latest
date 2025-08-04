@@ -20,7 +20,8 @@ import { memo, useState } from "react";
 import { useDispatch } from "react-redux";
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
-
+import { HeadProvider, Meta, Title } from "react-head";
+import seoData from "../data/seoData.json";
 const TradeLicenseCertificate = () => {
     const dispatch = useDispatch();
     const handleOpenDialog = () => {
@@ -179,7 +180,14 @@ const TradeLicenseCertificate = () => {
         }
     ];
 
-    return (
+    return (<>
+          <HeadProvider>
+        <Title>{seoData?.tradeLicenceService?.title}</Title>
+        <Meta name="description" content={seoData?.tradeLicenceService?.description} />
+        <Meta name="keyword" content={seoData?.tradeLicenceService?.keyword} />
+        <Meta name="robots" content={seoData?.tradeLicenceService?.robots} />
+      </HeadProvider>
+    
         <Mainlayout>
             {/* Hero Section */}
             <section
@@ -534,6 +542,7 @@ const TradeLicenseCertificate = () => {
                 <Contact />
             </motion.section>
         </Mainlayout>
+    </>
     );
 };
 

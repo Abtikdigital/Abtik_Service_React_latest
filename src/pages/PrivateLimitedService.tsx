@@ -20,7 +20,8 @@ import { memo, useState } from "react";
 import { useDispatch } from "react-redux";
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
-
+import { HeadProvider, Meta, Title } from "react-head";
+import seoData from "../data/seoData.json";
 const PvtLtdRegistration = () => {
     const dispatch = useDispatch();
     const handleOpenDialog = () => { dispatch({ type: "open" }); };
@@ -176,6 +177,14 @@ const PvtLtdRegistration = () => {
     ];
 
     return (
+        <>
+        
+              <HeadProvider>
+        <Title>{seoData?.privatelimitedService?.title}</Title>
+        <Meta name="description" content={seoData?.privatelimitedService?.description} />
+        <Meta name="keyword" content={seoData?.privatelimitedService?.keyword} />
+        <Meta name="robots" content={seoData?.privatelimitedService?.robots} />
+      </HeadProvider>
         <Mainlayout>
             {/* Hero Section */}
             <section ref={refHero}
@@ -462,6 +471,7 @@ const PvtLtdRegistration = () => {
                 <Contact />
             </motion.section>
         </Mainlayout>
+        </>
     );
 };
 

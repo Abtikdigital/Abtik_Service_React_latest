@@ -25,7 +25,8 @@ import { memo, useState } from "react";
 import { useDispatch } from "react-redux";
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
-
+import { HeadProvider, Meta, Title } from "react-head";
+import seoData from "../data/seoData.json";
 const PMFME = () => {
     const dispatch = useDispatch();
     const handleOpenDialog = () => {
@@ -197,6 +198,15 @@ const PMFME = () => {
     const isInViewContact = useInView(refContact, { once: true, amount: 0.1 });
 
     return (
+        <>
+              <HeadProvider>
+        <Title>{seoData?.pmfmeService?.title}</Title>
+        <Meta name="description" content={seoData?.pmfmeService?.description} />
+        <Meta name="keyword" content={seoData?.pmfmeService?.keyword} />
+        <Meta name="robots" content={seoData?.pmfmeService?.robots} />
+      </HeadProvider>
+        
+        
         <Mainlayout>
             {/* Hero Section */}
             <section
@@ -719,6 +729,7 @@ const PMFME = () => {
                 <Contact />
             </motion.section>
         </Mainlayout>
+        </>
     );
 };
 

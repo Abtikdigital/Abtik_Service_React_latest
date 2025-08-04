@@ -25,7 +25,8 @@ import { memo, useState } from "react";
 import { useDispatch } from "react-redux";
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
-
+import { HeadProvider, Meta, Title } from "react-head";
+import seoData from "../data/seoData.json";
 const TrademarkFiling = () => {
     const dispatch = useDispatch();
     const handleOpenDialog = () => {
@@ -196,7 +197,14 @@ const TrademarkFiling = () => {
     const refContact = useRef(null);
     const isInViewContact = useInView(refContact, { once: true, amount: 0.1 });
 
-    return (
+    return (<>
+          <HeadProvider>
+        <Title>{seoData?.trademarkService?.title}</Title>
+        <Meta name="description" content={seoData?.trademarkService?.description} />
+        <Meta name="keyword" content={seoData?.trademarkService?.keyword} />
+        <Meta name="robots" content={seoData?.trademarkService?.robots} />
+      </HeadProvider>
+    
         <Mainlayout>
             {/* Hero Section */}
             <section
@@ -765,6 +773,7 @@ const TrademarkFiling = () => {
                 <Contact />
             </motion.section>
         </Mainlayout>
+    </>
     );
 };
 

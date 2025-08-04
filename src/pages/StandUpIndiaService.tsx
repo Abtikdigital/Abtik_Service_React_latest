@@ -25,7 +25,8 @@ import { memo, useState } from "react";
 import { useDispatch } from "react-redux";
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
-
+import { HeadProvider, Meta, Title } from "react-head";
+import seoData from "../data/seoData.json";
 const StandUpIndia = () => {
     const dispatch = useDispatch();
     const handleOpenDialog = () => {
@@ -196,7 +197,14 @@ const StandUpIndia = () => {
     const refContact = useRef(null);
     const isInViewContact = useInView(refContact, { once: true, amount: 0.1 });
 
-    return (
+    return (<>
+    
+          <HeadProvider>
+        <Title>{seoData?.standupIndiaService?.title}</Title>
+        <Meta name="description" content={seoData?.standupIndiaService?.description} />
+        <Meta name="keyword" content={seoData?.standupIndiaService?.keyword} />
+        <Meta name="robots" content={seoData?.standupIndiaService?.robots} />
+      </HeadProvider>
         <Mainlayout>
             {/* Hero Section */}
             <section
@@ -719,6 +727,7 @@ const StandUpIndia = () => {
                 <Contact />
             </motion.section>
         </Mainlayout>
+    </>
     );
 };
 

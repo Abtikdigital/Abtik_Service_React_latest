@@ -12,7 +12,8 @@ import Contact from "../section/Contact";
 import { useDispatch } from "react-redux";
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect, useState, memo } from "react";
-
+import { HeadProvider, Meta, Title } from "react-head";
+import seoData from "../data/seoData.json";
 const About = () => {
   const dispatch = useDispatch();
   const handleOpenDialog = () => {
@@ -63,7 +64,10 @@ const About = () => {
 
   // About Vision And Mission
   const refVisionMission = useRef(null);
-  const isInViewVisionMission = useInView(refVisionMission, { once: true, amount: 0.1 });
+  const isInViewVisionMission = useInView(refVisionMission, {
+    once: true,
+    amount: 0.1,
+  });
   const [visionCols, setVisionCols] = useState(1);
   useEffect(() => {
     const updateCols = () => {
@@ -80,7 +84,10 @@ const About = () => {
 
   // Why Choose Us
   const refWhyChoose = useRef(null);
-  const isInViewWhyChoose = useInView(refWhyChoose, { once: true, amount: 0.4 });
+  const isInViewWhyChoose = useInView(refWhyChoose, {
+    once: true,
+    amount: 0.4,
+  });
   const [whyChooseCols, setWhyChooseCols] = useState(1);
   useEffect(() => {
     const updateCols = () => {
@@ -100,7 +107,7 @@ const About = () => {
   // const isInViewTeam = useInView(refTeam, { once: true, amount: 0.4 });
   // const [teamCols, setTeamCols] = useState(1);
   // useEffect(() => {
-  
+
   //   const updateCols = () => {
   //     setTeamCols(window.innerWidth >= 768 ? 4 : 1);
   //   };
@@ -119,6 +126,12 @@ const About = () => {
 
   return (
     <>
+      <HeadProvider>
+        <Title>{seoData?.aboutPage?.title}</Title>
+        <Meta name="description" content={seoData?.aboutPage?.description} />
+        <Meta name="keyword" content={seoData?.aboutPage?.keyword} />
+        <Meta name="robots" content={seoData?.aboutPage?.robots} />
+      </HeadProvider>
       <Mainlayout>
         {/* Hero Section */}
         <section
@@ -164,7 +177,7 @@ const About = () => {
                          text-white lg:text-white
                          paragraph !text-white
                          max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
-                         style={{fontFamily:"Montserrat Alternates"}}
+              style={{ fontFamily: "Montserrat Alternates" }}
             >
               Empowering Businesses through Comprehensive Solutions From Fund
               Management to Legal Compliance, We've Got You Covered at Abtik
@@ -219,8 +232,9 @@ const About = () => {
               >
                 {index === 0 ? "Our Vision" : "Our Mission"}
               </h2>
-              <p className="paragraph  "
-              style={{fontFamily:"Montserrat Alternates"}}
+              <p
+                className="paragraph  "
+                style={{ fontFamily: "Montserrat Alternates" }}
               >
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. In
                 quidem ipsa voluptate architecto quisquam reprehenderit rem,
@@ -247,7 +261,11 @@ const About = () => {
               initial={{ y: 50, opacity: 0 }}
               animate={isInViewWhyChoose ? { y: 0, opacity: 1 } : {}}
               transition={{ duration: 0.5, delay: getWhyChooseDelay(index) }}
-              className={index === 0 ? "space-y-10" : "grid grid-cols-1 md:grid-cols-2  gap-6"}
+              className={
+                index === 0
+                  ? "space-y-10"
+                  : "grid grid-cols-1 md:grid-cols-2  gap-6"
+              }
             >
               {index === 0 ? (
                 <>
@@ -260,11 +278,14 @@ const About = () => {
                   >
                     Why Choose Abtik
                   </h2>
-                  <p className="paragraph  " style={{fontFamily:"Montserrat Alternates"}}>
+                  <p
+                    className="paragraph  "
+                    style={{ fontFamily: "Montserrat Alternates" }}
+                  >
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. In
                     quidem ipsa voluptate architecto quisquam reprehenderit rem,
-                    totam, facere rerum cum harum cumque explicabo dolorum a ex? Hic
-                    officiis dolore aliquam!
+                    totam, facere rerum cum harum cumque explicabo dolorum a ex?
+                    Hic officiis dolore aliquam!
                   </p>
                   {/* <div>
                     <button className="custom-btn">Explore</button>

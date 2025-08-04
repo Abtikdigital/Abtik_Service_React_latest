@@ -6,7 +6,7 @@ import {
     Mail,
     MapPin,
     Phone,
-  
+
     Headset,
     ArrowUpRight,
     ArrowRight,
@@ -15,17 +15,18 @@ import {
     DollarSign,
     TrendingUp,
     Users,
-   
+
     Shield,
     CreditCard,
- 
+
     Wallet,
 } from "lucide-react";
 import { memo, useState } from "react";
 import { useDispatch } from "react-redux";
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
-
+import { HeadProvider, Meta, Title } from "react-head";
+import seoData from "../data/seoData.json";
 const CashCredit = () => {
     const dispatch = useDispatch();
     const handleOpenDialog = () => {
@@ -196,7 +197,13 @@ const CashCredit = () => {
     const refContact = useRef(null);
     const isInViewContact = useInView(refContact, { once: true, amount: 0.1 });
 
-    return (
+    return (<>
+        <HeadProvider>
+            <Title>{seoData?.cashCreditService?.title}</Title>
+            <Meta name="description" content={seoData?.cashCreditService?.description} />
+            <Meta name="keyword" content={seoData?.cashCreditService?.keyword} />
+            <Meta name="robots" content={seoData?.cashCreditService?.robots} />
+        </HeadProvider>
         <Mainlayout>
             {/* Hero Section */}
             <section
@@ -240,7 +247,7 @@ const CashCredit = () => {
                          text-white lg:text-white
                          paragraph !text-white
                          max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
-                           style={{fontFamily:"Montserrat Alternates"}}
+                        style={{ fontFamily: "Montserrat Alternates" }}
                     >
                         Manage your business cash flow with flexible Cash Credit facilities.
                         Withdraw funds as needed up to ₹50 crore limit and pay interest
@@ -366,13 +373,13 @@ const CashCredit = () => {
                         What Is Cash Credit Facility?
                     </h2>
                     <p className="paragraph !text-white mx-auto text-left"
-                      style={{fontFamily:"Montserrat Alternates"}}
+                        style={{ fontFamily: "Montserrat Alternates" }}
                     >
-                        Cash Credit is a revolving working capital facility that provides businesses with 
-                        flexible access to funds up to a sanctioned limit. Unlike term loans, businesses 
-                        can withdraw, repay, and re-withdraw funds multiple times within the approved limit, 
-                        paying interest only on the amount utilized. This makes it an ideal solution for 
-                        managing seasonal cash flow variations, inventory purchases, and day-to-day 
+                        Cash Credit is a revolving working capital facility that provides businesses with
+                        flexible access to funds up to a sanctioned limit. Unlike term loans, businesses
+                        can withdraw, repay, and re-withdraw funds multiple times within the approved limit,
+                        paying interest only on the amount utilized. This makes it an ideal solution for
+                        managing seasonal cash flow variations, inventory purchases, and day-to-day
                         operational expenses while maintaining optimal cost efficiency.
                     </p>
                 </div>
@@ -500,10 +507,10 @@ const CashCredit = () => {
                 </h2>
                 <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
                     <p className="text-sm md:text-base text-gray-600 text-center"
-                      style={{fontFamily:"Montserrat Alternates"}}
+                        style={{ fontFamily: "Montserrat Alternates" }}
                     >
-                        Cash Credit facilities provide the ultimate flexibility in working capital management, 
-                        allowing businesses to optimize their cash flow and interest costs while maintaining 
+                        Cash Credit facilities provide the ultimate flexibility in working capital management,
+                        allowing businesses to optimize their cash flow and interest costs while maintaining
                         operational efficiency throughout business cycles.
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -721,6 +728,7 @@ const CashCredit = () => {
                 <Contact />
             </motion.section>
         </Mainlayout>
+    </>
     );
 };
 

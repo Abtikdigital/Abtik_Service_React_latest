@@ -25,7 +25,8 @@ import { memo, useState } from "react";
 import { useDispatch } from "react-redux";
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
-
+import { HeadProvider, Meta, Title } from "react-head";
+import seoData from "../data/seoData.json";
 const CMEGP = () => {
     const dispatch = useDispatch();
     const handleOpenDialog = () => {
@@ -196,7 +197,13 @@ const CMEGP = () => {
     const refContact = useRef(null);
     const isInViewContact = useInView(refContact, { once: true, amount: 0.4 });
 
-    return (
+    return (<>
+          <HeadProvider>
+        <Title>{seoData?.cmegpService?.title}</Title>
+        <Meta name="description" content={seoData?.cmegpService?.description} />
+        <Meta name="keyword" content={seoData?.cmegpService?.keyword} />
+        <Meta name="robots" content={seoData?.cmegpService?.robots} />
+      </HeadProvider>
         <Mainlayout>
             {/* Hero Section */}
             <section
@@ -719,6 +726,7 @@ const CMEGP = () => {
                 <Contact />
             </motion.section>
         </Mainlayout>
+    </>
     );
 };
 

@@ -4,7 +4,8 @@ import ContactSection from "../section/Contact";
 import { useDispatch } from "react-redux";
 import { motion, useInView } from "framer-motion";
 import { memo, useRef } from "react";
-
+import { HeadProvider, Meta, Title } from "react-head";
+import seoData from "../data/seoData.json";
 const Contact = () => {
   const dispatch = useDispatch();
   const handleOpenDialog = () => {
@@ -21,6 +22,12 @@ const Contact = () => {
 
   return (
     <>
+          <HeadProvider>
+        <Title>{seoData?.contactPage?.title}</Title>
+        <Meta name="description" content={seoData?.contactPage?.description} />
+        <Meta name="keyword" content={seoData?.contactPage?.keyword} />
+        <Meta name="robots" content={seoData?.contactPage?.robots} />
+      </HeadProvider>
       <Mainlayout>
         {/* Hero Section */}
         <section

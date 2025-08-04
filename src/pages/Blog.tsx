@@ -3,16 +3,17 @@ import BgImage from "../assets/Blog/bgImg.svg";
 
 import { useDispatch } from "react-redux";
 import { motion, useInView } from "framer-motion";
-import { useRef,  memo } from "react";
+import { useRef, memo } from "react";
 import NewBlog from "../section/NewBlog";
-
+import { HeadProvider, Meta, Title } from "react-head";
+import seoData from "../data/seoData.json";
 const Blog = () => {
   const dispatch = useDispatch();
   const handleOpenDialog = () => {
     dispatch({ type: "open" });
   };
 
- 
+
 
   // Hero
   const refHero = useRef(null);
@@ -20,6 +21,12 @@ const Blog = () => {
 
   return (
     <>
+      <HeadProvider>
+        <Title>{seoData?.blog?.title}</Title>
+        <Meta name="description" content={seoData?.blog?.description} />
+        <Meta name="keyword" content={seoData?.blog?.keyword} />
+        <Meta name="robots" content={seoData?.blog?.robots} />
+      </HeadProvider>
       <Mainlayout>
         {/* Hero Section */}
         <section
@@ -64,7 +71,7 @@ const Blog = () => {
                          text-white lg:text-white
                          paragraph !text-white
                          max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
-                         style={{fontFamily:"Montserrat Alternates"}}
+              style={{ fontFamily: "Montserrat Alternates" }}
             >
               Empowering Businesses through Comprehensive Solutions From Fund
               Management to Legal Compliance, We've Got You Covered at Abtik
@@ -87,7 +94,7 @@ const Blog = () => {
         </section>
 
         {/* Blog Section */}
-        <NewBlog/>
+        <NewBlog />
       </Mainlayout>
     </>
   );

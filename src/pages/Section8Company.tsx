@@ -20,7 +20,8 @@ import { memo, useState } from "react";
 import { useDispatch } from "react-redux";
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
-
+import { HeadProvider, Meta, Title } from "react-head";
+import seoData from "../data/seoData.json";
 const Section8CompanyRegistration = () => {
     const dispatch = useDispatch();
     const handleOpenDialog = () => { dispatch({ type: "open" }); };
@@ -167,6 +168,15 @@ const Section8CompanyRegistration = () => {
     ];
 
     return (
+        <>
+        
+              <HeadProvider>
+        <Title>{seoData?.section8Company?.title}</Title>
+        <Meta name="description" content={seoData?.section8Company?.description} />
+        <Meta name="keyword" content={seoData?.section8Company?.keyword} />
+        <Meta name="robots" content={seoData?.section8Company?.robots} />
+      </HeadProvider>
+        
         <Mainlayout>
             {/* Hero Section */}
             <section ref={refHero}
@@ -439,6 +449,7 @@ const Section8CompanyRegistration = () => {
                 <Contact />
             </motion.section>
         </Mainlayout>
+        </>
     );
 };
 

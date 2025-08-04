@@ -11,7 +11,8 @@ import About from "../section/About";
 import { useDispatch } from "react-redux";
 import { motion, useInView } from "framer-motion";
 import { memo, useRef } from "react";
-
+import { HeadProvider, Meta, Title } from "react-head";
+import seoData from "../data/seoData.json";
 const Home = () => {
   const dispatch = useDispatch();
   const handleOpenDialog = () => {
@@ -56,6 +57,12 @@ const Home = () => {
 
   return (
     <>
+      <HeadProvider>
+        <Title>{seoData?.homepage?.title}</Title>
+        <Meta name="description" content={seoData?.homepage?.description} />
+        <Meta name="keyword" content={seoData?.homepage?.keyword} />
+        <Meta name="robots" content={seoData?.homepage?.robots} />
+      </HeadProvider>
       <Mainlayout>
         {/* Hero Section */}
         <section
@@ -101,7 +108,7 @@ const Home = () => {
                          text-white lg:text-white
                          paragraph !text-white
                          max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
-                         style={{fontFamily:"Montserrat Alternates"}}
+              style={{ fontFamily: "Montserrat Alternates" }}
             >
               Empowering Businesses through Comprehensive Solutions From Fund
               Management to Legal Compliance, We've Got You Covered at Abtik

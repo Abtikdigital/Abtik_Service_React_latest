@@ -20,7 +20,8 @@ import { memo, useState } from "react";
 import { useDispatch } from "react-redux";
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
-
+import { HeadProvider, Meta, Title } from "react-head";
+import seoData from "../data/seoData.json";
 const ProducerCompanyRegistration = () => {
     const dispatch = useDispatch();
     const handleOpenDialog = () => { dispatch({ type: "open" }); };
@@ -171,7 +172,15 @@ const ProducerCompanyRegistration = () => {
         }
     ];
 
-    return (
+    return (<>
+    
+          <HeadProvider>
+        <Title>{seoData?.producerCompanyService?.title}</Title>
+        <Meta name="description" content={seoData?.producerCompanyService?.description} />
+        <Meta name="keyword" content={seoData?.producerCompanyService?.keyword} />
+        <Meta name="robots" content={seoData?.producerCompanyService?.robots} />
+      </HeadProvider>
+    
         <Mainlayout>
             {/* Hero Section */}
             <section ref={refHero}
@@ -467,6 +476,7 @@ const ProducerCompanyRegistration = () => {
                 <Contact />
             </motion.section>
         </Mainlayout>
+    </>
     );
 };
 

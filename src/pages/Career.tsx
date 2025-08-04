@@ -23,7 +23,8 @@ import { motion, AnimatePresence, useInView } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import { useRef, useEffect } from "react";
-
+import { HeadProvider, Meta, Title } from "react-head";
+import seoData from "../data/seoData.json";
 const Career = () => {
   const dispatch = useDispatch();
   const handleOpenDialog = () => {
@@ -182,6 +183,13 @@ const Career = () => {
 
   return (
     <>
+      <HeadProvider>
+        <Title>{seoData?.careerPage?.title}</Title>
+        <Meta name="description" content={seoData?.careerPage?.description} />
+        <Meta name="keyword" content={seoData?.careerPage?.keyword} />
+        <Meta name="robots" content={seoData?.careerPage?.robots} />
+      </HeadProvider>
+
       <Mainlayout>
         {/* Hero Section */}
         <section
@@ -227,7 +235,7 @@ const Career = () => {
                          text-white lg:text-white
                          paragraph !text-white
                          max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
-                         style={{fontFamily:"Montserrat Alternates"}}
+              style={{ fontFamily: "Montserrat Alternates" }}
             >
               Empowering Businesses through Comprehensive Solutions From Fund
               Management to Legal Compliance, We've Got You Covered at Abtik
@@ -275,7 +283,7 @@ const Career = () => {
                     Abtik Services
                   </h2>
                   <p className="paragraph text-center md:text-left"
-                  style={{fontFamily:"Montserrat Alternates"}}
+                    style={{ fontFamily: "Montserrat Alternates" }}
                   >
                     Join our innovative team and be part of a company that's
                     transforming the business landscape. We offer exciting
@@ -505,8 +513,8 @@ const Career = () => {
                               type="text"
                               placeholder="Enter your full name"
                               className={`w-full pl-10 pr-4 py-2 border ${errors.fullName
-                                  ? "border-red-500"
-                                  : "border-gray-300"
+                                ? "border-red-500"
+                                : "border-gray-300"
                                 } rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[#052EAA] focus:border-transparent h-[38px] transition-all duration-200`}
                             />
                           </div>
@@ -544,8 +552,8 @@ const Career = () => {
                               type="email"
                               placeholder="your.email@example.com"
                               className={`w-full pl-10 pr-4 py-2 border ${errors.email
-                                  ? "border-red-500"
-                                  : "border-gray-300"
+                                ? "border-red-500"
+                                : "border-gray-300"
                                 } rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[#052EAA] focus:border-transparent h-[38px] transition-all duration-200`}
                             />
                           </div>
@@ -585,8 +593,8 @@ const Career = () => {
                                 if (!/[0-9]/.test(e.key)) e.preventDefault();
                               }}
                               className={`w-full pl-10 pr-4 py-2 border ${errors.phone
-                                  ? "border-red-500"
-                                  : "border-gray-300"
+                                ? "border-red-500"
+                                : "border-gray-300"
                                 } rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[#052EAA] focus:border-transparent h-[38px] transition-all duration-200`}
                             />
                           </div>
@@ -616,8 +624,8 @@ const Career = () => {
                               })}
                               id="experience"
                               className={`w-full pl-10 pr-4 py-2 border ${errors.experience
-                                  ? "border-red-500"
-                                  : "border-gray-300"
+                                ? "border-red-500"
+                                : "border-gray-300"
                                 } rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[#052EAA] focus:border-transparent h-[38px] transition-all duration-200`}
                             >
                               <option value="">Select experience</option>
@@ -661,8 +669,8 @@ const Career = () => {
                               type="number"
                               placeholder="Enter current CTC"
                               className={`w-full pl-10 pr-4 py-2 border ${errors.currentCTC
-                                  ? "border-red-500"
-                                  : "border-gray-300"
+                                ? "border-red-500"
+                                : "border-gray-300"
                                 } rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[#052EAA] focus:border-transparent h-[38px] transition-all duration-200`}
                             />
                           </div>
@@ -699,8 +707,8 @@ const Career = () => {
                               type="number"
                               placeholder="Enter expected CTC"
                               className={`w-full pl-10 pr-4 py-2 border ${errors.expectedCTC
-                                  ? "border-red-500"
-                                  : "border-gray-300"
+                                ? "border-red-500"
+                                : "border-gray-300"
                                 } rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[#052EAA] focus:border-transparent h-[38px] transition-all duration-200`}
                             />
                           </div>
@@ -731,8 +739,8 @@ const Career = () => {
                               })}
                               id="noticePeriod"
                               className={`w-full pl-10 pr-4 py-2 border ${errors.noticePeriod
-                                  ? "border-red-500"
-                                  : "border-gray-300"
+                                ? "border-red-500"
+                                : "border-gray-300"
                                 } rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[#052EAA] focus:border-transparent h-[38px] transition-all duration-200`}
                             >
                               <option value="">Select notice period</option>
@@ -797,8 +805,8 @@ const Career = () => {
                               type="file"
                               accept=".pdf,.doc,.docx"
                               className={`w-full pl-10 pr-4 py-2 border ${errors.resume
-                                  ? "border-red-500"
-                                  : "border-gray-300"
+                                ? "border-red-500"
+                                : "border-gray-300"
                                 } rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[#052EAA] focus:border-transparent transition-all duration-200`}
                             />
                           </div>

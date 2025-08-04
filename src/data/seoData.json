@@ -1,0 +1,296 @@
+{
+  "homepage": {
+    "title": "123",
+    "description": "123",
+    "keyword": "123",
+    "canonical": "123",
+    "robots": "123"
+  },
+  "aboutPage": {
+    "title": "123",
+    "description": "123",
+    "keyword": "123",
+    "canonical": "123",
+    "robots": ""
+  },
+  "contactPage": {
+    "title": "123",
+    "description": "123",
+    "keyword": "123",
+    "canonical": "123",
+    "robots": ""
+  },
+    "copyrightService": {
+    "title": "123",
+    "description": "123",
+    "keyword": "123",
+    "canonical": "123",
+    "robots": ""
+  },
+    "careerPage": {
+    "title": "123",
+    "description": "123",
+    "keyword": "123",
+    "canonical": "123",
+    "robots": ""
+  },
+  "blog": {
+    "title": "123",
+    "description": "123",
+    "keyword": "123",
+    "canonical": "123",
+    "robots": ""
+  },
+  "agrisureService": {
+    "title": "123",
+    "description": "123",
+    "keyword": "123",
+    "canonical": "123",
+    "robots": ""
+  },
+  "annualComplainceService": {
+    "title": "123",
+    "description": "123",
+    "keyword": "123",
+    "canonical": "123",
+    "robots": ""
+  },
+  "businessLoanService": {
+    "title": "123",
+    "description": "123",
+    "keyword": "123",
+    "canonical": "123",
+    "robots": ""
+  },
+  "cashCreditService": {
+    "title": "123",
+    "description": "123",
+    "keyword": "123",
+    "canonical": "123",
+    "robots": ""
+  },
+  "cgtmseSerivce": {
+    "title": "123",
+    "description": "123",
+    "keyword": "123",
+    "canonical": "123",
+    "robots": ""
+  },
+  "cmegpService": {
+    "title": "123",
+    "description": "123",
+    "keyword": "123",
+    "canonical": "123",
+    "robots": ""
+  },
+  "droplineodService": {
+    "title": "123",
+    "description": "123",
+    "keyword": "123",
+    "canonical": "123",
+    "robots": ""
+  },
+  "grantsService": {
+    "title": "123",
+    "description": "123",
+    "keyword": "123",
+    "canonical": "123",
+    "robots": ""
+  },
+  "gstRegistration_fillingService": {
+    "title": "123",
+    "description": "123",
+    "keyword": "123",
+    "canonical": "123",
+    "robots": ""
+  },
+  "isoCertificateService": {
+    "title": "123",
+    "description": "123",
+    "keyword": "123",
+    "canonical": "123",
+    "robots": ""
+  },
+  "lapService": {
+    "title": "123",
+    "description": "123",
+    "keyword": "123",
+    "canonical": "123",
+    "robots": ""
+  },
+  "llpService": {
+    "title": "123",
+    "description": "123",
+    "keyword": "123",
+    "canonical": "123",
+    "robots": ""
+  },
+  "makeinindiaService": {
+    "title": "123",
+    "description": "123",
+    "keyword": "123",
+    "canonical": "123",
+    "robots": ""
+  },
+  "msmeCertificateService": {
+    "title": "123",
+    "description": "123",
+    "keyword": "123",
+    "canonical": "123",
+    "robots": ""
+  },
+  "mudraloanService": {
+    "title": "123",
+    "description": "123",
+    "keyword": "123",
+    "canonical": "123",
+    "robots": ""
+  },
+  "naiff_aiffService": {
+    "title": "123",
+    "description": "123",
+    "keyword": "123",
+    "canonical": "123",
+    "robots": ""
+  },
+  "overdraftService": {
+    "title": "123",
+    "description": "123",
+    "keyword": "123",
+    "canonical": "123",
+    "robots": ""
+  },
+  "partnershipService": {
+    "title": "123",
+    "description": "123",
+    "keyword": "123",
+    "canonical": "123",
+    "robots": ""
+  },
+  "patentfillingService": {
+    "title": "123",
+    "description": "123",
+    "keyword": "123",
+    "canonical": "123",
+    "robots": ""
+  },
+  "pmegpService": {
+    "title": "123",
+    "description": "123",
+    "keyword": "123",
+    "canonical": "123",
+    "robots": ""
+  },
+  "pmfmeService": {
+    "title": "123",
+    "description": "123",
+    "keyword": "123",
+    "canonical": "123",
+    "robots": ""
+  },
+  "privatelimitedService": {
+    "title": "123",
+    "description": "123",
+    "keyword": "123",
+    "canonical": "123",
+    "robots": ""
+  },
+  "producerCompanyService": {
+    "title": "123",
+    "description": "123",
+    "keyword": "123",
+    "canonical": "123",
+    "robots": ""
+  },
+  "projectfundingService": {
+    "title": "123",
+    "description": "123",
+    "keyword": "123",
+    "canonical": "123",
+    "robots": ""
+  },
+  "section8Company": {
+    "title": "123",
+    "description": "123",
+    "keyword": "123",
+    "canonical": "123",
+    "robots": ""
+  },
+  "seedFundService": {
+    "title": "123",
+    "description": "123",
+    "keyword": "123",
+    "canonical": "123",
+    "robots": ""
+  },
+  "smeService": {
+    "title": "123",
+    "description": "123",
+    "keyword": "123",
+    "canonical": "123",
+    "robots": ""
+  },
+  "soleproprietorshipService": {
+    "title": "123",
+    "description": "123",
+    "keyword": "123",
+    "canonical": "123",
+    "robots": ""
+  },
+  "standupIndiaService": {
+    "title": "123",
+    "description": "123",
+    "keyword": "123",
+    "canonical": "123",
+    "robots": ""
+  },
+  "startupIndisCertificateService": {
+    "title": "123",
+    "description": "123",
+    "keyword": "123",
+    "canonical": "123",
+    "robots": ""
+  },
+  "tdsComplianceService": {
+    "title": "123",
+    "description": "123",
+    "keyword": "123",
+    "canonical": "123",
+    "robots": ""
+  },
+  "termService": {
+    "title": "123",
+    "description": "123",
+    "keyword": "123",
+    "canonical": "123",
+    "robots": ""
+  },
+  "tradeLicenceService": {
+    "title": "123",
+    "description": "123",
+    "keyword": "123",
+    "canonical": "123",
+    "robots": ""
+  },
+  "trademarkService": {
+    "title": "123",
+    "description": "123",
+    "keyword": "123",
+    "canonical": "123",
+    "robots": ""
+  },
+  "udaanService": {
+    "title": "123",
+    "description": "123",
+    "keyword": "123",
+    "canonical": "123",
+    "robots": ""
+  },
+  "zedCertificateService": {
+    "title": "123",
+    "description": "123",
+    "keyword": "123",
+    "canonical": "123",
+    "robots": ""
+  }
+}

@@ -25,7 +25,8 @@ import { memo, useState } from "react";
 import { useDispatch } from "react-redux";
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
-
+import { HeadProvider, Meta, Title } from "react-head";
+import seoData from "../data/seoData.json";
 const DroplineOverdraft = () => {
     const dispatch = useDispatch();
     const handleOpenDialog = () => {
@@ -196,7 +197,14 @@ const DroplineOverdraft = () => {
     const refContact = useRef(null);
     const isInViewContact = useInView(refContact, { once: true, amount: 0.4 });
 
-    return (
+    return (<>
+          <HeadProvider>
+        <Title>{seoData?.droplineodService?.title}</Title>
+        <Meta name="description" content={seoData?.droplineodService?.description} />
+        <Meta name="keyword" content={seoData?.droplineodService?.keyword} />
+        <Meta name="robots" content={seoData?.droplineodService?.robots} />
+      </HeadProvider>
+    
         <Mainlayout>
             {/* Hero Section */}
             <section
@@ -721,6 +729,7 @@ const DroplineOverdraft = () => {
                 <Contact />
             </motion.section>
         </Mainlayout>
+    </>
     );
 };
 

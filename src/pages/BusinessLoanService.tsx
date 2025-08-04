@@ -15,17 +15,18 @@ import {
     DollarSign,
     TrendingUp,
     Users,
- 
+
     Shield,
     Lock,
     Unlock,
-  
+
 } from "lucide-react";
 import { memo, useState } from "react";
 import { useDispatch } from "react-redux";
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
-
+import { HeadProvider, Meta, Title } from "react-head";
+import seoData from "../data/seoData.json";
 const BusinessLoan = () => {
     const dispatch = useDispatch();
     const handleOpenDialog = () => {
@@ -196,7 +197,13 @@ const BusinessLoan = () => {
     const refContact = useRef(null);
     const isInViewContact = useInView(refContact, { once: true, amount: 0.4 });
 
-    return (
+    return (<>
+        <HeadProvider>
+            <Title>{seoData?.businessLoanService?.title}</Title>
+            <Meta name="description" content={seoData?.businessLoanService?.description} />
+            <Meta name="keyword" content={seoData?.businessLoanService?.keyword} />
+            <Meta name="robots" content={seoData?.businessLoanService?.robots} />
+        </HeadProvider>
         <Mainlayout>
             {/* Hero Section */}
             <section
@@ -240,7 +247,7 @@ const BusinessLoan = () => {
                          text-white lg:text-white
                          paragraph !text-white
                          max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
-                           style={{fontFamily:"Montserrat Alternates"}}
+                        style={{ fontFamily: "Montserrat Alternates" }}
                     >
                         Fund your business growth with secured and unsecured loan options.
                         Access ₹1 lakh to ₹50 crore funding with competitive interest rates,
@@ -366,12 +373,12 @@ const BusinessLoan = () => {
                         What Are Business Loans?
                     </h2>
                     <p className="paragraph !text-white mx-auto text-left"
-                      style={{fontFamily:"Montserrat Alternates"}}
+                        style={{ fontFamily: "Montserrat Alternates" }}
                     >
-                        Business loans are financial products designed to provide capital for various business 
-                        needs including expansion, working capital, equipment purchase, and operational expenses. 
-                        Available in both secured (requiring collateral) and unsecured (no collateral) formats, 
-                        these loans offer flexible repayment terms and competitive interest rates to support 
+                        Business loans are financial products designed to provide capital for various business
+                        needs including expansion, working capital, equipment purchase, and operational expenses.
+                        Available in both secured (requiring collateral) and unsecured (no collateral) formats,
+                        these loans offer flexible repayment terms and competitive interest rates to support
                         business growth and financial stability across different industries and business stages.
                     </p>
                 </div>
@@ -499,9 +506,9 @@ const BusinessLoan = () => {
                 </h2>
                 <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
                     <p className="text-sm md:text-base text-gray-600 text-center"
-                      style={{fontFamily:"Montserrat Alternates"}}
+                        style={{ fontFamily: "Montserrat Alternates" }}
                     >
-                        Business loans provide essential capital for growth, expansion, and operational needs 
+                        Business loans provide essential capital for growth, expansion, and operational needs
                         with flexible terms and competitive rates tailored to your business requirements.
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -719,6 +726,7 @@ const BusinessLoan = () => {
                 <Contact />
             </motion.section>
         </Mainlayout>
+    </>
     );
 };
 

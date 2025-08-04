@@ -20,7 +20,8 @@ import { memo, useState } from "react";
 import { useDispatch } from "react-redux";
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
-
+import { HeadProvider, Meta, Title } from "react-head";
+import seoData from "../data/seoData.json";
 const AnnualCompliance = () => {
     const dispatch = useDispatch();
     const handleOpenDialog = () => { dispatch({ type: "open" }); };
@@ -166,7 +167,13 @@ const AnnualCompliance = () => {
         }
     ];
 
-    return (
+    return (<>
+        <HeadProvider>
+            <Title>{seoData?.annualComplainceService?.title}</Title>
+            <Meta name="description" content={seoData?.annualComplainceService?.description} />
+            <Meta name="keyword" content={seoData?.annualComplainceService?.keyword} />
+            <Meta name="robots" content={seoData?.annualComplainceService?.robots} />
+        </HeadProvider>
         <Mainlayout>
             {/* Hero Section */}
             <section ref={refHero}
@@ -190,7 +197,7 @@ const AnnualCompliance = () => {
                          text-white lg:text-white
                          paragraph !text-white
                          max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
-                      style={{fontFamily:"Montserrat Alternates"}}
+                        style={{ fontFamily: "Montserrat Alternates" }}
                     >
                         Keep your company or LLP 100% compliant with statutory annual filings, ROC returns, meetings, and ITR—all managed & filed by Abtik experts.
                     </p>
@@ -301,7 +308,7 @@ const AnnualCompliance = () => {
                 </h2>
                 <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
                     <p className="text-sm md:text-base text-gray-600 text-center"
-                      style={{fontFamily:"Montserrat Alternates"}}
+                        style={{ fontFamily: "Montserrat Alternates" }}
                     >
                         Every entity registered under the Companies Act, LLP Act, or as OPC/Section 8 (NGO) must file statutory returns and hold meetings, irrespective of turnover or profit.
                     </p>
@@ -445,6 +452,7 @@ const AnnualCompliance = () => {
                 <Contact />
             </motion.section>
         </Mainlayout>
+    </>
     );
 };
 

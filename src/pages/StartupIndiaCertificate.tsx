@@ -21,7 +21,8 @@ import { memo, useState } from "react";
 import { useDispatch } from "react-redux";
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
-
+import { HeadProvider, Meta, Title } from "react-head";
+import seoData from "../data/seoData.json";
 const StartupIndiaCertificate = () => {
     const dispatch = useDispatch();
     const handleOpenDialog = () => {
@@ -194,6 +195,14 @@ const StartupIndiaCertificate = () => {
 
     // === Main JSX ===
     return (
+        <>
+              <HeadProvider>
+        <Title>{seoData?.startupIndisCertificateService?.title}</Title>
+        <Meta name="description" content={seoData?.startupIndisCertificateService?.description} />
+        <Meta name="keyword" content={seoData?.startupIndisCertificateService?.keyword} />
+        <Meta name="robots" content={seoData?.startupIndisCertificateService?.robots} />
+      </HeadProvider>
+        
         <Mainlayout>
             {/* Hero Section */}
             <section
@@ -597,6 +606,7 @@ const StartupIndiaCertificate = () => {
                 <Contact />
             </motion.section>
         </Mainlayout>
+        </>
     );
 };
 

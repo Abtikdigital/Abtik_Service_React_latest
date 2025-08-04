@@ -26,7 +26,8 @@ import { memo, useState } from "react";
 import { useDispatch } from "react-redux";
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
-
+import { HeadProvider, Meta, Title } from "react-head";
+import seoData from "../data/seoData.json";
 const PatentFiling = () => {
     const dispatch = useDispatch();
     const handleOpenDialog = () => {
@@ -197,7 +198,14 @@ const PatentFiling = () => {
     const refContact = useRef(null);
     const isInViewContact = useInView(refContact, { once: true, amount: 0.1 });
 
-    return (
+    return (<>
+    
+          <HeadProvider>
+        <Title>{seoData?.patentfillingService?.title}</Title>
+        <Meta name="description" content={seoData?.patentfillingService?.description} />
+        <Meta name="keyword" content={seoData?.patentfillingService?.keyword} />
+        <Meta name="robots" content={seoData?.patentfillingService?.robots} />
+      </HeadProvider>
         <Mainlayout>
             {/* Hero Section */}
             <section
@@ -757,6 +765,7 @@ const PatentFiling = () => {
                 <Contact />
             </motion.section>
         </Mainlayout>
+    </>
     );
 };
 

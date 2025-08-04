@@ -20,7 +20,8 @@ import { memo, useState } from "react";
 import { useDispatch } from "react-redux";
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
-
+import { HeadProvider, Meta, Title } from "react-head";
+import seoData from "../data/seoData.json";
 const TDCompliance = () => {
     const dispatch = useDispatch();
     const handleOpenDialog = () => {
@@ -179,7 +180,14 @@ const TDCompliance = () => {
         }
     ];
 
-    return (
+    return (<>
+    
+          <HeadProvider>
+        <Title>{seoData?.tdsComplianceService?.title}</Title>
+        <Meta name="description" content={seoData?.tdsComplianceService?.description} />
+        <Meta name="keyword" content={seoData?.tdsComplianceService?.keyword} />
+        <Meta name="robots" content={seoData?.tdsComplianceService?.robots} />
+      </HeadProvider>
         <Mainlayout>
             {/* Hero Section */}
             <section
@@ -488,6 +496,7 @@ const TDCompliance = () => {
                 <Contact />
             </motion.section>
         </Mainlayout>
+    </>
     );
 };
 

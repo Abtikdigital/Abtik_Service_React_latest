@@ -25,7 +25,8 @@ import { memo, useState } from "react";
 import { useDispatch } from "react-redux";
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
-
+import { HeadProvider, Meta, Title } from "react-head";
+import seoData from "../data/seoData.json";
 const TermLoan = () => {
     const dispatch = useDispatch();
     const handleOpenDialog = () => {
@@ -196,7 +197,14 @@ const TermLoan = () => {
     const refContact = useRef(null);
     const isInViewContact = useInView(refContact, { once: true, amount: 0.1 });
 
-    return (
+    return (<>
+          <HeadProvider>
+        <Title>{seoData?.termService?.title}</Title>
+        <Meta name="description" content={seoData?.termService?.description} />
+        <Meta name="keyword" content={seoData?.termService?.keyword} />
+        <Meta name="robots" content={seoData?.termService?.robots} />
+      </HeadProvider>
+    
         <Mainlayout>
             {/* Hero Section */}
             <section
@@ -765,6 +773,7 @@ const TermLoan = () => {
                 <Contact />
             </motion.section>
         </Mainlayout>
+    </>
     );
 };
 

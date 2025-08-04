@@ -24,7 +24,8 @@ import { memo, useState } from "react";
 import { useDispatch } from "react-redux";
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
-
+import { HeadProvider, Meta, Title } from "react-head";
+import seoData from "../data/seoData.json";
 const SeedFund = () => {
     const dispatch = useDispatch();
     const handleOpenDialog = () => {
@@ -195,7 +196,15 @@ const SeedFund = () => {
     const refContact = useRef(null);
     const isInViewContact = useInView(refContact, { once: true, amount: 0.1 });
 
-    return (
+    return (<>
+    
+          <HeadProvider>
+        <Title>{seoData?.seedFundService?.title}</Title>
+        <Meta name="description" content={seoData?.seedFundService?.description} />
+        <Meta name="keyword" content={seoData?.seedFundService?.keyword} />
+        <Meta name="robots" content={seoData?.seedFundService?.robots} />
+      </HeadProvider>
+    
         <Mainlayout>
             {/* Hero Section */}
             <section
@@ -715,6 +724,7 @@ const SeedFund = () => {
                 <Contact />
             </motion.section>
         </Mainlayout>
+    </>
     );
 };
 

@@ -20,7 +20,8 @@ import { memo, useState } from "react";
 import { useDispatch } from "react-redux";
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
-
+import { HeadProvider, Meta, Title } from "react-head";
+import seoData from "../data/seoData.json";
 const MakeInIndiaCertificate = () => {
     const dispatch = useDispatch();
     const handleOpenDialog = () => {
@@ -181,6 +182,14 @@ const MakeInIndiaCertificate = () => {
 
     // --- Main JSX ---
     return (
+        <>
+      <HeadProvider>
+        <Title>{seoData?.makeinindiaService?.title}</Title>
+        <Meta name="description" content={seoData?.makeinindiaService?.description} />
+        <Meta name="keyword" content={seoData?.makeinindiaService?.keyword} />
+        <Meta name="robots" content={seoData?.makeinindiaService?.robots} />
+      </HeadProvider>
+
         <Mainlayout>
             {/* Hero Section */}
             <section
@@ -541,6 +550,7 @@ const MakeInIndiaCertificate = () => {
                 <Contact />
             </motion.section>
         </Mainlayout>
+        </>
     );
 };
 

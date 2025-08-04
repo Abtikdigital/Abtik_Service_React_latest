@@ -20,7 +20,8 @@ import { memo, useState } from "react";
 import { useDispatch } from "react-redux";
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
-
+import { HeadProvider, Meta, Title } from "react-head";
+import seoData from "../data/seoData.json";
 const LLPRegistration = () => {
     const dispatch = useDispatch();
     const handleOpenDialog = () => { dispatch({ type: "open" }); };
@@ -166,7 +167,14 @@ const LLPRegistration = () => {
         }
     ];
 
-    return (
+    return (<>
+          <HeadProvider>
+        <Title>{seoData?.llpService?.title}</Title>
+        <Meta name="description" content={seoData?.llpService?.description} />
+        <Meta name="keyword" content={seoData?.llpService?.keyword} />
+        <Meta name="robots" content={seoData?.llpService?.robots} />
+      </HeadProvider>
+    
         <Mainlayout>
             {/* Hero Section */}
             <section ref={refHero}
@@ -451,6 +459,7 @@ const LLPRegistration = () => {
                 <Contact />
             </motion.section>
         </Mainlayout>
+    </>
     );
 };
 
