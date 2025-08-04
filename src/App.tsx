@@ -32,7 +32,9 @@ const Sme = lazy(() => import("./pages/SmeService"));
 const TermLoan = lazy(() => import("./pages/TermService"));
 const ProjectFunding = lazy(() => import("./pages/ProjectFunding"));
 const Grants = lazy(() => import("./pages/GrantsService"));
-
+const AngelInverstor=lazy(()=>import("./pages/Angelinverstor"))
+const VCInverstor=lazy(()=>import("./pages/VCInvestor"))
+const NBFC=lazy(()=>import("./pages/NBFC"))
 // Trade Mark And Ip
 const TrademarkRegistrationAndFilling = lazy(
   () => import("./pages/TrademarkRegistrationAndFillingService")
@@ -138,6 +140,18 @@ function App() {
           <Route
             path="/services/funding/loans/project-funding"
             element={<ProjectFunding />}
+          />
+            <Route
+            path="/services/funding/private-funding/angel-inverstor"
+            element={<AngelInverstor />}
+          />
+            <Route
+            path="/services/funding/private-funding/venture-capital"
+            element={<VCInverstor />}
+          />
+            <Route
+            path="/services/funding/private-funding/nbfc"
+            element={<NBFC />}
           />
           <Route
             path="/services/legal/trademark-registration"

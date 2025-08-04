@@ -1,5 +1,5 @@
 import { ChevronDown, Menu, X, ChevronRight } from "lucide-react";
-import Logo from "../assets/Logo/Blue.png";
+import Logo from "../assets/Logo/ResizedLogo.png";
 import { useEffect, useState, useRef, memo } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
@@ -97,7 +97,26 @@ const menuItems: Menu[] = [
               },
             ],
           },
-       
+          {
+            name: "Private Funding",
+            path: null,
+            description: "Early-Stage Funding for Agricultural Ventures",
+            subServices: [
+              {
+                name: "Angel Inverstor",
+                path: "/services/funding/private-funding/angel-inverstor", // Updated path
+              },
+              {
+                name: "VC Funding",
+                path: "/services/funding/private-funding/venture-capital", // Updated path
+              },
+              {
+                name: "NBFC",
+                path: "/services/funding/private-funding/nbfc", // Updated path
+              },
+            ],
+          },
+
           {
             name: "Secured/Unsecured Loan",
             path: null,
@@ -193,7 +212,7 @@ const menuItems: Menu[] = [
             path: "/services/tax/gst-filing",
             description: "Regular GST return filing and compliance",
           },
-       
+
           {
             name: "TDS Compliance",
             path: "/services/tax/tds-compliance",

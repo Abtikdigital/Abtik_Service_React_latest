@@ -9,6 +9,7 @@ import Image8 from "../assets/Recommended/Img1.svg";
 import Image9 from "../assets/Recommended/Img1.svg";
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect, useState, memo } from "react";
+import { useNavigate } from "react-router-dom";
 
 const recommendedData = [
   {
@@ -16,48 +17,57 @@ const recommendedData = [
     img: Image1,
     description:
       "A DPIIT-recognized government program that enables eligible startups to access tax exemptions, self-certification, and other incentives for rapid growth and compliance.",
+
+    path: "/services/funding/subsidy/stand-up-india",
   },
   {
     title: "Seed Fund Scheme",
     img: Image2,
     description:
       "An initiative under Startup India that provides early-stage funding through government-approved incubators. It helps promising startups access vital capital to scale.",
+    path: "/services/funding/seed-fund",
   },
   {
-    title: "MSME Loan",
+    title: "Mudra Loan",
     img: Image3,
     description:
       "Loans provided to Micro, Small, and Medium Enterprises under various central and state government schemes. These help businesses grow and maintain healthy cash flow.",
+    path: "/services/funding/msme-loan/mudra",
   },
   {
     title: "NBFC Loan",
     img: Image4,
     description:
       "Loans provided by Non-Banking Financial Companies with simplified documentation and eligibility. These are tailored for startups and growing enterprises.",
+    path: "",
   },
   {
     title: "PMEGP Loan",
     img: Image5,
     description:
       "A credit-linked subsidy scheme by the Government of India that supports new micro-enterprises in the manufacturing or service sectors, including interest subsidies.",
+    path: "",
   },
   {
     title: "NAIIF Loan",
     img: Image6,
     description:
       "Equity-based funding made available through SEBI-registered Alternative Investment Funds (AIFs) under the National Alternative Investment and Infrastructure Fund (NAIIF).",
+    path: "",
   },
   {
     title: "GST & Tax Compliance",
     img: Image7,
     description:
       "GST registration, monthly and annual return filings, income tax filing, TDS management, and audit preparation. Ensures your business always stays compliant.",
+    path: "",
   },
   {
     title: "Tax Exemption Certificates (80-IAC, 12AB, 80G)",
     img: Image1,
     description:
       "Government-issued certificates offering tax benefits to eligible startups and NGOs. These include 80-IAC for startups, and 12AB/80G for charitable institutions.",
+    path: "",
   },
 ];
 
@@ -72,34 +82,27 @@ const Recommended = () => {
   };
 
   const [cols, setCols] = useState(getCols());
-  const [rows, setRows] = useState(1);
+  const [visibleCount, setVisibleCount] = useState(4);
 
-  // Listen for screen resize & update cols and rows so items don't disappear
+  // Listen for screen resize & update cols (for animation delays)
   useEffect(() => {
     const updateCols = () => {
-      const newCols = getCols();
-      setCols(newCols);
-      setRows(prevRows => {
-        const visible = prevRows * cols;
-        return Math.ceil(visible / newCols) || 1;
-      });
+      setCols(getCols());
     };
     window.addEventListener("resize", updateCols);
     return () => window.removeEventListener("resize", updateCols);
-    // eslint-disable-next-line
-  }, [cols]);
+  }, []);
 
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.1 });
 
-  const itemsToShow = rows * cols;
-  const canLoadMore = itemsToShow < recommendedData.length;
+  const canLoadMore = visibleCount < recommendedData.length;
 
-  const getDelay = (index: number)=> {
+  const getDelay = (index: number) => {
     const row = Math.floor(index / cols);
     return 0.1 + row * 0.1;
   };
-
+  const nav = useNavigate();
   return (
     <motion.section
       ref={ref}
@@ -114,26 +117,39 @@ const Recommended = () => {
       >
         Recommended For You
       </h2>
-      <p className="paragraph text-center" style={{ fontFamily: "Montserrat Alternates" }}>
-        Top-picked services for your business goals—get exactly what you need, when you need it.
+      <p
+        className="paragraph text-center"
+        style={{ fontFamily: "Montserrat Alternates" }}
+      >
+        Top-picked services for your business goals—get exactly what you need,
+        when you need it.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-6">
-        {recommendedData.slice(0, itemsToShow).map((data, index) => (
+        {recommendedData.slice(0, visibleCount).map((data: any, index) => (
           <motion.div
             key={index}
             initial={{ y: 50, opacity: 0 }}
             animate={isInView ? { y: 0, opacity: 1 } : {}}
             transition={{ duration: 0.5, delay: getDelay(index) }}
-            className="bg-white p-4 shadow-lg rounded-4xl space-y-3 duration-300 transition-all hover:scale-105 cursor-pointer"
+            onClick={() => {
+              nav(data?.path);
+            }}
+            className="bg-white cursor-pointer p-3.5 shadow-lg rounded-4xl space-y-3 duration-300 transition-all hover:scale-105 cursor-pointer"
           >
-            <img src={data?.img} alt={data?.title} className="w-full" />
+            <img
+              src={data?.img}
+              alt={data?.title}
+              className="w-full rounded-t-3xl"
+            />
             <h2
-              className="text-xl text-[#3CA2E2] font-semibold text-center"
+              className="text-xl text-[#3CA2E2] font-semibold text-center line-clamp-2"
               style={{ fontFamily: "Montserrat Alternates" }}
             >
               {data?.title}
             </h2>
-            <p className="paragraph text-center">{data?.description}</p>
+            <p className="paragraph text-center line-clamp-3">
+              {data?.description}
+            </p>
           </motion.div>
         ))}
       </div>
@@ -142,7 +158,7 @@ const Recommended = () => {
           <button
             className="custom-btn"
             type="button"
-            onClick={() => setRows(r => r + 1)}
+            onClick={() => setVisibleCount((r) => r + 4)}
           >
             Load More
           </button>

@@ -1,70 +1,78 @@
 import { useNavigate } from "react-router-dom";
 import Image1 from "../assets/OurService/grant.jpeg";
-import Image2 from "../assets/OurService/starup.jpg"
-import Image3 from "../assets/OurService/msme.jpeg"
-import Image4 from "../assets/OurService/seed.jpeg"
-import Image5 from "../assets/OurService/trademark.jpeg"
-import Image6 from "../assets/OurService/iso.jpeg"
-import Image7 from "../assets/OurService/zed.jpeg"
-import Image8 from "../assets/OurService/pmegp.jpeg"
+import Image2 from "../assets/OurService/starup.jpg";
+import Image3 from "../assets/OurService/msme.jpeg";
+import Image4 from "../assets/OurService/seed.jpeg";
+import Image5 from "../assets/OurService/trademark.jpeg";
+import Image6 from "../assets/OurService/iso.jpeg";
+import Image7 from "../assets/OurService/zed.jpeg";
+import Image8 from "../assets/OurService/pmegp.jpeg";
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect, useState, memo } from "react";
 
 const services = [
   {
     title: "Grants",
-    description: "We help you find and apply for the right government grants, so that your business gets the financial assistance he deserves - without stress.on",
+    description:
+      "We assist in finding and applying for suitable government grants, ensuring your business receives deserved financial aid without any stress.",
     img: Image1,
-    path: "/",
+    path: "/services/funding/grants",
   },
   {
-    title: "StartStartup India Certificate",
-    description: "Get recognized as an official startup and enjoy tax profit, funding access and reliability under the Start-up India Mission.",
+    title: "Startup India Certificate",
+    description:
+      "Gain official startup recognition to access tax benefits, funding opportunities, and credibility via the Startup India initiative.",
     img: Image2,
-    path: "/",
+    path: "/services/funding/subsidy/stand-up-india",
   },
   {
-    title: "MSME certificate",
-    description: "Register your business as MSME and unlock a wide range of subsidy, priority lending and government scheme benefits.",
+    title: "MSME Certificate",
+    description:
+      "Register as an MSME to access subsidies, priority loans, and various government schemes that support small business growth effectively.",
     img: Image3,
-    path: "/",
+    path: "/services/certificate/msme",
   },
   {
-    title: "Seed fund",
-    description: "We guide you step-by-step to apply for reliable government seed funding — so your startup gets the right start with the right support.",
+    title: "Seed Fund",
+    description:
+      "We provide step-by-step guidance to secure government seed funding, helping your startup launch with reliable support from the beginning.",
     img: Image4,
-    path: "/",
+    path: "/services/funding/seed-fund",
   },
   {
-    title: "trademark registration",
-    description: "Protect your brand name, logo, or tagline with proper trademark safety so that your identity is really yours.",
+    title: "Trademark Registration",
+    description:
+      "Safeguard your brand name, logo, or tagline through trademark registration, ensuring your unique identity remains protected and exclusive.",
     img: Image5,
-    path: "/",
+    path: "/services/legal/trademark-registration",
   },
   {
-    title: "ISO certificate",
-    description: "Show the world that you mean quality. We help you get ISO certification for compliance with trusts and global standards.",
+    title: "ISO Certificate",
+    description:
+      "Demonstrate quality commitment with ISO certification, which we help obtain to meet global standards and build trust in your operations.",
     img: Image6,
-    path: "/",
+    path: "/services/certificate/iso",
   },
   {
     title: "ZED Certificate",
-    description: "Achieve Zero Defect Zero Effect Certification to align your business with high-quality standards and eco-friendly practices recognized by the government.",
+    description:
+      "Obtain Zero Defect Zero Effect certification to ensure high-quality, eco-friendly practices aligned with recognized government standards.",
     img: Image7,
-    path: "/",
+    path: "/services/certificate/zed",
   },
   {
     title: "PMEGP Loan Scheme",
-    description: "Launch your business with up to ₹25 lakh support through the PMEGP scheme. We simplify the process of getting government loans and subsidies.",
+    description:
+      "Start your venture with up to ₹25 lakh via PMEGP, where we streamline applications for government loans and subsidies to ease the process.",
     img: Image8,
-    path: "/",
+    path: "/services/funding/subsidy/pmegp",
   },
 ];
 
 const OurService = () => {
   const nav = useNavigate();
 
-  // Responsive column tracking
+  // Responsive column tracking (for grid and animation only)
   const getCols = () => {
     const width = window.innerWidth;
     if (width >= 1280) return 4;
@@ -74,32 +82,25 @@ const OurService = () => {
   };
 
   const [cols, setCols] = useState(getCols());
-  const [rows, setRows] = useState(1);
+  const [visibleCount, setVisibleCount] = useState(4); // Start with 4 items
 
-  // Responsive cols/rows updating
+  // Update columns on resize (no need to adjust visibleCount)
   useEffect(() => {
     const updateCols = () => {
-      const newCols = getCols();
-      setCols(newCols);
-      setRows(prevRows => {
-        const visible = prevRows * cols;
-        return Math.ceil(visible / newCols) || 1;
-      });
+      setCols(getCols());
     };
     window.addEventListener("resize", updateCols);
     return () => window.removeEventListener("resize", updateCols);
-    // eslint-disable-next-line
-  }, [cols]);
+  }, []);
 
-  const HandleClick = (path:any) => nav(path);
+  const HandleClick = (path: any) => nav(path);
 
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.1 });
 
-  const itemsToShow = rows * cols;
-  const canLoadMore = itemsToShow < services.length;
+  const canLoadMore = visibleCount < services.length;
 
-  const getDelay = (index:number) => {
+  const getDelay = (index: number) => {
     const row = Math.floor(index / cols);
     return 0.1 + row * 0.1; // Start after section animation, stagger rows
   };
@@ -125,10 +126,11 @@ const OurService = () => {
           className="paragraph text-center"
           style={{ fontFamily: "Montserrat Alternates" }}
         >
-          “Smart business solutions—from registration to funding, licensing & certification—all in one place.”
+          “Smart business solutions—from registration to funding, licensing &
+          certification—all in one place.”
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-6">
-          {services.slice(0, itemsToShow).map((service, index) => (
+          {services.slice(0, visibleCount).map((service, index) => (
             <motion.div
               key={index}
               initial={{ y: 50, opacity: 0 }}
@@ -136,11 +138,17 @@ const OurService = () => {
               transition={{ duration: 0.5, delay: getDelay(index) }}
               className="space-y-4"
             >
-              <img src={service.img} className="w-full" alt={service.title} />
+              <img
+                src={service.img}
+                className="w-full rounded-xl hover:scale-105 transition-all duration-300 cursor-pointer"
+                alt={service.title}
+              />
               <h2 className="text-center text-xl text-[#3CA2E2] font-semibold">
                 {service?.title}
               </h2>
-              <p className="text-center paragraph">{service?.description}</p>
+              <p className="text-center paragraph line-clamp-3">
+                {service?.description}
+              </p>
               <div className="text-center">
                 <button
                   onClick={() => HandleClick(service?.path)}
@@ -157,7 +165,7 @@ const OurService = () => {
             <button
               className="custom-btn"
               type="button"
-              onClick={() => setRows(r => r + 1)}
+              onClick={() => setVisibleCount((prev) => prev + 4)} // Load next 4
             >
               Load More
             </button>
