@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Image1 from "../assets/Blog/budget 2025.jpeg";
 import Image2 from "../assets/Blog/2nd blog.jpeg";
 import Image3 from "../assets/Blog/3rd blog.png";
-import Image4 from "../assets/Blog/4th blog.jpeg";
+
 
 const blogs = [
   {
@@ -12,7 +12,7 @@ const blogs = [
     description:
       "India’s Union Budget 2025 has set",
     img: Image1,
-    slug: "test",
+    slug: "Budget-2025-A-Strategic-Shift-for-MSMEs",
   },
   // ... other blog objects ...
   {
@@ -20,109 +20,18 @@ const blogs = [
     description:
       "First-time entrepreneurs are front",
     img: Image2,
-    slug: "/",
+    slug: "Indias-Startups-Get-a-Boost-Budget-2025-Unlocks-New-Pathways",
   },
    {
     title: " Budget 2025 Simplifies the Journey for New Founders",
     description:
       "For first-time entrepreneurs, Budget",
     img: Image3,
-    slug: "test",
+    slug: "Budget-2025-Simplifies-the-Journey-for-New-Founders",
   },
-  // ... other blog objects ...
-  {
-    title: " A Budget That Strengthens Local Industries and Women-Led Enterprises",
-    description:
-      "Budget 2025 goes beyond metro",
-    img: Image4,
-    slug: "/",
-  },
-   {
-    title: "Title1",
-    description:
-      "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
-    img: Image1,
-    slug: "test",
-  },
-  // ... other blog objects ...
-  {
-    title: "Title1",
-    description:
-      "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
-    img: Image1,
-    slug: "/",
-  }, {
-    title: "Title1",
-    description:
-      "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
-    img: Image1,
-    slug: "test",
-  },
-  // ... other blog objects ...
-  {
-    title: "Title1",
-    description:
-      "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
-    img: Image1,
-    slug: "/",
-  },
-   {
-    title: "Title1",
-    description:
-      "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
-    img: Image1,
-    slug: "test",
-  },
-  // ... other blog objects ...
-  {
-    title: "Title1",
-    description:
-      "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
-    img: Image1,
-    slug: "/",
-  }, {
-    title: "Title1",
-    description:
-      "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
-    img: Image1,
-    slug: "test",
-  },
-  // ... other blog objects ...
-  {
-    title: "Title1",
-    description:
-      "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
-    img: Image1,
-    slug: "/",
-  }, {
-    title: "Title1",
-    description:
-      "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
-    img: Image1,
-    slug: "test",
-  },
-  // ... other blog objects ...
-  {
-    title: "Title1",
-    description:
-      "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
-    img: Image1,
-    slug: "/",
-  }, {
-    title: "Title1",
-    description:
-      "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
-    img: Image1,
-    slug: "test",
-  },
-  // ... other blog objects ...
-  {
-    title: "Title1",
-    description:
-      "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
-    img: Image1,
-    slug: "/",
-  },
+ 
+ 
+
   // (add all your blog objects as above)
 ];
 

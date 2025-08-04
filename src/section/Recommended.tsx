@@ -5,8 +5,7 @@ import Image4 from "../assets/Recommended/nbfc.jpeg";
 import Image5 from "../assets/Recommended/pmegp.jpeg";
 import Image6 from "../assets/Recommended/naiif.jpeg";
 import Image7 from "../assets/Recommended/gst tax.jpg";
-import Image8 from "../assets/Recommended/Img1.svg";
-import Image9 from "../assets/Recommended/Img1.svg";
+
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect, useState, memo } from "react";
 import { useNavigate } from "react-router-dom";

@@ -36,7 +36,7 @@ const ExpandedBlog = () => {
         `India’s Union Budget 2025 has set a bold tone for the future of Micro, Small, and Medium Enterprises (MSMEs). With ₹23,100 crore allocated directly to support this backbone of the Indian economy, the government is finally moving from symbolic announcements to actionable, structural reforms.`,
 
       img: Image1,
-      slug: "test",
+      slug: "Budget-2025-A-Strategic-Shift-for-MSMEs",
       date: "July 20, 2024",
       readTime: "5 min read",
       category: "Marketing",
@@ -68,7 +68,7 @@ const ExpandedBlog = () => {
       description:
         "Startups are no longer fringe players—they are now central to India’s economic story. Budget 2025 backs this shift with tax reliefs, easier capital access, and major investments in innovation.",
       img: Image2,
-      slug: "scalable-startup-solutions",
+      slug: "Indias-Startups-Get-a-Boost-Budget-2025-Unlocks-New-Pathways",
       date: "July 18, 2024",
       readTime: "7 min read",
       category: "Technology",
@@ -83,7 +83,7 @@ const ExpandedBlog = () => {
           description:
             "For years, MSMEs have demanded more than just recognition—they’ve needed real, accessible support. The 2025 Budget delivers that with a dedicated allocation that targets growth, sustainability, and resilience.",
         },
-         {
+        {
           title: "Expanding Innovation Beyond Metro Cities",
           lists: [
             "More incubation programs in Tier 2 & Tier 3 cities",
@@ -101,109 +101,14 @@ const ExpandedBlog = () => {
       description:
         "First-time entrepreneurs are front and center in Budget 2025. With a streamlined digital portal and structured mentorship, starting up in India just got easier—and faster.",
       img: Image3,
-      slug: "legal-compliance-guide",
+      slug: "Budget-2025-Simplifies-the-Journey-for-New-Founders",
       date: "July 15, 2024",
       readTime: "6 min read",
       category: "Legal",
       list: [],
     },
-    {
-      title: "Single Window Portal: One Platform, Many Solutions",
-      description:
-        "The newly announced ‘Single Window’ digital portal allows new founders to:",
-      img: Image1,
-      slug: "fund-management-practices",
-      date: "July 12, 2024",
-      readTime: "8 min read",
-      category: "Finance",
-      list: [
-         {
-          title: "The newly announced ‘Single Window’ digital portal allows new founders to:",
-          lists: [
-            "Register their startups",
-            "File intellectual property (IP) claims",
-            "Manage compliance—all in one place",
-          ],
-          description:
-            "",
-        },
-        {
-          title: "Structured Mentorship Through SIDBI",
-          lists: [
-            "Connects early-stage entrepreneurs with seasoned experts",
-            "Offers guidance during crucial growth phases",
-            "Helps bridge the gap between idea and execution",
-          ],
-          description:
-            "Budget 2025 also introduces a reimagined mentorship framework under SIDBI:",
-        },
-      ],
-    },
-    {
-      title: "A Budget That Strengthens Local Industries and Women-Led Enterprises",
-      description:
-        "Budget 2025 goes beyond metro-focused development—championing rural industries, tribal crafts, and women-led businesses as key engines of growth.",
-      img: Image1,
-      slug: "customer-success-stories",
-      date: "July 10, 2024",
-      readTime: "4 min read",
-      category: "Case Study",
-      list: [
-         {
-          title: "Empowering Local & Artisan-Driven Enterprises",
-          lists: [
-            "Targeted investments in khadi clusters, tribal crafts, and agri-based units",
-            "Support for women-led micro-enterprises",
-            "Promotion of cultural and handmade goods for export potential",
-          ],
-          description:
-            "",
-        },
-         {
-          title: "Real Enablers, Not Just Incentives",
-          lists: [
-            "Solar-powered tools for rural productivity",
-            "Cold storage support for agri-entrepreneurs",
-            "Digital training programs for micro-entrepreneurs in small towns",
-          ],
-          description:
-            "",
-        },
-      ],
-    },
-    {
-      title: "Innovation in Business Process Automation",
-      description:
-        "Explore how automation is reshaping business processes across various industries worldwide.",
-      img: Image1,
-      slug: "business-automation-innovation",
-      date: "July 8, 2024",
-      readTime: "6 min read",
-      category: "Technology",
-      list: [],
-    },
-    {
-      title: "Strategic Planning for Growth",
-      description:
-        "Master the art of strategic planning to accelerate your business growth and market expansion.",
-      img: Image1,
-      slug: "strategic-planning-growth",
-      date: "July 5, 2024",
-      readTime: "9 min read",
-      category: "Strategy",
-      list: [],
-    },
-    {
-      title: "Digital Transformation Success Guide",
-      description:
-        "Complete guide to successfully implementing digital transformation in your organization.",
-      img: Image1,
-      slug: "digital-transformation-guide",
-      date: "July 2, 2024",
-      readTime: "7 min read",
-      category: "Technology",
-      list: [],
-    },
+
+
   ];
 
   const { slug } = useParams<{ slug: string }>();
@@ -316,7 +221,7 @@ const ExpandedBlog = () => {
             {/* Blog Image with Overlay Info */}
             <div className="relative rounded-xl md:rounded-2xl overflow-hidden shadow-lg group">
               <img
-              loading="lazy"
+                loading="lazy"
                 src={selectedBlogData.img}
                 className="w-full h-48 md:h-64 lg:h-80 object-cover group-hover:scale-105 transition-transform duration-500"
                 alt={selectedBlogData.title}
@@ -446,7 +351,7 @@ const ExpandedBlog = () => {
                       <div className="grid grid-cols-4 gap-2 md:gap-3">
                         <div className="overflow-hidden rounded-md md:rounded-lg">
                           <img
-                          loading="lazy"
+                            loading="lazy"
                             src={blog.img}
                             alt={blog.title}
                             className="w-full h-10 md:h-12 object-cover group-hover:scale-110 transition-transform duration-300"
