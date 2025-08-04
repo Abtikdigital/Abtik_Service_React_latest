@@ -1,4 +1,4 @@
-import  { useState, useEffect, memo } from 'react';
+import { useState, useEffect, memo } from 'react';
 import Image1 from '../assets/AboutSection/male-female-graphic-designers-using-laptop.jpg';
 
 const About = () => {
@@ -35,12 +35,11 @@ const About = () => {
     <>
       <div className="grid md:grid-cols-2 bg-[#f7f7f7] px-7 md:px-14 py-6 gap-6 items-center">
         {/* Text Section */}
-        <div 
-          className={`space-y-10 transition-all duration-800 ease-out ${
-            visibleElements.text 
-              ? 'opacity-100 translate-y-0' 
+        <div
+          className={`space-y-10 transition-all duration-800 ease-out ${visibleElements.text
+              ? 'opacity-100 translate-y-0'
               : 'opacity-0 translate-y-12'
-          }`}
+            }`}
         >
           <h2
             className="sub-heading text-center md:text-left bg-clip-text bg-gradient-to-t text-transparent from-[#3CA2E2] to-[#052EAA]"
@@ -49,16 +48,19 @@ const About = () => {
             About Abtik
           </h2>
           <p className="paragraph"
-          style={{fontFamily:"Montserrat Alternatess"}}
+            style={{ fontFamily: "Montserrat Alternatess" }}
           >
-            Abtik Group of Companies is a trusted consultancy dedicated to
-            empowering startups, MSMEs, and professionals across India. We
-            provide end-to-end business support—from registrations, government
-            funding assistance, and licensing to certifications, tax compliance,
-            and documentation. With a strong focus on reliability, speed, and
-            expertise, Abtik simplifies complex processes and helps businesses
-            launch, grow, and succeed—efficiently and confidently. Your
-            business, our responsibility.
+            In Abtik Services is a start-up dedicated consultation dedicated to accelerate the development of micro, small and medium enterprises across India. With the vision of making government schemes and funding accessible to every entrepreneur, we have become a reliable one-stop partner for business funding, branding and legal needs.
+          </p>
+           <p className="paragraph"
+            style={{ fontFamily: "Montserrat Alternatess" }}
+          >
+           From government grants and MSME loans to providing strategic aid in working capital finance, digital attendance, legal compliance and IP protection - we simplify the journey of business building. Our team of experienced experts has already assisted more than 50,000 client PAN-India, including 6,500+ recognized startups to convert their ambitions into reality.
+           </p>
+           <p className="paragraph"
+            style={{ fontFamily: "Montserrat Alternatess" }}
+          >
+          At Abtik, we don’t just consult — we collaborate. Our transparent and personalized approach ensures that every business gets the right support at the right stage — from idea to expansion.
           </p>
           <div className="text-center md:text-left">
             <button className="custom-btn">Explore</button>
@@ -68,45 +70,42 @@ const About = () => {
         {/* Images Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* First Image - Top Row */}
-          <div 
-            className={`transition-all duration-800 ease-out ${
-              visibleElements.topRowImages 
-                ? 'opacity-100 translate-y-0' 
+          <div
+            className={`transition-all duration-800 ease-out ${visibleElements.topRowImages
+                ? 'opacity-100 translate-y-0'
                 : 'opacity-0 translate-y-12'
-            }`}
+              }`}
           >
-            <img 
-              src={Image1} 
+            <img
+              src={Image1}
               className="rounded-4xl"
               alt="Team working"
             />
           </div>
 
           {/* Second Image - Top Row */}
-          <div 
-            className={`transition-all duration-800 ease-out ${
-              visibleElements.topRowImages 
-                ? 'opacity-100 translate-y-0' 
+          <div
+            className={`transition-all duration-800 ease-out ${visibleElements.topRowImages
+                ? 'opacity-100 translate-y-0'
                 : 'opacity-0 translate-y-12'
-            }`}
+              }`}
           >
-            <img 
-              src={Image1} 
+            <img
+              src={Image1}
               className="rounded-4xl"
               alt="Team collaboration"
             />
           </div>
 
           {/* Third Image - Bottom Row (Full Width) */}
-          <div 
-            className={`md:col-span-2 transition-all duration-800 ease-out ${
-              visibleElements.bottomImage 
-                ? 'opacity-100 translate-y-0' 
+          <div
+            className={`md:col-span-2 transition-all duration-800 ease-out ${visibleElements.bottomImage
+                ? 'opacity-100 translate-y-0'
                 : 'opacity-0 translate-y-12'
-            }`}
+              }`}
           >
-            <img 
-              src={Image1} 
+            <img
+              src={Image1}
               className="rounded-4xl max-h-48 w-full"
               alt="Professional workspace"
             />

@@ -1,54 +1,57 @@
 import { useNavigate } from "react-router-dom";
-import Image1 from "../assets/OurService/Img1.svg";
+import Image1 from "../assets/OurService/grant.jpeg";
+import Image2 from "../assets/OurService/starup.jpg"
+import Image3 from "../assets/OurService/msme.jpeg"
+import Image5 from "../assets/OurService/trademark.jpg"
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect, useState, memo } from "react";
 
 const services = [
   {
-    title: "Title1",
-    description: "description",
+    title: "Grants",
+    description: "We help you find and apply for the right government grants, so that your business gets the financial assistance he deserves - without stress.on",
     img: Image1,
     path: "/",
   },
   {
-    title: "Title1",
-    description: "description",
+    title: "StartStartup India Certificate",
+    description: "Get recognized as an official startup and enjoy tax profit, funding access and reliability under the Start-up India Mission.",
+    img: Image2,
+    path: "/",
+  },
+  {
+    title: "MSME certificate",
+    description: "Register your business as MSME and unlock a wide range of subsidy, priority lending and government scheme benefits.",
+    img: Image3,
+    path: "/",
+  },
+  {
+    title: "Seed fund",
+    description: "We guide you step-by-step to apply for reliable government seed funding — so your startup gets the right start with the right support.",
     img: Image1,
     path: "/",
   },
   {
-    title: "Title1",
-    description: "description",
+    title: "trademark registration",
+    description: "Protect your brand name, logo, or tagline with proper trademark safety so that your identity is really yours.",
+    img: Image5,
+    path: "/",
+  },
+  {
+    title: "ISO certificate",
+    description: "Show the world that you mean quality. We help you get ISO certification for compliance with trusts and global standards.",
     img: Image1,
     path: "/",
   },
   {
-    title: "Title1",
-    description: "description",
+    title: "ZED Certificate",
+    description: "Achieve Zero Defect Zero Effect Certification to align your business with high-quality standards and eco-friendly practices recognized by the government.",
     img: Image1,
     path: "/",
   },
   {
-    title: "Title1",
-    description: "description",
-    img: Image1,
-    path: "/",
-  },
-  {
-    title: "Title1",
-    description: "description",
-    img: Image1,
-    path: "/",
-  },
-  {
-    title: "Title1",
-    description: "description",
-    img: Image1,
-    path: "/",
-  },
-  {
-    title: "Title1",
-    description: "description",
+    title: "PMEGP Loan Scheme",
+    description: "Launch your business with up to ₹25 lakh support through the PMEGP scheme. We simplify the process of getting government loans and subsidies.",
     img: Image1,
     path: "/",
   },

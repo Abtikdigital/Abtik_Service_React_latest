@@ -9,24 +9,24 @@ const FaqSection = () => {
 
   const faq = [
     {
-      question: "1. What is Abtik?",
+      question: "1. Who is Abtik Services?",
       answer:
-        "Abtik is a business support firm that helps startups and MSMEs with registration, funding, licensing, and certifications—everything needed to grow.",
+        "Abtik Services is a Start-up India-recognized consultancy helping MSMEs and startups grow with expert support in funding, branding, legal compliance, and government schemes — all under one roof.",
     },
     {
-      question: "2. Who is Abtik for?",
+      question: "2. What makes Abtik different from others?",
       answer:
-        "Entrepreneurs, startups, MSMEs, professionals, and anyone looking to start or scale a business.",
+        "Abtik offers everything a business needs — funding help, legal guidance, digital services — all in one place. We support you at every step, not just with advice but with real action.",
     },
     {
-      question: "3. What makes Abtik different?",
+      question: "3. How has Abtik helped businesses so far?",
       answer:
-        "Expert guidance, quick support, and complete business solutions—all under one roof.",
+        "We’ve successfully helped over 6,500 startups get recognized under the Start-up India scheme and guided thousands of MSMEs in accessing funding, compliance, and digital growth opportunities.",
     },
     {
-      question: "4. Why choose Abtik?",
+      question: "4. Is Abtik only for new businesses?",
       answer:
-        "Because we simplify the complex—offering expert guidance and complete business solutions in one place.",
+        "Not at all! Whether you’re just starting out or scaling up, Abtik offers customized solutions for every stage of business — from idea validation to expansion and beyond.",
     },
   ];
 
