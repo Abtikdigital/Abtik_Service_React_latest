@@ -10,15 +10,13 @@ import { X, User, Mail, Phone, MessageSquare, Building } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { memo } from "react";
 
-// Define FormData interface
+// Define FormData interface - updated to match API
 interface FormData {
-  clientName: string;
+  name: string;
   email: string;
   phone: string;
   message: string;
-  service: string;
-  companyType: string;
-  companyName: string;
+  companyname: string;
 }
 
 // Define Redux state type
@@ -31,23 +29,20 @@ interface MainlayoutProps {
   children: React.ReactNode;
 }
 
-// --- Animation Variants for Framer Motion (Faster) ---
-
-// 1. Backdrop Animation (the dark overlay)
+// --- Animation Variants for Framer Motion ---
 const backdropVariants = {
   hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { duration: 0.2 } }, // Faster duration
+  visible: { opacity: 1, transition: { duration: 0.2 } },
 };
 
-// 2. Modal Animation (the main dialog box)
-const modalVariants :any= {
+const modalVariants: any = {
   hidden: { opacity: 0, y: -30, scale: 0.98 },
   visible: {
     opacity: 1,
     y: 0,
     scale: 1,
     transition: {
-      duration: 0.2, // Faster duration
+      duration: 0.2,
       ease: "easeOut",
     },
   },
@@ -56,12 +51,11 @@ const modalVariants :any= {
     y: 30,
     scale: 0.98,
     transition: {
-      duration: 0.15, // Faster duration
+      duration: 0.15,
       ease: "easeIn",
     },
   },
 };
-
 
 const Mainlayout = ({ children }: MainlayoutProps) => {
   const isOpen = useSelector((state: RootState) => state.isContactFormOpen);
@@ -76,25 +70,38 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
 
   const onSubmit = async (data: FormData) => {
     try {
-      const res: any = await axios.post("/api/getInTouchApi", data);
+      // Map form data to match API expectations
+      const apiData = {
+        name: data.name,
+        companyname: data.companyname,
+        email: data.email,
+        phone: data.phone,
+        message: data.message,
+      };
+
+      const res = await axios.post("/api/getInTouchApi", apiData);
+      
       if (res.status === 201) {
         Swal.fire({
           icon: "success",
-          title: "Thank You For Contacting",
-          text: res.data.message || "Your response has been submitted",
+          title: "Thank You For Contacting Us!",
+          text: res.data.message || "Your inquiry has been submitted successfully",
+          confirmButtonColor: "#052EAA",
         });
       } else {
-        Swal.fire({
-          icon: "error",
-          title: "Error",
-          text: "Error while inserting data",
-        });
+        throw new Error("Unexpected response status");
       }
     } catch (error: any) {
+      const errorMessage = 
+        error.response?.data?.message || 
+        error.response?.data?.error ||
+        "Error while submitting your request. Please try again.";
+        
       Swal.fire({
         icon: "error",
-        title: "Error",
-        text: error.response?.data?.message || "Error while inserting data",
+        title: "Submission Failed",
+        text: errorMessage,
+        confirmButtonColor: "#052EAA",
       });
     } finally {
       reset();
@@ -103,7 +110,7 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
   };
 
   const closeModal = () => {
-    dispatch({ type: "close" }); // Adjust based on your Redux action
+    dispatch({ type: "close" });
   };
 
   return (
@@ -166,10 +173,10 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
                       onSubmit={handleSubmit(onSubmit)}
                       className="flex flex-col gap-5"
                     >
-                      {/* Client Name */}
+                      {/* Full Name - maps to 'name' in API */}
                       <div className="flex flex-col gap-1">
                         <label
-                          htmlFor="clientName"
+                          htmlFor="name"
                           className="text-sm font-medium text-gray-700"
                         >
                           Full Name <span className="text-red-500">*</span>
@@ -180,34 +187,34 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
                             size={18}
                           />
                           <input
-                            {...register("clientName", {
+                            {...register("name", {
                               required: "* Name is required",
                               minLength: {
                                 value: 2,
                                 message: "Name must be at least 2 characters",
                               },
                             })}
-                            id="clientName"
+                            id="name"
                             type="text"
                             placeholder="Enter your full name"
                             className={`w-full pl-10 pr-4 py-2 border ${
-                              errors.clientName
+                              errors.name
                                 ? "border-red-500"
                                 : "border-gray-300"
                             } rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[#052EAA] focus:border-transparent h-[38px] transition-all duration-200`}
                           />
                         </div>
-                        {errors.clientName && (
+                        {errors.name && (
                           <p className="text-red-500 text-xs mt-1">
-                            {errors.clientName.message}
+                            {errors.name.message}
                           </p>
                         )}
                       </div>
 
-                      {/* Company Name */}
+                      {/* Company Name - maps to 'companyname' in API */}
                       <div className="flex flex-col gap-1">
                         <label
-                          htmlFor="companyName"
+                          htmlFor="companyname"
                           className="text-sm font-medium text-gray-700"
                         >
                           Company Name <span className="text-red-500">*</span>
@@ -218,7 +225,7 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
                             size={18}
                           />
                           <input
-                            {...register("companyName", {
+                            {...register("companyname", {
                               required: "* Company name is required",
                               minLength: {
                                 value: 2,
@@ -226,19 +233,19 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
                                   "Company name must be at least 2 characters",
                               },
                             })}
-                            id="companyName"
+                            id="companyname"
                             type="text"
                             placeholder="Enter your company name"
                             className={`w-full pl-10 pr-4 py-2 border ${
-                              errors.companyName
+                              errors.companyname
                                 ? "border-red-500"
                                 : "border-gray-300"
                             } rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[#052EAA] focus:border-transparent h-[38px] transition-all duration-200`}
                           />
                         </div>
-                        {errors.companyName && (
+                        {errors.companyname && (
                           <p className="text-red-500 text-xs mt-1">
-                            {errors.companyName.message}
+                            {errors.companyname.message}
                           </p>
                         )}
                       </div>
@@ -352,7 +359,7 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
                               errors.message
                                 ? "border-red-500"
                                 : "border-gray-300"
-                            } rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[#052EAA] focus:border-transparent min-h-[100px] transition-all duration-200`}
+                            } rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[#052EAA] focus:border-transparent min-h-[100px] transition-all duration-200 resize-vertical`}
                           />
                         </div>
                         {errors.message && (
