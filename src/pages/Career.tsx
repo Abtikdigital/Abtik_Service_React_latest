@@ -231,6 +231,8 @@ const Career = () => {
         allowOutsideClick: true,
         allowEscapeKey: true,
       });
+    }finally{
+      closeModal()
     }
   };
 
