@@ -1,12 +1,12 @@
 import Mainlayout from "../section/Mainlayout";
 import BgImage from "../assets/StartUpIndia/bgImg.svg";
 import Contact from "../section/Contact";
-import Image1 from "../assets/StartUpIndia/Group 1000007811.png";
+import Image1 from "../assets/Udaan/udaan.png";
 import {
     Mail,
     MapPin,
     Phone,
-  
+
     Headset,
     ArrowUpRight,
     ArrowRight,
@@ -15,7 +15,7 @@ import {
     DollarSign,
     TrendingUp,
     Users,
- 
+
     Shield,
     Globe,
     Award,
@@ -198,13 +198,13 @@ const UdyamRegistration = () => {
     const isInViewContact = useInView(refContact, { once: true, amount: 0.1 });
 
     return (<>
-          <HeadProvider>
-        <Title>{seoData?.udaanService?.title}</Title>
-        <Meta name="description" content={seoData?.udaanService?.description} />
-        <Meta name="keyword" content={seoData?.udaanService?.keyword} />
-        <Meta name="robots" content={seoData?.udaanService?.robots} />
-      </HeadProvider>
-    
+        <HeadProvider>
+            <Title>{seoData?.udaanService?.title}</Title>
+            <Meta name="description" content={seoData?.udaanService?.description} />
+            <Meta name="keyword" content={seoData?.udaanService?.keyword} />
+            <Meta name="robots" content={seoData?.udaanService?.robots} />
+        </HeadProvider>
+
         <Mainlayout>
             {/* Hero Section */}
             <section
@@ -248,7 +248,7 @@ const UdyamRegistration = () => {
                          text-white lg:text-white
                          paragraph !text-white
                          max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
-                         style={{fontFamily:"Montserrat Alternates"}}
+                        style={{ fontFamily: "Montserrat Alternates" }}
                     >
                         Get your official MSME registration through Udyam portal completely free.
                         Access government schemes, subsidies, credit facilities, and unlock
@@ -348,13 +348,13 @@ const UdyamRegistration = () => {
                     initial={{ y: 50, opacity: 0 }}
                     animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
                     transition={{ duration: 0.5, delay: getTouchDelay(1) }}
-                    className="flex-grow bg-gradient-to-r from-[#3CA2E2] to-[#052EAA] rounded-2xl flex items-center justify-center h-full"
+                    className="flex-grow   rounded-2xl flex items-center justify-center h-full"
                 >
                     <img
-                    loading="lazy"
+                        loading="lazy"
                         src={Image1}
                         alt="Udyam Registration illustration"
-                        className="max-h-80 w-full rounded-lg object-contain p-4"
+                        className="max-h-80   bg-gradient-to-br from-[#052EAA]  to-[#6FA8FF] w-full rounded-lg object-contain p-4"
                     />
                 </motion.div>
             </motion.section>
@@ -375,12 +375,12 @@ const UdyamRegistration = () => {
                         What Is Udyam Registration?
                     </h2>
                     <p className="paragraph !text-white mx-auto text-left"
-                    style={{fontFamily:"Montserrat Alternates"}}
+                        style={{ fontFamily: "Montserrat Alternates" }}
                     >
-                        Udyam Registration is the new online registration process for Micro, Small and Medium 
-                        Enterprises (MSMEs) launched by the Ministry of MSME, Government of India. It replaced 
-                        the earlier Udyog Aadhaar registration system and provides a unique Udyam Registration 
-                        Number (URN) to businesses. This free registration enables MSMEs to access various 
+                        Udyam Registration is the new online registration process for Micro, Small and Medium
+                        Enterprises (MSMEs) launched by the Ministry of MSME, Government of India. It replaced
+                        the earlier Udyog Aadhaar registration system and provides a unique Udyam Registration
+                        Number (URN) to businesses. This free registration enables MSMEs to access various
                         government schemes, subsidies, and benefits while ensuring compliance with statutory requirements.
                     </p>
                 </div>
@@ -552,9 +552,9 @@ const UdyamRegistration = () => {
                 </h2>
                 <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
                     <p className="text-sm md:text-base text-gray-600 text-center"
-                    style={{fontFamily:"Montserrat Alternates"}}
+                        style={{ fontFamily: "Montserrat Alternates" }}
                     >
-                        Udyam Registration opens doors to numerous government schemes, financial benefits, 
+                        Udyam Registration opens doors to numerous government schemes, financial benefits,
                         and business opportunities specifically designed to support and promote MSME growth.
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -769,7 +769,7 @@ const UdyamRegistration = () => {
                 animate={isInViewContact ? { y: 0, opacity: 1 } : {}}
                 transition={{ duration: 0.5 }}
             >
-                <Contact /> 
+                <Contact />
             </motion.section>
         </Mainlayout>
     </>

@@ -189,9 +189,9 @@ const BlogSection = () => {
             transition={{ duration: 0.5, delay: getDelay(index) }}
             className="space-y-3"
           >
-            <img src={blog?.img} alt={blog?.title} />
+            <img src={blog?.img} alt={blog?.title} className="rounded-lg cursor-pointer hover:scale-105 duration-300 transition-all" />
             <h2
-              className="text-xl text-[#3CA2E2] font-semibold"
+              className="text-xl text-[#3CA2E2] font-semibold line-clamp-2"
               style={{ fontFamily: "Montserrat Alternates" }}
             >
               {blog?.title}

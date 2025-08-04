@@ -1,7 +1,7 @@
 import Mainlayout from "../section/Mainlayout";
 import BgImage from "../assets/StartUpIndia/bgImg.svg";
 import Contact from "../section/Contact";
-import Image1 from "../assets/StartUpIndia/Group 1000007811.png";
+import Image1 from "../assets/CMEGP/Image1.jpeg";
 import {
     Mail,
     MapPin,
