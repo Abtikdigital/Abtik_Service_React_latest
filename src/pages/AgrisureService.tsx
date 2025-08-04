@@ -347,13 +347,13 @@ const AgriSURE = () => {
                     initial={{ y: 50, opacity: 0 }}
                     animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
                     transition={{ duration: 0.5, delay: getTouchDelay(1) }}
-                    className="flex-grow bg-gradient-to-r from-[#3CA2E2] to-[#052EAA] rounded-2xl flex items-center justify-center h-full"
+                    className="flex-grow  rounded-2xl flex items-center justify-center h-full"
                 >
                     <img
                     loading="lazy"
                         src={Image1}
                         alt="AgriSURE illustration"
-                        className="max-h-80 w-full rounded-lg object-contain p-4"
+                        className="max-h-80 w-full rounded-lg "
                     />
                 </motion.div>
             </motion.section>

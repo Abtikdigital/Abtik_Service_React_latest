@@ -1,7 +1,7 @@
 import Mainlayout from "../section/Mainlayout";
 import BgImage from "../assets/StartUpIndia/bgImg.svg";
 import Contact from "../section/Contact";
-import Image1 from "../assets/Udaan/udaan.png";
+import Image1 from "../assets/Udaan/Image1.png";
 import {
     Mail,
     MapPin,
@@ -354,7 +354,7 @@ const UdyamRegistration = () => {
                         loading="lazy"
                         src={Image1}
                         alt="Udyam Registration illustration"
-                        className="max-h-80   bg-gradient-to-br from-[#052EAA]  to-[#6FA8FF] w-full rounded-lg object-contain p-4"
+                        className="max-h-80   bg-gradient-to-br  w-full rounded-xl "
                     />
                 </motion.div>
             </motion.section>

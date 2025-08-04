@@ -1,7 +1,7 @@
 import Mainlayout from "../section/Mainlayout";
 import BgImage from "../assets/StartUpIndia/bgImg.svg";
 import Contact from "../section/Contact";
-import Image1 from "../assets/StandupIndia/Image1.jpeg";
+import Image1 from "../assets/StandupIndia/Image1.jpg";
 import {
     Mail,
     MapPin,
@@ -354,7 +354,7 @@ const StandUpIndia = () => {
                         loading="lazy"
                         src={Image1}
                         alt="Stand-Up India illustration"
-                        className="max-h-80  w-full  object-contain p-4"
+                        className="max-h-80  w-full  "
                     />
                 </motion.div>
             </motion.section>

@@ -1,7 +1,7 @@
 import Mainlayout from "../section/Mainlayout";
 import BgImage from "../assets/Hero/bgImg.svg"; // Assuming a similar background image for Angel Investor
 import Contact from "../section/Contact";
-import Image1 from "../assets/Career/male-female-graphic-designers-using-laptop.jpg"; // Assuming a similar image for Angel Investor
+import Image1 from "../assets/AngelInvestor/Image1.png"; // Assuming a similar image for Angel Investor
 import {
     Mail,
     MapPin,
@@ -344,13 +344,13 @@ const AngelInvestor = () => {
                         initial={{ y: 50, opacity: 0 }}
                         animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
                         transition={{ duration: 0.5, delay: getTouchDelay(1) }}
-                        className="flex-grow bg-gradient-to-r from-[#3CA2E2] to-[#052EAA] rounded-2xl flex items-center justify-center h-full"
+                        className="flex-grow  rounded-2xl flex items-center justify-center h-full"
                     >
                         <img
                             loading="lazy"
                             src={Image1}
                             alt="Angel Investor illustration"
-                            className="max-h-80 w-full rounded-lg object-contain p-4"
+                            className="max-h-80 w-full rounded-lg "
                         />
                     </motion.div>
                 </motion.section>
