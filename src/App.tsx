@@ -38,30 +38,38 @@ const TrademarkRegistrationAndFilling = lazy(
   () => import("./pages/TrademarkRegistrationAndFillingService")
 );
 const CopyRight = lazy(() => import("./pages/CopyRightService"));
-const PatentFiling = lazy(() => import("./pages/PatentFilingService"))
+const PatentFiling = lazy(() => import("./pages/PatentFilingService"));
 
-
-// Certificate 
-const StartupIndiaCertificate = lazy(() => import("./pages/StartupIndiaCertificate"));
-const MSMECertificate = lazy(() => import("./pages/MSMECertificate"))
-const MakeInIndiaCertificate = lazy(() => import("./pages/MakeInIndiaCertificate"))
-const ZEDCertificate = lazy(() => import("./pages/ZedCertificate"))
-const ISOCertificate = lazy(() => import("./pages/IsoCertificate"))
-const TradeLicenseCertificate = lazy(() => import("./pages/TradeLicence"))
+// Certificate
+const StartupIndiaCertificate = lazy(
+  () => import("./pages/StartupIndiaCertificate")
+);
+const MSMECertificate = lazy(() => import("./pages/MSMECertificate"));
+const MakeInIndiaCertificate = lazy(
+  () => import("./pages/MakeInIndiaCertificate")
+);
+const ZEDCertificate = lazy(() => import("./pages/ZedCertificate"));
+const ISOCertificate = lazy(() => import("./pages/IsoCertificate"));
+const TradeLicenseCertificate = lazy(() => import("./pages/TradeLicence"));
 
 // Tax Compliance
-const GSTRegistrationFiling = lazy(() => import("./pages/GstRegistration_Filling"))
-const TdsCompliance = lazy(() => import('./pages/TdsCompliance'))
-const AnnualCompliance = lazy(() => import("./pages/AnnualComplaince"))
+const GSTRegistrationFiling = lazy(
+  () => import("./pages/GstRegistration_Filling")
+);
+const TdsCompliance = lazy(() => import("./pages/TdsCompliance"));
+const AnnualCompliance = lazy(() => import("./pages/AnnualComplaince"));
 
 // Businness Registration
-const PrivateLimited = lazy(() => import("./pages/PrivateLimitedService"))
-const Llp = lazy(() => import("./pages/LlpService"))
-const SoleProprietor = lazy(() => import("./pages/SoleProprietorship"))
-const Section8Company = lazy(() => import("./pages/Section8Company"))
-const Partnership = lazy(() => import("./pages/PartnershipFirm"))
-const ProducerCompany = lazy(() => import("./pages/ProducerCompany"))
+const PrivateLimited = lazy(() => import("./pages/PrivateLimitedService"));
+const Llp = lazy(() => import("./pages/LlpService"));
+const SoleProprietor = lazy(() => import("./pages/SoleProprietorship"));
+const Section8Company = lazy(() => import("./pages/Section8Company"));
+const Partnership = lazy(() => import("./pages/PartnershipFirm"));
+const ProducerCompany = lazy(() => import("./pages/ProducerCompany"));
 
+// Legal
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
+const RefundPolicy=lazy(()=>import("./pages/RefundPolicy"))
 function App() {
   return (
     <BrowserRouter>
@@ -74,7 +82,6 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/expandedBlog/:slug" element={<ExpandedBlog />} />
-
 
           <Route path="/services/funding/seed-fund" element={<SeedFund />} />
           <Route path="/services/funding/subsidy/pmegp" element={<PMEGP />} />
@@ -161,7 +168,7 @@ function App() {
             path="/services/certificate/zed"
             element={<ZEDCertificate />}
           />
-         
+
           <Route
             path="/services/certificate/iso"
             element={<ISOCertificate />}
@@ -170,7 +177,6 @@ function App() {
             path="/services/certificate/trade-licence"
             element={<TradeLicenseCertificate />}
           />
-
 
           <Route
             path="/services/tax/gst-filing"
@@ -186,32 +192,35 @@ function App() {
             element={<AnnualCompliance />}
           />
 
-             <Route
+          <Route
             path="/services/registration/private-limited"
-            element={<PrivateLimited/>}
+            element={<PrivateLimited />}
           />
-             <Route
-            path="/services/registration/llp"
-            element={<Llp />}
-          />
-             <Route
+          <Route path="/services/registration/llp" element={<Llp />} />
+          <Route
             path="/services/registration/proprietorship"
             element={<SoleProprietor />}
           />
-             <Route
+          <Route
             path="/services/registration/partnership"
             element={<Partnership />}
           />
-             <Route
+          <Route
             path="/services/registration/section8company"
             element={<Section8Company />}
           />
-             <Route
+          <Route
             path="/services/registration/producer"
-            element={<ProducerCompany/>}
+            element={<ProducerCompany />}
           />
-
-
+          <Route
+            path="/legal/privacy-policy"
+            element={<PrivacyPolicy />}
+          />
+            <Route
+            path="/legal/refund-policy"
+            element={<RefundPolicy />}
+          />
 
           <Route path="*" element={<PageNotFound />} />
         </Routes>

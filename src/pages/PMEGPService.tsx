@@ -353,6 +353,7 @@ const PMEGP = () => {
                     className="flex-grow bg-gradient-to-r from-[#3CA2E2] to-[#052EAA] rounded-2xl flex items-center justify-center h-full"
                 >
                     <img
+                    loading="lazy"
                         src={Image1}
                         alt="PMEGP illustration"
                         className="max-h-80 w-full rounded-lg object-contain p-4"

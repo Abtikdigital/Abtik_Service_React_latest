@@ -242,7 +242,7 @@ const About = () => {
                 officiis dolore aliquam!
               </p>
               <div>
-                <img src={Image1} className="rounded-4xl" />
+                <img loading="lazy" src={Image1} className="rounded-4xl" />
               </div>
             </motion.div>
           ))}
@@ -294,13 +294,13 @@ const About = () => {
               ) : (
                 <>
                   <div>
-                    <img src={Image1} className="rounded-4xl" />
+                    <img loading="lazy" src={Image1} className="rounded-4xl" />
                   </div>
                   <div>
-                    <img src={Image1} className="rounded-4xl" />
+                    <img loading="lazy" src={Image1} className="rounded-4xl" />
                   </div>
                   <div className="md:col-span-2">
-                    <img src={Image1} className="rounded-4xl max-h-48 w-full" />
+                    <img loading="lazy" src={Image1} className="rounded-4xl max-h-48 w-full" />
                   </div>
                 </>
               )}

@@ -20,14 +20,14 @@
     "canonical": "123",
     "robots": ""
   },
-    "copyrightService": {
+  "copyrightService": {
     "title": "123",
     "description": "123",
     "keyword": "123",
     "canonical": "123",
     "robots": ""
   },
-    "careerPage": {
+  "careerPage": {
     "title": "123",
     "description": "123",
     "keyword": "123",
@@ -292,5 +292,22 @@
     "keyword": "123",
     "canonical": "123",
     "robots": ""
+  },
+  "privacyPolicy":{
+       "title": "",
+    "description": "",
+    "keyword": "",
+    "canonical": "",
+    "robots": ""
+
+  }
+  ,
+  "refundPolicy":{
+       "title": "",
+    "description": "",
+    "keyword": "",
+    "canonical": "",
+    "robots": ""
+
   }
 }

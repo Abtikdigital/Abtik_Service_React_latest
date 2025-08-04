@@ -249,6 +249,7 @@ const ExpandedBlog = () => {
             {/* Blog Image with Overlay Info */}
             <div className="relative rounded-xl md:rounded-2xl overflow-hidden shadow-lg group">
               <img
+              loading="lazy"
                 src={selectedBlogData.img}
                 className="w-full h-48 md:h-64 lg:h-80 object-cover group-hover:scale-105 transition-transform duration-500"
                 alt={selectedBlogData.title}
@@ -378,6 +379,7 @@ const ExpandedBlog = () => {
                       <div className="grid grid-cols-4 gap-2 md:gap-3">
                         <div className="overflow-hidden rounded-md md:rounded-lg">
                           <img
+                          loading="lazy"
                             src={blog.img}
                             alt={blog.title}
                             className="w-full h-10 md:h-12 object-cover group-hover:scale-110 transition-transform duration-300"

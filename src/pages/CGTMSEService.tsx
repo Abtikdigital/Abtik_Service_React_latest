@@ -6,7 +6,7 @@ import {
     Mail,
     MapPin,
     Phone,
-  
+
     Headset,
     ArrowUpRight,
     ArrowRight,
@@ -15,10 +15,10 @@ import {
     DollarSign,
     TrendingUp,
     Users,
-  
+
     Shield,
     Banknote,
-   
+
     Umbrella,
 } from "lucide-react";
 import { memo, useState } from "react";
@@ -198,12 +198,12 @@ const CGTMSE = () => {
     const isInViewContact = useInView(refContact, { once: true, amount: 0.4 });
 
     return (<>
-          <HeadProvider>
-        <Title>{seoData?.cgtmseSerivce?.title}</Title>
-        <Meta name="description" content={seoData?.cgtmseSerivce?.description} />
-        <Meta name="keyword" content={seoData?.cgtmseSerivce?.keyword} />
-        <Meta name="robots" content={seoData?.cgtmseSerivce?.robots} />
-      </HeadProvider>
+        <HeadProvider>
+            <Title>{seoData?.cgtmseSerivce?.title}</Title>
+            <Meta name="description" content={seoData?.cgtmseSerivce?.description} />
+            <Meta name="keyword" content={seoData?.cgtmseSerivce?.keyword} />
+            <Meta name="robots" content={seoData?.cgtmseSerivce?.robots} />
+        </HeadProvider>
         <Mainlayout>
             {/* Hero Section */}
             <section
@@ -248,7 +248,7 @@ const CGTMSE = () => {
                          paragraph !text-white
                          max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
 
-                           style={{fontFamily:"Montserrat Alternates"}}
+                        style={{ fontFamily: "Montserrat Alternates" }}
                     >
                         Get collateral-free business loans up to ₹2 crore with CGTMSE guarantee coverage.
                         Eliminate the need for third-party guarantees and access credit easily
@@ -351,6 +351,7 @@ const CGTMSE = () => {
                     className="flex-grow bg-gradient-to-r from-[#3CA2E2] to-[#052EAA] rounded-2xl flex items-center justify-center h-full"
                 >
                     <img
+                        loading="lazy"
                         src={Image1}
                         alt="CGTMSE illustration"
                         className="max-h-80 w-full rounded-lg object-contain p-4"
@@ -374,7 +375,7 @@ const CGTMSE = () => {
                         What Is CGTMSE Scheme?
                     </h2>
                     <p className="paragraph !text-white mx-auto text-left"
-                      style={{fontFamily:"Montserrat Alternates"}}
+                        style={{ fontFamily: "Montserrat Alternates" }}
                     >
                         Credit Guarantee Fund Trust for Micro and Small Enterprises (CGTMSE) is a unique scheme
                         launched by the Government of India to provide collateral-free credit guarantee to micro
@@ -507,7 +508,7 @@ const CGTMSE = () => {
                 </h2>
                 <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
                     <p className="text-sm md:text-base text-gray-600 text-center"
-                      style={{fontFamily:"Montserrat Alternates"}}
+                        style={{ fontFamily: "Montserrat Alternates" }}
                     >
                         CGTMSE provides comprehensive credit guarantee support, enabling micro and small enterprises
                         to access formal banking credit without traditional collateral security requirements.

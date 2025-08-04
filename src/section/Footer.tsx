@@ -21,7 +21,7 @@ const Footer = () => {
             <img src={Logo} className="h-14" />
           </div>
           <h2 className="paragraph">
-            ©2025abtikservices - All rights reserved.
+            © 2022 abtikservices - All rights reserved.
           </h2>
           <div className="flex gap-2">
             <button className="hover:from-[#2178B5] hover:bg-gradient-to-tl hover:to-[#021E6B] cursor-pointer bg-gradient-to-tr from-[#3CA2E2] to-[#052EAA] p-1.5 rounded-lg ">
@@ -145,13 +145,13 @@ const Footer = () => {
             <h2 className="heading">Legal</h2>
             <ul className="flex flex-col space-y-2">
               <Link
-                to={"/"}
+                to={"/legal/privacy-policy"}
                 className="text-sm font-semibold text-[#4D4D4D] hover:underline hover:text-gray-950 cursor-pointer duration-300"
               >
                 Privacy Policy
               </Link>
               <Link
-                to={"/"}
+                to={"/legal/refund-policy"}
                 className="text-sm font-semibold text-[#4D4D4D] hover:underline hover:text-gray-950 cursor-pointer duration-300"
               >
                 Cancellation & Refund Policy

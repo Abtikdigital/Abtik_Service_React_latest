@@ -295,6 +295,7 @@ const Career = () => {
               ) : (
                 <div className="overflow-hidden rounded-2xl shadow-lg">
                   <img
+                    loading="lazy"
                     src={Image1}
                     className="w-full h-full object-cover"
                     alt="Career opportunities"
@@ -428,6 +429,7 @@ const Career = () => {
                 {/* Header with Logo */}
                 <div className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-4 flex items-center justify-center w-full rounded-t-lg flex-shrink-0">
                   <img
+                    loading="lazy"
                     src={Logo}
                     alt="Company Logo"
                     className="h-12 sm:h-14 w-auto"
@@ -447,6 +449,7 @@ const Career = () => {
                   {/* Left Side: Image */}
                   <div className="md:w-1/2 w-full p-4 bg-gray-50 flex items-center justify-center">
                     <img
+                      loading="lazy"
                       src={CareerImage}
                       alt="Career Visual"
                       className="object-cover rounded-xl w-full h-48 md:h-full max-h-[350px] md:max-h-[350px] md:max-w-[350px]"
