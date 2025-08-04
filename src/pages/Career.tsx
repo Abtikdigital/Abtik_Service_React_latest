@@ -16,21 +16,26 @@ import {
   File,
   Briefcase,
   Calendar,
-  Building,
+  
   DollarSign,
 } from "lucide-react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 import { HeadProvider, Meta, Title } from "react-head";
 import seoData from "../data/seoData.json";
+import axios from "axios";
+import Swal from "sweetalert2";
+
 const Career = () => {
   const dispatch = useDispatch();
   const handleOpenDialog = () => {
     dispatch({ type: "open" });
   };
-  const [isOpen, setIsOpen] = useState<any>(false);
+  
+  // Only essential states
+  const [isOpen, setIsOpen] = useState(false);
   const [selectedJob, setSelectedJob] = useState<any>(null);
 
   const jobOpenings = [
@@ -69,18 +74,34 @@ const Career = () => {
     },
   ];
 
-  // Form setup
+  // Form setup with all configurations
   const {
     register,
     handleSubmit,
     reset,
     formState: { errors, isSubmitting },
     watch,
-  } = useForm<any>();
+    setError,
+    clearErrors,
+  } = useForm({
+    defaultValues: {
+      jobTitle: "",
+      fullName: "",
+      email: "",
+      contactNumber: "",
+      experience: "",
+      currentCtc: "",
+      expectedCtc: "",
+      noticePeriod: "",
+      resume: null,
+    },
+    mode: "onChange",
+  });
 
-  const file = watch("resume");
+  // Watch resume file for display
+  const watchedResume :any= watch("resume");
 
-  const formVariants: any = {
+  const formVariants:any = {
     hidden: { opacity: 0, y: 80 },
     visible: {
       opacity: 1,
@@ -90,19 +111,19 @@ const Career = () => {
     exit: { opacity: 0, y: 80, transition: { duration: 0.1 } },
   };
 
-  const handleApplyNow = (job: any) => {
+  const handleApplyNow = (job:any) => {
     setSelectedJob(job);
     setIsOpen(true);
+    
+    // Reset form and set job-specific values
     reset({
       jobTitle: job.title,
-      position: job.position,
-      location: job.location,
       fullName: "",
       email: "",
-      phone: "",
+      contactNumber: "",
       experience: "",
-      currentCTC: "",
-      expectedCTC: "",
+      currentCtc: "",
+      expectedCtc: "",
       noticePeriod: "",
       resume: null,
     });
@@ -112,74 +133,118 @@ const Career = () => {
     setIsOpen(false);
     setSelectedJob(null);
     reset();
+    clearErrors();
   };
 
-  const onSubmit = async (data: any) => {
+  const onSubmit = async (data:any) => {
     try {
-      // Handle form submission here
-      console.log("Application Data:", data);
+      clearErrors();
 
-      // Create FormData for file upload
+      // Validate file
+      if (!data.resume || !data.resume[0]) {
+        setError("resume", { 
+          type: "required", 
+          message: "Resume is required" 
+        });
+        return;
+      }
+
+      const file = data.resume[0];
+      
+      // File size validation (3MB)
+      if (file.size > 3 * 1024 * 1024) {
+        setError("resume", { 
+          type: "fileSize", 
+          message: "File size must be less than 3MB" 
+        });
+        return;
+      }
+
+      // File type validation
+      const allowedTypes = [
+        "application/pdf",
+        "application/msword", 
+        "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+      ];
+      
+      if (!allowedTypes.includes(file.type)) {
+        setError("resume", { 
+          type: "fileType", 
+          message: "Only PDF, DOC, DOCX files are allowed" 
+        });
+        return;
+      }
+
+      // Create FormData
       const formData = new FormData();
-      Object.keys(data).forEach((key) => {
-        if (key === "resume" && data[key]?.[0]) {
-          formData.append(key, data[key][0]);
-        } else {
-          formData.append(key, data[key]);
-        }
+      
+      // Append form fields
+      formData.append("jobTitle", data.jobTitle);
+      formData.append("fullName", data.fullName);
+      formData.append("email", data.email);  
+      formData.append("contactNumber", data.contactNumber);
+      formData.append("experience", data.experience);
+      formData.append("expectedCtc", data.expectedCtc);
+      formData.append("currentCtc", data.currentCtc);
+      formData.append("noticePeriod", data.noticePeriod);
+      formData.append("resume", file);
+
+      // Submit to API
+      const response = await axios.post("/api/career", formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+        timeout: 30000,
       });
 
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 2000));
+      // Handle success response
+      if (response.status === 201 && response.data.isSuccess) {
+        await Swal.fire({
+          icon: 'success',
+          title: 'Application Submitted!',
+          text: 'Thank you for applying! We will review your application and get back to you soon.',
+          confirmButtonText: 'Great!',
+          confirmButtonColor: '#052EAA',
+          allowOutsideClick: false,
+          allowEscapeKey: false,
+        });
+        closeModal();
+      } else {
+        throw new Error(response.data.message || "Error while submitting application");
+      }
 
-      alert(`Application submitted successfully for ${data.jobTitle}!`);
-      closeModal();
-    } catch (error) {
-      alert("Error submitting application. Please try again.");
+    } catch (error:any) {
+      console.error("Submission error:", error);
+      
+      const errorMessage = error.response?.data?.message || "Error while inserting data";
+
+      await Swal.fire({
+        icon: 'error',
+        title: 'Submission Failed',
+        text: errorMessage,
+        confirmButtonText: 'Try Again',
+        confirmButtonColor: '#dc2626',
+        allowOutsideClick: true,
+        allowEscapeKey: true,
+      });
     }
   };
 
-  // Hero
+  // Animation refs - using useInView hook efficiently
   const refHero = useRef(null);
   const isInViewHero = useInView(refHero, { once: true, amount: 0.4 });
 
-  // Career Opportunity Section
   const refCareerOpp = useRef(null);
   const isInViewCareerOpp = useInView(refCareerOpp, { once: true, amount: 0.4 });
-  const [careerOppCols, setCareerOppCols] = useState(1);
-  useEffect(() => {
-    const updateCols = () => {
-      setCareerOppCols(window.innerWidth >= 768 ? 2 : 1);
-    };
-    updateCols();
-    window.addEventListener("resize", updateCols);
-    return () => window.removeEventListener("resize", updateCols);
-  }, []);
-  const getCareerOppDelay = (index: number) => {
-    const row = Math.floor(index / careerOppCols);
-    return 0.5 + row * 0.5;
-  };
 
-  // Job Openings
   const refJobOpenings = useRef(null);
   const isInViewJobOpenings = useInView(refJobOpenings, { once: true, amount: 0.4 });
-  const [jobCols, setJobCols] = useState(1);
-  useEffect(() => {
-    const updateCols = () => {
-      setJobCols(window.innerWidth >= 768 ? 3 : 1);
-    };
-    updateCols();
-    window.addEventListener("resize", updateCols);
-    return () => window.removeEventListener("resize", updateCols);
-  }, []);
-  const getJobDelay = (index: number) => {
-    const row = Math.floor(index / jobCols);
-    return 0.5 + row * 0.5;
-  };
 
-  // Contact
   const refContact = useRef(null);
   const isInViewContact = useInView(refContact, { once: true, amount: 0.4 });
+
+  // Simplified delay calculation
+  const getDelay = (index:number, cols:number) => 0.5 + Math.floor(index / cols) * 0.2;
 
   return (
     <>
@@ -205,9 +270,8 @@ const Career = () => {
             backgroundRepeat: "no-repeat",
           }}
         >
-          {/* Overlay for better text readability on tablets */}
           <div className="absolute inset-0 bg-black/20 lg:bg-transparent"></div>
-
+          
           <motion.div
             initial={{ y: 100, opacity: 0 }}
             animate={isInViewHero ? { y: 0, opacity: 1 } : {}}
@@ -270,7 +334,7 @@ const Career = () => {
               key={index}
               initial={{ y: 50, opacity: 0 }}
               animate={isInViewCareerOpp ? { y: 0, opacity: 1 } : {}}
-              transition={{ duration: 0.5, delay: getCareerOppDelay(index) }}
+              transition={{ duration: 0.5, delay: getDelay(index, 2) }}
               className={index === 0 ? "space-y-6" : "grid grid-cols-1 gap-6"}
             >
               {index === 0 ? (
@@ -321,14 +385,14 @@ const Career = () => {
             >
               Job Openings At Abtik
             </h2>
-
+            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 justify-center items-center">
               {jobOpenings?.map((job, index) => (
                 <motion.div
                   key={index}
                   initial={{ y: 50, opacity: 0 }}
                   animate={isInViewJobOpenings ? { y: 0, opacity: 1 } : {}}
-                  transition={{ duration: 0.5, delay: getJobDelay(index) }}
+                  transition={{ duration: 0.5, delay: getDelay(index, 3) }}
                   className="bg-white border-1 hover:border-gray-300 cursor-pointer border-gray-200 rounded-4xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 group"
                 >
                   {/* Job Header */}
@@ -475,28 +539,13 @@ const Career = () => {
                             disabled
                             className="w-full pl-3 pr-4 py-2 border border-gray-200 rounded-md bg-gray-100 text-gray-600 text-sm h-[38px]"
                           />
-                        </div>
-
-                        {/* Position (Read-only) */}
-                        <div className="flex flex-col gap-1">
-                          <label className="text-sm font-medium text-gray-700 flex items-center gap-1">
-                            <Building size={18} className="text-gray-400" />
-                            Position
-                          </label>
-                          <input
-                            type="text"
-                            value={selectedJob?.position || ""}
-                            disabled
-                            className="w-full pl-3 pr-4 py-2 border border-gray-200 rounded-md bg-gray-100 text-gray-600 text-sm h-[38px]"
-                          />
+                          {/* Hidden field for form data */}
+                          <input type="hidden" {...register("jobTitle")} />
                         </div>
 
                         {/* Full Name */}
                         <div className="flex flex-col gap-1">
-                          <label
-                            htmlFor="fullName"
-                            className="text-sm font-medium text-gray-700"
-                          >
+                          <label htmlFor="fullName" className="text-sm font-medium text-gray-700">
                             Full Name <span className="text-red-500">*</span>
                           </label>
                           <div className="relative">
@@ -511,6 +560,10 @@ const Career = () => {
                                   value: 2,
                                   message: "Name must be at least 2 characters",
                                 },
+                                pattern: {
+                                  value: /^[a-zA-Z\s]+$/,
+                                  message: "Name should contain only letters and spaces",
+                                },
                               })}
                               id="fullName"
                               type="text"
@@ -523,19 +576,15 @@ const Career = () => {
                           </div>
                           {errors.fullName && (
                             <p className="text-red-500 text-xs mt-1">
-                              {String(errors.fullName.message) || ""}
+                              {errors.fullName.message}
                             </p>
                           )}
                         </div>
 
                         {/* Email */}
                         <div className="flex flex-col gap-1">
-                          <label
-                            htmlFor="email"
-                            className="text-sm font-medium text-gray-700"
-                          >
-                            Email Address{" "}
-                            <span className="text-red-500">*</span>
+                          <label htmlFor="email" className="text-sm font-medium text-gray-700">
+                            Email Address <span className="text-red-500">*</span>
                           </label>
                           <div className="relative">
                             <Mail
@@ -546,8 +595,7 @@ const Career = () => {
                               {...register("email", {
                                 required: "Email is required",
                                 pattern: {
-                                  value:
-                                    /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                                  value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
                                   message: "Invalid email address",
                                 },
                               })}
@@ -562,19 +610,15 @@ const Career = () => {
                           </div>
                           {errors.email && (
                             <p className="text-red-500 text-xs mt-1">
-                              {String(errors.email.message) || ""}
+                              {errors.email.message}
                             </p>
                           )}
                         </div>
 
-                        {/* Phone */}
+                        {/* Contact Number */}
                         <div className="flex flex-col gap-1">
-                          <label
-                            htmlFor="phone"
-                            className="text-sm font-medium text-gray-700"
-                          >
-                            Contact Number{" "}
-                            <span className="text-red-500">*</span>
+                          <label htmlFor="contactNumber" className="text-sm font-medium text-gray-700">
+                            Contact Number <span className="text-red-500">*</span>
                           </label>
                           <div className="relative">
                             <Phone
@@ -582,38 +626,35 @@ const Career = () => {
                               size={18}
                             />
                             <input
-                              {...register("phone", {
-                                required: "Phone number is required",
+                              {...register("contactNumber", {
+                                required: "Contact number is required",
                                 pattern: {
                                   value: /^[0-9]{10,15}$/,
-                                  message: "Phone number must be 10-15 digits",
+                                  message: "Contact number must be 10-15 digits",
                                 },
                               })}
-                              id="phone"
+                              id="contactNumber"
                               type="tel"
-                              placeholder="Enter your phone number"
+                              placeholder="Enter your contact number"
                               onKeyPress={(e) => {
                                 if (!/[0-9]/.test(e.key)) e.preventDefault();
                               }}
-                              className={`w-full pl-10 pr-4 py-2 border ${errors.phone
+                              className={`w-full pl-10 pr-4 py-2 border ${errors.contactNumber
                                 ? "border-red-500"
                                 : "border-gray-300"
                                 } rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[#052EAA] focus:border-transparent h-[38px] transition-all duration-200`}
                             />
                           </div>
-                          {errors.phone && (
+                          {errors.contactNumber && (
                             <p className="text-red-500 text-xs mt-1">
-                              {String(errors.phone.message) || ""}
+                              {errors.contactNumber.message}
                             </p>
                           )}
                         </div>
 
                         {/* Experience */}
                         <div className="flex flex-col gap-1">
-                          <label
-                            htmlFor="experience"
-                            className="text-sm font-medium text-gray-700"
-                          >
+                          <label htmlFor="experience" className="text-sm font-medium text-gray-700">
                             Experience <span className="text-red-500">*</span>
                           </label>
                           <div className="relative">
@@ -641,19 +682,15 @@ const Career = () => {
                           </div>
                           {errors.experience && (
                             <p className="text-red-500 text-xs mt-1">
-                              {String(errors.experience.message) || ""}
+                              {errors.experience.message}
                             </p>
                           )}
                         </div>
 
                         {/* Current CTC */}
                         <div className="flex flex-col gap-1">
-                          <label
-                            htmlFor="currentCTC"
-                            className="text-sm font-medium text-gray-700"
-                          >
-                            Current CTC (₹){" "}
-                            <span className="text-red-500">*</span>
+                          <label htmlFor="currentCtc" className="text-sm font-medium text-gray-700">
+                            Current CTC (₹) <span className="text-red-500">*</span>
                           </label>
                           <div className="relative">
                             <DollarSign
@@ -661,37 +698,33 @@ const Career = () => {
                               size={18}
                             />
                             <input
-                              {...register("currentCTC", {
+                              {...register("currentCtc", {
                                 required: "Current CTC is required",
                                 min: {
                                   value: 0,
                                   message: "CTC must be positive",
                                 },
                               })}
-                              id="currentCTC"
+                              id="currentCtc"
                               type="number"
                               placeholder="Enter current CTC"
-                              className={`w-full pl-10 pr-4 py-2 border ${errors.currentCTC
+                              className={`w-full pl-10 pr-4 py-2 border ${errors.currentCtc
                                 ? "border-red-500"
                                 : "border-gray-300"
                                 } rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[#052EAA] focus:border-transparent h-[38px] transition-all duration-200`}
                             />
                           </div>
-                          {errors.currentCTC && (
+                          {errors.currentCtc && (
                             <p className="text-red-500 text-xs mt-1">
-                              {String(errors.currentCTC.message) || ""}
+                              {errors.currentCtc.message}
                             </p>
                           )}
                         </div>
 
                         {/* Expected CTC */}
                         <div className="flex flex-col gap-1">
-                          <label
-                            htmlFor="expectedCTC"
-                            className="text-sm font-medium text-gray-700"
-                          >
-                            Expected CTC (₹){" "}
-                            <span className="text-red-500">*</span>
+                          <label htmlFor="expectedCtc" className="text-sm font-medium text-gray-700">
+                            Expected CTC (₹) <span className="text-red-500">*</span>
                           </label>
                           <div className="relative">
                             <DollarSign
@@ -699,37 +732,33 @@ const Career = () => {
                               size={18}
                             />
                             <input
-                              {...register("expectedCTC", {
+                              {...register("expectedCtc", {
                                 required: "Expected CTC is required",
                                 min: {
                                   value: 0,
                                   message: "CTC must be positive",
                                 },
                               })}
-                              id="expectedCTC"
+                              id="expectedCtc"
                               type="number"
                               placeholder="Enter expected CTC"
-                              className={`w-full pl-10 pr-4 py-2 border ${errors.expectedCTC
+                              className={`w-full pl-10 pr-4 py-2 border ${errors.expectedCtc
                                 ? "border-red-500"
                                 : "border-gray-300"
                                 } rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[#052EAA] focus:border-transparent h-[38px] transition-all duration-200`}
                             />
                           </div>
-                          {errors.expectedCTC && (
+                          {errors.expectedCtc && (
                             <p className="text-red-500 text-xs mt-1">
-                              {String(errors.expectedCTC.message) || ""}
+                              {errors.expectedCtc.message}
                             </p>
                           )}
                         </div>
 
                         {/* Notice Period */}
                         <div className="flex flex-col gap-1">
-                          <label
-                            htmlFor="noticePeriod"
-                            className="text-sm font-medium text-gray-700"
-                          >
-                            Notice Period{" "}
-                            <span className="text-red-500">*</span>
+                          <label htmlFor="noticePeriod" className="text-sm font-medium text-gray-700">
+                            Notice Period <span className="text-red-500">*</span>
                           </label>
                           <div className="relative">
                             <Clock
@@ -756,19 +785,15 @@ const Career = () => {
                           </div>
                           {errors.noticePeriod && (
                             <p className="text-red-500 text-xs mt-1">
-                              {String(errors.noticePeriod.message) || ""}
+                              {errors.noticePeriod.message}
                             </p>
                           )}
                         </div>
 
                         {/* Upload Resume */}
                         <div className="flex flex-col gap-1">
-                          <label
-                            htmlFor="resume"
-                            className="text-sm font-medium text-gray-700"
-                          >
-                            Upload Resume{" "}
-                            <span className="text-red-500">*</span>
+                          <label htmlFor="resume" className="text-sm font-medium text-gray-700">
+                            Upload Resume <span className="text-red-500">*</span>
                           </label>
                           <div className="relative">
                             <File
@@ -778,31 +803,6 @@ const Career = () => {
                             <input
                               {...register("resume", {
                                 required: "Resume is required",
-                                validate: {
-                                  fileType: (files) => {
-                                    if (!files?.[0])
-                                      return "Resume is required";
-                                    const file = files[0];
-                                    const allowedTypes = [
-                                      "application/pdf",
-                                      "application/msword",
-                                      "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-                                    ];
-                                    return (
-                                      allowedTypes.includes(file.type) ||
-                                      "Only PDF, DOC, DOCX files allowed"
-                                    );
-                                  },
-                                  fileSize: (files) => {
-                                    if (!files?.[0])
-                                      return "Resume is required";
-                                    const file = files[0];
-                                    return (
-                                      file.size <= 2 * 1024 * 1024 ||
-                                      "File size must be less than 2MB"
-                                    );
-                                  },
-                                },
                               })}
                               id="resume"
                               type="file"
@@ -813,15 +813,15 @@ const Career = () => {
                                 } rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[#052EAA] focus:border-transparent transition-all duration-200`}
                             />
                           </div>
-                          {file && file[0] && (
+                          {watchedResume && watchedResume[0] && (
                             <p className="text-xs text-gray-600 mt-1">
-                              Selected: {file[0].name} (
-                              {(file[0].size / 1024 / 1024).toFixed(2)} MB)
+                              Selected: {watchedResume[0].name} (
+                              {(watchedResume[0].size / 1024 / 1024).toFixed(2)} MB)
                             </p>
                           )}
                           {errors.resume && (
                             <p className="text-red-500 text-xs mt-1">
-                              {String(errors.resume.message) || ""}
+                              {errors.resume.message}
                             </p>
                           )}
                         </div>
