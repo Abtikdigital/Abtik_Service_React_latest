@@ -3,6 +3,8 @@ import BgImage from "../assets/About/bgImg.svg";
 import ClientStats from "../section/ClientStats";
 import Image1 from "../assets/WhyChooseUs/male-female-graphic-designers-using-laptop.jpg";
 import Contact from "../section/Contact";
+import Image2 from "../assets/AboutSection/vision.jpg"
+import Image3 from "../assets/AboutSection/mission (1).jpg"
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import {
 //   faFacebook,
@@ -243,7 +245,9 @@ const About = () => {
               }
               </p>
               <div>
-                <img loading="lazy" src={Image1} className="rounded-4xl" />
+            { index== 0?  <img loading="lazy" src={Image2} className="rounded-4xl" />:
+            <img loading="lazy" src={Image3} className="rounded-4xl" />
+            }
               </div>
             </motion.div>
           ))}
@@ -283,10 +287,18 @@ const About = () => {
                     className="paragraph  "
                     style={{ fontFamily: "Montserrat Alternates" }}
                   >
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. In
-                    quidem ipsa voluptate architecto quisquam reprehenderit rem,
-                    totam, facere rerum cum harum cumque explicabo dolorum a ex?
-                    Hic officiis dolore aliquam!
+                    At Abtik Services, we offer more than just consultancy — we provide a complete ecosystem to help your business grow. From government grants and MSME loans to branding, legal support, and marketing, we simplify every step with expert guidance.
+                  </p>
+                      <p
+                    className="paragraph  "
+                    style={{ fontFamily: "Montserrat Alternates" }}
+                  >
+                       <p
+                    className="paragraph  "
+                    style={{ fontFamily: "Montserrat Alternates" }}
+                  >
+                    At Abtik Services, we offer more than just consultancy — we provide a complete ecosystem to help your business grow. From government grants and MSME loans to branding, legal support, and marketing, we simplify every step with expert guidance.
+                  </p>
                   </p>
                   {/* <div>
                     <button className="custom-btn">Explore</button>

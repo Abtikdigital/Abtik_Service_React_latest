@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import Mainlayout from "../section/Mainlayout";
 import BgImage from "../assets/ExpandedBlog/bgImg.svg";
 import Image1 from "../assets/Blog/budget 2025.jpeg";
-import Image2 from "../assets/Blog/2nd blog.png";
+import Image2 from "../assets/Blog/2nd blog.jpeg";
 import Image3 from "../assets/Blog/3rd blog.png";
 import { useDispatch } from "react-redux";
 

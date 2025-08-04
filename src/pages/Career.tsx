@@ -39,41 +39,42 @@ const Career = () => {
 
   const jobOpenings = [
     {
-      title: "Frontend Developer",
-      position: "Software Development",
+      title: "BDM",
+      position: "Business Development Manager",
       description:
-        "We are looking for a skilled Frontend Developer to join our dynamic team. You will be responsible for creating responsive and user-friendly web applications using modern technologies like React, TypeScript, and Tailwind CSS.",
-      vacancy: 3,
-      experience: "2-4 years",
-      location: "Bangalore, India",
+        "We are looking for a results-driven BDM to lead client acquisition and drive business growth through strategic partnerships and high-value deals.",
+      vacancy: 7,
+      experience: "1-2 years",
+      location: "Ahmedabad, India",
       type: "Full-time",
-      skills: ["React", "TypeScript", "JavaScript", "HTML/CSS", "Tailwind CSS"],
+      skills: ["Sales Strategy","Communication" ," Negotiation ", "CRM Tools", "Lead Generation"],
     },
     {
-      title: "Backend Developer",
-      position: "Software Development",
+      title: "HR Executive",
+      position: "HR Executive",
       description:
-        "Join our backend team to build scalable and robust server-side applications. You'll work with Node.js, Python, databases, and cloud technologies to create efficient APIs and systems.",
+        "Kickstart your career in HR! You'll manage hiring, onboarding, and internal coordination to support a growing team.",
       vacancy: 2,
-      experience: "3-5 years",
-      location: "Mumbai, India",
+      experience: "Fresher",
+      location: "Ahmedabad, India",
       type: "Full-time",
-      skills: ["Node.js", "Python", "MongoDB", "PostgreSQL", "AWS", "Docker"],
+      skills: ["Recruitment"," Communication", " MS Office", " Coordination", " Time Management"],
     },
     {
-      title: "UI/UX Designer",
-      position: "Design",
+      title: "BDE",
+      position: "Business Development Executive",
       description:
-        "We are seeking a creative UI/UX Designer to create intuitive and engaging user experiences. You'll work on wireframes, prototypes, and visual designs for web and mobile applications.",
-      vacancy: 1,
-      experience: "2-3 years",
-      location: "Delhi, India",
+        "We’re hiring a BDE to connect with leads, pitch services, and support sales growth through smart communication and follow-ups.",
+      vacancy: 30,
+      experience: "Fresher",
+      location: "Ahmedabad, India",
       type: "Full-time",
-      skills: ["Figma", "Adobe XD", "Sketch", "Prototyping", "User Research"],
+      skills: ["Cold Calling ", "CRM", " Presentation Skills ", " Client Follow-up", " Communication"],
     },
   ];
 
   // Form setup with all configurations
+
   const {
     register,
     handleSubmit,
