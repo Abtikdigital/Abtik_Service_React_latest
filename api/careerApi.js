@@ -66,7 +66,7 @@ const careerValidationSchema = joi.object({
 });
 
 // NODEMAILER TRANSPORT
-const transporter = nodemailer.createTransporter({
+const transporter = nodemailer.createTransport({
   host: SMTP_HOST_NAME,
   port: Number(SMTP_PORT),
   secure: SECURE === "true",
