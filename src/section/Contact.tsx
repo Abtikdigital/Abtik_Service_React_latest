@@ -54,7 +54,7 @@ const Contact = () => {
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
     try {
-      let res = await axios.post("/apis/contactApi.js",data);
+      let res = await axios.post("/api/contactApi.js",data);
       if (res?.status == 201) {
         Swal.fire({
           icon: "success",

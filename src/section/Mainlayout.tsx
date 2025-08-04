@@ -79,7 +79,7 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
         message: data.message,
       };
 
-      const res = await axios.post("/api/getInTouchApi", apiData);
+      const res = await axios.post("/api/getInTouchApi.js", apiData);
       
       if (res.status === 201) {
         Swal.fire({
