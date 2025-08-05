@@ -17,7 +17,7 @@ const recommendedData = [
     description:
       "A DPIIT-recognized government program that enables eligible startups to access tax exemptions, self-certification, and other incentives for rapid growth and compliance.",
 
-    path: "/services/funding/subsidy/stand-up-india",
+    path: "/services/certificate/startup-india",
   },
   {
     title: "Seed Fund Scheme",
@@ -38,35 +38,35 @@ const recommendedData = [
     img: Image4,
     description:
       "Loans provided by Non-Banking Financial Companies with simplified documentation and eligibility. These are tailored for startups and growing enterprises.",
-    path: "",
+    path: "/services/funding/private-funding/nbfc",
   },
   {
     title: "PMEGP Loan",
     img: Image5,
     description:
       "A credit-linked subsidy scheme by the Government of India that supports new micro-enterprises in the manufacturing or service sectors, including interest subsidies.",
-    path: "",
+    path: "/services/funding/subsidy/pmegp",
   },
   {
     title: "NAIIF Loan",
     img: Image6,
     description:
       "Equity-based funding made available through SEBI-registered Alternative Investment Funds (AIFs) under the National Alternative Investment and Infrastructure Fund (NAIIF).",
-    path: "",
+    path: "/services/funding/agriculture/naiff-aiff",
   },
   {
     title: "GST & Tax Compliance",
     img: Image7,
     description:
       "GST registration, monthly and annual return filings, income tax filing, TDS management, and audit preparation. Ensures your business always stays compliant.",
-    path: "",
+    path: "/services/tax/gst-filing",
   },
   {
-    title: "Tax Exemption Certificates (80-IAC, 12AB, 80G)",
+    title: "MSME Certificate",
     img: Image1,
     description:
-      "Government-issued certificates offering tax benefits to eligible startups and NGOs. These include 80-IAC for startups, and 12AB/80G for charitable institutions.",
-    path: "",
+      "MSME Certificate is a government-issued proof that your business is registered as a Micro, Small, or Medium Enterprise in India.",
+    path: "/services/certificate/msme",
   },
 ];
 

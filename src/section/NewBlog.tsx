@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Image1 from "../assets/Blog/budget 2025.jpeg";
 import Image2 from "../assets/Blog/2nd blog.jpeg";
 import Image3 from "../assets/Blog/3rd blog.png";
-
+import Image4 from "../assets/Blog/4th blog.jpeg"
 
 const blogs = [
   {
@@ -22,15 +22,21 @@ const blogs = [
     img: Image2,
     slug: "Indias-Startups-Get-a-Boost-Budget-2025-Unlocks-New-Pathways",
   },
-   {
+  {
     title: " Budget 2025 Simplifies the Journey for New Founders",
     description:
       "For first-time entrepreneurs, Budget",
     img: Image3,
     slug: "Budget-2025-Simplifies-the-Journey-for-New-Founders",
   },
- 
- 
+
+  {
+    title: "A Budget That Strengthens Local Industries and Women-Led Enterprises",
+    description:
+      "Beyond big cities and large companies, Budget 2025 has acknowledged the power of local, women-led, and artisan-driven enterprises. Targeted investments in tribal crafts, khadi clusters, and agri-based businesses highlight the government’s commitment to inclusive economic growth.",
+    img: Image4,
+    slug: "A-Budget-That-Strengthens-Local-Industries-and-Women-Led-Enterprises",
+  },
 
   // (add all your blog objects as above)
 ];
@@ -64,9 +70,9 @@ const BlogSection = () => {
   const itemsToShow = rows * cols;
   const canLoadMore = itemsToShow < blogs.length;
 
-  const getDelay = (index:number) => {
+  const getDelay = (index: number) => {
     const row = Math.floor(index / cols);
-    return 0.1+ row * 0.1;
+    return 0.1 + row * 0.1;
   };
 
   return (
@@ -105,7 +111,7 @@ const BlogSection = () => {
             >
               {blog?.title}
             </h2>
-            <p className="paragraph">{blog?.description}</p>
+            <p className="paragraph line-clamp-1">{blog?.description}</p>
             <div>
               <button
                 className="custom-btn"

@@ -5,6 +5,7 @@ import BgImage from "../assets/ExpandedBlog/bgImg.svg";
 import Image1 from "../assets/Blog/budget 2025.jpeg";
 import Image2 from "../assets/Blog/2nd blog.jpeg";
 import Image3 from "../assets/Blog/3rd blog.png";
+import Image4 from "../assets/Blog/4th blog.jpeg"
 import { useDispatch } from "react-redux";
 
 interface BlogListItem {
@@ -106,6 +107,27 @@ const ExpandedBlog = () => {
       readTime: "6 min read",
       category: "Legal",
       list: [],
+    }, {
+      title: "A-Budget-That-Strengthens-Local-Industries-and-Women-Led-Enterprises",
+      description:
+        "Beyond big cities and large companies, Budget 2025 has acknowledged the power of local, women-led, and artisan-driven enterprises. Targeted investments in tribal crafts, khadi clusters, and agri-based businesses highlight the government’s commitment to inclusive economic growth.",
+      img: Image4,
+      slug: "A-Budget-That-Strengthens-Local-Industries-and-Women-Led-Enterprises",
+      date: "July 15, 2024",
+      readTime: "6 min read",
+      category: "Legal",
+      list: [
+        {
+          title:"New initiatives for solar-powered equipment",
+          lists:[],
+          description:"New initiatives for solar-powered equipment, cold storage support, and digital training for micro-entrepreneurs will directly benefit small business owners in rural and semi-urban regions. These aren’t just incentives—they are enablers."
+        },
+          {
+          title:"By turning local industries into competitive,",
+          lists:[],
+          description:"By turning local industries into competitive, high-quality suppliers and exporters, Budget 2025 is not only uplifting livelihoods but also placing India’s cultural industries on the global map."
+        },
+      ],
     },
 
 
@@ -401,7 +423,9 @@ const ExpandedBlog = () => {
                     Schedule a consultation with our experts today and transform
                     your business.
                   </p>
-                  <button className="custom-btn ">Schedule a Call</button>
+                  <button className="custom-btn "
+                  onClick={handleOpenDialog}
+                  >Schedule a Call</button>
                 </div>
               </div>
             </div>
