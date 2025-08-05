@@ -1,5 +1,5 @@
 import Mainlayout from "../section/Mainlayout";
-import BgImage from "../assets/StartUpIndia/bgImg.svg";
+import BgImage from "../assets/Hero/bgImg.svg";
 import Contact from "../section/Contact";
 import Image1 from "../assets/MudraLoan/Image1.jpg";
 import {
