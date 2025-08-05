@@ -1,6 +1,6 @@
 import { useState, useEffect, memo } from 'react';
 import Image1 from '../assets/AboutSection/Image1.jpeg';
-import Image2  from "../assets/AboutSection/Image2.jpeg"
+import Image2  from "../assets/AboutSection/WhatsApp Image 2025-08-05 at 11.29.07 AM.jpeg"
 import Image3 from "../assets/AboutSection/Image3.jpeg"
 
 const About = () => {
