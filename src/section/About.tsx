@@ -1,5 +1,7 @@
 import { useState, useEffect, memo } from 'react';
-import Image1 from '../assets/AboutSection/male-female-graphic-designers-using-laptop.jpg';
+import Image1 from '../assets/AboutSection/Image1.jpeg';
+import Image2  from "../assets/AboutSection/Image2.jpeg"
+import Image3 from "../assets/AboutSection/Image3.jpeg"
 
 const About = () => {
   const [visibleElements, setVisibleElements] = useState({
@@ -91,7 +93,7 @@ const About = () => {
               }`}
           >
             <img
-              src={Image1}
+              src={Image3}
               className="rounded-4xl"
               alt="Team collaboration"
             />
@@ -105,7 +107,7 @@ const About = () => {
               }`}
           >
             <img
-              src={Image1}
+              src={Image2}
               className="rounded-4xl max-h-48 w-full"
               alt="Professional workspace"
             />

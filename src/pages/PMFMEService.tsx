@@ -4,7 +4,7 @@ import Contact from "../section/Contact";
 import Image1 from "../assets/PMFME/Image1.png";
 import {
     Mail,
-    MapPin,
+    User,
     Phone,
  
     Headset,
@@ -292,9 +292,9 @@ const PMFME = () => {
                     >
                         Get in Touch
                     </h3>
-                    <div className="space-y-4">
+                  <div className="space-y-4">
                         <a
-                            href="tel:+919876543210"
+                            href="tel:++91 7486 952 087"
                             className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
                             aria-label="Call us at +91 98765 43210"
                         >
@@ -305,11 +305,11 @@ const PMFME = () => {
                                 <p className="text-base text-gray-700 font-semibold">
                                     Call Anytime
                                 </p>
-                                <p className="text-xs text-gray-600">+91 98765 43210</p>
+                                <p className="text-xs text-gray-600"><a href="tel:+917486 952 087">+91 7486 952 087</a></p>
                             </div>
                         </a>
                         <a
-                            href="mailto:info@abtik.com"
+                            href="mailto:bharat@abtikservices.com"
                             className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
                             aria-label="Email us at info@abtik.com"
                         >
@@ -320,27 +320,27 @@ const PMFME = () => {
                                 <p className="text-base text-gray-700 font-semibold">
                                     Write Email
                                 </p>
-                                <p className="text-xs text-gray-600">info@abtik.com</p>
+                                <p className="text-xs text-gray-600"><a href="mailto:bharat@abtikservices.com">bharat@abtikservices.com</a></p>
                             </div>
                         </a>
                         <a
-                            href="https://www.google.com/maps?q=123+Business+Hub,+New+Delhi,+India"
+                            href=""
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
                             aria-label="Visit us at 123 Business Hub, New Delhi, India"
                         >
                             <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
-                                <MapPin className="w-5 h-5 text-white" />
+                                <User className="w-5 h-5 text-white" />
                             </span>
                             <div>
                                 <p className="text-base text-gray-700 font-semibold ">
-                                    Visit Us Anytime
+                                    Bhart Barot
                                 </p>
                                 <p className="text-xs text-gray-600">
-                                    123 Business Hub,
+                                   Vice President
                                     <br />
-                                    New Delhi, India
+                                   
                                 </p>
                             </div>
                         </a>
