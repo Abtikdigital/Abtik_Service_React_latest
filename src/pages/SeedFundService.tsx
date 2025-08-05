@@ -429,7 +429,7 @@ const SeedFund = () => {
                             <ul className="space-y-2 text-xs text-gray-700">
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>Low interest rates (8-12%)</span>
+                                    <span>Low interest rates (4-6%)</span>
                                 </li>
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
@@ -437,11 +437,11 @@ const SeedFund = () => {
                                 </li>
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>Moratorium period available</span>
+                                    <span>Moratorium period upto 1 year</span>
                                 </li>
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>Minimal collateral required</span>
+                                    <span> collateral free</span>
                                 </li>
                             </ul>
                         </motion.div>
@@ -473,7 +473,7 @@ const SeedFund = () => {
                             <ul className="space-y-2 text-xs text-gray-700">
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>Non-repayable assistance</span>
+                                    <span>Non-refundable assistance</span>
                                 </li>
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
