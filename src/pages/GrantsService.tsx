@@ -333,7 +333,7 @@ const Grants = () => {
                             </span>
                             <div>
                                 <p className="text-base text-gray-700 font-semibold ">
-                                    Bhart Barot
+                                    Bharat Barot
                                 </p>
                                 <p className="text-xs text-gray-600">
                                    Vice President

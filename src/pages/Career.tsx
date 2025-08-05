@@ -47,7 +47,7 @@ const Career = () => {
       experience: "1-2 years",
       location: "Ahmedabad, India",
       type: "Full-time",
-      skills: ["Sales Strategy","Communication" ," Negotiation ", "CRM Tools", "Lead Generation"],
+      skills: ["Sales Strategy","Negotiation" , "CRM Tools", "Lead Generation"],
     },
     {
       title: "HR Executive",
@@ -58,7 +58,7 @@ const Career = () => {
       experience: "Fresher",
       location: "Ahmedabad, India",
       type: "Full-time",
-      skills: ["Recruitment"," Communication", " MS Office", " Coordination", " Time Management"],
+      skills: ["Recruitment"," Communication", "MS Office", " Coordination", " Time Management"],
     },
     {
       title: "BDE",
@@ -461,13 +461,13 @@ const Career = () => {
                       {job.skills.slice(0, 3).map((skill, skillIndex) => (
                         <span
                           key={skillIndex}
-                          className="text-xs bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] text-white px-2 py-1 rounded-full"
+                          className="text-xs text-gray-600 bg-gray-200 px-2 py-1 rounded-full"
                         >
                           {skill}
                         </span>
                       ))}
                       {job.skills.length > 3 && (
-                        <span className="text-xs bg-gray-200 text-gray-600 px-2 py-1 rounded-full">
+                        <span className="text-xs bg-blue-50 text-[#3CA2E2] px-2 py-1 rounded-full">
                           +{job.skills.length - 3} more
                         </span>
                       )}

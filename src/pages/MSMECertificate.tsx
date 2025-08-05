@@ -263,58 +263,60 @@ const MSMECertificate = () => {
                             Get in Touch
                         </h3>
                         <div className="space-y-4">
-                        <a
-                            href="tel:++91 7486 952 087"
-                            className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
-                            aria-label="Call us at +91 98765 43210"
-                        >
-                            <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
-                                <Phone className="w-5 h-5 text-white" />
-                            </span>
-                            <div>
-                                <p className="text-base text-gray-700 font-semibold">
-                                    Call Anytime
-                                </p>
-                                <p className="text-xs text-gray-600"><a href="tel:+917486 952 087">+91 7486 952 087</a></p>
-                            </div>
-                        </a>
-                        <a
-                            href="mailto:bharat@abtikservices.com"
-                            className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
-                            aria-label="Email us at info@abtik.com"
-                        >
-                            <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
-                                <Mail className="w-5 h-5 text-white" />
-                            </span>
-                            <div>
-                                <p className="text-base text-gray-700 font-semibold">
-                                    Write Email
-                                </p>
-                                <p className="text-xs text-gray-600"><a href="mailto:bharat@abtikservices.com">bharat@abtikservices.com</a></p>
-                            </div>
-                        </a>
-                        <a
-                            href=""
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
-                            aria-label="Visit us at 123 Business Hub, New Delhi, India"
-                        >
-                            <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
-                                <User className="w-5 h-5 text-white" />
-                            </span>
-                            <div>
-                                <p className="text-base text-gray-700 font-semibold ">
-                                    Bhart Barot
-                                </p>
-                                <p className="text-xs text-gray-600">
-                                   Vice President
-                                    <br />
-                                   
-                                </p>
-                            </div>
-                        </a>
-                    </div>
+                            <a
+                                href="tel:+918401233690"
+                                className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
+                                aria-label="Call us at +91 98765 43210"
+                            >
+                                <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
+                                    <Phone className="w-5 h-5 text-white" />
+                                </span>
+                                <div>
+                                    <p className="text-base text-gray-700 font-semibold">
+                                        Call Anytime
+                                    </p>
+                                    <p className="text-xs text-gray-600"><a href="tel:+917486 952 087">+91 8401 233 690</a></p>
+                                </div>
+                            </a>
+                            <a
+                                href="mailto:mahendra.kumar@abtikservices.com"
+                                className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
+                                aria-label="Email us at info@abtik.com"
+                            >
+                                <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
+                                    <Mail className="w-5 h-5 text-white" />
+                                </span>
+                                <div>
+                                    <p className="text-base text-gray-700 font-semibold">
+                                        Write Email
+                                    </p>
+                                    <p className="text-xs text-gray-600"><a href="mailto:mahendra.kumar@abtikservices.com">mahendra.kumar@abtikservices.com</a></p>
+                                </div>
+                            </a>
+                            <a
+                                href=""
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
+                                aria-label="Visit us at 123 Business Hub, New Delhi, India"
+                            >
+                                <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
+                                    <User className="w-5 h-5 text-white" />
+                                </span>
+                                <div>
+                                    <p className="text-base text-gray-700 font-semibold ">
+                                        Mahendra Kumar
+
+
+                                    </p>
+                                    <p className="text-xs text-gray-600">
+                                        Branch Manager
+                                        <br />
+
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
                     </motion.div>
                     <motion.div
                         initial={{ y: 50, opacity: 0 }}
@@ -323,7 +325,7 @@ const MSMECertificate = () => {
                         className="flex-grow  rounded-2xl flex items-center justify-center h-full"
                     >
                         <img
-                        loading="lazy"
+                            loading="lazy"
                             src={Image1}
                             alt="MSME Certificate Illustration"
                             className="max-h-80 w-full rounded-lg "

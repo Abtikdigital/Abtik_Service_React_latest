@@ -288,7 +288,7 @@ const NBFC = () => {
                         </h3>
                         <div className="space-y-4">
                         <a
-                            href="tel:++91 7486 952 087"
+                            href="tel:+916357369191"
                             className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
                             aria-label="Call us at +91 98765 43210"
                         >
@@ -299,11 +299,11 @@ const NBFC = () => {
                                 <p className="text-base text-gray-700 font-semibold">
                                     Call Anytime
                                 </p>
-                                <p className="text-xs text-gray-600"><a href="tel:+917486 952 087">+91 7486 952 087</a></p>
+                                <p className="text-xs text-gray-600"><a href="tel:+916357369191">+91 6357 369 191 </a></p>
                             </div>
                         </a>
                         <a
-                            href="mailto:bharat@abtikservices.com"
+                            href="mailto:Abtik.funding@abtikservices.in"
                             className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
                             aria-label="Email us at info@abtik.com"
                         >
@@ -314,7 +314,7 @@ const NBFC = () => {
                                 <p className="text-base text-gray-700 font-semibold">
                                     Write Email
                                 </p>
-                                <p className="text-xs text-gray-600"><a href="mailto:bharat@abtikservices.com">bharat@abtikservices.com</a></p>
+                                <p className="text-xs text-gray-600"><a href="mailto:Abtik.funding@abtikservices.in">Abtik.funding@abtikservices.in</a></p>
                             </div>
                         </a>
                         <a
@@ -329,10 +329,10 @@ const NBFC = () => {
                             </span>
                             <div>
                                 <p className="text-base text-gray-700 font-semibold ">
-                                    Bhart Barot
+                                    Arissit Thackar
                                 </p>
                                 <p className="text-xs text-gray-600">
-                                   Vice President
+                                   NBFC-HOD
                                     <br />
                                    
                                 </p>
