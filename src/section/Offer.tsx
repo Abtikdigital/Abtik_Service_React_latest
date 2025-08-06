@@ -1,14 +1,29 @@
 
 
-const Offer = () => {
+const WebsiteOfferBanner = () => {
+  return (<>
+  
+   {/* <div className="bg-[#EEEEFF] text-center py-3 px-4">
+  //   <style>
+  //     {`
+  //       @keyframes blink {
+  //         0%, 100% { opacity: 1; }
+  //         50% { opacity: 0; }
+  //       }
+  //       .blink {
+  //         animation: blink 1s step-start infinite;
+  //       }
+  //     `}
+  //   </style>
+  //   <span className="text-base font-medium ">
+ 
+  //     <span className=" font-semibold blink ml-2">
+  //       New Offers Coming Soon !
+  //     </span>
+  //   </span>
+   </div> */}
+  </>
+  );
+};
 
-    return (<div className="text-center  bg-[#EEEEFF] p-2 text-base  font-medium"
-    style={{fontFamily:"Montserrat Alternates"}}
-    >
-
-        5% discount offer
-    </div>)
-}
-
-export default Offer
-
+export default WebsiteOfferBanner;
