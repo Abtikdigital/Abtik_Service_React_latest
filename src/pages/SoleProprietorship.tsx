@@ -54,7 +54,7 @@ const SoleProprietorRegistration = () => {
         }
     ];
 
-    const toggleIsExpanded = (index:number) => {
+    const toggleIsExpanded = (index: number) => {
         setIsExpanded((prev) =>
             prev.index === index && prev.isOpen ? { isOpen: false, index: -1 } : { isOpen: true, index }
         );
@@ -72,7 +72,7 @@ const SoleProprietorRegistration = () => {
         updateCols(); window.addEventListener("resize", updateCols);
         return () => window.removeEventListener("resize", updateCols);
     }, []);
-    const getTouchDelay = (index:number) => {
+    const getTouchDelay = (index: number) => {
         const row = Math.floor(index / touchCols);
         return 0.5 + row * 0.5;
     };
@@ -91,7 +91,7 @@ const SoleProprietorRegistration = () => {
         updateCols(); window.addEventListener("resize", updateCols);
         return () => window.removeEventListener("resize", updateCols);
     }, []);
-    const getProcessDelay = (index:number) => {
+    const getProcessDelay = (index: number) => {
         const row = Math.floor(index / processCols);
         return 0.5 + row * 0.5;
     };
@@ -104,14 +104,14 @@ const SoleProprietorRegistration = () => {
         updateCols(); window.addEventListener("resize", updateCols);
         return () => window.removeEventListener("resize", updateCols);
     }, []);
-    const getBenefitsDelay = (index:number) => {
+    const getBenefitsDelay = (index: number) => {
         const row = Math.floor(index / benefitsCols);
         return 0.5 + row * 0.5;
     };
 
     const refFAQ = useRef(null);
     const isInViewFAQ = useInView(refFAQ, { once: true, amount: 0.1 });
-    const getFaqDelay = (index:number) => {
+    const getFaqDelay = (index: number) => {
         const row = Math.floor(index / 1);
         return 0.2 + row * 0.1;
     };
@@ -168,13 +168,13 @@ const SoleProprietorRegistration = () => {
     ];
 
     return (<>
-    
-          <HeadProvider>
-        <Title>{seoData?.soleproprietorshipService?.title}</Title>
-        <Meta name="description" content={seoData?.soleproprietorshipService?.description} />
-        <Meta name="keyword" content={seoData?.soleproprietorshipService?.keyword} />
-        <Meta name="robots" content={seoData?.soleproprietorshipService?.robots} />
-      </HeadProvider>
+
+        <HeadProvider>
+            <Title>{seoData?.soleproprietorshipService?.title}</Title>
+            <Meta name="description" content={seoData?.soleproprietorshipService?.description} />
+            <Meta name="keyword" content={seoData?.soleproprietorshipService?.keyword} />
+            <Meta name="robots" content={seoData?.soleproprietorshipService?.robots} />
+        </HeadProvider>
         <Mainlayout>
             {/* Hero Section */}
             <section ref={refHero}
@@ -200,7 +200,7 @@ const SoleProprietorRegistration = () => {
                          text-white lg:text-white
                          paragraph !text-white
                          max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
-                    style={{fontFamily:"Montserrat Alternates"}}
+                        style={{ fontFamily: "Montserrat Alternates" }}
                     >
                         Kickstart your small business or freelance venture as a sole proprietor. Fastest, lowest-cost, owner-controlled—Abtik gets your GST, Udyam, and bank proof ready in record time.
                     </p>
@@ -232,37 +232,7 @@ const SoleProprietorRegistration = () => {
                         style={{ fontFamily: "Montserrat Alternates" }}>
                         Get in Touch
                     </h3>
-                 <div className="space-y-4">
-                        <a
-                            href="tel:++91 7486 952 087"
-                            className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
-                            aria-label="Call us at +91 98765 43210"
-                        >
-                            <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
-                                <Phone className="w-5 h-5 text-white" />
-                            </span>
-                            <div>
-                                <p className="text-base text-gray-700 font-semibold">
-                                    Call Anytime
-                                </p>
-                                <p className="text-xs text-gray-600"><a href="tel:+917486 952 087">+91 7486 952 087</a></p>
-                            </div>
-                        </a>
-                        <a
-                            href="mailto:bharat@abtikservices.com"
-                            className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
-                            aria-label="Email us at info@abtik.com"
-                        >
-                            <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
-                                <Mail className="w-5 h-5 text-white" />
-                            </span>
-                            <div>
-                                <p className="text-base text-gray-700 font-semibold">
-                                    Write Email
-                                </p>
-                                <p className="text-xs text-gray-600"><a href="mailto:bharat@abtikservices.com">bharat@abtikservices.com</a></p>
-                            </div>
-                        </a>
+                    <div className="space-y-4">
                         <a
                             href=""
                             target="_blank"
@@ -275,13 +245,43 @@ const SoleProprietorRegistration = () => {
                             </span>
                             <div>
                                 <p className="text-base text-gray-700 font-semibold ">
-                                    Bhart Barot
+                                    Heer Songhela
                                 </p>
                                 <p className="text-xs text-gray-600">
-                                   Vice President
+                                    Head Of Finance Department
                                     <br />
-                                   
+
                                 </p>
+                            </div>
+                        </a>
+                        <a
+                            href="tel:+91 98980 43284"
+                            className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
+                            aria-label="Call us at +91 98980 43284"
+                        >
+                            <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
+                                <Phone className="w-5 h-5 text-white" />
+                            </span>
+                            <div>
+                                <p className="text-base text-gray-700 font-semibold">
+                                    Call Anytime
+                                </p>
+                                <p className="text-xs text-gray-600"><a href="tel:+9898043284">+91 9898 043 284</a></p>
+                            </div>
+                        </a>
+                        <a
+                            href="heer@abtikservices.co.in"
+                            className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
+                            aria-label="Email us at info@abtik.com"
+                        >
+                            <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
+                                <Mail className="w-5 h-5 text-white" />
+                            </span>
+                            <div>
+                                <p className="text-base text-gray-700 font-semibold">
+                                    Write Email
+                                </p>
+                                <p className="text-xs text-gray-600"><a href="mailto:heer@abtikservices.co.in">heer@abtikservices.co.in</a></p>
                             </div>
                         </a>
                     </div>
@@ -293,7 +293,7 @@ const SoleProprietorRegistration = () => {
                     className="flex-grow bg-gradient-to-r from-[#3CA2E2] to-[#052EAA] rounded-2xl flex items-center justify-center h-full"
                 >
                     <img
-                    loading="lazy"
+                        loading="lazy"
                         src={Image1}
                         alt="Sole Proprietor Registration Illustration"
                         className="max-h-80 w-full rounded-lg object-contain p-4"
@@ -314,7 +314,7 @@ const SoleProprietorRegistration = () => {
                         What Is Sole Proprietorship Registration?
                     </h2>
                     <p className="paragraph !text-white mx-auto text-left"
-                    style={{fontFamily:"Montserrat Alternates"}}
+                        style={{ fontFamily: "Montserrat Alternates" }}
                     >
                         The sole proprietorship model is perfect for millions of Indian small businesses, traders, and freelancers. With the right supporting documents and registrations, you can open bank accounts, acquire licenses, and access credit or MSME benefits—Abtik makes it effortless.
                     </p>
@@ -334,7 +334,7 @@ const SoleProprietorRegistration = () => {
                 </h2>
                 <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
                     <p className="text-sm md:text-base text-gray-600 text-center"
-                    style={{fontFamily:"Montserrat Alternates"}}
+                        style={{ fontFamily: "Montserrat Alternates" }}
                     >
                         Any Indian citizen with a valid PAN/Aadhaar, and address proof for business premises, can start a sole proprietorship. No minimum capital or partners required—instant eligibility for GST, Udyam & Shops Act registrations.
                     </p>

@@ -290,37 +290,7 @@ const CGTMSE = () => {
                     >
                         Get in Touch
                     </h3>
-                  <div className="space-y-4">
-                        <a
-                            href="tel:+916357369191"
-                            className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
-                            aria-label="Call us at +91 98765 43210"
-                        >
-                            <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
-                                <Phone className="w-5 h-5 text-white" />
-                            </span>
-                            <div>
-                                <p className="text-base text-gray-700 font-semibold">
-                                    Call Anytime
-                                </p>
-                                <p className="text-xs text-gray-600"><a href="tel:+917486 952 087">+91 6357 369 191</a></p>
-                            </div>
-                        </a>
-                        <a
-                            href="mailto:Abtik.funding@abtikservices.in"
-                            className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
-                            aria-label="Email us at info@abtik.com"
-                        >
-                            <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
-                                <Mail className="w-5 h-5 text-white" />
-                            </span>
-                            <div>
-                                <p className="text-base text-gray-700 font-semibold">
-                                    Write Email
-                                </p>
-                                <p className="text-xs text-gray-600"><a href="mailto:Abtik.funding@abtikservices.in">Abtik.funding@abtikservices.in</a></p>
-                            </div>
-                        </a>
+                    <div className="space-y-4">
                         <a
                             href=""
                             target="_blank"
@@ -333,14 +303,44 @@ const CGTMSE = () => {
                             </span>
                             <div>
                                 <p className="text-base text-gray-700 font-semibold ">
-                                    Arissit Thackar
+                                    Manish Kumar
 
                                 </p>
                                 <p className="text-xs text-gray-600">
-                                    NBFC-HOD
+                                    Head Of Finance Department
                                     <br />
 
                                 </p>
+                            </div>
+                        </a>
+                        <a
+                            href="tel:+917486952086"
+                            className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
+                            aria-label="Call us at +917486952086"
+                        >
+                            <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
+                                <Phone className="w-5 h-5 text-white" />
+                            </span>
+                            <div>
+                                <p className="text-base text-gray-700 font-semibold">
+                                    Call Anytime
+                                </p>
+                                <p className="text-xs text-gray-600"><a href="tel:+917486952086">+91 7486 952 086</a></p>
+                            </div>
+                        </a>
+                        <a
+                            href="mailto:manish.kumar@abtikservices.co.in"
+                            className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
+                            aria-label="Email us at info@abtik.com"
+                        >
+                            <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
+                                <Mail className="w-5 h-5 text-white" />
+                            </span>
+                            <div>
+                                <p className="text-base text-gray-700 font-semibold">
+                                    Write Email
+                                </p>
+                                <p className="text-xs text-gray-600"><a href="mailto:manish.kumar@abtikservices.co.in">manish.kumar@abtikservices.co.in</a></p>
                             </div>
                         </a>
                     </div>

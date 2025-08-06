@@ -282,58 +282,58 @@ const ZEDCertificate = () => {
                             Get in Touch
                         </h3>
                         <div className="space-y-4">
-                                               <a
-                                                   href="tel:++91 7486 952 087"
-                                                   className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
-                                                   aria-label="Call us at +91 98765 43210"
-                                               >
-                                                   <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
-                                                       <Phone className="w-5 h-5 text-white" />
-                                                   </span>
-                                                   <div>
-                                                       <p className="text-base text-gray-700 font-semibold">
-                                                           Call Anytime
-                                                       </p>
-                                                       <p className="text-xs text-gray-600"><a href="tel:+917486 952 087">+91 7486 952 087</a></p>
-                                                   </div>
-                                               </a>
-                                               <a
-                                                   href="mailto:bharat@abtikservices.com"
-                                                   className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
-                                                   aria-label="Email us at info@abtik.com"
-                                               >
-                                                   <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
-                                                       <Mail className="w-5 h-5 text-white" />
-                                                   </span>
-                                                   <div>
-                                                       <p className="text-base text-gray-700 font-semibold">
-                                                           Write Email
-                                                       </p>
-                                                       <p className="text-xs text-gray-600"><a href="mailto:bharat@abtikservices.com">bharat@abtikservices.com</a></p>
-                                                   </div>
-                                               </a>
-                                               <a
-                                                   href=""
-                                                   target="_blank"
-                                                   rel="noopener noreferrer"
-                                                   className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
-                                                   aria-label="Visit us at 123 Business Hub, New Delhi, India"
-                                               >
-                                                   <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
-                                                       <User className="w-5 h-5 text-white" />
-                                                   </span>
-                                                   <div>
-                                                       <p className="text-base text-gray-700 font-semibold ">
-                                                           Bhart Barot
-                                                       </p>
-                                                       <p className="text-xs text-gray-600">
-                                                          Vice President
-                                                           <br />
-                                                          
-                                                       </p>
-                                                   </div>
-                                               </a>
-                                           </div>
+                            <a
+                                href=""
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
+                                aria-label="Visit us at 123 Business Hub, New Delhi, India"
+                            >
+                                <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
+                                    <User className="w-5 h-5 text-white" />
+                                </span>
+                                <div>
+                                    <p className="text-base text-gray-700 font-semibold ">
+                                        Bharat Barot
+                                    </p>
+                                    <p className="text-xs text-gray-600">
+                                        Vice President
+                                        <br />
+
+                                    </p>
+                                </div>
+                            </a>
+                            <a
+                                href="tel:+91 7486 952 087"
+                                className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
+                                aria-label="Call us at +91 98765 43210"
+                            >
+                                <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
+                                    <Phone className="w-5 h-5 text-white" />
+                                </span>
+                                <div>
+                                    <p className="text-base text-gray-700 font-semibold">
+                                        Call Anytime
+                                    </p>
+                                    <p className="text-xs text-gray-600"><a href="tel:+917486 952 087">+91 7486 952 087</a></p>
+                                </div>
+                            </a>
+                            <a
+                                href="mailto:bharat@abtikservices.com"
+                                className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
+                                aria-label="Email us at info@abtik.com"
+                            >
+                                <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
+                                    <Mail className="w-5 h-5 text-white" />
+                                </span>
+                                <div>
+                                    <p className="text-base text-gray-700 font-semibold">
+                                        Write Email
+                                    </p>
+                                    <p className="text-xs text-gray-600"><a href="mailto:bharat@abtikservices.com">bharat@abtikservices.com</a></p>
+                                </div>
+                            </a>
+                        </div>
                     </motion.div>
                     <motion.div
                         initial={{ y: 50, opacity: 0 }}
@@ -584,8 +584,8 @@ const ZEDCertificate = () => {
                             >
                                 <h2
                                     className={`p-2.5 px-4 relative cursor-pointer flex items-center justify-between  text-base font-medium ${isExpanded.isOpen && isExpanded.index === index
-                                            ? "border-b border-gray-200"
-                                            : ""
+                                        ? "border-b border-gray-200"
+                                        : ""
                                         }`}
                                     onClick={() => toggleIsExpanded(index)}
                                 >
@@ -600,8 +600,8 @@ const ZEDCertificate = () => {
                                 </h2>
                                 <div
                                     className={`overflow-hidden transition-all duration-500 ease-in-out ${isExpanded.isOpen && isExpanded.index === index
-                                            ? "max-h-96 opacity-100"
-                                            : "max-h-0 opacity-0"
+                                        ? "max-h-96 opacity-100"
+                                        : "max-h-0 opacity-0"
                                         }`}
                                 >
                                     <p className="p-4 bg-gradient-to-t rounded-b-lg from-[#052EAA] to-[#3CA2E2] text-white">

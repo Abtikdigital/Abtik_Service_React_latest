@@ -6,7 +6,7 @@ import {
     Mail,
     User,
     Phone,
-  
+
     Package,
     Headset,
     ArrowUpRight,
@@ -16,7 +16,7 @@ import {
     DollarSign,
     TrendingUp,
     Users,
- 
+
     Lightbulb,
     Shield,
 } from "lucide-react";
@@ -197,14 +197,14 @@ const SeedFund = () => {
     const isInViewContact = useInView(refContact, { once: true, amount: 0.1 });
 
     return (<>
-    
-          <HeadProvider>
-        <Title>{seoData?.seedFundService?.title}</Title>
-        <Meta name="description" content={seoData?.seedFundService?.description} />
-        <Meta name="keyword" content={seoData?.seedFundService?.keyword} />
-        <Meta name="robots" content={seoData?.seedFundService?.robots} />
-      </HeadProvider>
-    
+
+        <HeadProvider>
+            <Title>{seoData?.seedFundService?.title}</Title>
+            <Meta name="description" content={seoData?.seedFundService?.description} />
+            <Meta name="keyword" content={seoData?.seedFundService?.keyword} />
+            <Meta name="robots" content={seoData?.seedFundService?.robots} />
+        </HeadProvider>
+
         <Mainlayout>
             {/* Hero Section */}
             <section
@@ -248,7 +248,7 @@ const SeedFund = () => {
                          text-white lg:text-white
                          paragraph !text-white
                          max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
-                         style={{fontFamily:"Montserrat Alternates"}}
+                        style={{ fontFamily: "Montserrat Alternates" }}
                     >
                         Transform your innovative ideas into reality with strategic seed funding.
                         Our expert team connects you with the right investors and guides you
@@ -290,59 +290,59 @@ const SeedFund = () => {
                     >
                         Get in Touch
                     </h3>
-                  <div className="space-y-4">
-                                         <a
-                                             href="tel:++91 7486 952 087"
-                                             className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
-                                             aria-label="Call us at +91 98765 43210"
-                                         >
-                                             <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
-                                                 <Phone className="w-5 h-5 text-white" />
-                                             </span>
-                                             <div>
-                                                 <p className="text-base text-gray-700 font-semibold">
-                                                     Call Anytime
-                                                 </p>
-                                                 <p className="text-xs text-gray-600"><a href="tel:+917486 952 087">+91 7486 952 087</a></p>
-                                             </div>
-                                         </a>
-                                         <a
-                                             href="mailto:bharat@abtikservices.com"
-                                             className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
-                                             aria-label="Email us at info@abtik.com"
-                                         >
-                                             <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
-                                                 <Mail className="w-5 h-5 text-white" />
-                                             </span>
-                                             <div>
-                                                 <p className="text-base text-gray-700 font-semibold">
-                                                     Write Email
-                                                 </p>
-                                                 <p className="text-xs text-gray-600"><a href="mailto:bharat@abtikservices.com">bharat@abtikservices.com</a></p>
-                                             </div>
-                                         </a>
-                                         <a
-                                             href=""
-                                             target="_blank"
-                                             rel="noopener noreferrer"
-                                             className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
-                                             aria-label="Visit us at 123 Business Hub, New Delhi, India"
-                                         >
-                                             <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
-                                                 <User className="w-5 h-5 text-white" />
-                                             </span>
-                                             <div>
-                                                 <p className="text-base text-gray-700 font-semibold ">
-                                                     Bharat Barot
-                                                 </p>
-                                                 <p className="text-xs text-gray-600">
-                                                    Vice President
-                                                     <br />
-                                                    
-                                                 </p>
-                                             </div>
-                                         </a>
-                                     </div>
+                    <div className="space-y-4">
+                        <a
+                            href=""
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
+                            aria-label="Visit us at 123 Business Hub, New Delhi, India"
+                        >
+                            <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
+                                <User className="w-5 h-5 text-white" />
+                            </span>
+                            <div>
+                                <p className="text-base text-gray-700 font-semibold ">
+                                    Bharat Barot
+                                </p>
+                                <p className="text-xs text-gray-600">
+                                    Vice President
+                                    <br />
+
+                                </p>
+                            </div>
+                        </a>
+                        <a
+                            href="tel:+91 7486 952 087"
+                            className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
+                            aria-label="Call us at +91 98765 43210"
+                        >
+                            <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
+                                <Phone className="w-5 h-5 text-white" />
+                            </span>
+                            <div>
+                                <p className="text-base text-gray-700 font-semibold">
+                                    Call Anytime
+                                </p>
+                                <p className="text-xs text-gray-600"><a href="tel:+917486 952 087">+91 7486 952 087</a></p>
+                            </div>
+                        </a>
+                        <a
+                            href="mailto:bharat@abtikservices.com"
+                            className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
+                            aria-label="Email us at info@abtik.com"
+                        >
+                            <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
+                                <Mail className="w-5 h-5 text-white" />
+                            </span>
+                            <div>
+                                <p className="text-base text-gray-700 font-semibold">
+                                    Write Email
+                                </p>
+                                <p className="text-xs text-gray-600"><a href="mailto:bharat@abtikservices.com">bharat@abtikservices.com</a></p>
+                            </div>
+                        </a>
+                    </div>
                 </motion.div>
                 <motion.div
                     initial={{ y: 50, opacity: 0 }}
@@ -351,7 +351,7 @@ const SeedFund = () => {
                     className="flex-grow   flex items-center justify-center h-full"
                 >
                     <img
-                    loading="lazy"
+                        loading="lazy"
                         src={Image1}
                         alt="Seed Fund illustration"
                         className="max-h-80 rounded-4xl w-full   "
@@ -375,7 +375,7 @@ const SeedFund = () => {
                         What Is Seed Funding?
                     </h2>
                     <p className="paragraph !text-white mx-auto text-left"
-                    style={{fontFamily:"Montserrat Alternates"}}
+                        style={{ fontFamily: "Montserrat Alternates" }}
                     >
                         Seed funding is the initial capital investment used to start a business.
                         It represents the first official equity funding stage and helps entrepreneurs
@@ -402,6 +402,49 @@ const SeedFund = () => {
 
                 <div className="mt-8 bg-white rounded-4xl p-4 md:p-8 shadow-md">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        {/* Grant Funding Card */}
+                        <motion.div
+                            initial={{ y: 50, opacity: 0 }}
+                            animate={isInViewFundingStructure ? { y: 0, opacity: 1 } : {}}
+                            transition={{ duration: 0.5, delay: 0.7 }}
+                            className="bg-gradient-to-br from-blue-50 to-white p-6 rounded-3xl border-2 border-blue-100 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+                        >
+                            <div className="flex items-center justify-center mb-4">
+                                <div className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
+                                    <Lightbulb className="w-8 h-8 text-white" />
+                                </div>
+                            </div>
+                            <div className="text-center mb-4">
+                                <h3
+                                    className="text-xl font-bold text-gray-800 mb-3"
+                                    style={{ fontFamily: "Montserrat Alternates" }}
+                                >
+                                    Grant Funding
+                                </h3>
+                                <div className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
+                                    <p className="text-2xl font-bold">Up to ₹20 Lakh</p>
+                                    <p className="text-xs opacity-90">Maximum grant amount</p>
+                                </div>
+                            </div>
+                            <ul className="space-y-2 text-xs text-gray-700">
+                                <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                    <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                    <span>Non-refundable assistance</span>
+                                </li>
+                                <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                    <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                    <span>Proof of concept development</span>
+                                </li>
+                                <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                    <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                    <span>Market validation support</span>
+                                </li>
+                                <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                    <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                    <span>Milestone-based disbursement</span>
+                                </li>
+                            </ul>
+                        </motion.div>
                         {/* Debt Funding Card */}
                         <motion.div
                             initial={{ y: 50, opacity: 0 }}
@@ -446,49 +489,6 @@ const SeedFund = () => {
                             </ul>
                         </motion.div>
 
-                        {/* Grant Funding Card */}
-                        <motion.div
-                            initial={{ y: 50, opacity: 0 }}
-                            animate={isInViewFundingStructure ? { y: 0, opacity: 1 } : {}}
-                            transition={{ duration: 0.5, delay: 0.7 }}
-                            className="bg-gradient-to-br from-blue-50 to-white p-6 rounded-3xl border-2 border-blue-100 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
-                        >
-                            <div className="flex items-center justify-center mb-4">
-                                <div className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
-                                    <Lightbulb className="w-8 h-8 text-white" />
-                                </div>
-                            </div>
-                            <div className="text-center mb-4">
-                                <h3
-                                    className="text-xl font-bold text-gray-800 mb-3"
-                                    style={{ fontFamily: "Montserrat Alternates" }}
-                                >
-                                    Grant Funding
-                                </h3>
-                                <div className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
-                                    <p className="text-2xl font-bold">Up to ₹20 Lakh</p>
-                                    <p className="text-xs opacity-90">Maximum grant amount</p>
-                                </div>
-                            </div>
-                            <ul className="space-y-2 text-xs text-gray-700">
-                                <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
-                                    <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>Non-refundable assistance</span>
-                                </li>
-                                <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
-                                    <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>Proof of concept development</span>
-                                </li>
-                                <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
-                                    <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>Market validation support</span>
-                                </li>
-                                <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
-                                    <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>Milestone-based disbursement</span>
-                                </li>
-                            </ul>
-                        </motion.div>
                     </div>
                 </div>
             </motion.section>
@@ -507,7 +507,7 @@ const SeedFund = () => {
                     Seed Fund Benefits & Eligibility
                 </h2>
                 <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
-                    <p className="text-sm md:text-base text-gray-600 text-center" style={{fontFamily:"Montserrat Alternates"}}>
+                    <p className="text-sm md:text-base text-gray-600 text-center" style={{ fontFamily: "Montserrat Alternates" }}>
                         Seed funding provides essential capital and strategic support to transform your business idea into a market-ready product while building a strong foundation for growth.
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

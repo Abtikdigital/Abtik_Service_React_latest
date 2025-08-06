@@ -39,6 +39,17 @@ const Career = () => {
 
   const jobOpenings = [
     {
+      title: "BDE",
+      position: "Business Development Executive",
+      description:
+        "We’re hiring a BDE to connect with leads, pitch services, and support sales growth through smart communication and follow-ups.",
+      vacancy: 30,
+      experience: "Fresher",
+      location: "Ahmedabad, India",
+      type: "Full-time",
+      skills: ["Cold Calling ", "CRM", " Presentation Skills ", " Client Follow-up", " Communication"],
+    },
+    {
       title: "BDM",
       position: "Business Development Manager",
       description:
@@ -59,17 +70,6 @@ const Career = () => {
       location: "Ahmedabad, India",
       type: "Full-time",
       skills: ["Recruitment"," Communication", "MS Office", " Coordination", " Time Management"],
-    },
-    {
-      title: "BDE",
-      position: "Business Development Executive",
-      description:
-        "We’re hiring a BDE to connect with leads, pitch services, and support sales growth through smart communication and follow-ups.",
-      vacancy: 30,
-      experience: "Fresher",
-      location: "Ahmedabad, India",
-      type: "Full-time",
-      skills: ["Cold Calling ", "CRM", " Presentation Skills ", " Client Follow-up", " Communication"],
     },
   ];
 

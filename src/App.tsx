@@ -32,9 +32,9 @@ const Sme = lazy(() => import("./pages/SmeService"));
 const TermLoan = lazy(() => import("./pages/TermService"));
 const ProjectFunding = lazy(() => import("./pages/ProjectFunding"));
 const Grants = lazy(() => import("./pages/GrantsService"));
-const AngelInverstor=lazy(()=>import("./pages/Angelinverstor"))
-const VCInverstor=lazy(()=>import("./pages/VCInvestor"))
-const NBFC=lazy(()=>import("./pages/NBFC"))
+const AngelInverstor = lazy(() => import("./pages/Angelinverstor"))
+const VCInverstor = lazy(() => import("./pages/VCInvestor"))
+const NBFC = lazy(() => import("./pages/NBFC"))
 // Trade Mark And Ip
 const TrademarkRegistrationAndFilling = lazy(
   () => import("./pages/TrademarkRegistrationAndFillingService")
@@ -53,6 +53,7 @@ const MakeInIndiaCertificate = lazy(
 const ZEDCertificate = lazy(() => import("./pages/ZedCertificate"));
 const ISOCertificate = lazy(() => import("./pages/IsoCertificate"));
 const TradeLicenseCertificate = lazy(() => import("./pages/TradeLicence"));
+const FSSAILicense = lazy(() => import("./pages/FssaiLiecence"))
 
 // Tax Compliance
 const GSTRegistrationFiling = lazy(
@@ -71,7 +72,7 @@ const ProducerCompany = lazy(() => import("./pages/ProducerCompany"));
 
 // Legal
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
-const RefundPolicy=lazy(()=>import("./pages/RefundPolicy"))
+const RefundPolicy = lazy(() => import("./pages/RefundPolicy"))
 function App() {
   return (
     <BrowserRouter>
@@ -141,15 +142,15 @@ function App() {
             path="/services/funding/loans/project-funding"
             element={<ProjectFunding />}
           />
-            <Route
+          <Route
             path="/services/funding/private-funding/angel-inverstor"
             element={<AngelInverstor />}
           />
-            <Route
+          <Route
             path="/services/funding/private-funding/venture-capital"
             element={<VCInverstor />}
           />
-            <Route
+          <Route
             path="/services/funding/private-funding/nbfc"
             element={<NBFC />}
           />
@@ -165,6 +166,12 @@ function App() {
             path="/services/legal/patent-filing"
             element={<PatentFiling />}
           />
+
+          <Route
+            path="/services/certificate/fssai-licence"
+            element={<FSSAILicense/>}
+          />
+
 
           <Route
             path="/services/certificate/startup-india"
@@ -231,7 +238,7 @@ function App() {
             path="/legal/privacy-policy"
             element={<PrivacyPolicy />}
           />
-            <Route
+          <Route
             path="/legal/refund-policy"
             element={<RefundPolicy />}
           />

@@ -1,22 +1,25 @@
 import Mainlayout from "../section/Mainlayout";
-import BgImage from "../assets/Hero/bgImg.svg"; // Assuming a similar background image for Angel Investor
+import BgImage from "../assets/Hero/bgImg.svg";
 import Contact from "../section/Contact";
-import Image1 from "../assets/AngelInvestor/Image1.png"; // Assuming a similar image for Angel Investor
+import Image1 from "../assets/FSSAI/Image1.jpeg";
 import {
     Mail,
     User,
     Phone,
-    Headset,
     ArrowUpRight,
     ArrowRight,
     CheckCircle,
     FileText,
-    DollarSign,
-    TrendingUp,
-    Users,
     Shield,
-    Leaf, // Can replace with relevant icon if needed
-    Tractor, // Can replace with relevant icon if needed
+    Clock,
+    Award,
+   
+    Building,
+    BookOpen,
+    AlertCircle,
+   
+    Star,
+    Globe,
 } from "lucide-react";
 import { memo, useState } from "react";
 import { useDispatch } from "react-redux";
@@ -25,7 +28,7 @@ import { useRef, useEffect } from "react";
 import { HeadProvider, Meta, Title } from "react-head";
 import seoData from "../data/seoData.json";
 
-const AngelInvestor = () => {
+const FSSAILicense = () => {
     const dispatch = useDispatch();
     const handleOpenDialog = () => {
         dispatch({ type: "open" });
@@ -37,38 +40,38 @@ const AngelInvestor = () => {
 
     const faq = [
         {
-            question: "1. What is Angel Investment?",
+            question: "1. What is an FSSAI License and why do I need it?",
             answer:
-                "Angel investment involves high-net-worth individuals providing capital to startups in exchange for equity or convertible debt, typically in early stages to help launch and grow innovative businesses.",
+                "FSSAI License is mandatory for all food businesses in India. It ensures food safety standards and is required by law under the Food Safety and Standards Act, 2006. Without it, you cannot legally operate any food-related business.",
         },
         {
-            question: "2. What is the investment range for Angel Investors?",
+            question: "2. What are the different types of FSSAI licenses?",
             answer:
-                "Angel investors typically invest between ₹5 lakh to ₹5 crore per startup, depending on the business potential, stage, and investor's risk appetite.",
+                "There are three types: Basic Registration (turnover up to ₹12 lakhs), State License (turnover ₹12 lakhs to ₹20 crores), and Central License (turnover above ₹20 crores or specific categories like importers, manufacturers of certain products).",
         },
         {
-            question: "3. Who is eligible for Angel Investment?",
+            question: "3. What documents are required for FSSAI registration?",
             answer:
-                "Early-stage startups with innovative ideas, strong teams, scalable business models, and high growth potential in sectors like technology, healthcare, fintech, and more are eligible.",
+                "You need Form A/B application, ID proof, address proof, NOC from municipality/gram panchayat, water test report, layout plan of premises, list of food products, and partnership deed/MOA (if applicable).",
         },
         {
-            question: "4. What documents are required for Angel Investment application?",
+            question: "4. How long does it take to get an FSSAI License?",
             answer:
-                "Required documents include pitch deck, business plan, financial projections, incorporation documents, management team profiles, market analysis, and proof of concept or MVP.",
+                "Basic Registration: 7-10 days, State License: 15-30 days, Central License: 30-60 days. Processing time may vary based on completeness of documents and verification requirements.",
         },
         {
-            question: "5. How many startups do Angel Investors support?",
+            question: "5. What is the validity and renewal process?",
             answer:
-                "Angel investors may support multiple startups annually, with networks like Indian Angel Network investing in 10-20 deals per year, providing both funding and mentorship.",
+                "FSSAI licenses are valid for 1-5 years based on your choice. Renewal applications should be submitted 30 days before expiry. Late renewals attract penalties and may require fresh applications in extreme cases.",
         },
         {
-            question: "6. What is the structure of Angel Investment?",
+            question: "6. What are the penalties for operating without FSSAI License?",
             answer:
-                "Angel investments are typically structured as equity, convertible notes, or SAFE agreements, with investors often forming syndicates to pool resources and share risks.",
+                "Operating without FSSAI license can result in fines up to ₹5 lakhs, imprisonment up to 6 months, or both. The business may also be shut down by food safety officers.",
         },
     ];
 
-    const toggleIsExpanded = (index: number) => {
+    const toggleIsExpanded = (index: any) => {
         setIsExpanded((prev) =>
             prev.index === index && prev.isOpen
                 ? { isOpen: false, index: -1 }
@@ -78,139 +81,133 @@ const AngelInvestor = () => {
 
     // Hero
     const refHero = useRef(null);
-    const isInViewHero = useInView(refHero, { once: true, amount: 0.4 });
+    const isInViewHero = useInView(refHero, { once: true, amount: 0.1 });
 
     // Get In Touch
     const refTouch = useRef(null);
-    const isInViewTouch = useInView(refTouch, { once: true, amount: 0.4 });
+    const isInViewTouch = useInView(refTouch, { once: true, amount: 0.1 });
     const [touchCols, setTouchCols] = useState(1);
     useEffect(() => {
-        const updateCols = () => {
-            setTouchCols(window.innerWidth >= 768 ? 2 : 1);
-        };
+        const updateCols = () => setTouchCols(window.innerWidth >= 768 ? 2 : 1);
         updateCols();
         window.addEventListener("resize", updateCols);
         return () => window.removeEventListener("resize", updateCols);
     }, []);
-    const getTouchDelay = (index: number) => {
+    const getTouchDelay = (index: any) => {
         const row = Math.floor(index / touchCols);
         return 0.5 + row * 0.5;
     };
 
-    // What is Angel Investment
-    const refAngel = useRef(null);
-    const isInViewAngel = useInView(refAngel, { once: true, amount: 0.4 });
+    // About
+    const refAbout = useRef(null);
+    const isInViewAbout = useInView(refAbout, { once: true, amount: 0.1 });
 
-    // Investment Structure
-    const refInvestmentStructure = useRef(null);
-    const isInViewInvestmentStructure = useInView(refInvestmentStructure, { once: true, amount: 0.4 });
+    // License Types
+    const refLicenseTypes = useRef(null);
+    const isInViewLicenseTypes = useInView(refLicenseTypes, { once: true, amount: 0.1 });
 
-    // Angel Benefits
-    const refAngelBenefits = useRef(null);
-    const isInViewAngelBenefits = useInView(refAngelBenefits, { once: true, amount: 0.4 });
+    // Benefits & Requirements
+    const refBenefits = useRef(null);
+    const isInViewBenefits = useInView(refBenefits, { once: true, amount: 0.1 });
 
-    // Abtik Process
+    // Process Steps
     const refProcess = useRef(null);
-    const isInViewProcess = useInView(refProcess, { once: true, amount: 0.4 });
+    const isInViewProcess = useInView(refProcess, { once: true, amount: 0.1 });
     const [processCols, setProcessCols] = useState(1);
     useEffect(() => {
-        const updateCols = () => {
-            setProcessCols(window.innerWidth >= 768 ? 3 : 1);
-        };
+        const updateCols = () => setProcessCols(window.innerWidth >= 768 ? 3 : 1);
         updateCols();
         window.addEventListener("resize", updateCols);
         return () => window.removeEventListener("resize", updateCols);
     }, []);
-    const getProcessDelay = (index: number) => {
+    const getProcessDelay = (index: any) => {
         const row = Math.floor(index / processCols);
         return 0.5 + row * 0.5;
     };
-    const processData = [
-        {
-            icon: FileText,
-            title: "Startup Preparation",
-            description:
-                "We help you prepare comprehensive pitch decks, business plans, and financial models for attracting angel investors and ensuring application readiness.",
-        },
-        {
-            icon: Users,
-            title: "Investor Facilitation",
-            description:
-                "Our team connects you with angel investor networks and facilitates the funding process, ensuring proper documentation and pitch presentation.",
-        },
-        {
-            icon: Headset,
-            title: "Growth Support",
-            description:
-                "We provide ongoing support for scaling your startup, leveraging angel funding for product development, market expansion, and business growth.",
-        },
-    ];
 
-    // Benefits
-    const refBenefits = useRef(null);
-    const isInViewBenefits = useInView(refBenefits, { once: true, amount: 0.4 });
-    const [benefitsCols, setBenefitsCols] = useState(1);
+    // Why Choose Abtik
+    const refWhyChoose = useRef(null);
+    const isInViewWhyChoose = useInView(refWhyChoose, { once: true, amount: 0.1 });
+    const [whyChooseCols, setWhyChooseCols] = useState(1);
     useEffect(() => {
-        const updateCols = () => {
-            setBenefitsCols(window.innerWidth >= 768 ? 3 : 1);
-        };
+        const updateCols = () => setWhyChooseCols(window.innerWidth >= 768 ? 3 : 1);
         updateCols();
         window.addEventListener("resize", updateCols);
         return () => window.removeEventListener("resize", updateCols);
     }, []);
-    const getBenefitsDelay = (index: number) => {
-        const row = Math.floor(index / benefitsCols);
+    const getWhyChooseDelay = (index: any) => {
+        const row = Math.floor(index / whyChooseCols);
         return 0.5 + row * 0.5;
     };
-    const benefitsData = [
-        {
-            icon: DollarSign,
-            title: "Flexible Investment Amounts",
-            description:
-                "Access funding from ₹5 lakh to ₹5 crore per startup through angel investors for scaling your innovation and business operations.",
-        },
-        {
-            icon: TrendingUp,
-            title: "Mentorship & Networking",
-            description:
-                "Benefit from experienced investors providing guidance, industry connections, and strategic support for business growth.",
-        },
-        {
-            icon: Shield,
-            title: "Early-Stage Focus",
-            description:
-                "Leverage specialized support for early-stage startups with high growth potential, including validation and market access.",
-        },
-    ];
 
     // FAQ
     const refFAQ = useRef(null);
-    const isInViewFAQ = useInView(refFAQ, { once: true, amount: 0.4 });
-    const getFaqDelay = (index: number) => {
+    const isInViewFAQ = useInView(refFAQ, { once: true, amount: 0.1 });
+    const getFaqDelay = (index: any) => {
         const row = Math.floor(index / 1);
         return 0.2 + row * 0.1;
     };
 
     // Contact
     const refContact = useRef(null);
-    const isInViewContact = useInView(refContact, { once: true, amount: 0.4 });
+    const isInViewContact = useInView(refContact, { once: true, amount: 0.1 });
 
+    // === Process Step Cards ===
+    const processData = [
+        {
+            icon: FileText,
+            title: "Document Preparation",
+            description: "Gather all required documents including business registration, premises details, and identity proofs for FSSAI application.",
+        },
+        {
+            icon: BookOpen,
+            title: "FSSAI Application Filing",
+            description: "Submit the appropriate FSSAI form (Basic/State/Central) with complete documentation through online portal or offline process.",
+        },
+        {
+            icon: Shield,
+            title: "License Approval & Compliance",
+            description: "Track application status, receive your FSSAI license, and get guidance on ongoing compliance requirements and renewals.",
+        },
+    ];
+
+    // === Why Choose Abtik Cards ===
+    const whyChooseData = [
+        {
+            icon: Shield,
+            title: "Legal Compliance",
+            description: "Ensure full compliance with Indian food safety laws and avoid penalties, fines, or business closure.",
+        },
+        {
+            icon: Award,
+            title: "Consumer Trust",
+            description: "Build customer confidence with official FSSAI license display, showing commitment to food safety standards.",
+        },
+        {
+            icon: Clock,
+            title: "Quick Processing",
+            description: "Get expert assistance for faster license approval with proper documentation and compliance guidance.",
+        },
+    ];
+
+    // === Main JSX ===
     return (
         <>
             <HeadProvider>
-                <Title>{seoData?.angelInvestorService?.title}</Title> {/* Assuming SEO data for Angel Investor */}
-                <Meta name="description" content={seoData?.angelInvestorService?.description} />
-                <Meta name="keyword" content={seoData?.angelInvestorService?.keyword} />
-                <Meta name="robots" content={seoData?.angelInvestorService?.robots} />
+                <Title>{seoData?.fssaiLicenseService?.title || "FSSAI License Registration - Get Food License Online | Abtik"}</Title>
+                <Meta name="description" content={seoData?.fssaiLicenseService?.description || "Get FSSAI License registration online with Abtik. Expert assistance for Basic Registration, State License & Central License. Fast approval, complete documentation support."} />
+                <Meta name="keyword" content={seoData?.fssaiLicenseService?.keyword || "FSSAI license, food license, FSSAI registration, food safety license, FSSAI online application"} />
+                <Meta name="robots" content={seoData?.fssaiLicenseService?.robots || "index, follow"} />
             </HeadProvider>
+
             <Mainlayout>
                 {/* Hero Section */}
                 <section
                     ref={refHero}
                     className="flex justify-center items-center h-[70vh] sm:h-[80vh] lg:h-[85vh] xl:h-screen 
-                        lg:justify-end lg:items-center bg-center bg-cover 
-                        px-4 sm:px-6 md:px-8 lg:px-12 xl:px-14
-                        relative overflow-hidden"
+                    lg:justify-end lg:items-center bg-center bg-cover 
+                    px-4 sm:px-6 md:px-8 lg:px-12 xl:px-14
+                    relative overflow-hidden"
                     style={{
                         backgroundImage: `url(${BgImage})`,
                         backgroundSize: "cover",
@@ -224,43 +221,36 @@ const AngelInvestor = () => {
                         animate={isInViewHero ? { y: 0, opacity: 1 } : {}}
                         transition={{ duration: 0.5 }}
                         className="relative z-10 w-full max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-none lg:w-1/2 
-                            space-y-4 sm:space-y-5 md:space-y-6 lg:space-y-8
-                            text-center lg:text-left"
+                        space-y-4 sm:space-y-5 md:space-y-6 lg:space-y-8
+                        text-center lg:text-left"
                     >
                         <h1
                             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 
-                              font-bold leading-tight sm:leading-tight md:leading-tight lg:leading-tight
-                              text-white lg:text-inherit tracking-wide
-                              main-heading"
+                          font-bold leading-tight text-white lg:text-inherit tracking-wide main-heading"
                             style={{ fontFamily: "Anton" }}
                         >
-                            Secure{" "}
+                            Get Your{" "}
                             <span className="text-[#3CA2E2] font-extrabold block sm:inline">
-                                Angel Investment
+                                FSSAI Food License
                             </span>{" "}
-                            for Startup Growth
+                            Fast & Easy
                         </h1>
                         <p
                             className="text-sm sm:text-base md:text-lg lg:text-xl
-                             leading-relaxed sm:leading-relaxed md:leading-relaxed
-                             text-white lg:text-white
-                             paragraph !text-white
-                             max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
+                         leading-relaxed sm:leading-relaxed md:leading-relaxed
+                         text-white lg:text-white
+                         paragraph !text-white
+                         max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
                             style={{ fontFamily: "Montserrat Alternates" }}
                         >
-                            Fuel your startup journey with angel investment support. Access flexible funding from experienced investors to launch innovative ideas and drive business expansion.
+                            Secure your FSSAI License for legal food business operations. Expert guidance for Basic Registration, State License, and Central License with complete documentation support.
                         </p>
                         <div className="pt-2 sm:pt-4">
                             <button
                                 onClick={handleOpenDialog}
-                                className="custom-btn 
-                                  text-sm sm:text-base md:text-lg
-                                  px-6 sm:px-8 md:px-10 lg:px-12
-                                  py-3 sm:py-3.5 md:py-4
-                                   transition-transform duration-300
-                                  shadow-lg hover:shadow-xl"
+                                className="custom-btn text-sm sm:text-base md:text-lg px-6 sm:px-8 md:px-10 lg:px-12 py-3 sm:py-3.5 md:py-4 transition-transform duration-300 shadow-lg hover:shadow-xl"
                             >
-                                Apply for Angel Investment
+                                Apply for FSSAI License
                             </button>
                         </div>
                     </motion.div>
@@ -286,80 +276,83 @@ const AngelInvestor = () => {
                         >
                             Get in Touch
                         </h3>
-                     <div className="space-y-4">
-                                            <a
-                                                href=""
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
-                                                aria-label="Visit us at 123 Business Hub, New Delhi, India"
-                                            >
-                                                <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
-                                                    <User className="w-5 h-5 text-white" />
-                                                </span>
-                                                <div>
-                                                    <p className="text-base text-gray-700 font-semibold ">
-                                                        Bharat Barot
-                                                    </p>
-                                                    <p className="text-xs text-gray-600">
-                                                       Vice President
-                                                        <br />
-                                                       
-                                                    </p>
-                                                </div>
-                                            </a>
-                                            <a
-                                                href="tel:++91 7486 952 087"
-                                                className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
-                                                aria-label="Call us at +91 98765 43210"
-                                            >
-                                                <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
-                                                    <Phone className="w-5 h-5 text-white" />
-                                                </span>
-                                                <div>
-                                                    <p className="text-base text-gray-700 font-semibold">
-                                                        Call Anytime
-                                                    </p>
-                                                    <p className="text-xs text-gray-600"><a href="tel:+917486 952 087">+91 7486 952 087</a></p>
-                                                </div>
-                                            </a>
-                                            <a
-                                                href="mailto:bharat@abtikservices.com"
-                                                className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
-                                                aria-label="Email us at info@abtik.com"
-                                            >
-                                                <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
-                                                    <Mail className="w-5 h-5 text-white" />
-                                                </span>
-                                                <div>
-                                                    <p className="text-base text-gray-700 font-semibold">
-                                                        Write Email
-                                                    </p>
-                                                    <p className="text-xs text-gray-600"><a href="mailto:bharat@abtikservices.com">bharat@abtikservices.com</a></p>
-                                                </div>
-                                            </a>
-                                        </div>
+                        <div className="space-y-4">
+                            <a
+                                href=""
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
+                                aria-label="Contact our representative"
+                            >
+                                <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
+                                    <User className="w-5 h-5 text-white" />
+                                </span>
+                                <div>
+                                    <p className="text-base text-gray-700 font-semibold">
+                                        Sumit Radadiya
+                                    </p>
+                                    <p className="text-xs text-gray-600">
+                                        HOD-Sales Department
+                                        <br />
+                                    </p>
+                                </div>
+                            </a>
+                            <a
+                                href="tel:+916358169584"
+                                className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
+                                aria-label="Call us at +91 6358 169 584"
+                            >
+                                <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
+                                    <Phone className="w-5 h-5 text-white" />
+                                </span>
+                                <div>
+                                    <p className="text-base text-gray-700 font-semibold">
+                                        Call Anytime
+                                    </p>
+                                    <p className="text-xs text-gray-600">
+                                        <a href="tel:+916358169584">+91 6358 169 584</a>
+                                    </p>
+                                </div>
+                            </a>
+                            <a
+                                href="mailto:sumitradadiya@abtikservices.in"
+                                className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
+                                aria-label="Email us at sumitradadiya@abtikservices.in"
+                            >
+                                <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
+                                    <Mail className="w-5 h-5 text-white" />
+                                </span>
+                                <div>
+                                    <p className="text-base text-gray-700 font-semibold">
+                                        Write Email
+                                    </p>
+                                    <p className="text-xs text-gray-600">
+                                        <a href="mailto:sumitradadiya@abtikservices.in">sumitradadiya@abtikservices.in</a>
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
                     </motion.div>
                     <motion.div
                         initial={{ y: 50, opacity: 0 }}
                         animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
                         transition={{ duration: 0.5, delay: getTouchDelay(1) }}
-                        className="flex-grow  rounded-2xl flex items-center justify-center h-full"
+                        className="flex-grow rounded-2xl flex items-center justify-center h-full"
                     >
                         <img
                             loading="lazy"
                             src={Image1}
-                            alt="Angel Investor illustration"
-                            className="max-h-80 w-full rounded-lg "
+                            alt="FSSAI License Illustration"
+                            className="max-h-80 w-full rounded-lg"
                         />
                     </motion.div>
                 </motion.section>
 
-                {/* What is Angel Investment */}
+                {/* What is FSSAI License */}
                 <motion.section
-                    ref={refAngel}
+                    ref={refAbout}
                     initial={{ y: 100, opacity: 0 }}
-                    animate={isInViewAngel ? { y: 0, opacity: 1 } : {}}
+                    animate={isInViewAbout ? { y: 0, opacity: 1 } : {}}
                     transition={{ duration: 0.5 }}
                     className="px-7 md:px-14 bg-[#f7f7f7] py-8"
                 >
@@ -368,42 +361,43 @@ const AngelInvestor = () => {
                             className="sub-heading text-white text-left"
                             style={{ fontFamily: "Anton" }}
                         >
-                            What Is Angel Investment?
+                            What Is FSSAI License?
                         </h2>
                         <p className="paragraph !text-white mx-auto text-left"
                             style={{ fontFamily: "Montserrat Alternates" }}
                         >
-                            Angel investment refers to funding provided by affluent individuals to startups and small businesses, often in exchange for ownership equity or convertible debt. These investors support early-stage companies with high growth potential, offering not just capital but also mentorship and industry connections to foster innovation and business development.
+                            FSSAI (Food Safety and Standards Authority of India) License is a mandatory certification for all food businesses in India. 
+                            It ensures compliance with food safety standards and regulations. Whether you're running a restaurant, manufacturing food products, 
+                            or selling food items, FSSAI registration is legally required. Let Abtik handle your FSSAI license application process with expert guidance and complete documentation support.
                         </p>
                     </div>
                 </motion.section>
 
-                {/* Angel Investment Structure Section */}
+                {/* FSSAI License Types Section */}
                 <motion.section
-                    ref={refInvestmentStructure}
+                    ref={refLicenseTypes}
                     initial={{ y: 100, opacity: 0 }}
-                    animate={isInViewInvestmentStructure ? { y: 0, opacity: 1 } : {}}
+                    animate={isInViewLicenseTypes ? { y: 0, opacity: 1 } : {}}
                     transition={{ duration: 0.5 }}
                     className="px-7 md:px-14 bg-[#f7f7f7] py-8"
                 >
                     <h2 className="sub-heading text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
                         style={{ fontFamily: "Anton" }}
                     >
-                        Angel Investment Structure
+                        Types of FSSAI Licenses
                     </h2>
-
                     <div className="mt-8 bg-white rounded-4xl p-4 md:p-8 shadow-md">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                            {/* Equity Investment Card */}
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            {/* Basic Registration Card */}
                             <motion.div
                                 initial={{ y: 50, opacity: 0 }}
-                                animate={isInViewInvestmentStructure ? { y: 0, opacity: 1 } : {}}
+                                animate={isInViewLicenseTypes ? { y: 0, opacity: 1 } : {}}
                                 transition={{ duration: 0.5, delay: 0.5 }}
                                 className="bg-gradient-to-br from-blue-50 to-white p-6 rounded-3xl border-2 border-blue-100 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
                             >
                                 <div className="flex items-center justify-center mb-4">
                                     <div className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
-                                        <Leaf className="w-8 h-8 text-white" /> {/* Replace with relevant icon */}
+                                        <Star className="w-8 h-8 text-white" />
                                     </div>
                                 </div>
                                 <div className="text-center mb-4">
@@ -411,43 +405,43 @@ const AngelInvestor = () => {
                                         className="text-xl font-bold text-gray-800 mb-3"
                                         style={{ fontFamily: "Montserrat Alternates" }}
                                     >
-                                        Equity Investment
+                                        Basic Registration
                                     </h3>
                                     <div className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
-                                        <p className="text-2xl font-bold">Ownership Stake</p>
-                                        <p className="text-xs opacity-90">Direct equity in startup</p>
+                                        <p className="text-lg font-bold">Up to ₹12 Lakhs</p>
+                                        <p className="text-xs opacity-90">Annual Turnover</p>
                                     </div>
                                 </div>
                                 <ul className="space-y-2 text-xs text-gray-700">
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                         <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                        <span>Investors receive shares</span>
+                                        <span>Small food businesses & vendors</span>
                                     </li>
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                         <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                        <span>High risk-reward potential</span>
+                                        <span>Home-based food operators</span>
                                     </li>
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                         <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                        <span>Long-term commitment</span>
+                                        <span>Local food retailers</span>
                                     </li>
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                         <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                        <span>Board seat possible</span>
+                                        <span>Fee: ₹100 for 1 year</span>
                                     </li>
                                 </ul>
                             </motion.div>
 
-                            {/* Convertible Debt Card */}
+                            {/* State License Card */}
                             <motion.div
                                 initial={{ y: 50, opacity: 0 }}
-                                animate={isInViewInvestmentStructure ? { y: 0, opacity: 1 } : {}}
+                                animate={isInViewLicenseTypes ? { y: 0, opacity: 1 } : {}}
                                 transition={{ duration: 0.5, delay: 0.7 }}
                                 className="bg-gradient-to-br from-blue-50 to-white p-6 rounded-3xl border-2 border-blue-100 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
                             >
                                 <div className="flex items-center justify-center mb-4">
                                     <div className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
-                                        <Tractor className="w-8 h-8 text-white" /> {/* Replace with relevant icon */}
+                                        <Building className="w-8 h-8 text-white" />
                                     </div>
                                 </div>
                                 <div className="text-center mb-4">
@@ -455,29 +449,73 @@ const AngelInvestor = () => {
                                         className="text-xl font-bold text-gray-800 mb-3"
                                         style={{ fontFamily: "Montserrat Alternates" }}
                                     >
-                                        Convertible Debt
+                                        State License
                                     </h3>
                                     <div className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
-                                        <p className="text-2xl font-bold">Flexible Terms</p>
-                                        <p className="text-xs opacity-90">Converts to equity</p>
+                                        <p className="text-lg font-bold">₹12L - ₹20 Cr</p>
+                                        <p className="text-xs opacity-90">Annual Turnover</p>
                                     </div>
                                 </div>
                                 <ul className="space-y-2 text-xs text-gray-700">
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                         <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                        <span>Initial loan structure</span>
+                                        <span>Medium food businesses</span>
                                     </li>
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                         <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                        <span>Converts at future valuation</span>
+                                        <span>Restaurants & food services</span>
                                     </li>
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                         <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                        <span>Discount rates apply</span>
+                                        <span>Food manufacturers</span>
                                     </li>
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                         <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                        <span>Lower initial risk</span>
+                                        <span>Fee: ₹2,000-7,500</span>
+                                    </li>
+                                </ul>
+                            </motion.div>
+
+                            {/* Central License Card */}
+                            <motion.div
+                                initial={{ y: 50, opacity: 0 }}
+                                animate={isInViewLicenseTypes ? { y: 0, opacity: 1 } : {}}
+                                transition={{ duration: 0.5, delay: 0.9 }}
+                                className="bg-gradient-to-br from-blue-50 to-white p-6 rounded-3xl border-2 border-blue-100 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+                            >
+                                <div className="flex items-center justify-center mb-4">
+                                    <div className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
+                                        <Globe className="w-8 h-8 text-white" />
+                                    </div>
+                                </div>
+                                <div className="text-center mb-4">
+                                    <h3
+                                        className="text-xl font-bold text-gray-800 mb-3"
+                                        style={{ fontFamily: "Montserrat Alternates" }}
+                                    >
+                                        Central License
+                                    </h3>
+                                    <div className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
+                                        <p className="text-lg font-bold">Above ₹20 Cr</p>
+                                        <p className="text-xs opacity-90">Annual Turnover</p>
+                                    </div>
+                                </div>
+                                <ul className="space-y-2 text-xs text-gray-700">
+                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                        <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                        <span>Large manufacturers</span>
+                                    </li>
+                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                        <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                        <span>Importers & exporters</span>
+                                    </li>
+                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                        <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                        <span>Multi-state operations</span>
+                                    </li>
+                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                        <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                        <span>Fee: ₹7,500-10,000</span>
                                     </li>
                                 </ul>
                             </motion.div>
@@ -485,29 +523,31 @@ const AngelInvestor = () => {
                     </div>
                 </motion.section>
 
-                {/* Angel Benefits Section */}
+                {/* FSSAI Benefits & Requirements */}
                 <motion.section
-                    ref={refAngelBenefits}
+                    ref={refBenefits}
                     initial={{ y: 100, opacity: 0 }}
-                    animate={isInViewAngelBenefits ? { y: 0, opacity: 1 } : {}}
+                    animate={isInViewBenefits ? { y: 0, opacity: 1 } : {}}
                     transition={{ duration: 0.5 }}
                     className="px-7 md:px-14 bg-[#f7f7f7] py-8"
                 >
                     <h2 className="sub-heading text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
                         style={{ fontFamily: "Anton" }}
                     >
-                        Angel Investment Benefits & Eligibility
+                        FSSAI Benefits & Requirements
                     </h2>
                     <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
                         <p className="text-sm md:text-base text-gray-600 text-center"
                             style={{ fontFamily: "Montserrat Alternates" }}
                         >
-                            Angel investment provides essential early-stage funding, mentorship, and networks to startups, helping them validate ideas and achieve rapid growth in competitive markets.
+                            FSSAI license provides legal authorization to operate food businesses in India,
+                            ensuring compliance with food safety standards while building customer trust and
+                            enabling business growth opportunities.
                         </p>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <motion.div
                                 initial={{ y: 50, opacity: 0 }}
-                                animate={isInViewAngelBenefits ? { y: 0, opacity: 1 } : {}}
+                                animate={isInViewBenefits ? { y: 0, opacity: 1 } : {}}
                                 transition={{ duration: 0.5, delay: 0.5 }}
                                 className="space-y-4"
                             >
@@ -520,29 +560,29 @@ const AngelInvestor = () => {
                                 <ul className="space-y-2 text-sm text-gray-600">
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                         <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                        <span>Flexible funding amounts for early growth.</span>
+                                        <span>Legal authorization to operate food business</span>
                                     </li>
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                         <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                        <span>Expert mentorship and industry connections.</span>
+                                        <span>Enhanced customer trust and credibility</span>
                                     </li>
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                         <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                        <span>Validation of business model.</span>
+                                        <span>Access to government tenders and contracts</span>
                                     </li>
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                         <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                        <span>Access to investor networks.</span>
+                                        <span>Bank loan eligibility for food businesses</span>
                                     </li>
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                         <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                        <span>Potential for follow-on funding.</span>
+                                        <span>Protection from legal penalties and fines</span>
                                     </li>
                                 </ul>
                             </motion.div>
                             <motion.div
                                 initial={{ y: 50, opacity: 0 }}
-                                animate={isInViewAngelBenefits ? { y: 0, opacity: 1 } : {}}
+                                animate={isInViewBenefits ? { y: 0, opacity: 1 } : {}}
                                 transition={{ duration: 0.5, delay: 0.7 }}
                                 className="space-y-4"
                             >
@@ -550,28 +590,28 @@ const AngelInvestor = () => {
                                     className="text-lg font-semibold text-gray-800"
                                     style={{ fontFamily: "Montserrat Alternates" }}
                                 >
-                                    Eligibility Criteria
+                                    Required Documents
                                 </h3>
                                 <ul className="space-y-2 text-sm text-gray-600">
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
-                                        <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                        <span>Registered startups with innovative ideas.</span>
+                                        <AlertCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                        <span>Form A/B application (as applicable)</span>
                                     </li>
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
-                                        <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                        <span>Strong founding team.</span>
+                                        <AlertCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                        <span>Identity and address proof of applicant</span>
                                     </li>
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
-                                        <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                        <span>Scalable business model.</span>
+                                        <AlertCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                        <span>NOC from municipality/gram panchayat</span>
                                     </li>
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
-                                        <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                        <span>Proof of concept or MVP.</span>
+                                        <AlertCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                        <span>Water testing report from approved lab</span>
                                     </li>
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
-                                        <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                        <span>High growth potential.</span>
+                                        <AlertCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                        <span>Layout plan of premises with dimensions</span>
                                     </li>
                                 </ul>
                             </motion.div>
@@ -590,7 +630,7 @@ const AngelInvestor = () => {
                     <h2 className="sub-heading text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
                         style={{ fontFamily: "Anton" }}
                     >
-                        How Abtik Helps You Secure Angel Investment
+                        How Abtik Helps with FSSAI License
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
                         {processData?.map((process, index) => (
@@ -616,26 +656,26 @@ const AngelInvestor = () => {
                     </div>
                 </motion.section>
 
-                {/* Benefits Section */}
+                {/* Why Choose Abtik Section */}
                 <motion.section
-                    ref={refBenefits}
+                    ref={refWhyChoose}
                     initial={{ y: 100, opacity: 0 }}
-                    animate={isInViewBenefits ? { y: 0, opacity: 1 } : {}}
+                    animate={isInViewWhyChoose ? { y: 0, opacity: 1 } : {}}
                     transition={{ duration: 0.5 }}
-                    className="px-7 md:px-14 bg-[#f7f7f7] py-8 "
+                    className="px-7 md:px-14 bg-[#f7f7f7] py-8"
                 >
                     <h2 className="sub-heading text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
                         style={{ fontFamily: "Anton" }}
                     >
-                        Why Choose Abtik for Angel Investment
+                        Why Choose Abtik for FSSAI License
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-                        {benefitsData?.map((benefit, index) => (
+                        {whyChooseData?.map((benefit, index) => (
                             <motion.div
                                 key={index}
                                 initial={{ y: 50, opacity: 0 }}
-                                animate={isInViewBenefits ? { y: 0, opacity: 1 } : {}}
-                                transition={{ duration: 0.5, delay: getBenefitsDelay(index) }}
+                                animate={isInViewWhyChoose ? { y: 0, opacity: 1 } : {}}
+                                transition={{ duration: 0.5, delay: getWhyChooseDelay(index) }}
                                 className="bg-white p-6 rounded-4xl shadow-md text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
                             >
                                 <div className="mb-4 inline-block p-3 bg-gradient-to-r from-blue-100 to-blue-200 rounded-full">
@@ -659,15 +699,15 @@ const AngelInvestor = () => {
                     initial={{ y: 100, opacity: 0 }}
                     animate={isInViewFAQ ? { y: 0, opacity: 1 } : {}}
                     transition={{ duration: 0.5 }}
-                    className="bg-[#f7f7f7]  py-8 md:py-16 space-y-6"
+                    className="bg-[#f7f7f7] py-8 md:py-16 space-y-6"
                 >
-                    <h1 className="sub-heading bg-gradient-to-t text-center  bg-clip-text from-[#3CA2E2] to-[#052EAA] text-transparent"
+                    <h1 className="sub-heading bg-gradient-to-t text-center bg-clip-text from-[#3CA2E2] to-[#052EAA] text-transparent"
                         style={{ fontFamily: "Anton" }}
                     >
                         Frequently Asked Questions
                     </h1>
                     <div
-                        className="px-6  md:px-24 space-y-4 "
+                        className="px-6 md:px-24 space-y-4"
                         style={{ fontFamily: "Montserrat Alternates" }}
                     >
                         {faq.map((data, index) => (
@@ -679,7 +719,7 @@ const AngelInvestor = () => {
                                 className="bg-white rounded-lg shadow-sm border border-gray-100 transition-all duration-300"
                             >
                                 <h2
-                                    className={`p-2.5 px-4 relative cursor-pointer flex items-center justify-between  text-base font-medium ${isExpanded.isOpen && isExpanded.index === index
+                                    className={`p-2.5 px-4 relative cursor-pointer flex items-center justify-between text-base font-medium ${isExpanded.isOpen && isExpanded.index === index
                                         ? "border-b border-gray-200"
                                         : ""
                                         }`}
@@ -723,4 +763,4 @@ const AngelInvestor = () => {
     );
 };
 
-export default memo(AngelInvestor);
+export default memo(FSSAILicense);

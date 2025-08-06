@@ -9,6 +9,7 @@ import Image from "../assets/Hero/bgImg.svg";
 import { X, User, Mail, Phone, MessageSquare, Building } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { memo } from "react";
+import Offer from "./Offer";
 
 // Define FormData interface - updated to match API
 interface FormData {
@@ -115,6 +116,7 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
 
   return (
     <>
+    <Offer/>
       <Navbar />
       {children}
       <Footer />

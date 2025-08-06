@@ -39,243 +39,232 @@ const menuItems: Menu[] = [
     path: "/about",
     description: "Learn more about our company and mission"
   },
-  {
-    name: "Services", // Changed from "Service" to "Services"
-    path: null,
-    description: "Explore our comprehensive business services",
-    subItems: [
-      {
-        section: "Funding Solutions",
-        items: [
-          {
-            name: "Seed Fund",
-            path: "/services/funding/seed-fund", // Updated path
-            description: "Government and State Subsidies for Business Growth",
-          },
-          {
-            name: "Subsidy",
-            path: null,
-            description: "Business Loans with Flexible Terms and Conditions",
-            subServices: [
-              { name: "PMEGP", path: "/services/funding/subsidy/pmegp" }, // Updated paths
-              { name: "CMEGP", path: "/services/funding/subsidy/cmegp" },
-              { name: "PMFME", path: "/services/funding/subsidy/pmfme" },
-              {
-                name: "Stand Up India",
-                path: "/services/funding/subsidy/stand-up-india",
-              },
-            ],
-          },
-          {
-            name: "Grants",
-            path: "/services/funding/grants", // Updated path
-            description: "Connect with Private Investors and Venture Capital",
-          },
-          {
-            name: "MSME Loan",
-            path: null,
-            description:
-              "Loans for Micro, Small, and Medium Enterprises",
-            subServices: [
-              { name: "Mudra Loan", path: "/services/funding/msme-loan/mudra" }, // Updated paths
-              { name: "Udaan", path: "/services/funding/msme-loan/udaan" },
-              { name: "CGTMSE", path: "/services/funding/msme-loan/cgtmse" },
-            ],
-          },
-          {
-            name: "Agriculture",
-            path: null,
-            description: "Early-Stage Funding for Agricultural Ventures",
-            subServices: [
-              {
-                name: "NAIFF/AIFF",
-                path: "/services/funding/agriculture/naiff-aiff", // Updated path
-              },
-              {
-                name: "Agrisure",
-                path: "/services/funding/agriculture/agrisure", // Updated path
-              },
-            ],
-          },
-          {
-            name: "Private Funding",
-            path: null,
-            description: "Early-Stage Funding for Agricultural Ventures",
-            subServices: [
-              {
-                name: "Angel Inverstor",
-                path: "/services/funding/private-funding/angel-inverstor", // Updated path
-              },
-              {
-                name: "VC Funding",
-                path: "/services/funding/private-funding/venture-capital", // Updated path
-              },
-              {
-                name: "NBFC",
-                path: "/services/funding/private-funding/nbfc", // Updated path
-              },
-            ],
-          },
+ {
+  name: "Services",
+  path: null,
+  description: "Explore our comprehensive business services",
+  subItems: [
+    {
+      section: "Funding Solutions",
+      items: [
+        {
+          name: "Seed Fund",
+          path: "/services/funding/seed-fund",
+          description: "Early-stage funding for startup ventures and business ideas",
+        },
+        {
+          name: "Subsidy",
+          path: null,
+          description: "Government subsidies and financial assistance programs",
+          subServices: [
+            { name: "PMEGP", path: "/services/funding/subsidy/pmegp" },
+            { name: "CMEGP", path: "/services/funding/subsidy/cmegp" },
+            { name: "PMFME", path: "/services/funding/subsidy/pmfme" },
+            {
+              name: "Stand Up India",
+              path: "/services/funding/subsidy/stand-up-india",
+            },
+          ],
+        },
+        {
+          name: "Grants",
+          path: "/services/funding/grants",
+          description: "Government grants and non-repayable funding",
+        },
+        {
+          name: "MSME Loan",
+          path: null,
+          description: "Loans for Micro, Small, and Medium Enterprises",
+          subServices: [
+            { name: "Mudra Loan", path: "/services/funding/msme-loan/mudra" },
+            { name: "Udaan", path: "/services/funding/msme-loan/udaan" },
+            { name: "CGTMSE", path: "/services/funding/msme-loan/cgtmse" },
+          ],
+        },
+        {
+          name: "Agriculture",
+          path: null,
+          description: "Financial support and funding for agricultural businesses",
+          subServices: [
+            {
+              name: "NAIFF/AIFF",
+              path: "/services/funding/agriculture/naiff-aiff",
+            },
+            {
+              name: "Agrisure",
+              path: "/services/funding/agriculture/agrisure",
+            },
+          ],
+        },
+        {
+          name: "Private Funding",
+          path: null,
+          description: "Connect with private investors and venture capital firms",
+          subServices: [
+            {
+              name: "Angel Inverstor",
+              path: "/services/funding/private-funding/angel-inverstor",
+            },
+            {
+              name: "VC Funding",
+              path: "/services/funding/private-funding/venture-capital",
+            },
+            {
+              name: "NBFC",
+              path: "/services/funding/private-funding/nbfc",
+            },
+          ],
+        },
+        {
+          name: "Secured/Unsecured Loan",
+          path: null,
+          description: "Business loans with flexible terms and conditions",
+          subServices: [
+            {
+              name: "Business Loan",
+              path: "/services/funding/loans/business-loan",
+            },
+            { name: "LAP", path: "/services/funding/loans/lap" },
+            {
+              name: "Cash Credit (CC)",
+              path: "/services/funding/loans/cash-credit",
+            },
+            {
+              name: "Overdraft (OD)",
+              path: "/services/funding/loans/overdraft",
+            },
+            {
+              name: "Dropline OD",
+              path: "/services/funding/loans/dropline-od",
+            },
+            { name: "SME", path: "/services/funding/loans/sme" },
+            { name: "Term Loan", path: "/services/funding/loans/term-loan" },
+            {
+              name: "Project Funding",
+              path: "/services/funding/loans/project-funding",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      section: "Trademark & IP",
+      items: [
+        {
+          name: "Trademark Registration",
+          path: "/services/legal/trademark-registration",
+          description: "Protect your brand with trademark registration",
+        },
+        {
+          name: "Copyright Protection",
+          path: "/services/legal/copyright-protection",
+          description: "Secure your creative works and content",
+        },
+        {
+          name: "Patent Filing",
+          path: "/services/legal/patent-filing",
+          description: "Protect your inventions and innovations",
+        },
+      ],
+    },
+    {
+      section: "Certificate & Licence",
+      items: [
+        {
+          name: "Startup India",
+          path: "/services/certificate/startup-india",
+          description: "Government recognition and benefits for startups",
+        },
+        {
+          name: "Msme",
+          path: "/services/certificate/msme",
+          description: "MSME registration for small and medium enterprises",
+        },
+        {
+          name: "Make In India",
+          path: "/services/certificate/make-in-india",
+          description: "Registration under Make in India initiative",
+        },
+        {
+          name: "Fssai Licence",
+          path: "/services/certificate/fssai-licence",
+          description: "Food safety and standards authority license",
+        },
+        {
+          name: "Zed Certificate",
+          path: "/services/certificate/zed",
+          description: "Zero defect zero effect certification for MSMEs",
+        },
+        {
+          name: "ISO Certification",
+          path: "/services/certificate/iso",
+          description: "International quality standards certification",
+        },
+        {
+          name: "Trade Licence",
+          path: "/services/certificate/trade-licence",
+          description: "Municipal trade license for business operations",
+        },
+      ],
+    },
+    {
+      section: "Tax & Compliance",
+      items: [
+        {
+          name: "GST Register/Filing",
+          path: "/services/tax/gst-filing",
+          description: "GST registration and regular return filing services",
+        },
+        {
+          name: "TDS Compliance",
+          path: "/services/tax/tds-compliance",
+          description: "Tax deducted at source filing and compliance management",
+        },
+        {
+          name: "Annual Compliance",
+          path: "/services/tax/annual-compliance",
+          description: "Complete annual regulatory and statutory compliance",
+        },
+      ],
+    },
+    {
+      section: "Business Registration",
+      items: [
+        {
+          name: "Private Limited Co.",
+          path: "/services/registration/private-limited",
+          description: "Incorporate your private limited company with MCA",
+        },
+        {
+          name: "LLP Registration",
+          path: "/services/registration/llp",
+          description: "Limited liability partnership registration services",
+        },
+        {
+          name: "Sole Proprietorship",
+          path: "/services/registration/proprietorship",
+          description: "Simple business structure registration for individuals",
+        },
+        {
+          name: "Partnership Firm",
+          path: "/services/registration/partnership",
+          description: "Partnership deed and firm registration services",
+        },
+        {
+          name: "Section 8 Company",
+          path: "/services/registration/section8company",
+          description: "Non-profit organization registration under Section 8",
+        },
+        {
+          name: "Producer Company",
+          path: "/services/registration/producer",
+          description: "Producer company registration for agricultural cooperatives",
+        },
+      ],
+    },
+  ],
+},
 
-          {
-            name: "Secured/Unsecured Loan",
-            path: null,
-            description: "Financial Support for Agricultural Businesses",
-            subServices: [
-              {
-                name: "Business Loan",
-                path: "/services/funding/loans/business-loan", // Updated paths
-              },
-              { name: "LAP", path: "/services/funding/loans/lap" },
-              {
-                name: "Cash Credit (CC)",
-                path: "/services/funding/loans/cash-credit",
-              },
-              {
-                name: "Overdraft (OD)",
-                path: "/services/funding/loans/overdraft",
-              },
-              {
-                name: "Dropline OD",
-                path: "/services/funding/loans/dropline-od",
-              },
-              { name: "SME", path: "/services/funding/loans/sme" },
-              { name: "Term Loan", path: "/services/funding/loans/term-loan" },
-              {
-                name: "Project Funding",
-                path: "/services/funding/loans/project-funding",
-              },
-            ],
-          },
-        ],
-      },
-      {
-        section: "Trademark & IP",
-        items: [
-          {
-            name: "Trademark Registration",
-            path: "/services/legal/trademark-registration", // Updated path
-            description: "Protect your brand with trademark registration",
-          },
-          {
-            name: "Copyright Protection",
-            path: "/services/legal/copyright-protection", // Updated path
-            description: "Secure your creative works and content",
-          },
-          {
-            name: "Patent Filing",
-            path: "/services/legal/patent-filing", // Updated path
-            description: "Protect your inventions and innovations",
-          },
-        ],
-      },
-      {
-        section: "Certificate & Licence",
-        items: [
-          {
-            name: "Startup India",
-            path: "/services/certificate/startup-india", // Updated path
-            description: "Food safety and standards authority license",
-          },
-          {
-            name: "Msme",
-            path: "/services/certificate/msme", // Updated path
-            description: "Goods and services tax registration",
-          },
-          {
-            name: "Make In India",
-            path: "/services/certificate/make-in-india", // Updated path
-            description: "License for international trade operations",
-          },
-          {
-            name: "Zed Certificate",
-            path: "/services/certificate/zed", // Updated path
-            description: "Government recognition for startups",
-          },
-          {
-            name: "ISO Certification",
-            path: "/services/certificate/iso", // Updated path
-            description: "International quality standards certification",
-          },
-          {
-            name: "Trade Licence",
-            path: "/services/certificate/trade-licence", // Updated path
-            description: "Bureau of Indian Standards certification",
-          },
-        ],
-      },
-      {
-        section: "Tax & Compliance",
-        items: [
-          {
-            name: "GST Register/Filing",
-            path: "/services/tax/gst-filing",
-            description: "Regular GST return filing and compliance",
-          },
-
-          {
-            name: "TDS Compliance",
-            path: "/services/tax/tds-compliance",
-            description: "Tax deducted at source management",
-          },
-          {
-            name: "Annual Compliance",
-            path: "/services/tax/annual-compliance",
-            description: "Complete annual regulatory compliance",
-          },
-        ],
-      },
-      {
-        section: "Business Registration",
-        items: [
-          {
-            name: "Private Limited Co.",
-            path: "/services/registration/private-limited",
-            description: "Incorporate your private limited company",
-            // subServices: [
-            //   {
-            //     name: "Digital Signature",
-            //     path: "/registration/private-limited/dsc",
-            //   },
-            //   {
-            //     name: "Director Identification",
-            //     path: "/registration/private-limited/din",
-            //   },
-            //   {
-            //     name: "Name Reservation",
-            //     path: "/registration/private-limited/name",
-            //   },
-            // ],
-          },
-          {
-            name: "LLP Registration",
-            path: "/services/registration/llp",
-            description: "Limited liability partnership registration",
-          },
-          {
-            name: "Sole Proprietorship",
-            path: "/services/registration/proprietorship",
-            description: "Simple business structure for individuals",
-          },
-          {
-            name: "Partnership Firm",
-            path: "/services/registration/partnership",
-            description: "Register your partnership business",
-          },
-          {
-            name: "Section 8 Company",
-            path: "/services/registration/section8company",
-            description: "Non-profit organization registration",
-          },
-          {
-            name: "Producer Company",
-            path: "/services/registration/producer",
-            description: "Special company for agricultural producers",
-          },
-        ],
-      },
-    ],
-  },
   {
     name: "Career",
     path: "/career",

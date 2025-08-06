@@ -12,7 +12,7 @@ import {
     CheckCircle,
     FileText,
     Shield,
- 
+
     Search,
 
     TrendingUp,
@@ -199,13 +199,13 @@ const PatentFiling = () => {
     const isInViewContact = useInView(refContact, { once: true, amount: 0.1 });
 
     return (<>
-    
-          <HeadProvider>
-        <Title>{seoData?.patentfillingService?.title}</Title>
-        <Meta name="description" content={seoData?.patentfillingService?.description} />
-        <Meta name="keyword" content={seoData?.patentfillingService?.keyword} />
-        <Meta name="robots" content={seoData?.patentfillingService?.robots} />
-      </HeadProvider>
+
+        <HeadProvider>
+            <Title>{seoData?.patentfillingService?.title}</Title>
+            <Meta name="description" content={seoData?.patentfillingService?.description} />
+            <Meta name="keyword" content={seoData?.patentfillingService?.keyword} />
+            <Meta name="robots" content={seoData?.patentfillingService?.robots} />
+        </HeadProvider>
         <Mainlayout>
             {/* Hero Section */}
             <section
@@ -249,7 +249,7 @@ const PatentFiling = () => {
                          text-white lg:text-white
                          paragraph !text-white
                          max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
-                           style={{fontFamily:"Montserrat Alternates"}}
+                        style={{ fontFamily: "Montserrat Alternates" }}
                     >
                         Protect your innovations with expert patent filing and prosecution services.
                         Secure government-backed intellectual property rights and unlock commercial opportunities for your invention.
@@ -292,36 +292,6 @@ const PatentFiling = () => {
                     </h3>
                     <div className="space-y-4">
                         <a
-                            href="tel:++91 7486 952 087"
-                            className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
-                            aria-label="Call us at +91 98765 43210"
-                        >
-                            <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
-                                <Phone className="w-5 h-5 text-white" />
-                            </span>
-                            <div>
-                                <p className="text-base text-gray-700 font-semibold">
-                                    Call Anytime
-                                </p>
-                                <p className="text-xs text-gray-600"><a href="tel:+917486 952 087">+91 7486 952 087</a></p>
-                            </div>
-                        </a>
-                        <a
-                            href="mailto:bharat@abtikservices.com"
-                            className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
-                            aria-label="Email us at info@abtik.com"
-                        >
-                            <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
-                                <Mail className="w-5 h-5 text-white" />
-                            </span>
-                            <div>
-                                <p className="text-base text-gray-700 font-semibold">
-                                    Write Email
-                                </p>
-                                <p className="text-xs text-gray-600"><a href="mailto:bharat@abtikservices.com">bharat@abtikservices.com</a></p>
-                            </div>
-                        </a>
-                        <a
                             href=""
                             target="_blank"
                             rel="noopener noreferrer"
@@ -333,13 +303,43 @@ const PatentFiling = () => {
                             </span>
                             <div>
                                 <p className="text-base text-gray-700 font-semibold ">
-                                    Bhart Barot
+                                    Heer Songhela
                                 </p>
                                 <p className="text-xs text-gray-600">
-                                   Vice President
+                                    Head Of Finance Department
                                     <br />
-                                   
+
                                 </p>
+                            </div>
+                        </a>
+                        <a
+                            href="tel:+91 9898 043 284"
+                            className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
+                            aria-label="Call us at +91 98765 43210"
+                        >
+                            <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
+                                <Phone className="w-5 h-5 text-white" />
+                            </span>
+                            <div>
+                                <p className="text-base text-gray-700 font-semibold">
+                                    Call Anytime
+                                </p>
+                                <p className="text-xs text-gray-600"><a href="tel:+9898043284">+91 9898 043 284</a></p>
+                            </div>
+                        </a>
+                        <a
+                            href="heer@abtikservices.co.in"
+                            className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
+                            aria-label="Email us at info@abtik.com"
+                        >
+                            <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
+                                <Mail className="w-5 h-5 text-white" />
+                            </span>
+                            <div>
+                                <p className="text-base text-gray-700 font-semibold">
+                                    Write Email
+                                </p>
+                                <p className="text-xs text-gray-600"><a href="mailto:heer@abtikservices.co.in">heer@abtikservices.co.in</a></p>
                             </div>
                         </a>
                     </div>
@@ -351,7 +351,7 @@ const PatentFiling = () => {
                     className="flex-grow  rounded-2xl flex items-center justify-center h-full"
                 >
                     <img
-                    loading="lazy"
+                        loading="lazy"
                         src={Image1}
                         alt="Patent registration illustration"
                         className="max-h-80 w-full rounded-lg "
@@ -375,7 +375,7 @@ const PatentFiling = () => {
                         What Is Patent Registration?
                     </h2>
                     <p className="paragraph !text-white mx-auto text-left"
-                      style={{fontFamily:"Montserrat Alternates"}}
+                        style={{ fontFamily: "Montserrat Alternates" }}
                     >
                         Patent registration secures exclusive legal rights to your novel invention, protecting your ideas against unauthorized manufacture, sale, or distribution. A granted patent fosters commercialization, supports R&D investments, and allows you to take legal action if your technology is copied. It is a powerful business asset for startups and established companies alike.
                     </p>
@@ -547,7 +547,7 @@ const PatentFiling = () => {
                 </h2>
                 <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
                     <p className="text-sm md:text-base text-gray-600 text-center"
-                      style={{fontFamily:"Montserrat Alternates"}}
+                        style={{ fontFamily: "Montserrat Alternates" }}
                     >
                         Patent registration provides exclusive nationwide rights, creates a high entry barrier for competition, and enables monetary returns through licensing or sale, driving innovation and business growth.
                     </p>

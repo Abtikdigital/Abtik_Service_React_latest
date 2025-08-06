@@ -54,7 +54,7 @@ const Section8CompanyRegistration = () => {
         }
     ];
 
-    const toggleIsExpanded = (index:number) => {
+    const toggleIsExpanded = (index: number) => {
         setIsExpanded((prev) =>
             prev.index === index && prev.isOpen ? { isOpen: false, index: -1 } : { isOpen: true, index }
         );
@@ -72,7 +72,7 @@ const Section8CompanyRegistration = () => {
         updateCols(); window.addEventListener("resize", updateCols);
         return () => window.removeEventListener("resize", updateCols);
     }, []);
-    const getTouchDelay = (index:number) => {
+    const getTouchDelay = (index: number) => {
         const row = Math.floor(index / touchCols);
         return 0.5 + row * 0.5;
     };
@@ -91,7 +91,7 @@ const Section8CompanyRegistration = () => {
         updateCols(); window.addEventListener("resize", updateCols);
         return () => window.removeEventListener("resize", updateCols);
     }, []);
-    const getProcessDelay = (index:number) => {
+    const getProcessDelay = (index: number) => {
         const row = Math.floor(index / processCols);
         return 0.5 + row * 0.5;
     };
@@ -104,14 +104,14 @@ const Section8CompanyRegistration = () => {
         updateCols(); window.addEventListener("resize", updateCols);
         return () => window.removeEventListener("resize", updateCols);
     }, []);
-    const getBenefitsDelay = (index:number) => {
+    const getBenefitsDelay = (index: number) => {
         const row = Math.floor(index / benefitsCols);
         return 0.5 + row * 0.5;
     };
 
     const refFAQ = useRef(null);
     const isInViewFAQ = useInView(refFAQ, { once: true, amount: 0.1 });
-    const getFaqDelay = (index:number) => {
+    const getFaqDelay = (index: number) => {
         const row = Math.floor(index / 1);
         return 0.2 + row * 0.1;
     };
@@ -169,301 +169,301 @@ const Section8CompanyRegistration = () => {
 
     return (
         <>
-        
-              <HeadProvider>
-        <Title>{seoData?.section8Company?.title}</Title>
-        <Meta name="description" content={seoData?.section8Company?.description} />
-        <Meta name="keyword" content={seoData?.section8Company?.keyword} />
-        <Meta name="robots" content={seoData?.section8Company?.robots} />
-      </HeadProvider>
-        
-        <Mainlayout>
-            {/* Hero Section */}
-            <section ref={refHero}
-                className="flex justify-center items-center h-[70vh] sm:h-[80vh] lg:h-[85vh] xl:h-screen 
+
+            <HeadProvider>
+                <Title>{seoData?.section8Company?.title}</Title>
+                <Meta name="description" content={seoData?.section8Company?.description} />
+                <Meta name="keyword" content={seoData?.section8Company?.keyword} />
+                <Meta name="robots" content={seoData?.section8Company?.robots} />
+            </HeadProvider>
+
+            <Mainlayout>
+                {/* Hero Section */}
+                <section ref={refHero}
+                    className="flex justify-center items-center h-[70vh] sm:h-[80vh] lg:h-[85vh] xl:h-screen 
                 lg:justify-end lg:items-center bg-center bg-cover 
                 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-14
                 relative overflow-hidden"
-                style={{ backgroundImage: `url(${BgImage})`, backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat" }}>
-                <div className="absolute inset-0 bg-black/20 lg:bg-transparent"></div>
-                <motion.div
-                    initial={{ y: 100, opacity: 0 }}
-                    animate={isInViewHero ? { y: 0, opacity: 1 } : {}}
-                    transition={{ duration: 0.5 }}
-                    className="relative z-10 w-full max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-none lg:w-1/2 space-y-4 sm:space-y-5 md:space-y-6 lg:space-y-8 text-center lg:text-left">
-                    <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-white lg:text-inherit tracking-wide main-heading" style={{ fontFamily: "Anton" }}>
-                        Register Your{" "}
-                        <span className="text-[#3CA2E2] font-extrabold block sm:inline">
-                            Section 8 NGO/Non-Profit
-                        </span>
-                    </h1>
-                    <p className="text-sm sm:text-base md:text-lg lg:text-xl
+                    style={{ backgroundImage: `url(${BgImage})`, backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat" }}>
+                    <div className="absolute inset-0 bg-black/20 lg:bg-transparent"></div>
+                    <motion.div
+                        initial={{ y: 100, opacity: 0 }}
+                        animate={isInViewHero ? { y: 0, opacity: 1 } : {}}
+                        transition={{ duration: 0.5 }}
+                        className="relative z-10 w-full max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-none lg:w-1/2 space-y-4 sm:space-y-5 md:space-y-6 lg:space-y-8 text-center lg:text-left">
+                        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-white lg:text-inherit tracking-wide main-heading" style={{ fontFamily: "Anton" }}>
+                            Register Your{" "}
+                            <span className="text-[#3CA2E2] font-extrabold block sm:inline">
+                                Section 8 NGO/Non-Profit
+                            </span>
+                        </h1>
+                        <p className="text-sm sm:text-base md:text-lg lg:text-xl
                          leading-relaxed sm:leading-relaxed md:leading-relaxed
                          text-white lg:text-white
                          paragraph !text-white
                          max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
-                    style={{fontFamily:"Montserrat Alternates"}}
+                            style={{ fontFamily: "Montserrat Alternates" }}
+                        >
+                            Launch your non-profit the most trusted way in India—Section 8 Company. Get legal, CSR, and donor-ready with Abtik’s end-to-end support.
+                        </p>
+                        <div className="pt-2 sm:pt-4">
+                            <button
+                                onClick={handleOpenDialog}
+                                className="custom-btn text-sm sm:text-base md:text-lg px-6 sm:px-8 md:px-10 lg:px-12 py-3 sm:py-3.5 md:py-4  transition-transform duration-300 shadow-lg hover:shadow-xl"
+                            >
+                                Start Section 8 Company
+                            </button>
+                        </div>
+                    </motion.div>
+                </section>
+
+                {/* Get In Touch Section */}
+                <motion.section ref={refTouch}
+                    initial={{ y: 100, opacity: 0 }}
+                    animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
+                    transition={{ duration: 0.5 }}
+                    className="flex flex-col md:flex-row gap-8 bg-[#f7f7f7] py-16 px-7 md:px-14">
+                    <motion.div
+                        initial={{ y: 50, opacity: 0 }}
+                        animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
+                        transition={{ duration: 0.5, delay: getTouchDelay(0) }}
+                        className="w-full md:w-[300px] flex-shrink-0 bg-gradient-to-br from-blue-100 to-blue-200 p-6 rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
+                        <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-4" style={{ fontFamily: "Montserrat Alternates" }}>
+                            Get in Touch
+                        </h3>
+                        <div className="space-y-4">
+                            <a
+                                href=""
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
+                                aria-label="Visit us at 123 Business Hub, New Delhi, India"
+                            >
+                                <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
+                                    <User className="w-5 h-5 text-white" />
+                                </span>
+                                <div>
+                                    <p className="text-base text-gray-700 font-semibold ">
+                                        Heer Songhela
+                                    </p>
+                                    <p className="text-xs text-gray-600">
+                                        Head Of Finance Department
+                                        <br />
+
+                                    </p>
+                                </div>
+                            </a>
+                            <a
+                                href="tel:+91 98980 43284"
+                                className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
+                                aria-label="Call us at +91 98980 43284"
+                            >
+                                <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
+                                    <Phone className="w-5 h-5 text-white" />
+                                </span>
+                                <div>
+                                    <p className="text-base text-gray-700 font-semibold">
+                                        Call Anytime
+                                    </p>
+                                    <p className="text-xs text-gray-600"><a href="tel:+9898043284">+91 9898 043 284</a></p>
+                                </div>
+                            </a>
+                            <a
+                                href="heer@abtikservices.co.in"
+                                className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
+                                aria-label="Email us at info@abtik.com"
+                            >
+                                <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
+                                    <Mail className="w-5 h-5 text-white" />
+                                </span>
+                                <div>
+                                    <p className="text-base text-gray-700 font-semibold">
+                                        Write Email
+                                    </p>
+                                    <p className="text-xs text-gray-600"><a href="mailto:heer@abtikservices.co.in">heer@abtikservices.co.in</a></p>
+                                </div>
+                            </a>
+                        </div>
+                    </motion.div>
+                    <motion.div
+                        initial={{ y: 50, opacity: 0 }}
+                        animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
+                        transition={{ duration: 0.5, delay: getTouchDelay(1) }}
+                        className="flex-grow bg-gradient-to-r from-[#3CA2E2] to-[#052EAA] rounded-2xl flex items-center justify-center h-full"
                     >
-                        Launch your non-profit the most trusted way in India—Section 8 Company. Get legal, CSR, and donor-ready with Abtik’s end-to-end support.
-                    </p>
-                    <div className="pt-2 sm:pt-4">
-                        <button
-                            onClick={handleOpenDialog}
-                            className="custom-btn text-sm sm:text-base md:text-lg px-6 sm:px-8 md:px-10 lg:px-12 py-3 sm:py-3.5 md:py-4  transition-transform duration-300 shadow-lg hover:shadow-xl"
-                        >
-                            Start Section 8 Company
-                        </button>
-                    </div>
-                </motion.div>
-            </section>
+                        <img
+                            loading="lazy"
+                            src={Image1}
+                            alt="Section 8 Company Registration Illustration"
+                            className="max-h-80 w-full rounded-lg object-contain p-4"
+                        />
+                    </motion.div>
+                </motion.section>
 
-            {/* Get In Touch Section */}
-            <motion.section ref={refTouch}
-                initial={{ y: 100, opacity: 0 }}
-                animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
-                transition={{ duration: 0.5 }}
-                className="flex flex-col md:flex-row gap-8 bg-[#f7f7f7] py-16 px-7 md:px-14">
-                <motion.div
-                    initial={{ y: 50, opacity: 0 }}
-                    animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
-                    transition={{ duration: 0.5, delay: getTouchDelay(0) }}
-                    className="w-full md:w-[300px] flex-shrink-0 bg-gradient-to-br from-blue-100 to-blue-200 p-6 rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
-                    <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-4" style={{ fontFamily: "Montserrat Alternates" }}>
-                        Get in Touch
-                    </h3>
-                 <div className="space-y-4">
-                        <a
-                            href="tel:++91 7486 952 087"
-                            className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
-                            aria-label="Call us at +91 98765 43210"
+                {/* About Section */}
+                <motion.section ref={refAbout}
+                    initial={{ y: 100, opacity: 0 }}
+                    animate={isInViewAbout ? { y: 0, opacity: 1 } : {}}
+                    transition={{ duration: 0.5 }}
+                    className="px-7 md:px-14 bg-[#f7f7f7] py-8">
+                    <div className="bg-gradient-to-t from-[#3CA2E2] to-[#052EAA] rounded-4xl p-8 md:p-12 space-y-4 text-center">
+                        <h2 className="sub-heading text-white text-left" style={{ fontFamily: "Anton" }}>
+                            What Is a Section 8 Company?
+                        </h2>
+                        <p className="paragraph !text-white mx-auto text-left"
+                            style={{ fontFamily: "Montserrat Alternates" }}
                         >
-                            <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
-                                <Phone className="w-5 h-5 text-white" />
-                            </span>
-                            <div>
-                                <p className="text-base text-gray-700 font-semibold">
-                                    Call Anytime
-                                </p>
-                                <p className="text-xs text-gray-600"><a href="tel:+917486 952 087">+91 7486 952 087</a></p>
-                            </div>
-                        </a>
-                        <a
-                            href="mailto:bharat@abtikservices.com"
-                            className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
-                            aria-label="Email us at info@abtik.com"
-                        >
-                            <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
-                                <Mail className="w-5 h-5 text-white" />
-                            </span>
-                            <div>
-                                <p className="text-base text-gray-700 font-semibold">
-                                    Write Email
-                                </p>
-                                <p className="text-xs text-gray-600"><a href="mailto:bharat@abtikservices.com">bharat@abtikservices.com</a></p>
-                            </div>
-                        </a>
-                        <a
-                            href=""
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
-                            aria-label="Visit us at 123 Business Hub, New Delhi, India"
-                        >
-                            <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
-                                <User className="w-5 h-5 text-white" />
-                            </span>
-                            <div>
-                                <p className="text-base text-gray-700 font-semibold ">
-                                    Bhart Barot
-                                </p>
-                                <p className="text-xs text-gray-600">
-                                   Vice President
-                                    <br />
-                                   
-                                </p>
-                            </div>
-                        </a>
+                            Section 8 Company is India’s highest recognition for a legal non-profit or charitable enterprise. Enjoy the best reputation for grants, donors, and government partners—with streamlined compliance, tax benefits, and full legal protection for founders and donors alike.
+                        </p>
                     </div>
-                </motion.div>
-                <motion.div
-                    initial={{ y: 50, opacity: 0 }}
-                    animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
-                    transition={{ duration: 0.5, delay: getTouchDelay(1) }}
-                    className="flex-grow bg-gradient-to-r from-[#3CA2E2] to-[#052EAA] rounded-2xl flex items-center justify-center h-full"
-                >
-                    <img
-                    loading="lazy"
-                        src={Image1}
-                        alt="Section 8 Company Registration Illustration"
-                        className="max-h-80 w-full rounded-lg object-contain p-4"
-                    />
-                </motion.div>
-            </motion.section>
+                </motion.section>
 
-            {/* About Section */}
-            <motion.section ref={refAbout}
-                initial={{ y: 100, opacity: 0 }}
-                animate={isInViewAbout ? { y: 0, opacity: 1 } : {}}
-                transition={{ duration: 0.5 }}
-                className="px-7 md:px-14 bg-[#f7f7f7] py-8">
-                <div className="bg-gradient-to-t from-[#3CA2E2] to-[#052EAA] rounded-4xl p-8 md:p-12 space-y-4 text-center">
-                    <h2 className="sub-heading text-white text-left" style={{ fontFamily: "Anton" }}>
-                        What Is a Section 8 Company?
+                {/* Eligibility & Key Features */}
+                <motion.section ref={refEligibility}
+                    initial={{ y: 100, opacity: 0 }}
+                    animate={isInViewEligibility ? { y: 0, opacity: 1 } : {}}
+                    transition={{ duration: 0.5 }}
+                    className="px-7 md:px-14 bg-[#f7f7f7] py-8">
+                    <h2 className="sub-heading text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]" style={{ fontFamily: "Anton" }}>
+                        Who Can Register a Section 8 Company?
                     </h2>
-                    <p className="paragraph !text-white mx-auto text-left"
-                    style={{fontFamily:"Montserrat Alternates"}}
-                    >
-                        Section 8 Company is India’s highest recognition for a legal non-profit or charitable enterprise. Enjoy the best reputation for grants, donors, and government partners—with streamlined compliance, tax benefits, and full legal protection for founders and donors alike.
-                    </p>
-                </div>
-            </motion.section>
-
-            {/* Eligibility & Key Features */}
-            <motion.section ref={refEligibility}
-                initial={{ y: 100, opacity: 0 }}
-                animate={isInViewEligibility ? { y: 0, opacity: 1 } : {}}
-                transition={{ duration: 0.5 }}
-                className="px-7 md:px-14 bg-[#f7f7f7] py-8">
-                <h2 className="sub-heading text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]" style={{ fontFamily: "Anton" }}>
-                    Who Can Register a Section 8 Company?
-                </h2>
-                <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
-                    <p className="text-sm md:text-base text-gray-600 text-center"
-                    style={{fontFamily:"Montserrat Alternates"}}
-                    >
-                        Any individual or group with a legitimate charitable, educational, social, or research agenda can register a Section 8 Company. No minimum capital required; can start nationwide work the moment it is incorporated.
-                    </p>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <motion.div initial={{ y: 50, opacity: 0 }}
-                            animate={isInViewEligibility ? { y: 0, opacity: 1 } : {}}
-                            transition={{ duration: 0.5, delay: 0.5 }}
-                            className="space-y-4">
-                            <h3 className="text-lg font-semibold text-gray-800" style={{ fontFamily: "Montserrat Alternates" }}>
-                                Eligibility Checklist
-                            </h3>
-                            <ul className="space-y-2 text-sm text-gray-600">
-                                <li className="grid grid-cols-[20px_1fr] gap-2 items-start"><CheckCircle className="w-5 h-5 text-[#3CA2E2]" /><span>Minimum 2 directors (Pvt), 3 (Public)</span></li>
-                                <li className="grid grid-cols-[20px_1fr] gap-2 items-start"><CheckCircle className="w-5 h-5 text-[#3CA2E2]" /><span>PAN, Aadhaar, and address proof of all promoters</span></li>
-                                <li className="grid grid-cols-[20px_1fr] gap-2 items-start"><CheckCircle className="w-5 h-5 text-[#3CA2E2]" /><span>No minimum capital required</span></li>
-                                <li className="grid grid-cols-[20px_1fr] gap-2 items-start"><CheckCircle className="w-5 h-5 text-[#3CA2E2]" /><span>Clear, non-profit social/charity objective</span></li>
-                                <li className="grid grid-cols-[20px_1fr] gap-2 items-start"><CheckCircle className="w-5 h-5 text-[#3CA2E2]" /><span>Registered office address in India</span></li>
-                            </ul>
-                        </motion.div>
-                        <motion.div initial={{ y: 50, opacity: 0 }}
-                            animate={isInViewEligibility ? { y: 0, opacity: 1 } : {}}
-                            transition={{ duration: 0.5, delay: 0.7 }}
-                            className="space-y-4">
-                            <h3 className="text-lg font-semibold text-gray-800" style={{ fontFamily: "Montserrat Alternates" }}>
-                                Key Features
-                            </h3>
-                            <ul className="space-y-2 text-sm text-gray-600">
-                                <li className="grid grid-cols-[20px_1fr] gap-2 items-start"><CheckCircle className="w-5 h-5 text-[#3CA2E2]" /><span>Perpetual succession, even with changing members</span></li>
-                                <li className="grid grid-cols-[20px_1fr] gap-2 items-start"><CheckCircle className="w-5 h-5 text-[#3CA2E2]" /><span>Funds must be used for main object—no profit payout</span></li>
-                                <li className="grid grid-cols-[20px_1fr] gap-2 items-start"><CheckCircle className="w-5 h-5 text-[#3CA2E2]" /><span>Full compliance and annual reporting to MCA</span></li>
-                                <li className="grid grid-cols-[20px_1fr] gap-2 items-start"><CheckCircle className="w-5 h-5 text-[#3CA2E2]" /><span>Eligible for major grants, CSR, 12A/80G tax benefits</span></li>
-                            </ul>
-                        </motion.div>
+                    <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
+                        <p className="text-sm md:text-base text-gray-600 text-center"
+                            style={{ fontFamily: "Montserrat Alternates" }}
+                        >
+                            Any individual or group with a legitimate charitable, educational, social, or research agenda can register a Section 8 Company. No minimum capital required; can start nationwide work the moment it is incorporated.
+                        </p>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <motion.div initial={{ y: 50, opacity: 0 }}
+                                animate={isInViewEligibility ? { y: 0, opacity: 1 } : {}}
+                                transition={{ duration: 0.5, delay: 0.5 }}
+                                className="space-y-4">
+                                <h3 className="text-lg font-semibold text-gray-800" style={{ fontFamily: "Montserrat Alternates" }}>
+                                    Eligibility Checklist
+                                </h3>
+                                <ul className="space-y-2 text-sm text-gray-600">
+                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start"><CheckCircle className="w-5 h-5 text-[#3CA2E2]" /><span>Minimum 2 directors (Pvt), 3 (Public)</span></li>
+                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start"><CheckCircle className="w-5 h-5 text-[#3CA2E2]" /><span>PAN, Aadhaar, and address proof of all promoters</span></li>
+                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start"><CheckCircle className="w-5 h-5 text-[#3CA2E2]" /><span>No minimum capital required</span></li>
+                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start"><CheckCircle className="w-5 h-5 text-[#3CA2E2]" /><span>Clear, non-profit social/charity objective</span></li>
+                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start"><CheckCircle className="w-5 h-5 text-[#3CA2E2]" /><span>Registered office address in India</span></li>
+                                </ul>
+                            </motion.div>
+                            <motion.div initial={{ y: 50, opacity: 0 }}
+                                animate={isInViewEligibility ? { y: 0, opacity: 1 } : {}}
+                                transition={{ duration: 0.5, delay: 0.7 }}
+                                className="space-y-4">
+                                <h3 className="text-lg font-semibold text-gray-800" style={{ fontFamily: "Montserrat Alternates" }}>
+                                    Key Features
+                                </h3>
+                                <ul className="space-y-2 text-sm text-gray-600">
+                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start"><CheckCircle className="w-5 h-5 text-[#3CA2E2]" /><span>Perpetual succession, even with changing members</span></li>
+                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start"><CheckCircle className="w-5 h-5 text-[#3CA2E2]" /><span>Funds must be used for main object—no profit payout</span></li>
+                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start"><CheckCircle className="w-5 h-5 text-[#3CA2E2]" /><span>Full compliance and annual reporting to MCA</span></li>
+                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start"><CheckCircle className="w-5 h-5 text-[#3CA2E2]" /><span>Eligible for major grants, CSR, 12A/80G tax benefits</span></li>
+                                </ul>
+                            </motion.div>
+                        </div>
                     </div>
-                </div>
-            </motion.section>
+                </motion.section>
 
-            {/* Process Section */}
-            <motion.section ref={refProcess}
-                initial={{ y: 100, opacity: 0 }}
-                animate={isInViewProcess ? { y: 0, opacity: 1 } : {}}
-                transition={{ duration: 0.5 }}
-                className="px-7 md:px-14 bg-[#f7f7f7] py-8">
-                <h2 className="sub-heading text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]" style={{ fontFamily: "Anton" }}>
-                    How Abtik Gets Your Section 8 Company Registered
-                </h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-                    {processData.map((process, index) => (
-                        <motion.div key={index}
-                            initial={{ y: 50, opacity: 0 }}
-                            animate={isInViewProcess ? { y: 0, opacity: 1 } : {}}
-                            transition={{ duration: 0.5, delay: getProcessDelay(index) }}
-                            className="bg-white p-6 rounded-4xl shadow-md text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
-                        >
-                            <div className="mb-4 inline-block p-3 bg-gradient-to-r from-blue-100 to-blue-200 rounded-full"><process.icon className="w-8 h-8" /></div>
-                            <h3 className="text-lg font-semibold text-gray-800 mb-2" style={{ fontFamily: "Montserrat Alternates" }}>
-                                {process.title}
-                            </h3>
-                            <p className="text-sm text-gray-600">{process.description}</p>
-                        </motion.div>
-                    ))}
-                </div>
-            </motion.section>
+                {/* Process Section */}
+                <motion.section ref={refProcess}
+                    initial={{ y: 100, opacity: 0 }}
+                    animate={isInViewProcess ? { y: 0, opacity: 1 } : {}}
+                    transition={{ duration: 0.5 }}
+                    className="px-7 md:px-14 bg-[#f7f7f7] py-8">
+                    <h2 className="sub-heading text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]" style={{ fontFamily: "Anton" }}>
+                        How Abtik Gets Your Section 8 Company Registered
+                    </h2>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                        {processData.map((process, index) => (
+                            <motion.div key={index}
+                                initial={{ y: 50, opacity: 0 }}
+                                animate={isInViewProcess ? { y: 0, opacity: 1 } : {}}
+                                transition={{ duration: 0.5, delay: getProcessDelay(index) }}
+                                className="bg-white p-6 rounded-4xl shadow-md text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
+                            >
+                                <div className="mb-4 inline-block p-3 bg-gradient-to-r from-blue-100 to-blue-200 rounded-full"><process.icon className="w-8 h-8" /></div>
+                                <h3 className="text-lg font-semibold text-gray-800 mb-2" style={{ fontFamily: "Montserrat Alternates" }}>
+                                    {process.title}
+                                </h3>
+                                <p className="text-sm text-gray-600">{process.description}</p>
+                            </motion.div>
+                        ))}
+                    </div>
+                </motion.section>
 
-            {/* Benefits Section */}
-            <motion.section ref={refBenefits}
-                initial={{ y: 100, opacity: 0 }}
-                animate={isInViewBenefits ? { y: 0, opacity: 1 } : {}}
-                transition={{ duration: 0.5 }}
-                className="px-7 md:px-14 bg-[#f7f7f7] py-8 ">
-                <h2 className="sub-heading text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]" style={{ fontFamily: "Anton" }}>
-                    Why Section 8 Company?
-                </h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-                    {benefitsData.map((benefit, index) => (
-                        <motion.div key={index}
-                            initial={{ y: 50, opacity: 0 }}
-                            animate={isInViewBenefits ? { y: 0, opacity: 1 } : {}}
-                            transition={{ duration: 0.5, delay: getBenefitsDelay(index) }}
-                            className="bg-white p-6 rounded-4xl shadow-md text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
-                        >
-                            <div className="mb-4 inline-block p-3 bg-gradient-to-r from-blue-100 to-blue-200 rounded-full"><benefit.icon className="w-8 h-8" /></div>
-                            <h3 className="text-lg font-semibold text-gray-800 mb-2" style={{ fontFamily: "Montserrat Alternates" }}>
-                                {benefit.title}
-                            </h3>
-                            <p className="text-sm text-gray-600">{benefit.description}</p>
-                        </motion.div>
-                    ))}
-                </div>
-            </motion.section>
+                {/* Benefits Section */}
+                <motion.section ref={refBenefits}
+                    initial={{ y: 100, opacity: 0 }}
+                    animate={isInViewBenefits ? { y: 0, opacity: 1 } : {}}
+                    transition={{ duration: 0.5 }}
+                    className="px-7 md:px-14 bg-[#f7f7f7] py-8 ">
+                    <h2 className="sub-heading text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]" style={{ fontFamily: "Anton" }}>
+                        Why Section 8 Company?
+                    </h2>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                        {benefitsData.map((benefit, index) => (
+                            <motion.div key={index}
+                                initial={{ y: 50, opacity: 0 }}
+                                animate={isInViewBenefits ? { y: 0, opacity: 1 } : {}}
+                                transition={{ duration: 0.5, delay: getBenefitsDelay(index) }}
+                                className="bg-white p-6 rounded-4xl shadow-md text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
+                            >
+                                <div className="mb-4 inline-block p-3 bg-gradient-to-r from-blue-100 to-blue-200 rounded-full"><benefit.icon className="w-8 h-8" /></div>
+                                <h3 className="text-lg font-semibold text-gray-800 mb-2" style={{ fontFamily: "Montserrat Alternates" }}>
+                                    {benefit.title}
+                                </h3>
+                                <p className="text-sm text-gray-600">{benefit.description}</p>
+                            </motion.div>
+                        ))}
+                    </div>
+                </motion.section>
 
-            {/* FAQ Section */}
-            <motion.section ref={refFAQ}
-                initial={{ y: 100, opacity: 0 }}
-                animate={isInViewFAQ ? { y: 0, opacity: 1 } : {}}
-                transition={{ duration: 0.5 }}
-                className="bg-[#f7f7f7] py-8 md:py-16 space-y-6">
-                <h1 className="sub-heading bg-gradient-to-t text-center bg-clip-text from-[#3CA2E2] to-[#052EAA] text-transparent" style={{ fontFamily: "Anton" }}>
-                    Frequently Asked Questions
-                </h1>
-                <div className="px-6  md:px-24 space-y-4 " style={{ fontFamily: "Montserrat Alternates" }}>
-                    {faq.map((data, index) => (
-                        <motion.div key={index}
-                            initial={{ y: 50, opacity: 0 }}
-                            animate={isInViewFAQ ? { y: 0, opacity: 1 } : {}}
-                            transition={{ duration: 0.1, delay: getFaqDelay(index) }}
-                            className="bg-white rounded-lg shadow-sm border border-gray-100 transition-all duration-300"
-                        >
-                            <h2 className={`p-2.5 px-4 relative cursor-pointer flex items-center justify-between  text-base font-medium ${isExpanded.isOpen && isExpanded.index === index ? "border-b border-gray-200" : ""}`} onClick={() => toggleIsExpanded(index)}>
-                                <span>{data.question}</span>
-                                <button className="border-2 p-1 transition-all duration-300 hover:scale-105 h-8 w-8 flex justify-center items-center border-[#052EAA] rounded-lg text-[#052EAA]">
-                                    {isExpanded.isOpen && isExpanded.index === index ? (
-                                        <ArrowRight className="w-5 h-5" />
-                                    ) : (
-                                        <ArrowUpRight className="w-5 h-5" />
-                                    )}
-                                </button>
-                            </h2>
-                            <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isExpanded.isOpen && isExpanded.index === index ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}`}>
-                                <p className="p-4 bg-gradient-to-t rounded-b-lg from-[#052EAA] to-[#3CA2E2] text-white">{data.answer}</p>
-                            </div>
-                        </motion.div>
-                    ))}
-                </div>
-            </motion.section>
+                {/* FAQ Section */}
+                <motion.section ref={refFAQ}
+                    initial={{ y: 100, opacity: 0 }}
+                    animate={isInViewFAQ ? { y: 0, opacity: 1 } : {}}
+                    transition={{ duration: 0.5 }}
+                    className="bg-[#f7f7f7] py-8 md:py-16 space-y-6">
+                    <h1 className="sub-heading bg-gradient-to-t text-center bg-clip-text from-[#3CA2E2] to-[#052EAA] text-transparent" style={{ fontFamily: "Anton" }}>
+                        Frequently Asked Questions
+                    </h1>
+                    <div className="px-6  md:px-24 space-y-4 " style={{ fontFamily: "Montserrat Alternates" }}>
+                        {faq.map((data, index) => (
+                            <motion.div key={index}
+                                initial={{ y: 50, opacity: 0 }}
+                                animate={isInViewFAQ ? { y: 0, opacity: 1 } : {}}
+                                transition={{ duration: 0.1, delay: getFaqDelay(index) }}
+                                className="bg-white rounded-lg shadow-sm border border-gray-100 transition-all duration-300"
+                            >
+                                <h2 className={`p-2.5 px-4 relative cursor-pointer flex items-center justify-between  text-base font-medium ${isExpanded.isOpen && isExpanded.index === index ? "border-b border-gray-200" : ""}`} onClick={() => toggleIsExpanded(index)}>
+                                    <span>{data.question}</span>
+                                    <button className="border-2 p-1 transition-all duration-300 hover:scale-105 h-8 w-8 flex justify-center items-center border-[#052EAA] rounded-lg text-[#052EAA]">
+                                        {isExpanded.isOpen && isExpanded.index === index ? (
+                                            <ArrowRight className="w-5 h-5" />
+                                        ) : (
+                                            <ArrowUpRight className="w-5 h-5" />
+                                        )}
+                                    </button>
+                                </h2>
+                                <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isExpanded.isOpen && isExpanded.index === index ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}`}>
+                                    <p className="p-4 bg-gradient-to-t rounded-b-lg from-[#052EAA] to-[#3CA2E2] text-white">{data.answer}</p>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
+                </motion.section>
 
-            {/* Contact Section */}
-            <motion.section ref={refContact}
-                initial={{ y: 100, opacity: 0 }}
-                animate={isInViewContact ? { y: 0, opacity: 1 } : {}}
-                transition={{ duration: 0.5 }}>
-                <Contact />
-            </motion.section>
-        </Mainlayout>
+                {/* Contact Section */}
+                <motion.section ref={refContact}
+                    initial={{ y: 100, opacity: 0 }}
+                    animate={isInViewContact ? { y: 0, opacity: 1 } : {}}
+                    transition={{ duration: 0.5 }}>
+                    <Contact />
+                </motion.section>
+            </Mainlayout>
         </>
     );
 };
