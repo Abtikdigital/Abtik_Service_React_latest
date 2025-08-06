@@ -1,21 +1,21 @@
 {
   "homepage": {
-    "title": "Abtik Services ",
-    "description": "Abtik Services",
+    "title": "Abtik Services LLP | Business and MSME Loan Consultancy Short-Term Capital Solutions ",
+    "description": "Get expert help on MSME loans, short-term capital, and government funding—trusted by 50,000+ businesses across India.",
     "keyword": "Abtik Services",
     "canonical": "Abtik Services",
     "robots": "Abtik Services"
   },
   "aboutPage": {
-    "title": "Abtik Services",
-    "description": "Abtik Services",
+    "title": "About us | Providing Business loans for startup ahmedabad",
+    "description": "Helping startups in Ahmedabad access the right business loans, funding support, and expert guidance to grow fast and fearlessly.",
     "keyword": "Abtik Services",
     "canonical": "Abtik Services",
     "robots": ""
   },
   "contactPage": {
-    "title": "Abtik Services",
-    "description": "Abtik Services",
+    "title": "Apply for Business Loans with Abtik – Contact Us Today",
+    "description": "Need fast and reliable funding? Reach out to Abtik for MSME loans, startup support, and capital guidance tailored to you.",
     "keyword": "Abtik Services",
     "canonical": "Abtik Services",
     "robots": ""
@@ -49,15 +49,15 @@
     "robots": ""
   },
   "careerPage": {
-    "title": "Abtik Services",
-    "description": "Abtik Services",
+    "title": "Join Abtik – Build Your Career & Future with Us",
+    "description": "Looking for growth, purpose, and a passionate team? Join Abtik and turn your career into something meaningful and impactful.",
     "keyword": "Abtik Services",
     "canonical": "Abtik Services",
     "robots": ""
   },
   "blog": {
-    "title": "Abtik Services",
-    "description": "Abtik Services",
+    "title": "Abtik Blog : News, Insight and business growth tips",
+    "description": "Explore funding insights, startup stories, expert tips, and real success hacks to grow your business the smart way.",
     "keyword": "Abtik Services",
     "canonical": "Abtik Services",
     "robots": ""
@@ -126,13 +126,6 @@
     "robots": ""
   },
   "isoCertificateService": {
-    "title": "Abtik Services",
-    "description": "Abtik Services",
-    "keyword": "Abtik Services",
-    "canonical": "Abtik Services",
-    "robots": ""
-  },
-  "fssaiLicenseService": {
     "title": "Abtik Services",
     "description": "Abtik Services",
     "keyword": "Abtik Services",
@@ -245,8 +238,8 @@
     "robots": ""
   },
   "seedFundService": {
-    "title": "Abtik Services",
-    "description": "Abtik Services",
+    "title": "Startup India Seed fund Scheme | Abtik services",
+    "description": " Guiding startups to secure Seed Fund support under Startup India for early-stage growth.",
     "keyword": "Abtik Services",
     "canonical": "Abtik Services",
     "robots": ""
@@ -329,6 +322,13 @@
     "robots": ""
   },
   "refundPolicy": {
+    "title": "",
+    "description": "",
+    "keyword": "",
+    "canonical": "",
+    "robots": ""
+  },
+  "fssaiLicenseService": {
     "title": "",
     "description": "",
     "keyword": "",
