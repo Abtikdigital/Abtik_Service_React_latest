@@ -122,10 +122,8 @@ const Contact = () => {
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-4 lg:grid-rows-1 lg:space-x-6">
         <div className="space-y-6  flex flex-col justify-center">
           <h2
-            className="sub-heading to-[#052EAA] text-center bg-gradient-to-t from-[#3CA2E2] bg-clip-text text-transparent"
-            style={{
-              fontFamily: "Anton",
-            }}
+            className="sub-heading to-[#052EAA] text-center bg-gradient-to-t from-[#3CA2E2] bg-clip-text text-transparent font-1"
+         
           >
             Contact Us
           </h2>
@@ -139,7 +137,7 @@ const Contact = () => {
               <input
                 {...register("name", validationRules.name)}
                 placeholder="Enter Your Name"
-                className={`bg-[#ECEFF4] rounded-lg w-full p-3 focus:outline-2 transition-all duration-0  ${
+                className={`bg-[#ECEFF4] rounded-lg w-full p-3 focus:outline-2 transition-all duration-0  font-2 ${
                   errors.name
                     ? "outline-red-500 border-red-500"
                     : "outline-[#2178B5] hover:outline-2"
@@ -159,7 +157,7 @@ const Contact = () => {
                 {...register("email", validationRules.email)}
                 type="email"
                 placeholder="Enter Your Email"
-                className={`bg-[#ECEFF4] rounded-lg w-full p-3 focus:outline-2 transition-all duration-0 ${
+                className={`bg-[#ECEFF4] rounded-lg w-full p-3 focus:outline-2 transition-all duration-0 font-2 ${
                   errors.email
                     ? "outline-red-500 border-red-500"
                     : "outline-[#2178B5] hover:outline-2"
@@ -178,7 +176,7 @@ const Contact = () => {
               <textarea
                 {...register("message", validationRules.message)}
                 placeholder="Enter Your Message"
-                className={`bg-[#ECEFF4] rounded-lg w-full p-3 overflow-auto h-24 max-h-32 resize-none transition-all duration-0 ${
+                className={`bg-[#ECEFF4] rounded-lg w-full p-3 overflow-auto h-24 max-h-32 resize-none transition-all duration-0  font-3 ${
                   errors.message
                     ? "outline-red-500 border-red-500"
                     : "outline-[#2178B5] hover:outline-2"

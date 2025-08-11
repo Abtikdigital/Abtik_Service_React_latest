@@ -232,8 +232,8 @@ const BusinessLoan = () => {
                         className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 
                           font-bold leading-tight sm:leading-tight md:leading-tight lg:leading-tight
                           text-white lg:text-inherit tracking-wide
-                          main-heading"
-                        style={{ fontFamily: "Anton" }}
+                          main-heading font-1"
+                        
                     >
                         Get{" "}
                         <span className="text-[#3CA2E2] font-extrabold block sm:inline">
@@ -246,8 +246,8 @@ const BusinessLoan = () => {
                          leading-relaxed sm:leading-relaxed md:leading-relaxed
                          text-white lg:text-white
                          paragraph !text-white
-                         max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
-                        style={{ fontFamily: "Montserrat Alternates" }}
+                         max-w-none sm:max-w-lg md:max-w-xl font-3 lg:max-w-none mx-auto lg:mx-0"
+                      
                     >
                         Fund your business growth with secured and unsecured loan options.
                         Access ₹1 lakh to ₹50 crore funding with competitive interest rates,
@@ -284,8 +284,8 @@ const BusinessLoan = () => {
                     className="w-full md:w-[300px] flex-shrink-0 bg-gradient-to-br from-blue-100 to-blue-200 p-6 rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
                 >
                     <h3
-                        className="text-lg sm:text-xl font-semibold text-gray-800 mb-4"
-                        style={{ fontFamily: "Montserrat Alternates" }}
+                        className="text-lg sm:text-xl font-2 font-semibold text-gray-800 mb-4"
+                      
                     >
                         Get in Touch
                     </h3>
@@ -301,10 +301,10 @@ const BusinessLoan = () => {
                                 <User className="w-5 h-5 text-white" />
                             </span>
                             <div>
-                                <p className="text-base text-gray-700 font-semibold ">
+                                <p className="text-base font-3 text-gray-700 font-semibold ">
                                     Bharat Barot
                                 </p>
-                                <p className="text-xs text-gray-600">
+                                <p className="text-xs font-3 text-gray-600">
                                    Vice President
                                     <br />
                                    
@@ -320,10 +320,10 @@ const BusinessLoan = () => {
                                 <Phone className="w-5 h-5 text-white" />
                             </span>
                             <div>
-                                <p className="text-base text-gray-700 font-semibold">
+                                <p className="text-base font-3 text-gray-700 font-semibold">
                                     Call Anytime
                                 </p>
-                                <p className="text-xs text-gray-600"><a href="tel:+917486 952 087">+91 7486 952 087</a></p>
+                                <p className="text-xs font-3 text-gray-600"><a href="tel:+917486 952 087">+91 7486 952 087</a></p>
                             </div>
                         </a>
                         <a
@@ -335,10 +335,10 @@ const BusinessLoan = () => {
                                 <Mail className="w-5 h-5 text-white" />
                             </span>
                             <div>
-                                <p className="text-base text-gray-700 font-semibold">
+                                <p className="text-base font-3 text-gray-700 font-semibold">
                                     Write Email
                                 </p>
-                                <p className="text-xs text-gray-600"><a href="mailto:bharat@abtikservices.com">bharat@abtikservices.com</a></p>
+                                <p className="text-xs font-3 text-gray-600"><a href="mailto:bharat@abtikservices.com">bharat@abtikservices.com</a></p>
                             </div>
                         </a>
                     </div>
@@ -368,13 +368,13 @@ const BusinessLoan = () => {
             >
                 <div className="bg-gradient-to-t from-[#3CA2E2] to-[#052EAA] rounded-4xl p-8 md:p-12 space-y-4 text-center">
                     <h2
-                        className="sub-heading text-white text-left"
-                        style={{ fontFamily: "Anton" }}
+                        className="sub-heading font-2 text-white text-left"
+                        
                     >
                         What Are Business Loans?
                     </h2>
-                    <p className="paragraph !text-white mx-auto text-left"
-                        style={{ fontFamily: "Montserrat Alternates" }}
+                    <p className="paragraph font-3 !text-white mx-auto text-left"
+                      
                     >
                         Business loans are financial products designed to provide capital for various business
                         needs including expansion, working capital, equipment purchase, and operational expenses.
@@ -393,8 +393,8 @@ const BusinessLoan = () => {
                 transition={{ duration: 0.5 }}
                 className="px-7 md:px-14 bg-[#f7f7f7] py-8"
             >
-                <h2 className="sub-heading text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                    style={{ fontFamily: "Anton" }}
+                <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
+                 
                 >
                     Secured vs Unsecured Business Loans
                 </h2>
@@ -415,17 +415,17 @@ const BusinessLoan = () => {
                             </div>
                             <div className="text-center mb-4">
                                 <h3
-                                    className="text-xl font-bold text-gray-800 mb-3"
-                                    style={{ fontFamily: "Montserrat Alternates" }}
+                                    className="text-xl font-2 font-bold text-gray-800 mb-3"
+                                   
                                 >
                                     Secured Business Loans
                                 </h3>
-                                <div className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
+                                <div className="bg-gradient-to-r font-3 from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
                                     <p className="text-2xl font-bold">₹5L - ₹50Cr</p>
                                     <p className="text-xs opacity-90">With collateral security</p>
                                 </div>
                             </div>
-                            <ul className="space-y-2 text-xs text-gray-700">
+                            <ul className="space-y-2 font-3 text-xs text-gray-700">
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
                                     <span>Lower interest rates (8-15% per annum)</span>
@@ -459,17 +459,17 @@ const BusinessLoan = () => {
                             </div>
                             <div className="text-center mb-4">
                                 <h3
-                                    className="text-xl font-bold text-gray-800 mb-3"
-                                    style={{ fontFamily: "Montserrat Alternates" }}
+                                    className="text-xl font-2 font-bold text-gray-800 mb-3"
+                                    
                                 >
                                     Unsecured Business Loans
                                 </h3>
-                                <div className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
+                                <div className="bg-gradient-to-r font-3 from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
                                     <p className="text-2xl font-bold">₹1L - ₹5Cr</p>
                                     <p className="text-xs opacity-90">No collateral required</p>
                                 </div>
                             </div>
-                            <ul className="space-y-2 text-xs text-gray-700">
+                            <ul className="space-y-2 text-xs font-3 text-gray-700">
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
                                     <span>Quick approval (2-7 days)</span>
@@ -500,14 +500,14 @@ const BusinessLoan = () => {
                 transition={{ duration: 0.5 }}
                 className="px-7 md:px-14 bg-[#f7f7f7] py-8"
             >
-                <h2 className="sub-heading text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                    style={{ fontFamily: "Anton" }}
+                <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
+                  
                 >
                     Business Loan Benefits & Requirements
                 </h2>
                 <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
-                    <p className="text-sm md:text-base text-gray-600 text-center"
-                        style={{ fontFamily: "Montserrat Alternates" }}
+                    <p className="text-sm md:text-base font-3 text-gray-600 text-center"
+                       
                     >
                         Business loans provide essential capital for growth, expansion, and operational needs
                         with flexible terms and competitive rates tailored to your business requirements.
@@ -520,12 +520,12 @@ const BusinessLoan = () => {
                             className="space-y-4"
                         >
                             <h3
-                                className="text-lg font-semibold text-gray-800"
-                                style={{ fontFamily: "Montserrat Alternates" }}
+                                className="text-lg font-semibold font-2 text-gray-800"
+                               
                             >
                                 Key Benefits
                             </h3>
-                            <ul className="space-y-2 text-sm text-gray-600">
+                            <ul className="space-y-2 text-sm text-gray-600 font-3">
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
                                     <span>Flexible loan amounts from ₹1 lakh to ₹50 crore.</span>
@@ -555,12 +555,12 @@ const BusinessLoan = () => {
                             className="space-y-4"
                         >
                             <h3
-                                className="text-lg font-semibold text-gray-800"
-                                style={{ fontFamily: "Montserrat Alternates" }}
+                                className="text-lg font-semibold text-gray-800 font-2"
+                              
                             >
                                 Eligibility Requirements
                             </h3>
-                            <ul className="space-y-2 text-sm text-gray-600">
+                            <ul className="space-y-2 text-sm text-gray-600 font-3">
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
                                     <span>Minimum 2-3 years business vintage.</span>
@@ -595,8 +595,8 @@ const BusinessLoan = () => {
                 transition={{ duration: 0.5 }}
                 className="px-7 md:px-14 bg-[#f7f7f7] py-8"
             >
-                <h2 className="sub-heading text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                    style={{ fontFamily: "Anton" }}
+                <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
+                    
                 >
                     How Abtik Helps You Get Business Loans
                 </h2>
@@ -613,12 +613,12 @@ const BusinessLoan = () => {
                                 <process.icon className="w-8 h-8" />
                             </div>
                             <h3
-                                className="text-lg font-semibold text-gray-800 mb-2"
-                                style={{ fontFamily: "Montserrat Alternates" }}
+                                className="text-lg font-2 font-semibold text-gray-800 mb-2"
+                             
                             >
                                 {process.title}
                             </h3>
-                            <p className="text-sm text-gray-600">{process.description}</p>
+                            <p className="text-sm text-gray-600 font-3">{process.description}</p>
                         </motion.div>
                     ))}
                 </div>
@@ -632,8 +632,8 @@ const BusinessLoan = () => {
                 transition={{ duration: 0.5 }}
                 className="px-7 md:px-14 bg-[#f7f7f7] py-8 "
             >
-                <h2 className="sub-heading text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                    style={{ fontFamily: "Anton" }}
+                <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
+                    
                 >
                     Why Choose Abtik for Business Loans
                 </h2>
@@ -650,12 +650,12 @@ const BusinessLoan = () => {
                                 <benefit.icon className="w-8 h-8" />
                             </div>
                             <h3
-                                className="text-lg font-semibold text-gray-800 mb-2"
-                                style={{ fontFamily: "Montserrat Alternates" }}
+                                className="text-lg font-semibold text-gray-800 mb-2 font-2"
+                               
                             >
                                 {benefit.title}
                             </h3>
-                            <p className="text-sm text-gray-600">{benefit.description}</p>
+                            <p className="text-sm text-gray-600 font-3">{benefit.description}</p>
                         </motion.div>
                     ))}
                 </div>
@@ -669,14 +669,14 @@ const BusinessLoan = () => {
                 transition={{ duration: 0.5 }}
                 className="bg-[#f7f7f7]  py-8 md:py-16 space-y-6"
             >
-                <h1 className="sub-heading bg-gradient-to-t text-center  bg-clip-text from-[#3CA2E2] to-[#052EAA] text-transparent"
-                    style={{ fontFamily: "Anton" }}
+                <h1 className="sub-heading font-2 bg-gradient-to-t text-center  bg-clip-text from-[#3CA2E2] to-[#052EAA] text-transparent"
+                    
                 >
                     Frequently Asked Questions
                 </h1>
                 <div
-                    className="px-6  md:px-24 space-y-4 "
-                    style={{ fontFamily: "Montserrat Alternates" }}
+                    className="px-6  md:px-24 space-y-4 font-3 "
+                  
                 >
                     {faq.map((data, index) => (
                         <motion.div

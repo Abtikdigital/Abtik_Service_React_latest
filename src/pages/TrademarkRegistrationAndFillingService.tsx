@@ -233,8 +233,8 @@ const TrademarkFiling = () => {
                         className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 
                           font-bold leading-tight sm:leading-tight md:leading-tight lg:leading-tight
                           text-white lg:text-inherit tracking-wide
-                          main-heading"
-                        style={{ fontFamily: "Anton" }}
+                          main-heading font-1"
+                        
                     >
                         Protect Your Brand with{" "}
                         <span className="text-[#3CA2E2] font-extrabold block sm:inline">
@@ -247,9 +247,9 @@ const TrademarkFiling = () => {
                          leading-relaxed sm:leading-relaxed md:leading-relaxed
                          text-white lg:text-white
                          paragraph !text-white
-                         max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
+                         max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0 font-3"
 
-                        style={{ fontFamily: "Montserrat Alternates" }}
+                        
                     >
                         Secure your brand identity with comprehensive trademark filing and registration services.
                         Get nationwide legal protection, exclusive rights, and prevent unauthorized use of your
@@ -286,12 +286,12 @@ const TrademarkFiling = () => {
                     className="w-full md:w-[300px] flex-shrink-0 bg-gradient-to-br from-blue-100 to-blue-200 p-6 rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
                 >
                     <h3
-                        className="text-lg sm:text-xl font-semibold text-gray-800 mb-4"
-                        style={{ fontFamily: "Montserrat Alternates" }}
+                        className="text-lg font-2 sm:text-xl font-semibold text-gray-800 mb-4"
+                       
                     >
                         Get in Touch
                     </h3>
-                     <div className="space-y-4">
+                    <div className="space-y-4">
                         <a
                             href=""
                             target="_blank"
@@ -303,10 +303,10 @@ const TrademarkFiling = () => {
                                 <User className="w-5 h-5 text-white" />
                             </span>
                             <div>
-                                <p className="text-base text-gray-700 font-semibold ">
+                                <p className="text-base font-3 text-gray-700 font-semibold ">
                                     Heer Songhela
                                 </p>
-                                <p className="text-xs text-gray-600">
+                                <p className="text-xs font-3 text-gray-600">
                                     Head Of Finance Department
                                     <br />
 
@@ -322,10 +322,10 @@ const TrademarkFiling = () => {
                                 <Phone className="w-5 h-5 text-white" />
                             </span>
                             <div>
-                                <p className="text-base text-gray-700 font-semibold">
+                                <p className="text-base font-3 text-gray-700 font-semibold">
                                     Call Anytime
                                 </p>
-                                <p className="text-xs text-gray-600"><a href="tel:+9898043284">+91 9898 043 284</a></p>
+                                <p className="text-xs font-3 text-gray-600"><a href="tel:+9898043284">+91 9898 043 284</a></p>
                             </div>
                         </a>
                         <a
@@ -337,10 +337,10 @@ const TrademarkFiling = () => {
                                 <Mail className="w-5 h-5 text-white" />
                             </span>
                             <div>
-                                <p className="text-base text-gray-700 font-semibold">
+                                <p className="text-base font-3 text-gray-700 font-semibold">
                                     Write Email
                                 </p>
-                                <p className="text-xs text-gray-600"><a href="mailto:heer@abtikservices.co.in">heer@abtikservices.co.in</a></p>
+                                <p className="text-xs font-3 text-gray-600"><a href="mailto:heer@abtikservices.co.in">heer@abtikservices.co.in</a></p>
                             </div>
                         </a>
                     </div>
@@ -370,13 +370,13 @@ const TrademarkFiling = () => {
             >
                 <div className="bg-gradient-to-t from-[#3CA2E2] to-[#052EAA] rounded-4xl p-8 md:p-12 space-y-4 text-center">
                     <h2
-                        className="sub-heading text-white text-left"
-                        style={{ fontFamily: "Anton" }}
+                        className="sub-heading font-2 text-white text-left"
+                       
                     >
                         What Is Trademark Registration?
                     </h2>
-                    <p className="paragraph !text-white mx-auto text-left"
-                        style={{ fontFamily: "Montserrat Alternates" }}
+                    <p className="paragraph font-3 !text-white mx-auto text-left"
+                      
                     >
                         Trademark registration is the legal process of securing exclusive rights to use a distinctive
                         mark, symbol, word, phrase, logo, or design that identifies and distinguishes your goods or
@@ -396,8 +396,8 @@ const TrademarkFiling = () => {
                 transition={{ duration: 0.5 }}
                 className="px-7 md:px-14 bg-[#f7f7f7] py-8"
             >
-                <h2 className="sub-heading text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                    style={{ fontFamily: "Anton" }}
+                <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
+                   
                 >
                     Types of Trademarks
                 </h2>
@@ -417,17 +417,17 @@ const TrademarkFiling = () => {
                             </div>
                             <div className="text-center mb-4">
                                 <h3
-                                    className="text-xl font-bold text-gray-800 mb-3"
-                                    style={{ fontFamily: "Montserrat Alternates" }}
+                                    className="text-xl font-2 font-bold text-gray-800 mb-3"
+                                    
                                 >
                                     Word Marks
                                 </h3>
-                                <div className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
+                                <div className="bg-gradient-to-r font-3 from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
                                     <p className="text-lg font-bold">Text Only</p>
                                     <p className="text-xs opacity-90">Brand names & slogans</p>
                                 </div>
                             </div>
-                            <ul className="space-y-2 text-xs text-gray-700">
+                            <ul className="space-y-2 text-xs font-3 text-gray-700">
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
                                     <span>Company names and brand names</span>
@@ -461,17 +461,17 @@ const TrademarkFiling = () => {
                             </div>
                             <div className="text-center mb-4">
                                 <h3
-                                    className="text-xl font-bold text-gray-800 mb-3"
-                                    style={{ fontFamily: "Montserrat Alternates" }}
+                                    className="text-xl font-2 font-bold text-gray-800 mb-3"
+                                   
                                 >
                                     Device Marks
                                 </h3>
-                                <div className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
+                                <div className="bg-gradient-to-r font-3 from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
                                     <p className="text-lg font-bold">Logo & Design</p>
                                     <p className="text-xs opacity-90">Visual elements</p>
                                 </div>
                             </div>
-                            <ul className="space-y-2 text-xs text-gray-700">
+                            <ul className="space-y-2 text-xs font-3 text-gray-700">
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
                                     <span>Logos and graphical designs</span>
@@ -505,17 +505,17 @@ const TrademarkFiling = () => {
                             </div>
                             <div className="text-center mb-4">
                                 <h3
-                                    className="text-xl font-bold text-gray-800 mb-3"
-                                    style={{ fontFamily: "Montserrat Alternates" }}
+                                    className="text-xl font-bold font-2 text-gray-800 mb-3"
+                                    
                                 >
                                     Composite Marks
                                 </h3>
-                                <div className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
+                                <div className="bg-gradient-to-r font-3 from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
                                     <p className="text-lg font-bold">Text + Design</p>
                                     <p className="text-xs opacity-90">Combined elements</p>
                                 </div>
                             </div>
-                            <ul className="space-y-2 text-xs text-gray-700">
+                            <ul className="space-y-2 text-xs font-3 text-gray-700">
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
                                     <span>Combination of words and graphics</span>
@@ -546,12 +546,12 @@ const TrademarkFiling = () => {
                 transition={{ duration: 0.5 }}
                 className="px-7 md:px-14 bg-[#f7f7f7] py-8"
             >
-                <h2 className="sub-heading text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                    style={{ fontFamily: "Anton" }}
+                <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
+                   
                 >
                     Trademark Benefits & Requirements
                 </h2>
-                <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
+                <div className="mt-8 bg-white font-3 rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
                     <p className="text-sm md:text-base text-gray-600 text-center"
                         style={{ fontFamily: "Montserrat Alternates" }}
                     >
@@ -567,12 +567,12 @@ const TrademarkFiling = () => {
                             className="space-y-4"
                         >
                             <h3
-                                className="text-lg font-semibold text-gray-800"
-                                style={{ fontFamily: "Montserrat Alternates" }}
+                                className="text-lg font-semibold font-2 text-gray-800"
+                             
                             >
                                 Key Benefits
                             </h3>
-                            <ul className="space-y-2 text-sm text-gray-600">
+                            <ul className="space-y-2 text-sm font-3 text-gray-600">
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
                                     <span>Exclusive rights to use the trademark nationwide.</span>
@@ -602,12 +602,12 @@ const TrademarkFiling = () => {
                             className="space-y-4"
                         >
                             <h3
-                                className="text-lg font-semibold text-gray-800"
-                                style={{ fontFamily: "Montserrat Alternates" }}
+                                className="text-lg font-semibold font-2 text-gray-800"
+                                
                             >
                                 Registration Requirements
                             </h3>
-                            <ul className="space-y-2 text-sm text-gray-600">
+                            <ul className="space-y-2 font-3 text-sm text-gray-600">
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
                                     <span>Mark must be distinctive and unique.</span>
@@ -642,8 +642,8 @@ const TrademarkFiling = () => {
                 transition={{ duration: 0.5 }}
                 className="px-7 md:px-14 bg-[#f7f7f7] py-8"
             >
-                <h2 className="sub-heading text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                    style={{ fontFamily: "Anton" }}
+                <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
+                   
                 >
                     How Abtik Helps with Trademark Registration
                 </h2>
@@ -660,12 +660,12 @@ const TrademarkFiling = () => {
                                 <process.icon className="w-8 h-8" />
                             </div>
                             <h3
-                                className="text-lg font-semibold text-gray-800 mb-2"
-                                style={{ fontFamily: "Montserrat Alternates" }}
+                                className="text-lg font-2 font-semibold text-gray-800 mb-2"
+                              
                             >
                                 {process.title}
                             </h3>
-                            <p className="text-sm text-gray-600">{process.description}</p>
+                            <p className="text-sm font-3 text-gray-600">{process.description}</p>
                         </motion.div>
                     ))}
                 </div>
@@ -679,8 +679,8 @@ const TrademarkFiling = () => {
                 transition={{ duration: 0.5 }}
                 className="px-7 md:px-14 bg-[#f7f7f7] py-8 "
             >
-                <h2 className="sub-heading text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                    style={{ fontFamily: "Anton" }}
+                <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
+                  
                 >
                     Why Choose Abtik for Trademark Registration
                 </h2>
@@ -697,12 +697,12 @@ const TrademarkFiling = () => {
                                 <benefit.icon className="w-8 h-8" />
                             </div>
                             <h3
-                                className="text-lg font-semibold text-gray-800 mb-2"
-                                style={{ fontFamily: "Montserrat Alternates" }}
+                                className="text-lg font-2 font-semibold text-gray-800 mb-2"
+                              
                             >
                                 {benefit.title}
                             </h3>
-                            <p className="text-sm text-gray-600">{benefit.description}</p>
+                            <p className="text-sm font-3 text-gray-600">{benefit.description}</p>
                         </motion.div>
                     ))}
                 </div>
@@ -716,14 +716,14 @@ const TrademarkFiling = () => {
                 transition={{ duration: 0.5 }}
                 className="bg-[#f7f7f7]  py-8 md:py-16 space-y-6"
             >
-                <h1 className="sub-heading bg-gradient-to-t text-center  bg-clip-text from-[#3CA2E2] to-[#052EAA] text-transparent"
-                    style={{ fontFamily: "Anton" }}
+                <h1 className="sub-heading font-2 bg-gradient-to-t text-center  bg-clip-text from-[#3CA2E2] to-[#052EAA] text-transparent"
+                   
                 >
                     Frequently Asked Questions
                 </h1>
                 <div
-                    className="px-6  md:px-24 space-y-4 "
-                    style={{ fontFamily: "Montserrat Alternates" }}
+                    className="px-6  md:px-24 space-y-4 font-3"
+                    
                 >
                     {faq.map((data, index) => (
                         <motion.div

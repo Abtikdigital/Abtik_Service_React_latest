@@ -266,21 +266,21 @@ const Card = ({ testimonial }: { testimonial: typeof testimonials[0] }) => {
     <div className="w-[300px] sm:w-[340px] md:w-[400px] min-h-[210px] bg-gradient-to-b from-blue-800 to-blue-500 text-white rounded-2xl shadow-lg flex flex-col justify-between p-5 mx-3 flex-shrink-0">
       <div className="flex items-center space-x-4 mb-3">
         <div
-          className="w-12 h-12 rounded-full bg-gray-300 flex justify-center items-center text-gray-800 font-semibold text-lg"
-          style={{ fontFamily: "Montserrat Alternates" }}
+          className="w-12 h-12 rounded-full bg-gray-300 font-4 flex justify-center items-center text-gray-800 font-semibold text-lg"
+       
         >
           {getInitials(testimonial.name)}
         </div>
         <div>
-          <p className="font-semibold text-base capitalize truncate" style={{ fontFamily: "Montserrat Alternates" }}>
+          <p className="font-semibold text-base capitalize truncate font-4" >
             {testimonial.name}
           </p>
           {testimonial.company && (
-            <p className="text-xs opacity-80 truncate">{testimonial.company}</p>
+            <p className="text-xs opacity-80 truncate font-4">{testimonial.company}</p>
           )}
         </div>
       </div>
-      <p className="text-sm">{testimonial.text}</p>
+      <p className="text-sm font-4">{testimonial.text}</p>
     </div>
   );
 };
@@ -291,8 +291,8 @@ const TestimonialMarquee: React.FC = () => {
   return (
     <section className="flex flex-col items-center py-8 space-y-8 bg-[#f7f7f7] w-full min-h-[340px]">
       <h2
-        className="sub-heading bg-clip-text text-transparent bg-gradient-to-t from-[#3CA2E2] to-[#052EAA] px-4"
-        style={{ fontFamily: "Anton" }}
+        className="sub-heading bg-clip-text text-transparent bg-gradient-to-t from-[#3CA2E2] to-[#052EAA] px-4 font-1"
+       
       >
         Testimonials
       </h2>

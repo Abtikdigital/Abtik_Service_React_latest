@@ -44,23 +44,23 @@ const About = () => {
             }`}
         >
           <h2
-            className="sub-heading text-center md:text-left bg-clip-text bg-gradient-to-t text-transparent from-[#3CA2E2] to-[#052EAA]"
-            style={{ fontFamily: "Anton" }}
+            className="sub-heading text-center md:text-left bg-clip-text bg-gradient-to-t text-transparent from-[#3CA2E2] to-[#052EAA] font-1"
+           
           >
             About Abtik
           </h2>
-          <p className="paragraph"
-            style={{ fontFamily: "Montserrat Alternatess" }}
+          <p className="paragraph font-2"
+          
           >
             In Abtik Services is a start-up dedicated consultation dedicated to accelerate the development of micro, small and medium enterprises across India. With the vision of making government schemes and funding accessible to every entrepreneur, we have become a reliable one-stop partner for business funding, branding and legal needs.
           </p>
-           <p className="paragraph"
-            style={{ fontFamily: "Montserrat Alternatess" }}
+           <p className="paragraph font-2"
+         
           >
            From government grants and MSME loans to providing strategic aid in working capital finance, digital attendance, legal compliance and IP protection - we simplify the journey of business building. Our team of experienced experts has already assisted more than 50,000 client PAN-India, including 6,500+ recognized startups to convert their ambitions into reality.
            </p>
-           <p className="paragraph"
-            style={{ fontFamily: "Montserrat Alternatess" }}
+           <p className="paragraph font-2"
+          
           >
           At Abtik, we don’t just consult — we collaborate. Our transparent and personalized approach ensures that every business gets the right support at the right stage — from idea to expansion.
           </p>

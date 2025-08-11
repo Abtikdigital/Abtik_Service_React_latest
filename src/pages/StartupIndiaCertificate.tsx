@@ -229,8 +229,8 @@ const StartupIndiaCertificate = () => {
                     >
                         <h1
                             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 
-                          font-bold leading-tight text-white lg:text-inherit tracking-wide main-heading"
-                            style={{ fontFamily: "Anton" }}
+                          font-bold leading-tight text-white font-1 lg:text-inherit tracking-wide main-heading"
+                          
                         >
                             Power Your Startup Journey with{" "}
                             <span className="text-[#3CA2E2] font-extrabold block sm:inline">
@@ -242,9 +242,9 @@ const StartupIndiaCertificate = () => {
                          leading-relaxed sm:leading-relaxed md:leading-relaxed
                          text-white lg:text-white
                          paragraph !text-white
-                         max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
+                         max-w-none sm:max-w-lg font-3 md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
 
-                            style={{ fontFamily: "Montserrat Alternates" }}
+                            
                         >
                             Get DPIIT Startup India recognition, tax holidays, investor preference, patent rebates, and a gateway to exclusive government incentives with Abtik’s expert assistance.
                         </p>
@@ -274,8 +274,8 @@ const StartupIndiaCertificate = () => {
                         className="w-full md:w-[300px] flex-shrink-0 bg-gradient-to-br from-blue-100 to-blue-200 p-6 rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
                     >
                         <h3
-                            className="text-lg sm:text-xl font-semibold text-gray-800 mb-4"
-                            style={{ fontFamily: "Montserrat Alternates" }}
+                            className="text-lg font-2 sm:text-xl font-semibold text-gray-800 mb-4"
+                           
                         >
                             Get in Touch
                         </h3>
@@ -291,11 +291,11 @@ const StartupIndiaCertificate = () => {
                                 <User className="w-5 h-5 text-white" />
                             </span>
                             <div>
-                                <p className="text-base text-gray-700 font-semibold ">
+                                <p className="text-base text-gray-700 font-semibold font-3">
                                     Sumit Radadiya
 
                                 </p>
-                                <p className="text-xs text-gray-600">
+                                <p className="text-xs text-gray-600 font-3">
                                     HOD-Sales Department
                                     <br />
 
@@ -311,10 +311,10 @@ const StartupIndiaCertificate = () => {
                                 <Phone className="w-5 h-5 text-white" />
                             </span>
                             <div>
-                                <p className="text-base text-gray-700 font-semibold">
+                                <p className="text-base text-gray-700 font-semibold font-3">
                                     Call Anytime
                                 </p>
-                                <p className="text-xs text-gray-600"><a href="tel:+917486 952 087">+91 6358 169 584</a></p>
+                                <p className="text-xs text-gray-600 font-3"><a href="tel:+917486 952 087">+91 6358 169 584</a></p>
                             </div>
                         </a>
                         <a
@@ -326,10 +326,10 @@ const StartupIndiaCertificate = () => {
                                 <Mail className="w-5 h-5 text-white" />
                             </span>
                             <div>
-                                <p className="text-base text-gray-700 font-semibold">
+                                <p className="text-base text-gray-700 font-semibold font-3">
                                     Write Email
                                 </p>
-                                <p className="text-xs text-gray-600"><a href="mailto:sumitradadiya@abtikservices.in">sumitradadiya@abtikservices.in</a></p>
+                                <p className="text-xs text-gray-600 font-3"><a href="mailto:sumitradadiya@abtikservices.in">sumitradadiya@abtikservices.in</a></p>
                             </div>
                         </a>
                     </div>
@@ -359,13 +359,13 @@ const StartupIndiaCertificate = () => {
                 >
                     <div className="bg-gradient-to-t from-[#3CA2E2] to-[#052EAA] rounded-4xl p-8 md:p-12 space-y-4 text-center">
                         <h2
-                            className="sub-heading text-white text-left"
-                            style={{ fontFamily: "Anton" }}
+                            className="sub-heading font-2 text-white text-left"
+                           
                         >
                             What Is Startup India Certificate?
                         </h2>
-                        <p className="paragraph !text-white mx-auto text-left"
-                            style={{ fontFamily: "Montserrat Alternates" }}
+                        <p className="paragraph font-3 !text-white mx-auto text-left"
+                          
                         >
                             The Startup India Certificate is an official DPIIT recognition for innovative businesses under 10 years old in India.
                             With this certificate, startups enjoy tax breaks, IP fee rebates, funding access, government tenders, and easier statutory compliance. Let Abtik guide your recognition and unlock every benefit.
@@ -381,14 +381,14 @@ const StartupIndiaCertificate = () => {
                     transition={{ duration: 0.5 }}
                     className="px-7 md:px-14 bg-[#f7f7f7] py-8"
                 >
-                    <h2 className="sub-heading text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                        style={{ fontFamily: "Anton" }}
+                    <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
+                        
                     >
                         Eligibility & Key Features
                     </h2>
                     <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
-                        <p className="text-sm md:text-base text-gray-600 text-center"
-                            style={{ fontFamily: "Montserrat Alternates" }}
+                        <p className="text-sm md:text-base font-3 text-gray-600 text-center"
+                         
                         >
                             To be considered for Startup India DPIIT recognition, your business must meet the following requirements.
                             Official recognition brings a host of strategic and financial advantages, powering your growth story.
@@ -401,12 +401,12 @@ const StartupIndiaCertificate = () => {
                                 className="space-y-4"
                             >
                                 <h3
-                                    className="text-lg font-semibold text-gray-800"
-                                    style={{ fontFamily: "Montserrat Alternates" }}
+                                    className="text-lg font-semibold font-2 text-gray-800"
+                                   
                                 >
                                     Who Can Apply?
                                 </h3>
-                                <ul className="space-y-2 text-sm text-gray-600">
+                                <ul className="space-y-2 text-sm font-3 text-gray-600">
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                         <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
                                         <span>Private Limited, LLP, or Registered Partnership</span>
@@ -436,12 +436,12 @@ const StartupIndiaCertificate = () => {
                                 className="space-y-4"
                             >
                                 <h3
-                                    className="text-lg font-semibold text-gray-800"
-                                    style={{ fontFamily: "Montserrat Alternates" }}
+                                    className="text-lg font-2 font-semibold text-gray-800"
+                                   
                                 >
                                     Certificate Highlights
                                 </h3>
-                                <ul className="space-y-2 text-sm text-gray-600">
+                                <ul className="space-y-2 text-sm font-3 text-gray-600">
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                         <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
                                         <span>Downloadable government certificate</span>
@@ -476,8 +476,8 @@ const StartupIndiaCertificate = () => {
                     transition={{ duration: 0.5 }}
                     className="px-7 md:px-14 bg-[#f7f7f7] py-8"
                 >
-                    <h2 className="sub-heading text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                        style={{ fontFamily: "Anton" }}
+                    <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
+                     
                     >
                         How Abtik Gets You DPIIT Certified
                     </h2>
@@ -494,12 +494,12 @@ const StartupIndiaCertificate = () => {
                                     <process.icon className="w-8 h-8" />
                                 </div>
                                 <h3
-                                    className="text-lg font-semibold text-gray-800 mb-2"
-                                    style={{ fontFamily: "Montserrat Alternates" }}
+                                    className="text-lg font-2 font-semibold text-gray-800 mb-2"
+                                  
                                 >
                                     {process.title}
                                 </h3>
-                                <p className="text-sm text-gray-600">{process.description}</p>
+                                <p className="text-sm text-gray-600 font-3">{process.description}</p>
                             </motion.div>
                         ))}
                     </div>
@@ -513,8 +513,8 @@ const StartupIndiaCertificate = () => {
                     transition={{ duration: 0.5 }}
                     className="px-7 md:px-14 bg-[#f7f7f7] py-8 "
                 >
-                    <h2 className="sub-heading text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                        style={{ fontFamily: "Anton" }}
+                    <h2 className="sub-heading font-1 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
+                    
                     >
                         Startup India Benefits For You
                     </h2>
@@ -531,12 +531,12 @@ const StartupIndiaCertificate = () => {
                                     <benefit.icon className="w-8 h-8" />
                                 </div>
                                 <h3
-                                    className="text-lg font-semibold text-gray-800 mb-2"
-                                    style={{ fontFamily: "Montserrat Alternates" }}
+                                    className="text-lg font-2 font-semibold text-gray-800 mb-2"
+                                   
                                 >
                                     {benefit.title}
                                 </h3>
-                                <p className="text-sm text-gray-600">{benefit.description}</p>
+                                <p className="text-sm font-3 text-gray-600">{benefit.description}</p>
                             </motion.div>
                         ))}
                     </div>
@@ -550,14 +550,14 @@ const StartupIndiaCertificate = () => {
                     transition={{ duration: 0.5 }}
                     className="bg-[#f7f7f7] py-8 md:py-16 space-y-6"
                 >
-                    <h1 className="sub-heading bg-gradient-to-t text-center bg-clip-text from-[#3CA2E2] to-[#052EAA] text-transparent"
-                        style={{ fontFamily: "Anton" }}
+                    <h1 className="sub-heading font-2 bg-gradient-to-t text-center bg-clip-text from-[#3CA2E2] to-[#052EAA] text-transparent"
+                       
                     >
                         Frequently Asked Questions
                     </h1>
                     <div
-                        className="px-6  md:px-24 space-y-4 "
-                        style={{ fontFamily: "Montserrat Alternates" }}
+                        className="px-6  md:px-24 space-y-4  font-3"
+                   
                     >
                         {faq.map((data, index) => (
                             <motion.div

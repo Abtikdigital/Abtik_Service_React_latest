@@ -164,8 +164,8 @@ const About = () => {
               className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 
                           font-bold leading-tight sm:leading-tight md:leading-tight lg:leading-tight
                           text-white lg:text-inherit tracking-wide
-                          main-heading"
-              style={{ fontFamily: "Anton" }}
+                          main-heading font-1"
+              
             >
               Your One-Stop{" "}
               <span className="text-[#3CA2E2] font-extrabold block sm:inline">
@@ -178,8 +178,8 @@ const About = () => {
                          leading-relaxed sm:leading-relaxed md:leading-relaxed
                          text-white lg:text-white
                          paragraph !text-white
-                         max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
-              style={{ fontFamily: "Montserrat Alternates" }}
+                         max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0 font-2"
+            
             >
               Empowering Businesses through Comprehensive Solutions From Fund
               Management to Legal Compliance, We've Got You Covered at Abtik
@@ -228,15 +228,15 @@ const About = () => {
               <h2
                 className="sub-heading text-center  bg-clip-text bg-gradient-to-t text-transparent
           from-[#3CA2E2]
-          to-[#052EAA]
+          to-[#052EAA] font-2
           "
-                style={{ fontFamily: "Anton" }}
+              
               >
                 {index === 0 ? "Our Vision" : "Our Mission"}
               </h2>
               <p
-                className="paragraph  "
-                style={{ fontFamily: "Montserrat Alternates" }}
+                className="paragraph  font-3"
+            
               >{
                 index==0?
                 
@@ -277,25 +277,25 @@ const About = () => {
                   <h2
                     className="sub-heading text-center bg-clip-text bg-gradient-to-t text-transparent
           from-[#3CA2E2]
-          to-[#052EAA]
+          to-[#052EAA] font-2
           "
-                    style={{ fontFamily: "Anton" }}
+            
                   >
                     Why Choose Abtik
                   </h2>
                   <p
-                    className="paragraph  "
-                    style={{ fontFamily: "Montserrat Alternates" }}
+                    className="paragraph  font-3"
+                   
                   >
                     At Abtik Services, we offer more than just consultancy — we provide a complete ecosystem to help your business grow. From government grants and MSME loans to branding, legal support, and marketing, we simplify every step with expert guidance.
                   </p>
                       <p
-                    className="paragraph  "
-                    style={{ fontFamily: "Montserrat Alternates" }}
+                    className="paragraph  font-3"
+               
                   >
                        <p
-                    className="paragraph  "
-                    style={{ fontFamily: "Montserrat Alternates" }}
+                    className="paragraph  font-3"
+     
                   >
                     At Abtik Services, we offer more than just consultancy — we provide a complete ecosystem to help your business grow. From government grants and MSME loans to branding, legal support, and marketing, we simplify every step with expert guidance.
                   </p>

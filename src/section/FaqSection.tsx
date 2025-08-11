@@ -40,12 +40,12 @@ const FaqSection = () => {
 
   return (
     <section className="bg-[#f7f7f7]  py-8 md:py-16 space-y-6">
-      <h1 className="sub-heading bg-gradient-to-t text-center  bg-clip-text from-[#3CA2E2] to-[#052EAA] text-transparent">
+      <h1 className="sub-heading bg-gradient-to-t text-center  bg-clip-text from-[#3CA2E2] to-[#052EAA] text-transparent font-1">
         Frequently Asked Questions
       </h1>
 
-      <div className="px-6  md:px-24 space-y-4 "
-      style={{fontFamily:"Montserrat Alternates"}}
+      <div className="px-6  md:px-24 space-y-4  font-2"
+     
       >
         {faq.map((data, index) => (
           <div

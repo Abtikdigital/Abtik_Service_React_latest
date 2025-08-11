@@ -231,8 +231,8 @@ const VentureCapital = () => {
                             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 
                               font-bold leading-tight sm:leading-tight md:leading-tight lg:leading-tight
                               text-white lg:text-inherit tracking-wide
-                              main-heading"
-                            style={{ fontFamily: "Anton" }}
+                              main-heading font-1"
+                            
                         >
                             Secure{" "}
                             <span className="text-[#3CA2E2] font-extrabold block sm:inline">
@@ -245,8 +245,8 @@ const VentureCapital = () => {
                              leading-relaxed sm:leading-relaxed md:leading-relaxed
                              text-white lg:text-white
                              paragraph !text-white
-                             max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
-                            style={{ fontFamily: "Montserrat Alternates" }}
+                             max-w-none sm:max-w-lg md:max-w-xl font-3 lg:max-w-none mx-auto lg:mx-0"
+                            
                         >
                             Accelerate your startup's growth with venture capital support. Access substantial funding from professional investors to scale innovative businesses and achieve market leadership.
                         </p>
@@ -281,8 +281,8 @@ const VentureCapital = () => {
                         className="w-full md:w-[300px] flex-shrink-0 bg-gradient-to-br from-blue-100 to-blue-200 p-6 rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
                     >
                         <h3
-                            className="text-lg sm:text-xl font-semibold text-gray-800 mb-4"
-                            style={{ fontFamily: "Montserrat Alternates" }}
+                            className="text-lg sm:text-xl font-2 font-semibold text-gray-800 mb-4"
+                            
                         >
                             Get in Touch
                         </h3>
@@ -298,10 +298,10 @@ const VentureCapital = () => {
                                 <User className="w-5 h-5 text-white" />
                             </span>
                             <div>
-                                <p className="text-base text-gray-700 font-semibold ">
+                                <p className="text-base text-gray-700 font-semibold font-3">
                                     Bharat Barot
                                 </p>
-                                <p className="text-xs text-gray-600">
+                                <p className="text-xs text-gray-600 font-3">
                                    Vice President
                                     <br />
                                    
@@ -317,10 +317,10 @@ const VentureCapital = () => {
                                 <Phone className="w-5 h-5 text-white" />
                             </span>
                             <div>
-                                <p className="text-base text-gray-700 font-semibold">
+                                <p className="text-base text-gray-700 font-semibold font-3">
                                     Call Anytime
                                 </p>
-                                <p className="text-xs text-gray-600"><a href="tel:+917486 952 087">+91 7486 952 087</a></p>
+                                <p className="text-xs text-gray-600 font-3"><a href="tel:+917486 952 087">+91 7486 952 087</a></p>
                             </div>
                         </a>
                         <a
@@ -332,10 +332,10 @@ const VentureCapital = () => {
                                 <Mail className="w-5 h-5 text-white" />
                             </span>
                             <div>
-                                <p className="text-base text-gray-700 font-semibold">
+                                <p className="text-base text-gray-700 font-semibold font-3">
                                     Write Email
                                 </p>
-                                <p className="text-xs text-gray-600"><a href="mailto:bharat@abtikservices.com">bharat@abtikservices.com</a></p>
+                                <p className="text-xs text-gray-600 font-3"><a href="mailto:bharat@abtikservices.com">bharat@abtikservices.com</a></p>
                             </div>
                         </a>
                     </div>
@@ -365,13 +365,13 @@ const VentureCapital = () => {
                 >
                     <div className="bg-gradient-to-t from-[#3CA2E2] to-[#052EAA] rounded-4xl p-8 md:p-12 space-y-4 text-center">
                         <h2
-                            className="sub-heading text-white text-left"
-                            style={{ fontFamily: "Anton" }}
+                            className="sub-heading font-2 text-white text-left"
+                           
                         >
                             What Is Venture Capital?
                         </h2>
-                        <p className="paragraph !text-white mx-auto text-left"
-                            style={{ fontFamily: "Montserrat Alternates" }}
+                        <p className="paragraph font-3 !text-white mx-auto text-left"
+                            
                         >
                             Venture Capital is a type of financing that investors provide to startups and small businesses believed to have long-term growth potential. VC firms manage pooled investments from various sources to fund promising companies in exchange for equity, often providing strategic guidance and resources to help them succeed.
                         </p>
@@ -386,8 +386,8 @@ const VentureCapital = () => {
                     transition={{ duration: 0.5 }}
                     className="px-7 md:px-14 bg-[#f7f7f7] py-8"
                 >
-                    <h2 className="sub-heading text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                        style={{ fontFamily: "Anton" }}
+                    <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
+                       
                     >
                         Venture Capital Investment Structure
                     </h2>
@@ -408,17 +408,17 @@ const VentureCapital = () => {
                                 </div>
                                 <div className="text-center mb-4">
                                     <h3
-                                        className="text-xl font-bold text-gray-800 mb-3"
-                                        style={{ fontFamily: "Montserrat Alternates" }}
+                                        className="text-xl font-2 font-bold text-gray-800 mb-3"
+                                       
                                     >
                                         Early-Stage Funding
                                     </h3>
-                                    <div className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
+                                    <div className="bg-gradient-to-r font-3 from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
                                         <p className="text-2xl font-bold">Seed/Series A</p>
                                         <p className="text-xs opacity-90">Initial growth capital</p>
                                     </div>
                                 </div>
-                                <ul className="space-y-2 text-xs text-gray-700">
+                                <ul className="space-y-2 text-xs font-3 text-gray-700">
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                         <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
                                         <span>Product development focus</span>
@@ -452,17 +452,17 @@ const VentureCapital = () => {
                                 </div>
                                 <div className="text-center mb-4">
                                     <h3
-                                        className="text-xl font-bold text-gray-800 mb-3"
-                                        style={{ fontFamily: "Montserrat Alternates" }}
+                                        className="text-xl font-2 font-bold text-gray-800 mb-3"
+                                        
                                     >
                                         Growth-Stage Funding
                                     </h3>
-                                    <div className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
+                                    <div className="bg-gradient-to-r font-3 from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
                                         <p className="text-2xl font-bold">Series B/C</p>
                                         <p className="text-xs opacity-90">Scaling capital</p>
                                     </div>
                                 </div>
-                                <ul className="space-y-2 text-xs text-gray-700">
+                                <ul className="space-y-2 text-xs font-3 text-gray-700">
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                         <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
                                         <span>Market expansion</span>
@@ -493,14 +493,14 @@ const VentureCapital = () => {
                     transition={{ duration: 0.5 }}
                     className="px-7 md:px-14 bg-[#f7f7f7] py-8"
                 >
-                    <h2 className="sub-heading text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                        style={{ fontFamily: "Anton" }}
+                    <h2 className="sub-heading text-center font-2 bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
+                       
                     >
                         Venture Capital Benefits & Eligibility
                     </h2>
                     <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
-                        <p className="text-sm md:text-base text-gray-600 text-center"
-                            style={{ fontFamily: "Montserrat Alternates" }}
+                        <p className="text-sm md:text-base text-gray-600 text-center font-3"
+                           
                         >
                             Venture Capital provides substantial funding, expert guidance, and valuable networks to high-potential startups, enabling rapid scaling and market dominance in innovative sectors.
                         </p>
@@ -512,12 +512,12 @@ const VentureCapital = () => {
                                 className="space-y-4"
                             >
                                 <h3
-                                    className="text-lg font-semibold text-gray-800"
-                                    style={{ fontFamily: "Montserrat Alternates" }}
+                                    className="text-lg font-semibold text-gray-800 font-2"
+                                    
                                 >
                                     Key Benefits
                                 </h3>
-                                <ul className="space-y-2 text-sm text-gray-600">
+                                <ul className="space-y-2 text-sm text-gray-600 font-3">
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                         <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
                                         <span>Large funding rounds for expansion.</span>
@@ -547,12 +547,12 @@ const VentureCapital = () => {
                                 className="space-y-4"
                             >
                                 <h3
-                                    className="text-lg font-semibold text-gray-800"
-                                    style={{ fontFamily: "Montserrat Alternates" }}
+                                    className="text-lg font-semibold text-gray-800 font-2"
+                                    
                                 >
                                     Eligibility Criteria
                                 </h3>
-                                <ul className="space-y-2 text-sm text-gray-600">
+                                <ul className="space-y-2 font-3 text-sm text-gray-600">
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                         <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
                                         <span>Registered companies with traction.</span>
@@ -587,8 +587,8 @@ const VentureCapital = () => {
                     transition={{ duration: 0.5 }}
                     className="px-7 md:px-14 bg-[#f7f7f7] py-8"
                 >
-                    <h2 className="sub-heading text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                        style={{ fontFamily: "Anton" }}
+                    <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
+                        
                     >
                         How Abtik Helps You Secure Venture Capital
                     </h2>
@@ -605,12 +605,12 @@ const VentureCapital = () => {
                                     <process.icon className="w-8 h-8" />
                                 </div>
                                 <h3
-                                    className="text-lg font-semibold text-gray-800 mb-2"
-                                    style={{ fontFamily: "Montserrat Alternates" }}
+                                    className="text-lg font-2 font-semibold text-gray-800 mb-2"
+                                   
                                 >
                                     {process.title}
                                 </h3>
-                                <p className="text-sm text-gray-600">{process.description}</p>
+                                <p className="text-sm font-3 text-gray-600">{process.description}</p>
                             </motion.div>
                         ))}
                     </div>
@@ -624,8 +624,8 @@ const VentureCapital = () => {
                     transition={{ duration: 0.5 }}
                     className="px-7 md:px-14 bg-[#f7f7f7] py-8 "
                 >
-                    <h2 className="sub-heading text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                        style={{ fontFamily: "Anton" }}
+                    <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
+                        
                     >
                         Why Choose Abtik for Venture Capital
                     </h2>
@@ -642,12 +642,12 @@ const VentureCapital = () => {
                                     <benefit.icon className="w-8 h-8" />
                                 </div>
                                 <h3
-                                    className="text-lg font-semibold text-gray-800 mb-2"
-                                    style={{ fontFamily: "Montserrat Alternates" }}
+                                    className="text-lg font-2 font-semibold text-gray-800 mb-2"
+                                  
                                 >
                                     {benefit.title}
                                 </h3>
-                                <p className="text-sm text-gray-600">{benefit.description}</p>
+                                <p className="text-sm text-gray-600 font-3">{benefit.description}</p>
                             </motion.div>
                         ))}
                     </div>
@@ -661,14 +661,14 @@ const VentureCapital = () => {
                     transition={{ duration: 0.5 }}
                     className="bg-[#f7f7f7]  py-8 md:py-16 space-y-6"
                 >
-                    <h1 className="sub-heading bg-gradient-to-t text-center  bg-clip-text from-[#3CA2E2] to-[#052EAA] text-transparent"
-                        style={{ fontFamily: "Anton" }}
+                    <h1 className="sub-heading font-2 bg-gradient-to-t text-center  bg-clip-text from-[#3CA2E2] to-[#052EAA] text-transparent"
+                     
                     >
                         Frequently Asked Questions
                     </h1>
                     <div
-                        className="px-6  md:px-24 space-y-4 "
-                        style={{ fontFamily: "Montserrat Alternates" }}
+                        className="px-6  md:px-24 space-y-4  font-3"
+                        
                     >
                         {faq.map((data, index) => (
                             <motion.div

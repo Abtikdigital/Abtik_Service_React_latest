@@ -13,11 +13,11 @@ import {
     Shield,
     Clock,
     Award,
-   
+
     Building,
     BookOpen,
     AlertCircle,
-   
+
     Star,
     Globe,
 } from "lucide-react";
@@ -226,8 +226,8 @@ const FSSAILicense = () => {
                     >
                         <h1
                             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 
-                          font-bold leading-tight text-white lg:text-inherit tracking-wide main-heading"
-                            style={{ fontFamily: "Anton" }}
+                          font-bold leading-tight font-1 text-white lg:text-inherit tracking-wide main-heading"
+                            
                         >
                             Get Your{" "}
                             <span className="text-[#3CA2E2] font-extrabold block sm:inline">
@@ -240,8 +240,8 @@ const FSSAILicense = () => {
                          leading-relaxed sm:leading-relaxed md:leading-relaxed
                          text-white lg:text-white
                          paragraph !text-white
-                         max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
-                            style={{ fontFamily: "Montserrat Alternates" }}
+                         max-w-none font-3 sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
+                         
                         >
                             Secure your FSSAI License for legal food business operations. Expert guidance for Basic Registration, State License, and Central License with complete documentation support.
                         </p>
@@ -271,8 +271,8 @@ const FSSAILicense = () => {
                         className="w-full md:w-[300px] flex-shrink-0 bg-gradient-to-br from-blue-100 to-blue-200 p-6 rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
                     >
                         <h3
-                            className="text-lg sm:text-xl font-semibold text-gray-800 mb-4"
-                            style={{ fontFamily: "Montserrat Alternates" }}
+                            className="text-lg font-2 sm:text-xl font-semibold text-gray-800 mb-4"
+                           
                         >
                             Get in Touch
                         </h3>
@@ -288,10 +288,10 @@ const FSSAILicense = () => {
                                     <User className="w-5 h-5 text-white" />
                                 </span>
                                 <div>
-                                    <p className="text-base text-gray-700 font-semibold">
+                                    <p className="text-base font-3 text-gray-700 font-semibold">
                                         Sumit Radadiya
                                     </p>
-                                    <p className="text-xs text-gray-600">
+                                    <p className="text-xs font-3 text-gray-600">
                                         HOD-Sales Department
                                         <br />
                                     </p>
@@ -306,10 +306,10 @@ const FSSAILicense = () => {
                                     <Phone className="w-5 h-5 text-white" />
                                 </span>
                                 <div>
-                                    <p className="text-base text-gray-700 font-semibold">
+                                    <p className="text-base font-3 text-gray-700 font-semibold">
                                         Call Anytime
                                     </p>
-                                    <p className="text-xs text-gray-600">
+                                    <p className="text-xs font-3 text-gray-600">
                                         <a href="tel:+916358169584">+91 6358 169 584</a>
                                     </p>
                                 </div>
@@ -323,10 +323,10 @@ const FSSAILicense = () => {
                                     <Mail className="w-5 h-5 text-white" />
                                 </span>
                                 <div>
-                                    <p className="text-base text-gray-700 font-semibold">
+                                    <p className="text-base font-3 text-gray-700 font-semibold">
                                         Write Email
                                     </p>
-                                    <p className="text-xs text-gray-600">
+                                    <p className="text-xs font-3 text-gray-600">
                                         <a href="mailto:sumitradadiya@abtikservices.in">sumitradadiya@abtikservices.in</a>
                                     </p>
                                 </div>
@@ -358,16 +358,16 @@ const FSSAILicense = () => {
                 >
                     <div className="bg-gradient-to-t from-[#3CA2E2] to-[#052EAA] rounded-4xl p-8 md:p-12 space-y-4 text-center">
                         <h2
-                            className="sub-heading text-white text-left"
-                            style={{ fontFamily: "Anton" }}
+                            className="sub-heading font-2 text-white text-left"
+                     
                         >
                             What Is FSSAI License?
                         </h2>
-                        <p className="paragraph !text-white mx-auto text-left"
-                            style={{ fontFamily: "Montserrat Alternates" }}
+                        <p className="paragraph font-3 !text-white mx-auto text-left"
+                           
                         >
-                            FSSAI (Food Safety and Standards Authority of India) License is a mandatory certification for all food businesses in India. 
-                            It ensures compliance with food safety standards and regulations. Whether you're running a restaurant, manufacturing food products, 
+                            FSSAI (Food Safety and Standards Authority of India) License is a mandatory certification for all food businesses in India.
+                            It ensures compliance with food safety standards and regulations. Whether you're running a restaurant, manufacturing food products,
                             or selling food items, FSSAI registration is legally required. Let Abtik handle your FSSAI license application process with expert guidance and complete documentation support.
                         </p>
                     </div>
@@ -381,8 +381,8 @@ const FSSAILicense = () => {
                     transition={{ duration: 0.5 }}
                     className="px-7 md:px-14 bg-[#f7f7f7] py-8"
                 >
-                    <h2 className="sub-heading text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                        style={{ fontFamily: "Anton" }}
+                    <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
+                       
                     >
                         Types of FSSAI Licenses
                     </h2>
@@ -402,17 +402,17 @@ const FSSAILicense = () => {
                                 </div>
                                 <div className="text-center mb-4">
                                     <h3
-                                        className="text-xl font-bold text-gray-800 mb-3"
-                                        style={{ fontFamily: "Montserrat Alternates" }}
+                                        className="text-xl font-2 font-bold text-gray-800 mb-3"
+                                       
                                     >
                                         Basic Registration
                                     </h3>
-                                    <div className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
+                                    <div className="bg-gradient-to-r font-3 from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
                                         <p className="text-lg font-bold">Up to ₹12 Lakhs</p>
                                         <p className="text-xs opacity-90">Annual Turnover</p>
                                     </div>
                                 </div>
-                                <ul className="space-y-2 text-xs text-gray-700">
+                                <ul className="space-y-2 text-xs font-3 text-gray-700">
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                         <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
                                         <span>Small food businesses & vendors</span>
@@ -446,17 +446,17 @@ const FSSAILicense = () => {
                                 </div>
                                 <div className="text-center mb-4">
                                     <h3
-                                        className="text-xl font-bold text-gray-800 mb-3"
-                                        style={{ fontFamily: "Montserrat Alternates" }}
+                                        className="text-xl font-2 font-bold text-gray-800 mb-3"
+                                        
                                     >
                                         State License
                                     </h3>
-                                    <div className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
+                                    <div className="bg-gradient-to-r font-3 from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
                                         <p className="text-lg font-bold">₹12L - ₹20 Cr</p>
                                         <p className="text-xs opacity-90">Annual Turnover</p>
                                     </div>
                                 </div>
-                                <ul className="space-y-2 text-xs text-gray-700">
+                                <ul className="space-y-2 text-xs font-3 text-gray-700">
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                         <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
                                         <span>Medium food businesses</span>
@@ -490,17 +490,17 @@ const FSSAILicense = () => {
                                 </div>
                                 <div className="text-center mb-4">
                                     <h3
-                                        className="text-xl font-bold text-gray-800 mb-3"
-                                        style={{ fontFamily: "Montserrat Alternates" }}
+                                        className="text-xl font-bold font-2 text-gray-800 mb-3"
+                                      
                                     >
                                         Central License
                                     </h3>
-                                    <div className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
+                                    <div className="bg-gradient-to-r font-3 from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
                                         <p className="text-lg font-bold">Above ₹20 Cr</p>
                                         <p className="text-xs opacity-90">Annual Turnover</p>
                                     </div>
                                 </div>
-                                <ul className="space-y-2 text-xs text-gray-700">
+                                <ul className="space-y-2 text-xs font-3 text-gray-700">
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                         <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
                                         <span>Large manufacturers</span>
@@ -531,14 +531,14 @@ const FSSAILicense = () => {
                     transition={{ duration: 0.5 }}
                     className="px-7 md:px-14 bg-[#f7f7f7] py-8"
                 >
-                    <h2 className="sub-heading text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                        style={{ fontFamily: "Anton" }}
+                    <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
+                       
                     >
                         FSSAI Benefits & Requirements
                     </h2>
                     <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
-                        <p className="text-sm md:text-base text-gray-600 text-center"
-                            style={{ fontFamily: "Montserrat Alternates" }}
+                        <p className="text-sm font-3 md:text-base text-gray-600 text-center"
+                          
                         >
                             FSSAI license provides legal authorization to operate food businesses in India,
                             ensuring compliance with food safety standards while building customer trust and
@@ -552,12 +552,12 @@ const FSSAILicense = () => {
                                 className="space-y-4"
                             >
                                 <h3
-                                    className="text-lg font-semibold text-gray-800"
-                                    style={{ fontFamily: "Montserrat Alternates" }}
+                                    className="text-lg font-2 font-semibold text-gray-800"
+                                    
                                 >
                                     Key Benefits
                                 </h3>
-                                <ul className="space-y-2 text-sm text-gray-600">
+                                <ul className="space-y-2 font-3 text-sm text-gray-600">
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                         <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
                                         <span>Legal authorization to operate food business</span>
@@ -587,12 +587,12 @@ const FSSAILicense = () => {
                                 className="space-y-4"
                             >
                                 <h3
-                                    className="text-lg font-semibold text-gray-800"
-                                    style={{ fontFamily: "Montserrat Alternates" }}
+                                    className="text-lg font-2 font-semibold text-gray-800"
+                                    
                                 >
                                     Required Documents
                                 </h3>
-                                <ul className="space-y-2 text-sm text-gray-600">
+                                <ul className="space-y-2 font-3 text-sm text-gray-600">
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                         <AlertCircle className="w-5 h-5 text-[#3CA2E2]" />
                                         <span>Form A/B application (as applicable)</span>
@@ -627,8 +627,8 @@ const FSSAILicense = () => {
                     transition={{ duration: 0.5 }}
                     className="px-7 md:px-14 bg-[#f7f7f7] py-8"
                 >
-                    <h2 className="sub-heading text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                        style={{ fontFamily: "Anton" }}
+                    <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
+                       
                     >
                         How Abtik Helps with FSSAI License
                     </h2>
@@ -645,12 +645,12 @@ const FSSAILicense = () => {
                                     <process.icon className="w-8 h-8" />
                                 </div>
                                 <h3
-                                    className="text-lg font-semibold text-gray-800 mb-2"
-                                    style={{ fontFamily: "Montserrat Alternates" }}
+                                    className="text-lg font-2 font-semibold text-gray-800 mb-2"
+                               
                                 >
                                     {process.title}
                                 </h3>
-                                <p className="text-sm text-gray-600">{process.description}</p>
+                                <p className="text-sm font-3 text-gray-600">{process.description}</p>
                             </motion.div>
                         ))}
                     </div>
@@ -664,8 +664,8 @@ const FSSAILicense = () => {
                     transition={{ duration: 0.5 }}
                     className="px-7 md:px-14 bg-[#f7f7f7] py-8"
                 >
-                    <h2 className="sub-heading text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                        style={{ fontFamily: "Anton" }}
+                    <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
+                       
                     >
                         Why Choose Abtik for FSSAI License
                     </h2>
@@ -682,12 +682,12 @@ const FSSAILicense = () => {
                                     <benefit.icon className="w-8 h-8" />
                                 </div>
                                 <h3
-                                    className="text-lg font-semibold text-gray-800 mb-2"
-                                    style={{ fontFamily: "Montserrat Alternates" }}
+                                    className="text-lg font-3 font-semibold text-gray-800 mb-2"
+                                   
                                 >
                                     {benefit.title}
                                 </h3>
-                                <p className="text-sm text-gray-600">{benefit.description}</p>
+                                <p className="text-sm font-3 text-gray-600">{benefit.description}</p>
                             </motion.div>
                         ))}
                     </div>
@@ -701,14 +701,14 @@ const FSSAILicense = () => {
                     transition={{ duration: 0.5 }}
                     className="bg-[#f7f7f7] py-8 md:py-16 space-y-6"
                 >
-                    <h1 className="sub-heading bg-gradient-to-t text-center bg-clip-text from-[#3CA2E2] to-[#052EAA] text-transparent"
-                        style={{ fontFamily: "Anton" }}
+                    <h1 className="sub-heading font-2 bg-gradient-to-t text-center bg-clip-text from-[#3CA2E2] to-[#052EAA] text-transparent"
+                    
                     >
                         Frequently Asked Questions
                     </h1>
                     <div
-                        className="px-6 md:px-24 space-y-4"
-                        style={{ fontFamily: "Montserrat Alternates" }}
+                        className="px-6 font-3 md:px-24 space-y-4"
+                        
                     >
                         {faq.map((data, index) => (
                             <motion.div

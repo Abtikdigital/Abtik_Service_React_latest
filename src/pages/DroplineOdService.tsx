@@ -233,8 +233,8 @@ const DroplineOverdraft = () => {
                         className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 
                           font-bold leading-tight sm:leading-tight md:leading-tight lg:leading-tight
                           text-white lg:text-inherit tracking-wide
-                          main-heading"
-                        style={{ fontFamily: "Anton" }}
+                          main-heading font-1"
+                        
                     >
                         Optimize with{" "}
                         <span className="text-[#3CA2E2] font-extrabold block sm:inline">
@@ -247,8 +247,8 @@ const DroplineOverdraft = () => {
                          leading-relaxed sm:leading-relaxed md:leading-relaxed
                          text-white lg:text-white
                          paragraph !text-white
-                         max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
-                           style={{fontFamily:"Montserrat Alternates"}}
+                         max-w-none sm:max-w-lg md:max-w-xl font-3 lg:max-w-none mx-auto lg:mx-0"
+                           
                     >
                         Achieve disciplined debt reduction with structured dropline overdraft facilities.
                         Enjoy reducing credit limits and decreasing interest costs while
@@ -285,8 +285,8 @@ const DroplineOverdraft = () => {
                     className="w-full md:w-[300px] flex-shrink-0 bg-gradient-to-br from-blue-100 to-blue-200 p-6 rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
                 >
                     <h3
-                        className="text-lg sm:text-xl font-semibold text-gray-800 mb-4"
-                        style={{ fontFamily: "Montserrat Alternates" }}
+                        className="text-lg sm:text-xl font-2 font-semibold text-gray-800 mb-4"
+                        
                     >
                         Get in Touch
                     </h3>
@@ -302,10 +302,10 @@ const DroplineOverdraft = () => {
                                 <User className="w-5 h-5 text-white" />
                             </span>
                             <div>
-                                <p className="text-base text-gray-700 font-semibold ">
+                                <p className="text-base font-3 text-gray-700 font-semibold ">
                                     Bharat Barot
                                 </p>
-                                <p className="text-xs text-gray-600">
+                                <p className="text-xs font-3 text-gray-600">
                                    Vice President
                                     <br />
                                    
@@ -321,10 +321,10 @@ const DroplineOverdraft = () => {
                                 <Phone className="w-5 h-5 text-white" />
                             </span>
                             <div>
-                                <p className="text-base text-gray-700 font-semibold">
+                                <p className="text-base font-3 text-gray-700 font-semibold">
                                     Call Anytime
                                 </p>
-                                <p className="text-xs text-gray-600"><a href="tel:+917486 952 087">+91 7486 952 087</a></p>
+                                <p className="text-xs font-3 text-gray-600"><a href="tel:+917486 952 087">+91 7486 952 087</a></p>
                             </div>
                         </a>
                         <a
@@ -336,10 +336,10 @@ const DroplineOverdraft = () => {
                                 <Mail className="w-5 h-5 text-white" />
                             </span>
                             <div>
-                                <p className="text-base text-gray-700 font-semibold">
+                                <p className="text-base text-gray-700 font-3 font-semibold">
                                     Write Email
                                 </p>
-                                <p className="text-xs text-gray-600"><a href="mailto:bharat@abtikservices.com">bharat@abtikservices.com</a></p>
+                                <p className="text-xs text-gray-600 font-3"><a href="mailto:bharat@abtikservices.com">bharat@abtikservices.com</a></p>
                             </div>
                         </a>
                     </div>
@@ -369,13 +369,13 @@ const DroplineOverdraft = () => {
             >
                 <div className="bg-gradient-to-t from-[#3CA2E2] to-[#052EAA] rounded-4xl p-8 md:p-12 space-y-4 text-center">
                     <h2
-                        className="sub-heading text-white text-left"
-                        style={{ fontFamily: "Anton" }}
+                        className="sub-heading font-2 text-white text-left"
+                      
                     >
                         What Is Dropline Overdraft?
                     </h2>
-                    <p className="paragraph !text-white mx-auto text-left"
-                      style={{fontFamily:"Montserrat Alternates"}}
+                    <p className="paragraph !text-white mx-auto font-3 text-left"
+                     
                     >
                         Dropline Overdraft is a structured credit facility where the overdraft limit reduces 
                         automatically at predetermined intervals over the facility tenure. Unlike traditional 
@@ -395,8 +395,8 @@ const DroplineOverdraft = () => {
                 transition={{ duration: 0.5 }}
                 className="px-7 md:px-14 bg-[#f7f7f7] py-8"
             >
-                <h2 className="sub-heading text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                    style={{ fontFamily: "Anton" }}
+                <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
+                 
                 >
                     Dropline Overdraft Structure Types
                 </h2>
@@ -417,17 +417,17 @@ const DroplineOverdraft = () => {
                             </div>
                             <div className="text-center mb-4">
                                 <h3
-                                    className="text-xl font-bold text-gray-800 mb-3"
-                                    style={{ fontFamily: "Montserrat Alternates" }}
+                                    className="text-xl font-2 font-bold text-gray-800 mb-3"
+                                   
                                 >
                                     Monthly Dropline
                                 </h3>
-                                <div className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
+                                <div className="bg-gradient-to-r font-3 from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
                                     <p className="text-2xl font-bold">₹1L - ₹10Cr</p>
                                     <p className="text-xs opacity-90">Reducing monthly</p>
                                 </div>
                             </div>
-                            <ul className="space-y-2 text-xs text-gray-700">
+                            <ul className="space-y-2 text-xs font-3 text-gray-700">
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
                                     <span>Limit reduces every month by fixed amount</span>
@@ -461,17 +461,17 @@ const DroplineOverdraft = () => {
                             </div>
                             <div className="text-center mb-4">
                                 <h3
-                                    className="text-xl font-bold text-gray-800 mb-3"
-                                    style={{ fontFamily: "Montserrat Alternates" }}
+                                    className="text-xl font-bold font-2 text-gray-800 mb-3"
+                                   
                                 >
                                     Quarterly Dropline
                                 </h3>
-                                <div className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
+                                <div className="bg-gradient-to-r font-3 from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
                                     <p className="text-2xl font-bold">₹5L - ₹25Cr</p>
                                     <p className="text-xs opacity-90">Reducing quarterly</p>
                                 </div>
                             </div>
-                            <ul className="space-y-2 text-xs text-gray-700">
+                            <ul className="space-y-2 text-xs font-3 text-gray-700">
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
                                     <span>Limit reduces every quarter by fixed amount</span>
@@ -502,14 +502,14 @@ const DroplineOverdraft = () => {
                 transition={{ duration: 0.5 }}
                 className="px-7 md:px-14 bg-[#f7f7f7] py-8"
             >
-                <h2 className="sub-heading text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                    style={{ fontFamily: "Anton" }}
+                <h2 className="sub-heading text-center font-2 bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
+                   
                 >
                     Dropline Overdraft Benefits & Features
                 </h2>
                 <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
-                    <p className="text-sm md:text-base text-gray-600 text-center"
-                      style={{fontFamily:"Montserrat Alternates"}}
+                    <p className="text-sm font-3 md:text-base text-gray-600 text-center"
+                   
                     >
                         Dropline Overdraft combines the flexibility of overdraft facilities with structured debt 
                         reduction, ensuring disciplined repayment while maintaining operational cash flow support 
@@ -523,12 +523,12 @@ const DroplineOverdraft = () => {
                             className="space-y-4"
                         >
                             <h3
-                                className="text-lg font-semibold text-gray-800"
-                                style={{ fontFamily: "Montserrat Alternates" }}
+                                className="text-lg font-2 font-semibold text-gray-800"
+                                
                             >
                                 Key Benefits
                             </h3>
-                            <ul className="space-y-2 text-sm text-gray-600">
+                            <ul className="space-y-2 font-3 text-sm text-gray-600">
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
                                     <span>Systematic debt reduction with predetermined schedule.</span>
@@ -558,12 +558,12 @@ const DroplineOverdraft = () => {
                             className="space-y-4"
                         >
                             <h3
-                                className="text-lg font-semibold text-gray-800"
-                                style={{ fontFamily: "Montserrat Alternates" }}
+                                className="text-lg font-semibold text-gray-800 font-2"
+                              
                             >
                                 Key Features
                             </h3>
-                            <ul className="space-y-2 text-sm text-gray-600">
+                            <ul className="space-y-2 text-sm text-gray-600 font-3">
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
                                     <span>Pre-determined dropline schedule and amounts.</span>
@@ -598,8 +598,8 @@ const DroplineOverdraft = () => {
                 transition={{ duration: 0.5 }}
                 className="px-7 md:px-14 bg-[#f7f7f7] py-8"
             >
-                <h2 className="sub-heading text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                    style={{ fontFamily: "Anton" }}
+                <h2 className="sub-heading text-center font-2 bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
+                   
                 >
                     How Abtik Helps You Get Dropline Overdraft
                 </h2>
@@ -616,12 +616,12 @@ const DroplineOverdraft = () => {
                                 <process.icon className="w-8 h-8" />
                             </div>
                             <h3
-                                className="text-lg font-semibold text-gray-800 mb-2"
-                                style={{ fontFamily: "Montserrat Alternates" }}
+                                className="text-lg font-2 font-semibold text-gray-800 mb-2"
+                                
                             >
                                 {process.title}
                             </h3>
-                            <p className="text-sm text-gray-600">{process.description}</p>
+                            <p className="text-sm text-gray-600 font-3">{process.description}</p>
                         </motion.div>
                     ))}
                 </div>
@@ -635,8 +635,8 @@ const DroplineOverdraft = () => {
                 transition={{ duration: 0.5 }}
                 className="px-7 md:px-14 bg-[#f7f7f7] py-8 "
             >
-                <h2 className="sub-heading text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                    style={{ fontFamily: "Anton" }}
+                <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
+                    
                 >
                     Why Choose Abtik for Dropline Overdraft
                 </h2>
@@ -653,12 +653,12 @@ const DroplineOverdraft = () => {
                                 <benefit.icon className="w-8 h-8" />
                             </div>
                             <h3
-                                className="text-lg font-semibold text-gray-800 mb-2"
-                                style={{ fontFamily: "Montserrat Alternates" }}
+                                className="text-lg font-semibold text-gray-800 mb-2 font-2"
+                             
                             >
                                 {benefit.title}
                             </h3>
-                            <p className="text-sm text-gray-600">{benefit.description}</p>
+                            <p className="text-sm text-gray-600 font-3">{benefit.description}</p>
                         </motion.div>
                     ))}
                 </div>
@@ -672,14 +672,14 @@ const DroplineOverdraft = () => {
                 transition={{ duration: 0.5 }}
                 className="bg-[#f7f7f7]  py-8 md:py-16 space-y-6"
             >
-                <h1 className="sub-heading bg-gradient-to-t text-center  bg-clip-text from-[#3CA2E2] to-[#052EAA] text-transparent"
-                    style={{ fontFamily: "Anton" }}
+                <h1 className="sub-heading font-2 bg-gradient-to-t text-center  bg-clip-text from-[#3CA2E2] to-[#052EAA] text-transparent"
+                   
                 >
                     Frequently Asked Questions
                 </h1>
                 <div
-                    className="px-6  md:px-24 space-y-4 "
-                    style={{ fontFamily: "Montserrat Alternates" }}
+                    className="px-6  md:px-24 space-y-4  font-3"
+                   
                 >
                     {faq.map((data, index) => (
                         <motion.div

@@ -111,14 +111,14 @@ const Recommended = () => {
       className="bg-[#f7f7f7] px-5 sm:px-7 md:px-12 lg:px-14 space-y-6 py-8 md:py-16"
     >
       <h2
-        className="sub-heading bg-clip-text text-center text-transparent bg-gradient-to-t from-[#3CA2E2] to-[#052EAA]"
-        style={{ fontFamily: "Anton" }}
+        className="sub-heading bg-clip-text text-center text-transparent bg-gradient-to-t from-[#3CA2E2] to-[#052EAA] font-1"
+      
       >
         Recommended For You
       </h2>
       <p
-        className="paragraph text-center"
-        style={{ fontFamily: "Montserrat Alternates" }}
+        className="paragraph text-center font-2"
+  
       >
         Top-picked services for your business goals—get exactly what you need,
         when you need it.
@@ -141,12 +141,12 @@ const Recommended = () => {
               className="w-full rounded-t-3xl"
             />
             <h2
-              className="text-xl text-[#3CA2E2] font-semibold text-center line-clamp-2"
+              className="text-xl text-[#3CA2E2] font-semibold text-center line-clamp-2 font-4"
               style={{ fontFamily: "Montserrat Alternates" }}
             >
               {data?.title}
             </h2>
-            <p className="paragraph text-center line-clamp-3">
+            <p className="paragraph text-center line-clamp-3 font-4">
               {data?.description}
             </p>
           </motion.div>

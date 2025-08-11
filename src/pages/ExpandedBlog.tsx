@@ -118,14 +118,14 @@ const ExpandedBlog = () => {
       category: "Legal",
       list: [
         {
-          title:"New initiatives for solar-powered equipment",
-          lists:[],
-          description:"New initiatives for solar-powered equipment, cold storage support, and digital training for micro-entrepreneurs will directly benefit small business owners in rural and semi-urban regions. These aren’t just incentives—they are enablers."
+          title: "New initiatives for solar-powered equipment",
+          lists: [],
+          description: "New initiatives for solar-powered equipment, cold storage support, and digital training for micro-entrepreneurs will directly benefit small business owners in rural and semi-urban regions. These aren’t just incentives—they are enablers."
         },
-          {
-          title:"By turning local industries into competitive,",
-          lists:[],
-          description:"By turning local industries into competitive, high-quality suppliers and exporters, Budget 2025 is not only uplifting livelihoods but also placing India’s cultural industries on the global map."
+        {
+          title: "By turning local industries into competitive,",
+          lists: [],
+          description: "By turning local industries into competitive, high-quality suppliers and exporters, Budget 2025 is not only uplifting livelihoods but also placing India’s cultural industries on the global map."
         },
       ],
     },
@@ -199,8 +199,8 @@ const ExpandedBlog = () => {
             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 
                           font-bold leading-tight sm:leading-tight md:leading-tight lg:leading-tight
                           text-white lg:text-inherit tracking-wide
-                          main-heading"
-            style={{ fontFamily: "Anton" }}
+                          main-heading font-1"
+
           >
             Your One-Stop{" "}
             <span className="text-[#3CA2E2] font-extrabold block sm:inline">
@@ -213,7 +213,7 @@ const ExpandedBlog = () => {
                          leading-relaxed sm:leading-relaxed md:leading-relaxed
                          text-white lg:text-white
                          paragraph !text-white
-                         max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
+                         max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0 font-2"
           >
             Empowering Businesses through Comprehensive Solutions From Fund
             Management to Legal Compliance, We've Got You Covered at Abtik
@@ -293,15 +293,15 @@ const ExpandedBlog = () => {
             <div className="bg-white rounded-xl md:rounded-2xl shadow-lg p-4 md:p-6 lg:p-8">
               {/* Blog Title */}
               <h2
-                style={{ fontFamily: "Anton" }}
-                className="text-xl md:text-2xl lg:text-3xl xl:text-4xl bg-gradient-to-r from-[#3CA2E2] to-[#052EAA] bg-clip-text text-transparent mb-4 md:mb-6 leading-tight"
+
+                className="text-xl md:text-2xl lg:text-3xl xl:text-4xl bg-gradient-to-r from-[#3CA2E2] to-[#052EAA] bg-clip-text text-transparent mb-4 md:mb-6 leading-tight font-1"
               >
                 {selectedBlogData.title}
               </h2>
 
               {/* Blog Description */}
               <div className="prose max-w-none mb-6 md:mb-8">
-                <p className="text-base md:text-lg text-gray-700 leading-relaxed border-l-4 border-[#3CA2E2] pl-4 md:pl-6 bg-blue-50 p-3 md:p-4 rounded-r-lg">
+                <p className="text-base md:text-lg text-gray-700 leading-relaxed border-l-4 border-[#3CA2E2] pl-4 md:pl-6 bg-blue-50 p-3 md:p-4 rounded-r-lg font-2">
                   {selectedBlogData.description}
                 </p>
               </div>
@@ -314,7 +314,7 @@ const ExpandedBlog = () => {
                     className="bg-gradient-to-r from-gray-50 to-blue-50 rounded-xl md:rounded-2xl p-4 md:p-6 lg:p-8 border-l-4 border-[#3CA2E2]"
                   >
                     {listItem?.title && (
-                      <div className="flex items-center gap-3 md:gap-4 mb-4 md:mb-6">
+                      <div className="flex items-center gap-3 md:gap-4 mb-4 md:mb-6 font-2">
                         <div className="w-8 h-8 md:w-10 md:h-10 bg-gradient-to-r from-[#3CA2E2] to-[#052EAA] rounded-full flex items-center justify-center text-white font-bold text-base md:text-lg">
                           {index + 1}
                         </div>
@@ -325,7 +325,7 @@ const ExpandedBlog = () => {
                     )}
 
                     {listItem?.lists && listItem.lists.length > 0 && (
-                      <ul className="space-y-3 md:space-y-4 mb-4 md:mb-6 ml-4 md:ml-6">
+                      <ul className="space-y-3 md:space-y-4 mb-4 md:mb-6 ml-4 md:ml-6 font-3">
                         {listItem.lists.map((point, pointIndex) => (
                           <li
                             key={pointIndex}
@@ -341,7 +341,7 @@ const ExpandedBlog = () => {
                     )}
 
                     {listItem?.description && (
-                      <div className="bg-white rounded-lg p-3 md:p-4 border-l-4 border-[#3CA2E2] ml-4 md:ml-6">
+                      <div className="bg-white font-3 rounded-lg p-3 md:p-4 border-l-4 border-[#3CA2E2] ml-4 md:ml-6">
                         <p className="text-gray-600 leading-relaxed italic text-sm md:text-base">
                           {listItem.description}
                         </p>
@@ -359,7 +359,7 @@ const ExpandedBlog = () => {
               {/* Latest Blogs Card */}
               <div className="bg-white rounded-xl md:rounded-2xl shadow-lg overflow-hidden">
                 <div className="bg-gradient-to-r from-[#3CA2E2] to-[#052EAA] p-4 md:p-6">
-                  <h2 className="text-lg md:text-xl font-bold text-white">
+                  <h2 className="text-lg md:text-xl font-bold text-white font-2">
                     Latest Blogs
                   </h2>
                 </div>
@@ -380,14 +380,14 @@ const ExpandedBlog = () => {
                           />
                         </div>
                         <div className="col-span-3 space-y-1 md:space-y-2">
-                          <h3 className="font-semibold text-xs md:text-sm text-gray-800 line-clamp-2 group-hover:text-[#3CA2E2] transition-colors leading-tight">
+                          <h3 className="font-semibold text-xs md:text-sm font-2 text-gray-800 line-clamp-2 group-hover:text-[#3CA2E2] transition-colors leading-tight">
                             {blog.title}
                           </h3>
                           <div className="flex items-center justify-between">
                             <span className="text-xs text-gray-500">
                               {blog.date || "Recent"}
                             </span>
-                            <span className="text-xs text-[#3CA2E2] font-medium group-hover:translate-x-1 transition-transform">
+                            <span className="text-xs font-3 text-[#3CA2E2] font-medium group-hover:translate-x-1 transition-transform">
                               Read →
                             </span>
                           </div>
@@ -416,15 +416,15 @@ const ExpandedBlog = () => {
                       />
                     </svg>
                   </div>
-                  <h3 className="text-base md:text-lg font-bold">
+                  <h3 className="text-base md:text-lg font-bold font-2">
                     Ready to Get Started?
                   </h3>
-                  <p className="text-xs md:text-sm text-blue-100 leading-relaxed">
+                  <p className="text-xs md:text-sm text-blue-100 leading-relaxed font-3">
                     Schedule a consultation with our experts today and transform
                     your business.
                   </p>
                   <button className="custom-btn "
-                  onClick={handleOpenDialog}
+                    onClick={handleOpenDialog}
                   >Schedule a Call</button>
                 </div>
               </div>

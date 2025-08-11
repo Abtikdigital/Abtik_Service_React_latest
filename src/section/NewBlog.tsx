@@ -84,14 +84,14 @@ const BlogSection = () => {
       className="px-7 md:px-14 py-7 space-y-6 bg-[#f7f7f7]"
     >
       <h2
-        style={{ fontFamily: "Anton" }}
-        className="sub-heading text-center bg-gradient-to-t from-[#3CA2E2] to-[#052EAA] bg-clip-text text-transparent"
+       
+        className="sub-heading text-center bg-gradient-to-t from-[#3CA2E2] to-[#052EAA] bg-clip-text text-transparent font-1"
       >
         New Blog's
       </h2>
       <p
-        className="paragraph text-center"
-        style={{ fontFamily: "Montserrat Alternates" }}
+        className="paragraph text-center font-2"
+
       >
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, qui.
       </p>
@@ -106,12 +106,12 @@ const BlogSection = () => {
           >
             <img src={blog?.img} alt={blog?.title} className="rounded-lg cursor-pointer hover:scale-105 duration-300 transition-all" />
             <h2
-              className="text-xl text-[#3CA2E2] font-semibold line-clamp-2"
-              style={{ fontFamily: "Montserrat Alternates" }}
+              className="text-xl text-[#3CA2E2] font-semibold line-clamp-2 font-4"
+           
             >
               {blog?.title}
             </h2>
-            <p className="paragraph line-clamp-1">{blog?.description}</p>
+            <p className="paragraph line-clamp-1 font-4">{blog?.description}</p>
             <div>
               <button
                 className="custom-btn"

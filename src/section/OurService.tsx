@@ -115,16 +115,14 @@ const OurService = () => {
     >
       <div className="w-full space-y-6">
         <h2
-          className="sub-heading text-center bg-clip-text bg-gradient-to-b from-[#052EAA] to-[#3CA2E2] text-transparent"
-          style={{
-            fontFamily: "Anton",
-          }}
+          className="sub-heading text-center bg-clip-text bg-gradient-to-b from-[#052EAA] to-[#3CA2E2] text-transparent font-1"
+        
         >
           Our Service
         </h2>
         <p
-          className="paragraph text-center"
-          style={{ fontFamily: "Montserrat Alternates" }}
+          className="paragraph text-center font-2"
+         
         >
           “Smart business solutions—from registration to funding, licensing &
           certification—all in one place.”
@@ -143,10 +141,10 @@ const OurService = () => {
                 className="w-full rounded-xl hover:scale-105 transition-all duration-300 cursor-pointer"
                 alt={service.title}
               />
-              <h2 className="text-center text-xl text-[#3CA2E2] font-semibold">
+              <h2 className="text-center text-xl text-[#3CA2E2] font-semibold font-4">
                 {service?.title}
               </h2>
-              <p className="text-center paragraph line-clamp-3">
+              <p className="text-center paragraph line-clamp-3 font-4">
                 {service?.description}
               </p>
               <div className="text-center">

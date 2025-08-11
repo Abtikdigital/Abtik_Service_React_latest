@@ -93,8 +93,8 @@ const Home = () => {
               className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 
                           font-bold leading-tight sm:leading-tight md:leading-tight lg:leading-tight
                           text-white lg:text-inherit tracking-wide
-                          main-heading"
-              style={{ fontFamily: "Anton" }}
+                          main-heading font-1"
+            
             >
               Your One-Stop{" "}
               <span className="text-[#3CA2E2] font-extrabold block sm:inline">
@@ -107,8 +107,8 @@ const Home = () => {
                          leading-relaxed sm:leading-relaxed md:leading-relaxed
                          text-white lg:text-white
                          paragraph !text-white
-                         max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
-              style={{ fontFamily: "Montserrat Alternates" }}
+                         max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0 font-2"
+            
             >
               Empowering Businesses through Comprehensive Solutions From Fund
               Management to Legal Compliance, We've Got You Covered at Abtik

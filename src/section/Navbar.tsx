@@ -491,8 +491,8 @@ const DesktopNavbar = () => {
 
         <div ref={menuWrapperRef}>
           <ul
-            className="flex gap-4 lg:gap-6 xl:gap-8 font-medium items-center text-sm lg:text-base"
-            style={{ fontFamily: "Montserrat Alternates" }}
+            className="flex gap-4 lg:gap-6 xl:gap-8 font-medium items-center text-sm lg:text-base font-1"
+          
           >
             {menuItems.map((item) => {
               const isActive = item.path && location.pathname === item.path;
@@ -578,13 +578,14 @@ const DesktopNavbar = () => {
                         absolute left-0 top-full mt-1.5 bg-white text-gray-800 rounded-xl shadow-2xl
                         w-[95vw] lg:w-[97vw] mx-2 lg:mx-4 overflow-hidden
                         transform transition-all duration-300 z-40 border border-gray-300
+                        font-1
                         ${megaMenuVisible
                           ? "opacity-100 visible -translate-y-1"
                           : "opacity-0 invisible translate-y-0"
                         }
                       `}
                       style={{
-                        fontFamily: "Montserrat Alternates",
+                       
                         maxHeight: "75vh",
                       }}
                       onMouseEnter={handleMouseEnter}
@@ -804,8 +805,8 @@ const MobileNavbar = () => {
       {isMobileViewOpen && (
         <div className="absolute w-full max-h-[90vh] lg:max-h-[80vh] overflow-auto bg-white z-50 flex flex-col px-4 py-4 lg:py-6 shadow-lg border-t border-gray-100">
           <ul
-            className="flex flex-col space-y-2 text-sm lg:text-base font-medium w-full"
-            style={{ fontFamily: "Montserrat Alternates" }}
+            className="flex flex-col space-y-2 text-sm lg:text-base font-medium w-full font-1"
+         
           >
             {menuItems.map((item: any) => (
               <li

@@ -298,8 +298,8 @@ const Career = () => {
               className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 
                           font-bold leading-tight sm:leading-tight md:leading-tight lg:leading-tight
                           text-white lg:text-inherit tracking-wide
-                          main-heading"
-              style={{ fontFamily: "Anton" }}
+                          main-heading font-1"
+             
             >
               Your One-Stop{" "}
               <span className="text-[#3CA2E2] font-extrabold block sm:inline">
@@ -312,8 +312,8 @@ const Career = () => {
                          leading-relaxed sm:leading-relaxed md:leading-relaxed
                          text-white lg:text-white
                          paragraph !text-white
-                         max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
-              style={{ fontFamily: "Montserrat Alternates" }}
+                         max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0 font-2"
+          
             >
               Empowering Businesses through Comprehensive Solutions From Fund
               Management to Legal Compliance, We've Got You Covered at Abtik
@@ -354,15 +354,15 @@ const Career = () => {
               {index === 0 ? (
                 <>
                   <h2
-                    className="sub-heading text-center md:text-left bg-clip-text bg-gradient-to-t text-transparent from-[#3CA2E2] to-[#052EAA]"
-                    style={{ fontFamily: "Anton" }}
+                    className="sub-heading text-center md:text-left bg-clip-text bg-gradient-to-t text-transparent from-[#3CA2E2] to-[#052EAA] font-2"
+                 
                   >
                     Career Opportunities at <br />
                     Abtik Services
                   </h2>
                   <p
-                    className="paragraph text-center md:text-left"
-                    style={{ fontFamily: "Montserrat Alternates" }}
+                    className="paragraph text-center md:text-left font-3"
+                  
                   >
                     Join our innovative team and be part of a company that's
                     transforming the business landscape. We offer exciting
@@ -396,8 +396,8 @@ const Career = () => {
         >
           <div>
             <h2
-              className="sub-heading bg-clip-text text-center bg-gradient-to-t text-transparent from-[#052EAA] to-[#3CA2E2] mb-12"
-              style={{ fontFamily: "Anton" }}
+              className="sub-heading bg-clip-text text-center bg-gradient-to-t text-transparent from-[#052EAA] to-[#3CA2E2] mb-12 font-1"
+         
             >
               Job Openings At Abtik
             </h2>
@@ -415,8 +415,8 @@ const Career = () => {
                   <div className="mb-4">
                     <div className="flex items-center justify-between mb-2">
                       <span
-                        className="text-xs font-semibold text-[#3CA2E2] bg-blue-50 px-3 py-1 rounded-full"
-                        style={{ fontFamily: "Montserrat Alternates" }}
+                        className="text-xs font-semibold text-[#3CA2E2] bg-blue-50 px-3 py-1 rounded-full font-2"
+                  
                       >
                         {job.position}
                       </span>
@@ -426,8 +426,8 @@ const Career = () => {
                       </span>
                     </div>
                     <h3
-                      className="text-xl font-bold text-gray-800 group-hover:text-[#052EAA] transition-colors"
-                      style={{ fontFamily: "Montserrat Alternates" }}
+                      className="text-xl font-bold text-gray-800 group-hover:text-[#052EAA] transition-colors font-2"
+                     
                     >
                       {job.title}
                     </h3>

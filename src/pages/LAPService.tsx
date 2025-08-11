@@ -234,8 +234,8 @@ const LoanAgainstProperty = () => {
                         className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 
                           font-bold leading-tight sm:leading-tight md:leading-tight lg:leading-tight
                           text-white lg:text-inherit tracking-wide
-                          main-heading"
-                        style={{ fontFamily: "Anton" }}
+                          main-heading font-1"
+                        
                     >
                         Unlock{" "}
                         <span className="text-[#3CA2E2] font-extrabold block sm:inline">
@@ -248,8 +248,8 @@ const LoanAgainstProperty = () => {
                          leading-relaxed sm:leading-relaxed md:leading-relaxed
                          text-white lg:text-white
                          paragraph !text-white
-                         max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
-                           style={{fontFamily:"Montserrat Alternates"}}
+                         max-w-none sm:max-w-lg md:max-w-xl font-3 lg:max-w-none mx-auto lg:mx-0"
+                         
                     >
                         Transform your property into instant capital with our LAP solutions.
                         Get up to ₹15 crore funding at competitive rates with flexible
@@ -286,8 +286,8 @@ const LoanAgainstProperty = () => {
                     className="w-full md:w-[300px] flex-shrink-0 bg-gradient-to-br from-blue-100 to-blue-200 p-6 rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
                 >
                     <h3
-                        className="text-lg sm:text-xl font-semibold text-gray-800 mb-4"
-                        style={{ fontFamily: "Montserrat Alternates" }}
+                        className="text-lg sm:text-xl font-2 font-semibold text-gray-800 mb-4"
+                        
                     >
                         Get in Touch
                     </h3>
@@ -303,10 +303,10 @@ const LoanAgainstProperty = () => {
                                 <User className="w-5 h-5 text-white" />
                             </span>
                             <div>
-                                <p className="text-base text-gray-700 font-semibold ">
+                                <p className="text-base font-3 text-gray-700 font-semibold ">
                                     Bharat Barot
                                 </p>
-                                <p className="text-xs text-gray-600">
+                                <p className="text-xs font-3 text-gray-600">
                                    Vice President
                                     <br />
                                    
@@ -322,10 +322,10 @@ const LoanAgainstProperty = () => {
                                 <Phone className="w-5 h-5 text-white" />
                             </span>
                             <div>
-                                <p className="text-base text-gray-700 font-semibold">
+                                <p className="text-base font-3 text-gray-700 font-semibold">
                                     Call Anytime
                                 </p>
-                                <p className="text-xs text-gray-600"><a href="tel:+917486 952 087">+91 7486 952 087</a></p>
+                                <p className="text-xs font-3 text-gray-600"><a href="tel:+917486 952 087">+91 7486 952 087</a></p>
                             </div>
                         </a>
                         <a
@@ -337,10 +337,10 @@ const LoanAgainstProperty = () => {
                                 <Mail className="w-5 h-5 text-white" />
                             </span>
                             <div>
-                                <p className="text-base text-gray-700 font-semibold">
+                                <p className="text-base font-3 text-gray-700 font-semibold">
                                     Write Email
                                 </p>
-                                <p className="text-xs text-gray-600"><a href="mailto:bharat@abtikservices.com">bharat@abtikservices.com</a></p>
+                                <p className="text-xs font-3 text-gray-600"><a href="mailto:bharat@abtikservices.com">bharat@abtikservices.com</a></p>
                             </div>
                         </a>
                     </div>
@@ -370,13 +370,13 @@ const LoanAgainstProperty = () => {
             >
                 <div className="bg-gradient-to-t from-[#3CA2E2] to-[#052EAA] rounded-4xl p-8 md:p-12 space-y-4 text-center">
                     <h2
-                        className="sub-heading text-white text-left"
-                        style={{ fontFamily: "Anton" }}
+                        className="sub-heading font-2 text-white text-left"
+                       
                     >
                         What Is Loan Against Property?
                     </h2>
-                    <p className="paragraph !text-white mx-auto text-left"
-                      style={{fontFamily:"Montserrat Alternates"}}
+                    <p className="paragraph font-3 !text-white mx-auto text-left"
+                     
                     >
                         Loan Against Property (LAP) is a secured loan where borrowers can leverage their
                         residential, commercial, or industrial property as collateral to access substantial
@@ -397,8 +397,8 @@ const LoanAgainstProperty = () => {
                 transition={{ duration: 0.5 }}
                 className="px-7 md:px-14 bg-[#f7f7f7] py-8"
             >
-                <h2 className="sub-heading text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                    style={{ fontFamily: "Anton" }}
+                <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
+                  
                 >
                     Eligible Property Types for LAP
                 </h2>
@@ -419,17 +419,17 @@ const LoanAgainstProperty = () => {
                             </div>
                             <div className="text-center mb-4">
                                 <h3
-                                    className="text-xl font-bold text-gray-800 mb-3"
-                                    style={{ fontFamily: "Montserrat Alternates" }}
+                                    className="text-xl font-2 font-bold text-gray-800 mb-3"
+                                   
                                 >
                                     Residential Property
                                 </h3>
-                                <div className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
+                                <div className="bg-gradient-to-r font-3 from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
                                     <p className="text-2xl font-bold">Up to 75%</p>
                                     <p className="text-xs opacity-90">Of property value</p>
                                 </div>
                             </div>
-                            <ul className="space-y-2 text-xs text-gray-700">
+                            <ul className="space-y-2 text-xs font-3 text-gray-700">
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
                                     <span>Independent houses and villas</span>
@@ -463,17 +463,17 @@ const LoanAgainstProperty = () => {
                             </div>
                             <div className="text-center mb-4">
                                 <h3
-                                    className="text-xl font-bold text-gray-800 mb-3"
-                                    style={{ fontFamily: "Montserrat Alternates" }}
+                                    className="text-xl font-bold font-2 text-gray-800 mb-3"
+                                  
                                 >
                                     Commercial Property
                                 </h3>
-                                <div className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
+                                <div className="bg-gradient-to-r font-3 from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
                                     <p className="text-2xl font-bold">Up to 65%</p>
                                     <p className="text-xs opacity-90">Of property value</p>
                                 </div>
                             </div>
-                            <ul className="space-y-2 text-xs text-gray-700">
+                            <ul className="space-y-2 text-xs font-3 text-gray-700">
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
                                     <span>Office buildings and complexes</span>
@@ -507,17 +507,17 @@ const LoanAgainstProperty = () => {
                             </div>
                             <div className="text-center mb-4">
                                 <h3
-                                    className="text-xl font-bold text-gray-800 mb-3"
-                                    style={{ fontFamily: "Montserrat Alternates" }}
+                                    className="text-xl font-2 font-bold text-gray-800 mb-3"
+                                    
                                 >
                                     Industrial Property
                                 </h3>
-                                <div className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
+                                <div className="bg-gradient-to-r font-3 from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
                                     <p className="text-2xl font-bold">Up to 60%</p>
                                     <p className="text-xs opacity-90">Of property value</p>
                                 </div>
                             </div>
-                            <ul className="space-y-2 text-xs text-gray-700">
+                            <ul className="space-y-2 text-xs font-3 text-gray-700">
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
                                     <span>Manufacturing units and factories</span>
@@ -548,14 +548,14 @@ const LoanAgainstProperty = () => {
                 transition={{ duration: 0.5 }}
                 className="px-7 md:px-14 bg-[#f7f7f7] py-8"
             >
-                <h2 className="sub-heading text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                    style={{ fontFamily: "Anton" }}
+                <h2 className="sub-heading text-center font-2 bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
+                    
                 >
                     LAP Benefits & Eligibility
                 </h2>
                 <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
-                    <p className="text-sm md:text-base text-gray-600 text-center"
-                      style={{fontFamily:"Montserrat Alternates"}}
+                    <p className="text-sm md:text-base font-3 text-gray-600 text-center"
+                     
                     >
                         Loan Against Property offers the perfect balance of substantial funding and competitive
                         rates, allowing you to unlock your property's value while retaining ownership for any
@@ -569,12 +569,12 @@ const LoanAgainstProperty = () => {
                             className="space-y-4"
                         >
                             <h3
-                                className="text-lg font-semibold text-gray-800"
-                                style={{ fontFamily: "Montserrat Alternates" }}
+                                className="text-lg font-2 font-semibold text-gray-800"
+                                
                             >
                                 Key Benefits
                             </h3>
-                            <ul className="space-y-2 text-sm text-gray-600">
+                            <ul className="space-y-2 text-sm text-gray-600 font-3">
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
                                     <span>High loan amounts up to ₹15 crore.</span>
@@ -604,12 +604,12 @@ const LoanAgainstProperty = () => {
                             className="space-y-4"
                         >
                             <h3
-                                className="text-lg font-semibold text-gray-800"
-                                style={{ fontFamily: "Montserrat Alternates" }}
+                                className="text-lg font-semibold text-gray-800 font-2"
+                                
                             >
                                 Eligibility Criteria
                             </h3>
-                            <ul className="space-y-2 text-sm text-gray-600">
+                            <ul className="space-y-2 text-sm text-gray-600 font-3">
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
                                     <span>Age between 25-70 years at loan maturity.</span>
@@ -644,8 +644,8 @@ const LoanAgainstProperty = () => {
                 transition={{ duration: 0.5 }}
                 className="px-7 md:px-14 bg-[#f7f7f7] py-8"
             >
-                <h2 className="sub-heading text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                    style={{ fontFamily: "Anton" }}
+                <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
+                   
                 >
                     How Abtik Helps You Get LAP
                 </h2>
@@ -662,12 +662,12 @@ const LoanAgainstProperty = () => {
                                 <process.icon className="w-8 h-8" />
                             </div>
                             <h3
-                                className="text-lg font-semibold text-gray-800 mb-2"
-                                style={{ fontFamily: "Montserrat Alternates" }}
+                                className="text-lg font-2 font-semibold text-gray-800 mb-2"
+                              
                             >
                                 {process.title}
                             </h3>
-                            <p className="text-sm text-gray-600">{process.description}</p>
+                            <p className="text-sm font-3 text-gray-600">{process.description}</p>
                         </motion.div>
                     ))}
                 </div>
@@ -681,8 +681,8 @@ const LoanAgainstProperty = () => {
                 transition={{ duration: 0.5 }}
                 className="px-7 md:px-14 bg-[#f7f7f7] py-8 "
             >
-                <h2 className="sub-heading text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                    style={{ fontFamily: "Anton" }}
+                <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
+                  
                 >
                     Why Choose Abtik for LAP
                 </h2>
@@ -699,12 +699,12 @@ const LoanAgainstProperty = () => {
                                 <benefit.icon className="w-8 h-8" />
                             </div>
                             <h3
-                                className="text-lg font-semibold text-gray-800 mb-2"
-                                style={{ fontFamily: "Montserrat Alternates" }}
+                                className="text-lg font-2 font-semibold text-gray-800 mb-2"
+                              
                             >
                                 {benefit.title}
                             </h3>
-                            <p className="text-sm text-gray-600">{benefit.description}</p>
+                            <p className="text-sm font-3 text-gray-600">{benefit.description}</p>
                         </motion.div>
                     ))}
                 </div>
@@ -718,14 +718,14 @@ const LoanAgainstProperty = () => {
                 transition={{ duration: 0.5 }}
                 className="bg-[#f7f7f7]  py-8 md:py-16 space-y-6"
             >
-                <h1 className="sub-heading bg-gradient-to-t text-center  bg-clip-text from-[#3CA2E2] to-[#052EAA] text-transparent"
-                    style={{ fontFamily: "Anton" }}
+                <h1 className="sub-heading font-2 bg-gradient-to-t text-center  bg-clip-text from-[#3CA2E2] to-[#052EAA] text-transparent"
+                    
                 >
                     Frequently Asked Questions
                 </h1>
                 <div
-                    className="px-6  md:px-24 space-y-4 "
-                    style={{ fontFamily: "Montserrat Alternates" }}
+                    className="px-6  md:px-24 space-y-4 font-3"
+                    
                 >
                     {faq.map((data, index) => (
                         <motion.div
