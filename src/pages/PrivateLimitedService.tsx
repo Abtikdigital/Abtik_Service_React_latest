@@ -343,14 +343,20 @@ const PvtLtdRegistration = () => {
                         initial={{ y: 50, opacity: 0 }}
                         animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
                         transition={{ duration: 0.5, delay: getTouchDelay(1) }}
-                        className="flex-grow bg-gradient-to-r from-[#3CA2E2] to-[#052EAA] rounded-2xl flex items-center justify-center h-full"
+                        className="flex-grow grid md:grid-cols-2 h-full bg-gradient-to-r  from-[#3CA2E2] to-[#052EAA] p-4 rounded-4xl box-border"
                     >
-                        <img
-                            loading="lazy"
-                            src={Image1}
-                            alt="Pvt Ltd Registration Illustration"
-                            className="max-h-80 w-full rounded-lg object-contain p-4"
-                        />
+                        <div className="flex flex-col justify-evenly p-4 box-border">
+                            <h2 className="sub-heading text-white font-1">
+                                Private Limited 
+                            </h2>
+                            <p className="font-3 text-[#C3C3C3]">
+                                Empowering Businesses through Comprehensive Solutions From Fund
+                                Management to Legal Empowering.
+                            </p>
+                        </div>
+                        <div className="p-2 bg-white rounded-4xl box-border grid h-full ">
+                            <img src={Image1} className="rounded-3xl w-full h-64  " loading="lazy" />
+                        </div>
                     </motion.div>
                 </motion.section>
 
@@ -589,8 +595,8 @@ const PvtLtdRegistration = () => {
                             >
                                 <h2
                                     className={`p-2.5 px-4 relative cursor-pointer flex items-center justify-between  text-base font-medium ${isExpanded.isOpen && isExpanded.index === index
-                                            ? "border-b border-gray-200"
-                                            : ""
+                                        ? "border-b border-gray-200"
+                                        : ""
                                         }`}
                                     onClick={() => toggleIsExpanded(index)}
                                 >
@@ -605,8 +611,8 @@ const PvtLtdRegistration = () => {
                                 </h2>
                                 <div
                                     className={`overflow-hidden transition-all duration-500 ease-in-out ${isExpanded.isOpen && isExpanded.index === index
-                                            ? "max-h-96 opacity-100"
-                                            : "max-h-0 opacity-0"
+                                        ? "max-h-96 opacity-100"
+                                        : "max-h-0 opacity-0"
                                         }`}
                                 >
                                     <p className="p-4 bg-gradient-to-t rounded-b-lg from-[#052EAA] to-[#3CA2E2] text-white">

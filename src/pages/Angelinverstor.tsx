@@ -52,7 +52,8 @@ const AngelInvestor = () => {
                 "Early-stage startups with innovative ideas, strong teams, scalable business models, and high growth potential in sectors like technology, healthcare, fintech, and more are eligible.",
         },
         {
-            question: "4. What documents are required for Angel Investment application?",
+            question:
+                "4. What documents are required for Angel Investment application?",
             answer:
                 "Required documents include pitch deck, business plan, financial projections, incorporation documents, management team profiles, market analysis, and proof of concept or MVP.",
         },
@@ -103,11 +104,17 @@ const AngelInvestor = () => {
 
     // Investment Structure
     const refInvestmentStructure = useRef(null);
-    const isInViewInvestmentStructure = useInView(refInvestmentStructure, { once: true, amount: 0.4 });
+    const isInViewInvestmentStructure = useInView(refInvestmentStructure, {
+        once: true,
+        amount: 0.4,
+    });
 
     // Angel Benefits
     const refAngelBenefits = useRef(null);
-    const isInViewAngelBenefits = useInView(refAngelBenefits, { once: true, amount: 0.4 });
+    const isInViewAngelBenefits = useInView(refAngelBenefits, {
+        once: true,
+        amount: 0.4,
+    });
 
     // Abtik Process
     const refProcess = useRef(null);
@@ -198,8 +205,12 @@ const AngelInvestor = () => {
     return (
         <>
             <HeadProvider>
-                <Title>{seoData?.angelInvestorService?.title}</Title> {/* Assuming SEO data for Angel Investor */}
-                <Meta name="description" content={seoData?.angelInvestorService?.description} />
+                <Title>{seoData?.angelInvestorService?.title}</Title>{" "}
+                {/* Assuming SEO data for Angel Investor */}
+                <Meta
+                    name="description"
+                    content={seoData?.angelInvestorService?.description}
+                />
                 <Meta name="keyword" content={seoData?.angelInvestorService?.keyword} />
                 <Meta name="robots" content={seoData?.angelInvestorService?.robots} />
             </HeadProvider>
@@ -232,7 +243,6 @@ const AngelInvestor = () => {
                               font-bold leading-tight sm:leading-tight md:leading-tight lg:leading-tight
                               text-white lg:text-inherit tracking-wide
                               main-heading font-1"
-
                         >
                             Secure{" "}
                             <span className="text-[#3CA2E2] font-extrabold block sm:inline">
@@ -246,9 +256,10 @@ const AngelInvestor = () => {
                              text-white lg:text-white
                              paragraph !text-white
                              max-w-none sm:max-w-lg font-2 md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
-
                         >
-                            Fuel your startup journey with angel investment support. Access flexible funding from experienced investors to launch innovative ideas and drive business expansion.
+                            Fuel your startup journey with angel investment support. Access
+                            flexible funding from experienced investors to launch innovative
+                            ideas and drive business expansion.
                         </p>
                         <div className="pt-2 sm:pt-4">
                             <button
@@ -280,10 +291,7 @@ const AngelInvestor = () => {
                         transition={{ duration: 0.5, delay: getTouchDelay(0) }}
                         className="w-full md:w-[300px] flex-shrink-0 bg-gradient-to-br from-blue-100 to-blue-200 p-6 rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
                     >
-                        <h3
-                            className="text-lg sm:text-xl font-2 font-semibold text-gray-800 mb-4"
-
-                        >
+                        <h3 className="text-lg sm:text-xl font-2 font-semibold text-gray-800 mb-4">
                             Get in Touch
                         </h3>
                         <div className="space-y-4">
@@ -304,7 +312,6 @@ const AngelInvestor = () => {
                                     <p className="text-xs text-gray-600 font-3">
                                         Vice President
                                         <br />
-
                                     </p>
                                 </div>
                             </a>
@@ -320,7 +327,9 @@ const AngelInvestor = () => {
                                     <p className="text-base text-gray-700 font-semibold font-3">
                                         Call Anytime
                                     </p>
-                                    <p className="text-xs text-gray-600 font-3"><a href="tel:+917486 952 087">+91 7486 952 087</a></p>
+                                    <p className="text-xs text-gray-600 font-3">
+                                        <a href="tel:+917486 952 087">+91 7486 952 087</a>
+                                    </p>
                                 </div>
                             </a>
                             <a
@@ -335,7 +344,11 @@ const AngelInvestor = () => {
                                     <p className="text-base text-gray-700 font-semibold font-3">
                                         Write Email
                                     </p>
-                                    <p className="text-xs text-gray-600 font-3"><a href="mailto:bharat@abtikservices.com">bharat@abtikservices.com</a></p>
+                                    <p className="text-xs text-gray-600 font-3">
+                                        <a href="mailto:bharat@abtikservices.com">
+                                            bharat@abtikservices.com
+                                        </a>
+                                    </p>
                                 </div>
                             </a>
                         </div>
@@ -344,14 +357,20 @@ const AngelInvestor = () => {
                         initial={{ y: 50, opacity: 0 }}
                         animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
                         transition={{ duration: 0.5, delay: getTouchDelay(1) }}
-                        className="flex-grow  rounded-2xl flex items-center justify-center h-full"
+                        className="flex-grow grid md:grid-cols-2 h-full bg-gradient-to-r  from-[#3CA2E2] to-[#052EAA] p-4 rounded-4xl box-border"
                     >
-                        <img
-                            loading="lazy"
-                            src={Image1}
-                            alt="Angel Investor illustration"
-                            className="max-h-80 w-full rounded-lg "
-                        />
+                        <div className="flex flex-col justify-evenly p-4 box-border">
+                            <h2 className="sub-heading text-white font-1">
+                                Angel Investor
+                            </h2>
+                            <p className="font-3 text-[#C3C3C3]">
+                                Empowering Businesses through Comprehensive Solutions From Fund
+                                Management to Legal Empowering.
+                            </p>
+                        </div>
+                        <div className="p-2 bg-white rounded-4xl box-border grid h-full ">
+                            <img src={Image1} className="rounded-3xl w-full h-64  " loading="lazy" />
+                        </div>
                     </motion.div>
                 </motion.section>
 
@@ -364,16 +383,16 @@ const AngelInvestor = () => {
                     className="px-7 md:px-14 bg-[#f7f7f7] py-8"
                 >
                     <div className="bg-gradient-to-t from-[#3CA2E2] to-[#052EAA] rounded-4xl p-8 md:p-12 space-y-4 text-center">
-                        <h2
-                            className="sub-heading text-white text-left font-2"
-                           
-                        >
+                        <h2 className="sub-heading text-white text-left font-2">
                             What Is Angel Investment?
                         </h2>
-                        <p className="paragraph !text-white mx-auto text-left  font-3"
-                            
-                        >
-                            Angel investment refers to funding provided by affluent individuals to startups and small businesses, often in exchange for ownership equity or convertible debt. These investors support early-stage companies with high growth potential, offering not just capital but also mentorship and industry connections to foster innovation and business development.
+                        <p className="paragraph !text-white mx-auto text-left  font-3">
+                            Angel investment refers to funding provided by affluent
+                            individuals to startups and small businesses, often in exchange
+                            for ownership equity or convertible debt. These investors support
+                            early-stage companies with high growth potential, offering not
+                            just capital but also mentorship and industry connections to
+                            foster innovation and business development.
                         </p>
                     </div>
                 </motion.section>
@@ -386,9 +405,7 @@ const AngelInvestor = () => {
                     transition={{ duration: 0.5 }}
                     className="px-7 md:px-14 bg-[#f7f7f7] py-8"
                 >
-                    <h2 className="sub-heading text-center font-2 bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                        
-                    >
+                    <h2 className="sub-heading text-center font-2 bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]">
                         Angel Investment Structure
                     </h2>
 
@@ -397,25 +414,27 @@ const AngelInvestor = () => {
                             {/* Equity Investment Card */}
                             <motion.div
                                 initial={{ y: 50, opacity: 0 }}
-                                animate={isInViewInvestmentStructure ? { y: 0, opacity: 1 } : {}}
+                                animate={
+                                    isInViewInvestmentStructure ? { y: 0, opacity: 1 } : {}
+                                }
                                 transition={{ duration: 0.5, delay: 0.5 }}
                                 className="bg-gradient-to-br from-blue-50 to-white p-6 rounded-3xl border-2 border-blue-100 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
                             >
                                 <div className="flex items-center justify-center mb-4">
                                     <div className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
-                                        <Leaf className="w-8 h-8 text-white" /> {/* Replace with relevant icon */}
+                                        <Leaf className="w-8 h-8 text-white" />{" "}
+                                        {/* Replace with relevant icon */}
                                     </div>
                                 </div>
                                 <div className="text-center mb-4">
-                                    <h3
-                                        className="text-xl font-bold text-gray-800 mb-3 font-2"
-                                       
-                                    >
+                                    <h3 className="text-xl font-bold text-gray-800 mb-3 font-2">
                                         Equity Investment
                                     </h3>
                                     <div className="bg-gradient-to-r font-3 from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
                                         <p className="text-2xl font-bold">Ownership Stake</p>
-                                        <p className="text-xs opacity-90">Direct equity in startup</p>
+                                        <p className="text-xs opacity-90">
+                                            Direct equity in startup
+                                        </p>
                                     </div>
                                 </div>
                                 <ul className="space-y-2 text-xs font-3 text-gray-700">
@@ -441,20 +460,20 @@ const AngelInvestor = () => {
                             {/* Convertible Debt Card */}
                             <motion.div
                                 initial={{ y: 50, opacity: 0 }}
-                                animate={isInViewInvestmentStructure ? { y: 0, opacity: 1 } : {}}
+                                animate={
+                                    isInViewInvestmentStructure ? { y: 0, opacity: 1 } : {}
+                                }
                                 transition={{ duration: 0.5, delay: 0.7 }}
                                 className="bg-gradient-to-br from-blue-50 to-white p-6 rounded-3xl border-2 border-blue-100 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
                             >
                                 <div className="flex items-center justify-center mb-4">
                                     <div className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
-                                        <Tractor className="w-8 h-8 text-white" /> {/* Replace with relevant icon */}
+                                        <Tractor className="w-8 h-8 text-white" />{" "}
+                                        {/* Replace with relevant icon */}
                                     </div>
                                 </div>
                                 <div className="text-center mb-4">
-                                    <h3
-                                        className="text-xl font-bold font-2 text-gray-800 mb-3"
-                                        
-                                    >
+                                    <h3 className="text-xl font-bold font-2 text-gray-800 mb-3">
                                         Convertible Debt
                                     </h3>
                                     <div className="bg-gradient-to-r from-[#052EAA] font-3 to-[#3CA2E2] text-white p-3 rounded-xl">
@@ -493,16 +512,14 @@ const AngelInvestor = () => {
                     transition={{ duration: 0.5 }}
                     className="px-7 md:px-14 bg-[#f7f7f7] py-8"
                 >
-                    <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                        
-                    >
+                    <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]">
                         Angel Investment Benefits & Eligibility
                     </h2>
                     <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
-                        <p className="text-sm md:text-base font-3 text-gray-600 text-center"
-                            
-                        >
-                            Angel investment provides essential early-stage funding, mentorship, and networks to startups, helping them validate ideas and achieve rapid growth in competitive markets.
+                        <p className="text-sm md:text-base font-3 text-gray-600 text-center">
+                            Angel investment provides essential early-stage funding,
+                            mentorship, and networks to startups, helping them validate ideas
+                            and achieve rapid growth in competitive markets.
                         </p>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <motion.div
@@ -511,10 +528,7 @@ const AngelInvestor = () => {
                                 transition={{ duration: 0.5, delay: 0.5 }}
                                 className="space-y-4"
                             >
-                                <h3
-                                    className="text-lg font-semibold text-gray-800 font-2"
-                                    
-                                >
+                                <h3 className="text-lg font-semibold text-gray-800 font-2">
                                     Key Benefits
                                 </h3>
                                 <ul className="space-y-2 text-sm text-gray-600 font-3">
@@ -546,10 +560,7 @@ const AngelInvestor = () => {
                                 transition={{ duration: 0.5, delay: 0.7 }}
                                 className="space-y-4"
                             >
-                                <h3
-                                    className="text-lg font-semibold text-gray-800 font-2"
-                                   
-                                >
+                                <h3 className="text-lg font-semibold text-gray-800 font-2">
                                     Eligibility Criteria
                                 </h3>
                                 <ul className="space-y-2 text-sm text-gray-600 font-3">
@@ -587,9 +598,7 @@ const AngelInvestor = () => {
                     transition={{ duration: 0.5 }}
                     className="px-7 md:px-14 bg-[#f7f7f7] py-8"
                 >
-                    <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                        
-                    >
+                    <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]">
                         How Abtik Helps You Secure Angel Investment
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
@@ -604,13 +613,12 @@ const AngelInvestor = () => {
                                 <div className="mb-4 inline-block p-3 bg-gradient-to-r from-blue-100 to-blue-200 rounded-full">
                                     <process.icon className="w-8 h-8" />
                                 </div>
-                                <h3
-                                    className="text-lg font-2 font-semibold text-gray-800 mb-2"
-                                   
-                                >
+                                <h3 className="text-lg font-2 font-semibold text-gray-800 mb-2">
                                     {process.title}
                                 </h3>
-                                <p className="text-sm text-gray-600 font-3">{process.description}</p>
+                                <p className="text-sm text-gray-600 font-3">
+                                    {process.description}
+                                </p>
                             </motion.div>
                         ))}
                     </div>
@@ -624,9 +632,7 @@ const AngelInvestor = () => {
                     transition={{ duration: 0.5 }}
                     className="px-7 md:px-14 bg-[#f7f7f7] py-8 "
                 >
-                    <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                        
-                    >
+                    <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]">
                         Why Choose Abtik for Angel Investment
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
@@ -641,13 +647,12 @@ const AngelInvestor = () => {
                                 <div className="mb-4 inline-block p-3 bg-gradient-to-r from-blue-100 to-blue-200 rounded-full">
                                     <benefit.icon className="w-8 h-8" />
                                 </div>
-                                <h3
-                                    className="text-lg font-2 font-semibold text-gray-800 mb-2"
-                                   
-                                >
+                                <h3 className="text-lg font-2 font-semibold text-gray-800 mb-2">
                                     {benefit.title}
                                 </h3>
-                                <p className="text-sm font-3 text-gray-600">{benefit.description}</p>
+                                <p className="text-sm font-3 text-gray-600">
+                                    {benefit.description}
+                                </p>
                             </motion.div>
                         ))}
                     </div>
@@ -661,15 +666,10 @@ const AngelInvestor = () => {
                     transition={{ duration: 0.5 }}
                     className="bg-[#f7f7f7]  py-8 md:py-16 space-y-6"
                 >
-                    <h1 className="sub-heading font-2 bg-gradient-to-t text-center  bg-clip-text from-[#3CA2E2] to-[#052EAA] text-transparent"
-                     
-                    >
+                    <h1 className="sub-heading font-2 bg-gradient-to-t text-center  bg-clip-text from-[#3CA2E2] to-[#052EAA] text-transparent">
                         Frequently Asked Questions
                     </h1>
-                    <div
-                        className="px-6 font-3 md:px-24 space-y-4 "
-                        
-                    >
+                    <div className="px-6 font-3 md:px-24 space-y-4 ">
                         {faq.map((data, index) => (
                             <motion.div
                                 key={index}

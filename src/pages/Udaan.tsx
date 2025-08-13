@@ -234,7 +234,7 @@ const UdyamRegistration = () => {
                           font-bold leading-tight sm:leading-tight md:leading-tight lg:leading-tight
                           text-white lg:text-inherit tracking-wide
                           main-heading font-1"
-                       
+
                     >
                         Register with{" "}
                         <span className="text-[#3CA2E2] font-extrabold block sm:inline">
@@ -248,7 +248,7 @@ const UdyamRegistration = () => {
                          text-white lg:text-white
                          paragraph !text-white
                          max-w-none sm:max-w-lg font-2 md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
-                       
+
                     >
                         Get your official MSME registration through Udyam portal completely free.
                         Access government schemes, subsidies, credit facilities, and unlock
@@ -286,7 +286,7 @@ const UdyamRegistration = () => {
                 >
                     <h3
                         className="text-lg font-2 sm:text-xl font-semibold text-gray-800 mb-4"
-                
+
                     >
                         Get in Touch
                     </h3>
@@ -349,14 +349,20 @@ const UdyamRegistration = () => {
                     initial={{ y: 50, opacity: 0 }}
                     animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
                     transition={{ duration: 0.5, delay: getTouchDelay(1) }}
-                    className="flex-grow   rounded-2xl flex items-center justify-center h-full"
+                    className="flex-grow grid md:grid-cols-2 h-full bg-gradient-to-r  from-[#3CA2E2] to-[#052EAA] p-4 rounded-4xl box-border"
                 >
-                    <img
-                        loading="lazy"
-                        src={Image1}
-                        alt="Udyam Registration illustration"
-                        className="max-h-80   bg-gradient-to-br  w-full rounded-xl "
-                    />
+                    <div className="flex flex-col justify-evenly p-4 box-border">
+                        <h2 className="sub-heading text-white font-1">
+                            Udaan
+                        </h2>
+                        <p className="font-3 text-[#C3C3C3]">
+                            Empowering Businesses through Comprehensive Solutions From Fund
+                            Management to Legal Empowering.
+                        </p>
+                    </div>
+                    <div className="p-2 bg-white rounded-4xl box-border grid h-full ">
+                        <img src={Image1} className="rounded-3xl w-full h-64  " loading="lazy" />
+                    </div>
                 </motion.div>
             </motion.section>
 
@@ -371,12 +377,12 @@ const UdyamRegistration = () => {
                 <div className="bg-gradient-to-t from-[#3CA2E2] to-[#052EAA] rounded-4xl p-8 md:p-12 space-y-4 text-center">
                     <h2
                         className="sub-heading text-white text-left font-2"
-                
+
                     >
                         What Is Udyam Registration?
                     </h2>
                     <p className="paragraph !text-white mx-auto text-left font-3"
-                       
+
                     >
                         Udyam Registration is the new online registration process for Micro, Small and Medium
                         Enterprises (MSMEs) launched by the Ministry of MSME, Government of India. It replaced
@@ -396,7 +402,7 @@ const UdyamRegistration = () => {
                 className="px-7 md:px-14 bg-[#f7f7f7] py-8"
             >
                 <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                    
+
                 >
                     MSME Classification Criteria
                 </h2>
@@ -418,7 +424,7 @@ const UdyamRegistration = () => {
                             <div className="text-center mb-4">
                                 <h3
                                     className="text-xl font-bold text-gray-800 mb-3 font-2"
-                                   
+
                                 >
                                     Micro Enterprise
                                 </h3>
@@ -462,7 +468,7 @@ const UdyamRegistration = () => {
                             <div className="text-center mb-4">
                                 <h3
                                     className="text-xl font-bold text-gray-800 mb-3 font-2"
-                                    
+
                                 >
                                     Small Enterprise
                                 </h3>
@@ -506,7 +512,7 @@ const UdyamRegistration = () => {
                             <div className="text-center mb-4">
                                 <h3
                                     className="text-xl font-bold text-gray-800 mb-3 font-2"
-                                 
+
                                 >
                                     Medium Enterprise
                                 </h3>
@@ -547,13 +553,13 @@ const UdyamRegistration = () => {
                 className="px-7 md:px-14 bg-[#f7f7f7] py-8"
             >
                 <h2 className="sub-heading text-center font-2 bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                    
+
                 >
                     Udyam Registration Benefits & Process
                 </h2>
                 <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
                     <p className="text-sm font-3 md:text-base text-gray-600 text-center"
-           
+
                     >
                         Udyam Registration opens doors to numerous government schemes, financial benefits,
                         and business opportunities specifically designed to support and promote MSME growth.
@@ -567,7 +573,7 @@ const UdyamRegistration = () => {
                         >
                             <h3
                                 className="text-lg font-semibold text-gray-800 font-2"
-                               
+
                             >
                                 Key Benefits
                             </h3>
@@ -602,7 +608,7 @@ const UdyamRegistration = () => {
                         >
                             <h3
                                 className="text-lg font-semibold text-gray-800 font-2"
-                               
+
                             >
                                 Registration Process
                             </h3>
@@ -642,7 +648,7 @@ const UdyamRegistration = () => {
                 className="px-7 md:px-14 bg-[#f7f7f7] py-8"
             >
                 <h2 className="sub-heading text-center font-2 bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                   
+
                 >
                     How Abtik Helps You Get Udyam Registration
                 </h2>
@@ -660,7 +666,7 @@ const UdyamRegistration = () => {
                             </div>
                             <h3
                                 className="text-lg font-semibold text-gray-800 mb-2 font-2"
-                             
+
                             >
                                 {process.title}
                             </h3>
@@ -679,7 +685,7 @@ const UdyamRegistration = () => {
                 className="px-7 md:px-14 bg-[#f7f7f7] py-8 "
             >
                 <h2 className="sub-heading text-center font-2 bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                  
+
                 >
                     Why Choose Abtik for Udyam Registration
                 </h2>
@@ -697,7 +703,7 @@ const UdyamRegistration = () => {
                             </div>
                             <h3
                                 className="text-lg font-2 font-semibold text-gray-800 mb-2"
-                           
+
                             >
                                 {benefit.title}
                             </h3>
@@ -716,13 +722,13 @@ const UdyamRegistration = () => {
                 className="bg-[#f7f7f7]  py-8 md:py-16 space-y-6"
             >
                 <h1 className="sub-heading bg-gradient-to-t font-2 text-center  bg-clip-text from-[#3CA2E2] to-[#052EAA] text-transparent"
-                   
+
                 >
                     Frequently Asked Questions
                 </h1>
                 <div
                     className="px-6  md:px-24 space-y-4  font-3"
-                    
+
                 >
                     {faq.map((data, index) => (
                         <motion.div

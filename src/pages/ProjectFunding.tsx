@@ -6,7 +6,7 @@ import {
     Mail,
     User,
     Phone,
-   
+
     Headset,
     ArrowUpRight,
     ArrowRight,
@@ -15,7 +15,7 @@ import {
     DollarSign,
     TrendingUp,
     Users,
- 
+
     Shield,
     Layers,
     Rocket,
@@ -198,13 +198,13 @@ const ProjectFunding = () => {
     const isInViewContact = useInView(refContact, { once: true, amount: 0.1 });
 
     return (<>
-    
-          <HeadProvider>
-        <Title>{seoData?.projectfundingService?.title}</Title>
-        <Meta name="description" content={seoData?.projectfundingService?.description} />
-        <Meta name="keyword" content={seoData?.projectfundingService?.keyword} />
-        <Meta name="robots" content={seoData?.projectfundingService?.robots} />
-      </HeadProvider>
+
+        <HeadProvider>
+            <Title>{seoData?.projectfundingService?.title}</Title>
+            <Meta name="description" content={seoData?.projectfundingService?.description} />
+            <Meta name="keyword" content={seoData?.projectfundingService?.keyword} />
+            <Meta name="robots" content={seoData?.projectfundingService?.robots} />
+        </HeadProvider>
         <Mainlayout>
             {/* Hero Section */}
             <section
@@ -234,7 +234,7 @@ const ProjectFunding = () => {
                           font-bold leading-tight sm:leading-tight md:leading-tight lg:leading-tight
                           text-white lg:text-inherit tracking-wide
                           main-heading font-1"
-                        
+
                     >
                         Scale with{" "}
                         <span className="text-[#3CA2E2] font-extrabold block sm:inline">
@@ -248,7 +248,7 @@ const ProjectFunding = () => {
                          text-white lg:text-white
                          paragraph !text-white
                          max-w-none font-3 sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
-                     
+
                     >
                         Transform your project vision into reality with specialized funding solutions.
                         Access ₹1 crore to ₹500 crore financing with milestone-based disbursement,
@@ -286,7 +286,7 @@ const ProjectFunding = () => {
                 >
                     <h3
                         className="text-lg font-2 sm:text-xl font-semibold text-gray-800 mb-4"
-                       
+
                     >
                         Get in Touch
                     </h3>
@@ -303,12 +303,12 @@ const ProjectFunding = () => {
                             </span>
                             <div>
                                 <p className="text-base font-3 text-gray-700 font-semibold ">
-                                  Bharat Barot
+                                    Bharat Barot
                                 </p>
                                 <p className="text-xs font-3 text-gray-600">
-                                   Vice President
+                                    Vice President
                                     <br />
-                                  
+
                                 </p>
                             </div>
                         </a>
@@ -348,14 +348,20 @@ const ProjectFunding = () => {
                     initial={{ y: 50, opacity: 0 }}
                     animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
                     transition={{ duration: 0.5, delay: getTouchDelay(1) }}
-                    className="flex-grow bg-gradient-to-r from-[#3CA2E2] to-[#052EAA] rounded-2xl flex items-center justify-center h-full"
+                    className="flex-grow grid md:grid-cols-2 h-full bg-gradient-to-r  from-[#3CA2E2] to-[#052EAA] p-4 rounded-4xl box-border"
                 >
-                    <img
-                    loading="lazy"
-                        src={Image1}
-                        alt="Project Funding illustration"
-                        className="max-h-80 w-full rounded-lg object-contain p-4"
-                    />
+                    <div className="flex flex-col justify-evenly p-4 box-border">
+                        <h2 className="sub-heading text-white font-1">
+                            Project Funding
+                        </h2>
+                        <p className="font-3 text-[#C3C3C3]">
+                            Empowering Businesses through Comprehensive Solutions From Fund
+                            Management to Legal Empowering.
+                        </p>
+                    </div>
+                    <div className="p-2 bg-white rounded-4xl box-border grid h-full ">
+                        <img src={Image1} className="rounded-3xl w-full h-64  " loading="lazy" />
+                    </div>
                 </motion.div>
             </motion.section>
 
@@ -370,18 +376,18 @@ const ProjectFunding = () => {
                 <div className="bg-gradient-to-t from-[#3CA2E2] to-[#052EAA] rounded-4xl p-8 md:p-12 space-y-4 text-center">
                     <h2
                         className="sub-heading font-2 text-white text-left"
-                       
+
                     >
                         What Is Project Funding?
                     </h2>
                     <p className="paragraph font-3 !text-white mx-auto text-left"
-                   
+
                     >
-                        Project Funding is specialized financing designed to support specific projects from 
-                        conception to completion. Unlike traditional working capital loans, project funding 
-                        involves structured financing with phased disbursement linked to project milestones, 
-                        longer tenure, and repayment schedules aligned with project cash flow generation. 
-                        This financing is ideal for infrastructure development, manufacturing setups, technology 
+                        Project Funding is specialized financing designed to support specific projects from
+                        conception to completion. Unlike traditional working capital loans, project funding
+                        involves structured financing with phased disbursement linked to project milestones,
+                        longer tenure, and repayment schedules aligned with project cash flow generation.
+                        This financing is ideal for infrastructure development, manufacturing setups, technology
                         implementations, expansion projects, and new venture establishments across various sectors.
                     </p>
                 </div>
@@ -396,7 +402,7 @@ const ProjectFunding = () => {
                 className="px-7 md:px-14 bg-[#f7f7f7] py-8"
             >
                 <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                 
+
                 >
                     Project Funding Categories
                 </h2>
@@ -418,7 +424,7 @@ const ProjectFunding = () => {
                             <div className="text-center mb-4">
                                 <h3
                                     className="text-xl font-2 font-bold text-gray-800 mb-3"
-                                  
+
                                 >
                                     Infrastructure Projects
                                 </h3>
@@ -462,7 +468,7 @@ const ProjectFunding = () => {
                             <div className="text-center mb-4">
                                 <h3
                                     className="text-xl font-2 font-bold text-gray-800 mb-3"
-                                    
+
                                 >
                                     Manufacturing Projects
                                 </h3>
@@ -506,7 +512,7 @@ const ProjectFunding = () => {
                             <div className="text-center mb-4">
                                 <h3
                                     className="text-xl font-bold font-2 text-gray-800 mb-3"
-                                  
+
                                 >
                                     Innovation Projects
                                 </h3>
@@ -547,16 +553,16 @@ const ProjectFunding = () => {
                 className="px-7 md:px-14 bg-[#f7f7f7] py-8"
             >
                 <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                    
+
                 >
                     Project Funding Benefits & Requirements
                 </h2>
                 <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
                     <p className="text-sm font-3 md:text-base text-gray-600 text-center"
-                    
+
                     >
-                        Project funding provides comprehensive financial support with structured disbursement, 
-                        flexible repayment terms, and specialized features designed to match project implementation 
+                        Project funding provides comprehensive financial support with structured disbursement,
+                        flexible repayment terms, and specialized features designed to match project implementation
                         timelines and cash flow generation patterns.
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -568,7 +574,7 @@ const ProjectFunding = () => {
                         >
                             <h3
                                 className="text-lg font-2 font-semibold text-gray-800"
-                               
+
                             >
                                 Key Benefits
                             </h3>
@@ -603,7 +609,7 @@ const ProjectFunding = () => {
                         >
                             <h3
                                 className="text-lg font-2 font-semibold text-gray-800"
-                                
+
                             >
                                 Key Requirements
                             </h3>
@@ -643,7 +649,7 @@ const ProjectFunding = () => {
                 className="px-7 md:px-14 bg-[#f7f7f7] py-8"
             >
                 <h2 className="sub-heading text-center font-2 bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                  
+
                 >
                     How Abtik Helps You Secure Project Funding
                 </h2>
@@ -661,7 +667,7 @@ const ProjectFunding = () => {
                             </div>
                             <h3
                                 className="text-lg font-2 font-semibold text-gray-800 mb-2"
-                                
+
                             >
                                 {process.title}
                             </h3>
@@ -680,7 +686,7 @@ const ProjectFunding = () => {
                 className="px-7 md:px-14 bg-[#f7f7f7] py-8 "
             >
                 <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                   
+
                 >
                     Why Choose Abtik for Project Funding
                 </h2>
@@ -698,7 +704,7 @@ const ProjectFunding = () => {
                             </div>
                             <h3
                                 className="text-lg font-2 font-semibold text-gray-800 mb-2"
-                               
+
                             >
                                 {benefit.title}
                             </h3>
@@ -717,13 +723,13 @@ const ProjectFunding = () => {
                 className="bg-[#f7f7f7]  py-8 md:py-16 space-y-6"
             >
                 <h1 className="sub-heading font-2 bg-gradient-to-t text-center  bg-clip-text from-[#3CA2E2] to-[#052EAA] text-transparent"
-                  
+
                 >
                     Frequently Asked Questions
                 </h1>
                 <div
                     className="px-6  md:px-24 space-y-4 font-3"
-                   
+
                 >
                     {faq.map((data, index) => (
                         <motion.div

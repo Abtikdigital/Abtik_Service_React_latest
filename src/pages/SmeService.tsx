@@ -198,13 +198,13 @@ const SMELoan = () => {
     const isInViewContact = useInView(refContact, { once: true, amount: 0.1 });
 
     return (<>
-          <HeadProvider>
-        <Title>{seoData?.smeService?.title}</Title>
-        <Meta name="description" content={seoData?.smeService?.description} />
-        <Meta name="keyword" content={seoData?.smeService?.keyword} />
-        <Meta name="robots" content={seoData?.smeService?.robots} />
-      </HeadProvider>
-    
+        <HeadProvider>
+            <Title>{seoData?.smeService?.title}</Title>
+            <Meta name="description" content={seoData?.smeService?.description} />
+            <Meta name="keyword" content={seoData?.smeService?.keyword} />
+            <Meta name="robots" content={seoData?.smeService?.robots} />
+        </HeadProvider>
+
         <Mainlayout>
             {/* Hero Section */}
             <section
@@ -234,7 +234,7 @@ const SMELoan = () => {
                           font-bold leading-tight sm:leading-tight md:leading-tight lg:leading-tight
                           text-white lg:text-inherit tracking-wide
                           main-heading font-2"
-                        
+
                     >
                         Accelerate with{" "}
                         <span className="text-[#3CA2E2] font-extrabold block sm:inline">
@@ -248,7 +248,7 @@ const SMELoan = () => {
                          text-white lg:text-white
                          paragraph !text-white
                          max-w-none font-3 sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
-                         
+
                     >
                         Fuel your SME growth with specialized financing solutions.
                         Access ₹10 lakh to ₹25 crore funding with competitive rates,
@@ -286,11 +286,11 @@ const SMELoan = () => {
                 >
                     <h3
                         className="text-lg font-2 sm:text-xl font-semibold text-gray-800 mb-4"
-                      
+
                     >
                         Get in Touch
                     </h3>
-                     <div className="space-y-4">
+                    <div className="space-y-4">
                         <a
                             href=""
                             target="_blank"
@@ -306,9 +306,9 @@ const SMELoan = () => {
                                     Bharat Barot
                                 </p>
                                 <p className="text-xs font-3 text-gray-600">
-                                   Vice President
+                                    Vice President
                                     <br />
-                                   
+
                                 </p>
                             </div>
                         </a>
@@ -348,14 +348,20 @@ const SMELoan = () => {
                     initial={{ y: 50, opacity: 0 }}
                     animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
                     transition={{ duration: 0.5, delay: getTouchDelay(1) }}
-                    className="flex-grow  rounded-2xl flex items-center justify-center h-full"
+                    className="flex-grow grid md:grid-cols-2 h-full bg-gradient-to-r  from-[#3CA2E2] to-[#052EAA] p-4 rounded-4xl box-border"
                 >
-                    <img
-                    loading="lazy"
-                        src={Image1}
-                        alt="SME Loan illustration"
-                        className="max-h-80 w-full rounded-lg "
-                    />
+                    <div className="flex flex-col justify-evenly p-4 box-border">
+                        <h2 className="sub-heading text-white font-1">
+                            SME
+                        </h2>
+                        <p className="font-3 text-[#C3C3C3]">
+                            Empowering Businesses through Comprehensive Solutions From Fund
+                            Management to Legal Empowering.
+                        </p>
+                    </div>
+                    <div className="p-2 bg-white rounded-4xl box-border grid h-full ">
+                        <img src={Image1} className="rounded-3xl w-full h-64  " loading="lazy" />
+                    </div>
                 </motion.div>
             </motion.section>
 
@@ -370,16 +376,16 @@ const SMELoan = () => {
                 <div className="bg-gradient-to-t from-[#3CA2E2] to-[#052EAA] rounded-4xl p-8 md:p-12 space-y-4 text-center">
                     <h2
                         className="sub-heading font-2 text-white text-left"
-                        
+
                     >
                         What Is SME Loan?
                     </h2>
-                    <p className="paragraph font-3 !text-white mx-auto text-left" style={{fontFamily:"Montserrat Alternates"}}>
-                        SME Loans are specialized financing products designed specifically for Small and Medium 
-                        Enterprises to address their unique capital requirements. These loans provide flexible 
-                        funding solutions for business expansion, working capital management, equipment purchase, 
-                        and operational needs. Unlike traditional business loans, SME loans are tailored with 
-                        competitive interest rates, customized repayment options, and streamlined processes to 
+                    <p className="paragraph font-3 !text-white mx-auto text-left" style={{ fontFamily: "Montserrat Alternates" }}>
+                        SME Loans are specialized financing products designed specifically for Small and Medium
+                        Enterprises to address their unique capital requirements. These loans provide flexible
+                        funding solutions for business expansion, working capital management, equipment purchase,
+                        and operational needs. Unlike traditional business loans, SME loans are tailored with
+                        competitive interest rates, customized repayment options, and streamlined processes to
                         support the growth and development of small and medium businesses across various sectors.
                     </p>
                 </div>
@@ -394,7 +400,7 @@ const SMELoan = () => {
                 className="px-7 md:px-14 bg-[#f7f7f7] py-8"
             >
                 <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                 
+
                 >
                     SME Business Categories
                 </h2>
@@ -416,7 +422,7 @@ const SMELoan = () => {
                             <div className="text-center mb-4">
                                 <h3
                                     className="text-xl font-2 font-bold text-gray-800 mb-3"
-                                 
+
                                 >
                                     Manufacturing SMEs
                                 </h3>
@@ -460,7 +466,7 @@ const SMELoan = () => {
                             <div className="text-center mb-4">
                                 <h3
                                     className="text-xl font-bold font-2 text-gray-800 mb-3"
-                                    
+
                                 >
                                     Trading SMEs
                                 </h3>
@@ -504,7 +510,7 @@ const SMELoan = () => {
                             <div className="text-center mb-4">
                                 <h3
                                     className="text-xl font-2 font-bold text-gray-800 mb-3"
-                                    
+
                                 >
                                     Service SMEs
                                 </h3>
@@ -545,14 +551,14 @@ const SMELoan = () => {
                 className="px-7 md:px-14 bg-[#f7f7f7] py-8"
             >
                 <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                    
+
                 >
                     SME Loan Benefits & Eligibility
                 </h2>
                 <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
                     <p className="text-sm md:text-base text-gray-600 text-center font-3" >
-                        SME loans provide comprehensive financial support tailored to small and medium enterprises, 
-                        offering competitive rates, flexible terms, and quick access to capital for sustainable 
+                        SME loans provide comprehensive financial support tailored to small and medium enterprises,
+                        offering competitive rates, flexible terms, and quick access to capital for sustainable
                         business growth and expansion.
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -564,7 +570,7 @@ const SMELoan = () => {
                         >
                             <h3
                                 className="text-lg font-semibold text-gray-800 font-2"
-                               
+
                             >
                                 Key Benefits
                             </h3>
@@ -599,7 +605,7 @@ const SMELoan = () => {
                         >
                             <h3
                                 className="text-lg font-semibold text-gray-800 font-2"
-                                
+
                             >
                                 Eligibility Criteria
                             </h3>
@@ -639,7 +645,7 @@ const SMELoan = () => {
                 className="px-7 md:px-14 bg-[#f7f7f7] py-8"
             >
                 <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                   
+
                 >
                     How Abtik Helps You Get SME Loans
                 </h2>
@@ -657,7 +663,7 @@ const SMELoan = () => {
                             </div>
                             <h3
                                 className="text-lg font-2 font-semibold text-gray-800 mb-2"
-                                
+
                             >
                                 {process.title}
                             </h3>
@@ -676,7 +682,7 @@ const SMELoan = () => {
                 className="px-7 md:px-14 bg-[#f7f7f7] py-8 "
             >
                 <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                    
+
                 >
                     Why Choose Abtik for SME Loans
                 </h2>
@@ -694,7 +700,7 @@ const SMELoan = () => {
                             </div>
                             <h3
                                 className="text-lg font-2 font-semibold text-gray-800 mb-2"
-                               
+
                             >
                                 {benefit.title}
                             </h3>
@@ -713,13 +719,13 @@ const SMELoan = () => {
                 className="bg-[#f7f7f7]  py-8 md:py-16 space-y-6"
             >
                 <h1 className="sub-heading font-2 bg-gradient-to-t text-center  bg-clip-text from-[#3CA2E2] to-[#052EAA] text-transparent"
-                 
+
                 >
                     Frequently Asked Questions
                 </h1>
                 <div
                     className="px-6  md:px-24 space-y-4 font-3"
-                   
+
                 >
                     {faq.map((data, index) => (
                         <motion.div

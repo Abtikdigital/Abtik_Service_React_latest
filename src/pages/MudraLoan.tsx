@@ -41,32 +41,32 @@ const MudraLoan = () => {
         {
             question: "1. What is PMMY Mudra Loan?",
             answer:
-                "Pradhan Mantri Mudra Yojana (PMMY) is a flagship scheme providing collateral-free loans up to ₹10 lakh to non-corporate, non-farm micro enterprises engaged in manufacturing, trading, or service sectors including activities allied to agriculture."[1],
+                "Pradhan Mantri Mudra Yojana (PMMY) is a flagship scheme providing collateral-free loans up to ₹10 lakh to non-corporate, non-farm micro enterprises engaged in manufacturing, trading, or service sectors including activities allied to agriculture.",
         },
         {
             question: "2. What are the three categories of Mudra loans?",
             answer:
-                "Mudra loans are categorized into three types: Shishu (up to ₹50,000), Kishore (₹50,001 to ₹5 lakh), and Tarun (₹5 lakh to ₹10 lakh), signifying different stages of business growth and funding requirements."[3],
+                "Mudra loans are categorized into three types: Shishu (up to ₹50,000), Kishore (₹50,001 to ₹5 lakh), and Tarun (₹5 lakh to ₹10 lakh), signifying different stages of business growth and funding requirements.",
         },
         {
             question: "3. Who is eligible for Mudra loans?",
             answer:
-                "Individuals, proprietary concerns, partnership firms, private limited companies, public companies, and any other legal forms engaged in income-generating activities in non-farm sectors are eligible. The applicant should not be a defaulter and should have a satisfactory credit track record."[5],
+                "Individuals, proprietary concerns, partnership firms, private limited companies, public companies, and any other legal forms engaged in income-generating activities in non-farm sectors are eligible. The applicant should not be a defaulter and should have a satisfactory credit track record.",
         },
         {
             question: "4. What documents are required for Mudra loan application?",
             answer:
-                "Required documents include ID proof, address proof, passport size photograph, applicant signature, business proof, project report, bank statements, and other documents as specified by the lending institution."[5],
+                "Required documents include ID proof, address proof, passport size photograph, applicant signature, business proof, project report, bank statements, and other documents as specified by the lending institution.",
         },
         {
             question: "5. Is there any processing fee for Mudra loans?",
             answer:
-                "Banks may charge upfront fee as per their internal guidelines. However, the upfront fee/processing charges for Shishu loans (up to ₹50,000) are waived by most banks to encourage micro entrepreneurs."[5],
+                "Banks may charge upfront fee as per their internal guidelines. However, the upfront fee/processing charges for Shishu loans (up to ₹50,000) are waived by most banks to encourage micro entrepreneurs.",
         },
         {
             question: "6. Can women entrepreneurs get additional benefits?",
             answer:
-                "Yes, women account for 68% of all Mudra beneficiaries. MUDRA provides a reduction of 25 basis points in interest rates to MFIs/NBFCs providing loans to women entrepreneurs, and banks may consider additional facilities including interest reduction."[3][8],
+                "Yes, women account for 68% of all Mudra beneficiaries. MUDRA provides a reduction of 25 basis points in interest rates to MFIs/NBFCs providing loans to women entrepreneurs, and banks may consider additional facilities including interest reduction.",
         },
     ];
 
@@ -346,18 +346,24 @@ const MudraLoan = () => {
                             </a>
                         </div>
                     </motion.div>
-                    <motion.div
+                   <motion.div
                         initial={{ y: 50, opacity: 0 }}
                         animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
                         transition={{ duration: 0.5, delay: getTouchDelay(1) }}
-                        className="flex-grow  rounded-2xl flex items-center justify-center h-full"
+                        className="flex-grow grid md:grid-cols-2 h-full bg-gradient-to-r  from-[#3CA2E2] to-[#052EAA] p-4 rounded-4xl box-border"
                     >
-                        <img
-                            loading="lazy"
-                            src={Image1}
-                            alt="Mudra Loan illustration"
-                            className="max-h-80 w-full rounded-lg "
-                        />
+                        <div className="flex flex-col justify-evenly p-4 box-border">
+                            <h2 className="sub-heading text-white font-1">
+                                Mudra Loan
+                            </h2>
+                            <p className="font-3 text-[#C3C3C3]">
+                                Empowering Businesses through Comprehensive Solutions From Fund
+                                Management to Legal Empowering.
+                            </p>
+                        </div>
+                        <div className="p-2 bg-white rounded-4xl box-border grid h-full ">
+                            <img src={Image1} className="rounded-3xl w-full h-64  " loading="lazy" />
+                        </div>
                     </motion.div>
                 </motion.section>
 
@@ -383,7 +389,7 @@ const MudraLoan = () => {
                             to provide collateral-free loans up to ₹10 lakh to non-corporate, non-farm micro enterprises.
                             The scheme supports millions of proprietorship and partnership firms in manufacturing, service,
                             and trading sectors, helping entrepreneurs access formal banking credit that was previously
-                            unavailable through traditional channels.[1]
+                            unavailable through traditional channels.
                         </p>
                     </div>
                 </motion.section>

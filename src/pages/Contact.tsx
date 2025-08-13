@@ -59,7 +59,7 @@ const Contact = () => {
                           font-bold leading-tight sm:leading-tight md:leading-tight lg:leading-tight
                           text-white lg:text-inherit tracking-wide
                           main-heading font-1"
-           
+
             >
               Your One-Stop{" "}
               <span className="text-[#3CA2E2] font-extrabold block sm:inline">
@@ -73,7 +73,7 @@ const Contact = () => {
                          text-white lg:text-white
                          paragraph !text-white
                          max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0 font-2"
-             
+
             >
               Empowering Businesses through Comprehensive Solutions From Fund
               Management to Legal Compliance, We've Got You Covered at Abtik
@@ -101,7 +101,7 @@ const Contact = () => {
           animate={isInViewContact ? { y: 0, opacity: 1 } : {}}
           transition={{ duration: 0.5 }}
         >
-          <ContactSection />
+          <ContactSection isMapVisible={true} />
         </motion.section>
       </Mainlayout>
     </>

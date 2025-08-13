@@ -229,7 +229,7 @@ const TradeLicenseCertificate = () => {
           >
             <h1
               className="text-2xl font-1 sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-white lg:text-inherit tracking-wide main-heading"
-            
+
             >
               Legally Empower Your Business with{" "}
               <span className="text-[#3CA2E2] font-extrabold block sm:inline">
@@ -242,7 +242,7 @@ const TradeLicenseCertificate = () => {
                          text-white lg:text-white
                          paragraph !text-white
                          max-w-none font-3 sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
-           
+
             >
               Apply for a municipal Trade License with Abtik support—get legal,
               grow faster, and operate with peace of mind in any Indian city.
@@ -274,7 +274,7 @@ const TradeLicenseCertificate = () => {
           >
             <h3
               className="text-lg font-2 sm:text-xl font-semibold text-gray-800 mb-4"
-          
+
             >
               Get in Touch
             </h3>
@@ -341,14 +341,20 @@ const TradeLicenseCertificate = () => {
             initial={{ y: 50, opacity: 0 }}
             animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
             transition={{ duration: 0.5, delay: getTouchDelay(1) }}
-            className="flex-grow  rounded-2xl flex items-center justify-center h-full"
+            className="flex-grow grid md:grid-cols-2 h-full bg-gradient-to-r  from-[#3CA2E2] to-[#052EAA] p-4 rounded-4xl box-border"
           >
-            <img
-              loading="lazy"
-              src={Image1}
-              alt="Trade License Certificate Illustration"
-              className="max-h-80 w-full rounded-lg "
-            />
+            <div className="flex flex-col justify-evenly p-4 box-border">
+              <h2 className="sub-heading text-white font-1">
+                Trade Licence
+              </h2>
+              <p className="font-3 text-[#C3C3C3]">
+                Empowering Businesses through Comprehensive Solutions From Fund
+                Management to Legal Empowering.
+              </p>
+            </div>
+            <div className="p-2 bg-white rounded-4xl box-border grid h-full ">
+              <img src={Image1} className="rounded-3xl w-full h-64  " loading="lazy" />
+            </div>
           </motion.div>
         </motion.section>
 
@@ -363,13 +369,13 @@ const TradeLicenseCertificate = () => {
           <div className="bg-gradient-to-t from-[#3CA2E2] to-[#052EAA] rounded-4xl p-8 md:p-12 space-y-4 text-center">
             <h2
               className="sub-heading font-2 text-white text-left"
-            
+
             >
               What Is Trade License Certificate?
             </h2>
             <p
               className="paragraph font-3 !text-white mx-auto text-left"
-           
+
             >
               Trade License is a legal requirement enforced by municipal bodies,
               granting permission to businesses to carry on commercial
@@ -389,14 +395,14 @@ const TradeLicenseCertificate = () => {
         >
           <h2
             className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-          
+
           >
             Who Needs a Trade License?
           </h2>
           <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
             <p
               className="text-sm md:text-base font-3 text-gray-600 text-center"
-            
+
             >
               Any business—shop, factory, hotel, clinic, food outlet, or
               commercial agency—operating within Municipal or City limits,
@@ -412,7 +418,7 @@ const TradeLicenseCertificate = () => {
               >
                 <h3
                   className="text-lg font-2 font-semibold text-gray-800"
-               
+
                 >
                   Eligible Entities
                 </h3>
@@ -446,7 +452,7 @@ const TradeLicenseCertificate = () => {
               >
                 <h3
                   className="text-lg font-semibold font-2 text-gray-800"
-                
+
                 >
                   Key Points
                 </h3>
@@ -483,7 +489,7 @@ const TradeLicenseCertificate = () => {
         >
           <h2
             className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-          
+
           >
             How Abtik Gets You Licensed
           </h2>
@@ -501,7 +507,7 @@ const TradeLicenseCertificate = () => {
                 </div>
                 <h3
                   className="text-lg font-semibold font-2 text-gray-800 mb-2"
-                
+
                 >
                   {process.title}
                 </h3>
@@ -521,7 +527,7 @@ const TradeLicenseCertificate = () => {
         >
           <h2
             className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-         
+
           >
             Trade License Benefits
           </h2>
@@ -539,7 +545,7 @@ const TradeLicenseCertificate = () => {
                 </div>
                 <h3
                   className="text-lg font-2 font-semibold text-gray-800 mb-2"
-                 
+
                 >
                   {benefit.title}
                 </h3>
@@ -559,13 +565,13 @@ const TradeLicenseCertificate = () => {
         >
           <h1
             className="sub-heading bg-gradient-to-t font-2 text-center bg-clip-text from-[#3CA2E2] to-[#052EAA] text-transparent"
-          
+
           >
             Frequently Asked Questions
           </h1>
           <div
             className="px-6  md:px-24 space-y-4 font-3"
-          
+
           >
             {faq.map((data, index) => (
               <motion.div
@@ -576,11 +582,10 @@ const TradeLicenseCertificate = () => {
                 className="bg-white rounded-lg shadow-sm border border-gray-100 transition-all duration-300"
               >
                 <h2
-                  className={`p-2.5 px-4 relative cursor-pointer flex items-center justify-between  text-base font-medium ${
-                    isExpanded.isOpen && isExpanded.index === index
+                  className={`p-2.5 px-4 relative cursor-pointer flex items-center justify-between  text-base font-medium ${isExpanded.isOpen && isExpanded.index === index
                       ? "border-b border-gray-200"
                       : ""
-                  }`}
+                    }`}
                   onClick={() => toggleIsExpanded(index)}
                 >
                   <span>{data.question}</span>
@@ -593,11 +598,10 @@ const TradeLicenseCertificate = () => {
                   </button>
                 </h2>
                 <div
-                  className={`overflow-hidden transition-all duration-500 ease-in-out ${
-                    isExpanded.isOpen && isExpanded.index === index
+                  className={`overflow-hidden transition-all duration-500 ease-in-out ${isExpanded.isOpen && isExpanded.index === index
                       ? "max-h-96 opacity-100"
                       : "max-h-0 opacity-0"
-                  }`}
+                    }`}
                 >
                   <p className="p-4 bg-gradient-to-t rounded-b-lg from-[#052EAA] to-[#3CA2E2] text-white">
                     {data.answer}

@@ -235,7 +235,7 @@ const PatentFiling = () => {
                           font-bold leading-tight sm:leading-tight md:leading-tight lg:leading-tight
                           text-white lg:text-inherit tracking-wide
                           main-heading font-1"
-                      
+
                     >
                         Safeguard Your Invention with{" "}
                         <span className="text-[#3CA2E2] font-extrabold block sm:inline">
@@ -249,7 +249,7 @@ const PatentFiling = () => {
                          text-white lg:text-white
                          paragraph !text-white
                          max-w-none sm:max-w-lg font-3 md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
-                      
+
                     >
                         Protect your innovations with expert patent filing and prosecution services.
                         Secure government-backed intellectual property rights and unlock commercial opportunities for your invention.
@@ -286,7 +286,7 @@ const PatentFiling = () => {
                 >
                     <h3
                         className="text-lg font-2 sm:text-xl font-semibold text-gray-800 mb-4"
-                      
+
                     >
                         Get in Touch
                     </h3>
@@ -348,14 +348,20 @@ const PatentFiling = () => {
                     initial={{ y: 50, opacity: 0 }}
                     animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
                     transition={{ duration: 0.5, delay: getTouchDelay(1) }}
-                    className="flex-grow  rounded-2xl flex items-center justify-center h-full"
+                    className="flex-grow grid md:grid-cols-2 h-full bg-gradient-to-r  from-[#3CA2E2] to-[#052EAA] p-4 rounded-4xl box-border"
                 >
-                    <img
-                        loading="lazy"
-                        src={Image1}
-                        alt="Patent registration illustration"
-                        className="max-h-80 w-full rounded-lg "
-                    />
+                    <div className="flex flex-col justify-evenly p-4 box-border">
+                        <h2 className="sub-heading text-white font-1">
+                            Angel Investor
+                        </h2>
+                        <p className="font-3 text-[#C3C3C3]">
+                            Empowering Businesses through Comprehensive Solutions From Fund
+                            Management to Legal Empowering.
+                        </p>
+                    </div>
+                    <div className="p-2 bg-white rounded-4xl box-border grid h-full ">
+                        <img src={Image1} className="rounded-3xl w-full h-64  " loading="lazy" />
+                    </div>
                 </motion.div>
             </motion.section>
 
@@ -370,12 +376,12 @@ const PatentFiling = () => {
                 <div className="bg-gradient-to-t from-[#3CA2E2] to-[#052EAA] rounded-4xl p-8 md:p-12 space-y-4 text-center">
                     <h2
                         className="sub-heading font-1 text-white text-left"
-                      
+
                     >
                         What Is Patent Registration?
                     </h2>
                     <p className="paragraph font-3 !text-white mx-auto text-left"
-                       
+
                     >
                         Patent registration secures exclusive legal rights to your novel invention, protecting your ideas against unauthorized manufacture, sale, or distribution. A granted patent fosters commercialization, supports R&D investments, and allows you to take legal action if your technology is copied. It is a powerful business asset for startups and established companies alike.
                     </p>
@@ -391,7 +397,7 @@ const PatentFiling = () => {
                 className="px-7 md:px-14 bg-[#f7f7f7] py-8"
             >
                 <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                    
+
                 >
                     Types of Patents
                 </h2>
@@ -412,7 +418,7 @@ const PatentFiling = () => {
                             <div className="text-center mb-4">
                                 <h3
                                     className="text-xl font-2 font-bold text-gray-800 mb-3"
-                                  
+
                                 >
                                     Utility Patents
                                 </h3>
@@ -456,7 +462,7 @@ const PatentFiling = () => {
                             <div className="text-center mb-4">
                                 <h3
                                     className="text-xl font-2 font-bold text-gray-800 mb-3"
-                                   
+
                                 >
                                     Design Patents
                                 </h3>
@@ -500,7 +506,7 @@ const PatentFiling = () => {
                             <div className="text-center mb-4">
                                 <h3
                                     className="text-xl font-2 font-bold text-gray-800 mb-3"
-                                  
+
                                 >
                                     Provisional Patents
                                 </h3>
@@ -541,13 +547,13 @@ const PatentFiling = () => {
                 className="px-7 md:px-14 bg-[#f7f7f7] py-8"
             >
                 <h2 className="sub-heading text-center font-2 bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                 
+
                 >
                     Patent Benefits & Requirements
                 </h2>
                 <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
                     <p className="text-sm font-3 md:text-base text-gray-600 text-center"
-                        
+
                     >
                         Patent registration provides exclusive nationwide rights, creates a high entry barrier for competition, and enables monetary returns through licensing or sale, driving innovation and business growth.
                     </p>
@@ -560,7 +566,7 @@ const PatentFiling = () => {
                         >
                             <h3
                                 className="text-lg font-semibold font-2 text-gray-800"
-                               
+
                             >
                                 Key Benefits
                             </h3>
@@ -595,7 +601,7 @@ const PatentFiling = () => {
                         >
                             <h3
                                 className="text-lg font-2 font-semibold text-gray-800"
-                                
+
                             >
                                 Registration Requirements
                             </h3>
@@ -635,7 +641,7 @@ const PatentFiling = () => {
                 className="px-7 md:px-14 bg-[#f7f7f7] py-8"
             >
                 <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                 
+
                 >
                     How Abtik Helps with Patent Registration
                 </h2>
@@ -653,7 +659,7 @@ const PatentFiling = () => {
                             </div>
                             <h3
                                 className="text-lg font-2 font-semibold text-gray-800 mb-2"
-                               
+
                             >
                                 {process.title}
                             </h3>
@@ -672,7 +678,7 @@ const PatentFiling = () => {
                 className="px-7 md:px-14 bg-[#f7f7f7] py-8 "
             >
                 <h2 className="sub-heading text-center font-2 bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                  
+
                 >
                     Why Choose Abtik for Patent Filing
                 </h2>
@@ -690,7 +696,7 @@ const PatentFiling = () => {
                             </div>
                             <h3
                                 className="text-lg font-2 font-semibold text-gray-800 mb-2"
-                               
+
                             >
                                 {benefit.title}
                             </h3>
@@ -709,13 +715,13 @@ const PatentFiling = () => {
                 className="bg-[#f7f7f7]  py-8 md:py-16 space-y-6"
             >
                 <h1 className="sub-heading font-2 bg-gradient-to-t text-center  bg-clip-text from-[#3CA2E2] to-[#052EAA] text-transparent"
-                  
+
                 >
                     Frequently Asked Questions
                 </h1>
                 <div
                     className="px-6  md:px-24 space-y-4  font-3"
-                   
+
                 >
                     {faq.map((data, index) => (
                         <motion.div

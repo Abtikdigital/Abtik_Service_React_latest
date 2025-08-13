@@ -13,11 +13,9 @@ import {
     Shield,
     Clock,
     Award,
-
     Building,
     BookOpen,
     AlertCircle,
-
     Star,
     Globe,
 } from "lucide-react";
@@ -65,7 +63,8 @@ const FSSAILicense = () => {
                 "FSSAI licenses are valid for 1-5 years based on your choice. Renewal applications should be submitted 30 days before expiry. Late renewals attract penalties and may require fresh applications in extreme cases.",
         },
         {
-            question: "6. What are the penalties for operating without FSSAI License?",
+            question:
+                "6. What are the penalties for operating without FSSAI License?",
             answer:
                 "Operating without FSSAI license can result in fines up to ₹5 lakhs, imprisonment up to 6 months, or both. The business may also be shut down by food safety officers.",
         },
@@ -104,7 +103,10 @@ const FSSAILicense = () => {
 
     // License Types
     const refLicenseTypes = useRef(null);
-    const isInViewLicenseTypes = useInView(refLicenseTypes, { once: true, amount: 0.1 });
+    const isInViewLicenseTypes = useInView(refLicenseTypes, {
+        once: true,
+        amount: 0.1,
+    });
 
     // Benefits & Requirements
     const refBenefits = useRef(null);
@@ -127,7 +129,10 @@ const FSSAILicense = () => {
 
     // Why Choose Abtik
     const refWhyChoose = useRef(null);
-    const isInViewWhyChoose = useInView(refWhyChoose, { once: true, amount: 0.1 });
+    const isInViewWhyChoose = useInView(refWhyChoose, {
+        once: true,
+        amount: 0.1,
+    });
     const [whyChooseCols, setWhyChooseCols] = useState(1);
     useEffect(() => {
         const updateCols = () => setWhyChooseCols(window.innerWidth >= 768 ? 3 : 1);
@@ -157,17 +162,20 @@ const FSSAILicense = () => {
         {
             icon: FileText,
             title: "Document Preparation",
-            description: "Gather all required documents including business registration, premises details, and identity proofs for FSSAI application.",
+            description:
+                "Gather all required documents including business registration, premises details, and identity proofs for FSSAI application.",
         },
         {
             icon: BookOpen,
             title: "FSSAI Application Filing",
-            description: "Submit the appropriate FSSAI form (Basic/State/Central) with complete documentation through online portal or offline process.",
+            description:
+                "Submit the appropriate FSSAI form (Basic/State/Central) with complete documentation through online portal or offline process.",
         },
         {
             icon: Shield,
             title: "License Approval & Compliance",
-            description: "Track application status, receive your FSSAI license, and get guidance on ongoing compliance requirements and renewals.",
+            description:
+                "Track application status, receive your FSSAI license, and get guidance on ongoing compliance requirements and renewals.",
         },
     ];
 
@@ -176,17 +184,20 @@ const FSSAILicense = () => {
         {
             icon: Shield,
             title: "Legal Compliance",
-            description: "Ensure full compliance with Indian food safety laws and avoid penalties, fines, or business closure.",
+            description:
+                "Ensure full compliance with Indian food safety laws and avoid penalties, fines, or business closure.",
         },
         {
             icon: Award,
             title: "Consumer Trust",
-            description: "Build customer confidence with official FSSAI license display, showing commitment to food safety standards.",
+            description:
+                "Build customer confidence with official FSSAI license display, showing commitment to food safety standards.",
         },
         {
             icon: Clock,
             title: "Quick Processing",
-            description: "Get expert assistance for faster license approval with proper documentation and compliance guidance.",
+            description:
+                "Get expert assistance for faster license approval with proper documentation and compliance guidance.",
         },
     ];
 
@@ -194,10 +205,28 @@ const FSSAILicense = () => {
     return (
         <>
             <HeadProvider>
-                <Title>{seoData?.fssaiLicenseService?.title || "FSSAI License Registration - Get Food License Online | Abtik"}</Title>
-                <Meta name="description" content={seoData?.fssaiLicenseService?.description || "Get FSSAI License registration online with Abtik. Expert assistance for Basic Registration, State License & Central License. Fast approval, complete documentation support."} />
-                <Meta name="keyword" content={seoData?.fssaiLicenseService?.keyword || "FSSAI license, food license, FSSAI registration, food safety license, FSSAI online application"} />
-                <Meta name="robots" content={seoData?.fssaiLicenseService?.robots || "index, follow"} />
+                <Title>
+                    {seoData?.fssaiLicenseService?.title ||
+                        "FSSAI License Registration - Get Food License Online | Abtik"}
+                </Title>
+                <Meta
+                    name="description"
+                    content={
+                        seoData?.fssaiLicenseService?.description ||
+                        "Get FSSAI License registration online with Abtik. Expert assistance for Basic Registration, State License & Central License. Fast approval, complete documentation support."
+                    }
+                />
+                <Meta
+                    name="keyword"
+                    content={
+                        seoData?.fssaiLicenseService?.keyword ||
+                        "FSSAI license, food license, FSSAI registration, food safety license, FSSAI online application"
+                    }
+                />
+                <Meta
+                    name="robots"
+                    content={seoData?.fssaiLicenseService?.robots || "index, follow"}
+                />
             </HeadProvider>
 
             <Mainlayout>
@@ -227,7 +256,6 @@ const FSSAILicense = () => {
                         <h1
                             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 
                           font-bold leading-tight font-1 text-white lg:text-inherit tracking-wide main-heading"
-                            
                         >
                             Get Your{" "}
                             <span className="text-[#3CA2E2] font-extrabold block sm:inline">
@@ -241,9 +269,10 @@ const FSSAILicense = () => {
                          text-white lg:text-white
                          paragraph !text-white
                          max-w-none font-3 sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
-                         
                         >
-                            Secure your FSSAI License for legal food business operations. Expert guidance for Basic Registration, State License, and Central License with complete documentation support.
+                            Secure your FSSAI License for legal food business operations.
+                            Expert guidance for Basic Registration, State License, and Central
+                            License with complete documentation support.
                         </p>
                         <div className="pt-2 sm:pt-4">
                             <button
@@ -270,10 +299,7 @@ const FSSAILicense = () => {
                         transition={{ duration: 0.5, delay: getTouchDelay(0) }}
                         className="w-full md:w-[300px] flex-shrink-0 bg-gradient-to-br from-blue-100 to-blue-200 p-6 rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
                     >
-                        <h3
-                            className="text-lg font-2 sm:text-xl font-semibold text-gray-800 mb-4"
-                           
-                        >
+                        <h3 className="text-lg font-2 sm:text-xl font-semibold text-gray-800 mb-4">
                             Get in Touch
                         </h3>
                         <div className="space-y-4">
@@ -327,7 +353,9 @@ const FSSAILicense = () => {
                                         Write Email
                                     </p>
                                     <p className="text-xs font-3 text-gray-600">
-                                        <a href="mailto:sumitradadiya@abtikservices.in">sumitradadiya@abtikservices.in</a>
+                                        <a href="mailto:sumitradadiya@abtikservices.in">
+                                            sumitradadiya@abtikservices.in
+                                        </a>
                                     </p>
                                 </div>
                             </a>
@@ -337,14 +365,20 @@ const FSSAILicense = () => {
                         initial={{ y: 50, opacity: 0 }}
                         animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
                         transition={{ duration: 0.5, delay: getTouchDelay(1) }}
-                        className="flex-grow rounded-2xl flex items-center justify-center h-full"
+                        className="flex-grow grid md:grid-cols-2 h-full bg-gradient-to-r  from-[#3CA2E2] to-[#052EAA] p-4 rounded-4xl box-border"
                     >
-                        <img
-                            loading="lazy"
-                            src={Image1}
-                            alt="FSSAI License Illustration"
-                            className="max-h-80 w-full rounded-lg"
-                        />
+                        <div className="flex flex-col justify-evenly p-4 box-border">
+                            <h2 className="sub-heading text-white font-1">
+                                Fssai Liecence
+                            </h2>
+                            <p className="font-3 text-[#C3C3C3]">
+                                Empowering Businesses through Comprehensive Solutions From Fund
+                                Management to Legal Empowering.
+                            </p>
+                        </div>
+                        <div className="p-2 bg-white rounded-4xl box-border grid h-full ">
+                            <img src={Image1} className="rounded-3xl w-full h-64  " loading="lazy" />
+                        </div>
                     </motion.div>
                 </motion.section>
 
@@ -357,18 +391,17 @@ const FSSAILicense = () => {
                     className="px-7 md:px-14 bg-[#f7f7f7] py-8"
                 >
                     <div className="bg-gradient-to-t from-[#3CA2E2] to-[#052EAA] rounded-4xl p-8 md:p-12 space-y-4 text-center">
-                        <h2
-                            className="sub-heading font-2 text-white text-left"
-                     
-                        >
+                        <h2 className="sub-heading font-2 text-white text-left">
                             What Is FSSAI License?
                         </h2>
-                        <p className="paragraph font-3 !text-white mx-auto text-left"
-                           
-                        >
-                            FSSAI (Food Safety and Standards Authority of India) License is a mandatory certification for all food businesses in India.
-                            It ensures compliance with food safety standards and regulations. Whether you're running a restaurant, manufacturing food products,
-                            or selling food items, FSSAI registration is legally required. Let Abtik handle your FSSAI license application process with expert guidance and complete documentation support.
+                        <p className="paragraph font-3 !text-white mx-auto text-left">
+                            FSSAI (Food Safety and Standards Authority of India) License is a
+                            mandatory certification for all food businesses in India. It
+                            ensures compliance with food safety standards and regulations.
+                            Whether you're running a restaurant, manufacturing food products,
+                            or selling food items, FSSAI registration is legally required. Let
+                            Abtik handle your FSSAI license application process with expert
+                            guidance and complete documentation support.
                         </p>
                     </div>
                 </motion.section>
@@ -381,9 +414,7 @@ const FSSAILicense = () => {
                     transition={{ duration: 0.5 }}
                     className="px-7 md:px-14 bg-[#f7f7f7] py-8"
                 >
-                    <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                       
-                    >
+                    <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]">
                         Types of FSSAI Licenses
                     </h2>
                     <div className="mt-8 bg-white rounded-4xl p-4 md:p-8 shadow-md">
@@ -401,10 +432,7 @@ const FSSAILicense = () => {
                                     </div>
                                 </div>
                                 <div className="text-center mb-4">
-                                    <h3
-                                        className="text-xl font-2 font-bold text-gray-800 mb-3"
-                                       
-                                    >
+                                    <h3 className="text-xl font-2 font-bold text-gray-800 mb-3">
                                         Basic Registration
                                     </h3>
                                     <div className="bg-gradient-to-r font-3 from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
@@ -445,10 +473,7 @@ const FSSAILicense = () => {
                                     </div>
                                 </div>
                                 <div className="text-center mb-4">
-                                    <h3
-                                        className="text-xl font-2 font-bold text-gray-800 mb-3"
-                                        
-                                    >
+                                    <h3 className="text-xl font-2 font-bold text-gray-800 mb-3">
                                         State License
                                     </h3>
                                     <div className="bg-gradient-to-r font-3 from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
@@ -489,10 +514,7 @@ const FSSAILicense = () => {
                                     </div>
                                 </div>
                                 <div className="text-center mb-4">
-                                    <h3
-                                        className="text-xl font-bold font-2 text-gray-800 mb-3"
-                                      
-                                    >
+                                    <h3 className="text-xl font-bold font-2 text-gray-800 mb-3">
                                         Central License
                                     </h3>
                                     <div className="bg-gradient-to-r font-3 from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
@@ -531,18 +553,15 @@ const FSSAILicense = () => {
                     transition={{ duration: 0.5 }}
                     className="px-7 md:px-14 bg-[#f7f7f7] py-8"
                 >
-                    <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                       
-                    >
+                    <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]">
                         FSSAI Benefits & Requirements
                     </h2>
                     <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
-                        <p className="text-sm font-3 md:text-base text-gray-600 text-center"
-                          
-                        >
-                            FSSAI license provides legal authorization to operate food businesses in India,
-                            ensuring compliance with food safety standards while building customer trust and
-                            enabling business growth opportunities.
+                        <p className="text-sm font-3 md:text-base text-gray-600 text-center">
+                            FSSAI license provides legal authorization to operate food
+                            businesses in India, ensuring compliance with food safety
+                            standards while building customer trust and enabling business
+                            growth opportunities.
                         </p>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <motion.div
@@ -551,10 +570,7 @@ const FSSAILicense = () => {
                                 transition={{ duration: 0.5, delay: 0.5 }}
                                 className="space-y-4"
                             >
-                                <h3
-                                    className="text-lg font-2 font-semibold text-gray-800"
-                                    
-                                >
+                                <h3 className="text-lg font-2 font-semibold text-gray-800">
                                     Key Benefits
                                 </h3>
                                 <ul className="space-y-2 font-3 text-sm text-gray-600">
@@ -586,10 +602,7 @@ const FSSAILicense = () => {
                                 transition={{ duration: 0.5, delay: 0.7 }}
                                 className="space-y-4"
                             >
-                                <h3
-                                    className="text-lg font-2 font-semibold text-gray-800"
-                                    
-                                >
+                                <h3 className="text-lg font-2 font-semibold text-gray-800">
                                     Required Documents
                                 </h3>
                                 <ul className="space-y-2 font-3 text-sm text-gray-600">
@@ -627,9 +640,7 @@ const FSSAILicense = () => {
                     transition={{ duration: 0.5 }}
                     className="px-7 md:px-14 bg-[#f7f7f7] py-8"
                 >
-                    <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                       
-                    >
+                    <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]">
                         How Abtik Helps with FSSAI License
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
@@ -644,13 +655,12 @@ const FSSAILicense = () => {
                                 <div className="mb-4 inline-block p-3 bg-gradient-to-r from-blue-100 to-blue-200 rounded-full">
                                     <process.icon className="w-8 h-8" />
                                 </div>
-                                <h3
-                                    className="text-lg font-2 font-semibold text-gray-800 mb-2"
-                               
-                                >
+                                <h3 className="text-lg font-2 font-semibold text-gray-800 mb-2">
                                     {process.title}
                                 </h3>
-                                <p className="text-sm font-3 text-gray-600">{process.description}</p>
+                                <p className="text-sm font-3 text-gray-600">
+                                    {process.description}
+                                </p>
                             </motion.div>
                         ))}
                     </div>
@@ -664,9 +674,7 @@ const FSSAILicense = () => {
                     transition={{ duration: 0.5 }}
                     className="px-7 md:px-14 bg-[#f7f7f7] py-8"
                 >
-                    <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                       
-                    >
+                    <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]">
                         Why Choose Abtik for FSSAI License
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
@@ -681,13 +689,12 @@ const FSSAILicense = () => {
                                 <div className="mb-4 inline-block p-3 bg-gradient-to-r from-blue-100 to-blue-200 rounded-full">
                                     <benefit.icon className="w-8 h-8" />
                                 </div>
-                                <h3
-                                    className="text-lg font-3 font-semibold text-gray-800 mb-2"
-                                   
-                                >
+                                <h3 className="text-lg font-3 font-semibold text-gray-800 mb-2">
                                     {benefit.title}
                                 </h3>
-                                <p className="text-sm font-3 text-gray-600">{benefit.description}</p>
+                                <p className="text-sm font-3 text-gray-600">
+                                    {benefit.description}
+                                </p>
                             </motion.div>
                         ))}
                     </div>
@@ -701,15 +708,10 @@ const FSSAILicense = () => {
                     transition={{ duration: 0.5 }}
                     className="bg-[#f7f7f7] py-8 md:py-16 space-y-6"
                 >
-                    <h1 className="sub-heading font-2 bg-gradient-to-t text-center bg-clip-text from-[#3CA2E2] to-[#052EAA] text-transparent"
-                    
-                    >
+                    <h1 className="sub-heading font-2 bg-gradient-to-t text-center bg-clip-text from-[#3CA2E2] to-[#052EAA] text-transparent">
                         Frequently Asked Questions
                     </h1>
-                    <div
-                        className="px-6 font-3 md:px-24 space-y-4"
-                        
-                    >
+                    <div className="px-6 font-3 md:px-24 space-y-4">
                         {faq.map((data, index) => (
                             <motion.div
                                 key={index}
@@ -720,8 +722,8 @@ const FSSAILicense = () => {
                             >
                                 <h2
                                     className={`p-2.5 px-4 relative cursor-pointer flex items-center justify-between text-base font-medium ${isExpanded.isOpen && isExpanded.index === index
-                                        ? "border-b border-gray-200"
-                                        : ""
+                                            ? "border-b border-gray-200"
+                                            : ""
                                         }`}
                                     onClick={() => toggleIsExpanded(index)}
                                 >
@@ -736,8 +738,8 @@ const FSSAILicense = () => {
                                 </h2>
                                 <div
                                     className={`overflow-hidden transition-all duration-500 ease-in-out ${isExpanded.isOpen && isExpanded.index === index
-                                        ? "max-h-96 opacity-100"
-                                        : "max-h-0 opacity-0"
+                                            ? "max-h-96 opacity-100"
+                                            : "max-h-0 opacity-0"
                                         }`}
                                 >
                                     <p className="p-4 bg-gradient-to-t rounded-b-lg from-[#052EAA] to-[#3CA2E2] text-white">

@@ -13,9 +13,9 @@ import {
     CheckCircle,
     FileText,
     DollarSign,
- 
+
     Users,
-  
+
     Shield,
     TrendingDown,
     BarChart,
@@ -113,7 +113,7 @@ const DroplineOverdraft = () => {
 
     // Abtik Process
     const refProcess = useRef(null);
-    const isInViewProcess = useInView(refProcess, { once: true, amount: 0.1});
+    const isInViewProcess = useInView(refProcess, { once: true, amount: 0.1 });
     const [processCols, setProcessCols] = useState(1);
     useEffect(() => {
         const updateCols = () => {
@@ -198,13 +198,13 @@ const DroplineOverdraft = () => {
     const isInViewContact = useInView(refContact, { once: true, amount: 0.4 });
 
     return (<>
-          <HeadProvider>
-        <Title>{seoData?.droplineodService?.title}</Title>
-        <Meta name="description" content={seoData?.droplineodService?.description} />
-        <Meta name="keyword" content={seoData?.droplineodService?.keyword} />
-        <Meta name="robots" content={seoData?.droplineodService?.robots} />
-      </HeadProvider>
-    
+        <HeadProvider>
+            <Title>{seoData?.droplineodService?.title}</Title>
+            <Meta name="description" content={seoData?.droplineodService?.description} />
+            <Meta name="keyword" content={seoData?.droplineodService?.keyword} />
+            <Meta name="robots" content={seoData?.droplineodService?.robots} />
+        </HeadProvider>
+
         <Mainlayout>
             {/* Hero Section */}
             <section
@@ -234,7 +234,7 @@ const DroplineOverdraft = () => {
                           font-bold leading-tight sm:leading-tight md:leading-tight lg:leading-tight
                           text-white lg:text-inherit tracking-wide
                           main-heading font-1"
-                        
+
                     >
                         Optimize with{" "}
                         <span className="text-[#3CA2E2] font-extrabold block sm:inline">
@@ -248,7 +248,7 @@ const DroplineOverdraft = () => {
                          text-white lg:text-white
                          paragraph !text-white
                          max-w-none sm:max-w-lg md:max-w-xl font-3 lg:max-w-none mx-auto lg:mx-0"
-                           
+
                     >
                         Achieve disciplined debt reduction with structured dropline overdraft facilities.
                         Enjoy reducing credit limits and decreasing interest costs while
@@ -286,11 +286,11 @@ const DroplineOverdraft = () => {
                 >
                     <h3
                         className="text-lg sm:text-xl font-2 font-semibold text-gray-800 mb-4"
-                        
+
                     >
                         Get in Touch
                     </h3>
-                 <div className="space-y-4">
+                    <div className="space-y-4">
                         <a
                             href=""
                             target="_blank"
@@ -306,9 +306,9 @@ const DroplineOverdraft = () => {
                                     Bharat Barot
                                 </p>
                                 <p className="text-xs font-3 text-gray-600">
-                                   Vice President
+                                    Vice President
                                     <br />
-                                   
+
                                 </p>
                             </div>
                         </a>
@@ -348,14 +348,20 @@ const DroplineOverdraft = () => {
                     initial={{ y: 50, opacity: 0 }}
                     animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
                     transition={{ duration: 0.5, delay: getTouchDelay(1) }}
-                    className="flex-grow  rounded-2xl flex items-center justify-center h-full"
+                    className="flex-grow grid md:grid-cols-2 h-full bg-gradient-to-r  from-[#3CA2E2] to-[#052EAA] p-4 rounded-4xl box-border"
                 >
-                    <img
-                    loading="lazy"
-                        src={Image1}
-                        alt="Dropline Overdraft illustration"
-                        className="max-h-80 w-full rounded-lg "
-                    />
+                    <div className="flex flex-col justify-evenly p-4 box-border">
+                        <h2 className="sub-heading text-white font-1">
+                            Dropline Od
+                        </h2>
+                        <p className="font-3 text-[#C3C3C3]">
+                            Empowering Businesses through Comprehensive Solutions From Fund
+                            Management to Legal Empowering.
+                        </p>
+                    </div>
+                    <div className="p-2 bg-white rounded-4xl box-border grid h-full ">
+                        <img src={Image1} className="rounded-3xl w-full h-64 " loading="lazy" />
+                    </div>
                 </motion.div>
             </motion.section>
 
@@ -370,18 +376,18 @@ const DroplineOverdraft = () => {
                 <div className="bg-gradient-to-t from-[#3CA2E2] to-[#052EAA] rounded-4xl p-8 md:p-12 space-y-4 text-center">
                     <h2
                         className="sub-heading font-2 text-white text-left"
-                      
+
                     >
                         What Is Dropline Overdraft?
                     </h2>
                     <p className="paragraph !text-white mx-auto font-3 text-left"
-                     
+
                     >
-                        Dropline Overdraft is a structured credit facility where the overdraft limit reduces 
-                        automatically at predetermined intervals over the facility tenure. Unlike traditional 
-                        overdrafts with fixed limits, dropline overdrafts ensure systematic debt reduction through 
-                        a pre-agreed schedule. This facility combines the flexibility of overdraft access with 
-                        disciplined repayment, making it ideal for businesses requiring working capital support 
+                        Dropline Overdraft is a structured credit facility where the overdraft limit reduces
+                        automatically at predetermined intervals over the facility tenure. Unlike traditional
+                        overdrafts with fixed limits, dropline overdrafts ensure systematic debt reduction through
+                        a pre-agreed schedule. This facility combines the flexibility of overdraft access with
+                        disciplined repayment, making it ideal for businesses requiring working capital support
                         while ensuring gradual debt reduction and lower overall interest costs.
                     </p>
                 </div>
@@ -396,7 +402,7 @@ const DroplineOverdraft = () => {
                 className="px-7 md:px-14 bg-[#f7f7f7] py-8"
             >
                 <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                 
+
                 >
                     Dropline Overdraft Structure Types
                 </h2>
@@ -418,7 +424,7 @@ const DroplineOverdraft = () => {
                             <div className="text-center mb-4">
                                 <h3
                                     className="text-xl font-2 font-bold text-gray-800 mb-3"
-                                   
+
                                 >
                                     Monthly Dropline
                                 </h3>
@@ -462,7 +468,7 @@ const DroplineOverdraft = () => {
                             <div className="text-center mb-4">
                                 <h3
                                     className="text-xl font-bold font-2 text-gray-800 mb-3"
-                                   
+
                                 >
                                     Quarterly Dropline
                                 </h3>
@@ -503,16 +509,16 @@ const DroplineOverdraft = () => {
                 className="px-7 md:px-14 bg-[#f7f7f7] py-8"
             >
                 <h2 className="sub-heading text-center font-2 bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                   
+
                 >
                     Dropline Overdraft Benefits & Features
                 </h2>
                 <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
                     <p className="text-sm font-3 md:text-base text-gray-600 text-center"
-                   
+
                     >
-                        Dropline Overdraft combines the flexibility of overdraft facilities with structured debt 
-                        reduction, ensuring disciplined repayment while maintaining operational cash flow support 
+                        Dropline Overdraft combines the flexibility of overdraft facilities with structured debt
+                        reduction, ensuring disciplined repayment while maintaining operational cash flow support
                         for sustainable business growth.
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -524,7 +530,7 @@ const DroplineOverdraft = () => {
                         >
                             <h3
                                 className="text-lg font-2 font-semibold text-gray-800"
-                                
+
                             >
                                 Key Benefits
                             </h3>
@@ -559,7 +565,7 @@ const DroplineOverdraft = () => {
                         >
                             <h3
                                 className="text-lg font-semibold text-gray-800 font-2"
-                              
+
                             >
                                 Key Features
                             </h3>
@@ -599,7 +605,7 @@ const DroplineOverdraft = () => {
                 className="px-7 md:px-14 bg-[#f7f7f7] py-8"
             >
                 <h2 className="sub-heading text-center font-2 bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                   
+
                 >
                     How Abtik Helps You Get Dropline Overdraft
                 </h2>
@@ -617,7 +623,7 @@ const DroplineOverdraft = () => {
                             </div>
                             <h3
                                 className="text-lg font-2 font-semibold text-gray-800 mb-2"
-                                
+
                             >
                                 {process.title}
                             </h3>
@@ -636,7 +642,7 @@ const DroplineOverdraft = () => {
                 className="px-7 md:px-14 bg-[#f7f7f7] py-8 "
             >
                 <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                    
+
                 >
                     Why Choose Abtik for Dropline Overdraft
                 </h2>
@@ -654,7 +660,7 @@ const DroplineOverdraft = () => {
                             </div>
                             <h3
                                 className="text-lg font-semibold text-gray-800 mb-2 font-2"
-                             
+
                             >
                                 {benefit.title}
                             </h3>
@@ -673,13 +679,13 @@ const DroplineOverdraft = () => {
                 className="bg-[#f7f7f7]  py-8 md:py-16 space-y-6"
             >
                 <h1 className="sub-heading font-2 bg-gradient-to-t text-center  bg-clip-text from-[#3CA2E2] to-[#052EAA] text-transparent"
-                   
+
                 >
                     Frequently Asked Questions
                 </h1>
                 <div
                     className="px-6  md:px-24 space-y-4  font-3"
-                   
+
                 >
                     {faq.map((data, index) => (
                         <motion.div

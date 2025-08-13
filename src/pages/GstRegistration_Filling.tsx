@@ -232,7 +232,7 @@ const GSTRegistrationFiling = () => {
           >
             <h1
               className="text-2xl sm:text-3xl font-1 md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-white lg:text-inherit tracking-wide main-heading"
-             
+
             >
               Get GST Registration & Filing Done{" "}
               <span className="text-[#3CA2E2] font-extrabold block sm:inline">
@@ -245,7 +245,7 @@ const GSTRegistrationFiling = () => {
                          text-white lg:text-white
                          paragraph !text-white
                          max-w-none sm:max-w-lg font-3 md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
-              
+
             >
               Register your business for GST and stay compliant with all latest
               return filing rules and deadlines. Abtik provides complete
@@ -278,7 +278,7 @@ const GSTRegistrationFiling = () => {
           >
             <h3
               className="text-lg sm:text-xl font-2 font-semibold text-gray-800 mb-4"
-       
+
             >
               Get in Touch
             </h3>
@@ -345,14 +345,20 @@ const GSTRegistrationFiling = () => {
             initial={{ y: 50, opacity: 0 }}
             animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
             transition={{ duration: 0.5, delay: getTouchDelay(1) }}
-            className="flex-grow bg-gradient-to-r from-[#3CA2E2] to-[#052EAA] rounded-2xl flex items-center justify-center h-full"
+            className="flex-grow grid md:grid-cols-2 h-full bg-gradient-to-r  from-[#3CA2E2] to-[#052EAA] p-4 rounded-4xl box-border"
           >
-            <img
-              loading="lazy"
-              src={Image1}
-              alt="GST Registration Illustration"
-              className="max-h-80 w-full rounded-lg object-contain p-4"
-            />
+            <div className="flex flex-col justify-evenly p-4 box-border">
+              <h2 className="sub-heading text-white font-1">
+                Gst Registration
+              </h2>
+              <p className="font-3 text-[#C3C3C3]">
+                Empowering Businesses through Comprehensive Solutions From Fund
+                Management to Legal Empowering.
+              </p>
+            </div>
+            <div className="p-2 bg-white rounded-4xl box-border grid h-full ">
+              <img src={Image1} className="rounded-3xl w-full h-64  " loading="lazy" />
+            </div>
           </motion.div>
         </motion.section>
 
@@ -367,7 +373,7 @@ const GSTRegistrationFiling = () => {
           <div className="bg-gradient-to-t from-[#3CA2E2] to-[#052EAA] rounded-4xl p-8 md:p-12 space-y-4 text-center">
             <h2
               className="sub-heading font-2 text-white text-left"
-             
+
             >
               What Is GST Registration & Why Is It Needed?
             </h2>
@@ -391,14 +397,14 @@ const GSTRegistrationFiling = () => {
         >
           <h2
             className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-           
+
           >
             Who Needs GST Registration?
           </h2>
           <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
             <p
               className="text-sm md:text-base font-3 text-gray-600 text-center"
-              
+
             >
               All Indian businesses crossing turnover limits, conducting
               interstate trade, or engaging in e-commerce must register for GST
@@ -414,7 +420,7 @@ const GSTRegistrationFiling = () => {
               >
                 <h3
                   className="text-lg font-2 font-semibold text-gray-800"
-                
+
                 >
                   Who Must Register?
                 </h3>
@@ -458,7 +464,7 @@ const GSTRegistrationFiling = () => {
               >
                 <h3
                   className="text-lg font-2 font-semibold text-gray-800"
-                 
+
                 >
                   Registration Features
                 </h3>
@@ -503,7 +509,7 @@ const GSTRegistrationFiling = () => {
         >
           <h2
             className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-          
+
           >
             How Abtik Gets You GST Registered & Compliant
           </h2>
@@ -521,7 +527,7 @@ const GSTRegistrationFiling = () => {
                 </div>
                 <h3
                   className="text-lg font-2 font-semibold text-gray-800 mb-2"
-              
+
                 >
                   {process.title}
                 </h3>
@@ -541,7 +547,7 @@ const GSTRegistrationFiling = () => {
         >
           <h2
             className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-        
+
           >
             GST Registration & Filing Benefits
           </h2>
@@ -559,7 +565,7 @@ const GSTRegistrationFiling = () => {
                 </div>
                 <h3
                   className="text-lg font-2 font-semibold text-gray-800 mb-2"
-                
+
                 >
                   {benefit.title}
                 </h3>
@@ -579,13 +585,13 @@ const GSTRegistrationFiling = () => {
         >
           <h1
             className="sub-heading font-2 bg-gradient-to-t text-center bg-clip-text from-[#3CA2E2] to-[#052EAA] text-transparent"
-         
+
           >
             Frequently Asked Questions
           </h1>
           <div
             className="px-6  md:px-24 space-y-4 font-3 "
-            
+
           >
             {faq.map((data, index) => (
               <motion.div
@@ -596,11 +602,10 @@ const GSTRegistrationFiling = () => {
                 className="bg-white rounded-lg shadow-sm border border-gray-100 transition-all duration-300"
               >
                 <h2
-                  className={`p-2.5 px-4 relative cursor-pointer flex items-center justify-between  text-base font-medium ${
-                    isExpanded.isOpen && isExpanded.index === index
+                  className={`p-2.5 px-4 relative cursor-pointer flex items-center justify-between  text-base font-medium ${isExpanded.isOpen && isExpanded.index === index
                       ? "border-b border-gray-200"
                       : ""
-                  }`}
+                    }`}
                   onClick={() => toggleIsExpanded(index)}
                 >
                   <span>{data.question}</span>
@@ -613,11 +618,10 @@ const GSTRegistrationFiling = () => {
                   </button>
                 </h2>
                 <div
-                  className={`overflow-hidden transition-all duration-500 ease-in-out ${
-                    isExpanded.isOpen && isExpanded.index === index
+                  className={`overflow-hidden transition-all duration-500 ease-in-out ${isExpanded.isOpen && isExpanded.index === index
                       ? "max-h-96 opacity-100"
                       : "max-h-0 opacity-0"
-                  }`}
+                    }`}
                 >
                   <p className="p-4 bg-gradient-to-t rounded-b-lg from-[#052EAA] to-[#3CA2E2] text-white">
                     {data.answer}

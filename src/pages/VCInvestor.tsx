@@ -232,7 +232,7 @@ const VentureCapital = () => {
                               font-bold leading-tight sm:leading-tight md:leading-tight lg:leading-tight
                               text-white lg:text-inherit tracking-wide
                               main-heading font-1"
-                            
+
                         >
                             Secure{" "}
                             <span className="text-[#3CA2E2] font-extrabold block sm:inline">
@@ -246,7 +246,7 @@ const VentureCapital = () => {
                              text-white lg:text-white
                              paragraph !text-white
                              max-w-none sm:max-w-lg md:max-w-xl font-3 lg:max-w-none mx-auto lg:mx-0"
-                            
+
                         >
                             Accelerate your startup's growth with venture capital support. Access substantial funding from professional investors to scale innovative businesses and achieve market leadership.
                         </p>
@@ -282,76 +282,82 @@ const VentureCapital = () => {
                     >
                         <h3
                             className="text-lg sm:text-xl font-2 font-semibold text-gray-800 mb-4"
-                            
+
                         >
                             Get in Touch
                         </h3>
-                      <div className="space-y-4">
-                        <a
-                            href=""
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
-                            aria-label="Visit us at 123 Business Hub, New Delhi, India"
-                        >
-                            <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
-                                <User className="w-5 h-5 text-white" />
-                            </span>
-                            <div>
-                                <p className="text-base text-gray-700 font-semibold font-3">
-                                    Bharat Barot
-                                </p>
-                                <p className="text-xs text-gray-600 font-3">
-                                   Vice President
-                                    <br />
-                                   
-                                </p>
-                            </div>
-                        </a>
-                        <a
-                            href="tel:+91 7486 952 087"
-                            className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
-                            aria-label="Call us at +91 98765 43210"
-                        >
-                            <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
-                                <Phone className="w-5 h-5 text-white" />
-                            </span>
-                            <div>
-                                <p className="text-base text-gray-700 font-semibold font-3">
-                                    Call Anytime
-                                </p>
-                                <p className="text-xs text-gray-600 font-3"><a href="tel:+917486 952 087">+91 7486 952 087</a></p>
-                            </div>
-                        </a>
-                        <a
-                            href="mailto:bharat@abtikservices.com"
-                            className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
-                            aria-label="Email us at info@abtik.com"
-                        >
-                            <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
-                                <Mail className="w-5 h-5 text-white" />
-                            </span>
-                            <div>
-                                <p className="text-base text-gray-700 font-semibold font-3">
-                                    Write Email
-                                </p>
-                                <p className="text-xs text-gray-600 font-3"><a href="mailto:bharat@abtikservices.com">bharat@abtikservices.com</a></p>
-                            </div>
-                        </a>
-                    </div>
+                        <div className="space-y-4">
+                            <a
+                                href=""
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
+                                aria-label="Visit us at 123 Business Hub, New Delhi, India"
+                            >
+                                <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
+                                    <User className="w-5 h-5 text-white" />
+                                </span>
+                                <div>
+                                    <p className="text-base text-gray-700 font-semibold font-3">
+                                        Bharat Barot
+                                    </p>
+                                    <p className="text-xs text-gray-600 font-3">
+                                        Vice President
+                                        <br />
+
+                                    </p>
+                                </div>
+                            </a>
+                            <a
+                                href="tel:+91 7486 952 087"
+                                className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
+                                aria-label="Call us at +91 98765 43210"
+                            >
+                                <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
+                                    <Phone className="w-5 h-5 text-white" />
+                                </span>
+                                <div>
+                                    <p className="text-base text-gray-700 font-semibold font-3">
+                                        Call Anytime
+                                    </p>
+                                    <p className="text-xs text-gray-600 font-3"><a href="tel:+917486 952 087">+91 7486 952 087</a></p>
+                                </div>
+                            </a>
+                            <a
+                                href="mailto:bharat@abtikservices.com"
+                                className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
+                                aria-label="Email us at info@abtik.com"
+                            >
+                                <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
+                                    <Mail className="w-5 h-5 text-white" />
+                                </span>
+                                <div>
+                                    <p className="text-base text-gray-700 font-semibold font-3">
+                                        Write Email
+                                    </p>
+                                    <p className="text-xs text-gray-600 font-3"><a href="mailto:bharat@abtikservices.com">bharat@abtikservices.com</a></p>
+                                </div>
+                            </a>
+                        </div>
                     </motion.div>
                     <motion.div
                         initial={{ y: 50, opacity: 0 }}
                         animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
                         transition={{ duration: 0.5, delay: getTouchDelay(1) }}
-                        className="flex-grow  rounded-2xl flex items-center justify-center h-full"
+                        className="flex-grow grid md:grid-cols-2 h-full bg-gradient-to-r  from-[#3CA2E2] to-[#052EAA] p-4 rounded-4xl box-border"
                     >
-                        <img
-                            loading="lazy"
-                            src={Image1}
-                            alt="Venture Capital illustration"
-                            className="max-h-80 w-full rounded-lg "
-                        />
+                        <div className="flex flex-col justify-evenly p-4 box-border">
+                            <h2 className="sub-heading text-white font-1">
+                                VC Investor
+                            </h2>
+                            <p className="font-3 text-[#C3C3C3]">
+                                Empowering Businesses through Comprehensive Solutions From Fund
+                                Management to Legal Empowering.
+                            </p>
+                        </div>
+                        <div className="p-2 bg-white rounded-4xl box-border grid h-full ">
+                            <img src={Image1} className="rounded-3xl w-full h-64  " loading="lazy" />
+                        </div>
                     </motion.div>
                 </motion.section>
 
@@ -366,12 +372,12 @@ const VentureCapital = () => {
                     <div className="bg-gradient-to-t from-[#3CA2E2] to-[#052EAA] rounded-4xl p-8 md:p-12 space-y-4 text-center">
                         <h2
                             className="sub-heading font-2 text-white text-left"
-                           
+
                         >
                             What Is Venture Capital?
                         </h2>
                         <p className="paragraph font-3 !text-white mx-auto text-left"
-                            
+
                         >
                             Venture Capital is a type of financing that investors provide to startups and small businesses believed to have long-term growth potential. VC firms manage pooled investments from various sources to fund promising companies in exchange for equity, often providing strategic guidance and resources to help them succeed.
                         </p>
@@ -387,7 +393,7 @@ const VentureCapital = () => {
                     className="px-7 md:px-14 bg-[#f7f7f7] py-8"
                 >
                     <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                       
+
                     >
                         Venture Capital Investment Structure
                     </h2>
@@ -409,7 +415,7 @@ const VentureCapital = () => {
                                 <div className="text-center mb-4">
                                     <h3
                                         className="text-xl font-2 font-bold text-gray-800 mb-3"
-                                       
+
                                     >
                                         Early-Stage Funding
                                     </h3>
@@ -453,7 +459,7 @@ const VentureCapital = () => {
                                 <div className="text-center mb-4">
                                     <h3
                                         className="text-xl font-2 font-bold text-gray-800 mb-3"
-                                        
+
                                     >
                                         Growth-Stage Funding
                                     </h3>
@@ -494,13 +500,13 @@ const VentureCapital = () => {
                     className="px-7 md:px-14 bg-[#f7f7f7] py-8"
                 >
                     <h2 className="sub-heading text-center font-2 bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                       
+
                     >
                         Venture Capital Benefits & Eligibility
                     </h2>
                     <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
                         <p className="text-sm md:text-base text-gray-600 text-center font-3"
-                           
+
                         >
                             Venture Capital provides substantial funding, expert guidance, and valuable networks to high-potential startups, enabling rapid scaling and market dominance in innovative sectors.
                         </p>
@@ -513,7 +519,7 @@ const VentureCapital = () => {
                             >
                                 <h3
                                     className="text-lg font-semibold text-gray-800 font-2"
-                                    
+
                                 >
                                     Key Benefits
                                 </h3>
@@ -548,7 +554,7 @@ const VentureCapital = () => {
                             >
                                 <h3
                                     className="text-lg font-semibold text-gray-800 font-2"
-                                    
+
                                 >
                                     Eligibility Criteria
                                 </h3>
@@ -588,7 +594,7 @@ const VentureCapital = () => {
                     className="px-7 md:px-14 bg-[#f7f7f7] py-8"
                 >
                     <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                        
+
                     >
                         How Abtik Helps You Secure Venture Capital
                     </h2>
@@ -606,7 +612,7 @@ const VentureCapital = () => {
                                 </div>
                                 <h3
                                     className="text-lg font-2 font-semibold text-gray-800 mb-2"
-                                   
+
                                 >
                                     {process.title}
                                 </h3>
@@ -625,7 +631,7 @@ const VentureCapital = () => {
                     className="px-7 md:px-14 bg-[#f7f7f7] py-8 "
                 >
                     <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                        
+
                     >
                         Why Choose Abtik for Venture Capital
                     </h2>
@@ -643,7 +649,7 @@ const VentureCapital = () => {
                                 </div>
                                 <h3
                                     className="text-lg font-2 font-semibold text-gray-800 mb-2"
-                                  
+
                                 >
                                     {benefit.title}
                                 </h3>
@@ -662,13 +668,13 @@ const VentureCapital = () => {
                     className="bg-[#f7f7f7]  py-8 md:py-16 space-y-6"
                 >
                     <h1 className="sub-heading font-2 bg-gradient-to-t text-center  bg-clip-text from-[#3CA2E2] to-[#052EAA] text-transparent"
-                     
+
                     >
                         Frequently Asked Questions
                     </h1>
                     <div
                         className="px-6  md:px-24 space-y-4  font-3"
-                        
+
                     >
                         {faq.map((data, index) => (
                             <motion.div

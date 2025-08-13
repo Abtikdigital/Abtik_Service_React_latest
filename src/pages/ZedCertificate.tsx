@@ -231,7 +231,7 @@ const ZEDCertificate = () => {
                     >
                         <h1
                             className="text-2xl font-1 sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-white lg:text-inherit tracking-wide main-heading"
-                        
+
                         >
                             Upgrade Your MSME with{" "}
                             <span className="text-[#3CA2E2] font-extrabold block sm:inline">
@@ -244,7 +244,7 @@ const ZEDCertificate = () => {
                          text-white lg:text-white
                          paragraph !text-white
                          max-w-none font-3 sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
-                            
+
                         >
                             Achieve global quality, reduce environmental impact, and unlock
                             subsidies and government tenders—Abtik helps you earn your ZED
@@ -277,7 +277,7 @@ const ZEDCertificate = () => {
                     >
                         <h3
                             className="text-lg font-2 sm:text-xl font-semibold text-gray-800 mb-4"
-                            
+
                         >
                             Get in Touch
                         </h3>
@@ -339,14 +339,20 @@ const ZEDCertificate = () => {
                         initial={{ y: 50, opacity: 0 }}
                         animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
                         transition={{ duration: 0.5, delay: getTouchDelay(1) }}
-                        className="flex-grow  rounded-2xl flex items-center justify-center h-full"
+                        className="flex-grow grid md:grid-cols-2 h-full bg-gradient-to-r  from-[#3CA2E2] to-[#052EAA] p-4 rounded-4xl box-border"
                     >
-                        <img
-                            loading="lazy"
-                            src={Image1}
-                            alt="ZED Certificate Illustration"
-                            className="max-h-80 w-full rounded-lg "
-                        />
+                        <div className="flex flex-col justify-evenly p-4 box-border">
+                            <h2 className="sub-heading text-white font-1">
+                                ZED Certificate
+                            </h2>
+                            <p className="font-3 text-[#C3C3C3]">
+                                Empowering Businesses through Comprehensive Solutions From Fund
+                                Management to Legal Empowering.
+                            </p>
+                        </div>
+                        <div className="p-2 bg-white rounded-4xl box-border grid h-full ">
+                            <img src={Image1} className="rounded-3xl w-full h-64  " loading="lazy" />
+                        </div>
                     </motion.div>
                 </motion.section>
 
@@ -361,13 +367,13 @@ const ZEDCertificate = () => {
                     <div className="bg-gradient-to-t from-[#3CA2E2] to-[#052EAA] rounded-4xl p-8 md:p-12 space-y-4 text-center">
                         <h2
                             className="sub-heading font-2 text-white text-left"
-                       
+
                         >
                             What Is ZED Certificate?
                         </h2>
                         <p
                             className="paragraph font-3 !text-white mx-auto text-left"
-                           
+
                         >
                             The ZED (Zero Defect Zero Effect) Certification recognizes
                             manufacturing MSMEs that achieve best-in-class quality and
@@ -388,14 +394,14 @@ const ZEDCertificate = () => {
                 >
                     <h2
                         className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                     
+
                     >
                         Who Is Eligible for ZED?
                     </h2>
                     <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
                         <p
                             className="text-sm md:text-base font-3 text-gray-600 text-center"
-                          
+
                         >
                             ZED covers all Indian manufacturing MSMEs aiming for global
                             quality and green compliance. Services, trading and large
@@ -410,7 +416,7 @@ const ZEDCertificate = () => {
                             >
                                 <h3
                                     className="text-lg font-semibold font-2 text-gray-800"
-                             
+
                                 >
                                     Who Can Apply?
                                 </h3>
@@ -443,7 +449,7 @@ const ZEDCertificate = () => {
                             >
                                 <h3
                                     className="text-lg font-2 font-semibold text-gray-800"
-                                    
+
                                 >
                                     ZED Certificate Features
                                 </h3>
@@ -490,7 +496,7 @@ const ZEDCertificate = () => {
                 >
                     <h2
                         className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                        
+
                     >
                         How Abtik Gets You ZED Certified
                     </h2>
@@ -508,7 +514,7 @@ const ZEDCertificate = () => {
                                 </div>
                                 <h3
                                     className="text-lg font-semibold text-gray-800 mb-2 font-2"
-                                
+
                                 >
                                     {process.title}
                                 </h3>
@@ -528,7 +534,7 @@ const ZEDCertificate = () => {
                 >
                     <h2
                         className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                       
+
                     >
                         ZED Certificate Benefits
                     </h2>
@@ -546,7 +552,7 @@ const ZEDCertificate = () => {
                                 </div>
                                 <h3
                                     className="text-lg font-3 font-semibold text-gray-800 mb-2"
-                                  
+
                                 >
                                     {benefit.title}
                                 </h3>
@@ -566,13 +572,13 @@ const ZEDCertificate = () => {
                 >
                     <h1
                         className="sub-heading font-2 bg-gradient-to-t text-center bg-clip-text from-[#3CA2E2] to-[#052EAA] text-transparent"
-                       
+
                     >
                         Frequently Asked Questions
                     </h1>
                     <div
                         className="px-6  md:px-24 space-y-4 font-3 "
-                        
+
                     >
                         {faq.map((data, index) => (
                             <motion.div

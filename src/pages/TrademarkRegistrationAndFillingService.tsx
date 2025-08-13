@@ -234,7 +234,7 @@ const TrademarkFiling = () => {
                           font-bold leading-tight sm:leading-tight md:leading-tight lg:leading-tight
                           text-white lg:text-inherit tracking-wide
                           main-heading font-1"
-                        
+
                     >
                         Protect Your Brand with{" "}
                         <span className="text-[#3CA2E2] font-extrabold block sm:inline">
@@ -249,7 +249,7 @@ const TrademarkFiling = () => {
                          paragraph !text-white
                          max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0 font-3"
 
-                        
+
                     >
                         Secure your brand identity with comprehensive trademark filing and registration services.
                         Get nationwide legal protection, exclusive rights, and prevent unauthorized use of your
@@ -287,7 +287,7 @@ const TrademarkFiling = () => {
                 >
                     <h3
                         className="text-lg font-2 sm:text-xl font-semibold text-gray-800 mb-4"
-                       
+
                     >
                         Get in Touch
                     </h3>
@@ -349,14 +349,20 @@ const TrademarkFiling = () => {
                     initial={{ y: 50, opacity: 0 }}
                     animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
                     transition={{ duration: 0.5, delay: getTouchDelay(1) }}
-                    className="flex-grow  rounded-2xl flex items-center justify-center h-full"
+                    className="flex-grow grid md:grid-cols-2 h-full bg-gradient-to-r  from-[#3CA2E2] to-[#052EAA] p-4 rounded-4xl box-border"
                 >
-                    <img
-                        loading="lazy"
-                        src={Image1}
-                        alt="Trademark registration illustration"
-                        className="max-h-80 w-full rounded-lg "
-                    />
+                    <div className="flex flex-col justify-evenly p-4 box-border">
+                        <h2 className="sub-heading text-white font-1">
+                            Trade Mark Registration & Filling
+                        </h2>
+                        <p className="font-3 text-[#C3C3C3]">
+                            Empowering Businesses through Comprehensive Solutions From Fund
+                            Management to Legal Empowering.
+                        </p>
+                    </div>
+                    <div className="p-2 bg-white rounded-4xl box-border grid h-full ">
+                        <img src={Image1} className="rounded-3xl w-full h-64  " loading="lazy" />
+                    </div>
                 </motion.div>
             </motion.section>
 
@@ -371,12 +377,12 @@ const TrademarkFiling = () => {
                 <div className="bg-gradient-to-t from-[#3CA2E2] to-[#052EAA] rounded-4xl p-8 md:p-12 space-y-4 text-center">
                     <h2
                         className="sub-heading font-2 text-white text-left"
-                       
+
                     >
                         What Is Trademark Registration?
                     </h2>
                     <p className="paragraph font-3 !text-white mx-auto text-left"
-                      
+
                     >
                         Trademark registration is the legal process of securing exclusive rights to use a distinctive
                         mark, symbol, word, phrase, logo, or design that identifies and distinguishes your goods or
@@ -397,7 +403,7 @@ const TrademarkFiling = () => {
                 className="px-7 md:px-14 bg-[#f7f7f7] py-8"
             >
                 <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                   
+
                 >
                     Types of Trademarks
                 </h2>
@@ -418,7 +424,7 @@ const TrademarkFiling = () => {
                             <div className="text-center mb-4">
                                 <h3
                                     className="text-xl font-2 font-bold text-gray-800 mb-3"
-                                    
+
                                 >
                                     Word Marks
                                 </h3>
@@ -462,7 +468,7 @@ const TrademarkFiling = () => {
                             <div className="text-center mb-4">
                                 <h3
                                     className="text-xl font-2 font-bold text-gray-800 mb-3"
-                                   
+
                                 >
                                     Device Marks
                                 </h3>
@@ -506,7 +512,7 @@ const TrademarkFiling = () => {
                             <div className="text-center mb-4">
                                 <h3
                                     className="text-xl font-bold font-2 text-gray-800 mb-3"
-                                    
+
                                 >
                                     Composite Marks
                                 </h3>
@@ -547,7 +553,7 @@ const TrademarkFiling = () => {
                 className="px-7 md:px-14 bg-[#f7f7f7] py-8"
             >
                 <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                   
+
                 >
                     Trademark Benefits & Requirements
                 </h2>
@@ -568,7 +574,7 @@ const TrademarkFiling = () => {
                         >
                             <h3
                                 className="text-lg font-semibold font-2 text-gray-800"
-                             
+
                             >
                                 Key Benefits
                             </h3>
@@ -603,7 +609,7 @@ const TrademarkFiling = () => {
                         >
                             <h3
                                 className="text-lg font-semibold font-2 text-gray-800"
-                                
+
                             >
                                 Registration Requirements
                             </h3>
@@ -643,7 +649,7 @@ const TrademarkFiling = () => {
                 className="px-7 md:px-14 bg-[#f7f7f7] py-8"
             >
                 <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                   
+
                 >
                     How Abtik Helps with Trademark Registration
                 </h2>
@@ -661,7 +667,7 @@ const TrademarkFiling = () => {
                             </div>
                             <h3
                                 className="text-lg font-2 font-semibold text-gray-800 mb-2"
-                              
+
                             >
                                 {process.title}
                             </h3>
@@ -680,7 +686,7 @@ const TrademarkFiling = () => {
                 className="px-7 md:px-14 bg-[#f7f7f7] py-8 "
             >
                 <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                  
+
                 >
                     Why Choose Abtik for Trademark Registration
                 </h2>
@@ -698,7 +704,7 @@ const TrademarkFiling = () => {
                             </div>
                             <h3
                                 className="text-lg font-2 font-semibold text-gray-800 mb-2"
-                              
+
                             >
                                 {benefit.title}
                             </h3>
@@ -717,13 +723,13 @@ const TrademarkFiling = () => {
                 className="bg-[#f7f7f7]  py-8 md:py-16 space-y-6"
             >
                 <h1 className="sub-heading font-2 bg-gradient-to-t text-center  bg-clip-text from-[#3CA2E2] to-[#052EAA] text-transparent"
-                   
+
                 >
                     Frequently Asked Questions
                 </h1>
                 <div
                     className="px-6  md:px-24 space-y-4 font-3"
-                    
+
                 >
                     {faq.map((data, index) => (
                         <motion.div

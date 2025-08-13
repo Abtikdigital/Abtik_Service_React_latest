@@ -11,9 +11,9 @@ import {
     ArrowRight,
     CheckCircle,
     FileText,
-   
+
     Users,
-   
+
     Globe,
     Award,
     Zap,
@@ -198,13 +198,13 @@ const Grants = () => {
     const isInViewContact = useInView(refContact, { once: true, amount: 0.4 });
 
     return (<>
-          <HeadProvider>
-        <Title>{seoData?.grantsService?.title}</Title>
-        <Meta name="description" content={seoData?.grantsService?.description} />
-        <Meta name="keyword" content={seoData?.grantsService?.keyword} />
-        <Meta name="robots" content={seoData?.grantsService?.robots} />
-      </HeadProvider>
-    
+        <HeadProvider>
+            <Title>{seoData?.grantsService?.title}</Title>
+            <Meta name="description" content={seoData?.grantsService?.description} />
+            <Meta name="keyword" content={seoData?.grantsService?.keyword} />
+            <Meta name="robots" content={seoData?.grantsService?.robots} />
+        </HeadProvider>
+
         <Mainlayout>
             {/* Hero Section */}
             <section
@@ -234,7 +234,7 @@ const Grants = () => {
                           font-bold leading-tight sm:leading-tight md:leading-tight lg:leading-tight
                           text-white lg:text-inherit tracking-wide
                           main-heading font-1"
- 
+
                     >
                         Secure{" "}
                         <span className="text-[#3CA2E2] font-extrabold block sm:inline">
@@ -249,9 +249,9 @@ const Grants = () => {
                          paragraph !text-white
                          max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0 font-3"
 
-                          
+
                     >
-                        Access a wide range of government grants and funding schemes designed to 
+                        Access a wide range of government grants and funding schemes designed to
                         support business growth, innovation, research, and development across various sectors.
                     </p>
                     <div className="pt-2 sm:pt-4">
@@ -286,11 +286,11 @@ const Grants = () => {
                 >
                     <h3
                         className="text-lg sm:text-xl font-semibold text-gray-800 mb-4 font-2"
-                       
+
                     >
                         Get in Touch
                     </h3>
-                   <div className="space-y-4">
+                    <div className="space-y-4">
                         <a
                             href=""
                             target="_blank"
@@ -306,9 +306,9 @@ const Grants = () => {
                                     Bharat Barot
                                 </p>
                                 <p className="text-xs text-gray-600 font-3">
-                                   Vice President
+                                    Vice President
                                     <br />
-                                   
+
                                 </p>
                             </div>
                         </a>
@@ -344,19 +344,25 @@ const Grants = () => {
                         </a>
                     </div>
                 </motion.div>
-                <motion.div
-                    initial={{ y: 50, opacity: 0 }}
-                    animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
-                    transition={{ duration: 0.5, delay: getTouchDelay(1) }}
-                    className="flex-grow  rounded-2xl flex items-center justify-center h-full"
-                >
-                    <img
-                    loading="lazy"
-                        src={Image1}
-                        alt="Government grants illustration"
-                        className="max-h-80 w-full rounded-lg "
-                    />
-                </motion.div>
+                 <motion.div
+                        initial={{ y: 50, opacity: 0 }}
+                        animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
+                        transition={{ duration: 0.5, delay: getTouchDelay(1) }}
+                        className="flex-grow grid md:grid-cols-2 h-full bg-gradient-to-r  from-[#3CA2E2] to-[#052EAA] p-4 rounded-4xl box-border"
+                    >
+                        <div className="flex flex-col justify-evenly p-4 box-border">
+                            <h2 className="sub-heading text-white font-1">
+                                Grants
+                            </h2>
+                            <p className="font-3 text-[#C3C3C3]">
+                                Empowering Businesses through Comprehensive Solutions From Fund
+                                Management to Legal Empowering.
+                            </p>
+                        </div>
+                        <div className="p-2 bg-white rounded-4xl box-border grid h-full ">
+                            <img src={Image1} className="rounded-3xl w-full h-64  " loading="lazy" />
+                        </div>
+                    </motion.div>
             </motion.section>
 
             {/* What are Government Grants */}
@@ -370,17 +376,17 @@ const Grants = () => {
                 <div className="bg-gradient-to-t from-[#3CA2E2] to-[#052EAA] rounded-4xl p-8 md:p-12 space-y-4 text-center">
                     <h2
                         className="sub-heading text-white text-left font-2"
-                        
+
                     >
                         What Are Government Grants?
                     </h2>
                     <p className="paragraph !text-white mx-auto text-left font-3"
-                      
+
                     >
-                        Government grants are financial assistance programs provided by central and state 
-                        governments to support businesses, startups, research institutions, and individuals 
-                        in achieving specific objectives. These non-repayable funds are designed to promote 
-                        innovation, economic growth, social development, and technological advancement across 
+                        Government grants are financial assistance programs provided by central and state
+                        governments to support businesses, startups, research institutions, and individuals
+                        in achieving specific objectives. These non-repayable funds are designed to promote
+                        innovation, economic growth, social development, and technological advancement across
                         various sectors including agriculture, manufacturing, IT, healthcare, and renewable energy.
                     </p>
                 </div>
@@ -395,7 +401,7 @@ const Grants = () => {
                 className="px-7 md:px-14 bg-[#f7f7f7] py-8"
             >
                 <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                  
+
                 >
                     Types of Government Grants
                 </h2>
@@ -416,7 +422,7 @@ const Grants = () => {
                             <div className="text-center mb-4">
                                 <h3
                                     className="text-xl font-2 font-bold text-gray-800 mb-3"
-                                    
+
                                 >
                                     Startup & Innovation Grants
                                 </h3>
@@ -460,7 +466,7 @@ const Grants = () => {
                             <div className="text-center mb-4">
                                 <h3
                                     className="text-xl font-2 font-bold text-gray-800 mb-3"
-                                 
+
                                 >
                                     Research & Development
                                 </h3>
@@ -504,7 +510,7 @@ const Grants = () => {
                             <div className="text-center mb-4">
                                 <h3
                                     className="text-xl font-2 font-bold text-gray-800 mb-3"
-                                   
+
                                 >
                                     Sector Specific Grants
                                 </h3>
@@ -545,16 +551,16 @@ const Grants = () => {
                 className="px-7 md:px-14 bg-[#f7f7f7] py-8"
             >
                 <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                  
+
                 >
                     Government Grant Benefits & Features
                 </h2>
                 <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
                     <p className="text-sm md:text-base font-3 text-gray-600 text-center"
-                     
+
                     >
-                        Government grants provide non-repayable financial assistance to eligible 
-                        businesses and organizations, enabling growth, innovation, and social impact 
+                        Government grants provide non-repayable financial assistance to eligible
+                        businesses and organizations, enabling growth, innovation, and social impact
                         without the burden of debt repayment.
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -566,7 +572,7 @@ const Grants = () => {
                         >
                             <h3
                                 className="text-lg font-semibold text-gray-800 font-2"
-                                
+
                             >
                                 Key Advantages
                             </h3>
@@ -601,7 +607,7 @@ const Grants = () => {
                         >
                             <h3
                                 className="text-lg font-semibold text-gray-800 font-2"
-                         
+
                             >
                                 Application Process
                             </h3>
@@ -641,7 +647,7 @@ const Grants = () => {
                 className="px-7 md:px-14 bg-[#f7f7f7] py-8"
             >
                 <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                    
+
                 >
                     How Abtik Helps You Secure Grants
                 </h2>
@@ -659,7 +665,7 @@ const Grants = () => {
                             </div>
                             <h3
                                 className="text-lg font-semibold text-gray-800 mb-2 font-2"
-                             
+
                             >
                                 {process.title}
                             </h3>
@@ -678,7 +684,7 @@ const Grants = () => {
                 className="px-7 md:px-14 bg-[#f7f7f7] py-8 "
             >
                 <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                    
+
                 >
                     Why Choose Abtik for Grant Applications
                 </h2>
@@ -696,7 +702,7 @@ const Grants = () => {
                             </div>
                             <h3
                                 className="text-lg font-2 font-semibold text-gray-800 mb-2"
-                               
+
                             >
                                 {benefit.title}
                             </h3>
@@ -715,13 +721,13 @@ const Grants = () => {
                 className="bg-[#f7f7f7]  py-8 md:py-16 space-y-6"
             >
                 <h1 className="sub-heading font-2 bg-gradient-to-t text-center  bg-clip-text from-[#3CA2E2] to-[#052EAA] text-transparent"
-                   
+
                 >
                     Frequently Asked Questions
                 </h1>
                 <div
                     className="px-6  md:px-24 space-y-4 font-3"
-                    
+
                 >
                     {faq.map((data, index) => (
                         <motion.div

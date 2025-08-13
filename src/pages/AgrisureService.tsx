@@ -41,17 +41,17 @@ const AgriSURE = () => {
         {
             question: "1. What is AgriSURE scheme?",
             answer:
-                "AgriSURE (Agri Fund for Start-ups & Rural Enterprises) is a ₹750 crore Category-II Alternative Investment Fund launched by the Government of India and NABARD to support innovative agritech startups and rural enterprises in agriculture and allied sectors."[2][21],
+                "AgriSURE (Agri Fund for Start-ups & Rural Enterprises) is a ₹750 crore Category-II Alternative Investment Fund launched by the Government of India and NABARD to support innovative agritech startups and rural enterprises in agriculture and allied sectors.",
         },
         {
             question: "2. What is the investment range under AgriSURE?",
             answer:
-                "AgriSURE provides investments up to ₹25 crore in a single startup. The fund has two schemes: AgriSURE-FoF (₹450 crore) for investing in other AIFs and AgriSURE-Direct (₹300 crore) for direct equity investments in early-stage startups."[24],
+                "AgriSURE provides investments up to ₹25 crore in a single startup. The fund has two schemes: AgriSURE-FoF (₹450 crore) for investing in other AIFs and AgriSURE-Direct (₹300 crore) for direct equity investments in early-stage startups.",
         },
         {
             question: "3. Who is eligible for AgriSURE funding?",
             answer:
-                "Early-stage startups recognized by DPIIT and incorporated in India, working in agriculture & rural development sectors like Agritech, Food Processing, Animal husbandry, Fisheries, Supply Chain Management, Farm Mechanization, Biotechnology, and Climate change are eligible."[22],
+                "Early-stage startups recognized by DPIIT and incorporated in India, working in agriculture & rural development sectors like Agritech, Food Processing, Animal husbandry, Fisheries, Supply Chain Management, Farm Mechanization, Biotechnology, and Climate change are eligible.",
         },
         {
             question: "4. What documents are required for AgriSURE application?",
@@ -61,12 +61,12 @@ const AgriSURE = () => {
         {
             question: "5. How many startups will AgriSURE support?",
             answer:
-                "AgriSURE is structured to support approximately 85 startups with investment sizes of up to ₹25 crore each by the end of its ten-year operational period, which can be extended by two or more years."[24],
+                "AgriSURE is structured to support approximately 85 startups with investment sizes of up to ₹25 crore each by the end of its ten-year operational period, which can be extended by two or more years.",
         },
         {
             question: "6. What is the fund structure of AgriSURE?",
             answer:
-                "AgriSURE has a total corpus of ₹750 crore with ₹250 crore each contributed by the Government of India and NABARD, and ₹250 crore mobilized from banks, insurance companies, and private investors. It's managed by NABVENTURES."[21][5],
+                "AgriSURE has a total corpus of ₹750 crore with ₹250 crore each contributed by the Government of India and NABARD, and ₹250 crore mobilized from banks, insurance companies, and private investors. It's managed by NABVENTURES.",
         },
     ];
 
@@ -233,7 +233,7 @@ const AgriSURE = () => {
                           font-bold leading-tight sm:leading-tight md:leading-tight lg:leading-tight
                           text-white lg:text-inherit tracking-wide
                           main-heading font-1"
-                      
+
                     >
                         Secure{" "}
                         <span className="text-[#3CA2E2] font-extrabold block sm:inline">
@@ -247,7 +247,7 @@ const AgriSURE = () => {
                          text-white lg:text-white
                          paragraph !text-white
                          max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0 font-2"
-                       
+
                     >
                         Transform agriculture with AgriSURE funding support. Access up to ₹25 crore
                         investment from the ₹750 crore government fund for innovative agritech
@@ -285,7 +285,7 @@ const AgriSURE = () => {
                 >
                     <h3
                         className="text-lg font-2 sm:text-xl font-semibold text-gray-800 mb-4"
-                 
+
                     >
                         Get in Touch
                     </h3>
@@ -344,19 +344,25 @@ const AgriSURE = () => {
                         </a>
                     </div>
                 </motion.div>
-                <motion.div
-                    initial={{ y: 50, opacity: 0 }}
-                    animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
-                    transition={{ duration: 0.5, delay: getTouchDelay(1) }}
-                    className="flex-grow  rounded-2xl flex items-center justify-center h-full"
-                >
-                    <img
-                        loading="lazy"
-                        src={Image1}
-                        alt="AgriSURE illustration"
-                        className="max-h-80 w-full rounded-lg "
-                    />
-                </motion.div>
+               <motion.div
+            initial={{ y: 50, opacity: 0 }}
+            animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
+            transition={{ duration: 0.5, delay: getTouchDelay(1) }}
+            className="flex-grow grid md:grid-cols-2 h-full bg-gradient-to-r  from-[#3CA2E2] to-[#052EAA] p-4 rounded-4xl box-border"
+          >
+            <div className="flex flex-col justify-evenly p-4 box-border">
+              <h2 className="sub-heading text-white font-1">
+                Agrisure
+              </h2>
+              <p className="font-3 text-[#C3C3C3]">
+                Empowering Businesses through Comprehensive Solutions From Fund
+                Management to Legal Empowering.
+              </p>
+            </div>
+            <div className="p-2 bg-white rounded-4xl box-border grid h-full ">
+              <img src={Image1} className="rounded-3xl w-full h-64  " loading="lazy" />
+            </div>
+          </motion.div>
             </motion.section>
 
             {/* What is AgriSURE */}
@@ -370,19 +376,19 @@ const AgriSURE = () => {
                 <div className="bg-gradient-to-t from-[#3CA2E2] to-[#052EAA] rounded-4xl p-8 md:p-12 space-y-4 text-center">
                     <h2
                         className="sub-heading font-2 text-white text-left"
-                      
+
                     >
                         What Is AgriSURE Fund?
                     </h2>
                     <p className="paragraph font-3 !text-white mx-auto text-left"
-                       
+
                     >
                         AgriSURE (Agri Fund for Start-ups & Rural Enterprises) is a pioneering ₹750 crore
                         Category-II Alternative Investment Fund launched by the Government of India and NABARD
                         to revolutionize the agricultural landscape. This innovative fund focuses on supporting
                         technology-driven, high-risk, high-impact ventures in agriculture and allied sectors,
                         providing both equity and debt financing to fuel growth and foster innovation in the
-                        agricultural and rural startup ecosystem.[2][5]
+                        agricultural and rural startup ecosystem.
                     </p>
                 </div>
             </motion.section>
@@ -396,7 +402,7 @@ const AgriSURE = () => {
                 className="px-7 md:px-14 bg-[#f7f7f7] py-8"
             >
                 <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                    
+
                 >
                     AgriSURE Investment Structure
                 </h2>
@@ -418,7 +424,7 @@ const AgriSURE = () => {
                             <div className="text-center mb-4">
                                 <h3
                                     className="text-xl font-2 font-bold text-gray-800 mb-3"
-                                 
+
                                 >
                                     AgriSURE-FoF Scheme
                                 </h3>
@@ -462,7 +468,7 @@ const AgriSURE = () => {
                             <div className="text-center mb-4">
                                 <h3
                                     className="text-xl font-2 font-bold text-gray-800 mb-3"
-                                   
+
                                 >
                                     AgriSURE-Direct Scheme
                                 </h3>
@@ -503,13 +509,13 @@ const AgriSURE = () => {
                 className="px-7 md:px-14 bg-[#f7f7f7] py-8"
             >
                 <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                   
+
                 >
                     AgriSURE Benefits & Eligibility
                 </h2>
                 <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
                     <p className="text-sm font-3 md:text-base text-gray-600 text-center"
-                        
+
                     >
                         AgriSURE provides comprehensive support to agricultural startups and rural enterprises
                         through substantial funding, strategic guidance, and access to agricultural value chains
@@ -524,7 +530,7 @@ const AgriSURE = () => {
                         >
                             <h3
                                 className="text-lg font-2 font-semibold text-gray-800"
-                               
+
                             >
                                 Key Benefits
                             </h3>
@@ -559,7 +565,7 @@ const AgriSURE = () => {
                         >
                             <h3
                                 className="text-lg font-2 font-semibold text-gray-800"
-                               
+
                             >
                                 Eligibility Criteria
                             </h3>
@@ -599,7 +605,7 @@ const AgriSURE = () => {
                 className="px-7 md:px-14 bg-[#f7f7f7] py-8"
             >
                 <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                 
+
                 >
                     How Abtik Helps You Secure AgriSURE Funding
                 </h2>
@@ -617,7 +623,7 @@ const AgriSURE = () => {
                             </div>
                             <h3
                                 className="text-lg font-semibold font-2 text-gray-800 mb-2"
-                                
+
                             >
                                 {process.title}
                             </h3>
@@ -636,7 +642,7 @@ const AgriSURE = () => {
                 className="px-7 md:px-14 bg-[#f7f7f7] py-8 "
             >
                 <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                 
+
                 >
                     Why Choose Abtik for AgriSURE
                 </h2>
@@ -654,7 +660,7 @@ const AgriSURE = () => {
                             </div>
                             <h3
                                 className="text-lg font-2 font-semibold text-gray-800 mb-2"
-                           
+
                             >
                                 {benefit.title}
                             </h3>
@@ -673,13 +679,13 @@ const AgriSURE = () => {
                 className="bg-[#f7f7f7]  py-8 md:py-16 space-y-6"
             >
                 <h1 className="sub-heading font-2 bg-gradient-to-t text-center  bg-clip-text from-[#3CA2E2] to-[#052EAA] text-transparent"
-                  
+
                 >
                     Frequently Asked Questions
                 </h1>
                 <div
                     className="px-6  md:px-24 space-y-4 font-3"
-                   
+
                 >
                     {faq.map((data, index) => (
                         <motion.div
