@@ -126,7 +126,7 @@ const BlogSection = () => {
       {canLoadMore && (
         <div className="flex justify-center mt-6">
           <button
-            className="custom-btn"
+            className="custom-btn font-2"
             onClick={() => setRows(r => r + 1)}
           >
             Load More

@@ -1,7 +1,7 @@
 import Mainlayout from "../section/Mainlayout";
 import BgImage from "../assets/Hero/bgImg.svg";
 import Contact from "../section/Contact";
-import Image1 from "../assets/StandupIndia/Image1.jpg";
+import Image1 from "../assets/StandupIndia/Image2.jpeg";
 import {
     Mail,
     User,

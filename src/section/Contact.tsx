@@ -3,11 +3,14 @@ import { useForm } from "react-hook-form";
 import axios from "axios";
 import Swal from "sweetalert2";
 import { memo, useState } from "react";
+import { addContact } from "../api/contactApis";
 // import Map from "../section/Map";
 interface ContactFormData {
   name: string;
   email: string;
   message: string;
+  number: number;
+  companyName: string;
 }
 
 const Contact = (props: any) => {
@@ -17,6 +20,7 @@ const Contact = (props: any) => {
     register,
     handleSubmit,
     formState: { errors },
+    reset
     // reset,
   } = useForm<ContactFormData>();
 
@@ -51,21 +55,52 @@ const Contact = (props: any) => {
   //   colors: ["#3CA2E2", "#052EAA", "#2D87C4"],
   // };
 
+  // For Vercel
+  // const onSubmit = async (data: ContactFormData) => {
+  //   setIsSubmitting(true);
+  //   try {
+  //     let res = await axios.post("/api/contactApi.js", data);
+  //     if (res?.status == 201) {
+  //       Swal.fire({
+  //         icon: "success",
+  //         title: "Thank You For Contacting ",
+  //         text: res?.data?.message || "Your response has been submitted",
+  //       });
+  //     } else {
+  //       Swal.fire({
+  //         icon: "error",
+  //         title: "Error",
+  //         text: "Error while inserting data",
+  //       });
+  //     }
+  //   } catch (error: any) {
+  //     Swal.fire({
+  //       icon: "error",
+  //       title: "Error",
+  //       text: error?.response?.data?.message || "Error while inserting",
+  //     });
+  //   } finally {
+  //   }
+  // };
+
+  // For Nodejs Backend
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
     try {
-      let res = await axios.post("/api/contactApi.js", data);
+      let res = await addContact(data);
       if (res?.status == 201) {
         Swal.fire({
           icon: "success",
           title: "Thank You For Contacting ",
           text: res?.data?.message || "Your response has been submitted",
+          scrollbarPadding:false
         });
       } else {
         Swal.fire({
           icon: "error",
           title: "Error",
           text: "Error while inserting data",
+          scrollbarPadding:false
         });
       }
     } catch (error: any) {
@@ -73,22 +108,25 @@ const Contact = (props: any) => {
         icon: "error",
         title: "Error",
         text: error?.response?.data?.message || "Error while inserting",
+        scrollbarPadding:false
       });
     } finally {
+      setIsSubmitting(false);
+      reset()
     }
   };
 
   // Input validation rules
   const validationRules = {
     name: {
-      required: "Name is required",
+      required: "* Name is required",
       minLength: {
         value: 2,
-        message: "Name must be at least 2 characters long",
+        message: "* Name must be at least 2 characters long",
       },
       maxLength: {
         value: 50,
-        message: "Name cannot exceed 50 characters",
+        message: "* Name cannot exceed 50 characters",
       },
       pattern: {
         value: /^[a-zA-Z\s]+$/,
@@ -96,22 +134,21 @@ const Contact = (props: any) => {
       },
     },
     email: {
-      required: "Email is required",
+      required: "* Email is required",
       pattern: {
         value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
         message: "Please enter a valid email address",
       },
     },
-    message: {
-      required: "Message is required",
-      minLength: {
-        value: 10,
-        message: "Message must be at least 10 characters long",
+    number: {
+      required: "* Number is required",
+      pattern: {
+        value: /^[6-9]\d{9}$/, // starts with 6-9 and has 10 digits
+        message: "Enter a valid 10-digit mobile number",
       },
-      maxLength: {
-        value: 500,
-        message: "Message cannot exceed 500 characters",
-      },
+    },
+    companyName: {
+      required: "* Company name is required",
     },
   };
 
@@ -125,13 +162,20 @@ const Contact = (props: any) => {
 
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="flex flex-col gap-4 "
+            className="flex flex-col gap-4 font-3 "
           >
             {/* Name Input */}
-            <div className="flex flex-col">
+            <div className="flex flex-col ">
+              {/* <label
+                htmlFor="fullName"
+                className="text-sm font-medium text-gray-700"
+              >
+                Full Name <span className="text-red-500">*</span>
+              </label> */}
               <input
                 {...register("name", validationRules.name)}
-                placeholder="Enter Your Name"
+                id="fullName"
+                placeholder="Enter Your Full Name"
                 className={`bg-[#ECEFF4] rounded-lg w-full p-3 focus:outline-2 transition-all duration-0  font-2 ${errors.name
                     ? "outline-red-500 border-red-500"
                     : "outline-[#2178B5] hover:outline-2"
@@ -145,11 +189,43 @@ const Contact = (props: any) => {
               )}
             </div>
 
+            {/*Company Name Input */}
+            <div className="flex flex-col ">
+              {/* <label
+                htmlFor="companyName"
+                className="text-sm font-medium text-gray-700"
+              >
+                Company Name <span className="text-red-500">*</span>
+              </label> */}
+              <input
+                {...register("companyName", validationRules.companyName)}
+                id="companyName"
+                placeholder="Enter Your Company Name"
+                className={`bg-[#ECEFF4] rounded-lg w-full p-3 focus:outline-2 transition-all duration-0  font-3 ${errors.name
+                    ? "outline-red-500 border-red-500"
+                    : "outline-[#2178B5] hover:outline-2"
+                  }`}
+                disabled={isSubmitting}
+              />
+              {errors?.companyName && (
+                <span className="text-red-500 text-xs mt-1 ml-1">
+                  {errors?.companyName?.message}
+                </span>
+              )}
+            </div>
+
             {/* Email Input */}
             <div className="flex flex-col">
+              {/* <label
+                htmlFor="email"
+                className="text-sm font-medium text-gray-700"
+              >
+                Email <span className="text-red-500">*</span>
+              </label> */}
               <input
                 {...register("email", validationRules.email)}
                 type="email"
+                id="email"
                 placeholder="Enter Your Email"
                 className={`bg-[#ECEFF4] rounded-lg w-full p-3 focus:outline-2 transition-all duration-0 font-2 ${errors.email
                     ? "outline-red-500 border-red-500"
@@ -164,10 +240,42 @@ const Contact = (props: any) => {
               )}
             </div>
 
+            {/* Number Input */}
+            <div className="flex flex-col ">
+              {/* <label
+                htmlFor="number"
+                className="text-sm font-medium text-gray-700"
+              >
+                Number <span className="text-red-500">*</span>
+              </label> */}
+              <input
+                {...register("number", validationRules.number)}
+                type="number"
+                placeholder="Enter Your Number"
+                className={`bg-[#ECEFF4] rounded-lg w-full p-3 focus:outline-2 transition-all duration-0 font-2 ${errors.email
+                    ? "outline-red-500 border-red-500"
+                    : "outline-[#2178B5] hover:outline-2"
+                  }`}
+                disabled={isSubmitting}
+              />
+              {errors.number && (
+                <span className="text-red-500 text-xs mt-1 ml-1">
+                  {errors.number.message}
+                </span>
+              )}
+            </div>
+
             {/* Message Textarea */}
             <div className="flex flex-col">
+              {/* <label
+                htmlFor="companyname"
+                className="text-sm font-medium text-gray-700"
+              >
+                Message 
+              </label> */}
+
               <textarea
-                {...register("message", validationRules.message)}
+                {...register("message")}
                 placeholder="Enter Your Message"
                 className={`bg-[#ECEFF4] rounded-lg w-full p-3 overflow-auto h-24 max-h-32 resize-none transition-all duration-0  font-3 ${errors.message
                     ? "outline-red-500 border-red-500"
@@ -175,9 +283,9 @@ const Contact = (props: any) => {
                   }`}
                 disabled={isSubmitting}
               />
-              {errors.message && (
+              {errors?.message && (
                 <span className="text-red-500 text-xs mt-1 ml-1">
-                  {errors.message.message}
+                  {errors?.message?.message}
                 </span>
               )}
             </div>
@@ -187,7 +295,7 @@ const Contact = (props: any) => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`custom-btn w-full text-center !py-3  transition-shadow duration-300  ${isSubmitting
+                className={`custom-btn w-full text-center font-2 !py-3  transition-shadow duration-300  ${isSubmitting
                     ? "opacity-50 cursor-not-allowed"
                     : "hover:transform "
                   }`}

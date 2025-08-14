@@ -5,11 +5,12 @@ import { useForm } from "react-hook-form";
 import axios from "axios";
 import Swal from "sweetalert2";
 import Logo from "../assets/Logo/Abtik-white.png";
-import Image from "../assets/Hero/bgImg.svg";
+import Image from "../assets/Logo/Abtik-blue.png";
 import { X, User, Mail, Phone, MessageSquare, Building } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { memo } from "react";
 import Offer from "./Offer";
+import { addContact } from "../api/contactApis";
 
 // Define FormData interface - updated to match API
 interface FormData {
@@ -69,40 +70,88 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
     reset,
   } = useForm<FormData>();
 
+  // Vercel Function and all
+  // const onSubmit = async (data: FormData) => {
+  //   try {
+  //     // Map form data to match API expectations
+  //     const apiData = {
+  //       name: data.name,
+  //       companyname: data.companyname,
+  //       email: data.email,
+  //       number: data.phone,
+  //       message: data.message,
+  //     };
+
+  //     const res = await axios.post("/api/getInTouchApi.js", apiData);
+
+  //     if (res.status === 201) {
+  //       Swal.fire({
+  //         icon: "success",
+  //         title: "Thank You For Contacting Us!",
+  //         text: res.data.message || "Your inquiry has been submitted successfully",
+  //         confirmButtonColor: "#052EAA",
+  //         scrollbarPadding: false
+  //       });
+  //     } else {
+  //       throw new Error("Unexpected response status");
+  //     }
+  //   } catch (error: any) {
+  //     const errorMessage =
+  //       error.response?.data?.message ||
+  //       error.response?.data?.error ||
+  //       "Error while submitting your request. Please try again.";
+
+  //     Swal.fire({
+  //       icon: "error",
+  //       title: "Submission Failed",
+  //       text: errorMessage,
+  //       confirmButtonColor: "#052EAA",
+  //       scrollbarPadding: false
+  //     });
+  //   } finally {
+  //     reset();
+  //     closeModal();
+  //   }
+  // };
+
+
+  // Node js Code and all 
   const onSubmit = async (data: FormData) => {
     try {
       // Map form data to match API expectations
       const apiData = {
         name: data.name,
-        companyname: data.companyname,
+        companyName: data.companyname,
         email: data.email,
-        phone: data.phone,
+        number: data.phone,
         message: data.message,
       };
 
-      const res = await axios.post("/api/getInTouchApi.js", apiData);
-      
+      const res = await addContact(apiData);
+
       if (res.status === 201) {
         Swal.fire({
           icon: "success",
           title: "Thank You For Contacting Us!",
           text: res.data.message || "Your inquiry has been submitted successfully",
           confirmButtonColor: "#052EAA",
+          scrollbarPadding: false
         });
       } else {
         throw new Error("Unexpected response status");
       }
     } catch (error: any) {
-      const errorMessage = 
-        error.response?.data?.message || 
+      const errorMessage =
+        error.response?.data?.message ||
         error.response?.data?.error ||
         "Error while submitting your request. Please try again.";
-        
+
       Swal.fire({
         icon: "error",
         title: "Submission Failed",
         text: errorMessage,
         confirmButtonColor: "#052EAA",
+        scrollbarPadding: false
       });
     } finally {
       reset();
@@ -116,7 +165,7 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
 
   return (
     <>
-    <Offer/>
+      <Offer />
       <Navbar />
       {children}
       <Footer />
@@ -141,12 +190,13 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
               onClick={(e) => e.stopPropagation()}
             >
               {/* Header with Logo */}
-              <div className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-4 flex items-center justify-center w-full rounded-t-lg flex-shrink-0">
-                <img
+              <div className="bg-gradient-to-r text-white  font-3 heading from-[#052EAA] to-[#3CA2E2] p-4 flex items-center justify-center w-full rounded-t-lg flex-shrink-0">
+                {/* <img
                   src={Logo}
                   alt="Company Logo"
                   className="h-12 sm:h-14 w-auto"
-                />
+                /> */}
+                Get In Touch
               </div>
 
               {/* Close Button */}
@@ -164,7 +214,7 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
                   <img
                     src={Image}
                     alt="Contact Visual"
-                    className="object-cover rounded-xl w-full h-48 md:h-full max-h-[350px] md:max-h-[350px] md:max-w-[350px]"
+                    className=" rounded-xl w-full h-48 md:h-full max-h-[200px] md:max-h-[200px] md:max-w-[200px]"
                   />
                 </div>
 
@@ -173,7 +223,7 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
                   <div className="p-4 md:p-6">
                     <form
                       onSubmit={handleSubmit(onSubmit)}
-                      className="flex flex-col gap-5"
+                      className="flex flex-col gap-5 font-3"
                     >
                       {/* Full Name - maps to 'name' in API */}
                       <div className="flex flex-col gap-1">
@@ -199,11 +249,10 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
                             id="name"
                             type="text"
                             placeholder="Enter your full name"
-                            className={`w-full pl-10 pr-4 py-2 border ${
-                              errors.name
-                                ? "border-red-500"
-                                : "border-gray-300"
-                            } rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[#052EAA] focus:border-transparent h-[38px] transition-all duration-200`}
+                            className={`w-full pl-10 pr-4 py-2  border ${errors.name
+                              ? "border-red-500"
+                              : "border-gray-300"
+                              } rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[#052EAA] focus:border-transparent h-[38px] transition-all duration-200`}
                           />
                         </div>
                         {errors.name && (
@@ -238,11 +287,10 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
                             id="companyname"
                             type="text"
                             placeholder="Enter your company name"
-                            className={`w-full pl-10 pr-4 py-2 border ${
-                              errors.companyname
-                                ? "border-red-500"
-                                : "border-gray-300"
-                            } rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[#052EAA] focus:border-transparent h-[38px] transition-all duration-200`}
+                            className={`w-full pl-10 pr-4 py-2 border ${errors.companyname
+                              ? "border-red-500"
+                              : "border-gray-300"
+                              } rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[#052EAA] focus:border-transparent h-[38px] transition-all duration-200`}
                           />
                         </div>
                         {errors.companyname && (
@@ -276,11 +324,10 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
                             id="email"
                             type="email"
                             placeholder="your.email@example.com"
-                            className={`w-full pl-10 pr-4 py-2 border ${
-                              errors.email
-                                ? "border-red-500"
-                                : "border-gray-300"
-                            } rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[#052EAA] focus:border-transparent h-[38px] transition-all duration-200`}
+                            className={`w-full pl-10 pr-4 py-2 border ${errors.email
+                              ? "border-red-500"
+                              : "border-gray-300"
+                              } rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[#052EAA] focus:border-transparent h-[38px] transition-all duration-200`}
                           />
                         </div>
                         {errors.email && (
@@ -307,8 +354,8 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
                             {...register("phone", {
                               required: "* Phone number is required",
                               pattern: {
-                                value: /^[0-9]{10,15}$/,
-                                message: "* Phone number must be 10-15 digits",
+                                value: /^[6-9]\d{9}$/, // starts with 6-9 and has 10 digits
+                                message: "Enter a valid 10-digit mobile number",
                               },
                             })}
                             id="phone"
@@ -319,11 +366,10 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
                             ) => {
                               if (!/[0-9]/.test(e.key)) e.preventDefault();
                             }}
-                            className={`w-full pl-10 pr-4 py-2 border ${
-                              errors.phone
-                                ? "border-red-500"
-                                : "border-gray-300"
-                            } rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[#052EAA] focus:border-transparent h-[38px] transition-all duration-200`}
+                            className={`w-full pl-10 pr-4 py-2 border ${errors.phone
+                              ? "border-red-500"
+                              : "border-gray-300"
+                              } rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[#052EAA] focus:border-transparent h-[38px] transition-all duration-200`}
                           />
                         </div>
                         {errors.phone && (
@@ -357,11 +403,10 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
                             })}
                             id="message"
                             placeholder="Enter your message"
-                            className={`w-full pl-10 pr-4 py-2 border ${
-                              errors.message
-                                ? "border-red-500"
-                                : "border-gray-300"
-                            } rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[#052EAA] focus:border-transparent min-h-[100px] transition-all duration-200 resize-vertical`}
+                            className={`w-full pl-10 pr-4 py-2 border ${errors.message
+                              ? "border-red-500"
+                              : "border-gray-300"
+                              } rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[#052EAA] focus:border-transparent min-h-[100px] transition-all duration-200 resize-vertical`}
                           />
                         </div>
                         {errors.message && (
@@ -376,14 +421,14 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
                         <button
                           type="button"
                           onClick={closeModal}
-                          className="w-full md:w-1/2 h-11 md:h-10 cursor-pointer bg-gray-200 text-gray-800 font-medium rounded-full hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400 transition-all duration-200"
+                          className="w-full md:w-1/2 h-11 font-3 md:h-10 cursor-pointer bg-gray-200 text-gray-800 font-medium rounded-full hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400 transition-all duration-200"
                         >
                           Cancel
                         </button>
                         <button
                           type="submit"
                           disabled={isSubmitting}
-                          className="w-full disabled:opacity-50 disabled:cursor-not-allowed flex justify-center items-center md:w-1/2 h-11 md:h-10 bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] text-white font-semibold rounded-full cursor-pointer hover:from-[#041f7a] hover:to-[#2d8bc7] hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#052EAA] transition-all duration-200"
+                          className="w-full font-3 disabled:opacity-50 disabled:cursor-not-allowed flex justify-center items-center md:w-1/2 h-11 md:h-10 bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] text-white font-semibold rounded-full cursor-pointer hover:from-[#041f7a] hover:to-[#2d8bc7] hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#052EAA] transition-all duration-200"
                         >
                           {isSubmitting ? (
                             <div className="flex items-center justify-center">

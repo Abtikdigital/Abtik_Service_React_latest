@@ -392,7 +392,7 @@ const Career = () => {
           initial={{ y: 100, opacity: 0 }}
           animate={isInViewJobOpenings ? { y: 0, opacity: 1 } : {}}
           transition={{ duration: 0.5 }}
-          className="px-7 md:px-14 py-12 bg-gradient-to-b from-[#f7f7f7] to-white"
+          className="px-7 md:px-14 py-12 bg-gradient-to-b from-[#f7f7f7] to-white font-3"
         >
           <div>
             <h2
@@ -477,7 +477,7 @@ const Career = () => {
                   {/* Apply Button */}
                   <button
                     onClick={() => handleApplyNow(job)}
-                    className="custom-btn flex justify-center items-center gap-1 w-full"
+                    className="custom-btn flex justify-center items-center gap-1 w-full font-3"
                   >
                     Apply Now
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

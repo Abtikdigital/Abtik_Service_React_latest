@@ -150,7 +150,7 @@ const OurService = () => {
               <div className="text-center">
                 <button
                   onClick={() => HandleClick(service?.path)}
-                  className="custom-btn w-full max-w-[120px] !py-3 mx-auto"
+                  className="custom-btn w-full max-w-[120px] !py-3 mx-auto font-2"
                 >
                   Explore
                 </button>

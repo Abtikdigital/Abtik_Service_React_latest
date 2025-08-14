@@ -155,7 +155,7 @@ const Recommended = () => {
       {canLoadMore && (
         <div className="flex justify-center mt-6">
           <button
-            className="custom-btn"
+            className="custom-btn font-2"
             type="button"
             onClick={() => setVisibleCount((r) => r + 4)}
           >

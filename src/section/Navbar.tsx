@@ -2,8 +2,10 @@ import { ChevronDown, Menu, X, ChevronRight } from "lucide-react";
 import Logo from "../assets/Logo/ResizedLogo.png";
 import { useEffect, useState, useRef, memo } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { useDispatch } from "react-redux";
+// import { useDispatch } from "react-redux";
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPhone } from '@fortawesome/free-solid-svg-icons';
 interface SubService {
   name: string;
   path: string;
@@ -39,231 +41,231 @@ const menuItems: Menu[] = [
     path: "/about",
     description: "Learn more about our company and mission"
   },
- {
-  name: "Services",
-  path: null,
-  description: "Explore our comprehensive business services",
-  subItems: [
-    {
-      section: "Funding Solutions",
-      items: [
-        {
-          name: "Seed Fund",
-          path: "/services/funding/seed-fund",
-          description: "Early-stage funding for startup ventures and business ideas",
-        },
-        {
-          name: "Subsidy",
-          path: null,
-          description: "Government subsidies and financial assistance programs",
-          subServices: [
-            { name: "PMEGP", path: "/services/funding/subsidy/pmegp" },
-            { name: "CMEGP", path: "/services/funding/subsidy/cmegp" },
-            { name: "PMFME", path: "/services/funding/subsidy/pmfme" },
-            {
-              name: "Stand Up India",
-              path: "/services/funding/subsidy/stand-up-india",
-            },
-          ],
-        },
-        {
-          name: "Grants",
-          path: "/services/funding/grants",
-          description: "Government grants and non-repayable funding",
-        },
-        {
-          name: "MSME Loan",
-          path: null,
-          description: "Loans for Micro, Small, and Medium Enterprises",
-          subServices: [
-            { name: "Mudra Loan", path: "/services/funding/msme-loan/mudra" },
-            { name: "Udaan", path: "/services/funding/msme-loan/udaan" },
-            { name: "CGTMSE", path: "/services/funding/msme-loan/cgtmse" },
-          ],
-        },
-        {
-          name: "Agriculture",
-          path: null,
-          description: "Financial support and funding for agricultural businesses",
-          subServices: [
-            {
-              name: "NAIFF/AIFF",
-              path: "/services/funding/agriculture/naiff-aiff",
-            },
-            {
-              name: "Agrisure",
-              path: "/services/funding/agriculture/agrisure",
-            },
-          ],
-        },
-        {
-          name: "Private Funding",
-          path: null,
-          description: "Connect with private investors and venture capital firms",
-          subServices: [
-            {
-              name: "Angel Inverstor",
-              path: "/services/funding/private-funding/angel-inverstor",
-            },
-            {
-              name: "VC Funding",
-              path: "/services/funding/private-funding/venture-capital",
-            },
-            {
-              name: "NBFC",
-              path: "/services/funding/private-funding/nbfc",
-            },
-          ],
-        },
-        {
-          name: "Secured/Unsecured Loan",
-          path: null,
-          description: "Business loans with flexible terms and conditions",
-          subServices: [
-            {
-              name: "Business Loan",
-              path: "/services/funding/loans/business-loan",
-            },
-            { name: "LAP", path: "/services/funding/loans/lap" },
-            {
-              name: "Cash Credit (CC)",
-              path: "/services/funding/loans/cash-credit",
-            },
-            {
-              name: "Overdraft (OD)",
-              path: "/services/funding/loans/overdraft",
-            },
-            {
-              name: "Dropline OD",
-              path: "/services/funding/loans/dropline-od",
-            },
-            { name: "SME", path: "/services/funding/loans/sme" },
-            { name: "Term Loan", path: "/services/funding/loans/term-loan" },
-            {
-              name: "Project Funding",
-              path: "/services/funding/loans/project-funding",
-            },
-          ],
-        },
-      ],
-    },
-    {
-      section: "Trademark & IP",
-      items: [
-        {
-          name: "Trademark Registration",
-          path: "/services/legal/trademark-registration",
-          description: "Protect your brand with trademark registration",
-        },
-        {
-          name: "Copyright Protection",
-          path: "/services/legal/copyright-protection",
-          description: "Secure your creative works and content",
-        },
-        {
-          name: "Patent Filing",
-          path: "/services/legal/patent-filing",
-          description: "Protect your inventions and innovations",
-        },
-      ],
-    },
-    {
-      section: "Certificate & Licence",
-      items: [
-        {
-          name: "Startup India",
-          path: "/services/certificate/startup-india",
-          description: "Government recognition and benefits for startups",
-        },
-        {
-          name: "Msme",
-          path: "/services/certificate/msme",
-          description: "MSME registration for small and medium enterprises",
-        },
-        {
-          name: "Make In India",
-          path: "/services/certificate/make-in-india",
-          description: "Registration under Make in India initiative",
-        },
-        {
-          name: "Fssai Licence",
-          path: "/services/certificate/fssai-licence",
-          description: "Food safety and standards authority license",
-        },
-        {
-          name: "Zed Certificate",
-          path: "/services/certificate/zed",
-          description: "Zero defect zero effect certification for MSMEs",
-        },
-        {
-          name: "ISO Certification",
-          path: "/services/certificate/iso",
-          description: "International quality standards certification",
-        },
-        {
-          name: "Trade Licence",
-          path: "/services/certificate/trade-licence",
-          description: "Municipal trade license for business operations",
-        },
-      ],
-    },
-    {
-      section: "Tax & Compliance",
-      items: [
-        {
-          name: "GST Register/Filing",
-          path: "/services/tax/gst-filing",
-          description: "GST registration and regular return filing services",
-        },
-        {
-          name: "TDS Compliance",
-          path: "/services/tax/tds-compliance",
-          description: "Tax deducted at source filing and compliance management",
-        },
-        {
-          name: "Annual Compliance",
-          path: "/services/tax/annual-compliance",
-          description: "Complete annual regulatory and statutory compliance",
-        },
-      ],
-    },
-    {
-      section: "Business Registration",
-      items: [
-        {
-          name: "Private Limited Co.",
-          path: "/services/registration/private-limited",
-          description: "Incorporate your private limited company with MCA",
-        },
-        {
-          name: "LLP Registration",
-          path: "/services/registration/llp",
-          description: "Limited liability partnership registration services",
-        },
-        {
-          name: "Sole Proprietorship",
-          path: "/services/registration/proprietorship",
-          description: "Simple business structure registration for individuals",
-        },
-        {
-          name: "Partnership Firm",
-          path: "/services/registration/partnership",
-          description: "Partnership deed and firm registration services",
-        },
-        {
-          name: "Section 8 Company",
-          path: "/services/registration/section8company",
-          description: "Non-profit organization registration under Section 8",
-        },
-        {
-          name: "Producer Company",
-          path: "/services/registration/producer",
-          description: "Producer company registration for agricultural cooperatives",
-        },
-      ],
-    },
-  ],
-},
+  {
+    name: "Services",
+    path: null,
+    description: "Explore our comprehensive business services",
+    subItems: [
+      {
+        section: "Funding Solutions",
+        items: [
+          {
+            name: "Seed Fund",
+            path: "/services/funding/seed-fund",
+            description: "Early-stage funding for startup ventures and business ideas",
+          },
+          {
+            name: "Subsidy",
+            path: null,
+            description: "Government subsidies and financial assistance programs",
+            subServices: [
+              { name: "PMEGP", path: "/services/funding/subsidy/pmegp" },
+              { name: "CMEGP", path: "/services/funding/subsidy/cmegp" },
+              { name: "PMFME", path: "/services/funding/subsidy/pmfme" },
+              {
+                name: "Stand Up India",
+                path: "/services/funding/subsidy/stand-up-india",
+              },
+            ],
+          },
+          {
+            name: "Grants",
+            path: "/services/funding/grants",
+            description: "Government grants and non-repayable funding",
+          },
+          {
+            name: "MSME Loan",
+            path: null,
+            description: "Loans for Micro, Small, and Medium Enterprises",
+            subServices: [
+              { name: "Mudra Loan", path: "/services/funding/msme-loan/mudra" },
+              { name: "Udaan", path: "/services/funding/msme-loan/udaan" },
+              { name: "CGTMSE", path: "/services/funding/msme-loan/cgtmse" },
+            ],
+          },
+          {
+            name: "Agriculture",
+            path: null,
+            description: "Financial support and funding for agricultural businesses",
+            subServices: [
+              {
+                name: "NAIFF/AIFF",
+                path: "/services/funding/agriculture/naiff-aiff",
+              },
+              {
+                name: "Agrisure",
+                path: "/services/funding/agriculture/agrisure",
+              },
+            ],
+          },
+          {
+            name: "Private Funding",
+            path: null,
+            description: "Connect with private investors and venture capital firms",
+            subServices: [
+              {
+                name: "Angel Inverstor",
+                path: "/services/funding/private-funding/angel-inverstor",
+              },
+              {
+                name: "VC Funding",
+                path: "/services/funding/private-funding/venture-capital",
+              },
+              {
+                name: "NBFC",
+                path: "/services/funding/private-funding/nbfc",
+              },
+            ],
+          },
+          {
+            name: "Secured/Unsecured Loan",
+            path: null,
+            description: "Business loans with flexible terms and conditions",
+            subServices: [
+              {
+                name: "Business Loan",
+                path: "/services/funding/loans/business-loan",
+              },
+              { name: "LAP", path: "/services/funding/loans/lap" },
+              {
+                name: "Cash Credit (CC)",
+                path: "/services/funding/loans/cash-credit",
+              },
+              {
+                name: "Overdraft (OD)",
+                path: "/services/funding/loans/overdraft",
+              },
+              {
+                name: "Dropline OD",
+                path: "/services/funding/loans/dropline-od",
+              },
+              { name: "SME", path: "/services/funding/loans/sme" },
+              { name: "Term Loan", path: "/services/funding/loans/term-loan" },
+              {
+                name: "Project Funding",
+                path: "/services/funding/loans/project-funding",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        section: "Trademark & IP",
+        items: [
+          {
+            name: "Trademark Registration",
+            path: "/services/legal/trademark-registration",
+            description: "Protect your brand with trademark registration",
+          },
+          {
+            name: "Copyright Protection",
+            path: "/services/legal/copyright-protection",
+            description: "Secure your creative works and content",
+          },
+          {
+            name: "Patent Filing",
+            path: "/services/legal/patent-filing",
+            description: "Protect your inventions and innovations",
+          },
+        ],
+      },
+      {
+        section: "Certificate & Licence",
+        items: [
+          {
+            name: "Startup India",
+            path: "/services/certificate/startup-india",
+            description: "Government recognition and benefits for startups",
+          },
+          {
+            name: "Msme",
+            path: "/services/certificate/msme",
+            description: "MSME registration for small and medium enterprises",
+          },
+          {
+            name: "Make In India",
+            path: "/services/certificate/make-in-india",
+            description: "Registration under Make in India initiative",
+          },
+          {
+            name: "Fssai Licence",
+            path: "/services/certificate/fssai-licence",
+            description: "Food safety and standards authority license",
+          },
+          {
+            name: "Zed Certificate",
+            path: "/services/certificate/zed",
+            description: "Zero defect zero effect certification for MSMEs",
+          },
+          {
+            name: "ISO Certification",
+            path: "/services/certificate/iso",
+            description: "International quality standards certification",
+          },
+          {
+            name: "Trade Licence",
+            path: "/services/certificate/trade-licence",
+            description: "Municipal trade license for business operations",
+          },
+        ],
+      },
+      {
+        section: "Tax & Compliance",
+        items: [
+          {
+            name: "GST Register/Filing",
+            path: "/services/tax/gst-filing",
+            description: "GST registration and regular return filing services",
+          },
+          {
+            name: "TDS Compliance",
+            path: "/services/tax/tds-compliance",
+            description: "Tax deducted at source filing and compliance management",
+          },
+          {
+            name: "Annual Compliance",
+            path: "/services/tax/annual-compliance",
+            description: "Complete annual regulatory and statutory compliance",
+          },
+        ],
+      },
+      {
+        section: "Business Registration",
+        items: [
+          {
+            name: "Private Limited Co.",
+            path: "/services/registration/private-limited",
+            description: "Incorporate your private limited company with MCA",
+          },
+          {
+            name: "LLP Registration",
+            path: "/services/registration/llp",
+            description: "Limited liability partnership registration services",
+          },
+          {
+            name: "Sole Proprietorship",
+            path: "/services/registration/proprietorship",
+            description: "Simple business structure registration for individuals",
+          },
+          {
+            name: "Partnership Firm",
+            path: "/services/registration/partnership",
+            description: "Partnership deed and firm registration services",
+          },
+          {
+            name: "Section 8 Company",
+            path: "/services/registration/section8company",
+            description: "Non-profit organization registration under Section 8",
+          },
+          {
+            name: "Producer Company",
+            path: "/services/registration/producer",
+            description: "Producer company registration for agricultural cooperatives",
+          },
+        ],
+      },
+    ],
+  },
 
   {
     name: "Career",
@@ -284,7 +286,7 @@ const menuItems: Menu[] = [
 
 const DesktopNavbar = () => {
   const location = useLocation();
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   const [hoverTimeout, setHoverTimeout] = useState<any | null>(null);
   const [clearSubmenuTimeout, setClearSubmenuTimeout] = useState<any | null>(
     null
@@ -301,9 +303,9 @@ const DesktopNavbar = () => {
   const mainMenuRef = useRef<HTMLLIElement | null>(null);
   const menuWrapperRef = useRef<HTMLDivElement | null>(null);
 
-  const handleOpenGetInTouchForm = () => {
-    dispatch({ type: "open" });
-  };
+  // const handleOpenGetInTouchForm = () => {
+  //   dispatch({ type: "open" });
+  // };
 
   const handleMouseEnter = () => {
     if (hoverTimeout) {
@@ -492,7 +494,7 @@ const DesktopNavbar = () => {
         <div ref={menuWrapperRef}>
           <ul
             className="flex gap-4 lg:gap-6 xl:gap-8 font-medium items-center text-sm lg:text-base font-1"
-          
+
           >
             {menuItems.map((item) => {
               const isActive = item.path && location.pathname === item.path;
@@ -585,7 +587,7 @@ const DesktopNavbar = () => {
                         }
                       `}
                       style={{
-                       
+
                         maxHeight: "75vh",
                       }}
                       onMouseEnter={handleMouseEnter}
@@ -733,12 +735,15 @@ const DesktopNavbar = () => {
         </div>
 
         <div className="flex-shrink-0">
-          <button
-            className="custom-btn text-sm lg:text-base px-4 lg:px-6 py-2"
-            onClick={handleOpenGetInTouchForm}
+          <a
+            className="custom-btn !text-black items-center gap-2   group !bg-none !shadow-none inline-flex text-center text-sm lg:text-base px-4 lg:px-6 py-2"
+            href="tel:+918928138434"
           >
-            Get In Touch
-          </button>
+
+
+            <FontAwesomeIcon icon={faPhone} className="bg-gradient-to-r from-[#3CA2E2] to-[#052EAA] p-3 rounded-full text-white" />
+            <span className="text-[#4D4D4D] group-hover:underline hover:text-black transition-all duration-100">+91 8928 138 434</span>
+          </a>
         </div>
       </div>
     </div>
@@ -746,10 +751,10 @@ const DesktopNavbar = () => {
 };
 
 const MobileNavbar = () => {
-  const dispatch = useDispatch();
-  const handleOpenGetInTouchForm = () => {
-    dispatch({ type: "open" });
-  };
+  // const dispatch = useDispatch();
+  // const handleOpenGetInTouchForm = () => {
+  //   dispatch({ type: "open" });
+  // };
 
   const [isMobileViewOpen, setIsMobileViewOpen] = useState(false);
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
@@ -806,7 +811,7 @@ const MobileNavbar = () => {
         <div className="absolute w-full max-h-[90vh] lg:max-h-[80vh] overflow-auto bg-white z-50 flex flex-col px-4 py-4 lg:py-6 shadow-lg border-t border-gray-100">
           <ul
             className="flex flex-col space-y-2 text-sm lg:text-base font-medium w-full font-1"
-         
+
           >
             {menuItems.map((item: any) => (
               <li
@@ -929,16 +934,16 @@ const MobileNavbar = () => {
                 )}
               </li>
             ))}
-            <li className="pt-4">
-              <button
-                className="w-full py-3 lg:py-4 px-4 bg-[#010574] text-white rounded-4xl hover:bg-[#1e1e7a] transition-colors duration-300 text-center font-semibold text-sm lg:text-base"
-                onClick={() => {
-                  toggleMobileView();
-                  handleOpenGetInTouchForm();
-                }}
+            <li className="">
+              <a
+                className="custom-btn !text-black items-center gap-2   group !bg-none !shadow-none inline-flex text-center text-sm lg:text-base px-4 lg:px-6 py-2"
+                href="tel:+918928138434"
               >
-                Get In Touch
-              </button>
+
+
+                <FontAwesomeIcon icon={faPhone} className="bg-gradient-to-r from-[#3CA2E2] to-[#052EAA] p-3 rounded-full text-white" />
+                <span className="text-[#4D4D4D] group-hover:underline hover:text-black transition-all duration-100">+91 8928 138 434</span>
+              </a>
             </li>
           </ul>
         </div>
