@@ -304,7 +304,8 @@ const Career = () => {
 
 
       // Handle success response
-      if (response.status === 201 && response.data.isSuccess) {
+      if (response.status === 201) {
+        closeModal();
         await Swal.fire({
           icon: "success",
           title: "Application Submitted!",
@@ -314,8 +315,8 @@ const Career = () => {
           allowOutsideClick: false,
           allowEscapeKey: false,
         });
-        closeModal();
       } else {
+        closeModal()
         throw new Error(
           response.data.message || "Error while submitting application"
         );
@@ -324,6 +325,7 @@ const Career = () => {
       console.error("Submission error:", error);
       console.error("Error response:", error.response?.data);
 
+      closeModal()
       const errorMessage =
         error.response?.data?.message ||
         error.response?.data?.error ||
@@ -339,6 +341,7 @@ const Career = () => {
         allowEscapeKey: true,
       });
     } finally {
+      reset()
       closeModal()
     }
   };
