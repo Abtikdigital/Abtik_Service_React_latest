@@ -617,13 +617,8 @@ const Career = () => {
                 exit="exit"
               >
                 {/* Header with Logo */}
-                <div className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-4 flex items-center justify-center w-full rounded-t-lg flex-shrink-0">
-                  <img
-                    loading="lazy"
-                    src={Logo}
-                    alt="Company Logo"
-                    className="h-12 sm:h-14 w-auto"
-                  />
+                <div className="bg-gradient-to-r text-white  font-3 heading from-[#052EAA] to-[#3CA2E2] p-4 flex items-center justify-center w-full rounded-t-lg flex-shrink-0">
+               Career
                 </div>
 
                 {/* Close Button */}
@@ -640,9 +635,9 @@ const Career = () => {
                   <div className="md:w-1/2 w-full p-4 bg-gray-50 flex items-center justify-center">
                     <img
                       loading="lazy"
-                      src={CareerImage}
+                      src={Logo}
                       alt="Career Visual"
-                      className="object-cover rounded-xl w-full h-48 md:h-full max-h-[350px] md:max-h-[350px] md:max-w-[350px]"
+                      className="rounded-xl w-full h-48 md:h-full max-h-[200px] md:max-h-[200px] md:max-w-[200px]"
                     />
                   </div>
 

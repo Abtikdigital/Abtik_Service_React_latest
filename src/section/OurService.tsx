@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import Image1 from "../assets/OurService/grant.jpeg";
+import Image1 from "../assets/Grants/Image1.png";
 import Image2 from "../assets/OurService/starup.jpg";
 import Image3 from "../assets/OurService/msme.jpeg";
 import Image4 from "../assets/OurService/seed.jpeg";

@@ -1,10 +1,10 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect, useState, memo } from "react";
 import { useNavigate } from "react-router-dom";
-import Image1 from "../assets/Blog/budget 2025.jpeg";
-import Image2 from "../assets/Blog/2nd blog.jpeg";
-import Image3 from "../assets/Blog/3rd blog.png";
-import Image4 from "../assets/Blog/4th blog.jpeg"
+import Image1 from "../assets/NewBlog/Budget1.jpg";
+import Image2 from "../assets/NewBlog/Startup.jpg";
+import Image3 from "../assets/NewBlog/Image2.jpg";
+import Image4 from "../assets/NewBlog/BussinessWomen.jpg"
 
 const blogs = [
   {
@@ -104,7 +104,7 @@ const BlogSection = () => {
             transition={{ duration: 0.5, delay: getDelay(index) }}
             className="space-y-3"
           >
-            <img src={blog?.img} alt={blog?.title} className="rounded-lg cursor-pointer hover:scale-105 duration-300 transition-all" />
+            <img src={blog?.img} alt={blog?.title} loading="lazy" className="rounded-lg cursor-pointer hover:scale-105 duration-300 transition-all" />
             <h2
               className="text-xl text-[#3CA2E2] font-semibold line-clamp-2 font-4"
            

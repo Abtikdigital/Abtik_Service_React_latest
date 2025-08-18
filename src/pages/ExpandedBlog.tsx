@@ -2,10 +2,10 @@ import { memo, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import Mainlayout from "../section/Mainlayout";
 import BgImage from "../assets/ExpandedBlog/bgImg.svg";
-import Image1 from "../assets/Blog/budget 2025.jpeg";
-import Image2 from "../assets/Blog/2nd blog.jpeg";
-import Image3 from "../assets/Blog/3rd blog.png";
-import Image4 from "../assets/Blog/4th blog.jpeg"
+import Image1 from "../assets/NewBlog/Budget1.jpg";
+import Image2 from "../assets/NewBlog/Startup.jpg";
+import Image3 from "../assets/NewBlog/Image2.jpg";
+import Image4 from "../assets/NewBlog/BussinessWomen.jpg"
 import { useDispatch } from "react-redux";
 
 interface BlogListItem {

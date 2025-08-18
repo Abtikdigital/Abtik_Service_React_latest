@@ -1,7 +1,7 @@
 import Mainlayout from "../section/Mainlayout";
 import BgImage from "../assets/Hero/bgImg.svg";
 import Contact from "../section/Contact";
-import Image1 from "../assets/PatentFilling/Image1.jpeg";
+import Image1 from "../assets/PatentFilling/Patent.jpg";
 import {
     Mail,
     User,
@@ -352,7 +352,7 @@ const PatentFiling = () => {
                 >
                     <div className="flex flex-col justify-evenly p-4 box-border">
                         <h2 className="sub-heading text-white font-1">
-                            Angel Investor
+                            Patent Filing
                         </h2>
                         <p className="font-3 text-[#C3C3C3]">
                             Empowering Businesses through Comprehensive Solutions From Fund

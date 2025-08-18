@@ -177,6 +177,11 @@ const menuItems: Menu[] = [
             path: "/services/certificate/startup-india",
             description: "Government recognition and benefits for startups",
           },
+             {
+            name: "Tax Assumption Certificate",
+            path: "/services/certificate/tax-assumption-certificate",
+            description: "Government recognition and benefits for startups",
+          },
           {
             name: "Msme",
             path: "/services/certificate/msme",

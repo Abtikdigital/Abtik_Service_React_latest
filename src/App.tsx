@@ -21,6 +21,7 @@ const StandUpIndia = lazy(() => import("./pages/StandUpIndiaService"));
 const MudraLoan = lazy(() => import("./pages/MudraLoan"));
 const Udaan = lazy(() => import("./pages/Udaan"));
 const CGTMSE = lazy(() => import("./pages/CGTMSEService"));
+const TaxAssumptionCertificate = lazy(() => import("./pages/TaxAssumptionCertificate"))
 const NAIFF_AIFFService = lazy(() => import("./pages/NAIFF_AIFFService"));
 const AgriSure = lazy(() => import("./pages/AgrisureService"));
 const BusinessLoan = lazy(() => import("./pages/BusinessLoanService"));
@@ -169,13 +170,17 @@ function App() {
 
           <Route
             path="/services/certificate/fssai-licence"
-            element={<FSSAILicense/>}
+            element={<FSSAILicense />}
           />
 
 
           <Route
             path="/services/certificate/startup-india"
             element={<StartupIndiaCertificate />}
+          />
+          <Route
+            path="/services/certificate/tax-assumption-certificate"
+            element={<TaxAssumptionCertificate />}
           />
           <Route
             path="/services/certificate/msme"
