@@ -1,118 +1,225 @@
 // import Chart from "react-google-charts";
-import { useForm } from "react-hook-form";
+import { useForm, Controller } from "react-hook-form";
+import OtpInput from "react-otp-input";
 // import axios from "axios";
 import Swal from "sweetalert2";
-import { memo, useState } from "react";
-import { addContact } from "../api/contactApis";
+import { memo, useState, useRef, useEffect } from "react";
+// Assuming verifyOtp is exported from otpApis
+import { addOtpDetails, verifyOtp } from "../api/otpApis";
 // import Map from "../section/Map";
+
 interface ContactFormData {
   name: string;
   email: string;
   message: string;
   number: number;
   companyName: string;
+  serviceType: string;
 }
+
+// New Custom ShadCN-like Dropdown Component
+const ShadcnDropdown = ({
+  options,
+  value,
+  onChange,
+  placeholder,
+  disabled,
+  error,
+}: {
+  options: { value: string; label: string }[];
+  value: string;
+  onChange: (value: string) => void;
+  placeholder: string;
+  disabled?: boolean;
+  error?: boolean;
+}) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  const selectedLabel =
+    options.find((opt) => opt.value === value)?.label || placeholder;
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  return (
+    <div className="relative font-2" ref={dropdownRef}>
+      <button
+        type="button"
+        onClick={() => !disabled && setIsOpen(!isOpen)}
+        disabled={disabled}
+        className={`appearance-none bg-[#ECEFF4] rounded-lg w-full p-3 text-left focus:outline-2 transition-all duration-0 ${error
+            ? "outline-red-500 border-red-500"
+            : "outline-[#2178B5] hover:outline-2"
+          } ${disabled ? "cursor-not-allowed opacity-50" : ""
+          }  flex justify-between items-center`}
+      >
+        <span className="font-2">{selectedLabel}</span>
+        <svg
+          className={`fill-current h-4 w-4 text-gray-700 transform transition-transform duration-200 ${isOpen ? "rotate-180" : ""
+            }`}
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+        >
+          <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
+        </svg>
+      </button>
+
+      {isOpen && (
+        <div className="absolute z-10 w-full mt-2 bg-white border border-gray-200 rounded-lg shadow-lg">
+          <ul className="py-2 px-2 max-h-48 overflow-y-auto  gap-1.5 p-1 flex flex-col   ">
+            {options.map((option) => (
+              <li
+                key={option.value}
+                onClick={() => {
+                  onChange(option.value);
+                  setIsOpen(false);
+                }}
+                className="px-4 py-2 rounded-lg bg-[#ECEFF4] hover:bg-gray-100 cursor-pointer "
+              >
+                {option.label}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </div>
+  );
+};
 
 const Contact = (props: any) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showOtpForm, setShowOtpFrom] = useState(false);
+  const [otp, setOtp] = useState("");
+  // State to hold the data from the first form to use in OTP verification
+  const [contactPayload, setContactPayload] = useState<ContactFormData | null>(
+    null
+  );
 
   const {
     register,
     handleSubmit,
     formState: { errors },
-    reset
-    // reset,
-  } = useForm<ContactFormData>();
+    reset,
+    control, // <-- Add control from useForm
+  } = useForm<ContactFormData>({
+    defaultValues: {
+      name: "",
+      email: "",
+      message: "",
+      companyName: "",
+      serviceType: "",
+    },
+  });
 
-  // const data = [
-  //   ["Task", "Hours per Day"],
-  //   ["MSME", 500],
-  //   ["Startup", 700],
-  //   ["TAX", 1800],
-  // ];
-
-  // const options = {
-  //   title: "Business Segments",
-  //   titleTextStyle: {
-  //     fontName: "Anton",
-  //     fontSize: 30,
-  //     bold: true,
-  //     color: "#233238",
-  //   },
-  //   pieHole: 0.4,
-  //   is3D: true,
-  //   backgroundColor: "transparent",
-  //   pieStartAngle: 100,
-  //   sliceVisibilityThreshold: 0.02,
-  //   legend: {
-  //     position: "bottom",
-  //     alignment: "center",
-  //     textStyle: {
-  //       color: "#233238",
-  //       fontSize: 14,
-  //     },
-  //   },
-  //   colors: ["#3CA2E2", "#052EAA", "#2D87C4"],
-  // };
-
-  // For Vercel
-  // const onSubmit = async (data: ContactFormData) => {
-  //   setIsSubmitting(true);
-  //   try {
-  //     let res = await axios.post("/api/contactApi.js", data);
-  //     if (res?.status == 201) {
-  //       Swal.fire({
-  //         icon: "success",
-  //         title: "Thank You For Contacting ",
-  //         text: res?.data?.message || "Your response has been submitted",
-  //       });
-  //     } else {
-  //       Swal.fire({
-  //         icon: "error",
-  //         title: "Error",
-  //         text: "Error while inserting data",
-  //       });
-  //     }
-  //   } catch (error: any) {
-  //     Swal.fire({
-  //       icon: "error",
-  //       title: "Error",
-  //       text: error?.response?.data?.message || "Error while inserting",
-  //     });
-  //   } finally {
-  //   }
-  // };
-
-  // For Nodejs Backend
+  // For Node.js Backend: Handles the initial form submission to get an OTP
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
     try {
-      let res = await addContact(data);
-      if (res?.status == 201) {
+      // API call to send user details and request an OTP
+      let res = await addOtpDetails({ contactData: data });
+      if (res?.status === 201) {
+        setContactPayload(data); // Save form data for the next step
+        setShowOtpFrom(true); // Show the OTP form
         Swal.fire({
           icon: "success",
-          title: "Thank You For Contacting ",
-          text: res?.data?.message || "Your response has been submitted",
-          scrollbarPadding:false
+          title: "OTP Sent!",
+          text:
+            res?.data?.message ||
+            "An OTP has been sent to your contact number.",
+          scrollbarPadding: false,
         });
       } else {
         Swal.fire({
           icon: "error",
           title: "Error",
-          text: "Error while inserting data",
-          scrollbarPadding:false
+          text: res?.data?.message || "Could not send OTP. Please try again.",
+          scrollbarPadding: false,
         });
       }
     } catch (error: any) {
       Swal.fire({
         icon: "error",
-        title: "Error",
-        text: error?.response?.data?.message || "Error while inserting",
-        scrollbarPadding:false
+        title: "Submission Error",
+        text: error?.response?.data?.message || "An unexpected error occurred.",
+        scrollbarPadding: false,
       });
     } finally {
       setIsSubmitting(false);
-      reset()
+    }
+  };
+
+  // Handles the OTP verification
+  const handleOtpVerify = async () => {
+    if (otp.length !== 4) {
+      // Or your desired OTP length
+      Swal.fire({
+        icon: "warning",
+        title: "Invalid OTP",
+        text: "Please enter a valid 4-digit OTP.",
+        scrollbarPadding: false,
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+    try {
+      // We need to send the OTP and an identifier (like email or number) to the backend
+      const verificationData = {
+        enteredOtp: otp,
+      };
+
+      // Assumes a 'verifyOtp' function exists in your API helpers
+      let res = await verifyOtp(verificationData);
+
+      if (res?.status === 201) {
+        Swal.fire({
+          icon: "success",
+          title: "Thank You For Contacting Us!",
+          text:
+            res?.data?.message ||
+            "Your details have been verified successfully.",
+          scrollbarPadding: false,
+        });
+        // Reset all states and form on final success
+        reset();
+        setOtp("");
+        setShowOtpFrom(false);
+        setContactPayload(null);
+      } else {
+        Swal.fire({
+          icon: "error",
+          title: "Verification Failed",
+          text:
+            res?.data?.message ||
+            "The OTP you entered is incorrect. Please try again.",
+          scrollbarPadding: false,
+        });
+      }
+    } catch (error: any) {
+      Swal.fire({
+        icon: "error",
+        title: "Verification Error",
+        text:
+          error?.response?.data?.message ||
+          "An error occurred during verification.",
+        scrollbarPadding: false,
+      });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -133,6 +240,9 @@ const Contact = (props: any) => {
         message: "Name can only contain letters and spaces",
       },
     },
+    serviceType: {
+      required: "* Please select a service", // Updated validation message
+    },
     email: {
       required: "* Email is required",
       pattern: {
@@ -152,166 +262,223 @@ const Contact = (props: any) => {
     },
   };
 
+  // You can customize your service options here
+  const serviceOptions = [
+    { value: "funding-solution", label: "Funding Solution" },
+    { value: "Trademark-ip", label: "Trademark Ip" },
+    { value: "certificate-licence", label: "Certificate & Licence" },
+    { value: "tax-compliance", label: "Tax Compliance" },
+    { value: "business-registration", label: "business-registration" },
+    { value: "other", label: "other" },
+  ];
+
   return (
     <section className="px-7 md:px-14 py-6 md:py-16 bg-[#f7f7f7] space-y-6 ">
-      <div className="flex  gap-6  lg:space-x-6 justify-center items-center w-full">
-        <div className="space-y-6  flex flex-col justify-center w-2xl">
+      <div className="flex gap-6 lg:space-x-6 justify-center items-center w-full">
+        <div className="space-y-6 flex flex-col justify-center w-2xl">
           <h2 className="sub-heading to-[#052EAA] text-center bg-gradient-to-t from-[#3CA2E2] bg-clip-text text-transparent font-1">
-            Contact Us
+            {showOtpForm ? "Verify Your Identity" : "Contact Us"}
           </h2>
 
-          <form
-            onSubmit={handleSubmit(onSubmit)}
-            className="flex flex-col gap-4 font-3 "
-          >
-            {/* Name Input */}
-            <div className="flex flex-col ">
-              {/* <label
-                htmlFor="fullName"
-                className="text-sm font-medium text-gray-700"
-              >
-                Full Name <span className="text-red-500">*</span>
-              </label> */}
-              <input
-                {...register("name", validationRules.name)}
-                id="fullName"
-                placeholder="Enter Your Full Name"
-                className={`bg-[#ECEFF4] rounded-lg w-full p-3 focus:outline-2 transition-all duration-0  font-2 ${errors.name
-                    ? "outline-red-500 border-red-500"
-                    : "outline-[#2178B5] hover:outline-2"
-                  }`}
-                disabled={isSubmitting}
-              />
-              {errors.name && (
-                <span className="text-red-500 text-xs mt-1 ml-1">
-                  {errors.name.message}
-                </span>
-              )}
-            </div>
-
-            {/*Company Name Input */}
-            <div className="flex flex-col ">
-              {/* <label
-                htmlFor="companyName"
-                className="text-sm font-medium text-gray-700"
-              >
-                Company Name <span className="text-red-500">*</span>
-              </label> */}
-              <input
-                {...register("companyName", validationRules.companyName)}
-                id="companyName"
-                placeholder="Enter Your Company Name"
-                className={`bg-[#ECEFF4] rounded-lg w-full p-3 focus:outline-2 transition-all duration-0  font-3 ${errors.name
-                    ? "outline-red-500 border-red-500"
-                    : "outline-[#2178B5] hover:outline-2"
-                  }`}
-                disabled={isSubmitting}
-              />
-              {errors?.companyName && (
-                <span className="text-red-500 text-xs mt-1 ml-1">
-                  {errors?.companyName?.message}
-                </span>
-              )}
-            </div>
-
-            {/* Email Input */}
-            <div className="flex flex-col">
-              {/* <label
-                htmlFor="email"
-                className="text-sm font-medium text-gray-700"
-              >
-                Email <span className="text-red-500">*</span>
-              </label> */}
-              <input
-                {...register("email", validationRules.email)}
-                type="email"
-                id="email"
-                placeholder="Enter Your Email"
-                className={`bg-[#ECEFF4] rounded-lg w-full p-3 focus:outline-2 transition-all duration-0 font-2 ${errors.email
-                    ? "outline-red-500 border-red-500"
-                    : "outline-[#2178B5] hover:outline-2"
-                  }`}
-                disabled={isSubmitting}
-              />
-              {errors.email && (
-                <span className="text-red-500 text-xs mt-1 ml-1">
-                  {errors.email.message}
-                </span>
-              )}
-            </div>
-
-            {/* Number Input */}
-            <div className="flex flex-col ">
-              {/* <label
-                htmlFor="number"
-                className="text-sm font-medium text-gray-700"
-              >
-                Number <span className="text-red-500">*</span>
-              </label> */}
-              <input
-                {...register("number", validationRules.number)}
-                type="number"
-                placeholder="Enter Your Number"
-                className={`bg-[#ECEFF4] rounded-lg w-full p-3 focus:outline-2 transition-all duration-0 font-2 ${errors.email
-                    ? "outline-red-500 border-red-500"
-                    : "outline-[#2178B5] hover:outline-2"
-                  }`}
-                disabled={isSubmitting}
-              />
-              {errors.number && (
-                <span className="text-red-500 text-xs mt-1 ml-1">
-                  {errors.number.message}
-                </span>
-              )}
-            </div>
-
-            {/* Message Textarea */}
-            <div className="flex flex-col">
-              {/* <label
-                htmlFor="companyname"
-                className="text-sm font-medium text-gray-700"
-              >
-                Message 
-              </label> */}
-
-              <textarea
-                {...register("message")}
-                placeholder="Enter Your Message"
-                className={`bg-[#ECEFF4] rounded-lg w-full p-3 overflow-auto h-24 max-h-32 resize-none transition-all duration-0  font-3 ${errors.message
-                    ? "outline-red-500 border-red-500"
-                    : "outline-[#2178B5] hover:outline-2"
-                  }`}
-                disabled={isSubmitting}
-              />
-              {errors?.message && (
-                <span className="text-red-500 text-xs mt-1 ml-1">
-                  {errors?.message?.message}
-                </span>
-              )}
-            </div>
-
-            {/* Submit Button */}
-            <div className="flex justify-center">
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className={`custom-btn w-full text-center font-2 !py-3  transition-shadow duration-300  ${isSubmitting
-                    ? "opacity-50 cursor-not-allowed"
-                    : "hover:transform "
-                  }`}
-                style={{ fontFamily: "" }}
-              >
-                {isSubmitting ? (
-                  <div className="flex items-center justify-center gap-2">
-                    <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                    Sending...
-                  </div>
-                ) : (
-                  "Submit"
+          {!showOtpForm && (
+            <form
+              onSubmit={handleSubmit(onSubmit)}
+              className="flex flex-col gap-4 font-3 "
+            >
+              {/* Name Input */}
+              <div className="flex flex-col ">
+                <input
+                  {...register("name", validationRules.name)}
+                  id="fullName"
+                  placeholder="Enter Your Full Name"
+                  className={`bg-[#ECEFF4] rounded-lg w-full p-3 focus:outline-2 transition-all duration-0 font-2 ${errors.name
+                      ? "outline-red-500 border-red-500"
+                      : "outline-[#2178B5] hover:outline-2"
+                    }`}
+                  disabled={isSubmitting}
+                />
+                {errors.name && (
+                  <span className="text-red-500 text-xs mt-1 ml-1">
+                    {errors.name.message}
+                  </span>
                 )}
-              </button>
+              </div>
+
+              {/*Company Name Input */}
+              <div className="flex flex-col ">
+                <input
+                  {...register("companyName", validationRules.companyName)}
+                  id="companyName"
+                  placeholder="Enter Your Company Name"
+                  className={`bg-[#ECEFF4] rounded-lg w-full p-3 focus:outline-2 transition-all duration-0 font-3 ${errors.companyName
+                      ? "outline-red-500 border-red-500"
+                      : "outline-[#2178B5] hover:outline-2"
+                    }`}
+                  disabled={isSubmitting}
+                />
+                {errors?.companyName && (
+                  <span className="text-red-500 text-xs mt-1 ml-1">
+                    {errors?.companyName?.message}
+                  </span>
+                )}
+              </div>
+
+              {/* Email Input */}
+              <div className="flex flex-col">
+                <input
+                  {...register("email", validationRules.email)}
+                  type="email"
+                  id="email"
+                  placeholder="Enter Your Email"
+                  className={`bg-[#ECEFF4] rounded-lg w-full p-3 focus:outline-2 transition-all duration-0 font-2 ${errors.email
+                      ? "outline-red-500 border-red-500"
+                      : "outline-[#2178B5] hover:outline-2"
+                    }`}
+                  disabled={isSubmitting}
+                />
+                {errors.email && (
+                  <span className="text-red-500 text-xs mt-1 ml-1">
+                    {errors.email.message}
+                  </span>
+                )}
+              </div>
+
+              {/* Number Input */}
+              <div className="flex flex-col ">
+                <input
+                  {...register("number", validationRules.number)}
+                  type="number"
+                  placeholder="Enter Your Number"
+                  className={`bg-[#ECEFF4] rounded-lg w-full p-3 focus:outline-2 transition-all duration-0 font-2 ${errors.number
+                      ? "outline-red-500 border-red-500"
+                      : "outline-[#2178B5] hover:outline-2"
+                    }`}
+                  disabled={isSubmitting}
+                />
+                {errors.number && (
+                  <span className="text-red-500 text-xs mt-1 ml-1">
+                    {errors.number.message}
+                  </span>
+                )}
+              </div>
+
+              {/* Service Type Dropdown - Custom ShadCN component */}
+              <div className="flex flex-col">
+                <Controller
+                  name="serviceType"
+                  control={control}
+                  rules={validationRules.serviceType}
+                  render={({ field }) => (
+                    <ShadcnDropdown
+                      options={serviceOptions}
+                      value={field.value}
+                      onChange={field.onChange}
+                      placeholder="Select a Service"
+                      disabled={isSubmitting}
+                      error={!!errors.serviceType}
+                    />
+                  )}
+                />
+                {errors.serviceType && (
+                  <span className="text-red-500 text-xs mt-1 ml-1">
+                    {errors.serviceType.message}
+                  </span>
+                )}
+              </div>
+
+              {/* Message Textarea */}
+              <div className="flex flex-col">
+                <textarea
+                  {...register("message")}
+                  placeholder="Enter Your Message"
+                  className={`bg-[#ECEFF4] rounded-lg w-full p-3 overflow-auto h-24 max-h-32 resize-none transition-all duration-0 font-3 ${errors.message
+                      ? "outline-red-500 border-red-500"
+                      : "outline-[#2178B5] hover:outline-2"
+                    }`}
+                  disabled={isSubmitting}
+                />
+                {errors?.message && (
+                  <span className="text-red-500 text-xs mt-1 ml-1">
+                    {errors?.message?.message}
+                  </span>
+                )}
+              </div>
+
+              {/* Submit Button */}
+              <div className="flex justify-center">
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className={`custom-btn w-full text-center font-2 !py-3 transition-shadow duration-300 ${isSubmitting
+                      ? "opacity-50 cursor-not-allowed"
+                      : "hover:transform "
+                    }`}
+                >
+                  {isSubmitting ? (
+                    <div className="flex items-center justify-center gap-2">
+                      <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                      Sending...
+                    </div>
+                  ) : (
+                    "Submit"
+                  )}
+                </button>
+              </div>
+            </form>
+          )}
+
+          {showOtpForm && (
+            <div className="flex flex-col items-center gap-6 p-4">
+              <h2 className="font-2 text-xl text-center font-medium font-1">
+
+              </h2>
+              <p className="text-sm text-gray-600 text-center">
+                Please enter the 4-digit OTP sent to your mail.
+              </p>
+
+              <OtpInput
+                value={otp}
+                onChange={setOtp}
+                numInputs={4}
+                renderSeparator={<span className="w-4 "></span>}
+                renderInput={(props) => <input {...props} />}
+                inputStyle={{
+                  width: "3rem",
+                  height: "3rem",
+                  fontSize: "1.5rem",
+                  borderRadius: "0.5rem",
+                  border: "1px solid #2178B5",
+                  backgroundColor: "white",
+                  textAlign: "center",
+                  outline: "none",
+                  transition: "all 0.15s ease",
+                }}
+                containerStyle={{
+                  justifyContent: "center",
+                }}
+              />
+
+              <div className="flex justify-center w-full mt-4">
+                <button
+                  onClick={handleOtpVerify}
+                  disabled={isSubmitting}
+                  className={`custom-btn w-full max-w-xs text-center font-2 !py-3 transition-shadow duration-300 ${isSubmitting
+                      ? "opacity-50 cursor-not-allowed"
+                      : "hover:transform "
+                    }`}
+                >
+                  {isSubmitting ? (
+                    <div className="flex items-center justify-center gap-2">
+                      <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                      Verifying...
+                    </div>
+                  ) : (
+                    "Verify & Submit"
+                  )}
+                </button>
+              </div>
             </div>
-          </form>
+          )}
         </div>
       </div>
       {props?.isMapVisible && (
