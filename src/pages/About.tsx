@@ -1,7 +1,7 @@
 import Mainlayout from "../section/Mainlayout";
 import BgImage from "../assets/About/bgImg.svg";
 import ClientStats from "../section/ClientStats";
-import Image1 from "../assets/WhyChooseUs/male-female-graphic-designers-using-laptop.jpg";
+
 import Contact from "../section/Contact";
 import Image2 from "../assets/AboutSection/vision.jpg"
 import Image3 from "../assets/AboutSection/mission.png"
