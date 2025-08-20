@@ -12,7 +12,7 @@ const About = () => {
 
   useEffect(() => {
     // Text section first
-    const textTimer = setTimeout(() => {
+    const textTimer = setTimeout(() => { 
       setVisibleElements(prev => ({ ...prev, text: true }));
     }, 200);
 
