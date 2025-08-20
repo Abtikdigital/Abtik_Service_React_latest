@@ -360,7 +360,7 @@ const SeedFund = () => {
           >
             <div className="flex flex-col justify-evenly p-4 box-border">
               <h2 className="sub-heading text-white font-1">
-                Startup india certificate
+                Seed Fund India
               </h2>
               <p className="font-3 text-[#C3C3C3]">
                 Empowering Businesses through Comprehensive Solutions From Fund
