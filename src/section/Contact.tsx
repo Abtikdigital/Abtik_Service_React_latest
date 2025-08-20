@@ -7,7 +7,7 @@ import { memo, useState, useRef, useEffect } from "react";
 // Assuming verifyOtp is exported from otpApis
 import { addOtpDetails, verifyOtp } from "../api/otpApis";
 // import Map from "../section/Map";
-
+import isValidIndianNumber from "../utils/validation/isGenuineNumber"
 interface ContactFormData {
   name: string;
   email: string;
@@ -62,8 +62,8 @@ const ShadcnDropdown = ({
         onClick={() => !disabled && setIsOpen(!isOpen)}
         disabled={disabled}
         className={`appearance-none bg-[#ECEFF4] rounded-lg w-full p-3 text-left focus:outline-2 transition-all duration-0 ${error
-            ? "outline-red-500 border-red-500"
-            : "outline-[#2178B5] hover:outline-2"
+          ? "outline-red-500 border-red-500"
+          : "outline-[#2178B5] hover:outline-2"
           } ${disabled ? "cursor-not-allowed opacity-50" : ""
           }  flex justify-between items-center`}
       >
@@ -252,10 +252,12 @@ const Contact = (props: any) => {
     },
     number: {
       required: "* Number is required",
-      pattern: {
-        value: /^[6-9]\d{9}$/, // starts with 6-9 and has 10 digits
-        message: "Enter a valid 10-digit mobile number",
-      },
+      validate: {
+        validIndianNumber: (value: string | number) => {
+          const isValid = isValidIndianNumber(String(value));
+          return isValid || "Please enter a valid Indian mobile number";
+        }
+      }
     },
     companyName: {
       required: "* Company name is required",
@@ -292,8 +294,8 @@ const Contact = (props: any) => {
                   id="fullName"
                   placeholder="Enter Your Full Name"
                   className={`bg-[#ECEFF4] rounded-lg w-full p-3 focus:outline-2 transition-all duration-0 font-2 ${errors.name
-                      ? "outline-red-500 border-red-500"
-                      : "outline-[#2178B5] hover:outline-2"
+                    ? "outline-red-500 border-red-500"
+                    : "outline-[#2178B5] hover:outline-2"
                     }`}
                   disabled={isSubmitting}
                 />
@@ -311,8 +313,8 @@ const Contact = (props: any) => {
                   id="companyName"
                   placeholder="Enter Your Company Name"
                   className={`bg-[#ECEFF4] rounded-lg w-full p-3 focus:outline-2 transition-all duration-0 font-3 ${errors.companyName
-                      ? "outline-red-500 border-red-500"
-                      : "outline-[#2178B5] hover:outline-2"
+                    ? "outline-red-500 border-red-500"
+                    : "outline-[#2178B5] hover:outline-2"
                     }`}
                   disabled={isSubmitting}
                 />
@@ -331,8 +333,8 @@ const Contact = (props: any) => {
                   id="email"
                   placeholder="Enter Your Email"
                   className={`bg-[#ECEFF4] rounded-lg w-full p-3 focus:outline-2 transition-all duration-0 font-2 ${errors.email
-                      ? "outline-red-500 border-red-500"
-                      : "outline-[#2178B5] hover:outline-2"
+                    ? "outline-red-500 border-red-500"
+                    : "outline-[#2178B5] hover:outline-2"
                     }`}
                   disabled={isSubmitting}
                 />
@@ -350,8 +352,8 @@ const Contact = (props: any) => {
                   type="number"
                   placeholder="Enter Your Number"
                   className={`bg-[#ECEFF4] rounded-lg w-full p-3 focus:outline-2 transition-all duration-0 font-2 ${errors.number
-                      ? "outline-red-500 border-red-500"
-                      : "outline-[#2178B5] hover:outline-2"
+                    ? "outline-red-500 border-red-500"
+                    : "outline-[#2178B5] hover:outline-2"
                     }`}
                   disabled={isSubmitting}
                 />
@@ -392,8 +394,8 @@ const Contact = (props: any) => {
                   {...register("message")}
                   placeholder="Enter Your Message"
                   className={`bg-[#ECEFF4] rounded-lg w-full p-3 overflow-auto h-24 max-h-32 resize-none transition-all duration-0 font-3 ${errors.message
-                      ? "outline-red-500 border-red-500"
-                      : "outline-[#2178B5] hover:outline-2"
+                    ? "outline-red-500 border-red-500"
+                    : "outline-[#2178B5] hover:outline-2"
                     }`}
                   disabled={isSubmitting}
                 />
@@ -410,8 +412,8 @@ const Contact = (props: any) => {
                   type="submit"
                   disabled={isSubmitting}
                   className={`custom-btn w-full text-center font-2 !py-3 transition-shadow duration-300 ${isSubmitting
-                      ? "opacity-50 cursor-not-allowed"
-                      : "hover:transform "
+                    ? "opacity-50 cursor-not-allowed"
+                    : "hover:transform "
                     }`}
                 >
                   {isSubmitting ? (
@@ -463,8 +465,8 @@ const Contact = (props: any) => {
                   onClick={handleOtpVerify}
                   disabled={isSubmitting}
                   className={`custom-btn w-full max-w-xs text-center font-2 !py-3 transition-shadow duration-300 ${isSubmitting
-                      ? "opacity-50 cursor-not-allowed"
-                      : "hover:transform "
+                    ? "opacity-50 cursor-not-allowed"
+                    : "hover:transform "
                     }`}
                 >
                   {isSubmitting ? (

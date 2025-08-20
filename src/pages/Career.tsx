@@ -1,7 +1,7 @@
 import { memo, useState } from "react";
 import Mainlayout from "../section/Mainlayout";
 import BgImage from "../assets/Career/bgImg.svg";
-import Image1 from "../assets/Career/male-female-graphic-designers-using-laptop.jpg";
+import Image1 from "../assets/Career/Career.jpg";
 import Contact from "../section/Contact";
 import Logo from "../assets/Logo/Abtik-blue.png";
 // import CareerImage from "../assets/Hero/bgImg.svg";

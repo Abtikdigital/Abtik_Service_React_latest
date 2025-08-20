@@ -4,7 +4,10 @@ import ClientStats from "../section/ClientStats";
 import Image1 from "../assets/WhyChooseUs/male-female-graphic-designers-using-laptop.jpg";
 import Contact from "../section/Contact";
 import Image2 from "../assets/AboutSection/vision.jpg"
-import Image3 from "../assets/AboutSection/mission (1).jpg"
+import Image3 from "../assets/AboutSection/mission.png"
+import WhychooseImage1 from "../assets/AboutSection/business-people-casual-meeting.jpg"
+import WhychooseImage2 from "../assets/AboutSection/modern-equipped-computer-lab.jpg"
+import WhychooseImage3 from "../assets/AboutSection/silhouette-confident-businesspeople.jpg"
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import {
 //   faFacebook,
@@ -241,12 +244,12 @@ const About = () => {
                 index==0?
                 
                 "To become the most trusted growth partner for every small and medium business in India — by making government support, digital transformation, and business compliance simple, accessible, and result-driven. We believe growth should never be limited by lack of guidance or opportunity."
-                :"At Abtik, our mission is to simplify business growth. From government schemes and funding to branding, legal support, and digital services — we handle it all. With 50,000+ businesses served, we’re your trusted partner for turning ideas into impact."
+                :"At Abtik, our mission is to simplify business growth. From government schemes and funding to branding, legal support, and digital services — we handle it all. With 50,000+ businesses served, we’re your trusted partner for turning ideas into impact Empower your business with expert consultancy."
               }
               </p>
               <div>
-            { index== 0?  <img loading="lazy" src={Image2} className="rounded-4xl" />:
-            <img loading="lazy" src={Image3} className="rounded-4xl" />
+            { index== 0?  <img loading="lazy" src={Image2} className="rounded-4xl max-h-96 w-full" />:
+            <img loading="lazy" src={Image3} className="rounded-4xl max-h-96 w-full" />
             }
               </div>
             </motion.div>
@@ -307,13 +310,13 @@ const About = () => {
               ) : (
                 <>
                   <div>
-                    <img loading="lazy" src={Image1} className="rounded-4xl" />
+                    <img loading="lazy" src={WhychooseImage1} className="rounded-4xl" />
                   </div>
                   <div>
-                    <img loading="lazy" src={Image1} className="rounded-4xl" />
+                    <img loading="lazy" src={WhychooseImage2} className="rounded-4xl" />
                   </div>
                   <div className="md:col-span-2">
-                    <img loading="lazy" src={Image1} className="rounded-4xl max-h-48 w-full" />
+                    <img loading="lazy" src={WhychooseImage3} className="rounded-4xl max-h-48 w-full" />
                   </div>
                 </>
               )}
