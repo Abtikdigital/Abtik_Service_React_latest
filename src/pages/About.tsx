@@ -310,10 +310,10 @@ const About = () => {
               ) : (
                 <>
                   <div>
-                    <img loading="lazy" src={WhychooseImage1} className="rounded-4xl" />
+                    <img loading="lazy" src={WhychooseImage1} className="rounded-4xl h-full" />
                   </div>
                   <div>
-                    <img loading="lazy" src={WhychooseImage2} className="rounded-4xl" />
+                    <img loading="lazy" src={WhychooseImage2} className="rounded-4xl " />
                   </div>
                   <div className="md:col-span-2">
                     <img loading="lazy" src={WhychooseImage3} className="rounded-4xl max-h-48 w-full" />

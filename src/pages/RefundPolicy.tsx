@@ -510,13 +510,13 @@ const RefundPolicy = () => {
                       className="text-gray-700 font-3"
                     
                     >
-                      <strong>Email:</strong> refund@abtikstartup.com
+                      <strong>Email:</strong> <a href="mailto: info@abtikservices.com"> info@abtikservices.com</a>
                     </p>
                     <p
                       className="text-gray-700 font-3"
                  
                     >
-                      <strong>Phone:</strong> +91-XXXXXXXXXX
+                      <strong>Phone:</strong> <a href="tel:   +91 89281 38434">   +91 89281 38434</a>
                     </p>
                     <p
                       className="text-gray-700 font-3"
@@ -529,7 +529,7 @@ const RefundPolicy = () => {
                       className="text-gray-700 font-3"
                     
                     >
-                      <strong>Address:</strong> [Your Business Address]
+                      <strong>Address:</strong> <a href="https://maps.app.goo.gl/Ft1bFj9a5NQEXo5R7">       313, Patel Ave, Sarkhej - Gandhinagar Hwy, Thaltej, Ahmedabad, Gujarat 380054</a>
                     </p>
                   </div>
                 </div>

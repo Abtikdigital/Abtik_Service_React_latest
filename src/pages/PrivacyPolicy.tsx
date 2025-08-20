@@ -134,7 +134,7 @@ const PrivacyPolicy = () => {
               <div className="inline-flex items-center bg-white px-8 py-4 rounded-full shadow-sm border">
                 <p
                   className="text-sm text-gray-600 font-3"
-                 
+
                 >
                   <strong>Effective Date:</strong> August 4, 2025 |{" "}
                   <strong>Last Updated:</strong> August 4, 2025
@@ -146,13 +146,13 @@ const PrivacyPolicy = () => {
             <div className="bg-white rounded-2xl p-8 shadow-sm mb-8">
               <h2
                 className="text-3xl font-2 sm:text-4xl font-bold text-gray-900 mb-6 text-center"
-                
+
               >
                 Introduction
               </h2>
               <p
                 className="text-lg font-3 text-gray-700 leading-relaxed text-center max-w-3xl mx-auto"
-             
+
               >
                 Welcome to{" "}
                 <strong>Abtik Startup Advisor Private Limited</strong> ("we,"
@@ -170,7 +170,7 @@ const PrivacyPolicy = () => {
               <div className="bg-white rounded-2xl p-8 shadow-sm">
                 <h2
                   className="text-2xl font-2 sm:text-3xl font-bold text-gray-900 mb-6"
-                 
+
                 >
                   1. Information We Collect
                 </h2>
@@ -179,20 +179,20 @@ const PrivacyPolicy = () => {
                   <div>
                     <h3
                       className="text-xl font-2 font-semibold text-gray-800 mb-3"
-                  
+
                     >
                       1.1 Personal Information
                     </h3>
                     <p
                       className="text-gray-700 font-3 leading-relaxed mb-4"
-                    
+
                     >
                       We may collect personal information that you voluntarily
                       provide to us, including:
                     </p>
                     <ul
                       className="list-disc pl-6 font-3 text-gray-700 space-y-2"
-                 
+
                     >
                       <li>
                         Full name and contact details (email address, phone
@@ -210,19 +210,19 @@ const PrivacyPolicy = () => {
                   <div>
                     <h3
                       className="text-xl font-semibold font-2 text-gray-800 mb-3"
-                      
+
                     >
                       1.2 Automatically Collected Information
                     </h3>
                     <p
                       className="text-gray-700 font-3 leading-relaxed mb-4"
-                  
+
                     >
                       When you visit our website, we may automatically collect:
                     </p>
                     <ul
                       className="list-disc pl-6 font-3 text-gray-700 space-y-2"
-                    
+
                     >
                       <li>IP address and device information</li>
                       <li>Browser type and version</li>
@@ -238,20 +238,20 @@ const PrivacyPolicy = () => {
               <div className="bg-white rounded-2xl p-8 shadow-sm">
                 <h2
                   className="text-2xl font-2 sm:text-3xl font-bold text-gray-900 mb-6"
-                 
+
                 >
                   2. How We Use Your Information
                 </h2>
                 <p
                   className="text-gray-700  font-3 leading-relaxed mb-4"
-         
+
                 >
                   We use the information we collect for various purposes,
                   including:
                 </p>
                 <ul
                   className="list-disc pl-6 font-3 text-gray-700 space-y-2"
-                 
+
                 >
                   <li>
                     <strong>Service Delivery:</strong> To provide, maintain, and
@@ -284,13 +284,13 @@ const PrivacyPolicy = () => {
               <div className="bg-white rounded-2xl p-8 shadow-sm">
                 <h2
                   className="text-2xl font-2 sm:text-3xl font-bold text-gray-900 mb-6"
-                  
+
                 >
                   3. Information Sharing and Disclosure
                 </h2>
                 <p
                   className="text-gray-700 leading-relaxed mb-4 font-3"
-                 
+
                 >
                   We do not sell, trade, or rent your personal information to
                   third parties. We may share your information only in the
@@ -298,7 +298,7 @@ const PrivacyPolicy = () => {
                 </p>
                 <ul
                   className="list-disc pl-6 text-gray-700 space-y-2 font-3"
-                
+
                 >
                   <li>
                     <strong>Service Providers:</strong> With trusted third-party
@@ -327,13 +327,13 @@ const PrivacyPolicy = () => {
               <div className="bg-white rounded-2xl p-8 shadow-sm">
                 <h2
                   className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 font-2"
-                 
+
                 >
                   4. Data Security
                 </h2>
                 <p
                   className="text-gray-700 leading-relaxed mb-4 font-3"
-                  
+
                 >
                   We implement appropriate technical and organizational security
                   measures to protect your personal information against
@@ -342,7 +342,7 @@ const PrivacyPolicy = () => {
                 </p>
                 <ul
                   className="list-disc pl-6 text-gray-700 space-y-2 font-3"
-                  
+
                 >
                   <li>Encryption of sensitive data in transit and at rest</li>
                   <li>Regular security assessments and updates</li>
@@ -355,20 +355,20 @@ const PrivacyPolicy = () => {
               <div className="bg-white rounded-2xl p-8 shadow-sm">
                 <h2
                   className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 font-2"
-              
+
                 >
                   5. Your Rights and Choices
                 </h2>
                 <p
                   className="text-gray-700 leading-relaxed mb-4 font-3"
-                 
+
                 >
                   You have the following rights regarding your personal
                   information:
                 </p>
                 <ul
                   className="list-disc pl-6 text-gray-700 space-y-2 font-3"
-        
+
                 >
                   <li>
                     <strong>Access:</strong> Request access to your personal
@@ -401,13 +401,13 @@ const PrivacyPolicy = () => {
               <div className="bg-white rounded-2xl p-8 shadow-sm">
                 <h2
                   className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 font-2"
-               
+
                 >
                   6. Cookies and Tracking Technologies
                 </h2>
                 <p
                   className="text-gray-700 leading-relaxed font-3"
-              
+
                 >
                   We use cookies and similar tracking technologies to enhance
                   your browsing experience, analyze website traffic, and
@@ -421,13 +421,13 @@ const PrivacyPolicy = () => {
               <div className="bg-white rounded-2xl p-8 shadow-sm">
                 <h2
                   className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 font-2"
-        
+
                 >
                   7. Data Retention
                 </h2>
                 <p
                   className="text-gray-700 leading-relaxed font-3"
-                  
+
                 >
                   We retain your personal information only for as long as
                   necessary to fulfill the purposes outlined in this Privacy
@@ -441,13 +441,13 @@ const PrivacyPolicy = () => {
               <div className="bg-white rounded-2xl p-8 shadow-sm">
                 <h2
                   className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 font-2"
-           
+
                 >
                   8. Contact Us
                 </h2>
                 <p
                   className="text-gray-700 leading-relaxed mb-6 font-3"
-            
+
                 >
                   If you have any questions, concerns, or requests regarding
                   this Privacy Policy or our data practices, please contact us:
@@ -456,27 +456,27 @@ const PrivacyPolicy = () => {
                   <div className="text-center space-y-2">
                     <p
                       className="text-gray-700 font-semibold font-3"
-                 
+
                     >
                       <strong>Abtik Startup Advisor Private Limited</strong>
                     </p>
                     <p
                       className="text-gray-700 font-3"
-                      
+
                     >
-                      <strong>Email:</strong> privacy@abtikstartup.com
+                      <strong>Email:</strong> <a href="mailto:info@abtikservices.com"> info@abtikservices.com</a>
                     </p>
                     <p
                       className="text-gray-700 font-3"
-                   
+
                     >
-                      <strong>Phone:</strong> +91-XXXXXXXXXX
+                      <strong>Phone:</strong><a href="tel:+91 89281 38434">   +91 89281 38434</a>
                     </p>
                     <p
                       className="text-gray-700 font-3"
-                     
+
                     >
-                      <strong>Address:</strong> [Your Business Address]
+                      <strong>Address:</strong> <a href="https://maps.app.goo.gl/Ft1bFj9a5NQEXo5R7">       313, Patel Ave, Sarkhej - Gandhinagar Hwy, Thaltej, Ahmedabad, Gujarat 380054</a>
                     </p>
                   </div>
                 </div>
@@ -486,13 +486,13 @@ const PrivacyPolicy = () => {
               <div className="bg-white rounded-2xl p-8 shadow-sm">
                 <h2
                   className="text-2xl sm:text-3xl font-2 font-bold text-gray-900 mb-6"
-              
+
                 >
                   9. Compliance and Jurisdiction
                 </h2>
                 <p
                   className="text-gray-700 leading-relaxed font-3"
-                 
+
                 >
                   This Privacy Policy is governed by the laws of India and
                   complies with applicable data protection regulations including
@@ -509,7 +509,7 @@ const PrivacyPolicy = () => {
               <div className="bg-gradient-to-r from-[#3CA2E2] to-[#052EAA] p-6 rounded-2xl">
                 <p
                   className="text-white text-sm font-3"
-                 
+
                 >
                   By using our services, you acknowledge that you have read and
                   understood this Privacy Policy and agree to our data practices
