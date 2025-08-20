@@ -93,7 +93,7 @@ const BlogSection = () => {
         className="paragraph text-center font-2"
 
       >
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, qui.
+      Explore expert insights, tips, and updates to grow your business with ease.
       </p>
       <div className={`grid ${cols === 1 ? 'grid-cols-1' : 'md:grid-cols-4'} gap-6`}>
         {blogs.slice(0, itemsToShow).map((blog, index) => (
