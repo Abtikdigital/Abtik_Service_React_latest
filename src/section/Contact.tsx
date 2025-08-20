@@ -105,7 +105,7 @@ const Contact = (props: any) => {
   const [showOtpForm, setShowOtpFrom] = useState(false);
   const [otp, setOtp] = useState("");
   // State to hold the data from the first form to use in OTP verification
-  const [contactPayload, setContactPayload] = useState<ContactFormData | null>(
+  const [, setContactPayload] = useState<ContactFormData | null>(
     null
   );
 

@@ -6,7 +6,7 @@ import {
     Mail,
     User,
     Phone,
-    Headset,
+    // Headset,
     ArrowUpRight,
     ArrowRight,
     CheckCircle,

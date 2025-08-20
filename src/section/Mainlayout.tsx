@@ -160,7 +160,7 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
   // OTP related states
   const [showOtpForm, setShowOtpForm] = useState(false);
   const [otp, setOtp] = useState("");
-  const [contactPayload, setContactPayload] = useState<FormData | null>(null);
+  const [, setContactPayload] = useState<FormData | null>(null);
 
   const {
     register,
@@ -232,6 +232,7 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
   // Initial form submission to get OTP
   const onSubmit = async (data: FormData) => {
     try {
+      
       // Map form data to match API expectations
       const apiData = {
         name: data.name,
@@ -245,6 +246,7 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
       const res = await addOtpDetails({ contactData: apiData });
       
       if (res?.status === 201) {
+        
         setContactPayload(data); // Save form data for the next step
         setShowOtpForm(true); // Show the OTP form
         showSwal({

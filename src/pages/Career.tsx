@@ -4,7 +4,7 @@ import BgImage from "../assets/Career/bgImg.svg";
 import Image1 from "../assets/Career/male-female-graphic-designers-using-laptop.jpg";
 import Contact from "../section/Contact";
 import Logo from "../assets/Logo/Abtik-blue.png";
-import CareerImage from "../assets/Hero/bgImg.svg";
+// import CareerImage from "../assets/Hero/bgImg.svg";
 import { addApplication } from "../api/careerApi";
 import {
   MapPin,
@@ -25,7 +25,7 @@ import { useDispatch } from "react-redux";
 import { useRef } from "react";
 import { HeadProvider, Meta, Title } from "react-head";
 import seoData from "../data/seoData.json";
-import axios from "axios";
+// import axios from "axios";
 import Swal from "sweetalert2";
 
 const Career = () => {
