@@ -48,7 +48,7 @@ const Career = () => {
       experience: "Fresher",
       location: "Ahmedabad, India",
       type: "Full-time",
-      skills: ["Cold Calling ", "CRM", " Presentation Skills ", " Client Follow-up", " Communication"],
+      skills: ["Cold Calling", "CRM", " Presentation Skills", " Client Follow-up", " Communication"],
     },
     {
       title: "BDM",
@@ -70,7 +70,7 @@ const Career = () => {
       experience: "Fresher",
       location: "Ahmedabad, India",
       type: "Full-time",
-      skills: ["Recruitment", " Communication", "MS Office", " Coordination", " Time Management"],
+      skills: ["Recruitment","Coordination","MS Office", " Coordination", " Time Management"],
     },
   ];
 
@@ -618,7 +618,7 @@ const Career = () => {
               >
                 {/* Header with Logo */}
                 <div className="bg-gradient-to-r text-white  font-3 heading from-[#052EAA] to-[#3CA2E2] p-4 flex items-center justify-center w-full rounded-t-lg flex-shrink-0">
-               Career
+                  Career
                 </div>
 
                 {/* Close Button */}
