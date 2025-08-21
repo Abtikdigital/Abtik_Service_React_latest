@@ -637,7 +637,7 @@ const Career = () => {
                       loading="lazy"
                       src={Logo}
                       alt="Career Visual"
-                      className="rounded-xl w-full h-48 md:h-full max-h-[200px] md:max-h-[200px] md:max-w-[200px]"
+                      className="rounded-xl max-w-full h-48 md:h-full max-h-[200px] md:max-h-[200px] md:max-w-[200px]"
                     />
                   </div>
 

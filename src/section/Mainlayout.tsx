@@ -226,13 +226,21 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
     companyname: {
       required: "* Company name is required",
     },
-   
+  };
+
+  // Helper function to clear all form states and token
+  const resetAllStates = () => {
+    reset();
+    setOtp("");
+    setShowOtpForm(false);
+    setContactPayload(null);
+    // Clear token from localStorage
+    localStorage.removeItem('otpToken');
   };
 
   // Initial form submission to get OTP
   const onSubmit = async (data: FormData) => {
     try {
-      
       // Map form data to match API expectations
       const apiData = {
         name: data.name,
@@ -246,10 +254,15 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
       const res = await addOtpDetails({ contactData: apiData });
       
       if (res?.status === 201) {
+        // Store the token in localStorage
+        if (res?.data?.token) {
+          localStorage.setItem('otpToken', JSON.stringify(res.data.token));
+        }
         
         setContactPayload(data); // Save form data for the next step
         setShowOtpForm(true); // Show the OTP form
-        showSwal({
+        
+        await showSwal({
           icon: "success",
           title: "OTP Sent!",
           text: res?.data?.message || "An OTP has been sent to your contact number.",
@@ -257,29 +270,33 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
           scrollbarPadding: false,
         });
       } else {
-        showSwal({
+        await showSwal({
           icon: "error",
           title: "Error",
           text: res?.data?.message || "Could not send OTP. Please try again.",
           confirmButtonColor: "#052EAA",
           scrollbarPadding: false,
         });
+        // Clear token on error
+        localStorage.removeItem('otpToken');
       }
     } catch (error: any) {
-      showSwal({
+      await showSwal({
         icon: "error",
         title: "Submission Error",
         text: error?.response?.data?.message || "An unexpected error occurred.",
         confirmButtonColor: "#052EAA",
         scrollbarPadding: false,
       });
+      // Clear token on error
+      localStorage.removeItem('otpToken');
     }
   };
 
   // Handle OTP verification
   const handleOtpVerify = async () => {
     if (otp.length !== 4) {
-      showSwal({
+      await showSwal({
         icon: "warning",
         title: "Invalid OTP",
         text: "Please enter a valid 4-digit OTP.",
@@ -289,54 +306,82 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
       return;
     }
 
+    // Get the token from localStorage
+    const token = localStorage.getItem('otpToken');
+    if (!token) {
+      await showSwal({
+        icon: "error",
+        title: "Session Expired",
+        text: "Your session has expired. Please start over.",
+        confirmButtonColor: "#052EAA",
+        scrollbarPadding: false,
+      });
+      // Reset to initial form
+      resetAllStates();
+      closeModal();
+      return;
+    }
+
     try {
       const verificationData = {
         enteredOtp: otp,
+        token: JSON.parse(token),
       };
 
       const res = await verifyOtp(verificationData);
       
       if (res?.status === 201) {
-        showSwal({
+        await showSwal({
           icon: "success",
           title: "Thank You For Contacting Us!",
           text: res?.data?.message || "Your details have been verified successfully.",
           confirmButtonColor: "#052EAA",
           scrollbarPadding: false,
         });
-        // Reset all states and form on final success
-        reset();
-        setOtp("");
-        setShowOtpForm(false);
-        setContactPayload(null);
+        // Reset all states and form after successful verification
+        resetAllStates();
         closeModal();
       } else {
-        showSwal({
+        await showSwal({
           icon: "error",
           title: "Verification Failed",
           text: res?.data?.message || "The OTP you entered is incorrect. Please try again.",
           confirmButtonColor: "#052EAA",
           scrollbarPadding: false,
         });
+        // Clear only OTP, keep form and token for retry
+        setOtp("");
       }
     } catch (error: any) {
-      showSwal({
-        icon: "error",
-        title: "Verification Error",
-        text: error?.response?.data?.message || "An error occurred during verification.",
-        confirmButtonColor: "#052EAA",
-        scrollbarPadding: false,
-      });
+      // If token is invalid, clear it and redirect to initial form
+      if (error?.response?.data?.message === "Invalid Token") {
+        await showSwal({
+          icon: "error",
+          title: "Session Expired",
+          text: "Your session has expired. Please start over.",
+          confirmButtonColor: "#052EAA",
+          scrollbarPadding: false,
+        });
+        resetAllStates();
+        closeModal();
+      } else {
+        await showSwal({
+          icon: "error",
+          title: "Verification Error",
+          text: error?.response?.data?.message || "An error occurred during verification.",
+          confirmButtonColor: "#052EAA",
+          scrollbarPadding: false,
+        });
+        // Clear only OTP for retry
+        setOtp("");
+      }
     }
   };
 
   const closeModal = () => {
     dispatch({ type: "close" });
     // Reset OTP states when closing modal
-    setShowOtpForm(false);
-    setOtp("");
-    setContactPayload(null);
-    reset();
+    resetAllStates();
   };
 
   // Handle backdrop click - only close if not on OTP form
@@ -346,7 +391,7 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
     }
   };
 
-  // Add CSS for SweetAlert z-index
+  // Add CSS for SweetAlert z-index and cleanup token on unmount
   useEffect(() => {
     const style = document.createElement('style');
     style.textContent = `
@@ -361,6 +406,8 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
     
     return () => {
       document.head.removeChild(style);
+      // Clean up token when component unmounts
+      localStorage.removeItem('otpToken');
     };
   }, []);
 
@@ -379,7 +426,7 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
             initial="hidden"
             animate="visible"
             exit="hidden"
-            onClick={handleBackdropClick} // Modified to use custom handler
+            onClick={handleBackdropClick}
           >
             <motion.div
               className="relative bg-white rounded-lg shadow-xl w-full max-w-4xl flex flex-col max-h-[100vh] md:max-h-[90vh]"
@@ -409,7 +456,7 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
                   <img
                     src={Image}
                     alt="Contact Visual"
-                    className="rounded-xl w-full h-48 md:h-full max-h-[200px] md:max-h-[200px] md:max-w-[200px]"
+                    className="rounded-xl  max-w-full md:h-full max-h-[200px] md:max-h-[200px] md:max-w-[200px]"
                   />
                 </div>
 
