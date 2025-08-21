@@ -1,7 +1,7 @@
 import Mainlayout from "../section/Mainlayout";
 import BgImage from "../assets/Hero/bgImg.svg";
 import Contact from "../section/Contact";
-import Image1 from "../assets/CGTMSE/Image1.webp"; // Placeholder, can be replaced with a relevant image
+import Image1 from "../assets/TaxExemption/Tax.jpeg"; // Placeholder, can be replaced with a relevant image
 import {
     Mail,
     User,
