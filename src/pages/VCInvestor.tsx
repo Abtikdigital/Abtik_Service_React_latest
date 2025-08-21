@@ -11,7 +11,7 @@ import {
     ArrowRight,
     CheckCircle,
     FileText,
-    DollarSign,
+    IndianRupee ,
     TrendingUp,
     Users,
     Shield,
@@ -164,7 +164,7 @@ const VentureCapital = () => {
     };
     const benefitsData = [
         {
-            icon: DollarSign,
+            icon: IndianRupee ,
             title: "Large-Scale Funding",
             description:
                 "Access significant capital from ₹1 crore upwards through VC firms for accelerating growth and scaling operations.",

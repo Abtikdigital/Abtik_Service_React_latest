@@ -12,7 +12,7 @@ import {
     ArrowRight,
     CheckCircle,
     FileText,
-    DollarSign,
+    IndianRupee ,
     TrendingUp,
     Users,
 
@@ -166,7 +166,7 @@ const Overdraft = () => {
     };
     const benefitsData = [
         {
-            icon: DollarSign,
+            icon: IndianRupee ,
             title: "Instant Access to Funds",
             description:
                 "Get immediate access to funds up to ₹5 crore overdraft limit without any prior approval, providing instant liquidity for emergencies and opportunities.",

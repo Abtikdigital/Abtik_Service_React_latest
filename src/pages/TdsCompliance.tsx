@@ -10,7 +10,7 @@ import {
   ArrowRight,
   CheckCircle,
   FileText,
-  DollarSign,
+  IndianRupee ,
   TrendingUp,
   Users,
   Shield,
@@ -166,7 +166,7 @@ const TDCompliance = () => {
         "On-time deduction, deposit, and returns assure no interest, late fee, or prosecution under the Income Tax Act.",
     },
     {
-      icon: DollarSign,
+      icon: IndianRupee ,
       title: "Expense Allowability",
       description:
         "Only TDS-compliant expenses are allowed as business deductions—our process ensures you don't lose deductions.",

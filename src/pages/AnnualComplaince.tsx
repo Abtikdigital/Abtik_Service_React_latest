@@ -10,7 +10,7 @@ import {
   ArrowRight,
   CheckCircle,
   FileText,
-  DollarSign,
+  IndianRupee ,
   TrendingUp,
   Users,
   Shield,
@@ -166,7 +166,7 @@ const AnnualCompliance = () => {
         "Avoid late fees, director disqualification, and company strike off with timely, accurate annual filings.",
     },
     {
-      icon: DollarSign,
+      icon: IndianRupee ,
       title: "Attract Investment & Bank Funding",
       description:
         "Proper compliance/filings open access to credit, grants, and investor due diligence for growth.",

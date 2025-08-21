@@ -12,7 +12,7 @@ import {
     ArrowRight,
     CheckCircle,
     FileText,
-    DollarSign,
+    IndianRupee ,
     TrendingUp,
     Users,
 
@@ -166,7 +166,7 @@ const NAIFFAIFF = () => {
     };
     const benefitsData = [
         {
-            icon: DollarSign,
+            icon: IndianRupee ,
             title: "₹50L to ₹50Cr Investment",
             description:
                 "Access substantial equity funding ranging from ₹50 lakh to ₹50 crore for scaling your business operations and market expansion.",

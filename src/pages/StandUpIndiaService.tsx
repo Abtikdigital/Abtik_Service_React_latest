@@ -12,7 +12,7 @@ import {
     ArrowRight,
     CheckCircle,
     FileText,
-    DollarSign,
+    IndianRupee ,
     TrendingUp,
     Users,
 
@@ -166,7 +166,7 @@ const StandUpIndia = () => {
     };
     const benefitsData = [
         {
-            icon: DollarSign,
+            icon: IndianRupee ,
             title: "₹10 Lakh to ₹1 Crore Loan",
             description:
                 "Access composite loans ranging from ₹10 lakh to ₹1 crore for establishing greenfield enterprises in manufacturing, services, or trading.",

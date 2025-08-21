@@ -12,7 +12,7 @@ import {
     ArrowRight,
     CheckCircle,
     FileText,
-    DollarSign,
+    IndianRupee ,
     TrendingUp,
     Users,
 
@@ -166,7 +166,7 @@ const BusinessLoan = () => {
     };
     const benefitsData = [
         {
-            icon: DollarSign,
+            icon: IndianRupee ,
             title: "Flexible Loan Amounts",
             description:
                 "Access business loans from ₹1 lakh to ₹50 crore with both secured and unsecured options to meet diverse business funding requirements.",

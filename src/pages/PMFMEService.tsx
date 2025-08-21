@@ -12,7 +12,7 @@ import {
     ArrowRight,
     CheckCircle,
     FileText,
-    DollarSign,
+    IndianRupee ,
     TrendingUp,
     Users,
 
@@ -166,7 +166,7 @@ const PMFME = () => {
     };
     const benefitsData = [
         {
-            icon: DollarSign,
+            icon: IndianRupee ,
             title: "Up to ₹10 Lakh Funding",
             description:
                 "Access credit-linked subsidy up to ₹10 lakh for individual beneficiaries and comprehensive support for food processing ventures.",

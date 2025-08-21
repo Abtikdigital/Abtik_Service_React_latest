@@ -12,7 +12,7 @@ import {
     ArrowRight,
     CheckCircle,
     FileText,
-    DollarSign,
+    IndianRupee ,
     TrendingUp,
     Users,
 
@@ -166,7 +166,7 @@ const ProjectFunding = () => {
     };
     const benefitsData = [
         {
-            icon: DollarSign,
+            icon: IndianRupee ,
             title: "Large Funding Capacity",
             description:
                 "Access substantial project funding from ₹1 crore to ₹500 crore or more with structured disbursement linked to project milestones and implementation progress.",

@@ -10,7 +10,7 @@ import {
   ArrowRight,
   CheckCircle,
   FileText,
-  DollarSign,
+  IndianRupee ,
   TrendingUp,
   Users,
   Shield,
@@ -166,7 +166,7 @@ const ProducerCompanyRegistration = () => {
         "Farmers, artisans, or producers can pool resources for better market prices, procurement, and bargaining.",
     },
     {
-      icon: DollarSign,
+      icon: IndianRupee ,
       title: "Loans, Subsidies, Grants",
       description:
         "Easy access to NABARD, SFAC, and government schemes, plus preference in agri-business loans.",

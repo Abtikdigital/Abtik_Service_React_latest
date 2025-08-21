@@ -12,7 +12,7 @@ import {
     ArrowRight,
     CheckCircle,
     FileText,
-    DollarSign,
+    IndianRupee ,
     TrendingUp,
     Users,
 
@@ -166,7 +166,7 @@ const LoanAgainstProperty = () => {
     };
     const benefitsData = [
         {
-            icon: DollarSign,
+            icon: IndianRupee ,
             title: "Up to ₹15 Crore Funding",
             description:
                 "Access substantial funding up to ₹15 crore by leveraging your property value, with loan amounts up to 80% of property's market value.",

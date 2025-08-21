@@ -10,7 +10,7 @@ import {
   ArrowRight,
   CheckCircle,
   FileText,
-  DollarSign,
+  IndianRupee ,
   TrendingUp,
   Users,
   Shield,
@@ -166,7 +166,7 @@ const SoleProprietorRegistration = () => {
         "Start instantly, perfect for freelancers, traders, shopkeepers, and professionals.",
     },
     {
-      icon: DollarSign,
+      icon: IndianRupee ,
       title: "Lowest Compliance Cost",
       description:
         "No audit up to ₹1 crore turnover, no yearly corporate filings, and simple tax return.",

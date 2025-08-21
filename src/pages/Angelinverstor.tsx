@@ -11,7 +11,7 @@ import {
     ArrowRight,
     CheckCircle,
     FileText,
-    DollarSign,
+    IndianRupee ,
     TrendingUp,
     Users,
     Shield,
@@ -171,7 +171,7 @@ const AngelInvestor = () => {
     };
     const benefitsData = [
         {
-            icon: DollarSign,
+            icon: IndianRupee ,
             title: "Flexible Investment Amounts",
             description:
                 "Access funding from ₹5 lakh to ₹5 crore per startup through angel investors for scaling your innovation and business operations.",

@@ -12,7 +12,7 @@ import {
   ArrowRight,
   CheckCircle,
   FileText,
-  DollarSign,
+  IndianRupee,
   TrendingUp,
   Users,
   Lightbulb,
@@ -170,7 +170,7 @@ const SeedFund = () => {
   };
   const benefitsData = [
     {
-      icon: DollarSign,
+      icon: IndianRupee,
       title: "Up to ₹70 Lakh Funding",
       description:
         "Access combined funding of up to ₹50 lakh debt and ₹20 lakh grant to transform your business idea into reality.",

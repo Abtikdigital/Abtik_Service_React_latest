@@ -10,7 +10,7 @@ import {
     ArrowRight,
     CheckCircle,
     FileText,
-    DollarSign,
+    IndianRupee ,
     TrendingUp,
     Users,
     Shield,
@@ -167,7 +167,7 @@ const StartupIndiaCertificate = () => {
     // === Benefits Cards ===
     const benefitsData = [
         {
-            icon: DollarSign,
+            icon: IndianRupee ,
             title: "Tax Exemption",
             description: "3-year income tax holiday and capital gains exemptions for eligible recognized startups.",
         },

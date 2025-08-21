@@ -10,7 +10,7 @@ import {
   ArrowRight,
   CheckCircle,
   FileText,
-  DollarSign,
+  IndianRupee ,
   TrendingUp,
   Users,
   Shield,
@@ -167,7 +167,7 @@ const ISOCertificate = () => {
         "ISO certification is essential for many government and export tenders, building national and global customer trust.",
     },
     {
-      icon: DollarSign,
+      icon: IndianRupee ,
       title: "Cost & Process Efficiency",
       description:
         "Standardized processes save money, reduce errors, and drive continuous improvement across all operations.",

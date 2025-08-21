@@ -10,7 +10,7 @@ import {
   ArrowRight,
   CheckCircle,
   FileText,
-  DollarSign,
+  IndianRupee ,
   TrendingUp,
   Users,
   Shield,
@@ -166,7 +166,7 @@ const TradeLicenseCertificate = () => {
         "Fulfill your city’s legal requirements, operate smoothly, and avoid penalties or closures from authorities.",
     },
     {
-      icon: DollarSign,
+      icon: IndianRupee ,
       title: "Business Credibility",
       description:
         "Build customer and vendor trust—Trade License is mandatory for GST, loans, government contracts, and many services.",

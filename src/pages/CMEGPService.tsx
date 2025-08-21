@@ -12,7 +12,7 @@ import {
     ArrowRight,
     CheckCircle,
     FileText,
-    DollarSign,
+    IndianRupee ,
     TrendingUp,
     Users,
 
@@ -166,7 +166,7 @@ const CMEGP = () => {
     };
     const benefitsData = [
         {
-            icon: DollarSign,
+            icon: IndianRupee ,
             title: "Up to ₹15 Lakh Subsidy",
             description:
                 "Get 15% capital subsidy with maximum ceiling of ₹15 lakh for technology upgradation in your manufacturing unit.",

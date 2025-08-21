@@ -11,7 +11,7 @@ import {
     ArrowRight,
     CheckCircle,
     FileText,
-    DollarSign,
+    IndianRupee ,
     TrendingUp,
     Users,
     Shield,
@@ -164,7 +164,7 @@ const NBFC = () => {
     };
     const benefitsData = [
         {
-            icon: DollarSign,
+            icon: IndianRupee ,
             title: "Flexible Funding Options",
             description:
                 "Access customized loans with higher loan-to-value ratios and competitive rates for personal and business needs.",

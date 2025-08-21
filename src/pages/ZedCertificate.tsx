@@ -10,7 +10,7 @@ import {
     ArrowRight,
     CheckCircle,
     FileText,
-    DollarSign,
+    IndianRupee ,
     TrendingUp,
     Users,
     Shield,
@@ -184,7 +184,7 @@ const ZEDCertificate = () => {
                 "Demonstrate environmental responsibility—reducing energy, waste, and carbon footprint.",
         },
         {
-            icon: DollarSign,
+            icon: IndianRupee ,
             title: "Access to Cheaper Credit",
             description:
                 "Banks/NBFCs recognize ZED for faster loans and lower interest on working capital.",

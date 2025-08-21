@@ -10,7 +10,7 @@ import {
   ArrowRight,
   CheckCircle,
   FileText,
-  DollarSign,
+  IndianRupee ,
   TrendingUp,
   Users,
   Shield,
@@ -166,7 +166,7 @@ const PartnershipRegistration = () => {
         "No minimum capital, minimal compliance, suitable for professionals and SMEs wanting agility and flexibility.",
     },
     {
-      icon: DollarSign,
+      icon: IndianRupee ,
       title: "Tax Pass-Through",
       description:
         "Firm’s income is taxed once in partners' hands—no double taxation like companies.",

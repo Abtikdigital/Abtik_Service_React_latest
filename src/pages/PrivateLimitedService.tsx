@@ -10,7 +10,7 @@ import {
     ArrowRight,
     CheckCircle,
     FileText,
-    DollarSign,
+    IndianRupee ,
     TrendingUp,
     Users,
     Shield,
@@ -167,7 +167,7 @@ const PvtLtdRegistration = () => {
                 "Protect your personal assets—liability is only to the extent of your shareholding.",
         },
         {
-            icon: DollarSign,
+            icon: IndianRupee ,
             title: "Tax & Funding Advantages",
             description:
                 "Easier to raise VC/angel capital, open company bank accounts, and get Startup India/DPIIT recognition.",

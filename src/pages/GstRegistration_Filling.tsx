@@ -10,7 +10,7 @@ import {
   ArrowRight,
   CheckCircle,
   FileText,
-  DollarSign,
+  IndianRupee ,
   TrendingUp,
   Users,
   Shield,
@@ -166,7 +166,7 @@ const GSTRegistrationFiling = () => {
         "GSTIN enables business expansion anywhere in India, access to supply chains, and eligibility for government contracts.",
     },
     {
-      icon: DollarSign,
+      icon: IndianRupee ,
       title: "Input Tax Credit & Cost Savings",
       description:
         "Save money by claiming set-off on GST paid for purchases, boosting cash flow and profitability.",

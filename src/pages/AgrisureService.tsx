@@ -12,7 +12,7 @@ import {
     ArrowRight,
     CheckCircle,
     FileText,
-    DollarSign,
+    IndianRupee ,
     TrendingUp,
     Users,
 
@@ -166,7 +166,7 @@ const AgriSURE = () => {
     };
     const benefitsData = [
         {
-            icon: DollarSign,
+            icon: IndianRupee ,
             title: "Up to ₹25 Crore Investment",
             description:
                 "Access substantial funding up to ₹25 crore per startup through AgriSURE's ₹750 crore corpus for scaling your agritech innovation and rural enterprise.",

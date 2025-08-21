@@ -12,7 +12,7 @@ import {
     ArrowRight,
     CheckCircle,
     FileText,
-    DollarSign,
+    IndianRupee ,
     TrendingUp,
     Users,
 
@@ -166,7 +166,7 @@ const CGTMSE = () => {
     };
     const benefitsData = [
         {
-            icon: DollarSign,
+            icon: IndianRupee ,
             title: "Up to ₹2 Crore Guarantee",
             description:
                 "Access collateral-free loans up to ₹2 crore with CGTMSE guarantee coverage, eliminating the need for third-party guarantees or collateral security.",

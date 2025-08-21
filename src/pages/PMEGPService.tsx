@@ -12,7 +12,7 @@ import {
     ArrowRight,
     CheckCircle,
     FileText,
-    DollarSign,
+    IndianRupee ,
     TrendingUp,
     Users,
 
@@ -166,7 +166,7 @@ const PMEGP = () => {
     };
     const benefitsData = [
         {
-            icon: DollarSign,
+            icon: IndianRupee ,
             title: "Up to ₹25 Lakh Funding",
             description:
                 "Access funding up to ₹25 lakh for manufacturing and ₹10 lakh for service/trading with attractive subsidy rates.",

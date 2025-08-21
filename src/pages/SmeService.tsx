@@ -12,7 +12,7 @@ import {
     ArrowRight,
     CheckCircle,
     FileText,
-    DollarSign,
+    IndianRupee ,
     TrendingUp,
     Users,
 
@@ -166,7 +166,7 @@ const SMELoan = () => {
     };
     const benefitsData = [
         {
-            icon: DollarSign,
+            icon: IndianRupee ,
             title: "Flexible Loan Amounts",
             description:
                 "Access SME loans from ₹10 lakh to ₹25 crore with flexible loan amounts customized to meet your specific business needs and growth requirements."[23],

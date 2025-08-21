@@ -10,7 +10,7 @@ import {
   ArrowRight,
   CheckCircle,
   FileText,
-  DollarSign,
+  IndianRupee ,
   TrendingUp,
   Users,
   Shield,
@@ -166,7 +166,7 @@ const Section8CompanyRegistration = () => {
         "Section 8 status is the gold standard for NGOs/charities—trusted by donors and regulators.",
     },
     {
-      icon: DollarSign,
+      icon: IndianRupee ,
       title: "Funding and Tax Benefits",
       description:
         "Eligible for major grants, donor gifts, CSR, and (after 12A/80G) tax-exempt income or donations.",

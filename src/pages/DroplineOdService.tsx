@@ -12,7 +12,7 @@ import {
     ArrowRight,
     CheckCircle,
     FileText,
-    DollarSign,
+    IndianRupee ,
 
     Users,
 
@@ -166,7 +166,7 @@ const DroplineOverdraft = () => {
     };
     const benefitsData = [
         {
-            icon: DollarSign,
+            icon: IndianRupee ,
             title: "Structured Debt Reduction",
             description:
                 "Benefit from systematic debt reduction with predetermined dropline schedules that ensure disciplined repayment and lower overall interest burden.",

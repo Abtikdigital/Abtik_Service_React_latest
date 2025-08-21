@@ -10,7 +10,7 @@ import {
   ArrowRight,
   CheckCircle,
   FileText,
-  DollarSign,
+  IndianRupee ,
   TrendingUp,
   Users,
   Shield,
@@ -167,7 +167,7 @@ const LLPRegistration = () => {
         "Personal assets of partners are protected—liability is only up to their capital share.",
     },
     {
-      icon: DollarSign,
+      icon: IndianRupee ,
       title: "Lower Compliance & Cost",
       description:
         "LLPs enjoy lighter compliance and no compulsory audit below ₹40 lakh turnover/₹25 lakh capital.",

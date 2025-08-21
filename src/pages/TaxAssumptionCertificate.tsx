@@ -11,7 +11,7 @@ import {
     ArrowRight,
     CheckCircle,
     FileText,
-    DollarSign,
+    IndianRupee ,
     Shield,
     Banknote,
     Award, // New Icon
@@ -164,7 +164,7 @@ const TaxAssumptionCertificate = () => {
                 "Gain peace of mind with a certificate that provides robust legal protection against unforeseen tax claims post-transaction.",
         },
         {
-            icon: DollarSign,
+            icon: IndianRupee ,
             title: "Enhance Credibility",
             description:
                 "Boost the confidence of buyers, investors, and financial institutions by demonstrating complete fiscal transparency.",

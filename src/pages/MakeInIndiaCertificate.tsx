@@ -10,7 +10,7 @@ import {
   ArrowRight,
   CheckCircle,
   FileText,
-  DollarSign,
+  IndianRupee ,
   TrendingUp,
   Users,
   Shield,
@@ -166,7 +166,7 @@ const MakeInIndiaCertificate = () => {
         "Class-I/II local suppliers get priority and may win government contracts even when not L1.",
     },
     {
-      icon: DollarSign,
+      icon: IndianRupee ,
       title: "Access to Incentives",
       description:
         "Eligible for tax breaks, export incentives, and subsidies reserved for local manufacturers.",

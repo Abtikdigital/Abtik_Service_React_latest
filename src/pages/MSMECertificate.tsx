@@ -10,7 +10,7 @@ import {
   ArrowRight,
   CheckCircle,
   FileText,
-  DollarSign,
+  IndianRupee ,
   TrendingUp,
   Users,
   Shield,
@@ -144,7 +144,7 @@ const MSMECertificate = () => {
         "Collect basic business details (Aadhaar, PAN, type, and turnover/investment levels) to determine MSME eligibility and class.",
     },
     {
-      icon: DollarSign,
+      icon: IndianRupee ,
       title: "Apply Online (Udyam)",
       description:
         "Fill and submit the free MSME application on the Udyam Registration portal. No paperwork or office visits needed.",
@@ -178,7 +178,7 @@ const MSMECertificate = () => {
         "Preference and relaxed norms for government tenders and procurement contracts[4][8].",
     },
     {
-      icon: DollarSign,
+      icon: IndianRupee ,
       title: "Direct Subsidies",
       description:
         "Tax reductions, technology upgradation support, special grants for new and existing MSMEs[8][14].",

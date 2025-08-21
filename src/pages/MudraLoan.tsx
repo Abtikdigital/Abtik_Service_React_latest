@@ -12,7 +12,7 @@ import {
     ArrowRight,
     CheckCircle,
     FileText,
-    DollarSign,
+    IndianRupee ,
     TrendingUp,
     Users,
 
@@ -166,7 +166,7 @@ const MudraLoan = () => {
     };
     const benefitsData = [
         {
-            icon: DollarSign,
+            icon: IndianRupee ,
             title: "Up to ₹10 Lakh Loan",
             description:
                 "Access collateral-free loans ranging from ₹50,000 to ₹10 lakh across Shishu, Kishore, and Tarun categories for your micro enterprise needs.",

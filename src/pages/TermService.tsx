@@ -12,7 +12,7 @@ import {
     ArrowRight,
     CheckCircle,
     FileText,
-    DollarSign,
+    IndianRupee ,
 
     Users,
 
@@ -166,7 +166,7 @@ const TermLoan = () => {
     };
     const benefitsData = [
         {
-            icon: DollarSign,
+            icon: IndianRupee ,
             title: "Flexible Loan Amounts",
             description:
                 "Access term loans from ₹1 lakh to ₹50 crore with flexible loan amounts and competitive interest rates starting from 7.50% per annum."[12],
@@ -352,7 +352,7 @@ const TermLoan = () => {
                     >
                         <div className="flex flex-col justify-evenly p-4 box-border">
                             <h2 className="sub-heading text-white font-1">
-                                Term 
+                                Term Loan
                             </h2>
                             <p className="font-3 text-white">
                                 Empowering Businesses through Comprehensive Solutions From Fund

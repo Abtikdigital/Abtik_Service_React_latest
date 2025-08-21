@@ -12,7 +12,7 @@ import {
     ArrowRight,
     CheckCircle,
     FileText,
-    DollarSign,
+    IndianRupee ,
     TrendingUp,
     Users,
 
@@ -166,7 +166,7 @@ const CashCredit = () => {
     };
     const benefitsData = [
         {
-            icon: DollarSign,
+            icon: IndianRupee ,
             title: "Flexible Credit Limit",
             description:
                 "Access Cash Credit facilities from ₹1 lakh to ₹50 crore with the flexibility to withdraw and repay multiple times within your sanctioned limit.",
