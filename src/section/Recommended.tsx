@@ -153,7 +153,7 @@ const Recommended = () => {
         ))}
       </div>
       {canLoadMore && (
-        <div className="flex justify-center mt-6">
+        <div className="flex justify-center mt-12">
           <button
             className="custom-btn font-2"
             type="button"

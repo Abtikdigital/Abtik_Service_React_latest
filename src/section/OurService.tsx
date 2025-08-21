@@ -159,7 +159,7 @@ const OurService = () => {
           ))}
         </div>
         {canLoadMore && (
-          <div className="flex justify-center mt-10">
+          <div className="flex justify-center mt-12">
             <button
               className="custom-btn"
               type="button"
