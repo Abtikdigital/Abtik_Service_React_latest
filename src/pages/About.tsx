@@ -5,7 +5,7 @@ import ClientStats from "../section/ClientStats";
 import Contact from "../section/Contact";
 import Image2 from "../assets/AboutSection/vision.jpg"
 import Image3 from "../assets/AboutSection/mission.png"
-import WhychooseImage1 from "../assets/AboutSection/business-people-casual-meeting.jpg"
+import WhychooseImage1 from "../assets/AboutSection/business-people-talking-each-other (1).jpg"
 import WhychooseImage2 from "../assets/AboutSection/modern-equipped-computer-lab.jpg"
 import WhychooseImage3 from "../assets/AboutSection/silhouette-confident-businesspeople.jpg"
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
