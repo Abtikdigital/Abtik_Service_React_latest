@@ -4,7 +4,7 @@ import Image2 from "../assets/OurService/startupindia.png";
 import Image3 from "../assets/OurService/msmecertificate.jpeg";
 import Image4 from "../assets/OurService/seed.jpeg";
 import Image5 from "../assets/TradeMark/Trademark.jpg";
-import Image6 from "../assets/OurService/iso.jpeg";
+import Image6 from "../assets/OurService/iso.png";
 import Image7 from "../assets/OurService/zed.jpeg";
 import Image8 from "../assets/OurService/pmegp.jpeg";
 import { motion, useInView } from "framer-motion";
