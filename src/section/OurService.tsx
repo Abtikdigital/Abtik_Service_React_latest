@@ -3,7 +3,7 @@ import Image1 from "../assets/Grants/goverment grants.jpg";
 import Image2 from "../assets/OurService/starup.jpg";
 import Image3 from "../assets/OurService/msme.jpeg";
 import Image4 from "../assets/OurService/seed.jpeg";
-import Image5 from "../assets/OurService/trademark.jpeg";
+import Image5 from "../assets/TradeMark/Trademark.jpg";
 import Image6 from "../assets/OurService/iso.jpeg";
 import Image7 from "../assets/OurService/zed.jpeg";
 import Image8 from "../assets/OurService/pmegp.jpeg";
