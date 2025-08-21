@@ -57,7 +57,7 @@ const About = () => {
            <p className="paragraph font-2"
          
           >
-           From government grants and MSME loans to providing strategic aid in working capital finance, digital attendance, legal compliance and IP protection - we simplify the journey of business building. Our team of experienced experts has already assisted more than 50,000 client PAN-India, including 6,500+ recognized startups to convert their ambitions into reality.
+           From government grants and MSME loans to providing strategic aid in working capital finance, digital attendance, legal compliance and IP protection - we simplify the journey of business building. Our team of experienced experts has already assisted more than 40,000 client PAN-India, including 6,500+ recognized startups to convert their ambitions into reality.
            </p>
            <p className="paragraph font-2"
           
