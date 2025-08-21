@@ -37,17 +37,17 @@ const TaxAssumptionCertificate = () => {
 
     const faq = [
         {
-            question: "1. What is a Tax Assumption Certificate?",
+            question: "1. What is a Tax Exemption  Certificate?",
             answer:
-                "A Tax Assumption Certificate is an official document verifying that all tax liabilities related to a specific asset or transaction have been settled or formally assumed by another party. It provides legal assurance to all parties involved.",
+                "A Tax Exemption  Certificate is an official document verifying that all tax liabilities related to a specific asset or transaction have been settled or formally assumed by another party. It provides legal assurance to all parties involved.",
         },
         {
-            question: "2. When is a Tax Assumption Certificate required?",
+            question: "2. When is a Tax Exemption  Certificate required?",
             answer:
                 "It is commonly required during major financial transactions like real estate sales, business mergers or acquisitions, and the transfer of inherited assets to ensure a clean transfer of ownership without hidden tax liabilities.",
         },
         {
-            question: "3. Who issues the Tax Assumption Certificate?",
+            question: "3. Who issues the Tax Exemption  Certificate?",
             answer:
                 "The certificate is issued by a certified financial or legal services firm after a thorough due diligence process, which includes reviewing financial records, assessing tax liabilities, and confirming payment or transfer of obligations.",
         },
@@ -137,7 +137,7 @@ const TaxAssumptionCertificate = () => {
             icon: Award,
             title: "Certificate Issuance",
             description:
-                "Upon successful verification, we issue a legally sound Tax Assumption Certificate to secure your transaction.",
+                "Upon successful verification, we issue a legally sound Tax Exemption  Certificate to secure your transaction.",
         },
     ];
 
@@ -189,9 +189,9 @@ const TaxAssumptionCertificate = () => {
 
     return (<>
         <HeadProvider>
-            <Title>{seoData?.taxAssumptionCertificate?.title || "Tax Assumption Certificate Service"}</Title>
-            <Meta name="description" content={seoData?.taxAssumptionCertificate?.description || "Secure your financial transactions with a Tax Assumption Certificate."} />
-            <Meta name="keyword" content={seoData?.taxAssumptionCertificate?.keyword || "tax assumption, tax certificate, financial due diligence"} />
+            <Title>{seoData?.taxAssumptionCertificate?.title || "Tax Exemption  Certificate Service"}</Title>
+            <Meta name="description" content={seoData?.taxAssumptionCertificate?.description || "Secure your financial transactions with a Tax Exemption  Certificate."} />
+            <Meta name="keyword" content={seoData?.taxAssumptionCertificate?.keyword || "Tax Exemption , tax certificate, financial due diligence"} />
             <Meta name="robots" content={seoData?.taxAssumptionCertificate?.robots || "index, follow"} />
         </HeadProvider>
         <Mainlayout>
@@ -226,7 +226,7 @@ const TaxAssumptionCertificate = () => {
                     >
                         Secure Your Transactions with a {" "}
                         <span className="text-[#3CA2E2] font-extrabold block sm:inline">
-                            Tax Assumption Certificate
+                            Tax Exemption  Certificate
                         </span>{" "}
                     </h1>
                     <p
@@ -337,7 +337,7 @@ const TaxAssumptionCertificate = () => {
                         <h2 className="sub-heading text-white font-1">
                             Tax Certificate
                         </h2>
-                        <p className="font-3 text-[#C3C3C3]">
+                        <p className="font-3 text-white">
                             Empowering Businesses through Comprehensive Solutions From Fund
                             Management to Legal Empowering.
                         </p>
@@ -348,7 +348,7 @@ const TaxAssumptionCertificate = () => {
                 </motion.div>
             </motion.section>
 
-            {/* What is Tax Assumption Certificate */}
+            {/* What is Tax Exemption  Certificate */}
             <motion.section
                 ref={refTaxCertInfo}
                 initial={{ y: 100, opacity: 0 }}
@@ -360,11 +360,11 @@ const TaxAssumptionCertificate = () => {
                     <h2
                         className="sub-heading text-white text-left font-2"
                     >
-                        What Is a Tax Assumption Certificate?
+                        What Is a Tax Exemption  Certificate?
                     </h2>
                     <p className="paragraph !text-white mx-auto text-left font-3"
                     >
-                        A Tax Assumption Certificate is a crucial document that provides official verification that all outstanding tax liabilities on an asset (like property or a business) have been paid or are legally assumed by a new owner. This protects buyers from inheriting hidden tax debts and ensures a clean, transparent transaction, fostering trust and security for everyone involved.
+                        A Tax Exemption  Certificate is a crucial document that provides official verification that all outstanding tax liabilities on an asset (like property or a business) have been paid or are legally assumed by a new owner. This protects buyers from inheriting hidden tax debts and ensures a clean, transparent transaction, fostering trust and security for everyone involved.
                     </p>
                 </div>
             </motion.section>
@@ -480,7 +480,7 @@ const TaxAssumptionCertificate = () => {
                 <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
                     <p className="text-sm md:text-base text-gray-600 text-center font-3"
                     >
-                        Our Tax Assumption Certificate provides critical assurance across a range of high-stakes financial scenarios, ensuring every transaction is secure and transparent.
+                        Our Tax Exemption  Certificate provides critical assurance across a range of high-stakes financial scenarios, ensuring every transaction is secure and transparent.
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <motion.div

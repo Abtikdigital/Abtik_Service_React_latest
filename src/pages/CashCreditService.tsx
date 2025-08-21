@@ -353,7 +353,7 @@ const CashCredit = () => {
                             <h2 className="sub-heading text-white font-1">
                                 Cash Credit
                             </h2>
-                            <p className="font-3 text-[#C3C3C3]">
+                            <p className="font-3 text-white">
                                 Empowering Businesses through Comprehensive Solutions From Fund
                                 Management to Legal Empowering.
                             </p>
