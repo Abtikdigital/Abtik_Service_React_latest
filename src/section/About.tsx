@@ -80,7 +80,7 @@ const About = () => {
           >
             <img
               src={Image1}
-              className="rounded-4xl h-full"
+              className="rounded-4xl w-full max-h-48"
               alt="Team working"
               loading='lazy'
             />
@@ -95,7 +95,7 @@ const About = () => {
           >
             <img
               src={Image3}
-              className="rounded-4xl"
+              className="rounded-4xl w-full max-h-48"
               loading='lazy'
               alt="Team collaboration"
             />
