@@ -243,8 +243,8 @@ const About = () => {
               >{
                 index==0?
                 
-                "To become the most trusted growth partner for every small and medium business in India — by making government support, digital transformation, and business compliance simple, accessible, and result-driven. We believe growth should never be limited by lack of guidance or opportunity."
-                :"At Abtik, our mission is to simplify business growth. From government schemes and funding to branding, legal support, and digital services — we handle it all. With 50,000+ businesses served, we’re your trusted partner for turning ideas into impact Empower your business with expert consultancy."
+                "Our vision is to engage with every startup, growing venture, and business driving the future — enabling possibilities, unlocking opportunities, and delivering meaningful transformations. We are committed to reaching farther, fostering progress, and empowering enterprises to succeed in an ever-evolving business environment."
+                :"Our mission is to raise awareness, share knowledge, and create access to opportunities that help businesses grow and adapt. We work alongside startups, emerging ventures, and established enterprises — guiding them with the right insights, timely support, and meaningful connections to succeed in today’s fast-changing business world."
               }
               </p>
               <div>
@@ -290,7 +290,7 @@ const About = () => {
                     className="paragraph  font-3"
                    
                   >
-                    At Abtik Services, we offer more than just consultancy — we provide a complete ecosystem to help your business grow. From government grants and MSME loans to branding, legal support, and marketing, we simplify every step with expert guidance.
+                   At Abtik, we believe true success is built together. Our team blends seamless collaboration, proven expertise, and tailored solutions that align with your vision. Every product and service we deliver is designed to be relevant, reliable, and create a lasting impact for your business.
                   </p>
                       <p
                     className="paragraph  font-3"
@@ -300,7 +300,7 @@ const About = () => {
                     className="paragraph  font-3"
      
                   >
-                    At Abtik Services, we offer more than just consultancy — we provide a complete ecosystem to help your business grow. From government grants and MSME loans to branding, legal support, and marketing, we simplify every step with expert guidance.
+                   We are by your side at every stage with dedicated support, swift responses, and an unwavering commitment to trust. From strategy to execution, we make your journey smoother, faster, and more rewarding — ensuring every step brings you closer to your goals.
                   </p>
                   </p>
                   {/* <div>

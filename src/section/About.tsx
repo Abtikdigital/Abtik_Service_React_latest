@@ -52,17 +52,17 @@ const About = () => {
           <p className="paragraph font-2"
           
           >
-            In Abtik Services is a start-up dedicated consultation dedicated to accelerate the development of micro, small and medium enterprises across India. With the vision of making government schemes and funding accessible to every entrepreneur, we have become a reliable one-stop partner for business funding, branding and legal needs.
+              At Abtik Services, we connect ambition with opportunity, bringing together expert strategy, government-backed funding, and complete business support under one roof. From the first spark of an idea to a fully established brand, we’re the partner that turns vision into measurable growth.
           </p>
            <p className="paragraph font-2"
          
           >
-           From government grants and MSME loans to providing strategic aid in working capital finance, digital attendance, legal compliance and IP protection - we simplify the journey of business building. Our team of experienced experts has already assisted more than 40,000 client PAN-India, including 6,500+ recognized startups to convert their ambitions into reality.
+           From government grants and MSME loans to expert guidance in working capital finance, digital compliance, branding, and IP protection, we streamline the path from concept to success. Our experienced team has supported 50,000+ clients nationwide, including securing 7,500+ Startup India certificates, helping businesses transform ideas into thriving ventures.
            </p>
            <p className="paragraph font-2"
           
           >
-          At Abtik, we don’t just consult — we collaborate. Our transparent and personalized approach ensures that every business gets the right support at the right stage — from idea to expansion.
+          At Abtik, we don’t just provide solutions,  we work alongside you. Our transparent, results-driven approach ensures every business receives the right support at the right time, enabling confident growth from the first step to full-scale expansion.
           </p>
           <div className="text-center md:text-left">
             <button className="custom-btn">Explore</button>

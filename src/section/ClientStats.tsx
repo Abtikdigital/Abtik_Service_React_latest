@@ -7,7 +7,7 @@ const ClientStats = () => {
   const isInView = useInView(ref, { once: true });
 
   const stats = [
-    { value: 40000, suffix: "+", label: "Clients" },
+    { value: 50000, suffix: "+", label: "Clients" },
     { value: 107, suffix: "cr+", label: "Fund's" },
     { value: 30, suffix: "cr+", label: "Grant's" },
     { value: 76000, suffix: "+", label: "Certificates" },
