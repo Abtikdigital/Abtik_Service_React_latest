@@ -263,70 +263,74 @@ const TaxAssumptionCertificate = () => {
                 transition={{ duration: 0.5 }}
                 className="flex flex-col md:flex-row gap-8 bg-[#f7f7f7] py-16 px-7 md:px-14"
             >
-                <motion.div
-                    initial={{ y: 50, opacity: 0 }}
-                    animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
-                    transition={{ duration: 0.5, delay: getTouchDelay(0) }}
-                    className="w-full md:w-[300px] flex-shrink-0 bg-gradient-to-br from-blue-100 to-blue-200 p-6 rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
-                >
-                    <h3
-                        className="text-lg font-2 sm:text-xl font-semibold text-gray-800 mb-4"
-                    >
-                        Get in Touch
-                    </h3>
-                    <div className="space-y-4">
-                        <a
-                            href="#"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
-                            aria-label="Contact Person Manish Kumar"
-                        >
-                            <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
-                                <User className="w-5 h-5 text-white" />
-                            </span>
-                            <div>
-                                <p className="text-base text-gray-700 font-semibold font-2">
-                                    Manish Kumar
-                                </p>
-                                <p className="text-xs text-gray-600 font-2">
-                                    Head Of Finance Department
-                                    <br />
-                                </p>
-                            </div>
-                        </a>
-                        <a
-                            href="tel:+917486952086"
-                            className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
-                            aria-label="Call us at +917486952086"
-                        >
-                            <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
-                                <Phone className="w-5 h-5 text-white" />
-                            </span>
-                            <div>
-                                <p className="text-base text-gray-700 font-semibold font-2">
-                                    Call Anytime
-                                </p>
-                                <p className="text-xs font-2 text-gray-600"><a href="tel:+917486952086">+91 7486 952 086</a></p>
-                            </div>
-                        </a>
-                        <a
-                            href="mailto:manish.kumar@abtikservices.co.in"
-                            className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
-                            aria-label="Email us at manish.kumar@abtikservices.co.in"
-                        >
-                            <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
-                                <Mail className="w-5 h-5 text-white" />
-                            </span>
-                            <div>
-                                <p className="text-base font-2 text-gray-700 font-semibold">
-                                    Write Email
-                                </p>
-                                <p className="text-xs font-2 text-gray-600"><a href="mailto:manish.kumar@abtikservices.co.in">manish.kumar@abtikservices.co.in</a></p>
-                            </div>
-                        </a>
-                    </div>
-                </motion.div>
+          <motion.div
+            initial={{ y: 50, opacity: 0 }}
+            animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
+            transition={{ duration: 0.5, delay: getTouchDelay(0) }}
+            className="w-full md:w-[300px]    flex-shrink-0 bg-gradient-to-br from-blue-100 to-blue-200 p-6 rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 box-border"
+          >
+            <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-4 font-2">
+              Get in Touch
+            </h3>
+            <div className="space-y-4">
+              <a
+                href=""
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
+                aria-label="Visit us at 123 Business Hub, New Delhi, India"
+              >
+                <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
+                  <User className="w-5 h-5 text-white" />
+                </span>
+                <div>
+                  <p className="text-base text-gray-700 font-semibold font-2">
+                    Bharat Barot
+                  </p>
+                  <p className="text-xs text-gray-600 font-3">
+                    Vice President
+                    <br />
+                  </p>
+                </div>
+              </a>
+              <a
+                href="tel:+91 7486 952 087"
+                className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
+                aria-label="Call us at +91 98765 43210"
+              >
+                <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
+                  <Phone className="w-5 h-5 text-white" />
+                </span>
+                <div>
+                  <p className="text-base text-gray-700 font-semibold font-2">
+                    Call Anytime
+                  </p>
+                  <p className="text-xs text-gray-600 font-3">
+                    <a href="tel:+917486 952 087">+91 7486 952 087</a>
+                  </p>
+                </div>
+              </a>
+              <a
+                href="mailto:bharat@abtikservices.com"
+                className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
+                aria-label="Email us at info@abtik.com"
+              >
+                <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
+                  <Mail className="w-5 h-5 text-white" />
+                </span>
+                <div>
+                  <p className="text-base text-gray-700 font-semibold font-2">
+                    Write Email
+                  </p>
+                  <p className="text-xs text-gray-600 font-3">
+                    <a href="mailto:bharat@abtikservices.com">
+                      bharat@abtikservices.com
+                    </a>
+                  </p>
+                </div>
+              </a>
+            </div>
+          </motion.div>
                 <motion.div
                     initial={{ y: 50, opacity: 0 }}
                     animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
@@ -335,7 +339,7 @@ const TaxAssumptionCertificate = () => {
                 >
                     <div className="flex flex-col justify-evenly p-4 box-border">
                         <h2 className="sub-heading text-white font-1">
-                            Tax Certificate
+                            Tax Exemption Certificate
                         </h2>
                         <p className="font-3 text-white">
                             Empowering Businesses through Comprehensive Solutions From Fund
