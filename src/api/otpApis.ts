@@ -1,6 +1,10 @@
 import axios from "axios";
 const back_end_url = import.meta.env.VITE_BACK_END_URL;
-const jsonconfig = { withCredentials: true };
+const jsonconfig = { 
+  headers: {
+    'Content-Type': 'application/json'
+  }
+};
 
 export const addOtpDetails = async (formData: any) => {
   try {

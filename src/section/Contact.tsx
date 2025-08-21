@@ -8,6 +8,7 @@ import { memo, useState, useRef, useEffect } from "react";
 import { addOtpDetails, verifyOtp } from "../api/otpApis";
 // import Map from "../section/Map";
 import isValidIndianNumber from "../utils/validation/isGenuineNumber"
+
 interface ContactFormData {
   name: string;
   email: string;
@@ -61,16 +62,19 @@ const ShadcnDropdown = ({
         type="button"
         onClick={() => !disabled && setIsOpen(!isOpen)}
         disabled={disabled}
-        className={`appearance-none bg-[#ECEFF4] rounded-lg w-full p-3 text-left focus:outline-2 transition-all duration-0 ${error
-          ? "outline-red-500 border-red-500"
-          : "outline-[#2178B5] hover:outline-2"
-          } ${disabled ? "cursor-not-allowed opacity-50" : ""
-          }  flex justify-between items-center`}
+        className={`appearance-none bg-[#ECEFF4] rounded-lg w-full p-3 text-left focus:outline-2 transition-all duration-0 ${
+          error
+            ? "outline-red-500 border-red-500"
+            : "outline-[#2178B5] hover:outline-2"
+        } ${
+          disabled ? "cursor-not-allowed opacity-50" : ""
+        }  flex justify-between items-center`}
       >
         <span className="font-2">{selectedLabel}</span>
         <svg
-          className={`fill-current h-4 w-4 text-gray-700 transform transition-transform duration-200 ${isOpen ? "rotate-180" : ""
-            }`}
+          className={`fill-current h-4 w-4 text-gray-700 transform transition-transform duration-200 ${
+            isOpen ? "rotate-180" : ""
+          }`}
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
         >
@@ -105,16 +109,14 @@ const Contact = (props: any) => {
   const [showOtpForm, setShowOtpFrom] = useState(false);
   const [otp, setOtp] = useState("");
   // State to hold the data from the first form to use in OTP verification
-  const [, setContactPayload] = useState<ContactFormData | null>(
-    null
-  );
+  const [, setContactPayload] = useState<ContactFormData | null>(null);
 
   const {
     register,
     handleSubmit,
     formState: { errors },
     reset,
-    control, // <-- Add control from useForm
+    control,
   } = useForm<ContactFormData>({
     defaultValues: {
       name: "",
@@ -125,6 +127,16 @@ const Contact = (props: any) => {
     },
   });
 
+  // Helper function to clear all form states and token
+  const resetAllStates = () => {
+    reset();
+    setOtp("");
+    setShowOtpFrom(false);
+    setContactPayload(null);
+    // Clear token from localStorage
+    localStorage.removeItem('otpToken');
+  };
+
   // For Node.js Backend: Handles the initial form submission to get an OTP
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
@@ -132,31 +144,39 @@ const Contact = (props: any) => {
       // API call to send user details and request an OTP
       let res = await addOtpDetails({ contactData: data });
       if (res?.status === 201) {
+        // Store the token in localStorage
+        if (res?.data?.token) {
+          localStorage.setItem('otpToken', JSON.stringify(res.data.token));
+        }
+        
         setContactPayload(data); // Save form data for the next step
         setShowOtpFrom(true); // Show the OTP form
-        Swal.fire({
+        
+        await Swal.fire({
           icon: "success",
           title: "OTP Sent!",
-          text:
-            res?.data?.message ||
-            "An OTP has been sent to your contact number.",
+          text: res?.data?.message || "An OTP has been sent to your email address.",
           scrollbarPadding: false,
         });
       } else {
-        Swal.fire({
+        await Swal.fire({
           icon: "error",
           title: "Error",
           text: res?.data?.message || "Could not send OTP. Please try again.",
           scrollbarPadding: false,
         });
+        // Clear token on error
+        localStorage.removeItem('otpToken');
       }
     } catch (error: any) {
-      Swal.fire({
+      await Swal.fire({
         icon: "error",
         title: "Submission Error",
         text: error?.response?.data?.message || "An unexpected error occurred.",
         scrollbarPadding: false,
       });
+      // Clear token on error
+      localStorage.removeItem('otpToken');
     } finally {
       setIsSubmitting(false);
     }
@@ -165,8 +185,7 @@ const Contact = (props: any) => {
   // Handles the OTP verification
   const handleOtpVerify = async () => {
     if (otp.length !== 4) {
-      // Or your desired OTP length
-      Swal.fire({
+      await Swal.fire({
         icon: "warning",
         title: "Invalid OTP",
         text: "Please enter a valid 4-digit OTP.",
@@ -175,53 +194,84 @@ const Contact = (props: any) => {
       return;
     }
 
+    // Get the token from localStorage
+    const token = localStorage.getItem('otpToken');
+    if (!token) {
+      await Swal.fire({
+        icon: "error",
+        title: "Session Expired",
+        text: "Your session has expired. Please start over.",
+        scrollbarPadding: false,
+      });
+      // Reset to initial form
+      resetAllStates();
+      return;
+    }
+
     setIsSubmitting(true);
     try {
-      // We need to send the OTP and an identifier (like email or number) to the backend
+      // Send both OTP and token in the request body
       const verificationData = {
         enteredOtp: otp,
+        token: JSON.parse(token),
       };
 
       // Assumes a 'verifyOtp' function exists in your API helpers
       let res = await verifyOtp(verificationData);
 
       if (res?.status === 201) {
-        Swal.fire({
+        // Show success message and reset everything after user closes the alert
+        await Swal.fire({
           icon: "success",
           title: "Thank You For Contacting Us!",
-          text:
-            res?.data?.message ||
-            "Your details have been verified successfully.",
+          text: res?.data?.message || "Your details have been verified successfully.",
           scrollbarPadding: false,
         });
-        // Reset all states and form on final success
-        reset();
-        setOtp("");
-        setShowOtpFrom(false);
-        setContactPayload(null);
+        
+        // Reset all states and form after successful verification
+        resetAllStates();
       } else {
-        Swal.fire({
+        await Swal.fire({
           icon: "error",
           title: "Verification Failed",
-          text:
-            res?.data?.message ||
-            "The OTP you entered is incorrect. Please try again.",
+          text: res?.data?.message || "The OTP you entered is incorrect. Please try again.",
           scrollbarPadding: false,
         });
+        // Clear only OTP, keep form and token for retry
+        setOtp("");
       }
     } catch (error: any) {
-      Swal.fire({
-        icon: "error",
-        title: "Verification Error",
-        text:
-          error?.response?.data?.message ||
-          "An error occurred during verification.",
-        scrollbarPadding: false,
-      });
+      // If token is invalid, clear it and redirect to initial form
+      if (error?.response?.data?.message === "Invalid Token") {
+        await Swal.fire({
+          icon: "error",
+          title: "Session Expired",
+          text: "Your session has expired. Please start over.",
+          scrollbarPadding: false,
+        });
+        resetAllStates();
+      } else {
+        await Swal.fire({
+          icon: "error",
+          title: "Verification Error",
+          text: error?.response?.data?.message || "An error occurred during verification.",
+          scrollbarPadding: false,
+        });
+        // Clear only OTP for retry
+        setOtp("");
+      }
     } finally {
       setIsSubmitting(false);
     }
   };
+
+  // Cleanup function to clear token when component unmounts
+  useEffect(() => {
+    return () => {
+      // Clean up token when component unmounts
+      localStorage.removeItem('otpToken');
+    };
+  }, []);
 
   // Input validation rules
   const validationRules = {
@@ -241,7 +291,7 @@ const Contact = (props: any) => {
       },
     },
     serviceType: {
-      required: "* Please select a service", // Updated validation message
+      required: "* Please select a service",
     },
     email: {
       required: "* Email is required",
@@ -293,10 +343,11 @@ const Contact = (props: any) => {
                   {...register("name", validationRules.name)}
                   id="fullName"
                   placeholder="Enter Your Full Name"
-                  className={`bg-[#ECEFF4] rounded-lg w-full p-3 focus:outline-2 transition-all duration-0 font-2 ${errors.name
-                    ? "outline-red-500 border-red-500"
-                    : "outline-[#2178B5] hover:outline-2"
-                    }`}
+                  className={`bg-[#ECEFF4] rounded-lg w-full p-3 focus:outline-2 transition-all duration-0 font-2 ${
+                    errors.name
+                      ? "outline-red-500 border-red-500"
+                      : "outline-[#2178B5] hover:outline-2"
+                  }`}
                   disabled={isSubmitting}
                 />
                 {errors.name && (
@@ -312,10 +363,11 @@ const Contact = (props: any) => {
                   {...register("companyName", validationRules.companyName)}
                   id="companyName"
                   placeholder="Enter Your Company Name"
-                  className={`bg-[#ECEFF4] rounded-lg w-full p-3 focus:outline-2 transition-all duration-0 font-3 ${errors.companyName
-                    ? "outline-red-500 border-red-500"
-                    : "outline-[#2178B5] hover:outline-2"
-                    }`}
+                  className={`bg-[#ECEFF4] rounded-lg w-full p-3 focus:outline-2 transition-all duration-0 font-3 ${
+                    errors.companyName
+                      ? "outline-red-500 border-red-500"
+                      : "outline-[#2178B5] hover:outline-2"
+                  }`}
                   disabled={isSubmitting}
                 />
                 {errors?.companyName && (
@@ -332,10 +384,11 @@ const Contact = (props: any) => {
                   type="email"
                   id="email"
                   placeholder="Enter Your Email"
-                  className={`bg-[#ECEFF4] rounded-lg w-full p-3 focus:outline-2 transition-all duration-0 font-2 ${errors.email
-                    ? "outline-red-500 border-red-500"
-                    : "outline-[#2178B5] hover:outline-2"
-                    }`}
+                  className={`bg-[#ECEFF4] rounded-lg w-full p-3 focus:outline-2 transition-all duration-0 font-2 ${
+                    errors.email
+                      ? "outline-red-500 border-red-500"
+                      : "outline-[#2178B5] hover:outline-2"
+                  }`}
                   disabled={isSubmitting}
                 />
                 {errors.email && (
@@ -351,10 +404,11 @@ const Contact = (props: any) => {
                   {...register("number", validationRules.number)}
                   type="number"
                   placeholder="Enter Your Number"
-                  className={`bg-[#ECEFF4] rounded-lg w-full p-3 focus:outline-2 transition-all duration-0 font-2 ${errors.number
-                    ? "outline-red-500 border-red-500"
-                    : "outline-[#2178B5] hover:outline-2"
-                    }`}
+                  className={`bg-[#ECEFF4] rounded-lg w-full p-3 focus:outline-2 transition-all duration-0 font-2 ${
+                    errors.number
+                      ? "outline-red-500 border-red-500"
+                      : "outline-[#2178B5] hover:outline-2"
+                  }`}
                   disabled={isSubmitting}
                 />
                 {errors.number && (
@@ -393,10 +447,11 @@ const Contact = (props: any) => {
                 <textarea
                   {...register("message")}
                   placeholder="Enter Your Message"
-                  className={`bg-[#ECEFF4] rounded-lg w-full p-3 overflow-auto h-24 max-h-32 resize-none transition-all duration-0 font-3 ${errors.message
-                    ? "outline-red-500 border-red-500"
-                    : "outline-[#2178B5] hover:outline-2"
-                    }`}
+                  className={`bg-[#ECEFF4] rounded-lg w-full p-3 overflow-auto h-24 max-h-32 resize-none transition-all duration-0 font-3 ${
+                    errors.message
+                      ? "outline-red-500 border-red-500"
+                      : "outline-[#2178B5] hover:outline-2"
+                  }`}
                   disabled={isSubmitting}
                 />
                 {errors?.message && (
@@ -411,10 +466,11 @@ const Contact = (props: any) => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className={`custom-btn w-full text-center font-2 !py-3 transition-shadow duration-300 ${isSubmitting
-                    ? "opacity-50 cursor-not-allowed"
-                    : "hover:transform "
-                    }`}
+                  className={`custom-btn w-full text-center font-2 !py-3 transition-shadow duration-300 ${
+                    isSubmitting
+                      ? "opacity-50 cursor-not-allowed"
+                      : "hover:transform "
+                  }`}
                 >
                   {isSubmitting ? (
                     <div className="flex items-center justify-center gap-2">
@@ -431,11 +487,8 @@ const Contact = (props: any) => {
 
           {showOtpForm && (
             <div className="flex flex-col items-center gap-6 p-4">
-              <h2 className="font-2 text-xl text-center font-medium font-1">
-
-              </h2>
               <p className="text-sm text-gray-600 text-center">
-                Please enter the 4-digit OTP sent to your mail.
+                Please enter the 4-digit OTP sent to your email.
               </p>
 
               <OtpInput
@@ -464,10 +517,11 @@ const Contact = (props: any) => {
                 <button
                   onClick={handleOtpVerify}
                   disabled={isSubmitting}
-                  className={`custom-btn w-full max-w-xs text-center font-2 !py-3 transition-shadow duration-300 ${isSubmitting
-                    ? "opacity-50 cursor-not-allowed"
-                    : "hover:transform "
-                    }`}
+                  className={`custom-btn w-full max-w-xs text-center font-2 !py-3 transition-shadow duration-300 ${
+                    isSubmitting
+                      ? "opacity-50 cursor-not-allowed"
+                      : "hover:transform "
+                  }`}
                 >
                   {isSubmitting ? (
                     <div className="flex items-center justify-center gap-2">
