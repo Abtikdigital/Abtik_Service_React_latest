@@ -285,10 +285,10 @@ const Card: React.FC<{ testimonial: Testimonial }> = ({ testimonial }) => {
     }
 
     if (parts.length === 1) {
-      const p = parts;
+      const p:any = parts;
       const a = firstChar(p);
       const b =
-        (typeof p === "string" ? p.charAt(1) : String(p).charAt(1))?.toUpperCase() ||
+        (typeof p === "string" ? p?.charAt(1) : String(p).charAt(1))?.toUpperCase() ||
         "";
       return (a + b) || "AB";
     }
