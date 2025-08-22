@@ -1,7 +1,7 @@
 import Mainlayout from "../section/Mainlayout";
 import BgImage from "../assets/Hero/bgImg.svg"; // Assuming a similar background image for NBFC
 import Contact from "../section/Contact";
-import Image1 from "../assets/NBFC/Nbfc.jpg"; // Assuming a similar image for NBFC
+import Image1 from "../assets/NBFC/Nbfc.png"; // Assuming a similar image for NBFC
 import {
     Mail,
     User,
