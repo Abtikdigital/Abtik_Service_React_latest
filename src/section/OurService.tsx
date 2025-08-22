@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import Image1 from "../assets/Grants/goverment grants.jpg";
-import Image2 from "../assets/StartUpIndia/StartupIndia.png";
-import Image3 from "../assets/OurService/msmecertificate.jpeg";
+import Image2 from "../assets/StartUpIndia/startupindia1.png";
+import Image3 from "../assets/MSMECertificate/msme1.png";
 import Image4 from "../assets/OurService/seed.jpeg";
 import Image5 from "../assets/TradeMark/Trademark.jpg";
 import Image6 from "../assets/OurService/iso.png";
