@@ -73,7 +73,7 @@ const Footer = () => {
         <div className="grid  grid-cols-1 space-y-5 md:grid-cols-3 lg:col-span-2">
           <div className="space-y-3">
             <h2 className="heading">Company</h2>
-            <ul className="flex flex-col space-y-2">
+            <ul className="flex flex-col space-y-3">
               <Link
                 to={"/"}
                 className="text-sm text-[#4D4D4D] font-semibold hover:underline hover:text-gray-950 cursor-pointer duration-300"
@@ -96,7 +96,7 @@ const Footer = () => {
           </div>
           <div className="space-y-3">
             <h2 className="heading">Our Popular Services</h2>
-            <ul className="flex flex-col space-y-2">
+            <ul className="flex flex-col space-y-3">
               <Link
                 to={"/services/funding/grants"}
                 className="text-sm font-semibold text-[#4D4D4D] hover:underline hover:text-gray-950 cursor-pointer duration-300"
@@ -143,7 +143,7 @@ const Footer = () => {
           </div>
           <div className="space-y-3">
             <h2 className="heading">Legal</h2>
-            <ul className="flex flex-col space-y-2">
+            <ul className="flex flex-col space-y-3">
               <Link
                 to={"/legal/privacy-policy"}
                 className="text-sm font-semibold text-[#4D4D4D] hover:underline hover:text-gray-950 cursor-pointer duration-300"
