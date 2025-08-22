@@ -621,7 +621,7 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
                         </div>
 
                         {/* Submit Buttons */}
-                        <div className="flex flex-col md:flex-row w-full gap-4 pt-4 mb-6">
+                        <div className="flex flex-col md:flex-row w-full gap-4 pt-4 mb-12 md:mb-3">
                           <button
                             type="button"
                             onClick={closeModal}
