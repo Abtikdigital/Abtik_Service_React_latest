@@ -625,14 +625,14 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
                           <button
                             type="button"
                             onClick={closeModal}
-                            className="w-full md:w-1/2 h-11 font-3 md:h-10 cursor-pointer bg-gray-200 text-gray-800 font-medium rounded-full hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400 transition-all duration-200"
+                            className="w-full md:w-1/2  font-3   cursor-pointer bg-gray-200 text-gray-800 font-medium rounded-full hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400 transition-all duration-200  !py-3"
                           >
                             Cancel
                           </button>
                           <button
                             type="submit"
                             disabled={isSubmitting}
-                            className="w-full font-3 disabled:opacity-50 disabled:cursor-not-allowed flex justify-center items-center md:w-1/2 h-11 md:h-10 bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] text-white font-semibold rounded-full cursor-pointer hover:from-[#041f7a] hover:to-[#2d8bc7] hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#052EAA] transition-all duration-200"
+                            className="w-full md:w-1/2 font-3 disabled:opacity-50 disabled:cursor-not-allowed custom-btn !py-3"
                           >
                             {isSubmitting ? (
                               <div className="flex items-center justify-center">
