@@ -2,8 +2,10 @@ import { useState, useEffect, memo } from 'react';
 import Image1 from '../assets/AboutSection/business-people-talking-each-other (1).jpg';
 import Image2  from "../assets/AboutSection/silhouette-confident-businesspeople.jpg"
 import Image3 from "../assets/AboutSection/modern-equipped-computer-lab.jpg"
+import { useNavigate } from 'react-router-dom';
 
 const About = () => {
+  const nav=useNavigate()
   const [visibleElements, setVisibleElements] = useState({
     text: false,
     topRowImages: false, // First two images load together
@@ -64,7 +66,9 @@ const About = () => {
           >
           At Abtik, we don’t just provide solutions,  we work alongside you. Our transparent, results-driven approach ensures every business receives the right support at the right time, enabling confident growth from the first step to full-scale expansion.
           </p>
-          <div className="text-center md:text-left">
+          <div className="text-center md:text-left" onClick={()=>{
+nav("/about")
+          }}>
             <button className="custom-btn w-full max-w-[120px] !py-3 mx-auto font-2">Explore</button>
           </div>
         </div>

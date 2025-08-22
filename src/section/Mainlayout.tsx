@@ -458,11 +458,11 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
               {/* Main Content */}
               <div className="flex flex-col md:flex-row flex-1 overflow-hidden">
                 {/* Left Side: Image */}
-                <div className="md:w-1/2 w-full p-4 bg-gray-50 flex items-center justify-center">
+                <div className="md:w-1/2 w-full p-4 bg-gray-50 flex items-center justify-center"  >
                   <img
                     src={Image}
                     alt="Contact Visual"
-                    className="rounded-xl  max-w-full md:h-full max-h-[200px] md:max-h-[200px] md:max-w-[200px]"
+                    className="rounded-xl   max-w-full  md:h-full max-h-[200px] md:max-h-[200px] md:max-w-[200px]"
                   />
                 </div>
 

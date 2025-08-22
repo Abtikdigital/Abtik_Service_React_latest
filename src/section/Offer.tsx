@@ -1,28 +1,24 @@
-
-
 const WebsiteOfferBanner = () => {
   return (<>
-  
-   {/* <div className="bg-[#EEEEFF] text-center py-3 px-4">
-  //   <style>
-  //     {`
-  //       @keyframes blink {
-  //         0%, 100% { opacity: 1; }
-  //         50% { opacity: 0; }
-  //       }
-  //       .blink {
-  //         animation: blink 1s step-start infinite;
-  //       }
-  //     `}
-  //   </style>
-  //   <span className="text-base font-medium ">
- 
-  //     <span className=" font-semibold blink ml-2">
-  //       New Offers Coming Soon !
-  //     </span>
-  //   </span>
-   </div> */}
-  </>
+    {/*  <div className="bg-[#EEEEFF] text-center py-3 overflow-hidden">
+       <div className="whitespace-nowrap animate-marquee">
+          New Offers Coming Soon ! 
+       </div>
+
+       <style>
+         {`
+           @keyframes marquee {
+             0% { transform: translateX(100%); }
+             100% { transform: translateX(-100%); }
+           }
+           .animate-marquee {
+             display: inline-block;
+             animation: marquee 10s linear infinite;
+           }
+         `}
+       </style>
+     </div> */}
+    </>
   );
 };
 
