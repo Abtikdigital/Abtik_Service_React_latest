@@ -214,73 +214,145 @@
 // export default memo(Testimonial);
 
 
-
-
-
-import React, { memo } from "react";
+import React, { memo, useEffect, useRef } from "react";
 
 // Testimonials data
 const testimonials = [
   {
     name: "alan john",
     company: "",
-    text: "Great team! They did an excellent job helping us set up the company, handle the startup registration, and navigate the entire process smoothly. Big thanks to Vaishali for the prompt support and clear communication throughout. Highly recommend!",
+    text:
+      "Great team! They did an excellent job helping us set up the company, handle the startup registration, and navigate the entire process smoothly. Big thanks to Vaishali for the prompt support and clear communication throughout. Highly recommend!",
   },
   {
     name: "Aruma Kushwaha",
     company: "AYUVEDA GLOW",
-    text: "On behalf of AYUVEDA GLOW, I had a great experience working with Mr. Kevin Chotia and his team. Their professionalism, dedication, and attention to detail made the entire process smooth and successful. Thank you, Kevin and team, for your excellent support!",
+    text:
+      "On behalf of AYUVEDA GLOW, I had a great experience working with Mr. Kevin Chotia and his team. Their professionalism, dedication, and attention to detail made the entire process smooth and successful. Thank you, Kevin and team, for your excellent support!",
   },
   {
     name: "Arun Sapre",
     company: "Shri Sai Advance Imaging and Diagnostic Centre",
-    text: "ABTIK Services made our seed funding process smooth and stress-free. Special thanks to Anand, Jyoti, and Khusi for their prompt support and professionalism. Highly recommended for startups! Thank you, Team ABTIK!",
+    text:
+      "ABTIK Services made our seed funding process smooth and stress-free. Special thanks to Anand, Jyoti, and Khusi for their prompt support and professionalism. Highly recommended for startups! Thank you, Team ABTIK!",
   },
   {
     name: "Kingzee Chhachhi",
     company: "",
-    text: "Thank you whole team for your appreciable efforts towards helping and guiding me in Startup program by Indian Government. Special thanks to Dhruvesh Patel for your personal efforts to accomplish.🙏🏻❤️",
+    text:
+      "Thank you whole team for your appreciable efforts towards helping and guiding me in Startup program by Indian Government. Special thanks to Dhruvesh Patel for your personal efforts to accomplish.🙏🏻❤️",
   },
   {
     name: "Manju Choudhary",
     company: "Femaura Crafts",
-    text: "Abtik group of company is one destination for all kind of registration & scheme kind of solution. They worked aggressively and on time responsive, explain each n everything point to point. Special thanks to Vidit and staff.",
+    text:
+      "Abtik group of company is one destination for all kind of registration & scheme kind of solution. They worked aggressively and on time responsive, explain each n everything point to point. Special thanks to Vidit and staff.",
   },
   {
     name: "Kuro Valmiki",
     company: "",
-    text: "I live in Pune. I spoke to Shashikant Gaikwad. He gave me a better service than I had expected. His team did a great job. Thanks to Abtik Group of Companies for that.",
+    text:
+      "I live in Pune. I spoke to Shashikant Gaikwad. He gave me a better service than I had expected. His team did a great job. Thanks to Abtik Group of Companies for that.",
   },
   // Add more testimonials here for smoother effect!
 ];
 
+// Types
+type Testimonial = (typeof testimonials)[number];
+
 // Card Component
-const Card = ({ testimonial }: { testimonial: typeof testimonials[0] }) => {
-  const getInitials = (name: string) => {
-    const parts = name.trim().split(" ");
-    if (parts.length >= 2) return parts[0][0].toUpperCase() + parts[1][0].toUpperCase();
-    if (parts.length === 1) return (parts[0][0] || "") + (parts[0][1] || "");
+const Card: React.FC<{ testimonial: Testimonial }> = ({ testimonial }) => {
+  // Safe initials helper that tolerates any input type
+  const getInitials = (nameInput: unknown) => {
+    const name =
+      typeof nameInput === "string"
+        ? nameInput.trim()
+        : nameInput == null
+        ? ""
+        : String(nameInput).trim();
+
+    if (!name) return "AB";
+
+    const parts = name.split(/\s+/).filter(Boolean);
+
+    const firstChar = (s: unknown) => {
+      const str = typeof s === "string" ? s : String(s ?? "");
+      return (str.charAt(0) || "").toUpperCase();
+    };
+
+    if (parts.length >= 2) {
+      return (firstChar(parts[0]) + firstChar(parts)) || "AB";
+    }
+
+    if (parts.length === 1) {
+      const p = parts;
+      const a = firstChar(p);
+      const b =
+        (typeof p === "string" ? p.charAt(1) : String(p).charAt(1))?.toUpperCase() ||
+        "";
+      return (a + b) || "AB";
+    }
+
     return "AB";
   };
+
+  // Normalize name for display without crashing
+  const displayName =
+    typeof testimonial.name === "string"
+      ? testimonial.name
+      : testimonial.name == null
+      ? ""
+      : String(testimonial.name);
+
   return (
-    <div className="w-[300px] sm:w-[340px] md:w-[400px] min-h-[210px] bg-gradient-to-b from-blue-800 to-blue-500 text-white rounded-2xl shadow-lg flex flex-col justify-between p-5 mx-3 flex-shrink-0">
+    <div
+      className="
+        w-[300px] sm:w-[340px] md:w-[400px]
+        bg-gradient-to-b from-blue-800 to-blue-500
+        text-white rounded-2xl shadow-lg
+        flex flex-col
+        p-5 mx-3 flex-shrink-0
+      "
+      style={{
+        minHeight: 240, // consistent card height across breakpoints
+      }}
+    >
       <div className="flex items-center space-x-4 mb-3">
-        <div
-          className="w-12 h-12 rounded-full bg-gray-300 font-4 flex justify-center items-center text-gray-800 font-semibold text-lg"
-       
-        >
+        <div className="w-12 h-12 rounded-full bg-gray-300 flex justify-center items-center text-gray-800 font-semibold text-lg">
           {getInitials(testimonial.name)}
         </div>
-        <div>
-          <p className="font-semibold text-base capitalize truncate font-4" >
-            {testimonial.name}
+        <div className="min-w-0">
+          <p
+            className="font-semibold text-base capitalize truncate"
+            style={{
+              fontSize: "1rem",
+              lineHeight: 1.25,
+              whiteSpace: "nowrap",
+            }}
+            title={displayName}
+          >
+            {displayName}
           </p>
           {testimonial.company && (
-            <p className="text-xs opacity-80 truncate font-4">{testimonial.company}</p>
+            <p className="text-xs opacity-90 truncate" title={testimonial.company}>
+              {testimonial.company}
+            </p>
           )}
         </div>
       </div>
-      <p className="text-sm font-4">{testimonial.text}</p>
+
+      <p
+        className="text-sm"
+        style={{
+          display: "-webkit-box",
+          WebkitLineClamp: 6, // clamp to keep card heights aligned
+          WebkitBoxOrient: "vertical" as const,
+          overflow: "hidden",
+        }}
+        title={testimonial.text}
+      >
+        {testimonial.text}
+      </p>
     </div>
   );
 };
@@ -288,40 +360,163 @@ const Card = ({ testimonial }: { testimonial: typeof testimonials[0] }) => {
 const TestimonialMarquee: React.FC = () => {
   // Duplicate testimonials for seamless looping
   const marqueeTestimonials = [...testimonials, ...testimonials];
+
+  const trackRef = useRef<HTMLDivElement | null>(null);
+  const wrapperRef = useRef<HTMLDivElement | null>(null);
+
+  // Manage marquee pause/resume based on user activity and scrolling
+  useEffect(() => {
+    const track = trackRef.current;
+    const wrapper = wrapperRef.current;
+    if (!track || !wrapper) return;
+
+    let inactivityTimer: number | null = null;
+    let userActive = false;
+
+    const pause = () => {
+      track.style.animationPlayState = "paused";
+    };
+    const resume = () => {
+      if (!userActive) {
+        track.style.animationPlayState = "running";
+      }
+    };
+    const bumpInactivityTimer = (delay = 700) => {
+      if (inactivityTimer) window.clearTimeout(inactivityTimer);
+      inactivityTimer = window.setTimeout(() => {
+        userActive = false;
+        resume();
+      }, delay);
+    };
+
+    // Keep paused while wrapper is scrolling (includes momentum)
+    const onScroll = () => {
+      userActive = true;
+      pause();
+      bumpInactivityTimer(800);
+    };
+
+    const onWheel = (e: WheelEvent) => {
+      if (Math.abs(e.deltaX) > 0 || Math.abs(e.deltaY) > 0) {
+        userActive = true;
+        pause();
+        bumpInactivityTimer(800);
+      }
+    };
+
+    const onTouchStart = () => {
+      userActive = true;
+      pause();
+      if (inactivityTimer) window.clearTimeout(inactivityTimer);
+    };
+
+    const onTouchMove = () => {
+      userActive = true;
+      pause();
+    };
+
+    const onTouchEnd = () => {
+      bumpInactivityTimer(800);
+    };
+
+    wrapper.addEventListener("scroll", onScroll, { passive: true });
+    wrapper.addEventListener("wheel", onWheel, { passive: true });
+    wrapper.addEventListener("touchstart", onTouchStart, { passive: true });
+    wrapper.addEventListener("touchmove", onTouchMove, { passive: true });
+    wrapper.addEventListener("touchend", onTouchEnd, { passive: true });
+
+    return () => {
+      wrapper.removeEventListener("scroll", onScroll);
+      wrapper.removeEventListener("wheel", onWheel);
+      wrapper.removeEventListener("touchstart", onTouchStart);
+      wrapper.removeEventListener("touchmove", onTouchMove);
+      wrapper.removeEventListener("touchend", onTouchEnd);
+      if (inactivityTimer) window.clearTimeout(inactivityTimer);
+    };
+  }, []);
+
+  // Hover pause only on md and up
+  const handleMouseEnter: React.MouseEventHandler<HTMLDivElement> = (e) => {
+    if (window.matchMedia("(min-width: 768px)").matches) {
+      (e.currentTarget as HTMLDivElement).style.animationPlayState = "paused";
+    }
+  };
+  const handleMouseLeave: React.MouseEventHandler<HTMLDivElement> = (e) => {
+    (e.currentTarget as HTMLDivElement).style.animationPlayState = "running";
+  };
+
   return (
-    <section className="flex flex-col items-center py-8 space-y-8 bg-[#f7f7f7] w-full min-h-[340px]">
-      <h2
-        className="sub-heading bg-clip-text text-transparent bg-gradient-to-t from-[#3CA2E2] to-[#052EAA] px-4 font-1"
-       
-      >
+    <section className="flex flex-col items-center py-8 space-y-8 bg-[#f7f7f7] w-full">
+      <h2 className="sub-heading bg-clip-text text-transparent bg-gradient-to-t from-[#3CA2E2] to-[#052EAA] px-4">
         Testimonials
       </h2>
-      <div className="relative w-full overflow-hidden">
+
+      <div
+        className="
+          relative w-full
+          overflow-x-auto pb-16 overflow-y-hidden
+          scrollbar-thin
+        "
+        ref={wrapperRef}
+        style={{
+          WebkitOverflowScrolling: "touch",
+          scrollbarWidth: "thin",
+        }}
+      >
         <div
-          className="flex items-center testimonial-marquee"
+          ref={trackRef}
+          className="flex items-stretch testimonial-marquee"
           style={{
-            animation: "testimonial-marquee-keyframes 38s linear infinite",
-            animationDirection: "reverse", // right-to-left!
+            animation: "testimonial-marquee-keyframes 34s linear infinite",
+            animationDirection: "reverse", // right-to-left
           }}
-          onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.animationPlayState = "paused"; }}
-          onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.animationPlayState = "running"; }}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
         >
           {marqueeTestimonials.map((testimonial, idx) => (
-            <Card testimonial={testimonial} key={idx + testimonial.name} />
+            <Card testimonial={testimonial} key={`${idx}-${testimonial.name}`} />
           ))}
         </div>
       </div>
-      {/* Keyframes CSS injected here */}
+
+      {/* Keyframes CSS */}
       <style>{`
+        /* Seamless marquee: translate half width since content duplicated */
         @keyframes testimonial-marquee-keyframes {
           0%   { transform: translateX(0%); }
           100% { transform: translateX(-50%); }
         }
+
         .testimonial-marquee { will-change: transform; }
+
+        /* Faster on very small screens */
         @media (max-width: 640px) {
           .testimonial-marquee {
-            animation-duration: 68s !important;
+            animation-duration: 20s !important; /* faster for mobile */
           }
+        }
+
+        /* Medium screens slightly quicker than desktop default */
+        @media (min-width: 641px) and (max-width: 1024px) {
+          .testimonial-marquee {
+            animation-duration: 28s !important;
+          }
+        }
+
+        /* Visible, neat horizontal scrollbar */
+        ::-webkit-scrollbar {
+          height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+          background: rgba(0,0,0,0.06);
+          border-radius: 9999px;
+        }
+        ::-webkit-scrollbar-thumb {
+          background: rgba(0,0,0,0.35);
+          border-radius: 9999px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+          background: rgba(0,0,0,0.45);
         }
       `}</style>
     </section>

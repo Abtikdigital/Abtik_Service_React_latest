@@ -47,7 +47,7 @@ const BlogSection = () => {
   const isInViewBlog = useInView(refBlog, { once: true, amount: 0.1 });
 
   // Responsive cols (4 for md+, 1 for <md)
-  const getCols = () => (window.innerWidth >= 768 ? 4 : 1);
+  const getCols = () => (window.innerWidth >= 768 ? 4 : 4);
   const [cols, setCols] = useState(getCols());
   const [rows, setRows] = useState(1);
 
@@ -104,7 +104,7 @@ const BlogSection = () => {
             transition={{ duration: 0.5, delay: getDelay(index) }}
             className="space-y-3"
           >
-            <img src={blog?.img} alt={blog?.title} loading="lazy" className="rounded-lg cursor-pointer hover:scale-105 duration-300 transition-all" />
+            <img src={blog?.img} alt={blog?.title} loading="lazy" className="rounded-lg cursor-pointer hover:scale-105 duration-300 w-full transition-all" />
             <h2
               className="text-xl text-[#3CA2E2] font-semibold line-clamp-2 font-4"
            
