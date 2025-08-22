@@ -133,7 +133,7 @@ const Recommended = () => {
             onClick={() => {
               nav(data?.path);
             }}
-            className="bg-white cursor-pointer p-3.5 shadow-lg rounded-4xl space-y-3 duration-300 transition-all hover:scale-105 cursor-pointer"
+            className="bg-white cursor-pointer p-2.5 pb-3.5 shadow-lg  rounded-4xl space-y-3 duration-300 transition-all hover:scale-105 cursor-pointer"
           >
             <img
               src={data?.img}
@@ -146,7 +146,7 @@ const Recommended = () => {
             >
               {data?.title}
             </h2>
-            <p className="paragraph font-3 text-center line-clamp-3 font-4">
+            <p className="paragraph font-3 text-center line-clamp-3 font-4 px-3 ">
               {data?.description}
             </p>
           </motion.div>
@@ -155,7 +155,7 @@ const Recommended = () => {
       {canLoadMore && (
         <div className="flex justify-center mt-12">
           <button
-            className="custom-btn font-2"
+            className="custom-btn font-2 w-full max-w-[120px] !py-3 mx-auto font-2"
             type="button"
             onClick={() => setVisibleCount((r) => r + 4)}
           >

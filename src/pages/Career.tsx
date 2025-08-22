@@ -582,7 +582,7 @@ const Career = () => {
                   {/* Apply Button */}
                   <button
                     onClick={() => handleApplyNow(job)}
-                    className="custom-btn flex justify-center items-center gap-1 w-full font-3"
+                    className="custom-btn flex justify-center items-center gap-1 !py-3 w-full font-3"
                   >
                     Apply Now
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

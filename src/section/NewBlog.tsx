@@ -104,7 +104,7 @@ const BlogSection = () => {
             transition={{ duration: 0.5, delay: getDelay(index) }}
             className="space-y-3"
           >
-            <img src={blog?.img} alt={blog?.title} loading="lazy" className="rounded-lg cursor-pointer hover:scale-105 duration-300 w-full transition-all" />
+            <img src={blog?.img} alt={blog?.title} loading="lazy" className="rounded-lg h-50 cursor-pointer hover:scale-105 duration-300 w-full transition-all" />
             <h2
               className="text-xl text-[#3CA2E2] font-semibold line-clamp-2 font-4"
            
@@ -114,7 +114,7 @@ const BlogSection = () => {
             <p className="paragraph line-clamp-1 font-4">{blog?.description}</p>
             <div>
               <button
-                className="custom-btn"
+                className="custom-btn font-2 w-full max-w-[120px] !py-3 mx-auto font-2"
                 onClick={() => nav(`/expandedBlog/${blog?.slug}`)}
               >
                 Explore
@@ -126,7 +126,7 @@ const BlogSection = () => {
       {canLoadMore && (
         <div className="flex justify-center mt-6">
           <button
-            className="custom-btn font-2"
+            className="custom-btn font-2 w-full max-w-[120px] !py-3 mx-auto font-2"
             onClick={() => setRows(r => r + 1)}
           >
             Load More

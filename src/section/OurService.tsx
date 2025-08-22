@@ -161,7 +161,7 @@ const OurService = () => {
         {canLoadMore && (
           <div className="flex justify-center mt-12">
             <button
-              className="custom-btn"
+              className="custom-btn w-full max-w-[120px] !py-3 mx-auto font-2"
               type="button"
               onClick={() => setVisibleCount((prev) => prev + 4)} // Load next 4
             >

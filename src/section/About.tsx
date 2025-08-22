@@ -65,7 +65,7 @@ const About = () => {
           At Abtik, we don’t just provide solutions,  we work alongside you. Our transparent, results-driven approach ensures every business receives the right support at the right time, enabling confident growth from the first step to full-scale expansion.
           </p>
           <div className="text-center md:text-left">
-            <button className="custom-btn">Explore</button>
+            <button className="custom-btn w-full max-w-[120px] !py-3 mx-auto font-2">Explore</button>
           </div>
         </div>
 
