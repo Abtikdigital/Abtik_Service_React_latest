@@ -27,11 +27,11 @@ const recommendedData = [
     path: "/services/funding/seed-fund",
   },
   {
-    title: "Mudra Loan",
+    title: "Msme Loans",
     img: Image3,
     description:
       "Loans provided to Micro, Small, and Medium Enterprises under various central and state government schemes. These help businesses grow and maintain healthy cash flow.",
-    path: "/services/funding/msme-loan/mudra",
+    path: "/services/funding/msme-loans",
   },
   {
     title: "NBFC Loan",
