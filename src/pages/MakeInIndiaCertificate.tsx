@@ -33,32 +33,32 @@ const MakeInIndiaCertificate = () => {
     {
       question: "1. What is the Make in India Certificate?",
       answer:
-        "It is an official attestation that your product or service qualifies as genuinely made in India, complying with Public Procurement (Preference to Make in India) Order issued by DPIIT. It’s critically required for GeM, tenders, and government projects[5][7][8].",
+        "It is an official attestation that your product or service qualifies as genuinely made in India, complying with Public Procurement (Preference to Make in India) Order issued by DPIIT. It’s critically required for GeM, tenders, and government projects.",
     },
     {
       question: "2. Who is eligible to obtain the certificate?",
       answer:
-        "Manufacturers, OEMs, and service providers with at least 20% value added locally (Class-II supplier) or 50%+ (Class-I supplier) can self-certify local content for most tenders. Higher value projects (>₹10Cr) require CA/third party attestation[5][11][7].",
+        "Manufacturers, OEMs, and service providers with at least 20% value added locally (Class-II supplier) or 50%+ (Class-I supplier) can self-certify local content for most tenders. Higher value projects (>₹10Cr) require CA/third party attestation.",
     },
     {
       question: "3. What documents are needed?",
       answer:
-        "Company incorporation, GST, PAN, product list, local content calculation/BOM, and for CA certificates: detailed cost/part/component breakdowns. Signature and company stamp required[5][7][11].",
+        "Company incorporation, GST, PAN, product list, local content calculation/BOM, and for CA certificates: detailed cost/part/component breakdowns. Signature and company stamp required.",
     },
     {
       question: "4. What are the main benefits?",
       answer:
-        "Purchase preference in government procurement, access to exclusive incentives, boost in business credibility and investor trust, priority in GeM/public tenders, and eligibility for global market export benefits[5][8][9].",
+        "Purchase preference in government procurement, access to exclusive incentives, boost in business credibility and investor trust, priority in GeM/public tenders, and eligibility for global market export benefits.",
     },
     {
       question: "5. How do I get the certificate?",
       answer:
-        "Fill in the prescribed format (self-declaration or CA-certified for high-value bids), attach local content data, and submit with the tender or on GeM. Many online tools and consultants support fast certificate generation[3][5][7].",
+        "Fill in the prescribed format (self-declaration or CA-certified for high-value bids), attach local content data, and submit with the tender or on GeM. Many online tools and consultants support fast certificate generation.",
     },
     {
       question: "6. Does the certificate expire?",
       answer:
-        "The certificate is valid for the duration of the tender/contract unless prescribed otherwise, but it must be updated if your product’s local content changes materially[5][8].",
+        "The certificate is valid for the duration of the tender/contract unless prescribed otherwise, but it must be updated if your product’s local content changes materially.",
     },
   ];
 
@@ -383,7 +383,7 @@ const MakeInIndiaCertificate = () => {
               or services are manufactured or sourced in accordance with
               government’s local content policy, unlocking government
               incentives, bid preference, and global markets. It is mandatory
-              for GeM and most government/public tenders[5][7][12].
+              for GeM and most government/public tenders.
             </p>
           </div>
         </motion.section>

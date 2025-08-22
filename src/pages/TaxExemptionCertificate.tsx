@@ -24,7 +24,7 @@ import { useRef, useEffect } from "react";
 import { HeadProvider, Meta, Title } from "react-head";
 import seoData from "../data/seoData.json"; // Assuming this file will have a key for taxAssumptionCertificate
 
-const TaxAssumptionCertificate = () => {
+const TaxExemptionCertificate = () => {
     const dispatch = useDispatch();
     const handleOpenDialog = () => {
         dispatch({ type: "open" });
@@ -689,4 +689,4 @@ const TaxAssumptionCertificate = () => {
     );
 };
 
-export default memo(TaxAssumptionCertificate);
+export default memo(TaxExemptionCertificate);

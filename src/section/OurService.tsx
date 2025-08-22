@@ -23,7 +23,7 @@ const services = [
     description:
       "Gain official startup recognition to access tax benefits, funding opportunities, and credibility via the Startup India initiative.",
     img: Image2,
-    path: "/services/funding/subsidy/stand-up-india",
+    path: "/services/certificate/startup-india",
   },
   {
     title: "MSME Certificate",

@@ -179,7 +179,7 @@ const menuItems: Menu[] = [
           },
              {
             name: "Tax Exemption  Certificate",
-            path: "/services/certificate/tax-assumption-certificate",
+            path: "/services/certificate/tax-exemption-certificate",
             description: "Government recognition and benefits for startups",
           },
           {
