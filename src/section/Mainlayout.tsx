@@ -679,7 +679,7 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
                           <button
                             onClick={handleOtpVerify}
                             disabled={isSubmitting}
-                            className={`w-full h-11 bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] text-white font-semibold rounded-full cursor-pointer hover:from-[#041f7a] hover:to-[#2d8bc7] hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#052EAA] transition-all duration-200 ${
+                            className={`w-full !py-3   custom-btn ${
                               isSubmitting ? "opacity-50 cursor-not-allowed" : ""
                             }`}
                           >
@@ -697,7 +697,7 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
                               setShowOtpForm(false);
                               setOtp("");
                             }}
-                            className="w-full h-11 bg-gray-200 text-gray-800 font-medium rounded-full hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400 transition-all duration-200"
+                            className="w-full py-3 cursor-pointer bg-gray-200 text-gray-800 font-medium rounded-full hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400 transition-all duration-200"
                           >
                             Back to Form
                           </button>
