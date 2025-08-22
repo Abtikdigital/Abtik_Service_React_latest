@@ -10,11 +10,10 @@ import {
     ArrowRight,
     CheckCircle,
     FileText,
-    IndianRupee,
+  
     Shield,
-    Banknote,
-    Award,
-    BookMarked,
+ 
+   
     Factory,
     TrendingUp,
     Users,
