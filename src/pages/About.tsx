@@ -243,8 +243,8 @@ const About = () => {
               >{
                 index==0?
                 
-                "Our vision is to engage with every startup, growing venture, and business driving the future — enabling possibilities, unlocking opportunities, and delivering meaningful transformations. We are committed to reaching farther, fostering progress, and empowering enterprises to succeed in an ever-evolving business environment."
-                :"Our mission is to raise awareness, share knowledge, and create access to opportunities that help businesses grow and adapt. We work alongside startups, emerging ventures, and established enterprises — guiding them with the right insights, timely support, and meaningful connections to succeed in today’s fast-changing business world."
+                "Our vision is to engage with every startup, growing venture, and business driving the future enabling possibilities, unlocking opportunities, and delivering meaningful transformations. We are committed to reaching farther, fostering progress, and empowering enterprises to succeed in an ever-evolving business environment."
+                :"Our mission is to raise awareness, share knowledge, and create access to opportunities that help businesses grow and adapt. We work alongside startups, emerging ventures, and established enterprises guiding them with the right insights, timely support, and meaningful connections to succeed in today’s fast-changing business world."
               }
               </p>
               <div>
