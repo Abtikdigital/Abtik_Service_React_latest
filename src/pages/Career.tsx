@@ -474,12 +474,7 @@ const Career = () => {
                     className="paragraph text-center md:text-left font-3"
 
                   >
-                    Join our innovative team and be part of a company that's
-                    transforming the business landscape. We offer exciting
-                    opportunities for growth, learning, and making a meaningful
-                    impact. At Abtik, we believe in nurturing talent and
-                    providing a collaborative environment where your skills can
-                    flourish.
+                    Kickstart your growth with abtik services, where creativity runs new opportunities in business. We create exciting career opportunities for growth, learning and meaningful effects. In Abtik, we value talent, encourage new ideas, and provide a supportive, collaborative workplace where your skills and ambitions can actually thrive.
                   </p>
                 </>
               ) : (
