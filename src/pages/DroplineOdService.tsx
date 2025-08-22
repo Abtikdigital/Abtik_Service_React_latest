@@ -201,7 +201,7 @@ const DroplineOverdraft = () => {
         <HeadProvider>
             <Title>{seoData?.droplineodService?.title}</Title>
             <Meta name="description" content={seoData?.droplineodService?.description} />
-            <Meta name="keyword" content={seoData?.droplineodService?.keyword} />
+            <Meta name="keywords" content={seoData?.droplineodService?.keyword} />
             <Meta name="robots" content={seoData?.droplineodService?.robots} />
         </HeadProvider>
 

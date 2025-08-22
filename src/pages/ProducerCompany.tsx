@@ -200,7 +200,7 @@ const ProducerCompanyRegistration = () => {
           content={seoData?.producerCompanyService?.description}
         />
         <Meta
-          name="keyword"
+          name="keywords"
           content={seoData?.producerCompanyService?.keyword}
         />
         <Meta name="robots" content={seoData?.producerCompanyService?.robots} />

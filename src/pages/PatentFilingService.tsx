@@ -203,7 +203,7 @@ const PatentFiling = () => {
         <HeadProvider>
             <Title>{seoData?.patentfillingService?.title}</Title>
             <Meta name="description" content={seoData?.patentfillingService?.description} />
-            <Meta name="keyword" content={seoData?.patentfillingService?.keyword} />
+            <Meta name="keywords" content={seoData?.patentfillingService?.keyword} />
             <Meta name="robots" content={seoData?.patentfillingService?.robots} />
         </HeadProvider>
         <Mainlayout>

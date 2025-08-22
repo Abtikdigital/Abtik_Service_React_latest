@@ -202,7 +202,7 @@ const ProjectFunding = () => {
         <HeadProvider>
             <Title>{seoData?.projectfundingService?.title}</Title>
             <Meta name="description" content={seoData?.projectfundingService?.description} />
-            <Meta name="keyword" content={seoData?.projectfundingService?.keyword} />
+            <Meta name="keywords" content={seoData?.projectfundingService?.keyword} />
             <Meta name="robots" content={seoData?.projectfundingService?.robots} />
         </HeadProvider>
         <Mainlayout>

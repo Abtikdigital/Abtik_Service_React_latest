@@ -24,7 +24,7 @@ const Blog = () => {
       <HeadProvider>
         <Title>{seoData?.blog?.title}</Title>
         <Meta name="description" content={seoData?.blog?.description} />
-        <Meta name="keyword" content={seoData?.blog?.keyword} />
+        <Meta name="keywords" content={seoData?.blog?.keyword} />
         <Meta name="robots" content={seoData?.blog?.robots} />
       </HeadProvider>
       <Mainlayout>

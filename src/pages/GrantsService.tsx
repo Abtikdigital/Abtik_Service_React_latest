@@ -201,7 +201,7 @@ const Grants = () => {
         <HeadProvider>
             <Title>{seoData?.grantsService?.title}</Title>
             <Meta name="description" content={seoData?.grantsService?.description} />
-            <Meta name="keyword" content={seoData?.grantsService?.keyword} />
+            <Meta name="keywords" content={seoData?.grantsService?.keyword} />
             <Meta name="robots" content={seoData?.grantsService?.robots} />
         </HeadProvider>
 

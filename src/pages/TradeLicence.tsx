@@ -199,7 +199,7 @@ const TradeLicenseCertificate = () => {
           name="description"
           content={seoData?.tradeLicenceService?.description}
         />
-        <Meta name="keyword" content={seoData?.tradeLicenceService?.keyword} />
+        <Meta name="keywords" content={seoData?.tradeLicenceService?.keyword} />
         <Meta name="robots" content={seoData?.tradeLicenceService?.robots} />
       </HeadProvider>
 

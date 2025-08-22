@@ -202,7 +202,7 @@ const NAIFFAIFF = () => {
             <HeadProvider>
                 <Title>{seoData?.naiff_aiffService?.title}</Title>
                 <Meta name="description" content={seoData?.naiff_aiffService?.description} />
-                <Meta name="keyword" content={seoData?.naiff_aiffService?.keyword} />
+                <Meta name="keywords" content={seoData?.naiff_aiffService?.keyword} />
                 <Meta name="robots" content={seoData?.naiff_aiffService?.robots} />
             </HeadProvider>
 

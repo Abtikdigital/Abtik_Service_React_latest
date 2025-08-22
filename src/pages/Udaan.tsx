@@ -201,7 +201,7 @@ const UdyamRegistration = () => {
         <HeadProvider>
             <Title>{seoData?.udaanService?.title}</Title>
             <Meta name="description" content={seoData?.udaanService?.description} />
-            <Meta name="keyword" content={seoData?.udaanService?.keyword} />
+            <Meta name="keywords" content={seoData?.udaanService?.keyword} />
             <Meta name="robots" content={seoData?.udaanService?.robots} />
         </HeadProvider>
 

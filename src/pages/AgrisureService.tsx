@@ -201,7 +201,7 @@ const AgriSURE = () => {
         <HeadProvider>
             <Title>{seoData?.agrisureService?.title}</Title>
             <Meta name="description" content={seoData?.agrisureService?.description} />
-            <Meta name="keyword" content={seoData?.agrisureService?.keyword} />
+            <Meta name="keywords" content={seoData?.agrisureService?.keyword} />
             <Meta name="robots" content={seoData?.agrisureService?.robots} />
         </HeadProvider>
         <Mainlayout>

@@ -202,7 +202,7 @@ const Overdraft = () => {
             <HeadProvider>
                 <Title>{seoData?.overdraftService?.title}</Title>
                 <Meta name="description" content={seoData?.overdraftService?.description} />
-                <Meta name="keyword" content={seoData?.overdraftService?.keyword} />
+                <Meta name="keywords" content={seoData?.overdraftService?.keyword} />
                 <Meta name="robots" content={seoData?.overdraftService?.robots} />
             </HeadProvider>
 

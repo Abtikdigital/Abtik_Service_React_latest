@@ -199,7 +199,7 @@ const StartupIndiaCertificate = () => {
             <HeadProvider>
                 <Title>{seoData?.startupIndisCertificateService?.title}</Title>
                 <Meta name="description" content={seoData?.startupIndisCertificateService?.description} />
-                <Meta name="keyword" content={seoData?.startupIndisCertificateService?.keyword} />
+                <Meta name="keywords" content={seoData?.startupIndisCertificateService?.keyword} />
                 <Meta name="robots" content={seoData?.startupIndisCertificateService?.robots} />
             </HeadProvider>
 

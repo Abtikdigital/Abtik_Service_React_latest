@@ -43,7 +43,7 @@ const PrivacyPolicy = () => {
           }
         />
         <Meta
-          name="keyword"
+          name="keywords"
           content={
             seoData?.privacyPolicy?.keyword ||
             "privacy policy, data protection, personal information, Abtik Startup Advisor"

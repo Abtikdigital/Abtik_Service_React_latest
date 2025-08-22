@@ -202,7 +202,7 @@ const CopyrightFiling = () => {
         <HeadProvider>
             <Title>{seoData?.copyrightService?.title}</Title>
             <Meta name="description" content={seoData?.copyrightService?.description} />
-            <Meta name="keyword" content={seoData?.copyrightService?.keyword} />
+            <Meta name="keywords" content={seoData?.copyrightService?.keyword} />
             <Meta name="robots" content={seoData?.copyrightService?.robots} />
         </HeadProvider>
         <Mainlayout>

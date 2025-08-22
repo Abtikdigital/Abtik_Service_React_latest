@@ -199,7 +199,7 @@ const Section8CompanyRegistration = () => {
           name="description"
           content={seoData?.section8Company?.description}
         />
-        <Meta name="keyword" content={seoData?.section8Company?.keyword} />
+        <Meta name="keywords" content={seoData?.section8Company?.keyword} />
         <Meta name="robots" content={seoData?.section8Company?.robots} />
       </HeadProvider>
 

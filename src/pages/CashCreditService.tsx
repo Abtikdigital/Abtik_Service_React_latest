@@ -201,7 +201,7 @@ const CashCredit = () => {
         <HeadProvider>
             <Title>{seoData?.cashCreditService?.title}</Title>
             <Meta name="description" content={seoData?.cashCreditService?.description} />
-            <Meta name="keyword" content={seoData?.cashCreditService?.keyword} />
+            <Meta name="keywords" content={seoData?.cashCreditService?.keyword} />
             <Meta name="robots" content={seoData?.cashCreditService?.robots} />
         </HeadProvider>
         <Mainlayout>

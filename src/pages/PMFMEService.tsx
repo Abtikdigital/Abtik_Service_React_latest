@@ -202,7 +202,7 @@ const PMFME = () => {
             <HeadProvider>
                 <Title>{seoData?.pmfmeService?.title}</Title>
                 <Meta name="description" content={seoData?.pmfmeService?.description} />
-                <Meta name="keyword" content={seoData?.pmfmeService?.keyword} />
+                <Meta name="keywords" content={seoData?.pmfmeService?.keyword} />
                 <Meta name="robots" content={seoData?.pmfmeService?.robots} />
             </HeadProvider>
 

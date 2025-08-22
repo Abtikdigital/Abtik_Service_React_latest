@@ -202,7 +202,7 @@ const MudraLoan = () => {
             <HeadProvider>
                 <Title>{seoData?.mudraloanService?.title}</Title>
                 <Meta name="description" content={seoData?.mudraloanService?.description} />
-                <Meta name="keyword" content={seoData?.mudraloanService?.keyword} />
+                <Meta name="keywords" content={seoData?.mudraloanService?.keyword} />
                 <Meta name="robots" content={seoData?.mudraloanService?.robots} />
             </HeadProvider>
 

@@ -201,7 +201,7 @@ const CMEGP = () => {
         <HeadProvider>
             <Title>{seoData?.cmegpService?.title}</Title>
             <Meta name="description" content={seoData?.cmegpService?.description} />
-            <Meta name="keyword" content={seoData?.cmegpService?.keyword} />
+            <Meta name="keywords" content={seoData?.cmegpService?.keyword} />
             <Meta name="robots" content={seoData?.cmegpService?.robots} />
         </HeadProvider>
         <Mainlayout>

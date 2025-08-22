@@ -200,7 +200,7 @@ const ZEDCertificate = () => {
                     content={seoData?.zedCertificateService?.description}
                 />
                 <Meta
-                    name="keyword"
+                    name="keywords"
                     content={seoData?.zedCertificateService?.keyword}
                 />
                 <Meta name="robots" content={seoData?.zedCertificateService?.robots} />

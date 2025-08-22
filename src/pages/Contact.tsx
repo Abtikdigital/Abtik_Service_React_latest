@@ -25,7 +25,7 @@ const Contact = () => {
       <HeadProvider>
         <Title>{seoData?.contactPage?.title}</Title>
         <Meta name="description" content={seoData?.contactPage?.description} />
-        <Meta name="keyword" content={seoData?.contactPage?.keyword} />
+        <Meta name="keywords" content={seoData?.contactPage?.keyword} />
         <Meta name="robots" content={seoData?.contactPage?.robots} />
       </HeadProvider>
       <Mainlayout>

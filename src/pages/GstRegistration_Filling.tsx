@@ -200,7 +200,7 @@ const GSTRegistrationFiling = () => {
           content={seoData?.gstRegistration_fillingService?.description}
         />
         <Meta
-          name="keyword"
+          name="keywords"
           content={seoData?.gstRegistration_fillingService?.keyword}
         />
         <Meta

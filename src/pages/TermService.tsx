@@ -201,7 +201,7 @@ const TermLoan = () => {
         <HeadProvider>
             <Title>{seoData?.termService?.title}</Title>
             <Meta name="description" content={seoData?.termService?.description} />
-            <Meta name="keyword" content={seoData?.termService?.keyword} />
+            <Meta name="keywords" content={seoData?.termService?.keyword} />
             <Meta name="robots" content={seoData?.termService?.robots} />
         </HeadProvider>
 

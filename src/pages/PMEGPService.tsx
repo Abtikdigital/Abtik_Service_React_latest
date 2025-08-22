@@ -203,7 +203,7 @@ const PMEGP = () => {
             <HeadProvider>
                 <Title>{seoData?.pmegpService?.title}</Title>
                 <Meta name="description" content={seoData?.pmegpService?.description} />
-                <Meta name="keyword" content={seoData?.pmegpService?.keyword} />
+                <Meta name="keywords" content={seoData?.pmegpService?.keyword} />
                 <Meta name="robots" content={seoData?.pmegpService?.robots} />
             </HeadProvider>
 

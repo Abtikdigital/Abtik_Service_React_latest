@@ -201,7 +201,7 @@ const TrademarkFiling = () => {
         <HeadProvider>
             <Title>{seoData?.trademarkService?.title}</Title>
             <Meta name="description" content={seoData?.trademarkService?.description} />
-            <Meta name="keyword" content={seoData?.trademarkService?.keyword} />
+            <Meta name="keywords" content={seoData?.trademarkService?.keyword} />
             <Meta name="robots" content={seoData?.trademarkService?.robots} />
         </HeadProvider>
 

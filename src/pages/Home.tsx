@@ -60,7 +60,7 @@ const Home = () => {
       <HeadProvider>
         <Title>{seoData?.homepage?.title}</Title>
         <Meta name="description" content={seoData?.homepage?.description} />
-        <Meta name="keyword" content={seoData?.homepage?.keyword} />
+        <Meta name="keywords" content={seoData?.homepage?.keyword} />
         <Meta name="robots" content={seoData?.homepage?.robots} />
       </HeadProvider>
       <Mainlayout>

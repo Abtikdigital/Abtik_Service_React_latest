@@ -43,7 +43,7 @@ const RefundPolicy = () => {
           }
         />
         <Meta
-          name="keyword"
+          name="keywords"
           content={
             seoData?.refundPolicy?.keyword ||
             "refund policy, cancellation, money back guarantee, Abtik Startup Advisor"

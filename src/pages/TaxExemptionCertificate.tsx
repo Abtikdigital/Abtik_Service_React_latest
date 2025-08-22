@@ -191,7 +191,7 @@ const TaxExemptionCertificate = () => {
         <HeadProvider>
             <Title>{seoData?.taxAssumptionCertificate?.title || "Tax Exemption  Certificate Service"}</Title>
             <Meta name="description" content={seoData?.taxAssumptionCertificate?.description || "Secure your financial transactions with a Tax Exemption  Certificate."} />
-            <Meta name="keyword" content={seoData?.taxAssumptionCertificate?.keyword || "Tax Exemption , tax certificate, financial due diligence"} />
+            <Meta name="keywords" content={seoData?.taxAssumptionCertificate?.keyword || "Tax Exemption , tax certificate, financial due diligence"} />
             <Meta name="robots" content={seoData?.taxAssumptionCertificate?.robots || "index, follow"} />
         </HeadProvider>
         <Mainlayout>

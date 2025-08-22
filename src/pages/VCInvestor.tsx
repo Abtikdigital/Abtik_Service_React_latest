@@ -200,7 +200,7 @@ const VentureCapital = () => {
             <HeadProvider>
                 <Title>{seoData?.ventureCapitalService?.title}</Title> {/* Assuming SEO data for Venture Capital */}
                 <Meta name="description" content={seoData?.ventureCapitalService?.description} />
-                <Meta name="keyword" content={seoData?.ventureCapitalService?.keyword} />
+                <Meta name="keywords" content={seoData?.ventureCapitalService?.keyword} />
                 <Meta name="robots" content={seoData?.ventureCapitalService?.robots} />
             </HeadProvider>
             <Mainlayout>

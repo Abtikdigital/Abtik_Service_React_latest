@@ -199,7 +199,7 @@ const PartnershipRegistration = () => {
           name="description"
           content={seoData?.partnershipService?.description}
         />
-        <Meta name="keyword" content={seoData?.partnershipService?.keyword} />
+        <Meta name="keywords" content={seoData?.partnershipService?.keyword} />
         <Meta name="robots" content={seoData?.partnershipService?.robots} />
       </HeadProvider>
       <Mainlayout>

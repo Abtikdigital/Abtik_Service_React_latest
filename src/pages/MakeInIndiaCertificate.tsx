@@ -200,7 +200,7 @@ const MakeInIndiaCertificate = () => {
           name="description"
           content={seoData?.makeinindiaService?.description}
         />
-        <Meta name="keyword" content={seoData?.makeinindiaService?.keyword} />
+        <Meta name="keywords" content={seoData?.makeinindiaService?.keyword} />
         <Meta name="robots" content={seoData?.makeinindiaService?.robots} />
       </HeadProvider>
 

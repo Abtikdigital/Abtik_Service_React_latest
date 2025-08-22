@@ -134,7 +134,7 @@ const About = () => {
       <HeadProvider>
         <Title>{seoData?.aboutPage?.title}</Title>
         <Meta name="description" content={seoData?.aboutPage?.description} />
-        <Meta name="keyword" content={seoData?.aboutPage?.keyword} />
+        <Meta name="keywords" content={seoData?.aboutPage?.keyword} />
         <Meta name="robots" content={seoData?.aboutPage?.robots} />
       </HeadProvider>
       <Mainlayout>

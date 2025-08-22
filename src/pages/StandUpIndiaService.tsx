@@ -202,7 +202,7 @@ const StandUpIndia = () => {
         <HeadProvider>
             <Title>{seoData?.standupIndiaService?.title}</Title>
             <Meta name="description" content={seoData?.standupIndiaService?.description} />
-            <Meta name="keyword" content={seoData?.standupIndiaService?.keyword} />
+            <Meta name="keywords" content={seoData?.standupIndiaService?.keyword} />
             <Meta name="robots" content={seoData?.standupIndiaService?.robots} />
         </HeadProvider>
         <Mainlayout>

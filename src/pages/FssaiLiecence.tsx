@@ -217,7 +217,7 @@ const FSSAILicense = () => {
                     }
                 />
                 <Meta
-                    name="keyword"
+                    name="keywords"
                     content={
                         seoData?.fssaiLicenseService?.keyword ||
                         "FSSAI license, food license, FSSAI registration, food safety license, FSSAI online application"

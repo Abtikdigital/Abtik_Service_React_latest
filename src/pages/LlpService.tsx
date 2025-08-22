@@ -197,7 +197,7 @@ const LLPRegistration = () => {
       <HeadProvider>
         <Title>{seoData?.llpService?.title}</Title>
         <Meta name="description" content={seoData?.llpService?.description} />
-        <Meta name="keyword" content={seoData?.llpService?.keyword} />
+        <Meta name="keywords" content={seoData?.llpService?.keyword} />
         <Meta name="robots" content={seoData?.llpService?.robots} />
       </HeadProvider>
 

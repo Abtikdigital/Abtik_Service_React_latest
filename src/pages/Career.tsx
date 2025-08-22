@@ -375,7 +375,7 @@ const Career = () => {
       <HeadProvider>
         <Title>{seoData?.careerPage?.title}</Title>
         <Meta name="description" content={seoData?.careerPage?.description} />
-        <Meta name="keyword" content={seoData?.careerPage?.keyword} />
+        <Meta name="keywords" content={seoData?.careerPage?.keyword} />
         <Meta name="robots" content={seoData?.careerPage?.robots} />
       </HeadProvider>
 

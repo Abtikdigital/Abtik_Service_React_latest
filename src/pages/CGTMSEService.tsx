@@ -201,7 +201,7 @@ const CGTMSE = () => {
         <HeadProvider>
             <Title>{seoData?.cgtmseSerivce?.title}</Title>
             <Meta name="description" content={seoData?.cgtmseSerivce?.description} />
-            <Meta name="keyword" content={seoData?.cgtmseSerivce?.keyword} />
+            <Meta name="keywords" content={seoData?.cgtmseSerivce?.keyword} />
             <Meta name="robots" content={seoData?.cgtmseSerivce?.robots} />
         </HeadProvider>
         <Mainlayout>

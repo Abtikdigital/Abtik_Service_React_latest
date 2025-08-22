@@ -205,7 +205,7 @@ const MSMELoans = () => {
       <HeadProvider>
         <Title>{seoData?.msmeLoans?.title || "MSME Loans - CGTMSE, Udyam & Mudra Loans"}</Title>
         <Meta name="description" content={seoData?.msmeLoans?.description || "Get MSME loans including CGTMSE, Udyam, and Mudra loans with Abtik's expert assistance."} />
-        <Meta name="keyword" content={seoData?.msmeLoans?.keyword || "MSME loans, CGTMSE, Udyam registration, Mudra loans, business loans"} />
+        <Meta name="keywords" content={seoData?.msmeLoans?.keyword || "MSME loans, CGTMSE, Udyam registration, Mudra loans, business loans"} />
         <Meta name="robots" content={seoData?.msmeLoans?.robots || "index, follow"} />
       </HeadProvider>
       <Mainlayout>

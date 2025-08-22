@@ -211,7 +211,7 @@ const AngelInvestor = () => {
                     name="description"
                     content={seoData?.angelInvestorService?.description}
                 />
-                <Meta name="keyword" content={seoData?.angelInvestorService?.keyword} />
+                <Meta name="keywords" content={seoData?.angelInvestorService?.keyword} />
                 <Meta name="robots" content={seoData?.angelInvestorService?.robots} />
             </HeadProvider>
             <Mainlayout>

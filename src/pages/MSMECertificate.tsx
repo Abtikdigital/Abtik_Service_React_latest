@@ -200,7 +200,7 @@ const MSMECertificate = () => {
           content={seoData?.msmeCertificateService?.description}
         />
         <Meta
-          name="keyword"
+          name="keywords"
           content={seoData?.msmeCertificateService?.keyword}
         />
         <Meta name="robots" content={seoData?.msmeCertificateService?.robots} />

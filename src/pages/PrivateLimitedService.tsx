@@ -201,7 +201,7 @@ const PvtLtdRegistration = () => {
                     content={seoData?.privatelimitedService?.description}
                 />
                 <Meta
-                    name="keyword"
+                    name="keywords"
                     content={seoData?.privatelimitedService?.keyword}
                 />
                 <Meta name="robots" content={seoData?.privatelimitedService?.robots} />

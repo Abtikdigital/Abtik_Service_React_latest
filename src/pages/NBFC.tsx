@@ -200,7 +200,7 @@ const NBFC = () => {
             <HeadProvider>
                 <Title>{seoData?.nbfcService?.title}</Title>
                 <Meta name="description" content={seoData?.nbfcService?.description} />
-                <Meta name="keyword" content={seoData?.nbfcService?.keyword} />
+                <Meta name="keywords" content={seoData?.nbfcService?.keyword} />
                 <Meta name="robots" content={seoData?.nbfcService?.robots} />
             </HeadProvider>
             <Mainlayout>

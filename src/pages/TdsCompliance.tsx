@@ -199,7 +199,7 @@ const TDCompliance = () => {
           name="description"
           content={seoData?.tdsComplianceService?.description}
         />
-        <Meta name="keyword" content={seoData?.tdsComplianceService?.keyword} />
+        <Meta name="keywords" content={seoData?.tdsComplianceService?.keyword} />
         <Meta name="robots" content={seoData?.tdsComplianceService?.robots} />
       </HeadProvider>
       <Mainlayout>

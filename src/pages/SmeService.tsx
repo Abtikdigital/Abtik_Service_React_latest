@@ -201,7 +201,7 @@ const SMELoan = () => {
         <HeadProvider>
             <Title>{seoData?.smeService?.title}</Title>
             <Meta name="description" content={seoData?.smeService?.description} />
-            <Meta name="keyword" content={seoData?.smeService?.keyword} />
+            <Meta name="keywords" content={seoData?.smeService?.keyword} />
             <Meta name="robots" content={seoData?.smeService?.robots} />
         </HeadProvider>
 

@@ -209,7 +209,7 @@ const SeedFund = () => {
           name="description"
           content={seoData?.seedFundService?.description}
         />
-        <Meta name="keyword" content={seoData?.seedFundService?.keyword} />
+        <Meta name="keywords" content={seoData?.seedFundService?.keyword} />
         <Meta name="robots" content={seoData?.seedFundService?.robots} />
       </HeadProvider>
 

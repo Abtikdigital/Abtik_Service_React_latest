@@ -202,7 +202,7 @@ const LoanAgainstProperty = () => {
             <HeadProvider>
                 <Title>{seoData?.lapService?.title}</Title>
                 <Meta name="description" content={seoData?.lapService?.description} />
-                <Meta name="keyword" content={seoData?.lapService?.keyword} />
+                <Meta name="keywords" content={seoData?.lapService?.keyword} />
                 <Meta name="robots" content={seoData?.lapService?.robots} />
             </HeadProvider>
 

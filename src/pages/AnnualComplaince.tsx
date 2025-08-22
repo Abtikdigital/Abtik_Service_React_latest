@@ -200,7 +200,7 @@ const AnnualCompliance = () => {
           content={seoData?.annualComplainceService?.description}
         />
         <Meta
-          name="keyword"
+          name="keywords"
           content={seoData?.annualComplainceService?.keyword}
         />
         <Meta

@@ -201,7 +201,7 @@ const BusinessLoan = () => {
         <HeadProvider>
             <Title>{seoData?.businessLoanService?.title}</Title>
             <Meta name="description" content={seoData?.businessLoanService?.description} />
-            <Meta name="keyword" content={seoData?.businessLoanService?.keyword} />
+            <Meta name="keywords" content={seoData?.businessLoanService?.keyword} />
             <Meta name="robots" content={seoData?.businessLoanService?.robots} />
         </HeadProvider>
         <Mainlayout>

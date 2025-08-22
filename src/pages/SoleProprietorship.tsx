@@ -200,7 +200,7 @@ const SoleProprietorRegistration = () => {
           content={seoData?.soleproprietorshipService?.description}
         />
         <Meta
-          name="keyword"
+          name="keywords"
           content={seoData?.soleproprietorshipService?.keyword}
         />
         <Meta

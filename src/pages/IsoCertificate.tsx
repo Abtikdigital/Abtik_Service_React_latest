@@ -201,7 +201,7 @@ const ISOCertificate = () => {
           content={seoData?.isoCertificateService?.description}
         />
         <Meta
-          name="keyword"
+          name="keywords"
           content={seoData?.isoCertificateService?.keyword}
         />
         <Meta name="robots" content={seoData?.isoCertificateService?.robots} />
