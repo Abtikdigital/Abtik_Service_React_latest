@@ -1,7 +1,7 @@
 import Mainlayout from "../section/Mainlayout";
 import BgImage from "../assets/Hero/bgImg.svg";
 import Contact from "../section/Contact";
-import Image1 from "../assets/ProjectFunding/Image1.jfif";
+import Image1 from "../assets/ProjectFunding/ProjectFunding.png";
 import {
     Mail,
     User,
