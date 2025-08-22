@@ -13,6 +13,7 @@ const ScrollToUp = lazy(() => import("./section/ScrollToUp"));
 const PageNotFound = lazy(() => import("./pages/PageNotFound"));
 
 // Funding Solution
+const MSMELoans = lazy(() => import("./pages/MSMELoans"))
 const SeedFund = lazy(() => import("./pages/SeedFundService"));
 const PMEGP = lazy(() => import("./pages/PMEGPService"));
 const CMEGP = lazy(() => import("./pages/CMEGPService"));
@@ -75,6 +76,7 @@ const ProducerCompany = lazy(() => import("./pages/ProducerCompany"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const RefundPolicy = lazy(() => import("./pages/RefundPolicy"))
 function App() {
+  
   return (
     <BrowserRouter>
       <ScrollToUp />
@@ -96,6 +98,10 @@ function App() {
             element={<StandUpIndia />}
           />
           <Route path="/services/funding/grants" element={<Grants />} />
+          <Route
+            path="/services/funding/msme-loans"
+            element={<MSMELoans />}
+          />
           <Route
             path="/services/funding/msme-loan/mudra"
             element={<MudraLoan />}

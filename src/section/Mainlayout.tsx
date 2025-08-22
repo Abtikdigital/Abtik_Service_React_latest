@@ -410,9 +410,15 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
       localStorage.removeItem('otpToken');
     };
   }, []);
+  useEffect(()=>{
+    setTimeout(()=>{
+
+      dispatch({type:"open"})
+    },6000)
+  },[])
 
   return (
-    <>
+    <div className="">
       <Offer />
       <Navbar />
       {children}
@@ -615,7 +621,7 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
                         </div>
 
                         {/* Submit Buttons */}
-                        <div className="flex flex-col md:flex-row w-full gap-4 pt-4">
+                        <div className="flex flex-col md:flex-row w-full gap-4 pt-4 mb-6">
                           <button
                             type="button"
                             onClick={closeModal}
@@ -705,7 +711,7 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
           </motion.div>
         )}
       </AnimatePresence>
-    </>
+    </div>
   );
 };
 

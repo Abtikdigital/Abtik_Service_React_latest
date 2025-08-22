@@ -472,7 +472,7 @@ const TestimonialMarquee: React.FC = () => {
         .testimonial-marquee { will-change: transform; }
 
         /* Hide scrollbars but allow scrolling on mobile container */
-        ::-webkit-scrollbar { display: none; }
+     
         .line-clamp-6 {
           display: -webkit-box;
           -webkit-line-clamp: 6;
