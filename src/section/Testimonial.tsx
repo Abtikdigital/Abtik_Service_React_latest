@@ -214,7 +214,8 @@
 // export default memo(Testimonial);
 
 
-import React, { memo, useEffect, useRef } from "react";
+
+import React, { memo, useEffect, useRef, useState } from "react";
 
 // Testimonials data
 const testimonials = [
@@ -254,83 +255,65 @@ const testimonials = [
     text:
       "I live in Pune. I spoke to Shashikant Gaikwad. He gave me a better service than I had expected. His team did a great job. Thanks to Abtik Group of Companies for that.",
   },
-  // Add more testimonials here for smoother effect!
 ];
 
 // Types
 type Testimonial = (typeof testimonials)[number];
 
-// Card Component
-const Card: React.FC<{ testimonial: Testimonial }> = ({ testimonial }) => {
-  // Safe initials helper that tolerates any input type
-  const getInitials = (nameInput: unknown) => {
-    const name =
-      typeof nameInput === "string"
-        ? nameInput.trim()
-        : nameInput == null
-        ? ""
-        : String(nameInput).trim();
+// Safe initials utility
+function getInitials(nameInput: unknown): string {
+  const name =
+    typeof nameInput === "string"
+      ? nameInput.trim()
+      : nameInput == null
+      ? ""
+      : String(nameInput).trim();
 
-    if (!name) return "AB";
+  if (!name) return "AB";
+  const parts = name.split(/\s+/).filter(Boolean);
 
-    const parts = name.split(/\s+/).filter(Boolean);
-
-    const firstChar = (s: unknown) => {
-      const str = typeof s === "string" ? s : String(s ?? "");
-      return (str.charAt(0) || "").toUpperCase();
-    };
-
-    if (parts.length >= 2) {
-      return (firstChar(parts[0]) + firstChar(parts)) || "AB";
-    }
-
-    if (parts.length === 1) {
-      const p:any = parts;
-      const a = firstChar(p);
-      const b =
-        (typeof p === "string" ? p?.charAt(1) : String(p).charAt(1))?.toUpperCase() ||
-        "";
-      return (a + b) || "AB";
-    }
-
-    return "AB";
+  const firstChar = (s: unknown) => {
+    const str = typeof s === "string" ? s : String(s ?? "");
+    return (str.charAt(0) || "").toUpperCase();
   };
 
-  // Normalize name for display without crashing
+  if (parts.length >= 2) {
+    return (firstChar(parts[0]) + firstChar(parts)) || "AB";
+  }
+  if (parts.length === 1) {
+    const p:any = parts;
+    const a = firstChar(p);
+    const b = (typeof p === "string" ? p?.charAt(1) : String(p).charAt(1))?.toUpperCase() || "";
+    return (a + b) || "AB";
+  }
+  return "AB";
+}
+
+// Card
+const Card: React.FC<{ testimonial: Testimonial }> = ({ testimonial }) => {
   const displayName =
-    typeof testimonial.name === "string"
-      ? testimonial.name
-      : testimonial.name == null
-      ? ""
-      : String(testimonial.name);
+    typeof testimonial.name === "string" ? testimonial.name : String(testimonial.name ?? "");
 
   return (
     <div
       className="
-        w-[300px] sm:w-[340px] md:w-[400px]
+        w-[340px] sm:w-[340px] md:w-[400px]
         bg-gradient-to-b from-blue-800 to-blue-500
         text-white rounded-2xl shadow-lg
         flex flex-col
         p-5 mx-3 flex-shrink-0
       "
       style={{
-        minHeight: 240, // consistent card height across breakpoints
+        minHeight: 220,
+        scrollSnapAlign: "center",
       }}
     >
       <div className="flex items-center space-x-4 mb-3">
-        <div className="w-12 h-12 rounded-full bg-gray-300 flex justify-center items-center text-gray-800 font-semibold text-lg">
-          {getInitials(testimonial.name)}
+        <div className="min-w-12 min-h-12 rounded-full bg-gray-300 flex justify-center items-center text-gray-800 font-semibold text-lg">
+          {getInitials(displayName)}
         </div>
         <div className="min-w-0">
-          <p
-            className="font-semibold text-base capitalize truncate"
-            style={{
-              fontSize: "1rem",
-              lineHeight: 1.25,
-              whiteSpace: "nowrap",
-            }}
-            title={displayName}
-          >
+          <p className="font-semibold text-base capitalize truncate" title={displayName}>
             {displayName}
           </p>
           {testimonial.company && (
@@ -340,17 +323,7 @@ const Card: React.FC<{ testimonial: Testimonial }> = ({ testimonial }) => {
           )}
         </div>
       </div>
-
-      <p
-        className="text-sm"
-        style={{
-          display: "-webkit-box",
-          WebkitLineClamp: 6, // clamp to keep card heights aligned
-          WebkitBoxOrient: "vertical" as const,
-          overflow: "hidden",
-        }}
-        title={testimonial.text}
-      >
+      <p className="text-sm line-clamp-6" title={testimonial.text}>
         {testimonial.text}
       </p>
     </div>
@@ -358,165 +331,160 @@ const Card: React.FC<{ testimonial: Testimonial }> = ({ testimonial }) => {
 };
 
 const TestimonialMarquee: React.FC = () => {
-  // Duplicate testimonials for seamless looping
-  const marqueeTestimonials = [...testimonials, ...testimonials];
-
-  const trackRef = useRef<HTMLDivElement | null>(null);
+  const [isMobile, setIsMobile] = useState(false);
   const wrapperRef = useRef<HTMLDivElement | null>(null);
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
-  // Manage marquee pause/resume based on user activity and scrolling
+  // Detect mobile (<768)
   useEffect(() => {
-    const track = trackRef.current;
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  // Mobile auto-scroll card-by-card
+  useEffect(() => {
+    // Clear interval if switching modes
+    if (!isMobile) {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+        intervalRef.current = null;
+      }
+      return;
+    }
+
     const wrapper = wrapperRef.current;
-    if (!track || !wrapper) return;
+    if (!wrapper) return;
 
-    let inactivityTimer: number | null = null;
     let userActive = false;
+    let inactivityTimer: number | null = null;
 
-    const pause = () => {
-      track.style.animationPlayState = "paused";
+    const startAuto = () => {
+      if (intervalRef.current) return;
+      intervalRef.current = setInterval(() => {
+        if (!userActive && wrapper) {
+          const firstCard = wrapper.querySelector<HTMLDivElement>("div");
+          const cardWidth = (firstCard?.clientWidth ?? 320) + 24; // + mx-3 gap
+          const nearEnd = wrapper.scrollLeft + wrapper.clientWidth >= wrapper.scrollWidth - 4;
+
+          if (nearEnd) {
+            wrapper.scrollTo({ left: 0, behavior: "smooth" });
+          } else {
+            wrapper.scrollBy({ left: cardWidth, behavior: "smooth" });
+          }
+        }
+      }, 3000);
     };
-    const resume = () => {
-      if (!userActive) {
-        track.style.animationPlayState = "running";
+
+    const stopAuto = () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+        intervalRef.current = null;
       }
     };
-    const bumpInactivityTimer = (delay = 700) => {
+
+    const bumpIdle = () => {
       if (inactivityTimer) window.clearTimeout(inactivityTimer);
       inactivityTimer = window.setTimeout(() => {
         userActive = false;
-        resume();
-      }, delay);
+      }, 1500);
     };
 
-    // Keep paused while wrapper is scrolling (includes momentum)
-    const onScroll = () => {
+    const onInteract = () => {
       userActive = true;
-      pause();
-      bumpInactivityTimer(800);
+      bumpIdle();
     };
 
-    const onWheel = (e: WheelEvent) => {
-      if (Math.abs(e.deltaX) > 0 || Math.abs(e.deltaY) > 0) {
-        userActive = true;
-        pause();
-        bumpInactivityTimer(800);
-      }
-    };
+    wrapper.addEventListener("scroll", onInteract, { passive: true });
+    wrapper.addEventListener("wheel", onInteract, { passive: true });
+    wrapper.addEventListener("touchstart", onInteract, { passive: true });
+    wrapper.addEventListener("touchmove", onInteract, { passive: true });
+    wrapper.addEventListener("touchend", onInteract, { passive: true });
 
-    const onTouchStart = () => {
-      userActive = true;
-      pause();
-      if (inactivityTimer) window.clearTimeout(inactivityTimer);
-    };
-
-    const onTouchMove = () => {
-      userActive = true;
-      pause();
-    };
-
-    const onTouchEnd = () => {
-      bumpInactivityTimer(800);
-    };
-
-    wrapper.addEventListener("scroll", onScroll, { passive: true });
-    wrapper.addEventListener("wheel", onWheel, { passive: true });
-    wrapper.addEventListener("touchstart", onTouchStart, { passive: true });
-    wrapper.addEventListener("touchmove", onTouchMove, { passive: true });
-    wrapper.addEventListener("touchend", onTouchEnd, { passive: true });
+    startAuto();
 
     return () => {
-      wrapper.removeEventListener("scroll", onScroll);
-      wrapper.removeEventListener("wheel", onWheel);
-      wrapper.removeEventListener("touchstart", onTouchStart);
-      wrapper.removeEventListener("touchmove", onTouchMove);
-      wrapper.removeEventListener("touchend", onTouchEnd);
+      stopAuto();
+      wrapper.removeEventListener("scroll", onInteract);
+      wrapper.removeEventListener("wheel", onInteract);
+      wrapper.removeEventListener("touchstart", onInteract);
+      wrapper.removeEventListener("touchmove", onInteract);
+      wrapper.removeEventListener("touchend", onInteract);
       if (inactivityTimer) window.clearTimeout(inactivityTimer);
     };
-  }, []);
+  }, [isMobile]);
 
-  // Hover pause only on md and up
-  const handleMouseEnter: React.MouseEventHandler<HTMLDivElement> = (e) => {
-    if (window.matchMedia("(min-width: 768px)").matches) {
-      (e.currentTarget as HTMLDivElement).style.animationPlayState = "paused";
-    }
-  };
-  const handleMouseLeave: React.MouseEventHandler<HTMLDivElement> = (e) => {
-    (e.currentTarget as HTMLDivElement).style.animationPlayState = "running";
-  };
+  // Desktop duplicates for marquee
+  const marqueeTestimonials = [...testimonials, ...testimonials];
 
   return (
-    <section className="flex flex-col items-center py-8 space-y-8 bg-[#f7f7f7] w-full">
+    <section className="flex flex-col items-center py-8 space-y-8 bg-[#f7f7f7] w-full min-h-[340px]">
       <h2 className="sub-heading bg-clip-text text-transparent bg-gradient-to-t from-[#3CA2E2] to-[#052EAA] px-4">
         Testimonials
       </h2>
 
-      <div
-        className="
-          relative w-full
-          overflow-x-auto pb-16 overflow-y-hidden
-          scrollbar-thin
-        "
-        ref={wrapperRef}
-        style={{
-          WebkitOverflowScrolling: "touch",
-          scrollbarWidth: "thin",
-        }}
-      >
+      {isMobile ? (
+        // Mobile: snapping + card-by-card
         <div
-          ref={trackRef}
-          className="flex items-stretch testimonial-marquee"
+          ref={wrapperRef}
+          className="relative w-full overflow-x-auto overflow-y-hidden flex"
           style={{
-            animation: "testimonial-marquee-keyframes 34s linear infinite",
-            animationDirection: "reverse", // right-to-left
+            WebkitOverflowScrolling: "touch",
+            scrollbarWidth: "none",
+            msOverflowStyle: "none",
+            scrollSnapType: "x mandatory",
           }}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
         >
-          {marqueeTestimonials.map((testimonial, idx) => (
-            <Card testimonial={testimonial} key={`${idx}-${testimonial.name}`} />
+          {testimonials.map((testimonial, idx) => (
+            <Card testimonial={testimonial} key={`m-${idx}`} />
           ))}
         </div>
-      </div>
+      ) : (
+        // Desktop: continuous marquee with hover pause
+        <div className="relative w-full overflow-hidden">
+          <div
+            className="flex items-center testimonial-marquee"
+            style={{
+              animation: "testimonial-marquee-keyframes 38s linear infinite",
+              animationDirection: "reverse",
+            }}
+            onMouseEnter={(e) => {
+              (e.currentTarget as HTMLDivElement).style.animationPlayState = "paused";
+            }}
+            onMouseLeave={(e) => {
+              (e.currentTarget as HTMLDivElement).style.animationPlayState = "running";
+            }}
+          >
+            {marqueeTestimonials.map((testimonial, idx) => (
+              <Card testimonial={testimonial} key={`d-${idx}-${testimonial.name}`} />
+            ))}
+          </div>
+        </div>
+      )}
 
-      {/* Keyframes CSS */}
+      {/* Keep the style tag content as a single template literal */}
       <style>{`
-        /* Seamless marquee: translate half width since content duplicated */
         @keyframes testimonial-marquee-keyframes {
           0%   { transform: translateX(0%); }
           100% { transform: translateX(-50%); }
         }
-
         .testimonial-marquee { will-change: transform; }
 
-        /* Faster on very small screens */
+        /* Hide scrollbars but allow scrolling on mobile container */
+        ::-webkit-scrollbar { display: none; }
+        .line-clamp-6 {
+          display: -webkit-box;
+          -webkit-line-clamp: 6;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+
+        /* Optional: slower on small screens if desktop is visible for any reason */
         @media (max-width: 640px) {
           .testimonial-marquee {
-            animation-duration: 20s !important; /* faster for mobile */
+            animation-duration: 68s !important;
           }
-        }
-
-        /* Medium screens slightly quicker than desktop default */
-        @media (min-width: 641px) and (max-width: 1024px) {
-          .testimonial-marquee {
-            animation-duration: 28s !important;
-          }
-        }
-
-        /* Visible, neat horizontal scrollbar */
-        ::-webkit-scrollbar {
-          height: 8px;
-        }
-        ::-webkit-scrollbar-track {
-          background: rgba(0,0,0,0.06);
-          border-radius: 9999px;
-        }
-        ::-webkit-scrollbar-thumb {
-          background: rgba(0,0,0,0.35);
-          border-radius: 9999px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-          background: rgba(0,0,0,0.45);
         }
       `}</style>
     </section>
@@ -524,4 +492,6 @@ const TestimonialMarquee: React.FC = () => {
 };
 
 export default memo(TestimonialMarquee);
+
+
 
