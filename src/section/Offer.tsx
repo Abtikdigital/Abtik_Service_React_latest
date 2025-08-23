@@ -1,32 +1,33 @@
+import Icon from "../assets/icons/glass.png"
 const WebsiteOfferBanner = () => {
   const message = "Our 3rd Year of Togetherness, Forever to Go";
 
   return (
-    <div className="relative bg-gradient-to-r from-[#3CA2E2] to-[#052EAA] text-white py-3 overflow-hidden shadow-[0_0_20px_rgba(60,162,226,0.6)]">
+    <div className="relative bg-gradient-to-r px-3 from-[#3CA2E2] to-[#052EAA] text-white py-3 overflow-hidden shadow-[0_0_20px_rgba(60,162,226,0.6)]">
       {/* Mobile: Show once */}
       <div className="flex justify-center items-center gap-3 md:hidden">
-        <span className="animate-bounce">🎉</span>
+        <span className=""><img src={Icon}/></span>
         <span
           className="relative inline-block text-lg text-center font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-white via-[#3CA2E2] to-white animate-blink"
           style={{ fontFamily: "Playfair Display" }}
         >
           {message}
         </span>
-        <span className="animate-bounce">🎉</span>
+        <span className=""><img src={Icon}/></span>
       </div>
 
       {/* Desktop: Show 3 times */}
       <div className="hidden md:flex flex-row justify-center items-center gap-6">
         {[...Array(3)].map((_, i) => (
           <div key={i} className="flex items-center gap-3">
-            <span className="animate-bounce">🎉</span>
+            <span className=""><img src={Icon}/></span>
             <span
               className="relative inline-block text-lg font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-white via-[#3CA2E2] to-white animate-blink"
               style={{ fontFamily: "Playfair Display" }}
             >
               {message}
             </span>
-            <span className="animate-bounce">🎉</span>
+            <span className=""><img src={Icon}/></span>
           </div>
         ))}
       </div>
