@@ -8,11 +8,13 @@ const WebsiteOfferBanner = () => {
             key={i}
             className="whitespace-nowrap font-1 font-bold text-lg flex items-center gap-4"
           >
-            <span className="animate-bounce">🥳</span>
-            <span className="relative inline-block bg-clip-text text-transparent bg-gradient-to-r from-white via-[#3CA2E2] to-white animate-shine">
-              Celebrating 3 Wonderful Years With You
+            <span className="animate-bounce"></span>
+            <span className="relative inline-block bg-clip-text text-transparent bg-gradient-to-r from-white via-[#3CA2E2] to-white animate-shine"
+            style={{fontFamily:"Playfair Display"}}
+            >
+            Marking the 3rd Year of Our Beautiful Journey
             </span>
-            <span className="animate-bounce">🥳</span>
+            <span className="animate-bounce"></span>
           </div>
         ))}
       </div>
