@@ -288,7 +288,7 @@ const SeedFund = () => {
             initial={{ y: 50, opacity: 0 }}
             animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
             transition={{ duration: 0.5, delay: getTouchDelay(0) }}
-            className="w-full md:w-[300px]    flex-shrink-0 bg-gradient-to-br from-blue-100 to-blue-200 p-6 rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 box-border"
+            className="w-full md:w-[320px]    flex-shrink-0 bg-gradient-to-br from-blue-100 to-blue-200 p-6 rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 box-border"
           >
             <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-4 font-2">
               Get in Touch

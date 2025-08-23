@@ -138,7 +138,7 @@ const OurService = () => {
             >
               <img
                 src={service.img}
-                className="w-full rounded-xl hover:scale-105 transition-all duration-300 cursor-pointer"
+                className="w-full rounded-xl hover:scale-105 transition-all duration-300 cursor-pointer max-h-46"
                 alt={service.title}
               />
               <h2 className="text-center text-xl text-[#3CA2E2] font-semibold font-4">
