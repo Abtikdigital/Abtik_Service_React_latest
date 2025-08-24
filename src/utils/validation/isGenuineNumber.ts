@@ -1,31 +1,23 @@
- function isGenuineIndianPhoneNumber(phoneNumber:any) {
-    const digits = String(phoneNumber).replace(/\D/g, '');
+function isGenuineIndianPhoneNumber(phoneNumber: any) {
+  const digits = String(phoneNumber).replace(/\D/g, '');
 
-    if (!/^[6-9]\d{9}$/.test(digits)) {
-        return false;
-    }
+  // Must be 10 digits, starting with 6-9
+  if (!/^[6-9]\d{9}$/.test(digits)) {
+    return false;
+  }
 
-    const sequenceLength = 4;
-    for (let i = 0; i <= digits.length - sequenceLength; i++) {
-        const sub = digits.substring(i, i + sequenceLength);
-        const firstDigit = parseInt(sub[0], 10);
+  // Reject numbers where all 10 digits are the same (e.g. 9999999999)
+  if (/^(\d)\1{9}$/.test(digits)) {
+    return false;
+  }
 
-        let isRepeating = true;
-        let isSequentialAsc = true;
-        let isSequentialDesc = true;
+  // Reject full sequential numbers (1234567890 or 9876543210)
+  if (digits === "1234567890" || digits === "9876543210") {
+    return false;
+  }
 
-        for (let j = 1; j < sequenceLength; j++) {
-            const currentDigit = parseInt(sub[j], 10);
-            if (currentDigit !== firstDigit) isRepeating = false;
-            if (currentDigit !== firstDigit + j) isSequentialAsc = false;
-            if (currentDigit !== firstDigit - j) isSequentialDesc = false;
-        }
-
-        if (isRepeating || isSequentialAsc || isSequentialDesc) {
-            return false;
-        }
-    }
-    return true;
+  return true;
 }
+
 
 export default isGenuineIndianPhoneNumber

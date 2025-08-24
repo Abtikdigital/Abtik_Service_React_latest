@@ -1,44 +1,46 @@
-import Icon from "../assets/icons/glass.png";
+// import Icon from "../assets/icons/glass.png";
 
 const WebsiteOfferBanner = () => {
-  const message = "Our 3rd Year of Togetherness, Forever to Go";
+  // const message = "Our 3rd Year of Togetherness, Forever to Go";
 
-  return (
-    <div className="relative bg-gradient-to-r px-3 from-[#3CA2E2] to-[#052EAA] text-white py-3 overflow-hidden shadow-[0_0_20px_rgba(60,162,226,0.6)]">
-      {/* Marquee wrapper */}
-      <div className="flex w-max animate-marquee gap-12">
-        {[...Array(6)].map((_, i) => (
-          <div key={i} className="flex items-center gap-3 whitespace-nowrap">
-            <span className="flex-shrink-0 w-6 h-6">
-              <img src={Icon} alt="icon" className="w-full h-full" />
-            </span>
-            <span
-              className="relative inline-block text-lg font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-white via-[#3CA2E2] to-white"
-              style={{ fontFamily: "Playfair Display" }}
-            >
-              {message}
-            </span>
-            <span className="flex-shrink-0 w-6 h-6">
-              <img src={Icon} alt="icon" className="w-full h-full" />
-            </span>
-          </div>
-        ))}
-      </div>
+  return (<>
 
-      <style>
-        {`
-          /* Marquee effect */
-          @keyframes marquee {
-            0% { transform: translateX(0%); }
-            100% { transform: translateX(-50%); }
-          }
-          .animate-marquee {
-            display: flex;
-            animation: marquee 20s linear infinite;
-          }
-        `}
-      </style>
-    </div>
+     {/* <div className="relative bg-gradient-to-r px-3 from-[#3CA2E2] to-[#052EAA] text-white py-3 overflow-hidden shadow-[0_0_20px_rgba(60,162,226,0.6)]">
+      
+       <div className="flex w-max animate-marquee gap-12">
+         {[...Array(6)].map((_, i) => (
+           <div key={i} className="flex items-center gap-3 whitespace-nowrap">
+             <span className="flex-shrink-0 w-6 h-6">
+               <img src={Icon} alt="icon" className="w-full h-full" />
+             </span>
+             <span
+               className="relative inline-block text-lg font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-white via-[#3CA2E2] to-white"
+               style={{ fontFamily: "Playfair Display" }}
+             >
+               {message}
+             </span>
+             <span className="flex-shrink-0 w-6 h-6">
+               <img src={Icon} alt="icon" className="w-full h-full" />
+             </span>
+           </div>
+         ))}
+       </div>
+
+       <style>
+         {`
+         
+           @keyframes marquee {
+             0% { transform: translateX(0%); }
+             100% { transform: translateX(-50%); }
+           }
+           .animate-marquee {
+             display: flex;
+             animation: marquee 20s linear infinite;
+           }
+         `}
+       </style>
+     </div>  */}
+    </>
   );
 };
 

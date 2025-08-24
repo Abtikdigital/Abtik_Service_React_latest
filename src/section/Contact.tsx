@@ -1,22 +1,99 @@
 // import Chart from "react-google-charts";
 import { useForm, Controller } from "react-hook-form";
-import OtpInput from "react-otp-input";
-// import axios from "axios";
 import Swal from "sweetalert2";
 import { memo, useState, useRef, useEffect } from "react";
 // Assuming verifyOtp is exported from otpApis
 import { addOtpDetails, verifyOtp } from "../api/otpApis";
 // import Map from "../section/Map";
-import isValidIndianNumber from "../utils/validation/isGenuineNumber"
+import isValidIndianNumber from "../utils/validation/isGenuineNumber";
+import type { ChangeEvent, KeyboardEvent } from "react";
 
 interface ContactFormData {
   name: string;
   email: string;
   message: string;
-  number: number;
+  number: string;
   companyName: string;
   serviceType: string;
 }
+
+// Custom OTP Input Component
+interface CustomOtpInputProps {
+  numInputs: number;
+  value: string;
+  onChange: (value: string) => void;
+  inputRef?: React.RefObject<HTMLInputElement[]>;
+}
+
+const CustomOtpInput = ({ numInputs, value, onChange, inputRef }: CustomOtpInputProps) => {
+  const inputsRef = useRef<HTMLInputElement[]>([]);
+
+  useEffect(() => {
+    if (inputRef && inputRef.current[0]) {
+      inputRef.current[0].focus();
+    } else if (inputsRef.current[0]) {
+      inputsRef.current[0].focus();
+    }
+  }, []);
+
+  const handleChange = (e: ChangeEvent<HTMLInputElement>, index: number) => {
+    const newOtp = [...value.split("")];
+    newOtp[index] = e.target.value;
+    onChange(newOtp.join(""));
+
+    if (e.target.value && index < numInputs - 1) {
+      (inputRef?.current[index + 1] || inputsRef.current[index + 1]).focus();
+    }
+  };
+
+  const handleKeyDown = (e: KeyboardEvent<HTMLInputElement>, index: number) => {
+    if (e.key === "Backspace" && !value[index] && index > 0) {
+      (inputRef?.current[index - 1] || inputsRef.current[index - 1]).focus();
+    }
+  };
+
+  const handlePaste = (e: React.ClipboardEvent<HTMLInputElement>) => {
+    e.preventDefault();
+    const pastedData = e.clipboardData.getData("text/plain").slice(0, numInputs);
+    onChange(pastedData);
+  };
+
+  return (
+    <div className="flex justify-center gap-4" onPaste={handlePaste}>
+      {Array(numInputs)
+        .fill(0)
+        .map((_, index) => (
+          <input
+            key={index}
+            ref={(el) => {
+              if (el) {
+                inputsRef.current[index] = el;
+                if (inputRef) inputRef.current[index] = el;
+              }
+            }}
+            type="tel"
+            inputMode="numeric"
+            pattern="[0-9]*"
+            maxLength={1}
+            value={value[index] || ""}
+            onChange={(e) => handleChange(e, index)}
+            onKeyDown={(e) => handleKeyDown(e, index)}
+            style={{
+              width: "3rem",
+              height: "3rem",
+              fontSize: "1.5rem",
+              borderRadius: "0.5rem",
+              border: "1px solid #2178B5",
+              backgroundColor: "white",
+              textAlign: "center",
+              outline: "none",
+              transition: "all 0.15s ease",
+            }}
+          />
+        ))}
+    </div>
+  );
+};
 
 // New Custom ShadCN-like Dropdown Component
 const ShadcnDropdown = ({
@@ -66,9 +143,7 @@ const ShadcnDropdown = ({
           error
             ? "outline-red-500 border-red-500"
             : "outline-[#2178B5] hover:outline-2"
-        } ${
-          disabled ? "cursor-not-allowed opacity-50" : ""
-        }  flex justify-between items-center`}
+        } ${disabled ? "cursor-not-allowed opacity-50" : ""} flex justify-between items-center`}
       >
         <span className="font-2">{selectedLabel}</span>
         <svg
@@ -84,7 +159,7 @@ const ShadcnDropdown = ({
 
       {isOpen && (
         <div className="absolute z-10 w-full mt-2 bg-white border border-gray-200 rounded-lg shadow-lg">
-          <ul className="py-2 px-2 max-h-48 overflow-y-auto  gap-1.5 p-1 flex flex-col   ">
+          <ul className="py-2 px-2 max-h-48 overflow-y-auto gap-1.5 p-1 flex flex-col">
             {options.map((option) => (
               <li
                 key={option.value}
@@ -92,7 +167,7 @@ const ShadcnDropdown = ({
                   onChange(option.value);
                   setIsOpen(false);
                 }}
-                className="px-4 py-2 rounded-lg bg-[#ECEFF4] hover:bg-gray-100 cursor-pointer "
+                className="px-4 py-2 rounded-lg bg-[#ECEFF4] hover:bg-gray-100 cursor-pointer"
               >
                 {option.label}
               </li>
@@ -108,6 +183,7 @@ const Contact = (props: any) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showOtpForm, setShowOtpFrom] = useState(false);
   const [otp, setOtp] = useState("");
+  const otpInputsRef = useRef<HTMLInputElement[]>([]);
   // State to hold the data from the first form to use in OTP verification
   const [, setContactPayload] = useState<ContactFormData | null>(null);
 
@@ -124,6 +200,7 @@ const Contact = (props: any) => {
       message: "",
       companyName: "",
       serviceType: "",
+      number: "",
     },
   });
 
@@ -133,8 +210,7 @@ const Contact = (props: any) => {
     setOtp("");
     setShowOtpFrom(false);
     setContactPayload(null);
-    // Clear token from localStorage
-    localStorage.removeItem('otpToken');
+    localStorage.removeItem("otpToken");
   };
 
   // For Node.js Backend: Handles the initial form submission to get an OTP
@@ -146,17 +222,22 @@ const Contact = (props: any) => {
       if (res?.status === 201) {
         // Store the token in localStorage
         if (res?.data?.token) {
-          localStorage.setItem('otpToken', JSON.stringify(res.data.token));
+          localStorage.setItem("otpToken", JSON.stringify(res.data.token));
         }
-        
+
         setContactPayload(data); // Save form data for the next step
         setShowOtpFrom(true); // Show the OTP form
-        
+
         await Swal.fire({
           icon: "success",
           title: "OTP Sent!",
           text: res?.data?.message || "An OTP has been sent to your email address.",
           scrollbarPadding: false,
+        }).then(() => {
+          // Focus the first OTP input after the Swal modal is closed
+          if (otpInputsRef.current[0]) {
+            otpInputsRef.current[0].focus();
+          }
         });
       } else {
         await Swal.fire({
@@ -165,8 +246,7 @@ const Contact = (props: any) => {
           text: res?.data?.message || "Could not send OTP. Please try again.",
           scrollbarPadding: false,
         });
-        // Clear token on error
-        localStorage.removeItem('otpToken');
+        localStorage.removeItem("otpToken");
       }
     } catch (error: any) {
       await Swal.fire({
@@ -175,8 +255,7 @@ const Contact = (props: any) => {
         text: error?.response?.data?.message || "An unexpected error occurred.",
         scrollbarPadding: false,
       });
-      // Clear token on error
-      localStorage.removeItem('otpToken');
+      localStorage.removeItem("otpToken");
     } finally {
       setIsSubmitting(false);
     }
@@ -194,8 +273,7 @@ const Contact = (props: any) => {
       return;
     }
 
-    // Get the token from localStorage
-    const token = localStorage.getItem('otpToken');
+    const token = localStorage.getItem("otpToken");
     if (!token) {
       await Swal.fire({
         icon: "error",
@@ -203,32 +281,27 @@ const Contact = (props: any) => {
         text: "Your session has expired. Please start over.",
         scrollbarPadding: false,
       });
-      // Reset to initial form
       resetAllStates();
       return;
     }
 
     setIsSubmitting(true);
     try {
-      // Send both OTP and token in the request body
       const verificationData = {
         enteredOtp: otp,
         token: JSON.parse(token),
       };
 
-      // Assumes a 'verifyOtp' function exists in your API helpers
       let res = await verifyOtp(verificationData);
 
       if (res?.status === 201) {
-        // Show success message and reset everything after user closes the alert
         await Swal.fire({
           icon: "success",
           title: "Thank You For Contacting Us!",
           text: res?.data?.message || "Your details have been verified successfully.",
           scrollbarPadding: false,
         });
-        
-        // Reset all states and form after successful verification
+
         resetAllStates();
       } else {
         await Swal.fire({
@@ -237,11 +310,9 @@ const Contact = (props: any) => {
           text: res?.data?.message || "The OTP you entered is incorrect. Please try again.",
           scrollbarPadding: false,
         });
-        // Clear only OTP, keep form and token for retry
         setOtp("");
       }
     } catch (error: any) {
-      // If token is invalid, clear it and redirect to initial form
       if (error?.response?.data?.message === "Invalid Token") {
         await Swal.fire({
           icon: "error",
@@ -257,7 +328,6 @@ const Contact = (props: any) => {
           text: error?.response?.data?.message || "An error occurred during verification.",
           scrollbarPadding: false,
         });
-        // Clear only OTP for retry
         setOtp("");
       }
     } finally {
@@ -268,8 +338,7 @@ const Contact = (props: any) => {
   // Cleanup function to clear token when component unmounts
   useEffect(() => {
     return () => {
-      // Clean up token when component unmounts
-      localStorage.removeItem('otpToken');
+      localStorage.removeItem("otpToken");
     };
   }, []);
 
@@ -302,19 +371,23 @@ const Contact = (props: any) => {
     },
     number: {
       required: "* Number is required",
+      maxLength: {
+        value: 10,
+        message: "* Phone number must be 10 digits",
+      },
       validate: {
-        validIndianNumber: (value: string | number) => {
+        validIndianNumber: (value: string) => {
           const isValid = isValidIndianNumber(String(value));
-          return isValid || "Please enter a valid Indian mobile number";
-        }
-      }
+          return isValid || "Please enter a valid 10-digit Indian mobile number";
+        },
+      },
     },
     companyName: {
       required: "* Company name is required",
     },
   };
 
-  // You can customize your service options here
+  // Service options
   const serviceOptions = [
     { value: "funding-solution", label: "Funding Solution" },
     { value: "Trademark-ip", label: "Trademark Ip" },
@@ -325,7 +398,7 @@ const Contact = (props: any) => {
   ];
 
   return (
-    <section className="px-7 md:px-14 py-6 md:py-16 bg-[#f7f7f7] space-y-6 ">
+    <section className="px-7 md:px-14 py-6 md:py-16 bg-[#f7f7f7] space-y-6">
       <div className="flex gap-6 lg:space-x-6 justify-center items-center w-full">
         <div className="space-y-6 flex flex-col justify-center w-2xl">
           <h2 className="sub-heading to-[#052EAA] text-center bg-gradient-to-t from-[#3CA2E2] bg-clip-text text-transparent font-1">
@@ -335,10 +408,10 @@ const Contact = (props: any) => {
           {!showOtpForm && (
             <form
               onSubmit={handleSubmit(onSubmit)}
-              className="flex flex-col gap-4 font-3 "
+              className="flex flex-col gap-4 font-3"
             >
               {/* Name Input */}
-              <div className="flex flex-col ">
+              <div className="flex flex-col">
                 <input
                   {...register("name", validationRules.name)}
                   id="fullName"
@@ -357,8 +430,8 @@ const Contact = (props: any) => {
                 )}
               </div>
 
-              {/*Company Name Input */}
-              <div className="flex flex-col ">
+              {/* Company Name Input */}
+              <div className="flex flex-col">
                 <input
                   {...register("companyName", validationRules.companyName)}
                   id="companyName"
@@ -370,9 +443,9 @@ const Contact = (props: any) => {
                   }`}
                   disabled={isSubmitting}
                 />
-                {errors?.companyName && (
+                {errors.companyName && (
                   <span className="text-red-500 text-xs mt-1 ml-1">
-                    {errors?.companyName?.message}
+                    {errors.companyName.message}
                   </span>
                 )}
               </div>
@@ -399,11 +472,15 @@ const Contact = (props: any) => {
               </div>
 
               {/* Number Input */}
-              <div className="flex flex-col ">
+              <div className="flex flex-col">
                 <input
                   {...register("number", validationRules.number)}
-                  type="number"
+                  type="tel"
+                  maxLength={10}
                   placeholder="Enter Your Number"
+                  onKeyPress={(e: React.KeyboardEvent<HTMLInputElement>) => {
+                    if (!/[0-9]/.test(e.key)) e.preventDefault();
+                  }}
                   className={`bg-[#ECEFF4] rounded-lg w-full p-3 focus:outline-2 transition-all duration-0 font-2 ${
                     errors.number
                       ? "outline-red-500 border-red-500"
@@ -418,7 +495,7 @@ const Contact = (props: any) => {
                 )}
               </div>
 
-              {/* Service Type Dropdown - Custom ShadCN component */}
+              {/* Service Type Dropdown */}
               <div className="flex flex-col">
                 <Controller
                   name="serviceType"
@@ -454,9 +531,9 @@ const Contact = (props: any) => {
                   }`}
                   disabled={isSubmitting}
                 />
-                {errors?.message && (
+                {errors.message && (
                   <span className="text-red-500 text-xs mt-1 ml-1">
-                    {errors?.message?.message}
+                    {errors.message.message}
                   </span>
                 )}
               </div>
@@ -469,7 +546,7 @@ const Contact = (props: any) => {
                   className={`custom-btn w-full text-center font-2 !py-3 transition-shadow duration-300 ${
                     isSubmitting
                       ? "opacity-50 cursor-not-allowed"
-                      : "hover:transform "
+                      : "hover:transform"
                   }`}
                 >
                   {isSubmitting ? (
@@ -491,27 +568,7 @@ const Contact = (props: any) => {
                 Please enter the 4-digit OTP sent to your email.
               </p>
 
-              <OtpInput
-                value={otp}
-                onChange={setOtp}
-                numInputs={4}
-                renderSeparator={<span className="w-4 "></span>}
-                renderInput={(props) => <input {...props} />}
-                inputStyle={{
-                  width: "3rem",
-                  height: "3rem",
-                  fontSize: "1.5rem",
-                  borderRadius: "0.5rem",
-                  border: "1px solid #2178B5",
-                  backgroundColor: "white",
-                  textAlign: "center",
-                  outline: "none",
-                  transition: "all 0.15s ease",
-                }}
-                containerStyle={{
-                  justifyContent: "center",
-                }}
-              />
+              <CustomOtpInput numInputs={4} value={otp} onChange={setOtp} inputRef={otpInputsRef} />
 
               <div className="flex justify-center w-full mt-4">
                 <button
@@ -520,7 +577,7 @@ const Contact = (props: any) => {
                   className={`custom-btn w-full max-w-xs text-center font-2 !py-3 transition-shadow duration-300 ${
                     isSubmitting
                       ? "opacity-50 cursor-not-allowed"
-                      : "hover:transform "
+                      : "hover:transform"
                   }`}
                 >
                   {isSubmitting ? (
@@ -539,7 +596,7 @@ const Contact = (props: any) => {
       </div>
       {props?.isMapVisible && (
         <div className="space-y-6 md:py-10">
-          <h2 className="sub-heading to-[#052EAA] text-center bg-gradient-to-t from-[#3CA2E2] bg-clip-text text-transparent font-2 ">
+          <h2 className="sub-heading to-[#052EAA] text-center bg-gradient-to-t from-[#3CA2E2] bg-clip-text text-transparent font-2">
             Our Location
           </h2>
 
