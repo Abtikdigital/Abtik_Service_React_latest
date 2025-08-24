@@ -7,13 +7,12 @@ import Image from "../assets/Logo/Abtik-blue.png";
 import { X, User, Mail, Phone, MessageSquare, Building } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { memo, useState, useRef, useEffect } from "react";
-// --- THE FIX IS HERE ---
 import type { ChangeEvent, KeyboardEvent } from "react";
 import Offer from "./Offer";
 import { addOtpDetails, verifyOtp } from "../api/otpApis";
 import isValidIndianNumber from "../utils/validation/isGenuineNumber";
 
-// --- CUSTOM OTP INPUT COMPONENT ---
+// Custom OTP Input Component
 interface CustomOtpInputProps {
   numInputs: number;
   value: string;
@@ -88,7 +87,6 @@ const CustomOtpInput = ({ numInputs, value, onChange }: CustomOtpInputProps) => 
     </div>
   );
 };
-
 
 // Define FormData interface
 interface FormData {
@@ -238,6 +236,7 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
   const [otp, setOtp] = useState("");
   const [, setContactPayload] = useState<FormData | null>(null);
   const [isVerifying, setIsVerifying] = useState(false);
+  const [isVerifyButtonClicked, setIsVerifyButtonClicked] = useState(false);
 
   const {
     register,
@@ -296,6 +295,7 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
     setShowOtpForm(false);
     setContactPayload(null);
     setIsVerifying(false);
+    setIsVerifyButtonClicked(false);
     localStorage.removeItem("otpToken");
   };
 
@@ -353,6 +353,7 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
   };
 
   const handleOtpVerify = async () => {
+    setIsVerifyButtonClicked(true); // Disable button on click
     if (otp.length !== 4) {
       await showSwal({
         icon: "warning",
@@ -361,6 +362,7 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
         confirmButtonColor: "#052EAA",
         scrollbarPadding: false,
       });
+      setIsVerifyButtonClicked(false); // Re-enable button
       return;
     }
 
@@ -375,6 +377,7 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
       });
       resetAllStates();
       closeModal();
+      setIsVerifyButtonClicked(false); // Re-enable button
       return;
     }
 
@@ -409,6 +412,7 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
           scrollbarPadding: false,
         });
         setOtp("");
+        setIsVerifyButtonClicked(false); // Re-enable button
       }
     } catch (error: any) {
       if (error?.response?.data?.message === "Invalid Token") {
@@ -432,6 +436,7 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
           scrollbarPadding: false,
         });
         setOtp("");
+        setIsVerifyButtonClicked(false); // Re-enable button
       }
     } finally {
       setIsVerifying(false);
@@ -775,9 +780,9 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
                         <div className="flex flex-col gap-3 w-full mt-4">
                           <button
                             onClick={handleOtpVerify}
-                            disabled={isVerifying}
+                            disabled={isVerifying || isVerifyButtonClicked}
                             className={`w-full !py-3 custom-btn ${
-                              isVerifying
+                              isVerifying || isVerifyButtonClicked
                                 ? "opacity-50 cursor-not-allowed"
                                 : ""
                             }`}
@@ -795,6 +800,7 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
                             onClick={() => {
                               setShowOtpForm(false);
                               setOtp("");
+                              setIsVerifyButtonClicked(false); // Reset button state
                             }}
                             className="w-full py-3 cursor-pointer bg-gray-200 text-gray-800 font-medium rounded-full hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400 transition-all duration-200"
                           >

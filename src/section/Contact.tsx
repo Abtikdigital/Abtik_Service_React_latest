@@ -1,10 +1,7 @@
-// import Chart from "react-google-charts";
 import { useForm, Controller } from "react-hook-form";
 import Swal from "sweetalert2";
 import { memo, useState, useRef, useEffect } from "react";
-// Assuming verifyOtp is exported from otpApis
 import { addOtpDetails, verifyOtp } from "../api/otpApis";
-// import Map from "../section/Map";
 import isValidIndianNumber from "../utils/validation/isGenuineNumber";
 import type { ChangeEvent, KeyboardEvent } from "react";
 
@@ -183,8 +180,8 @@ const Contact = (props: any) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showOtpForm, setShowOtpFrom] = useState(false);
   const [otp, setOtp] = useState("");
+  const [isVerifyButtonClicked, setIsVerifyButtonClicked] = useState(false);
   const otpInputsRef = useRef<HTMLInputElement[]>([]);
-  // State to hold the data from the first form to use in OTP verification
   const [, setContactPayload] = useState<ContactFormData | null>(null);
 
   const {
@@ -210,6 +207,7 @@ const Contact = (props: any) => {
     setOtp("");
     setShowOtpFrom(false);
     setContactPayload(null);
+    setIsVerifyButtonClicked(false);
     localStorage.removeItem("otpToken");
   };
 
@@ -217,16 +215,14 @@ const Contact = (props: any) => {
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
     try {
-      // API call to send user details and request an OTP
       let res = await addOtpDetails({ contactData: data });
       if (res?.status === 201) {
-        // Store the token in localStorage
         if (res?.data?.token) {
           localStorage.setItem("otpToken", JSON.stringify(res.data.token));
         }
 
-        setContactPayload(data); // Save form data for the next step
-        setShowOtpFrom(true); // Show the OTP form
+        setContactPayload(data);
+        setShowOtpFrom(true);
 
         await Swal.fire({
           icon: "success",
@@ -234,7 +230,6 @@ const Contact = (props: any) => {
           text: res?.data?.message || "An OTP has been sent to your email address.",
           scrollbarPadding: false,
         }).then(() => {
-          // Focus the first OTP input after the Swal modal is closed
           if (otpInputsRef.current[0]) {
             otpInputsRef.current[0].focus();
           }
@@ -263,6 +258,7 @@ const Contact = (props: any) => {
 
   // Handles the OTP verification
   const handleOtpVerify = async () => {
+    setIsVerifyButtonClicked(true); // Disable button on click
     if (otp.length !== 4) {
       await Swal.fire({
         icon: "warning",
@@ -270,6 +266,7 @@ const Contact = (props: any) => {
         text: "Please enter a valid 4-digit OTP.",
         scrollbarPadding: false,
       });
+      setIsVerifyButtonClicked(false); // Re-enable button
       return;
     }
 
@@ -311,6 +308,7 @@ const Contact = (props: any) => {
           scrollbarPadding: false,
         });
         setOtp("");
+        setIsVerifyButtonClicked(false); // Re-enable button
       }
     } catch (error: any) {
       if (error?.response?.data?.message === "Invalid Token") {
@@ -329,6 +327,7 @@ const Contact = (props: any) => {
           scrollbarPadding: false,
         });
         setOtp("");
+        setIsVerifyButtonClicked(false); // Re-enable button
       }
     } finally {
       setIsSubmitting(false);
@@ -573,9 +572,9 @@ const Contact = (props: any) => {
               <div className="flex justify-center w-full mt-4">
                 <button
                   onClick={handleOtpVerify}
-                  disabled={isSubmitting}
+                  disabled={isSubmitting || isVerifyButtonClicked}
                   className={`custom-btn w-full max-w-xs text-center font-2 !py-3 transition-shadow duration-300 ${
-                    isSubmitting
+                    isSubmitting || isVerifyButtonClicked
                       ? "opacity-50 cursor-not-allowed"
                       : "hover:transform"
                   }`}
