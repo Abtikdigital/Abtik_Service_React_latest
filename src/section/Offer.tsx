@@ -1,7 +1,7 @@
 // import Icon from "../assets/icons/glass.png";
 
 const WebsiteOfferBanner = () => {
-  const message = "🌸 मंगलमूर्ति मोरया | Celebrate with love, happiness & blessings 🎉";
+  const message = " मंगलमूर्ति मोरया | Celebrate with love, happiness & blessings ";
 
   return (<>
 
@@ -13,12 +13,14 @@ const WebsiteOfferBanner = () => {
              {/* <span className="flex-shrink-0 w-6 h-6">
                <img src={Icon} alt="icon" className="w-full h-full" />
              </span> */}
+             🌸
              <span
                className="relative inline-block text-lg font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-white via-[#3CA2E2] to-white"
                style={{ fontFamily: "Playfair Display" }}
              >
                {message}
              </span>
+             🎉
              {/* <span className="flex-shrink-0 w-6 h-6">
                <img src={Icon} alt="icon" className="w-full h-full" />
              </span> */}
