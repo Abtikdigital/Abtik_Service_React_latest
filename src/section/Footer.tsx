@@ -150,12 +150,12 @@ const Footer = () => {
               >
                 Privacy Policy
               </Link>
-              <Link
+              {/* <Link
                 to={"/legal/refund-policy"}
                 className="text-sm font-semibold text-[#4D4D4D] hover:underline hover:text-gray-950 cursor-pointer duration-300"
               >
                 Cancellation & Refund Policy
-              </Link>
+              </Link> */}
             </ul>
           </div>
         </div>

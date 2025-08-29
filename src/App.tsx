@@ -74,7 +74,7 @@ const ProducerCompany = lazy(() => import("./pages/ProducerCompany"));
 
 // Legal
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
-const RefundPolicy = lazy(() => import("./pages/RefundPolicy"))
+// const RefundPolicy = lazy(() => import("./pages/RefundPolicy"))
 function App() {
   
   return (
@@ -249,10 +249,10 @@ function App() {
             path="/legal/privacy-policy"
             element={<PrivacyPolicy />}
           />
-          <Route
+          {/* <Route
             path="/legal/refund-policy"
             element={<RefundPolicy />}
-          />
+          /> */}
 
           <Route path="*" element={<PageNotFound />} />
         </Routes>
