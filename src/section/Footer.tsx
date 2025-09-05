@@ -51,7 +51,7 @@ const Footer = () => {
           <h2 className="heading  ">Contact Info</h2>
           <ul className="space-y-3 py-1.5">
             <li className="flex gap-3 items-center">
-              <MapPin className="hover:from-[#2178B5] hover:bg-gradient-to-tl text-white min-h-8 min-w-8 hover:to-[#021E6B] cursor-pointer bg-gradient-to-tr from-[#3CA2E2] to-[#052EAA] p-1.5 rounded-lg" />
+              <Phone className="hover:from-[#2178B5] hover:bg-gradient-to-tl text-white min-h-8 min-w-8 hover:to-[#021E6B] cursor-pointer bg-gradient-to-tr from-[#3CA2E2] to-[#052EAA] p-1.5 rounded-lg" />
               <a href="tel:+91 89281 38434" className="text-sm text-[#4D4D4D] font-semibold hover:underline hover:text-gray-950 cursor-pointer duration-300">
                 +91 89281 38434
               </a>
@@ -63,7 +63,7 @@ const Footer = () => {
               </a>
             </li>
             <li className="flex gap-3 items-center ">
-              <Phone className="hover:from-[#2178B5] text-white min-h-8 min-w-8 hover:bg-gradient-to-tl hover:to-[#021E6B] cursor-pointer bg-gradient-to-tr from-[#3CA2E2] to-[#052EAA] p-1.5 rounded-lg" />
+              <MapPin className="hover:from-[#2178B5] text-white min-h-8 min-w-8 hover:bg-gradient-to-tl hover:to-[#021E6B] cursor-pointer bg-gradient-to-tr from-[#3CA2E2] to-[#052EAA] p-1.5 rounded-lg" />
               <a href="https://maps.app.goo.gl/Ft1bFj9a5NQEXo5R7" target="_balnk" className="text-sm font-semibold text-[#4D4D4D] hover:underline hover:text-gray-950 cursor-pointer duration-300">
                 313, Patel Ave, Sarkhej - Gandhinagar Hwy, Thaltej, Ahmedabad, Gujarat 380054
               </a>
