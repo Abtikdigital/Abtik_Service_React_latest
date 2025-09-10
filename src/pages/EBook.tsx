@@ -2,12 +2,10 @@ import React, { memo, useState, useEffect, useRef } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { HeadProvider, Title, Meta } from "react-head";
 import {
-  
   Mail,
   User,
   Phone,
   Building,
-  
   X,
   Book,
   CheckCircle,
@@ -15,13 +13,13 @@ import {
   ArrowRight,
   ArrowUpRight,
 } from "lucide-react";
-import { useForm} from "react-hook-form";
+import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import MainLayout from "../section/Mainlayout";
 import Contact from "../section/Contact";
 import BgImage from "../assets/Hero/bgImg.svg";
 import EbookImage from "../assets/eBooks/Image2.jpg";
-import Book1 from "../assets/eBooks/StartupAccelerator.jpg"
+import Book1 from "../assets/eBooks/StartupAccelerator.jpg";
 import FormImage from "../assets/Logo/Abtik-blue.png";
 import seoData from "../data/seoData.json";
 import isValidIndianNumber from "../utils/validation/isGenuineNumber";
@@ -72,7 +70,7 @@ const backdropVariants = {
 };
 
 const modalVariants = {
- hidden: { opacity: 0 },
+  hidden: { opacity: 0 },
   visible: { opacity: 1, transition: { duration: 0.2 } },
 };
 
@@ -219,7 +217,18 @@ const Ebook: React.FC = () => {
   const ebooks: EbookData[] = [
     {
       id: "ebook1",
-      title: "Turn Your Startup Dream into Reality with Our Startup Accelerator ",
+      title:
+        "Turn Your Startup Dream into Reality with Our Startup Accelerator ",
+      description:
+        "Grow your startup idea into a successful business with mentorship, funding support, accelerator programs, and global growth opportunities.",
+      image: Book1,
+      pdfPath: "/public/StartupAccelerator.pdf",
+      downloadFileName: "StartupAccelerator.pdf",
+    },
+      {
+      id: "ebook1",
+      title:
+        "Turn Your Startup Dream into Reality with Our Startup Accelerator ",
       description:
         "Grow your startup idea into a successful business with mentorship, funding support, accelerator programs, and global growth opportunities.",
       image: Book1,
@@ -280,7 +289,7 @@ const Ebook: React.FC = () => {
         companyName: data.companyname,
         email: data.email,
         number: data.phone,
-        
+
         bookName: data.bookName,
       };
       const res = await addDownloadApplication(apiData);
@@ -377,10 +386,10 @@ const Ebook: React.FC = () => {
       document.head.removeChild(style);
     };
   }, []);
-  const dispatch=useDispatch()
-  const handleOpenDialog=()=>{
-    dispatch({type:"open"})
-  }
+  const dispatch = useDispatch();
+  const handleOpenDialog = () => {
+    dispatch({ type: "open" });
+  };
 
   return (
     <HeadProvider>
@@ -401,7 +410,10 @@ const Ebook: React.FC = () => {
           "ebooks, business financing, CGTMSE, startup growth, loan applications, Abtik Services"
         }
       />
-      <Meta name="robots" content={seoData?.eBooks?.robots || "index, follow"} />
+      <Meta
+        name="robots"
+        content={seoData?.eBooks?.robots || "index, follow"}
+      />
       <MainLayout>
         <motion.section
           ref={refHero}
@@ -568,7 +580,7 @@ const Ebook: React.FC = () => {
                 key={ebook.id}
                 initial={{ y: 50, opacity: 0 }}
                 animate={isInViewEbooks ? { y: 0, opacity: 1 } : {}}
-                   onClick={() => openFormModal(ebook)}
+                onClick={() => openFormModal(ebook)}
                 transition={{ duration: 0.5 }}
                 className="bg-white p-4 cursor-pointer rounded-4xl shadow-md text-center hover:shadow-xl hover:-translate-y-2 duration-300 transition-all"
               >
@@ -703,8 +715,6 @@ const Ebook: React.FC = () => {
               <motion.div
                 className="relative bg-white rounded-lg shadow-xl w-full max-w-4xl flex flex-col max-h-[90vh]"
                 variants={modalVariants}
-                
-
                 initial="hidden"
                 animate="visible"
                 exit="exit"
