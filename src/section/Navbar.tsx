@@ -2,10 +2,9 @@ import { ChevronDown, Menu, X, ChevronRight } from "lucide-react";
 import Logo from "../assets/Logo/ResizedLogo.png";
 import { useEffect, useState, useRef, memo } from "react";
 import { Link, useLocation } from "react-router-dom";
-// import { useDispatch } from "react-redux";
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
+
 interface SubService {
   name: string;
   path: string;
@@ -26,8 +25,9 @@ interface Section {
 interface Menu {
   name: string;
   path: string | null;
-  description?: string; // Added description property
+  description?: string;
   subItems?: Section[];
+  subServices?: SubService[];
 }
 
 const menuItems: Menu[] = [
@@ -104,8 +104,8 @@ const menuItems: Menu[] = [
             description: "Connect with private investors and venture capital firms",
             subServices: [
               {
-                name: "Angel Inverstor",
-                path: "/services/funding/private-funding/angel-inverstor",
+                name: "Angel Investor",
+                path: "/services/funding/private-funding/angel-investor",
               },
               {
                 name: "VC Funding",
@@ -177,8 +177,8 @@ const menuItems: Menu[] = [
             path: "/services/certificate/startup-india",
             description: "Government recognition and benefits for startups",
           },
-             {
-            name: "Tax Exemption  Certificate",
+          {
+            name: "Tax Exemption Certificate",
             path: "/services/certificate/tax-exemption-certificate",
             description: "Government recognition and benefits for startups",
           },
@@ -271,16 +271,19 @@ const menuItems: Menu[] = [
       },
     ],
   },
-
+  {
+    name: "News & Insights",
+    path: null,
+    description: "Read our latest news & insights",
+    subServices: [
+      { name: "Blogs", path: "/news-insights/blogs" },
+      { name: "E-books", path: "/news-insights/e-books" },
+    ],
+  },
   {
     name: "Career",
     path: "/career",
     description: "Explore career opportunities with us"
-  },
-  {
-    name: "Blog",
-    path: "/blog",
-    description: "Read our latest insights and articles"
   },
   {
     name: "Contact",
@@ -291,12 +294,10 @@ const menuItems: Menu[] = [
 
 const DesktopNavbar = () => {
   const location = useLocation();
-  // const dispatch = useDispatch();
   const [hoverTimeout, setHoverTimeout] = useState<any | null>(null);
-  const [clearSubmenuTimeout, setClearSubmenuTimeout] = useState<any | null>(
-    null
-  );
+  const [clearSubmenuTimeout, setClearSubmenuTimeout] = useState<any | null>(null);
   const [megaMenuVisible, setMegaMenuVisible] = useState(false);
+  const [dropdownVisible, setDropdownVisible] = useState(false);
   const [hoveredService, setHoveredService] = useState<string | null>(null);
   const [subMenuPosition, setSubMenuPosition] = useState({
     left: false,
@@ -305,12 +306,10 @@ const DesktopNavbar = () => {
   });
   const serviceRefs = useRef<Record<string, HTMLElement | null>>({});
   const megaMenuRef = useRef<HTMLDivElement | null>(null);
+  const newsDropdownRef = useRef<HTMLDivElement | null>(null);
   const mainMenuRef = useRef<HTMLLIElement | null>(null);
+  const newsMenuRef = useRef<HTMLLIElement | null>(null);
   const menuWrapperRef = useRef<HTMLDivElement | null>(null);
-
-  // const handleOpenGetInTouchForm = () => {
-  //   dispatch({ type: "open" });
-  // };
 
   const handleMouseEnter = () => {
     if (hoverTimeout) {
@@ -322,6 +321,21 @@ const DesktopNavbar = () => {
       setClearSubmenuTimeout(null);
     }
     setMegaMenuVisible(true);
+    setDropdownVisible(false); // Close News & Insights dropdown
+  };
+
+  const handleNewsMouseEnter = () => {
+    if (hoverTimeout) {
+      clearTimeout(hoverTimeout);
+      setHoverTimeout(null);
+    }
+    if (clearSubmenuTimeout) {
+      clearTimeout(clearSubmenuTimeout);
+      setClearSubmenuTimeout(null);
+    }
+    setDropdownVisible(true);
+    setMegaMenuVisible(false); // Close Services megamenu
+    setHoveredService(null); // Reset hovered service
   };
 
   const handleMouseLeave = (event: React.MouseEvent) => {
@@ -332,6 +346,18 @@ const DesktopNavbar = () => {
       const timeout = setTimeout(() => {
         setMegaMenuVisible(false);
         setHoveredService(null);
+      }, 200);
+      setHoverTimeout(timeout);
+    }
+  };
+
+  const handleNewsMouseLeave = (event: React.MouseEvent) => {
+    const relatedTarget = event.relatedTarget as Node;
+    const menuWrapperElement = menuWrapperRef.current;
+
+    if (menuWrapperElement && !menuWrapperElement.contains(relatedTarget)) {
+      const timeout = setTimeout(() => {
+        setDropdownVisible(false);
       }, 200);
       setHoverTimeout(timeout);
     }
@@ -373,10 +399,7 @@ const DesktopNavbar = () => {
     setSubMenuPosition({
       left: shouldShowOnLeft,
       top: shouldShowAtTop
-        ? Math.max(
-          0,
-          serviceTopRelativeToMegaMenu - estimatedSubmenuHeight + 50
-        )
+        ? Math.max(0, serviceTopRelativeToMegaMenu - estimatedSubmenuHeight + 50)
         : serviceTopRelativeToMegaMenu,
       showAtTop: shouldShowAtTop,
     });
@@ -406,7 +429,7 @@ const DesktopNavbar = () => {
     }
   };
 
-  const handleMenuItemEnter = (hasSubServices: boolean, itemName: string) => {
+  const handleMenuItemEnter = (_hasSubItems: boolean, itemName: string) => {
     if (hoverTimeout) {
       clearTimeout(hoverTimeout);
       setHoverTimeout(null);
@@ -416,11 +439,17 @@ const DesktopNavbar = () => {
       setClearSubmenuTimeout(null);
     }
 
-    if (itemName !== "Services") { // Changed from "Service" to "Services"
+    if (itemName === "Services") {
+      setMegaMenuVisible(true);
+      setDropdownVisible(false);
+      setHoveredService(null);
+    } else if (itemName === "News & Insights") {
+      setDropdownVisible(true);
       setMegaMenuVisible(false);
       setHoveredService(null);
-    }
-    if (!hasSubServices) {
+    } else {
+      setMegaMenuVisible(false);
+      setDropdownVisible(false);
       setHoveredService(null);
     }
   };
@@ -440,12 +469,10 @@ const DesktopNavbar = () => {
     const relatedTarget = event.relatedTarget as Node;
     const mainMenuElement = mainMenuRef.current;
     const megaMenuElement = megaMenuRef.current;
-    const menuWrapperElement = menuWrapperRef.current;
 
     if (
       (mainMenuElement && mainMenuElement.contains(relatedTarget)) ||
-      (megaMenuElement && megaMenuElement.contains(relatedTarget)) ||
-      (menuWrapperElement && menuWrapperElement.contains(relatedTarget))
+      (megaMenuElement && megaMenuElement.contains(relatedTarget))
     ) {
       return;
     }
@@ -499,86 +526,96 @@ const DesktopNavbar = () => {
         <div ref={menuWrapperRef}>
           <ul
             className="flex gap-4 lg:gap-6 xl:gap-8 font-medium items-center text-sm lg:text-base font-1"
-
           >
             {menuItems.map((item) => {
               const isActive = item.path && location.pathname === item.path;
               const isServicesPage =
-                item.name === "Services" && // Changed from "Service" to "Services"
-                (location.pathname.startsWith("/services") || // Updated path check
+                item.name === "Services" &&
+                (location.pathname.startsWith("/services") ||
                   location.pathname.startsWith("/funding") ||
                   location.pathname.startsWith("/ip") ||
                   location.pathname.startsWith("/certificate") ||
                   location.pathname.startsWith("/tax") ||
                   location.pathname.startsWith("/registration"));
+              const isNewsPage =
+                item.name === "News & Insights" &&
+                location.pathname.startsWith("/news");
 
               return (
                 <li
                   key={item.name}
-                  className={`group py-2 ${isActive || isServicesPage
-                    ? ""
-                    : "border-transparent transition-all duration-300"
-                    } transition cursor-pointer text-[#A4A4A4] hover:text-[#052EAA] ${isActive || isServicesPage
+                  className={`group py-2 ${
+                    isActive || isServicesPage || isNewsPage
+                      ? ""
+                      : "border-transparent transition-all duration-300"
+                  } transition cursor-pointer text-[#A4A4A4] hover:text-[#052EAA] ${
+                    isActive || isServicesPage || isNewsPage
                       ? "!text-[#052EAA] font-bold"
                       : ""
-                    }`}
-                  onMouseEnter={() => {
-                    handleMenuItemEnter(!!item.subItems, item.name);
-                    if (item.name === "Services") handleMouseEnter(); // Changed from "Service" to "Services"
-                  }}
+                  }`}
+                  onMouseEnter={() => handleMenuItemEnter(!!item.subItems || !!item.subServices, item.name)}
                   onMouseLeave={
-                    item.name === "Services" ? handleMouseLeave : undefined // Changed from "Service" to "Services"
+                    item.name === "Services"
+                      ? handleMouseLeave
+                      : item.name === "News & Insights"
+                      ? handleNewsMouseLeave
+                      : undefined
                   }
-                  ref={item.name === "Services" ? mainMenuRef : null} // Changed from "Service" to "Services"
+                  ref={item.name === "Services" ? mainMenuRef : item.name === "News & Insights" ? newsMenuRef : null}
                 >
                   {item.path ? (
                     <Link
                       to={item.path}
                       className="flex items-center gap-1 relative group py-2"
                       onMouseEnter={() =>
-                        handleMenuItemEnter(!!item.subItems, item.name)
+                        handleMenuItemEnter(!!item.subItems || !!item.subServices, item.name)
                       }
                     >
                       {item.name}
-                      {item.subItems && (
+                      {(item.subItems || item.subServices) && (
                         <ChevronDown
                           size={16}
                           className="group-hover:rotate-180 transition-transform duration-300"
                         />
                       )}
                       <div
-                        className={`w-0 transition-all duration-300 group-hover:w-full absolute h-1 bg-[#052EAA] bottom-0 rounded-2xl ${isActive ? "!w-full" : ""
-                          }`}
+                        className={`w-0 transition-all duration-300 group-hover:w-full absolute h-1 bg-[#052EAA] bottom-0 rounded-2xl ${
+                          isActive ? "!w-full" : ""
+                        }`}
                       ></div>
                     </Link>
                   ) : (
                     <div
                       className="flex items-center gap-1 relative group py-2"
                       onMouseEnter={() =>
-                        handleMenuItemEnter(!!item.subItems, item.name)
+                        handleMenuItemEnter(!!item.subItems || !!item.subServices, item.name)
                       }
                     >
                       {item.name}
-                      {item.subItems && (
+                      {(item.subItems || item.subServices) && (
                         <ChevronDown
                           size={16}
-                          className={`transition-transform duration-300 ${megaMenuVisible && item.name === "Services" // Changed from "Service" to "Services"
-                            ? "rotate-180"
-                            : ""
-                            }`}
+                          className={`transition-transform duration-300 ${
+                            (megaMenuVisible && item.name === "Services") ||
+                            (dropdownVisible && item.name === "News & Insights")
+                              ? "rotate-180"
+                              : ""
+                          }`}
                         />
                       )}
                       <div
-                        className={`w-0 transition-all duration-300 group-hover:w-full absolute h-1 bg-[#052EAA] bottom-0 rounded-sm ${isServicesPage ||
-                          (megaMenuVisible && item.name === "Services") // Changed from "Service" to "Services"
-                          ? "!w-full"
-                          : ""
-                          }`}
+                        className={`w-0 transition-all duration-300 group-hover:w-full absolute h-1 bg-[#052EAA] bottom-0 rounded-sm ${
+                          isServicesPage || isNewsPage ||
+                          (megaMenuVisible && item.name === "Services") ||
+                          (dropdownVisible && item.name === "News & Insights")
+                            ? "!w-full"
+                            : ""
+                        }`}
                       ></div>
                     </div>
                   )}
 
-                  {item.subItems && item.name === "Services" && ( // Changed from "Service" to "Services"
+                  {item.subItems && item.name === "Services" && (
                     <div
                       ref={megaMenuRef}
                       className={`
@@ -586,13 +623,13 @@ const DesktopNavbar = () => {
                         w-[95vw] lg:w-[97vw] mx-2 lg:mx-4 overflow-hidden
                         transform transition-all duration-300 z-40 border border-gray-300
                         font-1
-                        ${megaMenuVisible
-                          ? "opacity-100 visible -translate-y-1"
-                          : "opacity-0 invisible translate-y-0"
+                        ${
+                          megaMenuVisible
+                            ? "opacity-100 visible -translate-y-1"
+                            : "opacity-0 invisible translate-y-0"
                         }
                       `}
                       style={{
-
                         maxHeight: "75vh",
                       }}
                       onMouseEnter={handleMouseEnter}
@@ -614,122 +651,144 @@ const DesktopNavbar = () => {
                                 </div>
 
                                 <div className="space-y-3">
-                                  {section.items.map(
-                                    (subItem: any, itemIndex) => (
-                                      <div
-                                        key={`${subItem.name}-${itemIndex}`}
-                                        className="relative"
-                                        data-service-item={
-                                          subItem.subServices ? "true" : "false"
-                                        }
-                                        ref={(el) => {
-                                          serviceRefs.current[
-                                            `${subItem.name}-${sectionIndex}-${itemIndex}`
-                                          ] = el;
-                                        }}
-                                        onMouseEnter={(e) => {
-                                          handleServiceItemEnter(
-                                            !!subItem.subServices,
-                                            `${subItem.name}-${sectionIndex}-${itemIndex}`,
-                                            e
-                                          );
-                                        }}
-                                        onMouseLeave={
-                                          subItem.subServices
-                                            ? handleSubMenuLeave
-                                            : undefined
-                                        }
-                                      >
-                                        <Link
-                                          to={subItem.path}
-                                          className={`flex items-center justify-between text-xs font-normal p-3 rounded-lg transition-all duration-300 transform hover:scale-[1.02] min-h-[50px] group ${location.pathname === subItem.path
+                                  {section.items.map((subItem: any, itemIndex) => (
+                                    <div
+                                      key={`${subItem.name}-${itemIndex}`}
+                                      className="relative"
+                                      data-service-item={subItem.subServices ? "true" : "false"}
+                                      ref={(el) => {
+                                        serviceRefs.current[
+                                          `${subItem.name}-${sectionIndex}-${itemIndex}`
+                                        ] = el;
+                                      }}
+                                      onMouseEnter={(e) => {
+                                        handleServiceItemEnter(
+                                          !!subItem.subServices,
+                                          `${subItem.name}-${sectionIndex}-${itemIndex}`,
+                                          e
+                                        );
+                                      }}
+                                      onMouseLeave={
+                                        subItem.subServices ? handleSubMenuLeave : undefined
+                                      }
+                                    >
+                                      <Link
+                                        to={subItem.path}
+                                        className={`flex items-center justify-between text-xs font-normal p-3 rounded-lg transition-all duration-300 transform hover:scale-[1.02] min-h-[50px] group ${
+                                          location.pathname === subItem.path
                                             ? "bg-[#e8f3ff] text-[#010574] shadow-sm"
                                             : "bg-gray-50 hover:bg-[#e0f0ff] hover:text-[#010574] text-gray-800 hover:shadow-sm"
-                                            }`}
-                                        >
-                                          <div className="flex-1">
-                                            <span
-                                              className={`block text-sm font-medium leading-tight ${location.pathname ===
-                                                subItem.path
+                                        }`}
+                                      >
+                                        <div className="flex-1">
+                                          <span
+                                            className={`block text-sm font-medium leading-tight ${
+                                              location.pathname === subItem.path
                                                 ? "font-semibold text-[#010574]"
                                                 : "text-gray-900"
-                                                }`}
-                                            >
-                                              {subItem.name}
-                                            </span>
-                                            <p className="text-xs text-gray-500 mt-1 leading-relaxed">
-                                              {subItem.description ||
-                                                "Professional services"}
-                                            </p>
-                                          </div>
-                                          {subItem.subServices && (
-                                            <ChevronRight
-                                              size={14}
-                                              className="ml-2 text-gray-400 group-hover:text-[#010574] transition-colors flex-shrink-0"
-                                            />
-                                          )}
-                                        </Link>
+                                            }`}
+                                          >
+                                            {subItem.name}
+                                          </span>
+                                          <p className="text-xs text-gray-500 mt-1 leading-relaxed">
+                                            {subItem.description || "Professional services"}
+                                          </p>
+                                        </div>
+                                        {subItem.subServices && (
+                                          <ChevronRight
+                                            size={14}
+                                            className="ml-2 text-gray-400 group-hover:text-[#010574] transition-colors flex-shrink-0"
+                                          />
+                                        )}
+                                      </Link>
 
-                                        {subItem.subServices &&
-                                          hoveredService ===
+                                      {subItem.subServices &&
+                                        hoveredService ===
                                           `${subItem.name}-${sectionIndex}-${itemIndex}` && (
-                                            <div
-                                              data-submenu="true"
-                                              className={`absolute w-72 bg-white rounded-lg shadow-lg border border-gray-200 z-[70] overflow-hidden ${subMenuPosition.left
-                                                ? "right-full mr-3"
-                                                : "left-full ml-3"
-                                                }`}
-                                              style={{
-                                                top: subMenuPosition.showAtTop
-                                                  ? "auto"
-                                                  : "0px",
-                                                bottom:
-                                                  subMenuPosition.showAtTop
-                                                    ? "0px"
-                                                    : "auto",
-                                                maxHeight: "400px",
-                                              }}
-                                              onMouseEnter={handleSubMenuEnter}
-                                              onMouseLeave={handleSubMenuLeave}
-                                            >
-                                              <div className="px-4 py-3 bg-gradient-to-r from-blue-50 to-indigo-50 border-b border-blue-100">
-                                                <h4 className="font-semibold text-[#010574] text-sm">
-                                                  {subItem.name}
-                                                </h4>
-                                                <p className="text-blue-600 text-xs mt-1">
-                                                  Available services
-                                                </p>
-                                              </div>
-
-                                              <div className="py-2 max-h-80 overflow-y-auto">
-                                                {subItem.subServices.map(
-                                                  (subService: any) => (
-                                                    <Link
-                                                      key={subService.name}
-                                                      to={subService.path}
-                                                      className={`block px-4 py-3 text-sm transition-all duration-200 ${location.pathname ===
-                                                        subService.path
-                                                        ? "bg-blue-50 text-blue-700 border-r-2 border-blue-500"
-                                                        : "text-gray-700 hover:bg-blue-50 hover:text-blue-700 hover:border-r-2 hover:border-blue-300"
-                                                        }`}
-                                                    >
-                                                      <div className="font-medium">
-                                                        {subService.name}
-                                                      </div>
-                                                    </Link>
-                                                  )
-                                                )}
-                                              </div>
+                                          <div
+                                            data-submenu="true"
+                                            className={`absolute w-72 bg-white rounded-lg shadow-lg border border-gray-200 z-[70] overflow-hidden ${
+                                              subMenuPosition.left ? "right-full mr-3" : "left-full ml-3"
+                                            }`}
+                                            style={{
+                                              top: subMenuPosition.showAtTop ? "auto" : "0px",
+                                              bottom: subMenuPosition.showAtTop ? "0px" : "auto",
+                                              maxHeight: "400px",
+                                            }}
+                                            onMouseEnter={handleSubMenuEnter}
+                                            onMouseLeave={handleSubMenuLeave}
+                                          >
+                                            <div className="px-4 py-3 bg-gradient-to-r from-blue-50 to-indigo-50 border-b border-blue-100">
+                                              <h4 className="font-semibold text-[#010574] text-sm">
+                                                {subItem.name}
+                                              </h4>
+                                              <p className="text-blue-600 text-xs mt-1">
+                                                Available services
+                                              </p>
                                             </div>
-                                          )}
-                                      </div>
-                                    )
-                                  )}
+
+                                            <div className="py-2 max-h-80 overflow-y-auto">
+                                              {subItem.subServices.map((subService: any) => (
+                                                <Link
+                                                  key={subService.name}
+                                                  to={subService.path}
+                                                  className={`block px-4 py-3 text-sm transition-all duration-200 ${
+                                                    location.pathname === subService.path
+                                                      ? "bg-blue-50 text-blue-700 border-r-2 border-blue-500"
+                                                      : "text-gray-700 hover:bg-blue-50 hover:text-blue-700 hover:border-r-2 hover:border-blue-300"
+                                                  }`}
+                                                >
+                                                  <div className="font-medium">{subService.name}</div>
+                                                </Link>
+                                              ))}
+                                            </div>
+                                          </div>
+                                        )}
+                                    </div>
+                                  ))}
                                 </div>
                               </div>
                             ))}
                           </div>
                         </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {item.subServices && item.name === "News & Insights" && (
+                    <div
+                      ref={newsDropdownRef}
+                      className={`
+                        absolute top-full mt-1.5 bg-white rounded-lg shadow-lg border border-gray-200 z-[70] overflow-hidden
+                        transform transition-all duration-300 font-1
+                        ${dropdownVisible ? "opacity-100 visible -translate-y-1" : "opacity-0 invisible translate-y-0"}
+                      `}
+                      style={{
+                        width: "fit-content",
+                        minWidth: "200px",
+                        maxHeight: "400px",
+                      }}
+                      onMouseEnter={handleNewsMouseEnter}
+                      onMouseLeave={handleNewsMouseLeave}
+                    >
+                      <div className="px-4 py-3 bg-gradient-to-r from-blue-50 to-indigo-50 border-b border-blue-100">
+                        <h4 className="font-semibold text-[#010574] text-sm">News & Insights</h4>
+                        <p className="text-blue-600 text-xs mt-1">Available topics</p>
+                      </div>
+                      <div className="py-2 max-h-80 overflow-y-auto">
+                        {item.subServices.map((subService) => (
+                          <Link
+                            key={subService.name}
+                            to={subService.path}
+                            className={`block px-4 py-3 text-sm transition-all duration-200 ${
+                              location.pathname === subService.path
+                                ? "bg-blue-50 text-blue-700 border-r-2 border-blue-500"
+                                : "text-gray-700 hover:bg-blue-50 hover:text-blue-700 hover:border-r-2 hover:border-blue-300"
+                            }`}
+                          >
+                            <div className="font-medium">{subService.name}</div>
+                          </Link>
+                        ))}
                       </div>
                     </div>
                   )}
@@ -741,13 +800,16 @@ const DesktopNavbar = () => {
 
         <div className="flex-shrink-0">
           <a
-            className="custom-btn !text-black items-center gap-2   group !bg-none !shadow-none inline-flex text-center text-sm lg:text-base px-4 lg:px-6 py-2"
+            className="custom-btn !text-black items-center gap-2 group !bg-none !shadow-none inline-flex text-center text-sm lg:text-base px-4 lg:px-6 py-2"
             href="tel:+918928138434"
           >
-
-
-            <FontAwesomeIcon icon={faPhone} className="bg-gradient-to-r from-[#3CA2E2] to-[#052EAA] p-3 rounded-full text-white" />
-            <span className="text-[#4D4D4D] group-hover:underline hover:text-black transition-all duration-100">+91 8928 138 434</span>
+            <FontAwesomeIcon
+              icon={faPhone}
+              className="bg-gradient-to-r from-[#3CA2E2] to-[#052EAA] p-3 rounded-full text-white"
+            />
+            <span className="text-[#4D4D4D] group-hover:underline hover:text-black transition-all duration-100">
+              +91 8928 138 434
+            </span>
           </a>
         </div>
       </div>
@@ -756,13 +818,9 @@ const DesktopNavbar = () => {
 };
 
 const MobileNavbar = () => {
-  // const dispatch = useDispatch();
-  // const handleOpenGetInTouchForm = () => {
-  //   dispatch({ type: "open" });
-  // };
-
   const [isMobileViewOpen, setIsMobileViewOpen] = useState(false);
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
+  const [isMobileNewsOpen, setIsMobileNewsOpen] = useState(false);
   const [openSection, setOpenSection] = useState<string | null>(null);
   const [openSubService, setOpenSubService] = useState<string | null>(null);
   const location = useLocation();
@@ -770,12 +828,21 @@ const MobileNavbar = () => {
   const toggleMobileView = () => {
     setIsMobileViewOpen(!isMobileViewOpen);
     setIsMobileServicesOpen(false);
+    setIsMobileNewsOpen(false);
     setOpenSection(null);
     setOpenSubService(null);
   };
 
   const toggleMobileServices = () => {
     setIsMobileServicesOpen(!isMobileServicesOpen);
+    setIsMobileNewsOpen(false);
+    setOpenSection(null);
+    setOpenSubService(null);
+  };
+
+  const toggleMobileNews = () => {
+    setIsMobileNewsOpen(!isMobileNewsOpen);
+    setIsMobileServicesOpen(false);
     setOpenSection(null);
     setOpenSubService(null);
   };
@@ -816,7 +883,6 @@ const MobileNavbar = () => {
         <div className="absolute w-full max-h-[90vh] lg:max-h-[80vh] overflow-auto bg-white z-50 flex flex-col px-4 py-4 lg:py-6 shadow-lg border-t border-gray-100">
           <ul
             className="flex flex-col space-y-2 text-sm lg:text-base font-medium w-full font-1"
-
           >
             {menuItems.map((item: any) => (
               <li
@@ -832,11 +898,12 @@ const MobileNavbar = () => {
                       {item.name}
                       <ChevronDown
                         size={16}
-                        className={`transition-transform ${isMobileServicesOpen ? "rotate-180" : ""
-                          }`}
+                        className={`transition-transform ${
+                          isMobileServicesOpen ? "rotate-180" : ""
+                        }`}
                       />
                     </div>
-                    {isMobileServicesOpen && item.name === "Services" && ( // Changed from "Service" to "Services"
+                    {isMobileServicesOpen && item.name === "Services" && (
                       <ul className="mt-2 space-y-2 text-xs lg:text-sm w-full px-2 lg:px-4">
                         {item.subItems.map((section: any) => (
                           <li key={section.section} className="space-y-2">
@@ -849,77 +916,103 @@ const MobileNavbar = () => {
                               </h4>
                               <ChevronDown
                                 size={14}
-                                className={`transition-transform ${openSection === section.section
-                                  ? "rotate-180"
-                                  : ""
-                                  }`}
+                                className={`transition-transform ${
+                                  openSection === section.section ? "rotate-180" : ""
+                                }`}
                               />
                             </div>
                             {openSection === section.section && (
                               <ul className="space-y-1 pl-4 lg:pl-8 border-l-2 border-gray-200">
-                                {section.items.map(
-                                  (subItem: any, itemIndex: any) => (
-                                    <li key={`${subItem.name}-${itemIndex}`}>
-                                      <div className="space-y-1">
-                                        <div className="flex items-center justify-between">
-                                          <Link
-                                            to={subItem?.path}
-                                            onClick={toggleMobileView}
-                                            className="flex-1 hover:text-[#010574] transition py-2 px-3 lg:px-4 rounded-md hover:bg-[#f5f5f5] text-[#6B7280]"
+                                {section.items.map((subItem: any, itemIndex: any) => (
+                                  <li key={`${subItem.name}-${itemIndex}`}>
+                                    <div className="space-y-1">
+                                      <div className="flex items-center justify-between">
+                                        <Link
+                                          to={subItem?.path}
+                                          onClick={toggleMobileView}
+                                          className="flex-1 hover:text-[#010574] transition py-2 px-3 lg:px-4 rounded-md hover:bg-[#f5f5f5] text-[#6B7280]"
+                                        >
+                                          {subItem.name}
+                                        </Link>
+                                        {subItem.subServices && (
+                                          <button
+                                            onClick={() =>
+                                              toggleSubService(`${subItem.name}-${itemIndex}`)
+                                            }
+                                            className="p-1 rounded hover:bg-[#f5f5f5] transition-colors"
                                           >
-                                            {subItem.name}
-                                          </Link>
-                                          {subItem.subServices && (
-                                            <button
-                                              onClick={() =>
-                                                toggleSubService(
-                                                  `${subItem.name}-${itemIndex}`
-                                                )
-                                              }
-                                              className="p-1 rounded hover:bg-[#f5f5f5] transition-colors"
-                                            >
-                                              <ChevronDown
-                                                size={12}
-                                                className={`transition-transform text-[#6B7280] ${openSubService ===
-                                                  `${subItem.name}-${itemIndex}`
+                                            <ChevronDown
+                                              size={12}
+                                              className={`transition-transform text-[#6B7280] ${
+                                                openSubService === `${subItem.name}-${itemIndex}`
                                                   ? "rotate-180"
                                                   : ""
-                                                  }`}
-                                              />
-                                            </button>
-                                          )}
-                                        </div>
-                                        {subItem.subServices &&
-                                          openSubService ===
-                                          `${subItem.name}-${itemIndex}` && (
-                                            <ul className="space-y-1 pl-6 border-l border-gray-300 mt-2">
-                                              {subItem.subServices.map(
-                                                (subService: any) => (
-                                                  <li key={subService.name}>
-                                                    <Link
-                                                      to={subService.path}
-                                                      onClick={toggleMobileView}
-                                                      className={`block transition py-2 px-3 rounded-md text-xs ${location.pathname ===
-                                                        subService.path
-                                                        ? "text-[#010574] bg-[#e8f3ff] font-semibold"
-                                                        : "text-[#8B8B8B] hover:text-[#010574] hover:bg-[#f5f5f5]"
-                                                        }`}
-                                                    >
-                                                      <div className="flex items-center">
-                                                        {subService.name}
-                                                      </div>
-                                                    </Link>
-                                                  </li>
-                                                )
-                                              )}
-                                            </ul>
-                                          )}
+                                              }`}
+                                            />
+                                          </button>
+                                        )}
                                       </div>
-                                    </li>
-                                  )
-                                )}
+                                      {subItem.subServices &&
+                                        openSubService === `${subItem.name}-${itemIndex}` && (
+                                          <ul className="space-y-1 pl-6 border-l border-gray-300 mt-2">
+                                            {subItem.subServices.map((subService: any) => (
+                                              <li key={subService.name}>
+                                                <Link
+                                                  to={subService.path}
+                                                  onClick={toggleMobileView}
+                                                  className={`block transition py-2 px-3 rounded-md text-xs ${
+                                                    location.pathname === subService.path
+                                                      ? "text-[#010574] bg-[#e8f3ff] font-semibold"
+                                                      : "text-[#8B8B8B] hover:text-[#010574] hover:bg-[#f5f5f5]"
+                                                  }`}
+                                                >
+                                                  <div className="flex items-center">
+                                                    {subService.name}
+                                                  </div>
+                                                </Link>
+                                              </li>
+                                            ))}
+                                          </ul>
+                                        )}
+                                    </div>
+                                  </li>
+                                ))}
                               </ul>
                             )}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </>
+                ) : item.subServices && item.name === "News & Insights" ? (
+                  <>
+                    <div
+                      onClick={toggleMobileNews}
+                      className="cursor-pointer flex items-center justify-between gap-2 hover:text-[#010574] transition w-full px-3 lg:px-4 py-2 lg:py-3 text-[#A4A4A4] hover:bg-[#f5f5f5] rounded-md"
+                    >
+                      {item.name}
+                      <ChevronDown
+                        size={16}
+                        className={`transition-transform ${
+                          isMobileNewsOpen ? "rotate-180" : ""
+                        }`}
+                      />
+                    </div>
+                    {isMobileNewsOpen && (
+                      <ul className="mt-2 space-y-1 pl-4 lg:pl-8 border-l-2 border-gray-200">
+                        {item.subServices.map((subService: any) => (
+                          <li key={subService.name}>
+                            <Link
+                              to={subService.path}
+                              onClick={toggleMobileView}
+                              className={`block transition py-2 px-3 rounded-md text-xs ${
+                                location.pathname === subService.path
+                                  ? "text-[#010574] bg-[#e8f3ff] font-semibold"
+                                  : "text-[#8B8B8B] hover:text-[#010574] hover:bg-[#f5f5f5]"
+                              }`}
+                            >
+                              <div className="flex items-center">{subService.name}</div>
+                            </Link>
                           </li>
                         ))}
                       </ul>
@@ -929,10 +1022,11 @@ const MobileNavbar = () => {
                   <Link
                     to={item.path}
                     onClick={toggleMobileView}
-                    className={`block transition px-3 lg:px-4 py-2 lg:py-3 rounded-md hover:bg-[#f5f5f5] ${location.pathname === item.path
-                      ? "text-[#052EAA] font-bold"
-                      : "text-[#A4A4A4] hover:text-[#010574]"
-                      }`}
+                    className={`block transition px-3 lg:px-4 py-2 lg:py-3 rounded-md hover:bg-[#f5f5f5] ${
+                      location.pathname === item.path
+                        ? "text-[#052EAA] font-bold"
+                        : "text-[#A4A4A4] hover:text-[#010574]"
+                    }`}
                   >
                     {item.name}
                   </Link>
@@ -941,13 +1035,16 @@ const MobileNavbar = () => {
             ))}
             <li className="">
               <a
-                className="custom-btn !text-black items-center gap-2   group !bg-none !shadow-none inline-flex text-center text-sm lg:text-base px-4 lg:px-6 py-2"
+                className="custom-btn !text-black items-center gap-2 group !bg-none !shadow-none inline-flex text-center text-sm lg:text-base px-4 lg:px-6 py-2"
                 href="tel:+918928138434"
               >
-
-
-                <FontAwesomeIcon icon={faPhone} className="bg-gradient-to-r from-[#3CA2E2] to-[#052EAA] p-3 rounded-full text-white" />
-                <span className="text-[#4D4D4D] group-hover:underline hover:text-black transition-all duration-100">+91 8928 138 434</span>
+                <FontAwesomeIcon
+                  icon={faPhone}
+                  className="bg-gradient-to-r from-[#3CA2E2] to-[#052EAA] p-3 rounded-full text-white"
+                />
+                <span className="text-[#4D4D4D] group-hover:underline hover:text-black transition-all duration-100">
+                  +91 8928 138 434
+                </span>
               </a>
             </li>
           </ul>

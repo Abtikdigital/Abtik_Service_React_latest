@@ -72,6 +72,9 @@ const Section8Company = lazy(() => import("./pages/Section8Company"));
 const Partnership = lazy(() => import("./pages/PartnershipFirm"));
 const ProducerCompany = lazy(() => import("./pages/ProducerCompany"));
 
+// News And Insights
+const EBook=lazy(()=>import("./pages/EBook"))
+
 // Legal
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 // const RefundPolicy = lazy(() => import("./pages/RefundPolicy"))
@@ -86,7 +89,9 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/career" element={<Career />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/blog" element={<Blog />} />
+          <Route path="/news-insights/blogs" element={<Blog />} />
+          <Route path="/news-insights/e-books" element={<EBook />} />
+
           <Route path="/expandedBlog/:slug" element={<ExpandedBlog />} />
 
           <Route path="/services/funding/seed-fund" element={<SeedFund />} />
