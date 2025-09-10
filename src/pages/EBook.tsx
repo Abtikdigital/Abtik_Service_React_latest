@@ -222,19 +222,10 @@ const Ebook: React.FC = () => {
       description:
         "Grow your startup idea into a successful business with mentorship, funding support, accelerator programs, and global growth opportunities.",
       image: Book1,
-      pdfPath: "/public/StartupAccelerator.pdf",
+      pdfPath: "/StartupAccelerator.pdf",
       downloadFileName: "StartupAccelerator.pdf",
     },
-      {
-      id: "ebook1",
-      title:
-        "Turn Your Startup Dream into Reality with Our Startup Accelerator ",
-      description:
-        "Grow your startup idea into a successful business with mentorship, funding support, accelerator programs, and global growth opportunities.",
-      image: Book1,
-      pdfPath: "/public/StartupAccelerator.pdf",
-      downloadFileName: "StartupAccelerator.pdf",
-    },
+   
   ];
 
   const faq: FAQ[] = [
