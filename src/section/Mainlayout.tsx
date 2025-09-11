@@ -11,6 +11,7 @@ import type { ChangeEvent, KeyboardEvent } from "react";
 import Offer from "./Offer";
 import { addOtpDetails, verifyOtp } from "../api/otpApis";
 import isValidIndianNumber from "../utils/validation/isGenuineNumber";
+import { useLocation } from "react-router-dom";
 
 // Custom OTP Input Component
 interface CustomOtpInputProps {
@@ -237,6 +238,8 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
   const [, setContactPayload] = useState<FormData | null>(null);
   const [isVerifying, setIsVerifying] = useState(false);
   const [isVerifyButtonClicked, setIsVerifyButtonClicked] = useState(false);
+  const {pathname}=useLocation()
+
 
   const {
     register,
@@ -473,9 +476,12 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
   }, []);
 
   useEffect(() => {
-    setTimeout(() => {
-      dispatch({ type: "open" });
-    }, 6000);
+    if(pathname!="/news-insights/e-books"){
+
+      setTimeout(() => {
+        dispatch({ type: "open" });
+      }, 6000);
+    }
   }, []);
 
   return (
