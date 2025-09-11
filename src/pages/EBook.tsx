@@ -25,11 +25,13 @@ import seoData from "../data/seoData.json";
 import isValidIndianNumber from "../utils/validation/isGenuineNumber";
 import { addDownloadApplication } from "../api/eBookApi"; // Updated to a generic API for form submission
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 interface FormData {
   name: string;
   email: string;
   phone: string;
+  pdfPath:any;
 
   companyname: string;
   bookName: string;
@@ -156,6 +158,7 @@ const Ebook: React.FC = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [selectedEbook, setSelectedEbook] = useState<EbookData | null>(null);
   const [isExpanded, setIsExpanded] = useState({ isOpen: false, index: -1 });
+  const navigate=useNavigate()
 
   const {
     register,
@@ -275,6 +278,7 @@ const Ebook: React.FC = () => {
 
   const onSubmit = async (data: FormData) => {
     try {
+      console.log(data)
       const apiData = {
         name: data.name,
         companyName: data.companyname,
@@ -292,12 +296,8 @@ const Ebook: React.FC = () => {
           confirmButtonColor: "#052EAA",
           scrollbarPadding: false,
         });
-        const link = document.createElement("a");
-        link.href = selectedEbook!.pdfPath;
-        link.download = selectedEbook!.downloadFileName;
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
+        navigate(`/files${data?.pdfPath}`)
+        
         resetAllStates();
       } else {
         await showSwal({
@@ -322,6 +322,7 @@ const Ebook: React.FC = () => {
 
   const openFormModal = (ebook: EbookData) => {
     setSelectedEbook(ebook);
+    setValue("pdfPath",ebook?.pdfPath)
     setValue("bookName", ebook.title.toLowerCase().replace(/\s+/g, "-")); // Set default bookName based on clicked eBook
     setIsFormOpen(true);
   };
