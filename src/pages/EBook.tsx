@@ -705,7 +705,7 @@ const Ebook: React.FC = () => {
               onClick={handleBackdropClick}
             >
               <motion.div
-                className="relative bg-white rounded-lg shadow-xl w-full max-w-4xl flex flex-col max-h-[90vh]"
+                className="relative bg-white rounded-lg shadow-xl w-full max-w-4xl flex flex-col max-h-[100vh] md:max-h-[90vh]"
                 variants={modalVariants}
                 initial="hidden"
                 animate="visible"
@@ -918,7 +918,7 @@ const Ebook: React.FC = () => {
                             {errors.message && <p className="text-red-500 text-xs mt-1">{errors.message.message}</p>}
                           </div>
                         </div> */}
-                        <div className="flex flex-col md:flex-row w-full gap-4 pt-4 mb-3">
+                        <div className="flex flex-col md:flex-row w-full gap-4  pt-4 mb-12 md:mb-3">
                           <button
                             type="button"
                             onClick={closeModal}
