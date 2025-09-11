@@ -41,17 +41,17 @@ const AgriSURE = () => {
         {
             question: "1. What is AgriSURE scheme?",
             answer:
-                "AgriSURE (Agri Fund for Start-ups & Rural Enterprises) is a ₹750 crore Category-II Alternative Investment Fund launched by the Government of India and NABARD to support innovative agritech startups and rural enterprises in agriculture and allied sectors.",
+                "AgriSURE (Agri Fund for Startups & Rural Enterprises) is a ₹750 crore Category, II Alternative Investment Fund launched by the Government of India and NABARD to support innovative agritech startups and rural enterprises in agriculture and allied sectors.",
         },
         {
             question: "2. What is the investment range under AgriSURE?",
             answer:
-                "AgriSURE provides investments up to ₹25 crore in a single startup. The fund has two schemes: AgriSURE-FoF (₹450 crore) for investing in other AIFs and AgriSURE-Direct (₹300 crore) for direct equity investments in early-stage startups.",
+                "AgriSURE provides investments up to ₹25 crore in a single startup. The fund has two schemes: AgriSURE,FoF (₹450 crore) for investing in other AIFs and AgriSURE, Direct (₹300 crore) for direct equity investments in early stage startups.",
         },
         {
             question: "3. Who is eligible for AgriSURE funding?",
             answer:
-                "Early-stage startups recognized by DPIIT and incorporated in India, working in agriculture & rural development sectors like Agritech, Food Processing, Animal husbandry, Fisheries, Supply Chain Management, Farm Mechanization, Biotechnology, and Climate change are eligible.",
+                "Early stage startups recognized by DPIIT and incorporated in India, working in agriculture & rural development sectors like Agritech, Food Processing, Animal husbandry, Fisheries, Supply Chain Management, Farm Mechanization, Biotechnology, and Climate change are eligible.",
         },
         {
             question: "4. What documents are required for AgriSURE application?",
@@ -61,7 +61,7 @@ const AgriSURE = () => {
         {
             question: "5. How many startups will AgriSURE support?",
             answer:
-                "AgriSURE is structured to support approximately 85 startups with investment sizes of up to ₹25 crore each by the end of its ten-year operational period, which can be extended by two or more years.",
+                "AgriSURE is structured to support approximately 85 startups with investment sizes of up to ₹25 crore each by the end of its 10year operational period, which can be extended by two or more years.",
         },
         {
             question: "6. What is the fund structure of AgriSURE?",
@@ -175,7 +175,7 @@ const AgriSURE = () => {
             icon: TrendingUp,
             title: "Government Backing",
             description:
-                "Benefit from strong government and NABARD backing with SEBI-registered Category-II AIF status, ensuring credibility and strategic support for growth.",
+                "Benefit from strong government and NABARD backing with SEBI registered Category,II AIF status, ensuring credibility and strategic support for growth.",
         },
         {
             icon: Shield,
@@ -383,10 +383,10 @@ const AgriSURE = () => {
                     <p className="paragraph font-3 !text-white mx-auto text-left"
 
                     >
-                        AgriSURE (Agri Fund for Start-ups & Rural Enterprises) is a pioneering ₹750 crore
-                        Category-II Alternative Investment Fund launched by the Government of India and NABARD
+                        AgriSURE (Agri Fund for Startups & Rural Enterprises) is a pioneering ₹750 crore
+                        Category,II Alternative Investment Fund launched by the Government of India and NABARD
                         to revolutionize the agricultural landscape. This innovative fund focuses on supporting
-                        technology-driven, high-risk, high-impact ventures in agriculture and allied sectors,
+                        technology driven, high risk, high impact ventures in agriculture and allied sectors,
                         providing both equity and debt financing to fuel growth and foster innovation in the
                         agricultural and rural startup ecosystem.
                     </p>
@@ -426,7 +426,7 @@ const AgriSURE = () => {
                                     className="text-xl font-2 font-bold text-gray-800 mb-3"
 
                                 >
-                                    AgriSURE-FoF Scheme
+                                    AgriSURE,FoF Scheme
                                 </h3>
                                 <div className="bg-gradient-to-r font-3 from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
                                     <p className="text-2xl font-bold">₹450 Crore</p>
@@ -436,7 +436,7 @@ const AgriSURE = () => {
                             <ul className="space-y-2 text-xs font-3 text-gray-700">
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>Invests in SEBI-registered AIFs</span>
+                                    <span>Invests in SEBI registered AIFs</span>
                                 </li>
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
@@ -444,7 +444,7 @@ const AgriSURE = () => {
                                 </li>
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>Sector-specific and sector-agnostic funds</span>
+                                    <span>Sector specific and sector agnostic funds</span>
                                 </li>
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
@@ -470,7 +470,7 @@ const AgriSURE = () => {
                                     className="text-xl font-2 font-bold text-gray-800 mb-3"
 
                                 >
-                                    AgriSURE-Direct Scheme
+                                    AgriSURE Direct Scheme
                                 </h3>
                                 <div className="bg-gradient-to-r font-3 from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
                                     <p className="text-2xl font-bold">₹300 Crore</p>
@@ -488,11 +488,11 @@ const AgriSURE = () => {
                                 </li>
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>DPIIT-recognized startups eligible</span>
+                                    <span>DPIIT recognized startups eligible</span>
                                 </li>
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>Early-stage focus with growth potential</span>
+                                    <span>Early stage focus with growth potential</span>
                                 </li>
                             </ul>
                         </motion.div>
@@ -545,7 +545,7 @@ const AgriSURE = () => {
                                 </li>
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>SEBI-registered Category-II AIF status.</span>
+                                    <span>SEBI registered Category,II AIF status.</span>
                                 </li>
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
@@ -553,7 +553,7 @@ const AgriSURE = () => {
                                 </li>
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>Ten-year fund duration with extension possibility.</span>
+                                    <span>Ten year fund duration with extension possibility.</span>
                                 </li>
                             </ul>
                         </motion.div>
@@ -572,7 +572,7 @@ const AgriSURE = () => {
                             <ul className="space-y-2 font-3 text-sm text-gray-600">
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>DPIIT-recognized startups incorporated in India.</span>
+                                    <span>DPIIT recognized startups incorporated in India.</span>
                                 </li>
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
@@ -584,11 +584,11 @@ const AgriSURE = () => {
                                 </li>
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>Technology-driven innovative solutions.</span>
+                                    <span>Technology driven innovative solutions.</span>
                                 </li>
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>High-impact agricultural transformation potential.</span>
+                                    <span>High impact agricultural transformation potential.</span>
                                 </li>
                             </ul>
                         </motion.div>

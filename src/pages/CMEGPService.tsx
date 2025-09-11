@@ -41,7 +41,7 @@ const CMEGP = () => {
         {
             question: "1. What is CMEGP scheme?",
             answer:
-                "CMEGP (Credit-linked Capital Subsidy for Technology Upgradation) is a scheme designed to facilitate technology upgradation of micro and small enterprises by providing upfront capital subsidy of 15% on institutional finance availed by them for induction of well-established and improved technology.",
+                "CMEGP (Credit linked Capital Subsidy for Technology Upgradation) is a scheme designed to facilitate technology upgradation of micro and small enterprises by providing upfront capital subsidy of 15% on institutional finance availed by them for induction of well established and improved technology.",
         },
         {
             question: "2. What is the maximum subsidy under CMEGP?",
@@ -66,7 +66,7 @@ const CMEGP = () => {
         {
             question: "6. What types of technology upgradation are covered?",
             answer:
-                "CMEGP covers upgradation to well-established and improved technology including machinery, equipment, and technology that enhances productivity, quality, energy efficiency, and environmental compliance in manufacturing processes.",
+                "CMEGP covers upgradation to well established and improved technology including machinery, equipment, and technology that enhances productivity, quality, energy efficiency, and environmental compliance in manufacturing processes.",
         },
     ];
 
@@ -144,7 +144,7 @@ const CMEGP = () => {
             icon: Headset,
             title: "Implementation Support",
             description:
-                "We provide end-to-end support from subsidy approval to technology implementation and compliance monitoring.",
+                "We provide end to end support from subsidy approval to technology implementation and compliance monitoring.",
         },
     ];
 
@@ -383,7 +383,7 @@ const CMEGP = () => {
                     <p className="paragraph !text-white mx-auto text-left font-3"
                       
                     >
-                        Credit-linked Capital Subsidy for Technology Upgradation (CMEGP) is a government
+                        Credit linked Capital Subsidy for Technology Upgradation (CMEGP) is a government
                         scheme designed to facilitate technology upgradation of micro and small enterprises.
                         The scheme provides 15% upfront capital subsidy on institutional finance for
                         induction of well-established and improved technology in manufacturing units,
@@ -447,7 +447,7 @@ const CMEGP = () => {
                                 </li>
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>Well-established technology focus</span>
+                                    <span>Well established technology focus</span>
                                 </li>
                             </ul>
                         </motion.div>
@@ -582,7 +582,7 @@ const CMEGP = () => {
                                 </li>
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>Technology should be well-established and improved.</span>
+                                    <span>Technology should be well established and improved.</span>
                                 </li>
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />

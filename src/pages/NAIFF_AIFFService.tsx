@@ -41,7 +41,7 @@ const NAIFFAIFF = () => {
         {
             question: "1. What is NAIFF/AIFF scheme?",
             answer:
-                "National Alternative Investment Fund (NAIFF) and Alternative Investment Fund (AIFF) are specialized investment vehicles that provide funding to startups, MSMEs, and growth-stage companies. These funds focus on equity investments, venture capital, and private equity funding for innovative businesses across various sectors.",
+                "National Alternative Investment Fund (NAIFF) and Alternative Investment Fund (AIFF) are specialized investment vehicles that provide funding to startups, MSMEs, and growth stage companies. These funds focus on equity investments, venture capital, and private equity funding for innovative businesses across various sectors.",
         },
         {
             question: "2. What is the investment range under NAIFF/AIFF?",
@@ -51,7 +51,7 @@ const NAIFFAIFF = () => {
         {
             question: "3. Who is eligible for NAIFF/AIFF investment?",
             answer:
-                "Innovative startups, MSMEs, growth-stage companies with scalable business models, technology-driven enterprises, and companies in sectors like fintech, healthtech, edtech, agritech, and manufacturing are eligible. The company should demonstrate strong growth potential and competent management team.",
+                "Innovative startups, MSMEs, growth stage companies with scalable business models, technology driven enterprises, and companies in sectors like fintech, healthtech, edtech, agritech, and manufacturing are eligible. The company should demonstrate strong growth potential and competent management team.",
         },
         {
             question: "4. What documents are required for NAIFF/AIFF application?",
@@ -61,12 +61,12 @@ const NAIFFAIFF = () => {
         {
             question: "5. What is the typical investment process timeline?",
             answer:
-                "The NAIFF/AIFF investment process typically takes 4-8 months from initial application to fund disbursement, including due diligence, valuation assessment, investment committee approval, legal documentation, and final fund transfer.",
+                "The NAIFF/AIFF investment process typically takes 4 to 8 months from initial application to fund disbursement, including due diligence, valuation assessment, investment committee approval, legal documentation, and final fund transfer.",
         },
         {
             question: "6. What are the key terms and conditions?",
             answer:
-                "Key terms include equity stake (typically 10-30%), board representation, protective provisions, anti-dilution rights, exit clauses, performance milestones, and reporting requirements. The fund may also require co-investment rights and tag-along/drag-along provisions.",
+                "Key terms include equity stake (typically 10 to 30%), board representation, protective provisions, anti dilution rights, exit clauses, performance milestones, and reporting requirements. The fund may also require co investment rights and tag along/drag along provisions.",
         },
     ];
 
@@ -387,7 +387,7 @@ const NAIFFAIFF = () => {
                         >
                             National Alternative Investment Fund (NAIFF) and Alternative Investment Fund (AIFF) are
                             specialized investment vehicles designed to provide equity funding to innovative startups,
-                            MSMEs, and growth-stage companies. These funds focus on venture capital, private equity,
+                            MSMEs, and growth stage companies. These funds focus on venture capital, private equity,
                             and strategic investments in scalable businesses across technology, manufacturing, healthcare,
                             fintech, and other high-growth sectors, offering both capital and strategic value addition.
                         </p>
@@ -430,7 +430,7 @@ const NAIFFAIFF = () => {
                                         Early Stage Investment
                                     </h3>
                                     <div className="bg-gradient-to-r font-3 from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
-                                        <p className="text-2xl font-bold">₹50L - ₹5Cr</p>
+                                        <p className="text-2xl font-bold">₹50L to  ₹5Cr</p>
                                         <p className="text-xs opacity-90">Investment range</p>
                                     </div>
                                 </div>
@@ -474,7 +474,7 @@ const NAIFFAIFF = () => {
                                         Growth Stage Investment
                                     </h3>
                                     <div className="bg-gradient-to-r from-[#052EAA] font-3 to-[#3CA2E2] text-white p-3 rounded-xl">
-                                        <p className="text-2xl font-bold">₹5Cr - ₹50Cr</p>
+                                        <p className="text-2xl font-bold">₹5Cr to ₹50Cr</p>
                                         <p className="text-xs opacity-90">Investment range</p>
                                     </div>
                                 </div>

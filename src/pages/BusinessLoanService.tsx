@@ -51,22 +51,22 @@ const BusinessLoan = () => {
         {
             question: "3. What documents are required for business loan applications?",
             answer:
-                "Common documents include business plan, financial statements (last 2-3 years), income tax returns, bank statements, business registration documents, KYC documents, and collateral papers (for secured loans). Additional documents may be required based on business type and loan amount.",
+                "Common documents include business plan, financial statements (last 2,3 years), income tax returns, bank statements, business registration documents, KYC documents, and collateral papers (for secured loans). Additional documents may be required based on business type and loan amount.",
         },
         {
             question: "4. What are the eligibility criteria for business loans?",
             answer:
-                "Key criteria include minimum business vintage (usually 2-3 years), good credit score (750+), stable cash flows, profitable operations, proper business documentation, and collateral for secured loans. Eligibility varies across lenders and loan types.",
+                "Key criteria include minimum business vintage (usually 2,3 years), good credit score (750+), stable cash flows, profitable operations, proper business documentation, and collateral for secured loans. Eligibility varies across lenders and loan types.",
         },
         {
             question: "5. How long does business loan approval take?",
             answer:
-                "Unsecured business loans can be approved within 2-7 days with minimal documentation. Secured business loans typically take 15-30 days due to collateral verification, legal checks, and detailed due diligence processes.",
+                "Unsecured business loans can be approved within 2,7 days with minimal documentation. Secured business loans typically take 15 to 30 days due to collateral verification, legal checks, and detailed due diligence processes.",
         },
         {
             question: "6. What are the interest rates for business loans?",
             answer:
-                "Secured business loan rates range from 8-15% per annum, while unsecured business loans range from 12-30% per annum. Rates depend on factors like credit score, business profile, loan amount, tenure, and lender policies.",
+                "Secured business loan rates range from 8,15% per annum, while unsecured business loans range from 12 to 30% per annum. Rates depend on factors like credit score, business profile, loan amount, tenure, and lender policies.",
         },
     ];
 
@@ -144,7 +144,7 @@ const BusinessLoan = () => {
             icon: Headset,
             title: "Application Support",
             description:
-                "We provide end-to-end support from documentation to loan disbursement, ensuring smooth processing and quick approval.",
+                "We provide end to end support from documentation to loan disbursement, ensuring smooth processing and quick approval.",
         },
     ];
 
@@ -427,14 +427,14 @@ const BusinessLoan = () => {
                                     Secured Business Loans
                                 </h3>
                                 <div className="bg-gradient-to-r font-3 from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
-                                    <p className="text-2xl font-bold">₹5L - ₹50Cr</p>
+                                    <p className="text-2xl font-bold">₹5L, ₹50Cr</p>
                                     <p className="text-xs opacity-90">With collateral security</p>
                                 </div>
                             </div>
                             <ul className="space-y-2 font-3 text-xs text-gray-700">
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>Lower interest rates (8-15% per annum)</span>
+                                    <span>Lower interest rates (8to15% per annum)</span>
                                 </li>
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
@@ -471,14 +471,14 @@ const BusinessLoan = () => {
                                     Unsecured Business Loans
                                 </h3>
                                 <div className="bg-gradient-to-r font-3 from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
-                                    <p className="text-2xl font-bold">₹1L - ₹5Cr</p>
+                                    <p className="text-2xl font-bold">₹1L, ₹5Cr</p>
                                     <p className="text-xs opacity-90">No collateral required</p>
                                 </div>
                             </div>
                             <ul className="space-y-2 text-xs font-3 text-gray-700">
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>Quick approval (2-7 days)</span>
+                                    <span>Quick approval (2,7 days)</span>
                                 </li>
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
@@ -569,7 +569,7 @@ const BusinessLoan = () => {
                             <ul className="space-y-2 text-sm text-gray-600 font-3">
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>Minimum 2-3 years business vintage.</span>
+                                    <span>Minimum 2,3 years business vintage.</span>
                                 </li>
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />

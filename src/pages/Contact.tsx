@@ -61,7 +61,7 @@ const Contact = () => {
                           main-heading font-1"
 
             >
-              Your One-Stop{" "}
+              Your One Stop{" "}
               <span className="text-[#3CA2E2] font-extrabold block sm:inline">
                 Solution
               </span>{" "}

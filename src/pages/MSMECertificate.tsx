@@ -33,32 +33,32 @@ const MSMECertificate = () => {
     {
       question: "1. What is an MSME Certificate?",
       answer:
-        "The MSME Certificate (Udyam Registration) is an official government recognition for micro, small, or medium businesses in India, unlocking access to incentives, financial support, and special schemes[4][8][14].",
+        "The MSME Certificate (Udyam Registration) is an official government recognition for micro, small, or medium businesses in India, unlocking access to incentives, financial support, and special schemes.",
     },
     {
       question: "2. Who can apply for the MSME Certificate?",
       answer:
-        "Any sole proprietor, partnership, LLP, private limited, or other entity involved in manufacturing or services, meeting the investment and turnover limits, can apply and benefit[8][14].",
+        "Any sole proprietor, partnership, LLP, private limited, or other entity involved in manufacturing or services, meeting the investment and turnover limits, can apply and benefit.",
     },
     {
       question: "3. What are the key benefits?",
       answer:
-        "Priority loans, subsidies on patent/trademark fees, protection from delayed payments, tax benefits, preference in government tenders, and technology upgrade grants, among others[6][8][9].",
+        "Priority loans, subsidies on patent/trademark fees, protection from delayed payments, tax benefits, preference in government tenders, and technology upgrade grants, among others.",
     },
     {
       question: "4. What documents are required?",
       answer:
-        "Primarily Aadhaar, PAN, brief business details, along with optional GST and bank information. Registration is entirely online on the Udyam portal, and document upload is minimal[3][7][8].",
+        "Primarily Aadhaar, PAN, brief business details, along with optional GST and bank information. Registration is entirely online on the Udyam portal, and document upload is minimal.",
     },
     {
       question: "5. How long does the MSME Certificate last?",
       answer:
-        "The MSME (Udyam) Certificate is valid for life, as long as your business meets MSME criteria and you keep your Udyam details up to date[8][14].",
+        "The MSME (Udyam) Certificate is valid for life, as long as your business meets MSME criteria and you keep your Udyam details up to date.",
     },
     {
       question: "6. Is there a government fee for MSME registration?",
       answer:
-        "MSME/Udyam Registration on the official government portal is 100% free. Avoid third-party fees unless opting for added services[5][8].",
+        "MSME/Udyam Registration on the official government portal is 100% free. Avoid third party fees unless opting for added services.",
     },
   ];
 
@@ -163,31 +163,31 @@ const MSMECertificate = () => {
       icon: TrendingUp,
       title: "Priority Loans & Credit",
       description:
-        "Easier access to collateral-free and subsidized loans via government schemes and banks[4][6][8][9].",
+        "Easier access to collateralfree and subsidized loans via government schemes and banks.",
     },
     {
       icon: Award,
       title: "Patent & Trademark Subsidy",
       description:
-        "Up to 50% cost reduction for patent/trademark filings, plus expert IP facilitation[4][8][9].",
+        "Up to 50% cost reduction for patent/trademark filings, plus expert IP facilitation.",
     },
     {
       icon: Users,
       title: "Tender Preference",
       description:
-        "Preference and relaxed norms for government tenders and procurement contracts[4][8].",
+        "Preference and relaxed norms for government tenders and procurement contracts.",
     },
     {
       icon: IndianRupee ,
       title: "Direct Subsidies",
       description:
-        "Tax reductions, technology upgradation support, special grants for new and existing MSMEs[8][14].",
+        "Tax reductions, technology upgradation support, special grants for new and existing MSMEs.",
     },
     {
       icon: Shield,
       title: "Delayed Payment Protection",
       description:
-        "Legal backing to ensure buyers pay MSMEs promptly, plus interest for overdue invoices[6][8].",
+        "Legal backing to ensure buyers pay MSMEs promptly, plus interest for overdue invoices.",
     },
   ];
 
@@ -383,7 +383,7 @@ const MSMECertificate = () => {
               MSME (Udyam) Registration certifies your business as Micro, Small,
               or Medium Enterprise with the Government of India, providing
               instant eligibility for a broad spectrum of government benefits,
-              low-cost finance, market access, and IP support—the gateway to
+              low-cost finance, market access, and IP support the gateway to
               prioritized growth in India’s new economy.
             </p>
           </div>

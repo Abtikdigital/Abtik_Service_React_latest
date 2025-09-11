@@ -38,7 +38,7 @@ const MakeInIndiaCertificate = () => {
     {
       question: "2. Who is eligible to obtain the certificate?",
       answer:
-        "Manufacturers, OEMs, and service providers with at least 20% value added locally (Class-II supplier) or 50%+ (Class-I supplier) can self-certify local content for most tenders. Higher value projects (>₹10Cr) require CA/third party attestation.",
+        "Manufacturers, OEMs, and service providers with at least 20% value added locally (Class II supplier) or 50%+ (Class I supplier) can self certify local content for most tenders. Higher value projects (>₹10Cr) require CA/third party attestation.",
     },
     {
       question: "3. What documents are needed?",
@@ -53,7 +53,7 @@ const MakeInIndiaCertificate = () => {
     {
       question: "5. How do I get the certificate?",
       answer:
-        "Fill in the prescribed format (self-declaration or CA-certified for high-value bids), attach local content data, and submit with the tender or on GeM. Many online tools and consultants support fast certificate generation.",
+        "Fill in the prescribed format (self declaration or CA certified for high value bids), attach local content data, and submit with the tender or on GeM. Many online tools and consultants support fast certificate generation.",
     },
     {
       question: "6. Does the certificate expire?",
@@ -163,7 +163,7 @@ const MakeInIndiaCertificate = () => {
       icon: TrendingUp,
       title: "Bid Preference",
       description:
-        "Class-I/II local suppliers get priority and may win government contracts even when not L1.",
+        "Class I/II local suppliers get priority and may win government contracts even when not L1.",
     },
     {
       icon: IndianRupee ,
@@ -175,7 +175,7 @@ const MakeInIndiaCertificate = () => {
       icon: Users,
       title: "Brand Credibility",
       description:
-        "Build trust with buyers—MII means quality, legal compliance, and speedy support.",
+        "Build trust with buyers MII means quality, legal compliance, and speedy support.",
     },
     {
       icon: Award,
@@ -187,7 +187,7 @@ const MakeInIndiaCertificate = () => {
       icon: Shield,
       title: "Support for MSMEs",
       description:
-        "MSMEs get equal footing against large/foreign competitors—empowered to scale up faster.",
+        "MSMEs get equal footing against large/foreign competitors empowered to scale up faster.",
     },
   ];
 
@@ -246,7 +246,7 @@ const MakeInIndiaCertificate = () => {
 
             >
               Prove your products are truly Indian, access special incentives,
-              and get preference in public procurement—Abtik makes certification
+              and get preference in public procurement, Abtik makes certification
               simple, fast, and 100% Compliant.
             </p>
             <div className="pt-2 sm:pt-4">
@@ -408,8 +408,8 @@ const MakeInIndiaCertificate = () => {
 
             >
               Any Indian manufacturer, OEM, or service provider making
-              in-country value addition (as defined in PPP-MII order) can get
-              certified and unlock government-backed advantages.
+              in country value addition (as defined in PPP MII order) can get
+              certified and unlock government backed advantages.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <motion.div
@@ -436,7 +436,7 @@ const MakeInIndiaCertificate = () => {
                   <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
                     <span>
-                      Local content: Class-I (50%+), Class-II (20-50%)
+                      Local content: Class I (50%+), Class II (20-50%)
                     </span>
                   </li>
                   <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
@@ -465,13 +465,13 @@ const MakeInIndiaCertificate = () => {
                   <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
                     <span>
-                      Self-certification (usual case) or CA-certified (high
+                      Self certification (usual case) or CA certified (high
                       value)
                     </span>
                   </li>
                   <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                    <span>Formats provided in PPP-MII notification</span>
+                    <span>Formats provided in PPP MII notification</span>
                   </li>
                   <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />

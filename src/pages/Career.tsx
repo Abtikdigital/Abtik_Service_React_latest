@@ -43,22 +43,22 @@ const Career = () => {
       title: "BDE",
       position: "Business Development Executive",
       description:
-        "We’re hiring a BDE to connect with leads, pitch services, and support sales growth through smart communication and follow-ups.",
+        "We’re hiring a BDE to connect with leads, pitch services, and support sales growth through smart communication and follow ups.",
       vacancy: 30,
       experience: "Fresher",
       location: "Ahmedabad, India",
-      type: "Full-time",
-      skills: ["Cold Calling", "CRM", " Presentation Skills", " Client Follow-up", " Communication"],
+      type: "Full time",
+      skills: ["Cold Calling", "CRM", " Presentation Skills", " Client Follow up", " Communication"],
     },
     {
       title: "BDM",
       position: "Business Development Manager",
       description:
-        "We are looking for a results-driven BDM to lead client acquisition and drive business growth through strategic partnerships and high-value deals.",
+        "We are looking for a results driven BDM to lead client acquisition and drive business growth through strategic partnerships and high value deals.",
       vacancy: 7,
-      experience: "1-2 years",
+      experience: "1to2 years",
       location: "Ahmedabad, India",
-      type: "Full-time",
+      type: "Full time",
       skills: ["Sales Strategy", "Negotiation", "CRM Tools", "Lead Generation"],
     },
     {
@@ -69,7 +69,7 @@ const Career = () => {
       vacancy: 2,
       experience: "Fresher",
       location: "Ahmedabad, India",
-      type: "Full-time",
+      type: "Full time",
       skills: ["Recruitment","Coordination","MS Office", " Coordination", " Time Management"],
     },
   ];
@@ -411,7 +411,7 @@ const Career = () => {
                           main-heading font-1"
 
             >
-              Your One-Stop{" "}
+              Your One Stop{" "}
               <span className="text-[#3CA2E2] font-extrabold block sm:inline">
                 Solution
               </span>{" "}
@@ -807,9 +807,9 @@ const Career = () => {
                             >
                               <option value="">Select experience</option>
                               <option value="Fresher">Fresher</option>
-                              <option value="1-2 years">1-2 years</option>
-                              <option value="2-4 years">2-4 years</option>
-                              <option value="3-5 years">3-5 years</option>
+                              <option value="1-2 years">1to2 years</option>
+                              <option value="2-4 years">2to4 years</option>
+                              <option value="3-5 years">3to5 years</option>
                               <option value="5+ years">5+ years</option>
                             </select>
                           </div>

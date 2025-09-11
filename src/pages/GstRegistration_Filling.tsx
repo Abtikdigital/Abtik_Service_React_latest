@@ -33,32 +33,32 @@ const GSTRegistrationFiling = () => {
     {
       question: "1. What is GST registration?",
       answer:
-        "GST registration is a mandatory process for businesses exceeding specified annual turnover, or selling via e-commerce, providing them with a GSTIN and enabling legal tax collection and input credit[8][14].",
+        "GST registration is a mandatory process for businesses exceeding specified annual turnover, or selling via e-commerce, providing them with a GSTIN and enabling legal tax collection and input credit.",
     },
     {
       question: "2. Who needs GST registration in 2025?",
       answer:
-        "Businesses with ₹40 lakh+ turnover (goods, most states), ₹20 lakh+ (services, most states), e-commerce sellers, or those supplying interstate must register. Voluntary registration is allowed for smaller businesses[8][11].",
+        "Businesses with ₹40 lakh+ turnover (goods, most states), ₹20 lakh+ (services, most states), e-commerce sellers, or those supplying interstate must register. Voluntary registration is allowed for smaller businesses.",
     },
     {
       question: "3. How do I register for GST?",
       answer:
-        "Register online at gst.gov.in: fill Part A (basic info), verify via OTP, fill Part B (business/document upload), choose Aadhaar authentication, and await GSTIN approval—now issued within 7-30 working days depending on verification[8][14].",
+        "Register online at gst.gov.in: fill Part A (basic info), verify via OTP, fill Part B (business/document upload), choose Aadhaar authentication, and await GSTIN approval now issued within 7-30 working days depending on verification.",
     },
     {
       question: "4. Which documents are needed?",
       answer:
-        "PAN, Aadhaar, proof of business constitution, address proof (including rent agreement/utility bill), bank statement/cancelled cheque, and photo of key persons[1][4][14].",
+        "PAN, Aadhaar, proof of business constitution, address proof (including rent agreement/utility bill), bank statement/cancelled cheque, and photo of key persons.",
     },
     {
       question: "5. How do I file GST returns in 2025?",
       answer:
-        "Log in to the GST portal, select the relevant form (e.g., GSTR-1, GSTR-3B), verify auto-populated details, add information if needed, submit and pay any liabilities. From July 2025, GSTR-3B will be auto-locked after submission and all GST returns must be filed within 3 years from the due date[6][9][18].",
+        "Log in to the GST portal, select the relevant form (e.g., GSTR-1, GSTR-3B), verify auto-populated details, add information if needed, submit and pay any liabilities. From July 2025, GSTR 3B will be auto-locked after submission and all GST returns must be filed within 3 years from the due date.",
     },
     {
       question: "6. What are the benefits of GST registration?",
       answer:
-        "Legally compliant business, claim ITC, expanded market, e-commerce eligibility, government tenders, and improved business credibility[7][10][19].",
+        "Legally compliant business, claim ITC, expanded market, e-commerce eligibility, government tenders, and improved business credibility.",
     },
   ];
 
@@ -147,13 +147,13 @@ const GSTRegistrationFiling = () => {
       icon: Shield,
       title: "Portal Filing & Verification",
       description:
-        "Submit your registration, respond to officer queries, and track status—our team assists in clearing any issues or physical verification requests for quick GSTIN grant.",
+        "Submit your registration, respond to officer queries, and track status our team assists in clearing any issues or physical verification requests for quick GSTIN grant.",
     },
     {
       icon: Award,
       title: "Return Filing & Compliance",
       description:
-        "Our experts file your monthly/quarterly GST returns, reconcile sales/purchase data, and ensure on-time, error-free filing (GSTR-1, 3B, etc.), in line with the new filing and locking norms effective July 2025.",
+        "Our experts file your monthly/quarterly GST returns, reconcile sales/purchase data, and ensure on time, error free filing (GSTR-1, 3B, etc.), in line with the new filing and locking norms effective July 2025.",
     },
   ];
 
@@ -169,13 +169,13 @@ const GSTRegistrationFiling = () => {
       icon: IndianRupee ,
       title: "Input Tax Credit & Cost Savings",
       description:
-        "Save money by claiming set-off on GST paid for purchases, boosting cash flow and profitability.",
+        "Save money by claiming set off on GST paid for purchases, boosting cash flow and profitability.",
     },
     {
       icon: Award,
       title: "Business Credibility & Tenders",
       description:
-        "GST-registered businesses are trusted for B2B sales, supplier agreements, and are often required for government/private tenders.",
+        "GST registered businesses are trusted for B2B sales, supplier agreements, and are often required for government/private tenders.",
     },
     {
       icon: Users,
@@ -187,7 +187,7 @@ const GSTRegistrationFiling = () => {
       icon: Shield,
       title: "Easy Renewals and Return Filing",
       description:
-        "We ensure you never miss a deadline—monthly/quarterly returns are filed accurately to avoid notices and preserve ITC eligibility.",
+        "We ensure you never miss a deadline monthly/quarterly returns are filed accurately to avoid notices and preserve ITC eligibility.",
     },
   ];
 
@@ -249,7 +249,7 @@ const GSTRegistrationFiling = () => {
             >
               Register your business for GST and stay compliant with all latest
               return filing rules and deadlines. Abtik provides complete
-              start-to-finish GST support for your growth.
+              start to finish GST support for your growth.
             </p>
             <div className="pt-2 sm:pt-4">
               <button
@@ -451,7 +451,7 @@ const GSTRegistrationFiling = () => {
                   <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
                     <span>
-                      Voluntary – any smaller business seeking compliance/trust.
+                      Voluntary any smaller business seeking compliance/trust.
                     </span>
                   </li>
                 </ul>

@@ -33,12 +33,12 @@ const AnnualCompliance = () => {
     {
       question: "1. What is annual compliance for companies/LLPs?",
       answer:
-        "Annual compliance is the mandatory set of filings, disclosures, and statutory meetings companies and LLPs must complete each financial year as per Companies Act, LLP Act, and allied laws—including ROC filings, AGM, and financial statements.",
+        "Annual compliance is the mandatory set of filings, disclosures, and statutory meetings companies and LLPs must complete each financial year as per Companies Act, LLP Act, and allied laws including ROC filings, AGM, and financial statements.",
     },
     {
       question: "2. Who is required to do annual compliance?",
       answer:
-        "All Private Limited Companies, OPCs, LLPs, and Section 8 (NGO) companies registered in India—even those with zero turnover—must do annual filings with the Registrar of Companies (ROC) and other regulators.",
+        "All Private Limited Companies, OPCs, LLPs, and Section 8 (NGO) companies registered in India even those with zero turnover must do annual filings with the Registrar of Companies (ROC) and other regulators.",
     },
     {
       question: "3. What are the key annual compliances?",
@@ -48,17 +48,17 @@ const AnnualCompliance = () => {
     {
       question: "4. What documents and records are needed?",
       answer:
-        "Financial statements, audited accounts, board/AGM resolutions/minutes, directors' KYC, statutory registers, and, for LLP, the Statement of Account & Solvency. Professional digital signatures are required for e-filing.",
+        "Financial statements, audited accounts, board/AGM resolutions/minutes, directors' KYC, statutory registers, and, for LLP, the Statement of Account & Solvency. Professional digital signatures are required for e filing.",
     },
     {
-      question: "5. What are the penalties for non-compliance?",
+      question: "5. What are the penalties for non compliance?",
       answer:
         "Heavy late fees (₹100/day even for small delays), disqualification of directors/partners, deregistration or striking off by MCA, and in certain cases prosecution and personal liability for officers.",
     },
     {
       question: "6. How does Abtik assist with annual compliance?",
       answer:
-        "Abtik provides end-to-end annual compliance: compliance calendar, secretarial help, document prep, digital signature, e-filing, AGM/board meeting support, ROC/ITR filings, and regular alerts to guarantee 100% legal standing.",
+        "Abtik provides end to end annual compliance: compliance calendar, secretarial help, document prep, digital signature, e filing, AGM/board meeting support, ROC/ITR filings, and regular alerts to guarantee 100% legal standing.",
     },
   ];
 
@@ -151,7 +151,7 @@ const AnnualCompliance = () => {
     },
     {
       icon: Award,
-      title: "ROC e-Filings & ITR Submission",
+      title: "ROC e Filings & ITR Submission",
       description:
         "Your dedicated expert completes all e-filings (AOC-4/MGT-7/LLP-11/8, DPT-3, KYC, etc.) and Income Tax Return to keep your company/LLP fully compliant annually.",
     },
@@ -181,7 +181,7 @@ const AnnualCompliance = () => {
       icon: Users,
       title: "Peace of Mind",
       description:
-        "Year-round reminders, secretarial help, and expert guidance mean stress-free compliance.",
+        "Year round reminders, secretarial help, and expert guidance mean stress-free compliance.",
     },
     {
       icon: Award,
@@ -248,7 +248,7 @@ const AnnualCompliance = () => {
 
             >
               Keep your company or LLP 100% compliant with statutory annual
-              filings, ROC returns, meetings, and ITR—all managed & filed by
+              filings, ROC returns, meetings, and ITR all managed & filed by
               Abtik experts.
             </p>
             <div className="pt-2 sm:pt-4">
@@ -381,7 +381,7 @@ const AnnualCompliance = () => {
               Annual compliance includes all the legal filings, disclosures,
               board meetings, AGMs, and return submissions your company or LLP
               must complete every financial year under Indian company law.
-              Neglecting these can result in steep penalties or closure—Abtik
+              Neglecting these can result in steep penalties or closure, Abtik
               makes sure you stay fully compliant, year after year.
             </p>
           </div>
@@ -436,7 +436,7 @@ const AnnualCompliance = () => {
                   </li>
                   <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                    <span>Zero-turnover, dormant, and brand-new companies</span>
+                    <span>Zero turnover, dormant, and brand new companies</span>
                   </li>
                   <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />

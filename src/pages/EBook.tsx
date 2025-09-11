@@ -235,7 +235,7 @@ const Ebook: React.FC = () => {
     {
       question: "What are the benefits of downloading these eBooks?",
       answer:
-        "Our eBooks provide in-depth knowledge on business financing, CGTMSE schemes, and growth strategies, tailored for entrepreneurs and small business owners.",
+        "Our eBooks provide in depth knowledge on business financing, CGTMSE schemes, and growth strategies, tailored for entrepreneurs and small business owners.",
     },
     {
       question: "How can I access the eBooks?",
@@ -386,7 +386,7 @@ const Ebook: React.FC = () => {
   return (
     <HeadProvider>
       <Title>
-        {seoData?.eBooks?.title || "Download Our Free eBooks - Abtik Services"}
+        {seoData?.eBooks?.title || "Download Our Free eBooks  Abtik Services"}
       </Title>
       <Meta
         name="description"

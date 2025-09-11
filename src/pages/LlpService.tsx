@@ -48,7 +48,7 @@ const LLPRegistration = () => {
     {
       question: "4. How long does it take to register an LLP?",
       answer:
-        "The registration typically takes 7–15 working days if all documents are in order. It involves name approval, DPIN application, agreement drafting, and MCA approval.",
+        "The registration typically takes 7,15 working days if all documents are in order. It involves name approval, DPIN application, agreement drafting, and MCA approval.",
     },
     {
       question:
@@ -241,7 +241,7 @@ const LLPRegistration = () => {
                          max-w-none font-3 sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
 
             >
-              Start your LLP the right way—get quick name approval, partner
+              Start your LLP the right way get quick name approval, partner
               DPINs, and all filings managed by Abtik for minimum hassle and
               full compliance.
             </p>
@@ -343,7 +343,7 @@ const LLPRegistration = () => {
           >
             <div className="flex flex-col justify-evenly p-4 box-border">
               <h2 className="sub-heading text-white font-1">
-                Llp 
+                LLP
               </h2>
               <p className="font-3 text-white">
                 Empowering Businesses through Comprehensive Solutions From Fund

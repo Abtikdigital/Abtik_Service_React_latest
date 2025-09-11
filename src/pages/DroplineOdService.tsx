@@ -41,7 +41,7 @@ const DroplineOverdraft = () => {
         {
             question: "1. What is Dropline Overdraft?",
             answer:
-                "Dropline Overdraft is a structured credit facility where the overdraft limit reduces automatically at predetermined intervals over time. Unlike regular overdrafts with fixed limits, dropline overdrafts have a reducing balance structure, requiring borrowers to gradually pay down the principal amount according to a pre-agreed schedule.",
+                "Dropline Overdraft is a structured credit facility where the overdraft limit reduces automatically at predetermined intervals over time. Unlike regular overdrafts with fixed limits, dropline overdrafts have a reducing balance structure, requiring borrowers to gradually pay down the principal amount according to a pre agreed schedule.",
         },
         {
             question: "2. How does Dropline Overdraft work?",
@@ -61,7 +61,7 @@ const DroplineOverdraft = () => {
         {
             question: "5. What are the benefits of Dropline Overdraft?",
             answer:
-                "Benefits include disciplined debt reduction, lower overall interest costs due to reducing principal, structured repayment approach, flexibility in timing of principal payments within dropline periods, and suitable financing for project-based or seasonal businesses with predictable cash flow patterns.",
+                "Benefits include disciplined debt reduction, lower overall interest costs due to reducing principal, structured repayment approach, flexibility in timing of principal payments within dropline periods, and suitable financing for project based or seasonal businesses with predictable cash flow patterns.",
         },
         {
             question: "6. What is the typical tenure for Dropline Overdraft?",
@@ -429,7 +429,7 @@ const DroplineOverdraft = () => {
                                     Monthly Dropline
                                 </h3>
                                 <div className="bg-gradient-to-r font-3 from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
-                                    <p className="text-2xl font-bold">₹1L - ₹10Cr</p>
+                                    <p className="text-2xl font-bold">₹1L to ₹10Cr</p>
                                     <p className="text-xs opacity-90">Reducing monthly</p>
                                 </div>
                             </div>
@@ -473,7 +473,7 @@ const DroplineOverdraft = () => {
                                     Quarterly Dropline
                                 </h3>
                                 <div className="bg-gradient-to-r font-3 from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
-                                    <p className="text-2xl font-bold">₹5L - ₹25Cr</p>
+                                    <p className="text-2xl font-bold">₹5L to ₹25Cr</p>
                                     <p className="text-xs opacity-90">Reducing quarterly</p>
                                 </div>
                             </div>
@@ -553,7 +553,7 @@ const DroplineOverdraft = () => {
                                 </li>
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>Suitable for project-based businesses.</span>
+                                    <span>Suitable for project based businesses.</span>
                                 </li>
                             </ul>
                         </motion.div>
@@ -572,7 +572,7 @@ const DroplineOverdraft = () => {
                             <ul className="space-y-2 text-sm text-gray-600 font-3">
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>Pre-determined dropline schedule and amounts.</span>
+                                    <span>Pre determined dropline schedule and amounts.</span>
                                 </li>
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />

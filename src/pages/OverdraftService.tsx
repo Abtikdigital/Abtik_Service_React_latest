@@ -41,7 +41,7 @@ const Overdraft = () => {
         {
             question: "1. What is Bank Overdraft facility?",
             answer:
-                "Bank Overdraft is a flexible credit facility that allows account holders to withdraw more money than available in their account up to a pre-approved limit. It acts as a safety net for managing temporary cash flow shortages and unexpected expenses while maintaining smooth business operations.",
+                "Bank Overdraft is a flexible credit facility that allows account holders to withdraw more money than available in their account up to a pre approved limit. It acts as a safety net for managing temporary cash flow shortages and unexpected expenses while maintaining smooth business operations.",
         },
         {
             question: "2. What is the maximum limit for Overdraft?",
@@ -61,7 +61,7 @@ const Overdraft = () => {
         {
             question: "5. How is interest calculated on Overdraft?",
             answer:
-                "Interest on Overdraft is calculated on daily outstanding balance basis. You pay interest only on the amount overdrawn, not on the entire limit. Interest rates typically range from 10-24% per annum, depending on the bank, account type, and customer profile.",
+                "Interest on Overdraft is calculated on daily outstanding balance basis. You pay interest only on the amount overdrawn, not on the entire limit. Interest rates typically range from 10 to 24% per annum, depending on the bank, account type, and customer profile.",
         },
         {
             question: "6. What is the difference between Overdraft and Personal Loan?",
@@ -175,7 +175,7 @@ const Overdraft = () => {
             icon: TrendingUp,
             title: "Interest on Usage Only",
             description:
-                "Pay interest only on the amount overdrawn from your account, not on the entire sanctioned limit, making it a cost-effective financing solution.",
+                "Pay interest only on the amount overdrawn from your account, not on the entire sanctioned limit, making it a cost effective financing solution.",
         },
         {
             icon: Shield,
@@ -385,11 +385,11 @@ const Overdraft = () => {
                             
                         >
                             Bank Overdraft is a flexible credit facility that allows account holders to withdraw
-                            more money than available in their account balance up to a pre-approved limit. It serves
+                            more money than available in their account balance up to a pre approved limit. It serves
                             as an instant financial safety net for managing temporary cash flow shortages, unexpected
                             expenses, and business opportunities. The facility operates seamlessly with your existing
                             bank account, providing immediate access to funds whenever needed while charging interest
-                            only on the amount utilized, making it a cost-effective solution for short-term financing needs.
+                            only on the amount utilized, making it a cost effective solution for short term financing needs.
                         </p>
                     </div>
                 </motion.section>
@@ -430,7 +430,7 @@ const Overdraft = () => {
                                         Personal Overdraft
                                     </h3>
                                     <div className="bg-gradient-to-r font-3 from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
-                                        <p className="text-2xl font-bold">₹25K - ₹50L</p>
+                                        <p className="text-2xl font-bold">₹25K to ₹50L</p>
                                         <p className="text-xs opacity-90">For individuals</p>
                                     </div>
                                 </div>
@@ -441,7 +441,7 @@ const Overdraft = () => {
                                     </li>
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                         <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                        <span>Interest rates: 12-24% per annum</span>
+                                        <span>Interest rates: 12,24% per annum</span>
                                     </li>
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                         <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
@@ -474,7 +474,7 @@ const Overdraft = () => {
                                         Business Overdraft
                                     </h3>
                                     <div className="bg-gradient-to-r font-3 from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
-                                        <p className="text-2xl font-bold">₹1L - ₹5Cr</p>
+                                        <p className="text-2xl font-bold">₹1L to ₹5Cr</p>
                                         <p className="text-xs opacity-90">For businesses</p>
                                     </div>
                                 </div>
@@ -485,7 +485,7 @@ const Overdraft = () => {
                                     </li>
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                         <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                        <span>Interest rates: 10-18% per annum</span>
+                                        <span>Interest rates: 10,18% per annum</span>
                                     </li>
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                         <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />

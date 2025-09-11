@@ -49,7 +49,7 @@ const MSMELoans = () => {
     {
       question: "2. What is CGTMSE and how does it help?",
       answer:
-        "Credit Guarantee Trust Fund for Micro & Small Enterprises (CGTMSE) provides collateral-free loans up to ₹2 crores. It guarantees 75-85% of the loan amount, making it easier for MSMEs to access credit without pledging assets as security."
+        "Credit Guarantee Trust Fund for Micro & Small Enterprises (CGTMSE) provides collateral free loans up to ₹2 crores. It guarantees 75 to 85% of the loan amount, making it easier for MSMEs to access credit without pledging assets as security."
     },
     {
       question: "3. What is the Udyam Registration process?",
@@ -59,7 +59,7 @@ const MSMELoans = () => {
     {
       question: "4. How do Mudra loans work and what are the categories?",
       answer:
-        "Mudra loans are divided into three categories: Shishu (up to ₹50,000), Kishor (₹50,001 to ₹5 lakhs), and Tarun (₹5,00,001 to ₹10 lakhs). These are collateral-free loans for small businesses, entrepreneurs, and self-employed individuals."
+        "Mudra loans are divided into three categories: Shishu (up to ₹50,000), Kishor (₹50,000 to ₹5 lakhs), and Tarun (₹5,00,000 to ₹10 lakhs). These are collateral free loans for small businesses, entrepreneurs, and self-employed individuals."
     },
     {
       question: "5. What documents are required for MSME loan applications?",
@@ -69,12 +69,12 @@ const MSMELoans = () => {
     {
       question: "6. What are the interest rates and repayment terms?",
       answer:
-        "Interest rates typically range from 8-14% depending on the loan type, business profile, and credit score. Repayment terms vary from 1-7 years for term loans. Working capital loans usually have shorter tenure with flexible repayment options."
+        "Interest rates typically range from 8 to 14% depending on the loan type, business profile, and credit score. Repayment terms vary from 1,7 years for term loans. Working capital loans usually have shorter tenure with flexible repayment options."
     },
     {
       question: "7. How can Abtik help in the MSME loan process?",
       answer:
-        "Abtik provides end-to-end assistance including loan eligibility assessment, documentation support, application processing, liaison with banks/NBFCs, and post-approval services. We help maximize approval chances and secure better terms."
+        "Abtik provides end to end assistance including loan eligibility assessment, documentation support, application processing, liaison with banks/NBFCs, and post approval services. We help maximize approval chances and secure better terms."
     }
   ];
 
@@ -183,9 +183,9 @@ const MSMELoans = () => {
     },
     {
       icon: Users,
-      title: "End-to-End Support",
+      title: "End to End Support",
       description:
-        "From application to disbursement, we provide complete support including documentation, follow-ups, and post-approval assistance."
+        "From application to disbursement, we provide complete support including documentation, follow-ups, and post approval assistance."
     }
   ];
 
@@ -250,7 +250,7 @@ const MSMELoans = () => {
                                        paragraph !text-white
                                        max-w-none sm:max-w-lg md:max-w-xl font-2 lg:max-w-none mx-auto lg:mx-0"
             >
-              Access CGTMSE, Udyam, and Mudra loans with expert guidance. Get collateral-free financing
+              Access CGTMSE, Udyam, and Mudra loans with expert guidance. Get collateral free financing
               up to ₹2 crores with competitive rates and flexible terms for your business needs.
             </p>
             <div className="pt-2 sm:pt-4">
@@ -380,8 +380,8 @@ const MSMELoans = () => {
             </h2>
             <p className="paragraph !text-white mx-auto text-left font-3">
               MSME (Micro, Small & Medium Enterprises) loans are specialized financial products designed to support
-              businesses across different growth stages. These loans include government-backed schemes like CGTMSE
-              (collateral-free loans up to ₹2 crores), Udyam registration benefits, and Mudra loans (up to ₹10 lakhs).
+              businesses across different growth stages. These loans include government backed schemes like CGTMSE
+              (collateral free loans up to ₹2 crores), Udyam registration benefits, and Mudra loans (up to ₹10 lakhs).
               They offer competitive interest rates, flexible repayment terms, and minimal documentation requirements
               to help businesses expand, purchase equipment, manage working capital, and achieve sustainable growth.
             </p>
@@ -420,17 +420,17 @@ const MSMELoans = () => {
                   </h3>
                   <div className="bg-gradient-to-r font-3 from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
                     <p className="text-2xl font-bold">Up to ₹2 Crores</p>
-                    <p className="text-xs opacity-90">Collateral-Free</p>
+                    <p className="text-xs opacity-90">Collateral Free</p>
                   </div>
                 </div>
                 <ul className="space-y-2 text-xs text-gray-700 font-3">
                   <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                    <span>No collateral or third-party guarantee required.</span>
+                    <span>No collateral or third party guarantee required.</span>
                   </li>
                   <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                    <span>75-85% loan amount guaranteed by CGTMSE.</span>
+                    <span>75 to 85% loan amount guaranteed by CGTMSE.</span>
                   </li>
                   <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
@@ -570,7 +570,7 @@ const MSMELoans = () => {
                   </li>
                   <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                    <span>Collateral-free financing up to ₹2 crores.</span>
+                    <span>Collateral free financing up to ₹2 crores.</span>
                   </li>
                   <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />

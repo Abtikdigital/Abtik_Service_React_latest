@@ -179,7 +179,7 @@ const Grants = () => {
         },
         {
             icon: Users,
-            title: "End-to-End Support",
+            title: "End to End Support",
             description:
                 "From initial consultation to grant utilization and reporting, we provide complete assistance throughout the grant lifecycle.",
         },
@@ -385,7 +385,7 @@ const Grants = () => {
                     >
                         Government grants are financial assistance programs provided by central and state
                         governments to support businesses, startups, research institutions, and individuals
-                        in achieving specific objectives. These non-repayable funds are designed to promote
+                        in achieving specific objectives. These non repayable funds are designed to promote
                         innovation, economic growth, social development, and technological advancement across
                         various sectors including agriculture, manufacturing, IT, healthcare, and renewable energy.
                     </p>
@@ -427,7 +427,7 @@ const Grants = () => {
                                     Startup & Innovation Grants
                                 </h3>
                                 <div className="bg-gradient-to-r font-3 from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
-                                    <p className="text-lg font-bold">₹10L - ₹50L</p>
+                                    <p className="text-lg font-bold">₹10L to ₹50L</p>
                                     <p className="text-xs opacity-90">Funding Range</p>
                                 </div>
                             </div>
@@ -471,7 +471,7 @@ const Grants = () => {
                                     Research & Development
                                 </h3>
                                 <div className="bg-gradient-to-r font-3 from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
-                                    <p className="text-lg font-bold">₹25L - ₹2Cr</p>
+                                    <p className="text-lg font-bold">₹25L to ₹2Cr</p>
                                     <p className="text-xs opacity-90">Funding Range</p>
                                 </div>
                             </div>
@@ -515,7 +515,7 @@ const Grants = () => {
                                     Sector Specific Grants
                                 </h3>
                                 <div className="bg-gradient-to-r font-3 from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
-                                    <p className="text-lg font-bold">₹5L - ₹5Cr</p>
+                                    <p className="text-lg font-bold">₹5L to ₹5Cr</p>
                                     <p className="text-xs opacity-90">Funding Range</p>
                                 </div>
                             </div>
@@ -630,7 +630,7 @@ const Grants = () => {
                                 </li>
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>Milestone-based fund disbursement system.</span>
+                                    <span>Milestone based fund disbursement system.</span>
                                 </li>
                             </ul>
                         </motion.div>

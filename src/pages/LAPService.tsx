@@ -46,22 +46,22 @@ const LoanAgainstProperty = () => {
         {
             question: "2. What is the maximum loan amount under LAP?",
             answer:
-                "LAP offers loan amounts ranging from ₹10 lakh to ₹15 crore, depending on the property value and lender policies. Most lenders provide up to 60-80% of the property's market value as loan amount.",
+                "LAP offers loan amounts ranging from ₹10 lakh to ₹15 crore, depending on the property value and lender policies. Most lenders provide up to 60 to 80% of the property's market value as loan amount.",
         },
         {
             question: "3. What are the eligibility criteria for LAP?",
             answer:
-                "Key eligibility criteria include age between 25-70 years, good credit score (700+), stable income, property ownership documents, and business vintage of 2-3 years for self-employed. Both salaried and self-employed individuals are eligible.",
+                "Key eligibility criteria include age between 25 to 70 years, good credit score (700+), stable income, property ownership documents, and business vintage of 2,3 years for self-employed. Both salaried and self employed individuals are eligible.",
         },
         {
             question: "4. What documents are required for LAP application?",
             answer:
-                "Required documents include identity proof, address proof, income proof, property documents, bank statements (last 6 months), business proof (for self-employed), and property valuation report. Original documents may be needed for verification.",
+                "Required documents include identity proof, address proof, income proof, property documents, bank statements (last 6 months), business proof (for self employed), and property valuation report. Original documents may be needed for verification.",
         },
         {
             question: "5. What are LAP interest rates and tenure?",
             answer:
-                "LAP interest rates typically range from 8-20% per annum depending on the lender and borrower profile. Repayment tenure can extend up to 15-25 years, with some lenders offering up to 300 months (25 years) tenure.",
+                "LAP interest rates typically range from 8 to 20% per annum depending on the lender and borrower profile. Repayment tenure can extend up to 15 to 25 years, with some lenders offering up to 300 months (25 years) tenure.",
         },
         {
             question: "6. Can LAP be used for any purpose?",
@@ -181,7 +181,7 @@ const LoanAgainstProperty = () => {
             icon: Shield,
             title: "Multipurpose Usage",
             description:
-                "Use LAP funds for any purpose - business expansion, education, medical expenses, debt consolidation, or personal needs without restrictions.",
+                "Use LAP funds for any purpose business expansion, education, medical expenses, debt consolidation, or personal needs without restrictions.",
         },
     ];
 
@@ -450,7 +450,7 @@ const LoanAgainstProperty = () => {
                                     </li>
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                         <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                        <span>Self-occupied or rental properties</span>
+                                        <span>Selfoccupied or rental properties</span>
                                     </li>
                                 </ul>
                             </motion.div>
@@ -618,7 +618,7 @@ const LoanAgainstProperty = () => {
                                 <ul className="space-y-2 text-sm text-gray-600 font-3">
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                         <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                        <span>Age between 25-70 years at loan maturity.</span>
+                                        <span>Age between 25 to 70 years at loan maturity.</span>
                                     </li>
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                         <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />

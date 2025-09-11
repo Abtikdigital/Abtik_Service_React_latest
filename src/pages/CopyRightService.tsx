@@ -52,7 +52,7 @@ const CopyrightFiling = () => {
         {
             question: "3. How long does copyright registration take?",
             answer:
-                "The copyright registration process typically takes 4-10 months in India[17]. This includes application submission (1 day), examination (2-4 weeks), objection resolution if needed (1-3 months), and certificate issuance (4-10 months total).",
+                "The copyright registration process typically takes 4to10 months in India[17]. This includes application submission (1 day), examination (2to4 weeks), objection resolution if needed (1to3 months), and certificate issuance (4to10 months total).",
         },
         {
             question: "4. What can be copyrighted?",
@@ -620,19 +620,19 @@ const CopyrightFiling = () => {
                                 </li>
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>Examination period: 2-4 weeks[17].</span>
+                                    <span>Examination period: 2to4 weeks[17].</span>
                                 </li>
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>Objection resolution: 1-3 months if needed[17].</span>
+                                    <span>Objection resolution: 1to3 months if needed[17].</span>
                                 </li>
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>Certificate issuance: 4-10 months total[17].</span>
+                                    <span>Certificate issuance: 4to10 months total[17].</span>
                                 </li>
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>30-day objection period included in timeline[17].</span>
+                                    <span>30 day objection period included in timeline[17].</span>
                                 </li>
                             </ul>
                         </motion.div>

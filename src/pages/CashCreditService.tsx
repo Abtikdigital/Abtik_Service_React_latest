@@ -51,12 +51,12 @@ const CashCredit = () => {
         {
             question: "3. Who is eligible for Cash Credit facility?",
             answer:
-                "Eligible borrowers include proprietorships, partnerships, private limited companies, public limited companies, and other business entities with minimum 2-3 years of operations, good credit history, positive cash flows, and adequate security/collateral as required by the lender.",
+                "Eligible borrowers include proprietorships, partnerships, private limited companies, public limited companies, and other business entities with minimum 2to3 years of operations, good credit history, positive cash flows, and adequate security/collateral as required by the lender.",
         },
         {
             question: "4. What documents are required for Cash Credit application?",
             answer:
-                "Required documents include business registration certificate, financial statements for last 2-3 years, bank statements, income tax returns, GST returns, project report, collateral documents, KYC documents of promoters, and auditor's certificate for working capital assessment.",
+                "Required documents include business registration certificate, financial statements for last 2to3 years, bank statements, income tax returns, GST returns, project report, collateral documents, KYC documents of promoters, and auditor's certificate for working capital assessment.",
         },
         {
             question: "5. How is interest calculated on Cash Credit?",
@@ -175,7 +175,7 @@ const CashCredit = () => {
             icon: TrendingUp,
             title: "Pay Only for Usage",
             description:
-                "Enjoy cost-effective financing by paying interest only on the amount utilized, not on the entire sanctioned limit, optimizing your interest costs.",
+                "Enjoy cost effective financing by paying interest only on the amount utilized, not on the entire sanctioned limit, optimizing your interest costs.",
         },
         {
             icon: Shield,
@@ -386,7 +386,7 @@ const CashCredit = () => {
                         flexible access to funds up to a sanctioned limit. Unlike term loans, businesses
                         can withdraw, repay, and re-withdraw funds multiple times within the approved limit,
                         paying interest only on the amount utilized. This makes it an ideal solution for
-                        managing seasonal cash flow variations, inventory purchases, and day-to-day
+                        managing seasonal cash flow variations, inventory purchases, and day to day
                         operational expenses while maintaining optimal cost efficiency.
                     </p>
                 </div>
@@ -428,14 +428,14 @@ const CashCredit = () => {
                                     Secured Cash Credit
                                 </h3>
                                 <div className="bg-gradient-to-r font-3 from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
-                                    <p className="text-2xl font-bold">₹5L - ₹50Cr</p>
+                                    <p className="text-2xl font-bold">₹5Lto₹50Cr</p>
                                     <p className="text-xs opacity-90">With collateral security</p>
                                 </div>
                             </div>
                             <ul className="space-y-2 text-xs font-3 text-gray-700">
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>Lower interest rates (9-14% per annum)</span>
+                                    <span>Lower interest rates (9to14% per annum)</span>
                                 </li>
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
@@ -472,14 +472,14 @@ const CashCredit = () => {
                                     Unsecured Cash Credit
                                 </h3>
                                 <div className="bg-gradient-to-r font-3 from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
-                                    <p className="text-2xl font-bold">₹1L - ₹2Cr</p>
+                                    <p className="text-2xl font-bold">₹1Lto₹2Cr</p>
                                     <p className="text-xs opacity-90">No collateral required</p>
                                 </div>
                             </div>
                             <ul className="space-y-2 text-xs font-3 text-gray-700">
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>Quick approval (7-15 days)</span>
+                                    <span>Quick approval (7to15 days)</span>
                                 </li>
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
@@ -571,7 +571,7 @@ const CashCredit = () => {
                             <ul className="space-y-2 text-sm font-3 text-gray-600">
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>Minimum 2-3 years business operations.</span>
+                                    <span>Minimum 2to3 years business operations.</span>
                                 </li>
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />

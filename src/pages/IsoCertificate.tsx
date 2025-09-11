@@ -38,7 +38,7 @@ const ISOCertificate = () => {
     {
       question: "2. Who can apply for ISO Certification?",
       answer:
-        "Any organization—be it a business, government entity, or non-profit—large or small, in manufacturing, services, or trade, can be certified for relevant ISO standards such as 9001 (Quality), 14001 (Environment), 45001 (OHS), 27001 (Information Security), and others.",
+        "Any organization be it a business, government entity, or non profit large or small, in manufacturing, services, or trade, can be certified for relevant ISO standards such as 9001 (Quality), 14001 (Environment), 45001 (OHS), 27001 (Information Security), and others.",
     },
     {
       question: "3. What are the benefits of ISO Certification?",
@@ -53,7 +53,7 @@ const ISOCertificate = () => {
     {
       question: "5. How long does the ISO Certification process take?",
       answer:
-        "Depending on your organization’s size and readiness, certification can take from 2–8 weeks. The process includes gap analysis, documentation, implementation, audit, and certification.",
+        "Depending on your organization’s size and readiness, certification can take from 2,8 weeks. The process includes gap analysis, documentation, implementation, audit, and certification.",
     },
     {
       question:
@@ -154,7 +154,7 @@ const ISOCertificate = () => {
       icon: Award,
       title: "Audit & ISO Certification",
       description:
-        "We coordinate with accredited certification bodies for final audits and deliver your ISO certificate—plus support for ongoing compliance and annual audits.",
+        "We coordinate with accredited certification bodies for final audits and deliver your ISO certificate plus support for ongoing compliance and annual audits.",
     },
   ];
 
@@ -370,7 +370,7 @@ const ISOCertificate = () => {
             <p className="paragraph !text-white mx-auto text-left font-3">
               ISO certification is a globally recognized proof that your
               company’s operations or management systems meet international best
-              practices for quality, safety, security, or environment—enabling
+              practices for quality, safety, security, or environment enabling
               you to build customer trust and unlock new markets.
             </p>
           </div>
@@ -397,7 +397,7 @@ const ISOCertificate = () => {
             >
               ISO certification is suitable for any business seeking global
               credibility, government/PSU tenders, export, or optimized internal
-              processes—irrespective of company size, location, or industry.
+              processes irrespective of company size, location, or industry.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <motion.div
@@ -461,7 +461,7 @@ const ISOCertificate = () => {
                   <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
                     <span>
-                      Can cover single site or entire multi-site operations
+                      Can cover single site or entire multi site operations
                     </span>
                   </li>
                 </ul>

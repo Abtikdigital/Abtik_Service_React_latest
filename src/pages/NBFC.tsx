@@ -39,32 +39,32 @@ const NBFC = () => {
         {
             question: "1. What is NBFC?",
             answer:
-                "A Non-Banking Financial Company (NBFC) is a company registered under the Companies Act, engaged in loans and advances, acquisition of shares/stocks/bonds/debentures/securities, leasing, hire-purchase, etc., as principal business, but not a bank.[1]",
+                "A Non Banking Financial Company (NBFC) is a company registered under the Companies Act, engaged in loans and advances, acquisition of shares/stocks/bonds/debentures/securities, leasing, hire-purchase, etc., as principal business, but not a bank.",
         },
         {
             question: "2. What is the investment range under NBFC?",
             answer:
-                "NBFCs provide loans ranging from small personal loans to large business financing, often with flexible amounts based on eligibility, collateral, and borrower needs, without fixed upper limits like banks.[10]",
+                "NBFCs provide loans ranging from small personal loans to large business financing, often with flexible amounts based on eligibility, collateral, and borrower needs, without fixed upper limits like banks.",
         },
         {
             question: "3. Who is eligible for NBFC funding?",
             answer:
-                "Individuals aged 21+ with steady income, and businesses with 1-2 years operational history, valid registration, and sufficient turnover are eligible. NBFCs have flexible criteria compared to banks.[13]",
+                "Individuals aged 21+ with steady income, and businesses with 1-2 years operational history, valid registration, and sufficient turnover are eligible. NBFCs have flexible criteria compared to banks.",
         },
         {
             question: "4. What documents are required for NBFC application?",
             answer:
-                "Required documents include identity proof, address proof, income statements, business registration (for companies), financial projections, and property documents for secured loans.[8]",
+                "Required documents include identity proof, address proof, income statements, business registration (for companies), financial projections, and property documents for secured loans.",
         },
         {
             question: "5. How many entities do NBFCs support?",
             answer:
-                "NBFCs support millions of individuals and businesses annually, focusing on underserved segments, with thousands of registered NBFCs in India providing diverse financial services.[5]",
+                "NBFCs support millions of individuals and businesses annually, focusing on underserved segments, with thousands of registered NBFCs in India providing diverse financial services.",
         },
         {
             question: "6. What is the structure of NBFC?",
             answer:
-                "NBFCs are structured into categories like Investment and Credit Companies (ICC), Infrastructure Finance Companies, Micro Finance Institutions, etc., regulated by RBI with minimum net owned funds of ₹2 crore.[6][8]",
+                "NBFCs are structured into categories like Investment and Credit Companies (ICC), Infrastructure Finance Companies, Micro Finance Institutions, etc., regulated by RBI with minimum net owned funds of ₹2 crore.",
         },
     ];
 
@@ -167,7 +167,7 @@ const NBFC = () => {
             icon: IndianRupee ,
             title: "Flexible Funding Options",
             description:
-                "Access customized loans with higher loan-to-value ratios and competitive rates for personal and business needs.",
+                "Access customized loans with higher loan to value ratios and competitive rates for personal and business needs.",
         },
         {
             icon: TrendingUp,
@@ -379,7 +379,7 @@ const NBFC = () => {
                         <p className="paragraph !text-white mx-auto text-left font-3"
                            
                         >
-                            A Non-Banking Financial Company (NBFC) is a financial institution that provides banking-like services such as loans, credit facilities, and investments without a banking license. Regulated by RBI, NBFCs focus on underserved markets with flexible terms and quick processing.
+                            A Non Banking Financial Company (NBFC) is a financial institution that provides banking like services such as loans, credit facilities, and investments without a banking license. Regulated by RBI, NBFCs focus on underserved markets with flexible terms and quick processing.
                         </p>
                     </div>
                 </motion.section>
@@ -435,7 +435,7 @@ const NBFC = () => {
                                     </li>
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                         <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                        <span>Hire-purchase</span>
+                                        <span>Hire purchase</span>
                                     </li>
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                         <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
@@ -464,7 +464,7 @@ const NBFC = () => {
                                         Micro Finance Institution
                                     </h3>
                                     <div className="bg-gradient-to-r font-3 from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
-                                        <p className="text-2xl font-bold">Small-Scale Funding</p>
+                                        <p className="text-2xl font-bold">Small Scale Funding</p>
                                         <p className="text-xs opacity-90">Underserved segments</p>
                                     </div>
                                 </div>
@@ -483,7 +483,7 @@ const NBFC = () => {
                                     </li>
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                         <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                        <span>Low-income support</span>
+                                        <span>Low income support</span>
                                     </li>
                                 </ul>
                             </motion.div>
@@ -534,7 +534,7 @@ const NBFC = () => {
                                     </li>
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                         <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                        <span>Higher loan-to-value ratios.</span>
+                                        <span>Higher loan to value ratios.</span>
                                     </li>
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                         <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />

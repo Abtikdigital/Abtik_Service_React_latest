@@ -40,7 +40,7 @@ const FSSAILicense = () => {
         {
             question: "1. What is an FSSAI License and why do I need it?",
             answer:
-                "FSSAI License is mandatory for all food businesses in India. It ensures food safety standards and is required by law under the Food Safety and Standards Act, 2006. Without it, you cannot legally operate any food-related business.",
+                "FSSAI License is mandatory for all food businesses in India. It ensures food safety standards and is required by law under the Food Safety and Standards Act, 2006. Without it, you cannot legally operate any food related business.",
         },
         {
             question: "2. What are the different types of FSSAI licenses?",
@@ -55,12 +55,12 @@ const FSSAILicense = () => {
         {
             question: "4. How long does it take to get an FSSAI License?",
             answer:
-                "Basic Registration: 7-10 days, State License: 15-30 days, Central License: 30-60 days. Processing time may vary based on completeness of documents and verification requirements.",
+                "Basic Registration: 7,10 days, State License: 15,30 days, Central License: 30,60 days. Processing time may vary based on completeness of documents and verification requirements.",
         },
         {
             question: "5. What is the validity and renewal process?",
             answer:
-                "FSSAI licenses are valid for 1-5 years based on your choice. Renewal applications should be submitted 30 days before expiry. Late renewals attract penalties and may require fresh applications in extreme cases.",
+                "FSSAI licenses are valid for 1,5 years based on your choice. Renewal applications should be submitted 30 days before expiry. Late renewals attract penalties and may require fresh applications in extreme cases.",
         },
         {
             question:
@@ -207,7 +207,7 @@ const FSSAILicense = () => {
             <HeadProvider>
                 <Title>
                     {seoData?.fssaiLicenseService?.title ||
-                        "FSSAI License Registration - Get Food License Online | Abtik"}
+                        "FSSAI License Registration  Get Food License Online | Abtik"}
                 </Title>
                 <Meta
                     name="description"
@@ -447,7 +447,7 @@ const FSSAILicense = () => {
                                     </li>
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                         <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                        <span>Home-based food operators</span>
+                                        <span>Home based food operators</span>
                                     </li>
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                         <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
@@ -477,7 +477,7 @@ const FSSAILicense = () => {
                                         State License
                                     </h3>
                                     <div className="bg-gradient-to-r font-3 from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
-                                        <p className="text-lg font-bold">₹12L - ₹20 Cr</p>
+                                        <p className="text-lg font-bold">₹12L to ₹20 Cr</p>
                                         <p className="text-xs opacity-90">Annual Turnover</p>
                                     </div>
                                 </div>
@@ -496,7 +496,7 @@ const FSSAILicense = () => {
                                     </li>
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                         <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                        <span>Fee: ₹2,000-7,500</span>
+                                        <span>Fee: ₹2,000 to 7,500</span>
                                     </li>
                                 </ul>
                             </motion.div>
@@ -533,11 +533,11 @@ const FSSAILicense = () => {
                                     </li>
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                         <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                        <span>Multi-state operations</span>
+                                        <span>Multi state operations</span>
                                     </li>
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                         <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                        <span>Fee: ₹7,500-10,000</span>
+                                        <span>Fee: ₹7,500 to 10,000</span>
                                     </li>
                                 </ul>
                             </motion.div>

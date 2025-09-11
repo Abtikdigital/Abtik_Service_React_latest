@@ -41,7 +41,7 @@ const CGTMSE = () => {
         {
             question: "1. What is CGTMSE scheme?",
             answer:
-                "CGTMSE (Credit Guarantee Fund Trust for Micro and Small Enterprises) is a scheme launched by Government of India to provide collateral-free credit guarantee to micro and small enterprises. It guarantees loans up to ₹2 crore without requiring collateral security from borrowers.",
+                "CGTMSE (Credit Guarantee Fund Trust for Micro and Small Enterprises) is a scheme launched by Government of India to provide collateral free credit guarantee to micro and small enterprises. It guarantees loans up to ₹2 crore without requiring collateral security from borrowers.",
         },
         {
             question: "2. What is the maximum loan amount covered under CGTMSE?",
@@ -169,7 +169,7 @@ const CGTMSE = () => {
             icon: IndianRupee ,
             title: "Up to ₹2 Crore Guarantee",
             description:
-                "Access collateral-free loans up to ₹2 crore with CGTMSE guarantee coverage, eliminating the need for third-party guarantees or collateral security.",
+                "Access collateral free loans up to ₹2 crore with CGTMSE guarantee coverage, eliminating the need for third party guarantees or collateral security.",
         },
         {
             icon: TrendingUp,
@@ -181,7 +181,7 @@ const CGTMSE = () => {
             icon: Shield,
             title: "No Collateral Required",
             description:
-                "Start or expand your business without pledging any collateral or third-party guarantees, making credit accessible for small enterprises.",
+                "Start or expand your business without pledging any collateral or third party guarantees, making credit accessible for small enterprises.",
         },
     ];
 
@@ -239,7 +239,7 @@ const CGTMSE = () => {
                         <span className="text-[#3CA2E2] font-extrabold block sm:inline">
                             CGTMSE Guarantee
                         </span>{" "}
-                        for Collateral-Free Loans
+                        for Collateral Free Loans
                     </h1>
                     <p
                         className="text-sm sm:text-base md:text-lg lg:text-xl
@@ -250,8 +250,8 @@ const CGTMSE = () => {
 
 
                     >
-                        Get collateral-free business loans up to ₹2 crore with CGTMSE guarantee coverage.
-                        Eliminate the need for third-party guarantees and access credit easily
+                        Get collateral free business loans up to ₹2 crore with CGTMSE guarantee coverage.
+                        Eliminate the need for third party guarantees and access credit easily
                         for your micro and small enterprise growth.
                     </p>
                     <div className="pt-2 sm:pt-4">
@@ -385,9 +385,9 @@ const CGTMSE = () => {
 
                     >
                         Credit Guarantee Fund Trust for Micro and Small Enterprises (CGTMSE) is a unique scheme
-                        launched by the Government of India to provide collateral-free credit guarantee to micro
+                        launched by the Government of India to provide collateral free credit guarantee to micro
                         and small enterprises. The scheme guarantees loans up to ₹2 crore without requiring any
-                        collateral security or third-party guarantees, making credit accessible to entrepreneurs
+                        collateral security or third party guarantees, making credit accessible to entrepreneurs
                         who lack traditional security arrangements but have viable business propositions.
                     </p>
                 </div>
@@ -536,15 +536,15 @@ const CGTMSE = () => {
                             <ul className="space-y-2 text-sm text-gray-600 font-3">
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>Collateral-free loans up to ₹2 crore.</span>
+                                    <span>Collateral free loans up to ₹2 crore.</span>
                                 </li>
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>High guarantee coverage (75-85%).</span>
+                                    <span>High guarantee coverage (75to85%).</span>
                                 </li>
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>No third-party guarantees required.</span>
+                                    <span>No third party guarantees required.</span>
                                 </li>
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />

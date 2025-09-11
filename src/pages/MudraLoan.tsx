@@ -41,17 +41,17 @@ const MudraLoan = () => {
         {
             question: "1. What is PMMY Mudra Loan?",
             answer:
-                "Pradhan Mantri Mudra Yojana (PMMY) is a flagship scheme providing collateral-free loans up to ₹10 lakh to non-corporate, non-farm micro enterprises engaged in manufacturing, trading, or service sectors including activities allied to agriculture.",
+                "Pradhan Mantri Mudra Yojana (PMMY) is a flagship scheme providing collateral free loans up to ₹10 lakh to non corporate, non farm micro enterprises engaged in manufacturing, trading, or service sectors including activities allied to agriculture.",
         },
         {
             question: "2. What are the three categories of Mudra loans?",
             answer:
-                "Mudra loans are categorized into three types: Shishu (up to ₹50,000), Kishore (₹50,001 to ₹5 lakh), and Tarun (₹5 lakh to ₹10 lakh), signifying different stages of business growth and funding requirements.",
+                "Mudra loans are categorized into three types: Shishu (up to ₹50,000), Kishore (₹50,000 to ₹5 lakh), and Tarun (₹5 lakh to ₹10 lakh), signifying different stages of business growth and funding requirements.",
         },
         {
             question: "3. Who is eligible for Mudra loans?",
             answer:
-                "Individuals, proprietary concerns, partnership firms, private limited companies, public companies, and any other legal forms engaged in income-generating activities in non-farm sectors are eligible. The applicant should not be a defaulter and should have a satisfactory credit track record.",
+                "Individuals, proprietary concerns, partnership firms, private limited companies, public companies, and any other legal forms engaged in income generating activities in non farm sectors are eligible. The applicant should not be a defaulter and should have a satisfactory credit track record.",
         },
         {
             question: "4. What documents are required for Mudra loan application?",
@@ -169,7 +169,7 @@ const MudraLoan = () => {
             icon: IndianRupee ,
             title: "Up to ₹10 Lakh Loan",
             description:
-                "Access collateral-free loans ranging from ₹50,000 to ₹10 lakh across Shishu, Kishore, and Tarun categories for your micro enterprise needs.",
+                "Access collateral free loans ranging from ₹50,000 to ₹10 lakh across Shishu, Kishore, and Tarun categories for your micro enterprise needs.",
         },
         {
             icon: TrendingUp,
@@ -252,7 +252,7 @@ const MudraLoan = () => {
                             
                         >
                             Fund your micro enterprise dreams with PMMY Mudra loans.
-                            Get collateral-free loans up to ₹10 lakh for manufacturing,
+                            Get collateral free loans up to ₹10 lakh for manufacturing,
                             trading, and service businesses under the flagship government scheme.
                         </p>
                         <div className="pt-2 sm:pt-4">
@@ -386,7 +386,7 @@ const MudraLoan = () => {
                      
                         >
                             Pradhan Mantri Mudra Yojana (PMMY) is a flagship scheme launched by the Government of India
-                            to provide collateral-free loans up to ₹10 lakh to non-corporate, non-farm micro enterprises.
+                            to provide collateral free loans up to ₹10 lakh to noncorporate, non farm micro enterprises.
                             The scheme supports millions of proprietorship and partnership firms in manufacturing, service,
                             and trading sectors, helping entrepreneurs access formal banking credit that was previously
                             unavailable through traditional channels.
@@ -474,7 +474,7 @@ const MudraLoan = () => {
                                         Kishore
                                     </h3>
                                     <div className="bg-gradient-to-r font-3 from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
-                                        <p className="text-2xl font-bold">₹50,001 - ₹5L</p>
+                                        <p className="text-2xl font-bold">₹50,000 to ₹5L</p>
                                         <p className="text-xs opacity-90">Loan amount</p>
                                     </div>
                                 </div>
@@ -518,7 +518,7 @@ const MudraLoan = () => {
                                         Tarun
                                     </h3>
                                     <div className="bg-gradient-to-r font-3 from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
-                                        <p className="text-2xl font-bold">₹5L - ₹10L</p>
+                                        <p className="text-2xl font-bold">₹5L to ₹10L</p>
                                         <p className="text-xs opacity-90">Loan amount</p>
                                     </div>
                                 </div>
@@ -562,8 +562,8 @@ const MudraLoan = () => {
                         <p className="text-sm md:text-base font-3 text-gray-600 text-center"
                        
                         >
-                            PMMY Mudra loans provide comprehensive financial support to micro enterprises with collateral-free
-                            credit, enabling millions of entrepreneurs to access formal banking and grow their businesses.[8]
+                            PMMY Mudra loans provide comprehensive financial support to micro enterprises with collateral free
+                            credit, enabling millions of entrepreneurs to access formal banking and grow their businesses.
                         </p>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <motion.div
@@ -581,7 +581,7 @@ const MudraLoan = () => {
                                 <ul className="space-y-2 font-3 text-sm text-gray-600">
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                         <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                        <span>Collateral-free loans up to ₹10 lakh.</span>
+                                        <span>Collateral free loans up to ₹10 lakh.</span>
                                     </li>
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                         <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
@@ -620,7 +620,7 @@ const MudraLoan = () => {
                                     </li>
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                         <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                        <span>Non-corporate, non-farm enterprises.</span>
+                                        <span>Non corporate, non farm enterprises.</span>
                                     </li>
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                         <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />

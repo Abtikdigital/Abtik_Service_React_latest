@@ -43,7 +43,7 @@ const PartnershipRegistration = () => {
     {
       question: "3. What documents are required?",
       answer:
-        "PAN and Aadhar of all partners, passport-sized photos, address proof, business address proof, notarized Partnership Deed, and, if registering, an application to Registrar of Firms.",
+        "PAN and Aadhar of all partners, passport sized photos, address proof, business address proof, notarized Partnership Deed, and, if registering, an application to Registrar of Firms.",
     },
     {
       question: "4. What is the minimum number of partners and capital?",
@@ -53,7 +53,7 @@ const PartnershipRegistration = () => {
     {
       question: "5. How long does the process take?",
       answer:
-        "The partnership deed can be drafted in 2–3 days; firm registration takes 7–15 working days depending on the state.",
+        "The partnership deed can be drafted in 2,3 days; firm registration takes 7,15 working days depending on the state.",
     },
     {
       question: "6. How does Abtik help with Partnership Registration?",
@@ -163,13 +163,13 @@ const PartnershipRegistration = () => {
       icon: TrendingUp,
       title: "Simple & Fast Setup",
       description:
-        "No minimum capital, minimal compliance, suitable for professionals and SMEs wanting agility and flexibility.",
+        "No minimum capital, minimal compliance, suitable for professionals and SMEs wanting ability and flexibility.",
     },
     {
       icon: IndianRupee ,
-      title: "Tax Pass-Through",
+      title: "Tax Pass Through",
       description:
-        "Firm’s income is taxed once in partners' hands—no double taxation like companies.",
+        "Firm’s income is taxed once in partners' hands, no double taxation like companies.",
     },
     {
       icon: Shield,
@@ -241,7 +241,7 @@ const PartnershipRegistration = () => {
                          max-w-none sm:max-w-lg font-3 md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
 
             >
-              Set up your professional or SME firm easily—custom deed, bankable
+              Set up your professional or SME firm easily custom deed, bankable
               registration, legal compliance from day one with Abtik!
             </p>
             <div className="pt-2 sm:pt-4">
@@ -403,7 +403,7 @@ const PartnershipRegistration = () => {
             >
               Any two or more individuals/entities agreeing to a common business
               objective can register. NRIs, companies, or LLPs may be partners.
-              No minimum capital—registration possible for all legitimate
+              No minimum capital registration possible for all legitimate
               trade/profession.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -468,7 +468,7 @@ const PartnershipRegistration = () => {
                   <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
                     <span>
-                      No minimum compliance/filing (for non-registered firms)
+                      No minimum compliance/filing (for non registered firms)
                     </span>
                   </li>
                   <li className="grid grid-cols-[20px_1fr] gap-2 items-start">

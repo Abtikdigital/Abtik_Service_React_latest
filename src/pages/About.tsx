@@ -170,7 +170,7 @@ const About = () => {
                           main-heading font-1"
               
             >
-              Your One-Stop{" "}
+              Your One Stop{" "}
               <span className="text-[#3CA2E2] font-extrabold block sm:inline">
                 Solution
               </span>{" "}
@@ -243,8 +243,8 @@ const About = () => {
               >{
                 index==0?
                 
-                "Our vision is to engage with every startup, growing venture, and business driving the future enabling possibilities, unlocking opportunities, and delivering meaningful transformations. We are committed to reaching farther, fostering progress, and empowering enterprises to succeed in an ever-evolving business environment."
-                :"Our mission is to raise awareness, share knowledge, and create access to opportunities that help businesses grow and adapt. We work alongside startups, emerging ventures, and established enterprises guiding them with the right insights, timely support, and meaningful connections to succeed in today’s fast-changing business world."
+                "Our vision is to engage with every startup, growing venture, and business driving the future enabling possibilities, unlocking opportunities, and delivering meaningful transformations. We are committed to reaching farther, fostering progress, and empowering enterprises to succeed in an ever evolving business environment."
+                :"Our mission is to raise awareness, share knowledge, and create access to opportunities that help businesses grow and adapt. We work alongside startups, emerging ventures, and established enterprises guiding them with the right insights, timely support, and meaningful connections to succeed in today’s fast changing business world."
               }
               </p>
               <div>
@@ -300,7 +300,7 @@ const About = () => {
                     className="paragraph  font-3"
      
                   >
-                   We are by your side at every stage with dedicated support, swift responses, and an unwavering commitment to trust. From strategy to execution, we make your journey smoother, faster, and more rewarding — ensuring every step brings you closer to your goals.
+                   We are by your side at every stage with dedicated support, swift responses, and an unwavering commitment to trust. From strategy to execution, we make your journey smoother, faster, and more rewarding ensuring every step brings you closer to your goals.
                   </p>
                   </p>
                   {/* <div>

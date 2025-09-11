@@ -50,7 +50,7 @@ const ExpandedBlog = () => {
             "Structural approach rather than one-time relief packages",
           ],
           description:
-            "For years, MSMEs have demanded more than just recognition—they’ve needed real, accessible support. The 2025 Budget delivers that with a dedicated allocation that targets growth, sustainability, and resilience.",
+            "For years, MSMEs have demanded more than just recognition they’ve needed real, accessible support. The 2025 Budget delivers that with a dedicated allocation that targets growth, sustainability, and resilience.",
         },
         {
           title: "Major Reforms Driving the Shift",
@@ -67,7 +67,7 @@ const ExpandedBlog = () => {
     {
       title: "India’s Startups Get a Boost: Budget 2025 Unlocks New Pathways",
       description:
-        "Startups are no longer fringe players—they are now central to India’s economic story. Budget 2025 backs this shift with tax reliefs, easier capital access, and major investments in innovation.",
+        "Startups are no longer fringe players they are now central to India’s economic story. Budget 2025 backs this shift with tax reliefs, easier capital access, and major investments in innovation.",
       img: Image2,
       slug: "Indias-Startups-Get-a-Boost-Budget-2025-Unlocks-New-Pathways",
       date: "July 18, 2024",
@@ -82,7 +82,7 @@ const ExpandedBlog = () => {
             "Launch of a ₹1,000 Cr Innovation Fund focused on: 1. Artificial Intelligence (AI) 2. Biotechnology 3. Sustainable Technology",
           ],
           description:
-            "For years, MSMEs have demanded more than just recognition—they’ve needed real, accessible support. The 2025 Budget delivers that with a dedicated allocation that targets growth, sustainability, and resilience.",
+            "For years, MSMEs have demanded more than just recognition they’ve needed real, accessible support. The 2025 Budget delivers that with a dedicated allocation that targets growth, sustainability, and resilience.",
         },
         {
           title: "Expanding Innovation Beyond Metro Cities",
@@ -100,7 +100,7 @@ const ExpandedBlog = () => {
     {
       title: "Budget 2025 Simplifies the Journey for New Founders",
       description:
-        "First-time entrepreneurs are front and center in Budget 2025. With a streamlined digital portal and structured mentorship, starting up in India just got easier—and faster.",
+        "First-time entrepreneurs are front and center in Budget 2025. With a streamlined digital portal and structured mentorship, starting up in India just got easier and faster.",
       img: Image3,
       slug: "Budget-2025-Simplifies-the-Journey-for-New-Founders",
       date: "July 15, 2024",
@@ -108,9 +108,9 @@ const ExpandedBlog = () => {
       category: "Legal",
       list: [],
     }, {
-      title: "A-Budget-That-Strengthens-Local-Industries-and-Women-Led-Enterprises",
+      title: "A Budget That Strengthens Local Industries and Women Led Enterprises",
       description:
-        "Beyond big cities and large companies, Budget 2025 has acknowledged the power of local, women-led, and artisan-driven enterprises. Targeted investments in tribal crafts, khadi clusters, and agri-based businesses highlight the government’s commitment to inclusive economic growth.",
+        "Beyond big cities and large companies, Budget 2025 has acknowledged the power of local, women led, and artisan driven enterprises. Targeted investments in tribal crafts, khadi clusters, and agri based businesses highlight the government’s commitment to inclusive economic growth.",
       img: Image4,
       slug: "A-Budget-That-Strengthens-Local-Industries-and-Women-Led-Enterprises",
       date: "July 15, 2024",
@@ -118,14 +118,14 @@ const ExpandedBlog = () => {
       category: "Legal",
       list: [
         {
-          title: "New initiatives for solar-powered equipment",
+          title: "New initiatives for solar powered equipment",
           lists: [],
-          description: "New initiatives for solar-powered equipment, cold storage support, and digital training for micro-entrepreneurs will directly benefit small business owners in rural and semi-urban regions. These aren’t just incentives—they are enablers."
+          description: "New initiatives for solar powered equipment, cold storage support, and digital training for micro entrepreneurs will directly benefit small business owners in rural and semi urban regions. These aren’t just incentives they are enablers."
         },
         {
           title: "By turning local industries into competitive,",
           lists: [],
-          description: "By turning local industries into competitive, high-quality suppliers and exporters, Budget 2025 is not only uplifting livelihoods but also placing India’s cultural industries on the global map."
+          description: "By turning local industries into competitive, high quality suppliers and exporters, Budget 2025 is not only uplifting livelihoods but also placing India’s cultural industries on the global map."
         },
       ],
     },

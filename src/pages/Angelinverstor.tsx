@@ -39,7 +39,7 @@ const AngelInvestor = () => {
         {
             question: "1. What is Angel Investment?",
             answer:
-                "Angel investment involves high-net-worth individuals providing capital to startups in exchange for equity or convertible debt, typically in early stages to help launch and grow innovative businesses.",
+                "Angel investment involves high net worth individuals providing capital to startups in exchange for equity or convertible debt, typically in early stages to help launch and grow innovative businesses.",
         },
         {
             question: "2. What is the investment range for Angel Investors?",
@@ -49,7 +49,7 @@ const AngelInvestor = () => {
         {
             question: "3. Who is eligible for Angel Investment?",
             answer:
-                "Early-stage startups with innovative ideas, strong teams, scalable business models, and high growth potential in sectors like technology, healthcare, fintech, and more are eligible.",
+                "Early stage startups with innovative ideas, strong teams, scalable business models, and high growth potential in sectors like technology, healthcare, fintech, and more are eligible.",
         },
         {
             question:
@@ -60,7 +60,7 @@ const AngelInvestor = () => {
         {
             question: "5. How many startups do Angel Investors support?",
             answer:
-                "Angel investors may support multiple startups annually, with networks like Indian Angel Network investing in 10-20 deals per year, providing both funding and mentorship.",
+                "Angel investors may support multiple startups annually, with networks like Indian Angel Network investing in 10 to 20 deals per year, providing both funding and mentorship.",
         },
         {
             question: "6. What is the structure of Angel Investment?",
@@ -186,7 +186,7 @@ const AngelInvestor = () => {
             icon: Shield,
             title: "Early-Stage Focus",
             description:
-                "Leverage specialized support for early-stage startups with high growth potential, including validation and market access.",
+                "Leverage specialized support for early stage startups with high growth potential, including validation and market access.",
         },
     ];
 
@@ -390,7 +390,7 @@ const AngelInvestor = () => {
                             Angel investment refers to funding provided by affluent
                             individuals to startups and small businesses, often in exchange
                             for ownership equity or convertible debt. These investors support
-                            early-stage companies with high growth potential, offering not
+                            early stage companies with high growth potential, offering not
                             just capital but also mentorship and industry connections to
                             foster innovation and business development.
                         </p>
@@ -444,11 +444,11 @@ const AngelInvestor = () => {
                                     </li>
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                         <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                        <span>High risk-reward potential</span>
+                                        <span>High risk reward potential</span>
                                     </li>
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                         <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                        <span>Long-term commitment</span>
+                                        <span>Long term commitment</span>
                                     </li>
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                         <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
@@ -517,7 +517,7 @@ const AngelInvestor = () => {
                     </h2>
                     <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
                         <p className="text-sm md:text-base font-3 text-gray-600 text-center">
-                            Angel investment provides essential early-stage funding,
+                            Angel investment provides essential early stage funding,
                             mentorship, and networks to startups, helping them validate ideas
                             and achieve rapid growth in competitive markets.
                         </p>
@@ -550,7 +550,7 @@ const AngelInvestor = () => {
                                     </li>
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                         <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                        <span>Potential for follow-on funding.</span>
+                                        <span>Potential for follow on funding.</span>
                                     </li>
                                 </ul>
                             </motion.div>
