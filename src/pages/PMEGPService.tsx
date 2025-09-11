@@ -41,17 +41,17 @@ const PMEGP = () => {
         {
             question: "1. What is PMEGP scheme?",
             answer:
-                "PMEGP (Prime Minister's Employment Generation Programme) is a credit-linked subsidy scheme that provides financial assistance for setting up micro enterprises in manufacturing, service, and trading sectors to generate employment opportunities.",
+                "PMEGP (Prime Minister's Employment Generation Programme) is a credit linked subsidy scheme that provides financial assistance for setting up micro enterprises in manufacturing, service, and trading sectors to generate employment opportunities.",
         },
         {
             question: "2. What is the maximum loan amount under PMEGP?",
             answer:
-                "Under PMEGP, you can get up to ₹25 lakh for manufacturing units and ₹10 lakh for service/trading units. The scheme provides 15-35% subsidy on the project cost depending on category and location.",
+                "Under PMEGP, you can get up to ₹25 lakh for manufacturing units and ₹10 lakh for service/trading units. The scheme provides 15to35% subsidy on the project cost depending on category and location.",
         },
         {
             question: "3. Who is eligible for PMEGP scheme?",
             answer:
-                "Individuals above 18 years, existing units under PMRY, Rural Employment Generation Programme, institutions, co-operatives, charitable trusts, and self-help groups are eligible. The beneficiary should not have availed subsidy under any other government scheme.",
+                "Individuals above 18 years, existing units under PMRY, Rural Employment Generation Programme, institutions, co operatives, charitable trusts, and self help groups are eligible. The beneficiary should not have availed subsidy under any other government scheme.",
         },
         {
             question: "4. What documents are required for PMEGP application?",
@@ -61,12 +61,12 @@ const PMEGP = () => {
         {
             question: "5. How long does PMEGP loan approval take?",
             answer:
-                "PMEGP loan approval typically takes 45-60 days from application submission, including verification, appraisal, and final approval by the lending institution.",
+                "PMEGP loan approval typically takes 45 to 60 days from application submission, including verification, appraisal, and final approval by the lending institution.",
         },
         {
             question: "6. What is the repayment period for PMEGP loans?",
             answer:
-                "PMEGP loans have a repayment period of 3-7 years with a moratorium period of 6-18 months depending on the type of activity and cash flow generation of the project.",
+                "PMEGP loans have a repayment period of 3 to 7 years with a moratorium period of 6 to 18 months depending on the type of activity and cash flow generation of the project.",
         },
     ];
 
@@ -144,7 +144,7 @@ const PMEGP = () => {
             icon: Headset,
             title: "Complete Guidance",
             description:
-                "We provide end-to-end support from application submission to loan disbursement and post-approval assistance.",
+                "We provide end to end support from application submission to loan disbursement and post approval assistance.",
         },
     ];
 
@@ -175,13 +175,13 @@ const PMEGP = () => {
             icon: TrendingUp,
             title: "Government Subsidy",
             description:
-                "Benefit from 15-35% government subsidy on project cost based on category, location, and type of enterprise.",
+                "Benefit from 15 to 35% government subsidy on project cost based on category, location, and type of enterprise.",
         },
         {
             icon: Shield,
             title: "Flexible Repayment",
             description:
-                "Enjoy flexible repayment terms with 3-7 years tenure and moratorium period of 6-18 months for cash flow management.",
+                "Enjoy flexible repayment terms with 3 to 7 years tenure and moratorium period of 6 to 18 months for cash flow management.",
         },
     ];
 

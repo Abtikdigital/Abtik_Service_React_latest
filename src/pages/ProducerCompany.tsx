@@ -33,12 +33,12 @@ const ProducerCompanyRegistration = () => {
     {
       question: "1. What is a Producer Company?",
       answer:
-        "A Producer Company is a special type of company under Indian law, meant for farmers, producers, and agri-entrepreneurs. It allows a collective of producers to work together for mutual benefit while enjoying full company status: limited liability, perpetual existence, tax benefits, and government scheme access.",
+        "A Producer Company is a special type of company under Indian law, meant for farmers, producers, and agri entrepreneurs. It allows a collective of producers to work together for mutual benefit while enjoying full company status: limited liability, perpetual existence, tax benefits, and government scheme access.",
     },
     {
       question: "2. Who can form a Producer Company?",
       answer:
-        "Any ten or more individual producers (farmers, artisans, or agri-entrepreneurs), or two or more producer institutions (like societies/cooperatives) can jointly set up a Producer Company.",
+        "Any ten or more individual producers (farmers, artisans, or agri entrepreneurs), or two or more producer institutions (like societies/cooperatives) can jointly set up a Producer Company.",
     },
     {
       question: "3. What are the key benefits?",
@@ -53,7 +53,7 @@ const ProducerCompanyRegistration = () => {
     {
       question: "5. How long does it take to register a Producer Company?",
       answer:
-        "With all documents ready, registration usually completes in 10–20 working days, including digital signatures, company name approval, and submission/approval of all MCA forms.",
+        "With all documents ready, registration usually completes in 10 to 20 working days, including digital signatures, company name approval, and submission/approval of all MCA forms.",
     },
     {
       question: "6. How does Abtik help Producer Companies?",
@@ -169,13 +169,13 @@ const ProducerCompanyRegistration = () => {
       icon: IndianRupee ,
       title: "Loans, Subsidies, Grants",
       description:
-        "Easy access to NABARD, SFAC, and government schemes, plus preference in agri-business loans.",
+        "Easy access to NABARD, SFAC, and government schemes, plus preference in agri business loans.",
     },
     {
       icon: Shield,
       title: "Limited Liability",
       description:
-        "Members are protected—liability is restricted to shares; personal risk is minimized.",
+        "Members are protected liability is restricted to shares; personal risk is minimized.",
     },
     {
       icon: Users,
@@ -380,7 +380,7 @@ const ProducerCompanyRegistration = () => {
 
             >
               Producer Companies empower farmer, artisan, and producer groups
-              with modern company benefits—single structure, collective profit,
+              with modern company benefits single structure, collective profit,
               government schemes, and zero personal risk. Most FPOs/FPCs in
               India now use Producer Company registration for maximum legal
               recognition and market access.
@@ -468,7 +468,7 @@ const ProducerCompanyRegistration = () => {
                   </li>
                   <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                    <span>Benefit-sharing model: profits go to members</span>
+                    <span>Benefit sharing model: profits go to members</span>
                   </li>
                   <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
@@ -476,7 +476,7 @@ const ProducerCompanyRegistration = () => {
                   </li>
                   <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                    <span>Corporate-style oversight with farmer control</span>
+                    <span>Corporate style oversight with farmer control</span>
                   </li>
                 </ul>
               </motion.div>

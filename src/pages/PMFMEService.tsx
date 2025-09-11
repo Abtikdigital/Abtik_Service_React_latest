@@ -46,12 +46,12 @@ const PMFME = () => {
         {
             question: "2. What is the financial assistance under PMFME?",
             answer:
-                "Under PMFME, individual beneficiaries can get up to ₹10 lakh credit-linked subsidy for setting up food processing units. Self-Help Groups (SHGs) and cooperatives can get up to ₹10 lakh per member with a maximum of ₹1 crore per SHG.",
+                "Under PMFME, individual beneficiaries can get up to ₹10 lakh credit linked subsidy for setting up food processing units. Self Help Groups (SHGs) and cooperatives can get up to ₹10 lakh per member with a maximum of ₹1 crore per SHG.",
         },
         {
             question: "3. Who is eligible for PMFME scheme?",
             answer:
-                "Individual food processors, SHGs, Farmer Producer Organizations (FPOs), cooperatives, and existing micro food processing enterprises are eligible. The applicant should be involved in food processing activities and should not have availed credit-linked subsidy under other schemes.",
+                "Individual food processors, SHGs, Farmer Producer Organizations (FPOs), cooperatives, and existing micro food processing enterprises are eligible. The applicant should be involved in food processing activities and should not have availed credit linked subsidy under other schemes.",
         },
         {
             question: "4. What documents are required for PMFME application?",
@@ -66,7 +66,7 @@ const PMFME = () => {
         {
             question: "6. What types of food processing activities are covered?",
             answer:
-                "PMFME covers various food processing activities including fruits & vegetables processing, spice processing, dairy products, meat & fish processing, grain milling, oil processing, ready-to-eat foods, snacks, and traditional food products.",
+                "PMFME covers various food processing activities including fruits & vegetables processing, spice processing, dairy products, grain milling, oil processing, ready to eat foods, snacks, and traditional food products.",
         },
     ];
 
@@ -142,9 +142,9 @@ const PMFME = () => {
         },
         {
             icon: Headset,
-            title: "End-to-End Support",
+            title: "End to End Support",
             description:
-                "We provide complete guidance from application submission to fund disbursement and post-approval business development support.",
+                "We provide complete guidance from application submission to fund disbursement and post approval business development support.",
         },
     ];
 
@@ -169,7 +169,7 @@ const PMFME = () => {
             icon: IndianRupee ,
             title: "Up to ₹10 Lakh Funding",
             description:
-                "Access credit-linked subsidy up to ₹10 lakh for individual beneficiaries and comprehensive support for food processing ventures.",
+                "Access credit linked subsidy up to ₹10 lakh for individual beneficiaries and comprehensive support for food processing ventures.",
         },
         {
             icon: TrendingUp,
@@ -538,7 +538,7 @@ const PMFME = () => {
                                 <ul className="space-y-2 text-sm text-gray-600 font-3">
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                         <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                        <span>35% credit-linked subsidy on project cost.</span>
+                                        <span>35% credit linked subsidy on project cost.</span>
                                     </li>
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                         <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
@@ -577,7 +577,7 @@ const PMFME = () => {
                                     </li>
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                         <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                        <span>Self-Help Groups (SHGs) and cooperatives.</span>
+                                        <span>Self Help Groups (SHGs) and cooperatives.</span>
                                     </li>
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                         <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
@@ -589,7 +589,7 @@ const PMFME = () => {
                                     </li>
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                         <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                        <span>Should not have availed credit-linked subsidy before.</span>
+                                        <span>Should not have availed credit linked subsidy before.</span>
                                     </li>
                                 </ul>
                             </motion.div>

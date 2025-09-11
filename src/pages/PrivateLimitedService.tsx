@@ -48,18 +48,18 @@ const PvtLtdRegistration = () => {
         {
             question: "4. How long does it take to register a Pvt Ltd company?",
             answer:
-                "With all documents ready, registration can be completed in 5–14 working days, including company name approval and issuance of the Certificate of Incorporation and PAN/TAN.",
+                "With all documents ready, registration can be completed in 5,14 working days, including company name approval and issuance of the Certificate of Incorporation and PAN/TAN.",
         },
         {
             question:
                 "5. What is the minimum capital and number of directors needed?",
             answer:
-                "Minimum 2 shareholders, 2 directors (can be same people), and ₹1 paid-up capital (no actual minimum capital barrier).",
+                "Minimum 2 shareholders, 2 directors (can be same people), and ₹1 paid up capital (no actual minimum capital barrier).",
         },
         {
             question: "6. How does Abtik help in Pvt Ltd registration?",
             answer:
-                "Abtik provides end-to-end support—name search, expert advice, documentation, digital signatures (DSC), drafting, online filing, and follow-up until full company approval and account opening.",
+                "Abtik provides end to end support name search, expert advice, documentation, digital signatures (DSC), drafting, online filing, and follow up until full company approval and account opening.",
         },
     ];
 
@@ -164,7 +164,7 @@ const PvtLtdRegistration = () => {
             icon: TrendingUp,
             title: "Limited Liability",
             description:
-                "Protect your personal assets—liability is only to the extent of your shareholding.",
+                "Protect your personal assets liability is only to the extent of your shareholding.",
         },
         {
             icon: IndianRupee ,
@@ -182,7 +182,7 @@ const PvtLtdRegistration = () => {
             icon: Users,
             title: "Best for Startups & Growth",
             description:
-                "Seamless shares transfer, addition of directors, and partner expansion—highly scalable.",
+                "Seamless shares transfer, addition of directors, and partner expansion highly scalable.",
         },
         {
             icon: Award,
@@ -380,7 +380,7 @@ const PvtLtdRegistration = () => {
 
                         >
                             A Private Limited Company is a legally registered business
-                            structure best suited for startups and growth-focused businesses
+                            structure best suited for startups and growth focused businesses
                             in India. It provides credibility, shields personal assets from
                             risk, and is preferred by investors, government schemes, and
                             global partners.
@@ -410,7 +410,7 @@ const PvtLtdRegistration = () => {
                             Any Indian or foreign national (residing in India or overseas),
                             with minimum 2 directors/shareholders, can register. NRIs and
                             corporate shareholders are allowed. No minimum capital is
-                            required—₹1 is enough.
+                            required ₹1 is enough.
                         </p>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <motion.div
@@ -438,11 +438,11 @@ const PvtLtdRegistration = () => {
                                     </li>
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                         <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                        <span>No minimum paid-up capital required</span>
+                                        <span>No minimum paid up capital required</span>
                                     </li>
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                         <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                        <span>Unique, non-offensive company name</span>
+                                        <span>Unique, non offensive company name</span>
                                     </li>
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                         <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
@@ -475,7 +475,7 @@ const PvtLtdRegistration = () => {
                                     </li>
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                         <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                        <span>Photo and email/phone for e-verification</span>
+                                        <span>Photo and email/phone for e verification</span>
                                     </li>
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                         <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
