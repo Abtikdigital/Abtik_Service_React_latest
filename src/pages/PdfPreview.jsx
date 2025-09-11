@@ -1,15 +1,11 @@
-import { useLocation, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 const PdfPreview = () => {
-    const {fileName}=useParams()
-
+  const { fileName } = useParams();
 
   return (
     <>
-      <iframe
-        src={`/${fileName}`}
-        className="w-screen h-screen"
-      />
+      <iframe src={`/${fileName}`} className="w-screen h-screen" />
     </>
   );
 };
