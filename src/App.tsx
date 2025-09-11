@@ -157,7 +157,7 @@ function App() {
             element={<ProjectFunding />}
           />
           <Route
-            path="/services/funding/private-funding/angel-inverstor"
+            path="/services/funding/private-funding/angel-investor"
             element={<AngelInverstor />}
           />
           <Route
