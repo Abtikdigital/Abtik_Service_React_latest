@@ -51,7 +51,7 @@ const TrademarkFiling = () => {
         {
             question: "3. How long does trademark registration take?",
             answer:
-                "The trademark registration process typically takes 12-18 months in India. This includes examination (6-8 months), publication in trademark journal (4 months for opposition), and registration certificate issuance (2-3 months if no opposition is filed).",
+                "The trademark registration process typically takes 12 to 18 months in India. This includes examination (6 to 8 months), publication in trademark journal (4 months for opposition), and registration certificate issuance (2 to 3 months if no opposition is filed).",
         },
         {
             question: "4. What can be trademarked?",
@@ -61,7 +61,7 @@ const TrademarkFiling = () => {
         {
             question: "5. How long does trademark protection last?",
             answer:
-                "Trademark registration is valid for 10 years from the date of application and can be renewed indefinitely for successive 10-year periods. You must file for renewal 6 months before expiry to maintain continuous protection.",
+                "Trademark registration is valid for 10 years from the date of application and can be renewed indefinitely for successive 10 year periods. You must file for renewal 6 months before expiry to maintain continuous protection.",
         },
         {
             question: "6. What happens if someone infringes my trademark?",

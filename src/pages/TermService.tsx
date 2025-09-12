@@ -46,17 +46,17 @@ const TermLoan = () => {
         {
             question: "2. What are the types of Term Loans?",
             answer:
-                "Term loans are classified into Short-term (up to 1 year), Medium-term (1-5 years), and Long-term (above 5 years) based on tenure. They can also be categorized as secured (with collateral) or unsecured (without collateral) loans depending on security requirements.",
+                "Term loans are classified into Short term (up to 1 year), Medium-term (1 to 5 years), and Long term (above 5 years) based on tenure. They can also be categorized as secured (with collateral) or unsecured (without collateral) loans depending on security requirements.",
         },
         {
             question: "3. What are the eligibility criteria for Term Loans?",
             answer:
-                "Key eligibility includes age between 18-65 years, CIBIL score of 750 or above, regular source of income, good credit history with no defaults, stable employment, and minimum business vintage of 3 years for business loans."[11][13],
+                "Key eligibility includes age between 18 to 65 years, CIBIL score of 750 or above, regular source of income, good credit history with no defaults, stable employment, and minimum business vintage of 3 years for business loans.",
         },
         {
             question: "4. What are Term Loan interest rates?",
             answer:
-                "Term loan interest rates typically range from 7.50% to 15% per annum, depending on the borrower's credit profile, loan amount, tenure, and market conditions. Banks offer both fixed and floating rate options."[12][14],
+                "Term loan interest rates typically range from 7.50% to 15% per annum, depending on the borrower's credit profile, loan amount, tenure, and market conditions. Banks offer both fixed and floating rate options.",
         },
         {
             question: "5. What documents are required for Term Loan application?",
@@ -66,7 +66,7 @@ const TermLoan = () => {
         {
             question: "6. What is the difference between Term Loan and Working Capital Loan?",
             answer:
-                "Term loans are for specific purposes with fixed EMIs and predetermined tenure, typically used for asset purchase or expansion. Working capital loans are revolving facilities for day-to-day operations with flexible withdrawal and repayment, where interest is charged only on utilized amounts.",
+                "Term loans are for specific purposes with fixed EMIs and predetermined tenure, typically used for asset purchase or expansion. Working capital loans are revolving facilities for day to day operations with flexible withdrawal and repayment, where interest is charged only on utilized amounts.",
         },
     ];
 
@@ -144,7 +144,7 @@ const TermLoan = () => {
             icon: Headset,
             title: "Complete Processing Support",
             description:
-                "We provide end-to-end assistance from documentation to disbursement, ensuring smooth processing and timely approval of your term loan application.",
+                "We provide end to end assistance from documentation to disbursement, ensuring smooth processing and timely approval of your term loan application.",
         },
     ];
 
@@ -169,13 +169,13 @@ const TermLoan = () => {
             icon: IndianRupee ,
             title: "Flexible Loan Amounts",
             description:
-                "Access term loans from ₹1 lakh to ₹50 crore with flexible loan amounts and competitive interest rates starting from 7.50% per annum."[12],
+                "Access term loans from ₹1 lakh to ₹50 crore with flexible loan amounts and competitive interest rates starting from 7.50% per annum.",
         },
         {
             icon: Calendar,
             title: "Customizable Tenure",
             description:
-                "Choose from short-term (up to 1 year), medium-term (1-5 years), or long-term (above 5 years) options based on your repayment capacity and requirements.",
+                "Choose from short term (up to 1 year), medium term (1 to 5 years), or long term (above 5 years) options based on your repayment capacity and requirements.",
         },
         {
             icon: Shield,
@@ -426,7 +426,7 @@ const TermLoan = () => {
                                     className="text-xl font-bold text-gray-800 mb-3 font-2"
 
                                 >
-                                    Short-term Loans
+                                    Short term Loans
                                 </h3>
                                 <div className="bg-gradient-to-r font-3 from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
                                     <p className="text-2xl font-bold">Up to 1 Year</p>
@@ -470,10 +470,10 @@ const TermLoan = () => {
                                     className="text-xl font-bold text-gray-800 mb-3 font-2"
 
                                 >
-                                    Medium-term Loans
+                                    Medium term Loans
                                 </h3>
                                 <div className="bg-gradient-to-r font-3 from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
-                                    <p className="text-2xl font-bold">1-5 Years</p>
+                                    <p className="text-2xl font-bold">1 to 5 Years</p>
                                     <p className="text-xs opacity-90">Tenure period</p>
                                 </div>
                             </div>
@@ -514,7 +514,7 @@ const TermLoan = () => {
                                     className="text-xl font-2 font-bold text-gray-800 mb-3"
 
                                 >
-                                    Long-term Loans
+                                    Long term Loans
                                 </h3>
                                 <div className="bg-gradient-to-r font-3 from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
                                     <p className="text-2xl font-bold">Above 5 Years</p>
@@ -524,7 +524,7 @@ const TermLoan = () => {
                             <ul className="space-y-2 text-xs font-3 text-gray-700">
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>Large-scale projects and infrastructure</span>
+                                    <span>Large scale projects and infrastructure</span>
                                 </li>
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
@@ -589,7 +589,7 @@ const TermLoan = () => {
                                 </li>
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>Flexible tenure options from 1-20 years.</span>
+                                    <span>Flexible tenure options from 1 to 20 years.</span>
                                 </li>
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
@@ -616,7 +616,7 @@ const TermLoan = () => {
                             <ul className="space-y-2 text-sm text-gray-600 font-3">
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>Age between 18-65 years.</span>
+                                    <span>Age between 18,65 years.</span>
                                 </li>
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
@@ -632,7 +632,7 @@ const TermLoan = () => {
                                 </li>
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>Adequate debt-to-income ratio.</span>
+                                    <span>Adequate debt to income ratio.</span>
                                 </li>
                             </ul>
                         </motion.div>

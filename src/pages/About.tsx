@@ -300,7 +300,7 @@ const About = () => {
                     className="paragraph  font-3"
      
                   >
-                   We are by your side at every stage with dedicated support, swift responses, and an unwavering commitment to trust. From strategy to execution, we make your journey smoother, faster, and more rewarding ensuring every step brings you closer to your goals.
+                   We are by your side at every stage with dedicated support, responses, and an unwavering commitment to trust. From strategy to execution, we make your journey smoother, faster, and more rewarding ensuring every step brings you closer to your goals.
                   </p>
                   </p>
                   {/* <div>

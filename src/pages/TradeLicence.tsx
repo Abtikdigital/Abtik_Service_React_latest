@@ -58,7 +58,7 @@ const TradeLicenseCertificate = () => {
     {
       question: "6. How does Abtik help with Trade License?",
       answer:
-        "Abtik manages the entire process—application, documentation, liaison with municipal authorities, and follow-up for quick, compliant license approval and renewal support.",
+        "Abtik manages the entire process application, documentation, liaison with municipal authorities, and follow up for quick, compliant license approval and renewal support.",
     },
   ];
 
@@ -153,7 +153,7 @@ const TradeLicenseCertificate = () => {
       icon: Award,
       title: "License Approval & Renewal Support",
       description:
-        "Get real-time updates, receive your Trade License certificate, and let us handle annual renewals and compliance going forward.",
+        "Get real time updates, receive your Trade License certificate, and let us handle annual renewals and compliance going forward.",
     },
   ];
 
@@ -169,7 +169,7 @@ const TradeLicenseCertificate = () => {
       icon: IndianRupee ,
       title: "Business Credibility",
       description:
-        "Build customer and vendor trust—Trade License is mandatory for GST, loans, government contracts, and many services.",
+        "Build customer and vendor trust Trade License is mandatory for GST, loans, government contracts, and many services.",
     },
     {
       icon: Shield,
@@ -244,7 +244,7 @@ const TradeLicenseCertificate = () => {
                          max-w-none font-3 sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
 
             >
-              Apply for a municipal Trade License with Abtik support—get legal,
+              Apply for a municipal Trade License with Abtik support get legal,
               grow faster, and operate with peace of mind in any Indian city.
             </p>
             <div className="pt-2 sm:pt-4">
@@ -379,7 +379,7 @@ const TradeLicenseCertificate = () => {
             >
               Trade License is a legal requirement enforced by municipal bodies,
               granting permission to businesses to carry on commercial
-              activities within city limits—ensuring your establishment is safe,
+              activities within city limits ensuring your establishment is safe,
               compliant, and recognized under local laws.
             </p>
           </div>
@@ -404,8 +404,8 @@ const TradeLicenseCertificate = () => {
               className="text-sm md:text-base font-3 text-gray-600 text-center"
 
             >
-              Any business—shop, factory, hotel, clinic, food outlet, or
-              commercial agency—operating within Municipal or City limits,
+              Any business shop, factory, hotel, clinic, food outlet, or
+              commercial agency operating within Municipal or City limits,
               whether rented or owned, must have a Trade License from the
               respective city authority.
             </p>
@@ -467,7 +467,7 @@ const TradeLicenseCertificate = () => {
                   </li>
                   <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                    <span>Non-compliance may cause business closure</span>
+                    <span>Non compliance may cause business closure</span>
                   </li>
                   <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />

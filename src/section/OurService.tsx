@@ -35,7 +35,7 @@ const services = [
   {
     title: "Seed Fund",
     description:
-      "We provide step-by-step guidance to secure government seed funding, helping your startup launch with reliable support from the beginning.",
+      "We provide step by step guidance to secure government seed funding, helping your startup launch with reliable support from the beginning.",
     img: Image4,
     path: "/services/funding/seed-fund",
   },
@@ -56,7 +56,7 @@ const services = [
   {
     title: "ZED Certificate",
     description:
-      "Obtain Zero Defect Zero Effect certification to ensure high-quality, eco-friendly practices aligned with recognized government standards.",
+      "Obtain Zero Defect Zero Effect certification to ensure high quality, eco friendly practices aligned with recognized government standards.",
     img: Image7,
     path: "/services/certificate/zed",
   },
@@ -124,8 +124,8 @@ const OurService = () => {
           className="paragraph text-center font-2"
          
         >
-          “Smart business solutions—from registration to funding, licensing &
-          certification—all in one place.”
+          “Smart business solutions from registration to funding, licensing &
+          certification all in one place.”
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-6">
           {services.slice(0, visibleCount).map((service, index) => (

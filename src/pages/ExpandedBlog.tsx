@@ -45,9 +45,9 @@ const ExpandedBlog = () => {
         {
           title: "Focused Financial Allocation: ₹23,100 Crore for MSMEs",
           lists: [
-            "Long-term vision for scalability and global competitiveness",
+            "Long term vision for scalability and global competitiveness",
             "₹23,100 crore allocation for MSME support",
-            "Structural approach rather than one-time relief packages",
+            "Structural approach rather than one time relief packages",
           ],
           description:
             "For years, MSMEs have demanded more than just recognition they’ve needed real, accessible support. The 2025 Budget delivers that with a dedicated allocation that targets growth, sustainability, and resilience.",
@@ -100,7 +100,7 @@ const ExpandedBlog = () => {
     {
       title: "Budget 2025 Simplifies the Journey for New Founders",
       description:
-        "First-time entrepreneurs are front and center in Budget 2025. With a streamlined digital portal and structured mentorship, starting up in India just got easier and faster.",
+        "First time entrepreneurs are front and center in Budget 2025. With a streamlined digital portal and structured mentorship, starting up in India just got easier and faster.",
       img: Image3,
       slug: "Budget-2025-Simplifies-the-Journey-for-New-Founders",
       date: "July 15, 2024",
@@ -202,7 +202,7 @@ const ExpandedBlog = () => {
                           main-heading font-1"
 
           >
-            Your One-Stop{" "}
+            Your One Stop{" "}
             <span className="text-[#3CA2E2] font-extrabold block sm:inline">
               Solution
             </span>{" "}

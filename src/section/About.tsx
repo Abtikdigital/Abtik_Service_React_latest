@@ -54,7 +54,7 @@ const About = () => {
           <p className="paragraph font-2"
 
           >
-            At Abtik Services, we connect ambition with opportunity, bringing together expert strategy, government-backed funding, and complete business support under one roof. From the first spark of an idea to a fully established brand, we’re the partner that turns vision into measurable growth.
+            At Abtik Services, we connect ambition with opportunity, bringing together expert strategy, government backed funding, and complete business support under one roof. From the first spark of an idea to a fully established brand, we’re the partner that turns vision into measurable growth.
           </p>
           <p className="paragraph font-2"
 
@@ -64,7 +64,7 @@ const About = () => {
           <p className="paragraph font-2"
 
           >
-            At Abtik, we don’t just provide solutions,  we work alongside you. Our transparent, results-driven approach ensures every business receives the right support at the right time, enabling confident growth from the first step to full-scale expansion.
+            At Abtik, we don’t just provide solutions,  we work alongside you. Our transparent, results driven approach ensures every business receives the right support at the right time, enabling confident growth from the first step to full scale expansion.
           </p>
           <div className="text-center md:text-left" onClick={() => {
             nav("/about")

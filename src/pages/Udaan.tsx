@@ -142,7 +142,7 @@ const UdyamRegistration = () => {
         },
         {
             icon: Headset,
-            title: "Post-Registration Support",
+            title: "Post Registration Support",
             description:
                 "We provide ongoing support for annual return filing, certificate management, and guidance on leveraging MSME benefits and schemes.",
         },
@@ -580,7 +580,7 @@ const UdyamRegistration = () => {
                             <ul className="space-y-2 text-sm text-gray-600 font-3">
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>Access to collateral-free loans and credit facilities.</span>
+                                    <span>Access to collateral free loans and credit facilities.</span>
                                 </li>
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />

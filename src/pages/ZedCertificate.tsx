@@ -33,7 +33,7 @@ const ZEDCertificate = () => {
         {
             question: "1. What is the ZED Certificate?",
             answer:
-                "The ZED (Zero Defect Zero Effect) Certificate is issued by the Quality Council of India under the Ministry of MSME. It recognizes MSMEs for adopting world-class manufacturing processes, minimizing defects, and reducing environmental impact. ZED helps Indian MSMEs compete globally and meet export/tender requirements.",
+                "The ZED (Zero Defect Zero Effect) Certificate is issued by the Quality Council of India under the Ministry of MSME. It recognizes MSMEs for adopting world class manufacturing processes, minimizing defects, and reducing environmental impact. ZED helps Indian MSMEs compete globally and meet export/tender requirements.",
         },
         {
             question: "2. Who can apply for ZED Certification?",
@@ -43,7 +43,7 @@ const ZEDCertificate = () => {
         {
             question: "3. What are the stages of ZED Certification?",
             answer:
-                "There are three certification levels: Bronze (Awareness), Silver (Adoption of standard processes), and Gold (Excellence, global standards). MSMEs can progress through all or start at any stage after self and third-party assessment.",
+                "There are three certification levels: Bronze (Awareness), Silver (Adoption of standard processes), and Gold (Excellence, global standards). MSMEs can progress through all or start at any stage after self and third party assessment.",
         },
         {
             question: "4. What are the main benefits of ZED Certification?",
@@ -58,7 +58,7 @@ const ZEDCertificate = () => {
         {
             question: "6. How does Abtik help with ZED Certification?",
             answer:
-                "Abtik provides end-to-end support—from application, self-assessment, documentation, training on ZED parameters to third-party assessment coordination and subsidy facilitation.",
+                "Abtik provides end to end support from application, self assessment, documentation, training on ZED parameters to third party assessment coordination and subsidy facilitation.",
         },
     ];
 
@@ -139,9 +139,9 @@ const ZEDCertificate = () => {
     const processData = [
         {
             icon: FileText,
-            title: "Registration & Self-Assessment",
+            title: "Registration & Self Assessment",
             description:
-                "Register on the ZED portal, complete your self-assessment against ZED parameters, and upload needed documents.",
+                "Register on the ZED portal, complete your self assessment against ZED parameters, and upload needed documents.",
         },
         {
             icon: Shield,
@@ -153,7 +153,7 @@ const ZEDCertificate = () => {
             icon: Award,
             title: "Third-Party Assessment & Certificate",
             description:
-                "Coordinate third-party audit; after approval receive your ZED Certificate and subsidies for upgrades.",
+                "Coordinate third party audit; after approval receive your ZED Certificate and subsidies for upgrades.",
         },
     ];
 
@@ -179,9 +179,9 @@ const ZEDCertificate = () => {
         },
         {
             icon: Users,
-            title: "Zero Effect (Eco-Friendly)",
+            title: "Zero Effect (Eco Friendly)",
             description:
-                "Demonstrate environmental responsibility—reducing energy, waste, and carbon footprint.",
+                "Demonstrate environmental responsibility reducing energy, waste, and carbon footprint.",
         },
         {
             icon: IndianRupee ,
@@ -247,7 +247,7 @@ const ZEDCertificate = () => {
 
                         >
                             Achieve global quality, reduce environmental impact, and unlock
-                            subsidies and government tenders—Abtik helps you earn your ZED
+                            subsidies and government tenders, Abtik helps you earn your ZED
                             Certificate quickly and compliantly.
                         </p>
                         <div className="pt-2 sm:pt-4">
@@ -376,9 +376,9 @@ const ZEDCertificate = () => {
 
                         >
                             The ZED (Zero Defect Zero Effect) Certification recognizes
-                            manufacturing MSMEs that achieve best-in-class quality and
+                            manufacturing MSMEs that achieve best in class quality and
                             minimize their environmental impact ("Zero Defect" in product,
-                            "Zero Effect" on environment)—helping Indian businesses stand out
+                            "Zero Effect" on environment) helping Indian businesses stand out
                             in global supply chains and domestic tenders.
                         </p>
                     </div>
@@ -437,7 +437,7 @@ const ZEDCertificate = () => {
                                     </li>
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                         <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                        <span>Undertaking self and third-party assessment</span>
+                                        <span>Undertaking self and third party assessment</span>
                                     </li>
                                 </ul>
                             </motion.div>
@@ -470,7 +470,7 @@ const ZEDCertificate = () => {
                                     <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                         <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
                                         <span>
-                                            Government subsidies on all fees (80%-max for
+                                            Government subsidies on all fees (80% max for
                                             micro/SC-ST/women units)
                                         </span>
                                     </li>

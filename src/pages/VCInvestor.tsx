@@ -59,12 +59,12 @@ const VentureCapital = () => {
         {
             question: "5. How many startups will Venture Capital support?",
             answer:
-                "VC firms typically invest in a portfolio of 10-50 startups per fund, with the goal of achieving high returns from a few successful exits over the fund's lifecycle.",
+                "VC firms typically invest in a portfolio of 10 to 50 startups per fund, with the goal of achieving high returns from a few successful exits over the fund's lifecycle.",
         },
         {
             question: "6. What is the fund structure of Venture Capital?",
             answer:
-                "VC funds are structured as limited partnerships with capital from institutional investors, managed by general partners who invest in startups over a 7-10 year period.",
+                "VC funds are structured as limited partnerships with capital from institutional investors, managed by general partners who invest in startups over a 7 to 10 year period.",
         },
     ];
 
@@ -238,7 +238,7 @@ const VentureCapital = () => {
                             <span className="text-[#3CA2E2] font-extrabold block sm:inline">
                                 Venture Capital
                             </span>{" "}
-                            for High-Growth Startups
+                            for High Growth Startups
                         </h1>
                         <p
                             className="text-sm sm:text-base md:text-lg lg:text-xl
@@ -379,7 +379,7 @@ const VentureCapital = () => {
                         <p className="paragraph font-3 !text-white mx-auto text-left"
 
                         >
-                            Venture Capital is a type of financing that investors provide to startups and small businesses believed to have long-term growth potential. VC firms manage pooled investments from various sources to fund promising companies in exchange for equity, often providing strategic guidance and resources to help them succeed.
+                            Venture Capital is a type of financing that investors provide to startups and small businesses believed to have long term growth potential. VC firms manage pooled investments from various sources to fund promising companies in exchange for equity, often providing strategic guidance and resources to help them succeed.
                         </p>
                     </div>
                 </motion.section>
@@ -417,7 +417,7 @@ const VentureCapital = () => {
                                         className="text-xl font-2 font-bold text-gray-800 mb-3"
 
                                     >
-                                        Early-Stage Funding
+                                        Early Stage Funding
                                     </h3>
                                     <div className="bg-gradient-to-r font-3 from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
                                         <p className="text-2xl font-bold">Seed/Series A</p>
@@ -461,7 +461,7 @@ const VentureCapital = () => {
                                         className="text-xl font-2 font-bold text-gray-800 mb-3"
 
                                     >
-                                        Growth-Stage Funding
+                                        Growth Stage Funding
                                     </h3>
                                     <div className="bg-gradient-to-r font-3 from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
                                         <p className="text-2xl font-bold">Series B/C</p>

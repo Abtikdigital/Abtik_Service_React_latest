@@ -18,14 +18,14 @@ const blogs = [
   {
     title: "India’s Startups Get a Boost: Budget 2025 Unlocks New Pathways",
     description:
-      "First-time entrepreneurs are front",
+      "First time entrepreneurs are front",
     img: Image2,
     slug: "Indias-Startups-Get-a-Boost-Budget-2025-Unlocks-New-Pathways",
   },
   {
     title: " Budget 2025 Simplifies the Journey for New Founders",
     description:
-      "For first-time entrepreneurs, Budget",
+      "For first time entrepreneurs, Budget",
     img: Image3,
     slug: "Budget-2025-Simplifies-the-Journey-for-New-Founders",
   },

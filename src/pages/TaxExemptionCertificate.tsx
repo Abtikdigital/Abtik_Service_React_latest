@@ -161,7 +161,7 @@ const TaxExemptionCertificate = () => {
             icon: Shield,
             title: "Legal Protection",
             description:
-                "Gain peace of mind with a certificate that provides robust legal protection against unforeseen tax claims post-transaction.",
+                "Gain peace of mind with a certificate that provides robust legal protection against unforeseen tax claims post transaction.",
         },
         {
             icon: IndianRupee ,
@@ -484,7 +484,7 @@ const TaxExemptionCertificate = () => {
                 <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
                     <p className="text-sm md:text-base text-gray-600 text-center font-3"
                     >
-                        Our Tax Exemption  Certificate provides critical assurance across a range of high-stakes financial scenarios, ensuring every transaction is secure and transparent.
+                        Our Tax Exemption  Certificate provides critical assurance across a range of high stakes financial scenarios, ensuring every transaction is secure and transparent.
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <motion.div
@@ -561,7 +561,7 @@ const TaxExemptionCertificate = () => {
             >
                 <h2 className="sub-heading text-center font-2 bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
                 >
-                    Our Simple 3-Step Certification Process
+                    Our Simple 3 Step Certification Process
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
                     {processData?.map((process, index) => (

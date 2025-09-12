@@ -11,22 +11,22 @@ const FaqSection = () => {
     {
       question: "1. Who is Abtik Services?",
       answer:
-        "Abtik Services is a Start-up India-recognized consultancy helping MSMEs and startups grow with expert support in funding, branding, legal compliance, and government schemes — all under one roof.",
+        "Abtik Services is a Start up India recognized consultancy helping MSMEs and startups grow with expert support in funding, branding, legal compliance, and government schemes all under one roof.",
     },
     {
       question: "2. What makes Abtik different from others?",
       answer:
-        "Abtik offers everything a business needs — funding help, legal guidance, digital services — all in one place. We support you at every step, not just with advice but with real action.",
+        "Abtik offers everything a business needs funding help, legal guidance, digital services all in one place. We support you at every step, not just with advice but with real action.",
     },
     {
       question: "3. How has Abtik helped businesses so far?",
       answer:
-        "We’ve successfully helped over 6,500 startups get recognized under the Start-up India scheme and guided thousands of MSMEs in accessing funding, compliance, and digital growth opportunities.",
+        "We’ve successfully helped over 6,500 startups get recognized under the Start up India scheme and guided thousands of MSMEs in accessing funding, compliance, and digital growth opportunities.",
     },
     {
       question: "4. Is Abtik only for new businesses?",
       answer:
-        "Not at all! Whether you’re just starting out or scaling up, Abtik offers customized solutions for every stage of business — from idea validation to expansion and beyond.",
+        "Not at all! Whether you’re just starting out or scaling up, Abtik offers customized solutions for every stage of business from idea validation to expansion and beyond.",
     },
   ];
 

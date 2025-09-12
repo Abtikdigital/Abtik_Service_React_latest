@@ -51,14 +51,14 @@ const TDCompliance = () => {
         "Essential documents include valid TAN, payment/expense ledgers, challan details, PAN details of deductees, and any lower/no deduction declarations submitted by recipients.",
     },
     {
-      question: "5. What are the penalties for non-compliance?",
+      question: "5. What are the penalties for non compliance?",
       answer:
-        "Late deduction, deposit, or non-filing of TDS returns can attract interest (1%–1.5% per month), late fee under Section 234E, penalties under Section 271H, and possible disallowance of relevant business expenses.",
+        "Late deduction, deposit, or non filing of TDS returns can attract interest (1%to1.5% per month), late fee under Section 234E, penalties under Section 271H, and possible disallowance of relevant business expenses.",
     },
     {
       question: "6. How can Abtik help with TDS compliance?",
       answer:
-        "Abtik offers end-to-end TDS services—TAN application, deduction calculation, timely deposit, quarterly return filing, Form 16/16A issuance, penalty notice handling, and compliance updates to ensure your business remains fully TDS-compliant.",
+        "Abtik offers end to end TDS services TAN application, deduction calculation, timely deposit, quarterly return filing, Form 16/16A issuance, penalty notice handling, and compliance updates to ensure your business remains fully TDS compliant.",
     },
   ];
 
@@ -153,7 +153,7 @@ const TDCompliance = () => {
       icon: Award,
       title: "TDS Certificate & Compliance Support",
       description:
-        "We generate Form 16/16A for your vendors/employees and provide reliable year-round support, reminders, and compliance advice to avoid penalties.",
+        "We generate Form 16/16A for your vendors/employees and provide reliable year round support, reminders, and compliance advice to avoid penalties.",
     },
   ];
 
@@ -163,31 +163,31 @@ const TDCompliance = () => {
       icon: TrendingUp,
       title: "Zero Penalty Risk",
       description:
-        "On-time deduction, deposit, and returns assure no interest, late fee, or prosecution under the Income Tax Act.",
+        "On time deduction, deposit, and returns assure no interest, late fee, or prosecution under the Income Tax Act.",
     },
     {
       icon: IndianRupee ,
       title: "Expense Allowability",
       description:
-        "Only TDS-compliant expenses are allowed as business deductions—our process ensures you don't lose deductions.",
+        "Only TDS compliant expenses are allowed as business deductions our process ensures you don't lose deductions.",
     },
     {
       icon: Shield,
       title: "Smooth Assessment & Peace of Mind",
       description:
-        "Abtik’s error-free TDS filings ensure no hassle with tax scrutiny, delayed refunds, or blocked payments for your business.",
+        "Abtik’s error free TDS filings ensure no hassle with tax scrutiny, delayed refunds, or blocked payments for your business.",
     },
     {
       icon: Users,
       title: "Better Vendor & Employee Relations",
       description:
-        "Timely TDS certificates mean happier vendors and staff—enhancing your business's credibility and trust.",
+        "Timely TDS certificates mean happier vendors and staff enhancing your business's credibility and trust.",
     },
     {
       icon: Award,
       title: "Total Compliance Management",
       description:
-        "Get reminders, full compliance calendar, and legal help for every TDS notice—no missed obligations, ever.",
+        "Get reminders, full compliance calendar, and legal help for every TDS notice no missed obligations, ever.",
     },
   ];
 
@@ -244,7 +244,7 @@ const TDCompliance = () => {
                          max-w-none font-3 sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
 
             >
-              Complete TDS compliance and quarterly TDS return filing—avoid
+              Complete TDS compliance and quarterly TDS return filing avoid
               penalties, protect deductions, and build trust with timely and
               accurate processes.
             </p>
@@ -380,7 +380,7 @@ const TDCompliance = () => {
             >
               TDS compliance means deducting the right tax at source, depositing
               it on time, filing quarterly returns, and providing TDS
-              certificates to payees—ensuring you meet all requirements under
+              certificates to payees ensuring you meet all requirements under
               the Income Tax Act and avoid penalties.
             </p>
           </div>

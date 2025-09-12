@@ -12,10 +12,10 @@ import { useNavigate } from "react-router-dom";
 
 const recommendedData = [
   {
-    title: "Start-Up India Registration",
+    title: "Start Up India Registration",
     img: Image1,
     description:
-      "A DPIIT-recognized government program that enables eligible startups to access tax exemptions, self-certification, and other incentives for rapid growth and compliance.",
+      "A DPIIT recognized government program that enables eligible startups to access tax exemptions, self certification, and other incentives for rapid growth and compliance.",
 
     path: "/services/certificate/startup-india",
   },
@@ -23,7 +23,7 @@ const recommendedData = [
     title: "Seed Fund Scheme",
     img: Image2,
     description:
-      "An initiative under Startup India that provides early-stage funding through government-approved incubators. It helps promising startups access vital capital to scale.",
+      "An initiative under Startup India that provides early stage funding through government approved incubators. It helps promising startups access vital capital to scale.",
     path: "/services/funding/seed-fund",
   },
   {
@@ -37,21 +37,21 @@ const recommendedData = [
     title: "NBFC Loan",
     img: Image4,
     description:
-      "Loans provided by Non-Banking Financial Companies with simplified documentation and eligibility. These are tailored for startups and growing enterprises.",
+      "Loans provided by Non Banking Financial Companies with simplified documentation and eligibility. These are tailored for startups and growing enterprises.",
     path: "/services/funding/private-funding/nbfc",
   },
   {
     title: "PMEGP Loan",
     img: Image5,
     description:
-      "A credit-linked subsidy scheme by the Government of India that supports new micro-enterprises in the manufacturing or service sectors, including interest subsidies.",
+      "A credit linked subsidy scheme by the Government of India that supports new micro enterprises in the manufacturing or service sectors, including interest subsidies.",
     path: "/services/funding/subsidy/pmegp",
   },
   {
     title: "NAIIF Loan",
     img: Image6,
     description:
-      "Equity-based funding made available through SEBI-registered Alternative Investment Funds (AIFs) under the National Alternative Investment and Infrastructure Fund (NAIIF).",
+      "Equity based funding made available through SEBI registered Alternative Investment Funds (AIFs) under the National Alternative Investment and Infrastructure Fund (NAIIF).",
     path: "/services/funding/agriculture/naiff-aiff",
   },
   {
@@ -65,7 +65,7 @@ const recommendedData = [
     title: "MSME Certificate",
     img: Image1,
     description:
-      "MSME Certificate is a government-issued proof that your business is registered as a Micro, Small, or Medium Enterprise in India.",
+      "MSME Certificate is a government issued proof that your business is registered as a Micro, Small, or Medium Enterprise in India.",
     path: "/services/certificate/msme",
   },
 ];
@@ -120,7 +120,7 @@ const Recommended = () => {
         className="paragraph text-center font-2"
   
       >
-        Top-picked services for your business goals—get exactly what you need,
+        Top picked services for your business goals get exactly what you need,
         when you need it.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-6">

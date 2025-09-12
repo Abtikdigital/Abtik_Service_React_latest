@@ -52,12 +52,12 @@ const StartupIndiaCertificate = () => {
         {
             question: "4. What are the main benefits after recognition?",
             answer:
-                "Benefits include 3 years of income tax exemption, easier access to government and VC funding, up to 80% rebate on patent/trademark fees, tender eligibility, and self-certification for labor and environmental compliance.",
+                "Benefits include 3 years of income tax exemption, easier access to government and VC funding, up to 80% rebate on patent/trademark fees, tender eligibility, and self certification for labor and environmental compliance.",
         },
         {
             question: "5. How is the application filed and processed?",
             answer:
-                "You or your consulting partner files the DPIIT recognition application online at the Startup India portal. After document checks and approval (typically 2-4 weeks), you can download the certificate.",
+                "You or your consulting partner files the DPIIT recognition application online at the Startup India portal. After document checks and approval (typically 2to4 weeks), you can download the certificate.",
         },
         {
             question: "6. How do I check or share my certificate?",
@@ -169,7 +169,7 @@ const StartupIndiaCertificate = () => {
         {
             icon: IndianRupee ,
             title: "Tax Exemption",
-            description: "3-year income tax holiday and capital gains exemptions for eligible recognized startups.",
+            description: "3 year income tax holiday and capital gains exemptions for eligible recognized startups.",
         },
         {
             icon: Award,
@@ -188,8 +188,8 @@ const StartupIndiaCertificate = () => {
         },
         {
             icon: Shield,
-            title: "Self-certification Compliance",
-            description: "Self-certify under 6 labor & 3 environmental laws for easier business compliance.",
+            title: "Self certification Compliance",
+            description: "Self certify under 6 labor & 3 environmental laws for easier business compliance.",
         },
     ];
 
