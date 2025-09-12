@@ -48,7 +48,7 @@ const ProducerCompanyRegistration = () => {
     {
       question: "4. What documents are needed?",
       answer:
-        "PAN/Aadhaar and address proofs of directors and members, proof of business address, passport photos, landholding/birth/occupation proof (for farmer/producer status), and incorporation-related documents (MOA/AOA).",
+        "PAN/Aadhaar and address proofs of directors and members, proof of business address, passport photos, landholding/birth/occupation proof (for farmer/producer status), and incorporation related documents (MOA/AOA).",
     },
     {
       question: "5. How long does it take to register a Producer Company?",
@@ -58,7 +58,7 @@ const ProducerCompanyRegistration = () => {
     {
       question: "6. How does Abtik help Producer Companies?",
       answer:
-        "Abtik provides complete legal and compliance help—document vetting, digital signatures, drafting, member coordination, online MCA filing, and end-to-end handholding for government schemes, GST, bank loans, and annual returns.",
+        "Abtik provides complete legal and compliance help document vetting, digital signatures, drafting, member coordination, online MCA filing, and end to end handholding for government schemes, GST, bank loans, and annual returns.",
     },
   ];
 
@@ -232,7 +232,7 @@ const ProducerCompanyRegistration = () => {
               className="text-2xl font-1 sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-white lg:text-inherit tracking-wide main-heading"
 
             >
-              Empower Farmers & Producers –{" "}
+              Empower Producers & Farmers {" "}
               <span className="text-[#3CA2E2] font-extrabold block sm:inline">
                 Producer Company Registration
               </span>
@@ -245,8 +245,8 @@ const ProducerCompanyRegistration = () => {
                          max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0 font-3"
 
             >
-              Register a Producer Company—India’s premier model for modern
-              farmer and agri-business collectives. Get legal status, business
+              Register a Producer Company India’s premier model for modern
+              farmer and agri business collectives. Get legal status, business
               benefits, and seamless Abtik support.
             </p>
             <div className="pt-2 sm:pt-4">

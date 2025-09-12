@@ -48,7 +48,7 @@ const SeedFund = () => {
     {
       question: "3. What's the difference between debt and grant funding?",
       answer:
-        "Debt funding (up to ₹50 lakhs) needs to be repaid with interest over time, while grant funding (up to ₹20 lakhs) is non-repayable financial assistance provided to support your startup's growth.",
+        "Debt funding (up to ₹50 lakhs) needs to be repaid with interest over time, while grant funding (up to ₹20 lakhs) is non repayable financial assistance provided to support your startup's growth.",
     },
     {
       question: "4. What documents are required for seed funding?",
@@ -58,7 +58,7 @@ const SeedFund = () => {
     {
       question: "5. How long does the seed funding process take?",
       answer:
-        "The seed funding process typically takes 3-6 months from initial application to fund disbursement, depending on due diligence requirements and government approval processes.",
+        "The seed funding process typically takes 3 to 6 months from initial application to fund disbursement, depending on due diligence requirements and government approval processes.",
     },
     {
       question:
@@ -179,13 +179,13 @@ const SeedFund = () => {
       icon: TrendingUp,
       title: "Low Interest Rates",
       description:
-        "Benefit from government-backed schemes offering competitive interest rates (8-12%) with flexible repayment terms.",
+        "Benefit from government backed schemes offering competitive interest rates (8 to 12%) with flexible repayment terms.",
     },
     {
       icon: Shield,
       title: "Minimal Collateral",
       description:
-        "Government seed funding requires minimal collateral, making it accessible for early-stage startups without assets.",
+        "Government seed funding requires minimal collateral, making it accessible for early stage startups without assets.",
     },
   ];
 
@@ -389,7 +389,7 @@ const SeedFund = () => {
               Seed funding is the initial capital investment used to start a
               business. It represents the first official equity funding stage
               and helps entrepreneurs transform their innovative ideas into
-              viable businesses. This early-stage funding is crucial for product
+              viable businesses. This early stage funding is crucial for product
               development, market research, team building, and establishing the
               foundation for future growth and larger investment rounds.
             </p>
@@ -438,7 +438,7 @@ const SeedFund = () => {
                 <ul className="space-y-2 text-xs text-gray-700 font-3">
                   <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                    <span>Non-refundable assistance</span>
+                    <span>Non refundable assistance</span>
                   </li>
                   <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
@@ -450,7 +450,7 @@ const SeedFund = () => {
                   </li>
                   <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                    <span>Milestone-based disbursement</span>
+                    <span>Milestone based disbursement</span>
                   </li>
                 </ul>
               </motion.div>
@@ -478,11 +478,11 @@ const SeedFund = () => {
                 <ul className="space-y-2 text-xs text-gray-700 font-3">
                   <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                    <span>Low interest rates (4-6%)</span>
+                    <span>Low interest rates (4to6%)</span>
                   </li>
                   <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                    <span>Flexible repayment (5-7 years)</span>
+                    <span>Flexible repayment (5to7 years)</span>
                   </li>
                   <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
@@ -512,7 +512,7 @@ const SeedFund = () => {
           <div className="mt-8 bg-white rounded-4xl font-3 p-4 md:p-12 space-y-6 shadow-md">
             <p className="text-sm md:text-base font-3 text-gray-600 text-center">
               Seed funding provides essential capital and strategic support to
-              transform your business idea into a market-ready product while
+              transform your business idea into a market ready product while
               building a strong foundation for growth.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -577,7 +577,7 @@ const SeedFund = () => {
                   </li>
                   <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                    <span>Clear business model and go-to-market strategy.</span>
+                    <span>Clear business model and go to market strategy.</span>
                   </li>
                   <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
@@ -586,7 +586,7 @@ const SeedFund = () => {
                   <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
                     <span>
-                      Early stage of business development (pre-revenue or early
+                      Early stage of business development (pre revenue or early
                       revenue).
                     </span>
                   </li>

@@ -33,12 +33,12 @@ const Section8CompanyRegistration = () => {
     {
       question: "1. What is a Section 8 Company?",
       answer:
-        "A Section 8 Company is a registered non-profit under the Companies Act, 2013, formed for charitable, educational, social, research, or environmental purposes. All profits/surplus must be used for the objects of the company; no dividend is paid to members.",
+        "A Section 8 Company is a registered non profit under the Companies Act, 2013, formed for charitable, educational, social, research, or environmental purposes. All profits/surplus must be used for the objects of the company; no dividend is paid to members.",
     },
     {
       question: "2. Who can register a Section 8 Company?",
       answer:
-        "Individuals or associations aiming for a non-profit goal—minimum 2 directors (Pvt Ltd) or 3 (Public Ltd)—with valid IDs and digital signatures.",
+        "Individuals or associations aiming for a non profit goal minimum 2 directors (Pvt Ltd) or 3 (Public Ltd) with valid IDs and digital signatures.",
     },
     {
       question: "3. What are the main benefits?",
@@ -48,17 +48,17 @@ const Section8CompanyRegistration = () => {
     {
       question: "4. What documents are needed?",
       answer:
-        "DSC (Digital Signature), DIN (Director ID), promoters' ID/address proof, registered address proof, Memorandum/Articles with clear non-profit objectives, MCA declarations/consents.",
+        "DSC (Digital Signature), DIN (Director ID), promoters' ID/address proof, registered address proof, Memorandum/Articles with clear non profit objectives, MCA declarations/consents.",
     },
     {
       question: "5. What is the registration process?",
       answer:
-        "Obtain DSC and DIN, draft and file MOA/AOA, apply and get Section 8 Central Govt. license via MCA portal (SPICe+/INC-12), and receive Certificate of Incorporation, PAN, TAN. All steps are digital.",
+        "Obtain DSC and DIN, draft and file MOA/AOA, apply and get Section 8 Central Govt. license via MCA portal (SPICe+/INC,12), and receive Certificate of Incorporation, PAN, TAN. All steps are digital.",
     },
     {
       question: "6. How does Abtik help?",
       answer:
-        "Abtik drafts all required documents, procures DSCs, manages online filings and follow-ups, obtains MCA Section 8 license, and assists post-registration with tax and donor compliance.",
+        "Abtik drafts all required documents, procures DSCs, manages online filings and follow ups, obtains MCA Section 8 license, and assists post registration with tax and donor compliance.",
     },
   ];
 
@@ -153,7 +153,7 @@ const Section8CompanyRegistration = () => {
       icon: Award,
       title: "Approval, Certificate & Tax Setup",
       description:
-        "Receive your Certificate of Incorporation, PAN/TAN, and post-reg help for 12A/80G and CSR/funding compliance.",
+        "Receive your Certificate of Incorporation, PAN/TAN, and post reg help for 12A/80G and CSR/funding compliance.",
     },
   ];
 
@@ -163,13 +163,13 @@ const Section8CompanyRegistration = () => {
       icon: TrendingUp,
       title: "Government Recognition",
       description:
-        "Section 8 status is the gold standard for NGOs/charities—trusted by donors and regulators.",
+        "Section 8 status is the gold standard for NGOs/charities trusted by donors and regulators.",
     },
     {
       icon: IndianRupee ,
       title: "Funding and Tax Benefits",
       description:
-        "Eligible for major grants, donor gifts, CSR, and (after 12A/80G) tax-exempt income or donations.",
+        "Eligible for major grants, donor gifts, CSR, and (after 12A/80G) tax exempt income or donations.",
     },
     {
       icon: Shield,
@@ -181,13 +181,13 @@ const Section8CompanyRegistration = () => {
       icon: Users,
       title: "Easy National/International Operations",
       description:
-        "Pan-India work, bank accounts, FCRA eligibility, and superior credibility over trusts/societies.",
+        "Pan India work, bank accounts, FCRA eligibility, and superior credibility over trusts/societies.",
     },
     {
       icon: Award,
       title: "High Donor & CSR Trust",
       description:
-        "Compliance-ready, transparent e-filings, and best-suited for CSR, NGO grant, and government partnerships.",
+        "Compliance ready, transparent e-filings, and best suited for CSR, NGO grant, and government partnerships.",
     },
   ];
 
@@ -231,7 +231,7 @@ const Section8CompanyRegistration = () => {
             >
               Register Your{" "}
               <span className="text-[#3CA2E2] font-extrabold block sm:inline">
-                Section 8 NGO/Non-Profit
+                Section 8 NGO/Non Profit
               </span>
             </h1>
             <p
@@ -242,8 +242,8 @@ const Section8CompanyRegistration = () => {
                          max-w-none font-3 sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
 
             >
-              Launch your non-profit the most trusted way in India—Section 8
-              Company. Get legal, CSR, and donor-ready with Abtik’s end-to-end
+              Launch your non profit the most trusted way in India Section 8
+              Company. Get legal, CSR, and donor ready with Abtik’s end to end
               support.
             </p>
             <div className="pt-2 sm:pt-4">
@@ -377,8 +377,8 @@ const Section8CompanyRegistration = () => {
 
             >
               Section 8 Company is India’s highest recognition for a legal
-              non-profit or charitable enterprise. Enjoy the best reputation for
-              grants, donors, and government partners—with streamlined
+              non profit or charitable enterprise. Enjoy the best reputation for
+              grants, donors, and government partners with streamlined
               compliance, tax benefits, and full legal protection for founders
               and donors alike.
             </p>
@@ -439,7 +439,7 @@ const Section8CompanyRegistration = () => {
                   </li>
                   <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                    <span>Clear, non-profit social/charity objective</span>
+                    <span>Clear, non profit social/charity objective</span>
                   </li>
                   <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
@@ -469,7 +469,7 @@ const Section8CompanyRegistration = () => {
                   <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
                     <span>
-                      Funds must be used for main object—no profit payout
+                      Funds must be used for main object, no profit payout
                     </span>
                   </li>
                   <li className="grid grid-cols-[20px_1fr] gap-2 items-start">

@@ -51,7 +51,7 @@ const SMELoan = () => {
         {
             question: "3. What are the eligibility criteria for SME loans?",
             answer:
-                "Key eligibility criteria include minimum business vintage of 3 years, minimum annual turnover of ₹40 lakh, profit-making for the previous 2 years, minimum ITR of ₹1.5 lakh per annum, and applicant age between 21-65 years. The business should be involved in manufacturing, trading, or services."[22],
+                "Key eligibility criteria include minimum business vintage of 3 years, minimum annual turnover of ₹40 lakh, profit making for the previous 2 years, minimum ITR of ₹1.5 lakh per annum, and applicant age between 21to65 years. The business should be involved in manufacturing, trading, or services.",
         },
         {
             question: "4. What documents are required for SME loan application?",
@@ -61,12 +61,12 @@ const SMELoan = () => {
         {
             question: "5. What are the interest rates for SME loans?",
             answer:
-                "SME loan interest rates typically range from 9-18% per annum, depending on the borrower's credit profile, business performance, loan amount, tenure, and market conditions. Competitive rates are offered to businesses with strong financials and good credit history."[23],
+                "SME loan interest rates typically range from 9to18% per annum, depending on the borrower's credit profile, business performance, loan amount, tenure, and market conditions. Competitive rates are offered to businesses with strong financials and good credit history.",
         },
         {
             question: "6. What are the benefits of SME loans over other financing options?",
             answer:
-                "SME loans offer affordable interest rates compared to credit cards, flexible loan amounts, quick access to funds, customizable repayment options, no collateral requirement for certain loan amounts, improved cash flow management, and opportunities for business expansion while building business credit."[23],
+                "SME loans offer affordable interest rates compared to credit cards, flexible loan amounts, quick access to funds, customizable repayment options, no collateral requirement for certain loan amounts, improved cash flow management, and opportunities for business expansion while building business credit.",
         },
     ];
 
@@ -144,7 +144,7 @@ const SMELoan = () => {
             icon: Headset,
             title: "Complete Support",
             description:
-                "We provide end-to-end assistance from documentation to disbursement, including ongoing support for business growth strategies and future funding requirements.",
+                "We provide end to end assistance from documentation to disbursement, including ongoing support for business growth strategies and future funding requirements.",
         },
     ];
 
@@ -169,19 +169,19 @@ const SMELoan = () => {
             icon: IndianRupee ,
             title: "Flexible Loan Amounts",
             description:
-                "Access SME loans from ₹10 lakh to ₹25 crore with flexible loan amounts customized to meet your specific business needs and growth requirements."[23],
+                "Access SME loans from ₹10 lakh to ₹25 crore with flexible loan amounts customized to meet your specific business needs and growth requirements.",
         },
         {
             icon: TrendingUp,
             title: "Competitive Interest Rates",
             description:
-                "Benefit from affordable interest rates starting from 9% per annum, making SME loans a cost-effective financing solution compared to other options."[23],
+                "Benefit from affordable interest rates starting from 9% per annum, making SME loans a cost effective financing solution compared to other options.",
         },
         {
             icon: Shield,
             title: "Quick Access to Funds",
             description:
-                "Enjoy streamlined application processes with minimal documentation requirements, providing fast access to capital for seizing growth opportunities."[23],
+                "Enjoy streamlined application processes with minimal documentation requirements, providing fast access to capital for seizing growth opportunities.",
         },
     ];
 
@@ -427,7 +427,7 @@ const SMELoan = () => {
                                     Manufacturing SMEs
                                 </h3>
                                 <div className="bg-gradient-to-r font-3 from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
-                                    <p className="text-2xl font-bold">₹10L - ₹25Cr</p>
+                                    <p className="text-2xl font-bold">₹10L to ₹25Cr</p>
                                     <p className="text-xs opacity-90">Loan amount range</p>
                                 </div>
                             </div>
@@ -471,7 +471,7 @@ const SMELoan = () => {
                                     Trading SMEs
                                 </h3>
                                 <div className="bg-gradient-to-r font-3 from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
-                                    <p className="text-2xl font-bold">₹5L - ₹15Cr</p>
+                                    <p className="text-2xl font-bold">₹5L to ₹15Cr</p>
                                     <p className="text-xs opacity-90">Loan amount range</p>
                                 </div>
                             </div>
@@ -515,7 +515,7 @@ const SMELoan = () => {
                                     Service SMEs
                                 </h3>
                                 <div className="bg-gradient-to-r font-3 from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
-                                    <p className="text-2xl font-bold">₹3L - ₹10Cr</p>
+                                    <p className="text-2xl font-bold">₹3L to ₹10Cr</p>
                                     <p className="text-xs opacity-90">Loan amount range</p>
                                 </div>
                             </div>
@@ -620,7 +620,7 @@ const SMELoan = () => {
                                 </li>
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>Profit-making for the previous 2 years.</span>
+                                    <span>Profit making for the previous 2 years.</span>
                                 </li>
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
@@ -628,7 +628,7 @@ const SMELoan = () => {
                                 </li>
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>Applicant age between 21-65 years.</span>
+                                    <span>Applicant age between 21 to 65 years.</span>
                                 </li>
                             </ul>
                         </motion.div>

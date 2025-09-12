@@ -38,12 +38,12 @@ const SoleProprietorRegistration = () => {
     {
       question: "2. What are the key benefits?",
       answer:
-        "Quickest setup, lowest cost, minimal compliance, auto-taxation in owner's name, full control, no mandatory audit up to ₹1 crore turnover, and simplicity in operation.",
+        "Quickest setup, lowest cost, minimal compliance, auto taxation in owner's name, full control, no mandatory audit up to ₹1 crore turnover, and simplicity in operation.",
     },
     {
       question: "3. What are the document requirements?",
       answer:
-        "Owner's PAN, Aadhaar, passport-size photo, business address proof (rental/utility bill), and supplementary licenses if relevant (Shops and Establishment, GST, or Udyam registration).",
+        "Owner's PAN, Aadhaar, passport size photo, business address proof (rental/utility bill), and supplementary licenses if relevant (Shops and Establishment, GST, or Udyam registration).",
     },
     {
       question: "4. How to open a bank account for a proprietorship?",
@@ -58,7 +58,7 @@ const SoleProprietorRegistration = () => {
     {
       question: "6. How does Abtik help sole proprietors?",
       answer:
-        "Abtik gets all your registrations (GST, Udyam, Shops Act), drafts required documents, and guides your banking, tax, and compliance to ensure your business runs legally—plus support for upgrades to LLP or Pvt Ltd later.",
+        "Abtik gets all your registrations (GST, Udyam, Shops Act), drafts required documents, and guides your banking, tax, and compliance to ensure your business runs legally plus support for upgrades to LLP or Pvt Ltd later.",
     },
   ];
 
@@ -161,7 +161,7 @@ const SoleProprietorRegistration = () => {
   const benefitsData = [
     {
       icon: TrendingUp,
-      title: "Zero Set-up Time",
+      title: "Zero Set up Time",
       description:
         "Start instantly, perfect for freelancers, traders, shopkeepers, and professionals.",
     },
@@ -248,7 +248,7 @@ const SoleProprietorRegistration = () => {
 
             >
               Kickstart your small business or freelance venture as a sole
-              proprietor. Fastest, lowest-cost, owner-controlled—Abtik gets your
+              proprietor. Fastest, lowest cost, owner controlled, Abtik gets your
               GST, Udyam, and bank proof ready in record time.
             </p>
             <div className="pt-2 sm:pt-4">
@@ -385,7 +385,7 @@ const SoleProprietorRegistration = () => {
               small businesses, traders, and freelancers. With the right
               supporting documents and registrations, you can open bank
               accounts, acquire licenses, and access credit or MSME
-              benefits—Abtik makes it effortless.
+              benefits, Abtik makes it effortless.
             </p>
           </div>
         </motion.section>
@@ -411,7 +411,7 @@ const SoleProprietorRegistration = () => {
             >
               Any Indian citizen with a valid PAN/Aadhaar, and address proof for
               business premises, can start a sole proprietorship. No minimum
-              capital or partners required—instant eligibility for GST, Udyam &
+              capital or partners required instant eligibility for GST, Udyam &
               Shops Act registrations.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

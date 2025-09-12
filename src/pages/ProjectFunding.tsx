@@ -46,7 +46,7 @@ const ProjectFunding = () => {
         {
             question: "2. What types of projects qualify for project funding?",
             answer:
-                "Eligible projects include infrastructure development, manufacturing plants, technology installations, renewable energy projects, healthcare facilities, educational institutions, real estate development, export-oriented projects, and innovation-driven ventures across various sectors.",
+                "Eligible projects include infrastructure development, manufacturing plants, technology installations, renewable energy projects, healthcare facilities, educational institutions, real estate development, export oriented projects, and innovation driven ventures across various sectors.",
         },
         {
             question: "3. What is the typical funding amount for project financing?",
@@ -56,17 +56,17 @@ const ProjectFunding = () => {
         {
             question: "4. What are the key requirements for project funding approval?",
             answer:
-                "Key requirements include detailed project report, feasibility study, technical and financial viability assessment, environmental clearances, land acquisition documents, promoter contribution (typically 25-30%), and strong management team with relevant experience.",
+                "Key requirements include detailed project report, feasibility study, technical and financial viability assessment, environmental clearances, land acquisition documents, promoter contribution (typically 25 to 30%), and strong management team with relevant experience.",
         },
         {
             question: "5. How is project funding different from regular business loans?",
             answer:
-                "Project funding is specifically structured for new projects with phased disbursement linked to milestones, longer gestation periods, and project-specific securities. Regular business loans are for operational needs with immediate full disbursement and shorter tenures.",
+                "Project funding is specifically structured for new projects with phased disbursement linked to milestones, longer gestation periods, and project specific securities. Regular business loans are for operational needs with immediate full disbursement and shorter tenures.",
         },
         {
             question: "6. What is the typical repayment structure for project loans?",
             answer:
-                "Project loans typically have a moratorium period during construction/implementation phase, followed by structured repayment over 7-15 years. Repayment often begins after project completion with cash flow generation, and may include bullet payments or step-up EMI structures.",
+                "Project loans typically have a moratorium period during construction/implementation phase, followed by structured repayment over 7to15 years. Repayment often begins after project completion with cash flow generation, and may include bullet payments or step up EMI structures.",
         },
     ];
 
@@ -138,7 +138,7 @@ const ProjectFunding = () => {
             icon: Users,
             title: "Funding Arrangement",
             description:
-                "Our team coordinates with banks, financial institutions, and alternative lenders to arrange project funding with competitive terms, appropriate tenure, and milestone-based disbursement.",
+                "Our team coordinates with banks, financial institutions, and alternative lenders to arrange project funding with competitive terms, appropriate tenure, and milestone based disbursement.",
         },
         {
             icon: Headset,
@@ -173,7 +173,7 @@ const ProjectFunding = () => {
         },
         {
             icon: TrendingUp,
-            title: "Milestone-based Disbursement",
+            title: "Milestone based Disbursement",
             description:
                 "Benefit from phased funding release aligned with project milestones, ensuring optimal cash flow management and reduced interest burden during implementation.",
         },
@@ -251,7 +251,7 @@ const ProjectFunding = () => {
 
                     >
                         Transform your project vision into reality with specialized funding solutions.
-                        Access ₹1 crore to ₹500 crore financing with milestone-based disbursement,
+                        Access ₹1 crore to ₹500 crore financing with milestone based disbursement,
                         flexible terms, and comprehensive support from inception to completion.
                     </p>
                     <div className="pt-2 sm:pt-4">
@@ -429,7 +429,7 @@ const ProjectFunding = () => {
                                     Infrastructure Projects
                                 </h3>
                                 <div className="bg-gradient-to-r font-3 from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
-                                    <p className="text-2xl font-bold">₹10Cr - ₹500Cr</p>
+                                    <p className="text-2xl font-bold">₹10Cr to ₹500Cr</p>
                                     <p className="text-xs opacity-90">Funding range</p>
                                 </div>
                             </div>
@@ -473,7 +473,7 @@ const ProjectFunding = () => {
                                     Manufacturing Projects
                                 </h3>
                                 <div className="bg-gradient-to-r font-3 from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
-                                    <p className="text-2xl font-bold">₹5Cr - ₹200Cr</p>
+                                    <p className="text-2xl font-bold">₹5Cr to ₹200Cr</p>
                                     <p className="text-xs opacity-90">Funding range</p>
                                 </div>
                             </div>
@@ -517,7 +517,7 @@ const ProjectFunding = () => {
                                     Innovation Projects
                                 </h3>
                                 <div className="bg-gradient-to-r font-3 from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
-                                    <p className="text-2xl font-bold">₹1Cr - ₹50Cr</p>
+                                    <p className="text-2xl font-bold">₹1Cr to ₹50Cr</p>
                                     <p className="text-xs opacity-90">Funding range</p>
                                 </div>
                             </div>
@@ -536,7 +536,7 @@ const ProjectFunding = () => {
                                 </li>
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>Export-oriented ventures</span>
+                                    <span>Export oriented ventures</span>
                                 </li>
                             </ul>
                         </motion.div>
@@ -585,7 +585,7 @@ const ProjectFunding = () => {
                                 </li>
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>Milestone-based disbursement aligned with progress.</span>
+                                    <span>Milestone based disbursement aligned with progress.</span>
                                 </li>
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
@@ -597,7 +597,7 @@ const ProjectFunding = () => {
                                 </li>
                                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                                     <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>Competitive interest rates for long-term projects.</span>
+                                    <span>Competitive interest rates for long term projects.</span>
                                 </li>
                             </ul>
                         </motion.div>

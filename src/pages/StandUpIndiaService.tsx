@@ -39,34 +39,34 @@ const StandUpIndia = () => {
 
     const faq = [
         {
-            question: "1. What is Stand-Up India scheme?",
+            question: "1. What is Stand Up India scheme?",
             answer:
-                "Stand-Up India is a flagship scheme launched by the Government of India to promote entrepreneurship among SC/ST and women entrepreneurs by facilitating bank loans between ₹10 lakh to ₹1 crore for greenfield enterprises in manufacturing, services, or trading sectors.",
+                "Stand Up India is a flagship scheme launched by the Government of India to promote entrepreneurship among SC/ST and women entrepreneurs by facilitating bank loans between ₹10 lakh to ₹1 crore for greenfield enterprises in manufacturing, services, or trading sectors.",
         },
         {
-            question: "2. What is the loan amount under Stand-Up India?",
+            question: "2. What is the loan amount under Stand Up India?",
             answer:
-                "Under Stand-Up India, eligible beneficiaries can get bank loans ranging from ₹10 lakh to ₹1 crore for setting up greenfield enterprises. The loan covers both term loan and working capital requirements for the business.",
+                "Under Stand Up India, eligible beneficiaries can get bank loans ranging from ₹10 lakh to ₹1 crore for setting up greenfield enterprises. The loan covers both term loan and working capital requirements for the business.",
         },
         {
-            question: "3. Who is eligible for Stand-Up India scheme?",
+            question: "3. Who is eligible for Stand Up India scheme?",
             answer:
                 "SC/ST borrowers and women borrowers aged 18 years and above are eligible. Only one borrower per bank branch (either SC/ST or woman) can avail the facility. The borrower should not have availed any bank loan above ₹50,000 in the past.",
         },
         {
-            question: "4. What documents are required for Stand-Up India application?",
+            question: "4. What documents are required for Stand Up India application?",
             answer:
                 "Required documents include project report, Aadhaar card, PAN card, address proof, caste certificate (for SC/ST), educational qualifications, business plan, land documents (if any), and bank account statements.",
         },
         {
-            question: "5. Is there any subsidy under Stand-Up India?",
+            question: "5. Is there any subsidy under Stand Up India?",
             answer:
-                "Stand-Up India is primarily a loan scheme without direct subsidy. However, it offers composite loans at competitive interest rates, along with handholding support, training, and mentorship to ensure business success.",
+                "Stand Up India is primarily a loan scheme without direct subsidy. However, it offers composite loans at competitive interest rates, along with handholding support, training, and mentorship to ensure business success.",
         },
         {
-            question: "6. What is the repayment period for Stand-Up India loans?",
+            question: "6. What is the repayment period for Stand Up India loans?",
             answer:
-                "Stand-Up India loans have a repayment period of up to 7 years with a moratorium period of up to 18 months on principal repayment. The interest rate is typically linked to MCLR plus spread.",
+                "Stand Up India loans have a repayment period of up to 7 years with a moratorium period of up to 18 months on principal repayment. The interest rate is typically linked to MCLR plus spread.",
         },
     ];
 
@@ -132,13 +132,13 @@ const StandUpIndia = () => {
             icon: FileText,
             title: "Project Planning",
             description:
-                "We help you develop comprehensive project reports and business plans that meet Stand-Up India eligibility and banking requirements.",
+                "We help you develop comprehensive project reports and business plans that meet Stand Up India eligibility and banking requirements.",
         },
         {
             icon: Users,
             title: "Bank Liaison",
             description:
-                "Our team coordinates with designated bank branches to ensure smooth application processing and loan approval under Stand-Up India.",
+                "Our team coordinates with designated bank branches to ensure smooth application processing and loan approval under Stand Up India.",
         },
         {
             icon: Headset,
@@ -238,7 +238,7 @@ const StandUpIndia = () => {
                     >
                         Empower with{" "}
                         <span className="text-[#3CA2E2] font-extrabold block sm:inline">
-                            Stand-Up India
+                            Stand Up India
                         </span>{" "}
                         Entrepreneurship
                     </h1>
@@ -250,7 +250,7 @@ const StandUpIndia = () => {
                          max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0 font-2"
                       
                     >
-                        Start your entrepreneurial journey with Stand-Up India scheme benefits.
+                        Start your entrepreneurial journey with Stand Up India scheme benefits.
                         Get loans from ₹10 lakh to ₹1 crore for SC/ST and women entrepreneurs
                         to establish greenfield enterprises.
                     </p>
@@ -264,7 +264,7 @@ const StandUpIndia = () => {
                                transition-transform duration-300
                               shadow-lg hover:shadow-xl"
                         >
-                            Apply for Stand-Up India
+                            Apply for Stand Up India
                         </button>
                     </div>
                 </motion.div>
@@ -379,12 +379,12 @@ const StandUpIndia = () => {
                         className="sub-heading text-white text-left font-2"
                        
                     >
-                        What Is Stand-Up India Scheme?
+                        What Is Stand Up India Scheme?
                     </h2>
                     <p className="paragraph !text-white mx-auto text-left font-3"
                        
                     >
-                        Stand-Up India is a flagship initiative launched by the Government of India to promote
+                        Stand Up India is a flagship initiative launched by the Government of India to promote
                         entrepreneurship among SC/ST and women entrepreneurs. The scheme facilitates bank loans
                         between ₹10 lakh to ₹1 crore for setting up greenfield enterprises in manufacturing,
                         services, or trading sectors, ensuring at least one SC/ST and one woman entrepreneur
@@ -404,7 +404,7 @@ const StandUpIndia = () => {
                 <h2 className="sub-heading text-center font-2 bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
                     
                 >
-                    Stand-Up India Loan Structure
+                    Stand Up India Loan Structure
                 </h2>
 
                 <div className="mt-8 bg-white rounded-4xl p-4 md:p-8 shadow-md">
@@ -429,7 +429,7 @@ const StandUpIndia = () => {
                                     SC/ST Entrepreneurs
                                 </h3>
                                 <div className="bg-gradient-to-r from-[#052EAA] font-3 to-[#3CA2E2] text-white p-3 rounded-xl">
-                                    <p className="text-2xl font-bold">₹10L - ₹1Cr</p>
+                                    <p className="text-2xl font-bold">₹10L to ₹1Cr</p>
                                     <p className="text-xs opacity-90">Bank loan amount</p>
                                 </div>
                             </div>
@@ -473,7 +473,7 @@ const StandUpIndia = () => {
                                     Women Entrepreneurs
                                 </h3>
                                 <div className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
-                                    <p className="text-2xl font-bold">₹10L - ₹1Cr</p>
+                                    <p className="text-2xl font-bold">₹10L to ₹1Cr</p>
                                     <p className="text-xs opacity-90">Bank loan amount</p>
                                 </div>
                             </div>
@@ -511,13 +511,13 @@ const StandUpIndia = () => {
                 <h2 className="sub-heading text-center font-2 bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
                
                 >
-                    Stand-Up India Benefits & Eligibility
+                    Stand Up India Benefits & Eligibility
                 </h2>
                 <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
                     <p className="text-sm md:text-base text-gray-600 text-center font-3"
                        
                     >
-                        Stand-Up India empowers SC/ST and women entrepreneurs with comprehensive financial support
+                        Stand Up India empowers SC/ST and women entrepreneurs with comprehensive financial support
                         and mentorship to establish successful greenfield enterprises across various sectors.
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -606,7 +606,7 @@ const StandUpIndia = () => {
                 <h2 className="sub-heading text-center font-2 bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
                     
                 >
-                    How Abtik Helps You Get Stand-Up India Loan
+                    How Abtik Helps You Get Stand Up India Loan
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
                     {processData?.map((process, index) => (
@@ -643,7 +643,7 @@ const StandUpIndia = () => {
                 <h2 className="sub-heading text-center font-2 bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
                   
                 >
-                    Why Choose Abtik for Stand-Up India
+                    Why Choose Abtik for Stand Up India
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
                     {benefitsData?.map((benefit, index) => (
