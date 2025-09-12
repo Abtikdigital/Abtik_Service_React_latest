@@ -235,7 +235,7 @@ const Ebook: React.FC = () => {
       description:
         "The ultimate guide for Indian startup founders. Discover how to get DPIIT recognition and claim your Section 80-IAC tax benefits to save profits and accelerate your growth.",
       image: Book1,
-      pdfPath: "/TaxExemptionBook.pdf",
+      pdfPath: "/TaxBook.pdf",
       downloadFileName: "TAXEXEMPTIONE-BOOK.pdf",
     },
    
