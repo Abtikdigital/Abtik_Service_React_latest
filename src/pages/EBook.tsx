@@ -228,6 +228,16 @@ const Ebook: React.FC = () => {
       pdfPath: "/StartupAccelerator.pdf",
       downloadFileName: "StartupAccelerator.pdf",
     },
+        {
+      id: "ebook2",
+      title:
+        "Startup India Tax Exemption Guide: Claim Your 80-IAC Benefits ",
+      description:
+        "The ultimate guide for Indian startup founders. Discover how to get DPIIT recognition and claim your Section 80-IAC tax benefits to save profits and accelerate your growth.",
+      image: Book1,
+      pdfPath: "/TAXEXEMPTIONE-BOOK.pdf",
+      downloadFileName: "TAXEXEMPTIONE-BOOK.pdf",
+    },
    
   ];
 
