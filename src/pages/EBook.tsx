@@ -20,6 +20,7 @@ import Contact from "../section/Contact";
 import BgImage from "../assets/Hero/bgImg.svg";
 import EbookImage from "../assets/eBooks/Image2.jpg";
 import Book1 from "../assets/eBooks/StartupAccelerator.jpg";
+import Book2 from "../assets/eBooks/TAXExemption.jpg"
 import FormImage from "../assets/Logo/Abtik-blue.png";
 import seoData from "../data/seoData.json";
 import isValidIndianNumber from "../utils/validation/isGenuineNumber";
@@ -234,7 +235,7 @@ const Ebook: React.FC = () => {
         "Startup India Tax Exemption Guide: Claim Your 80-IAC Benefits ",
       description:
         "The ultimate guide for Indian startup founders. Discover how to get DPIIT recognition and claim your Section 80-IAC tax benefits to save profits and accelerate your growth.",
-      image: Book1,
+      image: Book2,
       pdfPath: "/TaxExemptionEBook.pdf",
       downloadFileName: "TaxExemptionBook.pdf",
     },
