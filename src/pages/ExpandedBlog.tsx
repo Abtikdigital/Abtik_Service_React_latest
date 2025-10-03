@@ -5,7 +5,8 @@ import BgImage from "../assets/ExpandedBlog/bgImg.svg";
 import Image1 from "../assets/NewBlog/Budget1.jpg";
 import Image2 from "../assets/NewBlog/Startup.jpg";
 import Image3 from "../assets/NewBlog/Image2.jpg";
-import Image4 from "../assets/NewBlog/BussinessWomen.jpg"
+import Image4 from "../assets/NewBlog/BussinessWomen.jpg";
+import Image5 from "../assets/NewBlog/BusinessRegistrationMadeSimple.jpg"
 import { useDispatch } from "react-redux";
 
 interface BlogListItem {
@@ -33,9 +34,7 @@ const ExpandedBlog = () => {
   const blogsData: BlogData[] = [
     {
       title: "Budget 2025: A Strategic Shift for MSMEs",
-      description:
-        `India’s Union Budget 2025 has set a bold tone for the future of Micro, Small, and Medium Enterprises (MSMEs). With ₹23,100 crore allocated directly to support this backbone of the Indian economy, the government is finally moving from symbolic announcements to actionable, structural reforms.`,
-
+      description: `India’s Union Budget 2025 has set a bold tone...`,
       img: Image1,
       slug: "Budget-2025-A-Strategic-Shift-for-MSMEs",
       date: "July 20, 2024",
@@ -50,7 +49,7 @@ const ExpandedBlog = () => {
             "Structural approach rather than one time relief packages",
           ],
           description:
-            "For years, MSMEs have demanded more than just recognition they’ve needed real, accessible support. The 2025 Budget delivers that with a dedicated allocation that targets growth, sustainability, and resilience.",
+            "For years, MSMEs have demanded more than just recognition...",
         },
         {
           title: "Major Reforms Driving the Shift",
@@ -59,15 +58,14 @@ const ExpandedBlog = () => {
             "Introduction of MSME Credit Cards",
             "Reduction of Import Duties on Essential Raw Materials",
           ],
-          description:
-            "Several key announcements in Budget 2025 highlight a firm commitment to making business easier, credit more accessible, and systems more transparent for MSMEs:",
+          description: "Several key announcements in Budget 2025 highlight...",
         },
       ],
     },
     {
       title: "India’s Startups Get a Boost: Budget 2025 Unlocks New Pathways",
       description:
-        "Startups are no longer fringe players they are now central to India’s economic story. Budget 2025 backs this shift with tax reliefs, easier capital access, and major investments in innovation.",
+        "Startups are no longer fringe players they are now central...",
       img: Image2,
       slug: "Indias-Startups-Get-a-Boost-Budget-2025-Unlocks-New-Pathways",
       date: "July 18, 2024",
@@ -79,10 +77,10 @@ const ExpandedBlog = () => {
           lists: [
             "Extended tax benefits for eligible startups",
             "Simplified capital gains tax structure",
-            "Launch of a ₹1,000 Cr Innovation Fund focused on: 1. Artificial Intelligence (AI) 2. Biotechnology 3. Sustainable Technology",
+            "Launch of a ₹1,000 Cr Innovation Fund focused on AI, Biotech & Sustainability",
           ],
           description:
-            "For years, MSMEs have demanded more than just recognition they’ve needed real, accessible support. The 2025 Budget delivers that with a dedicated allocation that targets growth, sustainability, and resilience.",
+            "For years, MSMEs have demanded more than just recognition...",
         },
         {
           title: "Expanding Innovation Beyond Metro Cities",
@@ -92,25 +90,26 @@ const ExpandedBlog = () => {
             "Eased regulatory environment for new founders",
             "Greater access to institutional funding",
           ],
-          description:
-            "",
+          description: "",
         },
       ],
     },
     {
       title: "Budget 2025 Simplifies the Journey for New Founders",
       description:
-        "First time entrepreneurs are front and center in Budget 2025. With a streamlined digital portal and structured mentorship, starting up in India just got easier and faster.",
+        "First time entrepreneurs are front and center in Budget 2025...",
       img: Image3,
       slug: "Budget-2025-Simplifies-the-Journey-for-New-Founders",
       date: "July 15, 2024",
       readTime: "6 min read",
       category: "Legal",
       list: [],
-    }, {
-      title: "A Budget That Strengthens Local Industries and Women Led Enterprises",
+    },
+    {
+      title:
+        "A Budget That Strengthens Local Industries and Women Led Enterprises",
       description:
-        "Beyond big cities and large companies, Budget 2025 has acknowledged the power of local, women led, and artisan driven enterprises. Targeted investments in tribal crafts, khadi clusters, and agri based businesses highlight the government’s commitment to inclusive economic growth.",
+        "Beyond big cities and large companies, Budget 2025 has acknowledged...",
       img: Image4,
       slug: "A-Budget-That-Strengthens-Local-Industries-and-Women-Led-Enterprises",
       date: "July 15, 2024",
@@ -120,17 +119,250 @@ const ExpandedBlog = () => {
         {
           title: "New initiatives for solar powered equipment",
           lists: [],
-          description: "New initiatives for solar powered equipment, cold storage support, and digital training for micro entrepreneurs will directly benefit small business owners in rural and semi urban regions. These aren’t just incentives they are enablers."
+          description:
+            "New initiatives for solar powered equipment, cold storage...",
         },
         {
           title: "By turning local industries into competitive,",
           lists: [],
-          description: "By turning local industries into competitive, high quality suppliers and exporters, Budget 2025 is not only uplifting livelihoods but also placing India’s cultural industries on the global map."
+          description:
+            "By turning local industries into competitive, high quality suppliers...",
         },
       ],
     },
 
-
+    // ✅ New Blog Added
+   {
+      title:
+        "Business Registration Made Simple: Choose the Right Structure to Maximize Growth & Minimize Risk",
+      description:
+        "Your business structure decision will impact every aspect of your venture for years to come – yet 70% of entrepreneurs choose without proper guidance. The difference between choosing the right and wrong business structure can mean: ₹5-10 lakhs in tax savings annually, personal asset protection worth crores, easier access to funding and investors, and simplified expansion and exit strategies.",
+      img: Image5, // Replace with a unique image if available
+      slug: "Business-Registration-Made-Simple",
+      date: "September 03, 2025",
+      readTime: "10 min read",
+      category: "Business",
+      list: [
+        {
+          title: "The Hidden Cost of Wrong Business Structure Choice",
+          lists: [
+            "Priya’s consulting restructuring cost ₹3 lakhs & 6 months lost",
+            "Rohit’s partnership dissolution lost ₹50 lakhs in value",
+          ],
+          description:
+            "Most entrepreneurs focus on convenience instead of strategy – leading to costly mistakes in tax, funding, and compliance. Priya started her consulting business as a sole proprietorship for simplicity. Three years later, investors insisted on a company structure, costing her ₹3 lakhs and 6 months. Rohit’s partnership lacked proper documentation, leading to a ₹50 lakh loss when disputes arose.",
+        },
+        {
+          title: "Why Business Structure Choice is Your Most Critical Decision",
+          lists: [
+            "Tax Implications: Different structures have vastly different tax treatments",
+            "Liability Protection: Personal assets at risk vs. protected",
+            "Funding Access: Some structures attract investors better",
+            "Operational Flexibility: Ease of operations, compliance, and decision-making",
+            "Exit Strategy: How easy is it to sell or transfer the business",
+            "Credibility Factor: Market perception and customer trust",
+          ],
+          description:
+            "Choosing the right business structure impacts tax savings, liability protection, funding opportunities, credibility, and long-term growth. This guide helps you choose the best incorporation for your business.",
+        },
+        {
+          title: "Option 1: Sole Proprietorship - The Individual Entrepreneur's Choice",
+          lists: [
+            "Simplest to start: Minimal paperwork and compliance",
+            "Complete control: All decisions yours alone",
+            "Tax efficiency: Business income taxed as personal income",
+            "Low cost: Minimal registration and maintenance costs",
+            "Quick setup: Can start immediately",
+            "Limitations: Unlimited liability, funding challenges, limited credibility, succession issues, growth constraints",
+            "Compliance: Shop & Establishment, Professional Tax, GST (if turnover >₹40 lakhs), Income Tax",
+            "Investment: ₹5,000 - ₹15,000",
+            "Timeline: 1-2 weeks",
+          ],
+          description:
+            "Perfect for individual consultants, freelancers, small retail, or low-risk businesses testing ideas. Personal assets are at risk, and scaling is difficult.",
+        },
+        {
+          title: "Option 2: Limited Liability Partnership (LLP) - The Professional Partnership Structure",
+          lists: [
+            "Limited liability: Partners' personal assets protected",
+            "Flexibility: Less compliance than companies",
+            "Professional credibility: Better market perception",
+            "Tax efficiency: No dividend distribution tax",
+            "Perpetual succession: Continues beyond partner changes",
+            "Limitations: Partner restrictions, funding challenges, transferability issues, more compliance than proprietorship",
+            "Compliance: Annual ROC filing, Income Tax, LLP agreement, Designated Partner",
+            "Investment: ₹15,000 - ₹25,000",
+            "Timeline: 2-3 weeks",
+          ],
+          description:
+            "Ideal for professional services, family businesses, or service-based businesses with moderate risk. Combines partnership flexibility with liability protection.",
+        },
+        {
+          title: "Option 3: Private Limited Company - The Growth-Oriented Structure",
+          lists: [
+            "Complete liability protection: Shareholders' assets fully protected",
+            "Easy funding: Attractive to investors and lenders",
+            "Credibility: Highest market perception and trust",
+            "Transferability: Easy to sell shares and ownership",
+            "Perpetual succession: Company continues indefinitely",
+            "Tax benefits: Various deductions and exemptions",
+            "Compliance: Board meetings, ROC filings, audits, director appointments",
+            "Investment: ₹25,000 - ₹40,000",
+            "Timeline: 3-4 weeks",
+          ],
+          description:
+            "Best for businesses planning to raise funding, manufacturing, tech startups, or rapid scaling. Offers maximum protection and growth flexibility.",
+        },
+        {
+          title: "Option 4: Partnership Firm - The Traditional Collaboration Structure",
+          lists: [
+            "Simple setup: Easy to establish and operate",
+            "Resource pooling: Combined expertise and capital",
+            "Tax pass-through: Profits taxed at partner level",
+            "Flexibility: Informal decision-making process",
+            "Limitations: Unlimited liability, partner disputes, limited life, funding restrictions",
+            "Investment: ₹8,000 - ₹15,000",
+            "Timeline: 1-2 weeks",
+          ],
+          description:
+            "Suitable for family businesses, professional practices, or local trading with clear partner roles. Partners face unlimited liability.",
+        },
+        {
+          title: "Option 5: Section 8 Company - The Social Impact Structure",
+          lists: [
+            "Tax exemptions: Multiple tax benefits",
+            "Credibility: Government recognition and trust",
+            "Grant access: Eligible for government and international grants",
+            "Limited liability: Founders' personal assets protected",
+            "Limitations: Profit restrictions, object limitations, compliance-intensive",
+            "Investment: ₹20,000 - ₹30,000",
+            "Timeline: 4-6 weeks",
+          ],
+          description:
+            "Designed for NGOs, educational institutions, or charitable organizations with social objectives. Profit distribution is restricted.",
+        },
+        {
+          title: "Option 6: Producer Company - The Agricultural Cooperation Structure",
+          lists: [
+            "Agricultural focus: Designed for farming businesses",
+            "Government support: Access to schemes and subsidies",
+            "Cooperative structure: Democratic governance",
+            "Limited liability: Member protection",
+            "Requirements: Minimum 10 members, agricultural focus",
+            "Investment: ₹25,000 - ₹35,000",
+            "Timeline: 4-6 weeks",
+          ],
+          description:
+            "Tailored for farmer producer organizations, agricultural cooperatives, or rural enterprises. Offers cooperative governance and liability protection.",
+        },
+        {
+          title: "The Structure Selection Framework",
+          lists: [
+            "High Risk Businesses: Manufacturing, trading, technology → Private Limited Company",
+            "Medium Risk Businesses: Professional services, consulting → LLP or Private Limited",
+            "Low Risk Businesses: Freelancing, small retail → Sole Proprietorship or Partnership",
+            "Planning to Raise Funding: Private Limited Company",
+            "Organic Growth Focus: Any structure based on other factors",
+            "Family Business: Partnership or Private Limited",
+            "Tax Optimization: Proprietorship/Partnership (individual rates up to 30%), LLP (flat 30%), Private Limited (25-30% + dividend tax)",
+          ],
+          description:
+            "Use this framework to align your business goals with the right structure, considering risk, growth, funding, tax, and compliance factors.",
+        },
+        {
+          title: "The Registration Process: Step-by-Step Guide",
+          lists: [
+            "Phase 1: Pre-Registration - Check name availability, gather documents, prepare bank account, arrange address proof",
+            "Phase 2: Core Registration - Submit PAN, Aadhaar, address proofs, photos, bank statements, rent agreement",
+            "Phase 3: Post-Registration - Open bank account, GST registration, professional tax, shop & establishment license",
+          ],
+          description:
+            "A streamlined process ensures smooth registration and compliance setup for your business.",
+        },
+        {
+          title: "Common Registration Mistakes That Cost Dearly",
+          lists: [
+            "Choosing structure based on immediate convenience: ₹2-5 lakh restructuring costs",
+            "Not considering future funding needs: Missed investment opportunities",
+            "Ignoring compliance requirements: Penalties and legal issues",
+            "Poor documentation and agreements: Partnership disputes and dissolution",
+            "Not planning for succession and exit: Difficulty in business transfer/sale",
+          ],
+          description:
+            "Avoid these mistakes to prevent costly setbacks and ensure long-term success.",
+        },
+        {
+          title: "Success Stories: Right Structure, Right Results",
+          lists: [
+            "Tech Startup: Chose Private Limited, raised ₹2 crore in 18 months, valued at ₹10 crores",
+            "Consulting Excellence: LLP structure, attracted high-value clients, scaled to 50+ employees",
+            "Manufacturing Growth: Converted from partnership to Private Limited, raised ₹5 crore loan",
+          ],
+          description:
+            "Real-world examples show how structure decisions drive growth and protect assets.",
+        },
+        {
+          title: "The Professional Registration Advantage",
+          lists: [
+            "DIY Challenges: Complex procedures, risk of rejection, missed optimization, compliance confusion",
+            "Professional Benefits: Strategic consultation, error-free filing, faster processing, ongoing support",
+            "Investment: ₹10,000 - ₹25,000",
+            "ROI: Time savings (20-30 hours), penalty avoidance (₹50,000+), strategic advantage",
+          ],
+          description:
+            "Professional help ensures optimal structure choice and compliance, saving time and money.",
+        },
+        {
+          title: "Your Registration Action Plan",
+          lists: [
+            "Step 1: Structure Decision Matrix (Week 1) - Evaluate risk, growth, funding, compliance, tax",
+            "Step 2: Documentation & Planning (Week 2) - Gather documents, plan name, office, banking",
+            "Step 3: Registration Process (Week 3-4) - File applications, complete verifications, obtain certificates",
+            "Step 4: Post-Registration Setup (Week 5-6) - Statutory registrations, accounting, legal documentation",
+          ],
+          description:
+            "Follow this action plan to build a strong business foundation efficiently.",
+        },
+        {
+          title: "Investment Comparison: Structure-wise Costs",
+          lists: [
+            "Sole Proprietorship: ₹20,000-35,000 (Year 1)",
+            "Partnership Firm: ₹30,000-45,000 (Year 1)",
+            "LLP: ₹40,000-65,000 (Year 1)",
+            "Private Limited: ₹75,000-1,15,000 (Year 1)",
+            "ROI Perspective: Robust structures yield 5-10x returns through opportunities and protection",
+          ],
+          description:
+            "Higher initial investments in robust structures offer significant long-term returns.",
+        },
+        {
+          title: "Red Flags: When to Reconsider Your Current Structure",
+          lists: [
+            "Planning to raise external funding",
+            "Personal assets at risk due to liabilities",
+            "Losing business due to credibility issues",
+            "Unsustainable tax burden",
+            "Frequent partner disputes",
+            "Need to bring in new partners/investors",
+            "Succession planning required",
+          ],
+          description:
+            "These signs indicate it’s time to restructure for better growth and protection.",
+        },
+        {
+          title: "The Bottom Line: Your Structure is Your Foundation",
+          lists: [
+            "Think long-term: Choose for future goals, not just current state",
+            "Plan for growth: Start with the right structure to avoid changes",
+            "Get professional advice: Expert help outweighs DIY risks",
+            "Document everything: Prevent disputes with proper agreements",
+            "Stay compliant: Build credibility and maintain options",
+          ],
+          description:
+            "Your business structure is the foundation for success. Choose wisely to unlock your venture’s full potential.",
+        },
+      ],
+    },
   ];
 
   const { slug } = useParams<{ slug: string }>();
@@ -200,7 +432,6 @@ const ExpandedBlog = () => {
                           font-bold leading-tight sm:leading-tight md:leading-tight lg:leading-tight
                           text-white lg:text-inherit tracking-wide
                           main-heading font-1"
-
           >
             Your One Stop{" "}
             <span className="text-[#3CA2E2] font-extrabold block sm:inline">
@@ -292,10 +523,7 @@ const ExpandedBlog = () => {
             {/* Blog Content Card */}
             <div className="bg-white rounded-xl md:rounded-2xl shadow-lg p-4 md:p-6 lg:p-8">
               {/* Blog Title */}
-              <h2
-
-                className="text-xl md:text-2xl lg:text-3xl xl:text-4xl bg-gradient-to-r from-[#3CA2E2] to-[#052EAA] bg-clip-text text-transparent mb-4 md:mb-6 leading-tight font-1"
-              >
+              <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl bg-gradient-to-r from-[#3CA2E2] to-[#052EAA] bg-clip-text text-transparent mb-4 md:mb-6 leading-tight font-1">
                 {selectedBlogData.title}
               </h2>
 
@@ -315,7 +543,7 @@ const ExpandedBlog = () => {
                   >
                     {listItem?.title && (
                       <div className="flex items-center gap-3 md:gap-4 mb-4 md:mb-6 font-2">
-                        <div className="w-8 h-8 md:w-10 md:h-10 bg-gradient-to-r from-[#3CA2E2] to-[#052EAA] rounded-full flex items-center justify-center text-white font-bold text-base md:text-lg">
+                        <div className="min-w-8 min-h-8 md:min-w-10 md:min-h-10 bg-gradient-to-r from-[#3CA2E2] to-[#052EAA] rounded-full flex items-center justify-center text-white font-bold text-base md:text-lg">
                           {index + 1}
                         </div>
                         <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-gray-800">
@@ -423,9 +651,9 @@ const ExpandedBlog = () => {
                     Schedule a consultation with our experts today and transform
                     your business.
                   </p>
-                  <button className="custom-btn "
-                    onClick={handleOpenDialog}
-                  >Schedule a Call</button>
+                  <button className="custom-btn " onClick={handleOpenDialog}>
+                    Schedule a Call
+                  </button>
                 </div>
               </div>
             </div>
