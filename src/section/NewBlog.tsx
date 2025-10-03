@@ -100,8 +100,8 @@ const BlogSection = () => {
         ease.
       </p>
       <div
-        className={`grid ${
-          cols === 1 ? "grid-cols-1" : "md:grid-cols-4"
+        className={`grid  ${
+          cols === 1 ? "grid-cols-1  " : " lg:grid-cols-4"
         } gap-6`}
       >
         {blogs.slice(0, itemsToShow).map((blog, index) => (
@@ -116,9 +116,9 @@ const BlogSection = () => {
               src={blog?.img}
               alt={blog?.title}
               loading="lazy"
-              className="rounded-lg h-50 cursor-pointer hover:scale-105 duration-300 w-full transition-all"
+              className="rounded-lg h-50  cursor-pointer hover:scale-105 duration-300 w-full transition-all"
             />
-            <h2 className="text-xl text-[#3CA2E2] font-semibold line-clamp-2 font-4">
+            <h2 className="text-xl text-[#3CA2E2] font-semibold line-clamp-1 font-4">
               {blog?.title}
             </h2>
             <p className="paragraph line-clamp-1 font-4">{blog?.description}</p>

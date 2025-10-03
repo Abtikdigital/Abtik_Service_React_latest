@@ -166,7 +166,7 @@ const ExpandedBlog = () => {
             "Choosing the right business structure impacts tax savings, liability protection, funding opportunities, credibility, and long-term growth. This guide helps you choose the best incorporation for your business.",
         },
         {
-          title: "Option 1: Sole Proprietorship - The Individual Entrepreneur's Choice",
+          title: " Sole Proprietorship - The Individual Entrepreneur's Choice",
           lists: [
             "Simplest to start: Minimal paperwork and compliance",
             "Complete control: All decisions yours alone",
@@ -182,7 +182,7 @@ const ExpandedBlog = () => {
             "Perfect for individual consultants, freelancers, small retail, or low-risk businesses testing ideas. Personal assets are at risk, and scaling is difficult.",
         },
         {
-          title: "Option 2: Limited Liability Partnership (LLP) - The Professional Partnership Structure",
+          title: " Limited Liability Partnership (LLP) - The Professional Partnership Structure",
           lists: [
             "Limited liability: Partners' personal assets protected",
             "Flexibility: Less compliance than companies",
@@ -198,7 +198,7 @@ const ExpandedBlog = () => {
             "Ideal for professional services, family businesses, or service-based businesses with moderate risk. Combines partnership flexibility with liability protection.",
         },
         {
-          title: "Option 3: Private Limited Company - The Growth-Oriented Structure",
+          title: " Private Limited Company - The Growth-Oriented Structure",
           lists: [
             "Complete liability protection: Shareholders' assets fully protected",
             "Easy funding: Attractive to investors and lenders",
@@ -214,7 +214,7 @@ const ExpandedBlog = () => {
             "Best for businesses planning to raise funding, manufacturing, tech startups, or rapid scaling. Offers maximum protection and growth flexibility.",
         },
         {
-          title: "Option 4: Partnership Firm - The Traditional Collaboration Structure",
+          title: " Partnership Firm - The Traditional Collaboration Structure",
           lists: [
             "Simple setup: Easy to establish and operate",
             "Resource pooling: Combined expertise and capital",
@@ -228,7 +228,7 @@ const ExpandedBlog = () => {
             "Suitable for family businesses, professional practices, or local trading with clear partner roles. Partners face unlimited liability.",
         },
         {
-          title: "Option 5: Section 8 Company - The Social Impact Structure",
+          title: " Section 8 Company - The Social Impact Structure",
           lists: [
             "Tax exemptions: Multiple tax benefits",
             "Credibility: Government recognition and trust",
@@ -242,7 +242,7 @@ const ExpandedBlog = () => {
             "Designed for NGOs, educational institutions, or charitable organizations with social objectives. Profit distribution is restricted.",
         },
         {
-          title: "Option 6: Producer Company - The Agricultural Cooperation Structure",
+          title: " Producer Company - The Agricultural Cooperation Structure",
           lists: [
             "Agricultural focus: Designed for farming businesses",
             "Government support: Access to schemes and subsidies",
