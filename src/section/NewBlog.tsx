@@ -5,7 +5,7 @@ import Image1 from "../assets/NewBlog/Budget1.jpg";
 import Image2 from "../assets/NewBlog/Startup.jpg";
 import Image3 from "../assets/NewBlog/Image2.jpg";
 import Image4 from "../assets/NewBlog/BussinessWomen.jpg";
-import Image5 from "../assets/NewBlog/BusinessRegistrationMadeSimple.jpg"
+import Image5 from "../assets/NewBlog/SmallSizeBusinessRegistrationMadeSimple.jpg"
 
 const blogs = [
   {
