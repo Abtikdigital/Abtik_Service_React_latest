@@ -6,6 +6,7 @@ import Image2 from "../assets/NewBlog/Startup.jpg";
 import Image3 from "../assets/NewBlog/Image2.jpg";
 import Image4 from "../assets/NewBlog/BussinessWomen.jpg";
 import Image5 from "../assets/NewBlog/SmallSizeBusinessRegistrationMadeSimple.jpg"
+import Image6 from "../assets/NewBlog/Article2.jpg"
 
 const blogs = [
   {
@@ -43,6 +44,16 @@ const blogs = [
       "Beyond big cities and large companies, Budget 2025 has acknowledged...",
     img: Image5,
     slug: "Business-Registration-Made-Simple",
+    
+  
+  },
+    {
+    title:
+      "Unlocking Growth: A Complete Guide to Funding Solutions for Indian MSMEs in 2025",
+    description:
+      "Are you an MSME owner struggling to secure the right funding for your...",
+    img: Image6,
+    slug: "Unlocking-Growth-Funding-Solutions-for-Indian-MSMEs-2025",
     
   
   },
