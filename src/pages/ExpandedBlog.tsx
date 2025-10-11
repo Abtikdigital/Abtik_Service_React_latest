@@ -6,8 +6,8 @@ import Image1 from "../assets/NewBlog/Budget1.jpg";
 import Image2 from "../assets/NewBlog/Startup.jpg";
 import Image3 from "../assets/NewBlog/Image2.jpg";
 import Image4 from "../assets/NewBlog/BussinessWomen.jpg";
-import Image5 from "../assets/NewBlog/BusinessRegistrationMadeSimple.jpg"
-import Image6 from "../assets/NewBlog/Article2.jpg"
+import Image5 from "../assets/NewBlog/BusinessRegistrationMadeSimple.jpg";
+import Image6 from "../assets/NewBlog/Article2.jpg";
 import { useDispatch } from "react-redux";
 
 interface BlogListItem {
@@ -34,106 +34,143 @@ const ExpandedBlog = () => {
   };
   const blogsData: BlogData[] = [
     {
-      title: "Budget 2025: A Strategic Shift for MSMEs",
-      description: `India’s Union Budget 2025 has set a bold tone...`,
-      img: Image1,
-      slug: "Budget-2025-A-Strategic-Shift-for-MSMEs",
-      date: "July 20, 2024",
-      readTime: "5 min read",
-      category: "Marketing",
-      list: [
-        {
-          title: "Focused Financial Allocation: ₹23,100 Crore for MSMEs",
-          lists: [
-            "Long term vision for scalability and global competitiveness",
-            "₹23,100 crore allocation for MSME support",
-            "Structural approach rather than one time relief packages",
-          ],
-          description:
-            "For years, MSMEs have demanded more than just recognition...",
-        },
-        {
-          title: "Major Reforms Driving the Shift",
-          lists: [
-            "Expansion of the Credit Guarantee Fund Scheme",
-            "Introduction of MSME Credit Cards",
-            "Reduction of Import Duties on Essential Raw Materials",
-          ],
-          description: "Several key announcements in Budget 2025 highlight...",
-        },
-      ],
-    },
-    {
-      title: "India’s Startups Get a Boost: Budget 2025 Unlocks New Pathways",
-      description:
-        "Startups are no longer fringe players they are now central...",
-      img: Image2,
-      slug: "Indias-Startups-Get-a-Boost-Budget-2025-Unlocks-New-Pathways",
-      date: "July 18, 2024",
-      readTime: "7 min read",
-      category: "Technology",
-      list: [
-        {
-          title: "Key Budget Highlights for Startups",
-          lists: [
-            "Extended tax benefits for eligible startups",
-            "Simplified capital gains tax structure",
-            "Launch of a ₹1,000 Cr Innovation Fund focused on AI, Biotech & Sustainability",
-          ],
-          description:
-            "For years, MSMEs have demanded more than just recognition...",
-        },
-        {
-          title: "Expanding Innovation Beyond Metro Cities",
-          lists: [
-            "More incubation programs in Tier 2 & Tier 3 cities",
-            "Push for geographic diversity in startup growth",
-            "Eased regulatory environment for new founders",
-            "Greater access to institutional funding",
-          ],
-          description: "",
-        },
-      ],
-    },
-    {
-      title: "Budget 2025 Simplifies the Journey for New Founders",
-      description:
-        "First time entrepreneurs are front and center in Budget 2025...",
-      img: Image3,
-      slug: "Budget-2025-Simplifies-the-Journey-for-New-Founders",
-      date: "July 15, 2024",
-      readTime: "6 min read",
-      category: "Legal",
-      list: [],
-    },
-    {
       title:
-        "A Budget That Strengthens Local Industries and Women Led Enterprises",
+        "Unlocking Growth: A Complete Guide to Funding Solutions for Indian MSMEs in 2025",
       description:
-        "Beyond big cities and large companies, Budget 2025 has acknowledged...",
-      img: Image4,
-      slug: "A-Budget-That-Strengthens-Local-Industries-and-Women-Led-Enterprises",
-      date: "July 15, 2024",
-      readTime: "6 min read",
-      category: "Legal",
+        "Are you an MSME owner struggling to secure the right funding for your business growth? You're not alone. Over 63 million MSMEs in India contribute nearly 30% to our GDP, yet access to adequate funding remains their biggest challenge. The good news? There are more funding opportunities available today than ever before – you just need to know where to look and how to access them.",
+      img: Image6, // add new image import or reuse an existing one
+      slug: "Unlocking-Growth-Funding-Solutions-for-Indian-MSMEs-2025",
+      date: "October 10, 2025",
+      readTime: "9 min read",
+      category: "Finance",
       list: [
         {
-          title: "New initiatives for solar powered equipment",
-          lists: [],
+          title: "Why Funding Matters More Than Ever for MSMEs",
+          lists: [
+            "MSMEs need capital not just to survive, but to thrive",
+            "Funding supports expansion, technology upgrades, and market entry",
+            "Right funding choice enables long-term scalability",
+          ],
           description:
-            "New initiatives for solar powered equipment, cold storage...",
+            "In today's competitive landscape, MSMEs require strategic funding to accelerate growth, enhance competitiveness, and ensure sustainability.",
         },
         {
-          title: "By turning local industries into competitive,",
-          lists: [],
+          title: "Seed Funding: Nurturing Your Business Idea",
+          lists: [
+            "Funding range: ₹5 lakhs – ₹2 crores",
+            "Ideal for startups and early-stage ventures",
+            "Sources: Angel investors, incubators, or government schemes",
+            "Timeline: 3–6 months processing",
+          ],
           description:
-            "By turning local industries into competitive, high quality suppliers...",
+            "Perfect for startups and early-stage ventures seeking initial capital to transform ideas into reality.",
+        },
+        {
+          title: "Government Subsidies: Your Gateway to Affordable Capital",
+          lists: [
+            "CGTMSE – Credit Guarantee Fund Trust for Micro and Small Enterprises",
+            "PMEGP – Prime Minister's Employment Generation Programme",
+            "TUFS – Technology Upgradation Fund Scheme",
+          ],
+          description:
+            "The Indian government provides numerous subsidies to reduce capital costs and promote MSME competitiveness.",
+        },
+        {
+          title: "Government Grants: Non-Repayable Funding",
+          lists: [
+            "Grant range: ₹1 lakh – ₹50 lakhs+",
+            "Available across technology, agriculture, manufacturing, and women entrepreneurship sectors",
+          ],
+          description:
+            "Unlike loans, grants don’t require repayment and support innovation, R&D, and capacity building.",
+        },
+        {
+          title: "MSME Loans: Tailored Financial Products",
+          lists: [
+            "Working capital loans",
+            "Term loans for machinery",
+            "Export financing",
+            "Invoice discounting",
+          ],
+          description:
+            "Custom-designed loans with flexible repayment terms and minimal documentation, ideal for scaling operations.",
+        },
+        {
+          title: "Agriculture Funding: Sector-Specific Solutions",
+          lists: [
+            "Crop loans, warehouse receipt financing, and value chain financing",
+            "Seasonal repayment cycles & government interest subsidies",
+            "Weather insurance coverage for risk management",
+          ],
+          description:
+            "Focused on agri-businesses and food processing units with specialized funding benefits.",
+        },
+        {
+          title: "Private Funding: Venture Capital & Private Equity",
+          lists: [
+            "Investment range: ₹50 lakhs – ₹100+ crores",
+            "Best for scalable businesses with clear exit plans",
+            "Includes mentorship and strategic partnerships",
+          ],
+          description:
+            "Private funding empowers high-growth MSMEs with both financial support and strategic direction.",
+        },
+        {
+          title: "The Hidden Challenge: Navigating the Funding Maze",
+          lists: [
+            "Complex application processes and documentation",
+            "Multiple rejections due to incomplete submissions",
+            "Lack of awareness about suitable funding options",
+          ],
+          description:
+            "Many MSMEs struggle not due to lack of eligibility, but due to process complexity and poor guidance.",
+        },
+        {
+          title: "The Solution: Professional Back-Office Support",
+          lists: [
+            "Identify right funding schemes based on business profile",
+            "Assist in preparing complete documentation",
+            "Navigate portals and ensure timely submissions",
+            "Follow-up and compliance monitoring",
+          ],
+          description:
+            "Professional service providers simplify the application journey, improving approval chances.",
+        },
+        {
+          title: "Success Story: How Proper Support Made the Difference",
+          lists: [
+            "Textile unit in Gujarat received ₹25 lakhs subsidy in 4 months",
+            "Consultants identified correct scheme and ensured smooth approval",
+          ],
+          description:
+            "Expert guidance transformed a year-long struggle into a successful funding achievement.",
+        },
+        {
+          title: "Take Action: Your Funding Journey Starts Now",
+          lists: [
+            "Step 1: Assess funding requirements and business stage",
+            "Step 2: Research schemes relevant to your industry",
+            "Step 3: Prepare business documents and financials",
+            "Step 4: Seek professional help if needed",
+            "Step 5: Apply strategically and track status",
+          ],
+          description:
+            "Adopt a structured approach to turn funding into a predictable success, not guesswork.",
+        },
+        {
+          title: "The Bottom Line",
+          lists: [
+            "Funding is the catalyst for MSME growth and innovation",
+            "Professional support simplifies access to multiple opportunities",
+            "Smart strategy converts funding from a challenge into an advantage",
+          ],
+          description:
+            "With the right funding and execution, MSMEs can achieve sustainable, scalable success.",
         },
       ],
     },
 
-    // ✅ New Blog Added
-   {
+     {
       title:
         "Business Registration Made Simple: Choose the Right Structure to Maximize Growth & Minimize Risk",
       description:
@@ -183,7 +220,8 @@ const ExpandedBlog = () => {
             "Perfect for individual consultants, freelancers, small retail, or low-risk businesses testing ideas. Personal assets are at risk, and scaling is difficult.",
         },
         {
-          title: " Limited Liability Partnership (LLP) - The Professional Partnership Structure",
+          title:
+            " Limited Liability Partnership (LLP) - The Professional Partnership Structure",
           lists: [
             "Limited liability: Partners' personal assets protected",
             "Flexibility: Less compliance than companies",
@@ -364,142 +402,105 @@ const ExpandedBlog = () => {
         },
       ],
     },
+
     {
-    title:
-      "Unlocking Growth: A Complete Guide to Funding Solutions for Indian MSMEs in 2025",
-    description:
-      "Are you an MSME owner struggling to secure the right funding for your business growth? You're not alone. Over 63 million MSMEs in India contribute nearly 30% to our GDP, yet access to adequate funding remains their biggest challenge. The good news? There are more funding opportunities available today than ever before – you just need to know where to look and how to access them.",
-    img: Image6, // add new image import or reuse an existing one
-    slug: "Unlocking-Growth-Funding-Solutions-for-Indian-MSMEs-2025",
-    date: "October 10, 2025",
-    readTime: "9 min read",
-    category: "Finance",
-    list: [
-      {
-        title: "Why Funding Matters More Than Ever for MSMEs",
-        lists: [
-          "MSMEs need capital not just to survive, but to thrive",
-          "Funding supports expansion, technology upgrades, and market entry",
-          "Right funding choice enables long-term scalability",
-        ],
-        description:
-          "In today's competitive landscape, MSMEs require strategic funding to accelerate growth, enhance competitiveness, and ensure sustainability.",
-      },
-      {
-        title: "Seed Funding: Nurturing Your Business Idea",
-        lists: [
-          "Funding range: ₹5 lakhs – ₹2 crores",
-          "Ideal for startups and early-stage ventures",
-          "Sources: Angel investors, incubators, or government schemes",
-          "Timeline: 3–6 months processing",
-        ],
-        description:
-          "Perfect for startups and early-stage ventures seeking initial capital to transform ideas into reality.",
-      },
-      {
-        title: "Government Subsidies: Your Gateway to Affordable Capital",
-        lists: [
-          "CGTMSE – Credit Guarantee Fund Trust for Micro and Small Enterprises",
-          "PMEGP – Prime Minister's Employment Generation Programme",
-          "TUFS – Technology Upgradation Fund Scheme",
-        ],
-        description:
-          "The Indian government provides numerous subsidies to reduce capital costs and promote MSME competitiveness.",
-      },
-      {
-        title: "Government Grants: Non-Repayable Funding",
-        lists: [
-          "Grant range: ₹1 lakh – ₹50 lakhs+",
-          "Available across technology, agriculture, manufacturing, and women entrepreneurship sectors",
-        ],
-        description:
-          "Unlike loans, grants don’t require repayment and support innovation, R&D, and capacity building.",
-      },
-      {
-        title: "MSME Loans: Tailored Financial Products",
-        lists: [
-          "Working capital loans",
-          "Term loans for machinery",
-          "Export financing",
-          "Invoice discounting",
-        ],
-        description:
-          "Custom-designed loans with flexible repayment terms and minimal documentation, ideal for scaling operations.",
-      },
-      {
-        title: "Agriculture Funding: Sector-Specific Solutions",
-        lists: [
-          "Crop loans, warehouse receipt financing, and value chain financing",
-          "Seasonal repayment cycles & government interest subsidies",
-          "Weather insurance coverage for risk management",
-        ],
-        description:
-          "Focused on agri-businesses and food processing units with specialized funding benefits.",
-      },
-      {
-        title: "Private Funding: Venture Capital & Private Equity",
-        lists: [
-          "Investment range: ₹50 lakhs – ₹100+ crores",
-          "Best for scalable businesses with clear exit plans",
-          "Includes mentorship and strategic partnerships",
-        ],
-        description:
-          "Private funding empowers high-growth MSMEs with both financial support and strategic direction.",
-      },
-      {
-        title: "The Hidden Challenge: Navigating the Funding Maze",
-        lists: [
-          "Complex application processes and documentation",
-          "Multiple rejections due to incomplete submissions",
-          "Lack of awareness about suitable funding options",
-        ],
-        description:
-          "Many MSMEs struggle not due to lack of eligibility, but due to process complexity and poor guidance.",
-      },
-      {
-        title: "The Solution: Professional Back-Office Support",
-        lists: [
-          "Identify right funding schemes based on business profile",
-          "Assist in preparing complete documentation",
-          "Navigate portals and ensure timely submissions",
-          "Follow-up and compliance monitoring",
-        ],
-        description:
-          "Professional service providers simplify the application journey, improving approval chances.",
-      },
-      {
-        title: "Success Story: How Proper Support Made the Difference",
-        lists: [
-          "Textile unit in Gujarat received ₹25 lakhs subsidy in 4 months",
-          "Consultants identified correct scheme and ensured smooth approval",
-        ],
-        description:
-          "Expert guidance transformed a year-long struggle into a successful funding achievement.",
-      },
-      {
-        title: "Take Action: Your Funding Journey Starts Now",
-        lists: [
-          "Step 1: Assess funding requirements and business stage",
-          "Step 2: Research schemes relevant to your industry",
-          "Step 3: Prepare business documents and financials",
-          "Step 4: Seek professional help if needed",
-          "Step 5: Apply strategically and track status",
-        ],
-        description:
-          "Adopt a structured approach to turn funding into a predictable success, not guesswork.",
-      },
-      {
-        title: "The Bottom Line",
-        lists: [
-          "Funding is the catalyst for MSME growth and innovation",
-          "Professional support simplifies access to multiple opportunities",
-          "Smart strategy converts funding from a challenge into an advantage",
-        ],
-        description:
-          "With the right funding and execution, MSMEs can achieve sustainable, scalable success.",
-      },
-    ],
-  },
+      title: "Budget 2025: A Strategic Shift for MSMEs",
+      description: `India’s Union Budget 2025 has set a bold tone...`,
+      img: Image1,
+      slug: "Budget-2025-A-Strategic-Shift-for-MSMEs",
+      date: "July 20, 2024",
+      readTime: "5 min read",
+      category: "Marketing",
+      list: [
+        {
+          title: "Focused Financial Allocation: ₹23,100 Crore for MSMEs",
+          lists: [
+            "Long term vision for scalability and global competitiveness",
+            "₹23,100 crore allocation for MSME support",
+            "Structural approach rather than one time relief packages",
+          ],
+          description:
+            "For years, MSMEs have demanded more than just recognition...",
+        },
+        {
+          title: "Major Reforms Driving the Shift",
+          lists: [
+            "Expansion of the Credit Guarantee Fund Scheme",
+            "Introduction of MSME Credit Cards",
+            "Reduction of Import Duties on Essential Raw Materials",
+          ],
+          description: "Several key announcements in Budget 2025 highlight...",
+        },
+      ],
+    },
+    {
+      title: "India’s Startups Get a Boost: Budget 2025 Unlocks New Pathways",
+      description:
+        "Startups are no longer fringe players they are now central...",
+      img: Image2,
+      slug: "Indias-Startups-Get-a-Boost-Budget-2025-Unlocks-New-Pathways",
+      date: "July 18, 2024",
+      readTime: "7 min read",
+      category: "Technology",
+      list: [
+        {
+          title: "Key Budget Highlights for Startups",
+          lists: [
+            "Extended tax benefits for eligible startups",
+            "Simplified capital gains tax structure",
+            "Launch of a ₹1,000 Cr Innovation Fund focused on AI, Biotech & Sustainability",
+          ],
+          description:
+            "For years, MSMEs have demanded more than just recognition...",
+        },
+        {
+          title: "Expanding Innovation Beyond Metro Cities",
+          lists: [
+            "More incubation programs in Tier 2 & Tier 3 cities",
+            "Push for geographic diversity in startup growth",
+            "Eased regulatory environment for new founders",
+            "Greater access to institutional funding",
+          ],
+          description: "",
+        },
+      ],
+    },
+    {
+      title: "Budget 2025 Simplifies the Journey for New Founders",
+      description:
+        "First time entrepreneurs are front and center in Budget 2025...",
+      img: Image3,
+      slug: "Budget-2025-Simplifies-the-Journey-for-New-Founders",
+      date: "July 15, 2024",
+      readTime: "6 min read",
+      category: "Legal",
+      list: [],
+    },
+    {
+      title:
+        "A Budget That Strengthens Local Industries and Women Led Enterprises",
+      description:
+        "Beyond big cities and large companies, Budget 2025 has acknowledged...",
+      img: Image4,
+      slug: "A-Budget-That-Strengthens-Local-Industries-and-Women-Led-Enterprises",
+      date: "July 15, 2024",
+      readTime: "6 min read",
+      category: "Legal",
+      list: [
+        {
+          title: "New initiatives for solar powered equipment",
+          lists: [],
+          description:
+            "New initiatives for solar powered equipment, cold storage...",
+        },
+        {
+          title: "By turning local industries into competitive,",
+          lists: [],
+          description:
+            "By turning local industries into competitive, high quality suppliers...",
+        },
+      ],
+    },
   ];
 
   const { slug } = useParams<{ slug: string }>();
