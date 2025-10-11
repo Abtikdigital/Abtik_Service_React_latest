@@ -5,17 +5,32 @@ import Image1 from "../assets/NewBlog/Budget1.jpg";
 import Image2 from "../assets/NewBlog/Startup.jpg";
 import Image3 from "../assets/NewBlog/Image2.jpg";
 import Image4 from "../assets/NewBlog/BussinessWomen.jpg";
-import Image5 from "../assets/NewBlog/SmallSizeBusinessRegistrationMadeSimple.jpg"
-import Image6 from "../assets/NewBlog/Article2.jpg"
+import Image5 from "../assets/NewBlog/SmallSizeBusinessRegistrationMadeSimple.jpg";
+import Image6 from "../assets/NewBlog/Article2.jpg";
 
 const blogs = [
+  {
+    title:
+    "Unlocking Growth: A Complete Guide to Funding Solutions for Indian MSMEs in 2025",
+    description:
+    "Are you an MSME owner struggling to secure the right funding for your...",
+    img: Image6,
+    slug: "Unlocking-Growth-Funding-Solutions-for-Indian-MSMEs-2025",
+  },
+  {
+    title: "Business Registration Made Simple",
+    description:
+      "Beyond big cities and large companies, Budget 2025 has acknowledged...",
+    img: Image5,
+    slug: "Business-Registration-Made-Simple",
+  },
   {
     title: "Budget 2025: A Strategic Shift for MSMEs",
     description: "India’s Union Budget 2025 has set",
     img: Image1,
     slug: "Budget-2025-A-Strategic-Shift-for-MSMEs",
   },
-  // ... other blog objects ...
+
   {
     title: "India’s Startups Get a Boost: Budget 2025 Unlocks New Pathways",
     description: "First time entrepreneurs are front",
@@ -36,26 +51,6 @@ const blogs = [
       "Beyond big cities and large companies, Budget 2025 has acknowledged the power of local, women-led, and artisan-driven enterprises. Targeted investments in tribal crafts, khadi clusters, and agri-based businesses highlight the government’s commitment to inclusive economic growth.",
     img: Image4,
     slug: "A-Budget-That-Strengthens-Local-Industries-and-Women-Led-Enterprises",
-  },
-  {
-    title:
-      "Business Registration Made Simple",
-    description:
-      "Beyond big cities and large companies, Budget 2025 has acknowledged...",
-    img: Image5,
-    slug: "Business-Registration-Made-Simple",
-    
-  
-  },
-    {
-    title:
-      "Unlocking Growth: A Complete Guide to Funding Solutions for Indian MSMEs in 2025",
-    description:
-      "Are you an MSME owner struggling to secure the right funding for your...",
-    img: Image6,
-    slug: "Unlocking-Growth-Funding-Solutions-for-Indian-MSMEs-2025",
-    
-  
   },
 
   // (add all your blog objects as above)
