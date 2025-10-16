@@ -1,9 +1,8 @@
 import { useForm, Controller } from "react-hook-form";
 import Swal from "sweetalert2";
 import { memo, useState, useRef, useEffect } from "react";
-import { addOtpDetails, verifyOtp } from "../api/otpApis";
+import { addContact } from "../api/contactApis";
 import isValidIndianNumber from "../utils/validation/isGenuineNumber";
-import type { ChangeEvent, KeyboardEvent } from "react";
 
 interface ContactFormData {
   name: string;
@@ -14,83 +13,6 @@ interface ContactFormData {
   serviceType: string;
 }
 
-// Custom OTP Input Component
-interface CustomOtpInputProps {
-  numInputs: number;
-  value: string;
-  onChange: (value: string) => void;
-  inputRef?: React.RefObject<HTMLInputElement[]>;
-}
-
-const CustomOtpInput = ({ numInputs, value, onChange, inputRef }: CustomOtpInputProps) => {
-  const inputsRef = useRef<HTMLInputElement[]>([]);
-
-  useEffect(() => {
-    if (inputRef && inputRef.current[0]) {
-      inputRef.current[0].focus();
-    } else if (inputsRef.current[0]) {
-      inputsRef.current[0].focus();
-    }
-  }, []);
-
-  const handleChange = (e: ChangeEvent<HTMLInputElement>, index: number) => {
-    const newOtp = [...value.split("")];
-    newOtp[index] = e.target.value;
-    onChange(newOtp.join(""));
-
-    if (e.target.value && index < numInputs - 1) {
-      (inputRef?.current[index + 1] || inputsRef.current[index + 1]).focus();
-    }
-  };
-
-  const handleKeyDown = (e: KeyboardEvent<HTMLInputElement>, index: number) => {
-    if (e.key === "Backspace" && !value[index] && index > 0) {
-      (inputRef?.current[index - 1] || inputsRef.current[index - 1]).focus();
-    }
-  };
-
-  const handlePaste = (e: React.ClipboardEvent<HTMLInputElement>) => {
-    e.preventDefault();
-    const pastedData = e.clipboardData.getData("text/plain").slice(0, numInputs);
-    onChange(pastedData);
-  };
-
-  return (
-    <div className="flex justify-center gap-4" onPaste={handlePaste}>
-      {Array(numInputs)
-        .fill(0)
-        .map((_, index) => (
-          <input
-            key={index}
-            ref={(el) => {
-              if (el) {
-                inputsRef.current[index] = el;
-                if (inputRef) inputRef.current[index] = el;
-              }
-            }}
-            type="tel"
-            inputMode="numeric"
-            pattern="[0-9]*"
-            maxLength={1}
-            value={value[index] || ""}
-            onChange={(e) => handleChange(e, index)}
-            onKeyDown={(e) => handleKeyDown(e, index)}
-            style={{
-              width: "3rem",
-              height: "3rem",
-              fontSize: "1.5rem",
-              borderRadius: "0.5rem",
-              border: "1px solid #2178B5",
-              backgroundColor: "white",
-              textAlign: "center",
-              outline: "none",
-              transition: "all 0.15s ease",
-            }}
-          />
-        ))}
-    </div>
-  );
-};
 
 // New Custom ShadCN-like Dropdown Component
 const ShadcnDropdown = ({
@@ -178,11 +100,6 @@ const ShadcnDropdown = ({
 
 const Contact = (props: any) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [showOtpForm, setShowOtpFrom] = useState(false);
-  const [otp, setOtp] = useState("");
-  const [isVerifyButtonClicked, setIsVerifyButtonClicked] = useState(false);
-  const otpInputsRef = useRef<HTMLInputElement[]>([]);
-  const [, setContactPayload] = useState<ContactFormData | null>(null);
 
   const {
     register,
@@ -201,47 +118,31 @@ const Contact = (props: any) => {
     },
   });
 
-  // Helper function to clear all form states and token
+  // Helper function to clear all form states
   const resetAllStates = () => {
     reset();
-    setOtp("");
-    setShowOtpFrom(false);
-    setContactPayload(null);
-    setIsVerifyButtonClicked(false);
-    localStorage.removeItem("otpToken");
   };
 
-  // For Node.js Backend: Handles the initial form submission to get an OTP
+  // Handles the form submission directly to backend
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
     try {
-      let res = await addOtpDetails({ contactData: data });
-      if (res?.status === 201) {
-        if (res?.data?.token) {
-          localStorage.setItem("otpToken", JSON.stringify(res.data.token));
-        }
-
-        setContactPayload(data);
-        setShowOtpFrom(true);
-
+      const res = await addContact(data);
+      if (res?.status === 200 || res?.status === 201) {
         await Swal.fire({
           icon: "success",
-          title: "OTP Sent!",
-          text: res?.data?.message || "An OTP has been sent to your email address.",
+          title: "Thank You For Contacting Us!",
+          text: res?.data?.message || "Your message has been sent successfully.",
           scrollbarPadding: false,
-        }).then(() => {
-          if (otpInputsRef.current[0]) {
-            otpInputsRef.current[0].focus();
-          }
         });
+        resetAllStates();
       } else {
         await Swal.fire({
           icon: "error",
           title: "Error",
-          text: res?.data?.message || "Could not send OTP. Please try again.",
+          text: res?.data?.message || "Could not send your message. Please try again.",
           scrollbarPadding: false,
         });
-        localStorage.removeItem("otpToken");
       }
     } catch (error: any) {
       await Swal.fire({
@@ -250,96 +151,12 @@ const Contact = (props: any) => {
         text: error?.response?.data?.message || "An unexpected error occurred.",
         scrollbarPadding: false,
       });
-      localStorage.removeItem("otpToken");
     } finally {
       setIsSubmitting(false);
     }
   };
 
-  // Handles the OTP verification
-  const handleOtpVerify = async () => {
-    setIsVerifyButtonClicked(true); // Disable button on click
-    if (otp.length !== 4) {
-      await Swal.fire({
-        icon: "warning",
-        title: "Invalid OTP",
-        text: "Please enter a valid 4-digit OTP.",
-        scrollbarPadding: false,
-      });
-      setIsVerifyButtonClicked(false); // Re-enable button
-      return;
-    }
 
-    const token = localStorage.getItem("otpToken");
-    if (!token) {
-      await Swal.fire({
-        icon: "error",
-        title: "Session Expired",
-        text: "Your session has expired. Please start over.",
-        scrollbarPadding: false,
-      });
-      resetAllStates();
-      return;
-    }
-
-    setIsSubmitting(true);
-    try {
-      const verificationData = {
-        enteredOtp: otp,
-        token: JSON.parse(token),
-      };
-
-      let res = await verifyOtp(verificationData);
-
-      if (res?.status === 201) {
-        await Swal.fire({
-          icon: "success",
-          title: "Thank You For Contacting Us!",
-          text: res?.data?.message || "Your details have been verified successfully.",
-          scrollbarPadding: false,
-        });
-
-        resetAllStates();
-      } else {
-        await Swal.fire({
-          icon: "error",
-          title: "Verification Failed",
-          text: res?.data?.message || "The OTP you entered is incorrect. Please try again.",
-          scrollbarPadding: false,
-        });
-        setOtp("");
-        setIsVerifyButtonClicked(false); // Re-enable button
-      }
-    } catch (error: any) {
-      if (error?.response?.data?.message === "Invalid Token") {
-        await Swal.fire({
-          icon: "error",
-          title: "Session Expired",
-          text: "Your session has expired. Please start over.",
-          scrollbarPadding: false,
-        });
-        resetAllStates();
-      } else {
-        await Swal.fire({
-          icon: "error",
-          title: "Verification Error",
-          text: error?.response?.data?.message || "An error occurred during verification.",
-          scrollbarPadding: false,
-        });
-        setOtp("");
-        setIsVerifyButtonClicked(false); // Re-enable button
-      }
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
-  // Cleanup function to clear token when component unmounts
-  useEffect(() => {
-    return () => {
-      localStorage.removeItem("otpToken");
-    };
-  }, []);
 
   // Input validation rules
   const validationRules = {
@@ -401,14 +218,13 @@ const Contact = (props: any) => {
       <div className="flex gap-6 lg:space-x-6 justify-center items-center w-full">
         <div className="space-y-6 flex flex-col justify-center w-2xl">
           <h2 className="sub-heading to-[#052EAA] text-center bg-gradient-to-t from-[#3CA2E2] bg-clip-text text-transparent font-1">
-            {showOtpForm ? "Verify Your Identity" : "Contact Us"}
+            Contact Us
           </h2>
 
-          {!showOtpForm && (
-            <form
-              onSubmit={handleSubmit(onSubmit)}
-              className="flex flex-col gap-4 font-3"
-            >
+          <form
+            onSubmit={handleSubmit(onSubmit)}
+            className="flex flex-col gap-4 font-3"
+          >
               {/* Name Input */}
               <div className="flex flex-col">
                 <input
@@ -559,38 +375,6 @@ const Contact = (props: any) => {
                 </button>
               </div>
             </form>
-          )}
-
-          {showOtpForm && (
-            <div className="flex flex-col items-center gap-6 p-4">
-              <p className="text-sm text-gray-600 text-center">
-                Please enter the 4-digit OTP sent to your email.
-              </p>
-
-              <CustomOtpInput numInputs={4} value={otp} onChange={setOtp} inputRef={otpInputsRef} />
-
-              <div className="flex justify-center w-full mt-4">
-                <button
-                  onClick={handleOtpVerify}
-                  disabled={isSubmitting || isVerifyButtonClicked}
-                  className={`custom-btn w-full max-w-xs text-center font-2 !py-3 transition-shadow duration-300 ${
-                    isSubmitting || isVerifyButtonClicked
-                      ? "opacity-50 cursor-not-allowed"
-                      : "hover:transform"
-                  }`}
-                >
-                  {isSubmitting ? (
-                    <div className="flex items-center justify-center gap-2">
-                      <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                      Verifying...
-                    </div>
-                  ) : (
-                    "Verify & Submit"
-                  )}
-                </button>
-              </div>
-            </div>
-          )}
         </div>
       </div>
       {props?.isMapVisible && (

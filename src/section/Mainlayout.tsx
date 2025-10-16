@@ -7,87 +7,11 @@ import Image from "../assets/Logo/Newlogo.jpg";
 import { X, User, Mail, Phone, MessageSquare, Building } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { memo, useState, useRef, useEffect } from "react";
-import type { ChangeEvent, KeyboardEvent } from "react";
 import Offer from "./Offer";
-import { addOtpDetails, verifyOtp } from "../api/otpApis";
+import { addContact } from "../api/contactApis";
 import isValidIndianNumber from "../utils/validation/isGenuineNumber";
 import { useLocation } from "react-router-dom";
 
-// Custom OTP Input Component
-interface CustomOtpInputProps {
-  numInputs: number;
-  value: string;
-  onChange: (value: string) => void;
-}
-
-const CustomOtpInput = ({ numInputs, value, onChange }: CustomOtpInputProps) => {
-  const inputsRef = useRef<HTMLInputElement[]>([]);
-
-  useEffect(() => {
-    if (inputsRef.current[0]) {
-      inputsRef.current[0].focus();
-    }
-  }, []);
-
-  const handleChange = (e: ChangeEvent<HTMLInputElement>, index: number) => {
-    const newOtp = [...value.split('')];
-    newOtp[index] = e.target.value;
-    onChange(newOtp.join(''));
-
-    if (e.target.value && index < numInputs - 1) {
-      inputsRef.current[index + 1].focus();
-    }
-  };
-
-  const handleKeyDown = (e: KeyboardEvent<HTMLInputElement>, index: number) => {
-    if (e.key === 'Backspace' && !value[index] && index > 0) {
-      inputsRef.current[index - 1].focus();
-    }
-  };
-
-  const handlePaste = (e: React.ClipboardEvent<HTMLInputElement>) => {
-    e.preventDefault();
-    const pastedData = e.clipboardData
-      .getData('text/plain')
-      .slice(0, numInputs);
-    onChange(pastedData);
-  };
-
-  return (
-    <div className="flex justify-center gap-4" onPaste={handlePaste}>
-      {Array(numInputs)
-        .fill(0)
-        .map((_, index) => (
-          <input
-            key={index}
-            ref={(el) => {
-              if (el) {
-                inputsRef.current[index] = el;
-              }
-            }}
-            type="tel"
-            inputMode="numeric"
-            pattern="[0-9]*"
-            maxLength={1}
-            value={value[index] || ''}
-            onChange={(e) => handleChange(e, index)}
-            onKeyDown={(e) => handleKeyDown(e, index)}
-            style={{
-              width: "3rem",
-              height: "3rem",
-              fontSize: "1.5rem",
-              borderRadius: "0.5rem",
-              border: "1px solid #052EAA",
-              backgroundColor: "white",
-              textAlign: "center",
-              outline: "none",
-              transition: "all 0.15s ease",
-            }}
-          />
-        ))}
-    </div>
-  );
-};
 
 // Define FormData interface
 interface FormData {
@@ -232,12 +156,6 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
   const isOpen = useSelector((state: RootState) => state.isContactFormOpen);
   const dispatch = useDispatch();
 
-  // OTP related states
-  const [showOtpForm, setShowOtpForm] = useState(false);
-  const [otp, setOtp] = useState("");
-  const [, setContactPayload] = useState<FormData | null>(null);
-  const [isVerifying, setIsVerifying] = useState(false);
-  const [isVerifyButtonClicked, setIsVerifyButtonClicked] = useState(false);
   const {pathname}=useLocation()
 
 
@@ -294,12 +212,6 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
 
   const resetAllStates = () => {
     reset();
-    setOtp("");
-    setShowOtpForm(false);
-    setContactPayload(null);
-    setIsVerifying(false);
-    setIsVerifyButtonClicked(false);
-    localStorage.removeItem("otpToken");
   };
 
   const onSubmit = async (data: FormData) => {
@@ -313,35 +225,26 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
         serviceType: data.serviceType,
       };
 
-      const res = await addOtpDetails({ contactData: apiData });
+      const res = await addContact(apiData);
 
-      if (res?.status === 201) {
-        if (res?.data?.token) {
-          localStorage.setItem("otpToken", JSON.stringify(res.data.token));
-        }
-        setContactPayload(data);
-
-        showSwal({
+      if (res?.status === 200 || res?.status === 201) {
+        await showSwal({
           icon: "success",
-          title: "OTP Sent!",
-          text:
-            res?.data?.message ||
-            "An OTP has been sent to your contact number.",
+          title: "Thank You For Contacting Us!",
+          text: res?.data?.message || "Your message has been sent successfully.",
           confirmButtonColor: "#052EAA",
           scrollbarPadding: false,
-        }).then(() => {
-          setShowOtpForm(true);
         });
-
+        resetAllStates();
+        closeModal();
       } else {
         await showSwal({
           icon: "error",
           title: "Error",
-          text: res?.data?.message || "Could not send OTP. Please try again.",
+          text: res?.data?.message || "Could not send your message. Please try again.",
           confirmButtonColor: "#052EAA",
           scrollbarPadding: false,
         });
-        localStorage.removeItem("otpToken");
       }
     } catch (error: any) {
       await showSwal({
@@ -351,100 +254,9 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
         confirmButtonColor: "#052EAA",
         scrollbarPadding: false,
       });
-      localStorage.removeItem("otpToken");
     }
   };
 
-  const handleOtpVerify = async () => {
-    setIsVerifyButtonClicked(true); // Disable button on click
-    if (otp.length !== 4) {
-      await showSwal({
-        icon: "warning",
-        title: "Invalid OTP",
-        text: "Please enter a valid 4-digit OTP.",
-        confirmButtonColor: "#052EAA",
-        scrollbarPadding: false,
-      });
-      setIsVerifyButtonClicked(false); // Re-enable button
-      return;
-    }
-
-    const token = localStorage.getItem("otpToken");
-    if (!token) {
-      await showSwal({
-        icon: "error",
-        title: "Session Expired",
-        text: "Your session has expired. Please start over.",
-        confirmButtonColor: "#052EAA",
-        scrollbarPadding: false,
-      });
-      resetAllStates();
-      closeModal();
-      setIsVerifyButtonClicked(false); // Re-enable button
-      return;
-    }
-
-    setIsVerifying(true);
-
-    try {
-      const verificationData = {
-        enteredOtp: otp,
-        token: JSON.parse(token),
-      };
-      const res = await verifyOtp(verificationData);
-
-      if (res?.status === 201) {
-        await showSwal({
-          icon: "success",
-          title: "Thank You For Contacting Us!",
-          text:
-            res?.data?.message || "Your details have been verified successfully.",
-          confirmButtonColor: "#052EAA",
-          scrollbarPadding: false,
-        });
-        resetAllStates();
-        closeModal();
-      } else {
-        await showSwal({
-          icon: "error",
-          title: "Verification Failed",
-          text:
-            res?.data?.message ||
-            "The OTP you entered is incorrect. Please try again.",
-          confirmButtonColor: "#052EAA",
-          scrollbarPadding: false,
-        });
-        setOtp("");
-        setIsVerifyButtonClicked(false); // Re-enable button
-      }
-    } catch (error: any) {
-      if (error?.response?.data?.message === "Invalid Token") {
-        await showSwal({
-          icon: "error",
-          title: "Session Expired",
-          text: "Your session has expired. Please start over.",
-          confirmButtonColor: "#052EAA",
-          scrollbarPadding: false,
-        });
-        resetAllStates();
-        closeModal();
-      } else {
-        await showSwal({
-          icon: "error",
-          title: "Verification Error",
-          text:
-            error?.response?.data?.message ||
-            "An error occurred during verification.",
-          confirmButtonColor: "#052EAA",
-          scrollbarPadding: false,
-        });
-        setOtp("");
-        setIsVerifyButtonClicked(false); // Re-enable button
-      }
-    } finally {
-      setIsVerifying(false);
-    }
-  };
 
   const closeModal = () => {
     dispatch({ type: "close" });
@@ -452,9 +264,7 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
   };
 
   const handleBackdropClick = () => {
-    if (!showOtpForm) {
-      closeModal();
-    }
+    closeModal();
   };
 
   useEffect(() => {
@@ -471,7 +281,6 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
 
     return () => {
       document.head.removeChild(style);
-      localStorage.removeItem("otpToken");
     };
   }, []);
 
@@ -510,7 +319,7 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
               onClick={(e) => e.stopPropagation()}
             >
               <div className="bg-gradient-to-r text-white font-3 heading from-[#052EAA] to-[#3CA2E2] p-4 flex items-center justify-center w-full rounded-t-lg flex-shrink-0">
-                {showOtpForm ? "Verify Your Identity" : "Get In Touch"}
+                Get In Touch
               </div>
 
               <div className="absolute right-3 top-4 z-20">
@@ -531,11 +340,10 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
 
                 <div className="md:w-1/2 w-full flex flex-col overflow-y-auto">
                   <div className="p-4 md:p-6">
-                    {!showOtpForm ? (
-                      <form
-                        onSubmit={handleSubmit(onSubmit)}
-                        className="flex flex-col gap-5 font-3"
-                      >
+                    <form
+                      onSubmit={handleSubmit(onSubmit)}
+                      className="flex flex-col gap-5 font-3"
+                    >
                          <div className="flex flex-col gap-1">
                            <label
                             htmlFor="name"
@@ -762,59 +570,11 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
                                 Sending...
                               </div>
                             ) : (
-                              "Send OTP"
+                              "Send Message"
                             )}
                           </button>
                         </div>
                       </form>
-                    ) : (
-                      <div className="flex flex-col items-center gap-6 p-4">
-                        <h2 className="text-xl text-center font-medium text-gray-800">
-                          Enter The OTP You Received
-                        </h2>
-                        <p className="text-sm text-gray-600 text-center">
-                          Please enter the 4-digit OTP sent to your mail. Use
-                          the close button (×) to exit.
-                        </p>
-                        
-                        <CustomOtpInput 
-                           numInputs={4}
-                           value={otp}
-                           onChange={setOtp}
-                        />
-
-                        <div className="flex flex-col gap-3 w-full mt-4">
-                          <button
-                            onClick={handleOtpVerify}
-                            disabled={isVerifying || isVerifyButtonClicked}
-                            className={`w-full !py-3 custom-btn ${
-                              isVerifying || isVerifyButtonClicked
-                                ? "opacity-50 cursor-not-allowed"
-                                : ""
-                            }`}
-                          >
-                            {isVerifying ? (
-                              <div className="flex items-center justify-center gap-2">
-                                <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                                Verifying...
-                              </div>
-                            ) : (
-                              "Verify & Submit"
-                            )}
-                          </button>
-                          <button
-                            onClick={() => {
-                              setShowOtpForm(false);
-                              setOtp("");
-                              setIsVerifyButtonClicked(false); // Reset button state
-                            }}
-                            className="w-full py-3 cursor-pointer bg-gray-200 text-gray-800 font-medium rounded-full hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400 transition-all duration-200"
-                          >
-                            Back to Form
-                          </button>
-                        </div>
-                      </div>
-                    )}
                   </div>
                 </div>
               </div>
