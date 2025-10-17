@@ -8,6 +8,7 @@ import Image3 from "../assets/NewBlog/Image2.jpg";
 import Image4 from "../assets/NewBlog/BussinessWomen.jpg";
 import Image5 from "../assets/NewBlog/BusinessRegistrationMadeSimple.jpg";
 import Image6 from "../assets/NewBlog/Article2.jpg";
+import Image7 from "../assets/NewBlog/TrademarkIpImage.jpg"
 import { useDispatch } from "react-redux";
 
 interface BlogListItem {
@@ -33,6 +34,149 @@ const ExpandedBlog = () => {
     dispatch({ type: "open" });
   };
   const blogsData: BlogData[] = [
+    {
+      title: "Protecting Your Business Assets: The Ultimate Guide to Trademark & IP for Indian MSMEs",
+      description: "Your brand name, logo, and innovative ideas are worth millions – but are they legally protected? Every day, Indian businesses lose crores of rupees due to trademark infringement and intellectual property theft. Yet, 80% of MSMEs operate without proper IP protection, unknowingly putting their most valuable assets at risk. If you've built a recognizable brand or developed innovative solutions, this article could save your business from costly legal battles and revenue loss.",
+      img: Image7, // Using existing image - can be replaced with specific IP/trademark image
+      slug: "Protecting-Your-Business-Assets-Trademark-IP-Guide-Indian-MSMEs",
+      date: "December 15, 2024",
+      readTime: "12 min read",
+      category: "Legal",
+      list: [
+        {
+          title: "The Harsh Reality: What Happens Without IP Protection",
+          lists: [
+            "Case Study: A Bangalore-based software startup spent 3 years building their brand 'TechSolve' only to discover a larger company had registered the same trademark. Result? Complete rebranding costs of ₹15 lakhs and loss of brand recognition.",
+            "Another Example: A Mumbai manufacturer's unique product design was copied by competitors within months of launch. Without design protection, they couldn't take legal action and lost 40% market share."
+          ],
+          description: "Real-world examples show how unprotected intellectual property can lead to devastating financial losses and competitive disadvantages."
+        },
+        {
+          title: "Why Trademark & IP Protection is Critical for MSMEs",
+          lists: [
+            "Brand Protection = Business Protection: Your trademark is your business identity. It's what customers recognize, trust, and choose repeatedly. Without legal protection, anyone can use your brand name, confuse customers, and steal your market share.",
+            "Revenue Security: Protected intellectual property can become a revenue stream through licensing, franchising, or sale. Unprotected IP has zero commercial value.",
+            "Investor Confidence: Investors and partners prefer businesses with protected IP. It shows professionalism and reduces investment risks.",
+            "Competitive Advantage: Legal protection gives you exclusive rights to your innovations, keeping competitors at bay."
+          ],
+          description: "IP protection is not just about legal compliance – it's about securing your business future and maximizing your competitive edge."
+        },
+        {
+          title: "The 3 Pillars of IP Protection Every MSME Needs",
+          lists: [
+            "Pillar 1: Trademark Registration - Business name, logos, taglines, product names, service marks",
+            "Pillar 2: Copyright Protection - Original content, creative designs, software code, marketing materials",
+            "Pillar 3: Patent Filing - New inventions, unique processes, technical solutions, product improvements"
+          ],
+          description: "These three pillars form the foundation of comprehensive IP protection for your business assets."
+        },
+        {
+          title: "Pillar 1: Trademark Registration",
+          lists: [
+            "What Gets Protected: Business name and brand names, Logos and symbols, Taglines and slogans, Product names, Service marks",
+            "Why It Matters: Exclusive usage rights for 10 years (renewable indefinitely), Legal protection against infringement, Pan-India coverage with single registration, Enhanced brand credibility",
+            "The Process: Trademark search and availability check, Application filing with classification, Examination by trademark office, Publication in trademark journal, Registration certificate issuance",
+            "Timeline: 12-18 months | Investment: ₹10,000 - ₹25,000 | ROI: Priceless brand protection"
+          ],
+          description: "Trademark registration is your first line of defense in protecting your brand identity and market position."
+        },
+        {
+          title: "Pillar 2: Copyright Protection",
+          lists: [
+            "What Gets Protected: Original written content (websites, brochures, manuals), Creative designs and artwork, Software code and applications, Marketing materials, Training content",
+            "Key Benefits: Automatic protection upon creation, Lifetime + 60 years protection period, Revenue generation through licensing, Legal remedy against copying",
+            "When to Formalize: While copyright exists automatically, formal registration provides stronger legal standing in disputes."
+          ],
+          description: "Copyright protection ensures your creative works remain exclusively yours and can generate additional revenue streams."
+        },
+        {
+          title: "Pillar 3: Patent Filing",
+          lists: [
+            "What Gets Protected: New inventions and innovations, Unique manufacturing processes, Technical solutions to problems, Product improvements and modifications",
+            "Why Patents Matter: 20-year monopoly on your invention, Licensing opportunities for passive income, Market leadership position, Investor attraction for tech startups",
+            "Types Available: Ordinary patents: Standard 20-year protection, Provisional patents: 12‑month priority window, Design Registration: Protection for ornamental designs"
+          ],
+          description: "Patents protect your innovations and can transform them into valuable business assets with licensing potential."
+        },
+        {
+          title: "The MSME Advantage: Special Benefits You Can Claim",
+          lists: [
+            "Government Support for MSMEs: 80% fee reduction on patent filing, 50% discount on trademark registration, Expedited examination on request under Rule 24C, Dedicated MSME desks at IP offices",
+            "Total Savings Example: Regular patent filing fee: ₹1,60,000, MSME discounted fee: ₹32,000, You save: ₹1,28,000 per patent!"
+          ],
+          description: "The Indian government provides significant financial incentives to encourage MSMEs to protect their intellectual property."
+        },
+        {
+          title: "The Hidden Dangers: Common IP Mistakes MSMEs Make",
+          lists: [
+            "Mistake #1: 'We'll register later when we grow bigger' - Reality: By then, someone else might have registered your brand name.",
+            "Mistake #2: 'Our business name registration is enough' - Reality: Business registration doesn't provide trademark protection.",
+            "Mistake #3: 'We're too small for anyone to copy us' - Reality: Successful ideas get copied regardless of business size.",
+            "Mistake #4: 'IP registration is too expensive' - Reality: IP theft costs much more than protection.",
+            "Mistake #5: 'The process is too complicated' - Reality: Professional help makes it simple and systematic."
+          ],
+          description: "Avoiding these common mistakes can save your business from costly IP-related problems and missed opportunities."
+        },
+        {
+          title: "The Smart Approach: Why Professional Help Makes Sense",
+          lists: [
+            "DIY Challenges: Complex legal procedures, Risk of application rejection, Missed deadlines and renewals, Inadequate protection coverage, Time-consuming research and filing",
+            "Professional Benefits: Comprehensive IP audit of your business, Strategic protection planning based on business goals, Expert application preparation with higher success rates, Ongoing monitoring for infringement, Renewal management to maintain protection"
+          ],
+          description: "Professional IP services ensure comprehensive protection and maximize your chances of successful registration."
+        },
+        {
+          title: "Success Story: How IP Protection Transformed a Business",
+          lists: [
+            "'We were a small textile printing company with a unique design technique. After getting our designs copyrighted and process patented, we started licensing our technique to other manufacturers. Today, licensing revenue contributes 30% to our total income.' - Priya Shah, Creative Textiles, Surat"
+          ],
+          description: "Real success stories demonstrate how proper IP protection can create new revenue streams and business opportunities."
+        },
+        {
+          title: "Red Flags: When You MUST Take Immediate Action",
+          lists: [
+            "If any of these apply to you, get IP protection NOW: Competitors are copying your designs/products, You're planning to expand to new markets, Investors are showing interest in your business, You're launching a new product/service, Your business name/logo is becoming recognizable, You've developed unique processes or solutions"
+          ],
+          description: "Recognizing these warning signs can help you take timely action to protect your valuable business assets."
+        },
+        {
+          title: "Your IP Protection Action Plan",
+          lists: [
+            "Phase 1: Assessment (Week 1) - Identify all protectable assets, Conduct trademark/patent searches, Assess potential infringement risks",
+            "Phase 2: Priority Protection (Month 1-2) - File trademark applications for key brands, Register critical copyrights, File provisional patents for innovations",
+            "Phase 3: Comprehensive Coverage (Month 3-6) - Complete patent applications, International trademark filing (if needed), Set up monitoring systems",
+            "Phase 4: Maintenance (Ongoing) - Monitor for infringement, Manage renewals, Update protection as business grows"
+          ],
+          description: "A structured approach ensures comprehensive IP protection without overwhelming your business operations."
+        },
+        {
+          title: "The Investment Reality: Costs vs. Benefits",
+          lists: [
+            "Typical Investment: Trademark registration: ₹10,000 - ₹25,000, Copyright registration: ₹5,000 - ₹10,000, Patent filing: ₹30,000 - ₹1,00,000, Professional consultation: ₹20,000 - ₹50,000",
+            "Potential Savings from One Prevented Infringement: Legal fees: ₹5,00,000+, Revenue loss: ₹10,00,000+, Rebranding costs: ₹5,00,000+, Total risk: ₹20,00,000+",
+            "ROI Analysis: Spending ₹1 lakh on IP protection can save ₹20 lakhs in potential losses."
+          ],
+          description: "The investment in IP protection is minimal compared to the potential losses from IP theft and infringement."
+        },
+        {
+          title: "Take Action: Your IP Journey Starts Today",
+          lists: [
+            "Immediate Steps: Audit your IP assets – What needs protection?, Prioritize based on business risk – What's most valuable?, Get professional consultation – Don't go alone, Start with trademark registration – Protect your brand first, Plan for comprehensive coverage – Build systematic protection"
+          ],
+          description: "Taking immediate action is crucial to protect your business assets before it's too late."
+        },
+        {
+          title: "Conclusion",
+          lists: [
+            "Your intellectual property is often your most valuable business asset. In today's competitive market, unprotected IP is like leaving your shop unlocked overnight.",
+            "The question isn't whether you can afford IP protection – it's whether you can afford to operate without it.",
+            "Ready to protect your business assets? Don't wait until it's too late. Every day without protection is a day of unnecessary risk."
+          ],
+          description: "IP protection is not optional – it's essential for business survival and growth in today's competitive marketplace."
+        }
+      ]
+    },
+
     {
       title:
         "Unlocking Growth: A Complete Guide to Funding Solutions for Indian MSMEs in 2025",
@@ -170,7 +314,7 @@ const ExpandedBlog = () => {
       ],
     },
 
-     {
+    {
       title:
         "Business Registration Made Simple: Choose the Right Structure to Maximize Growth & Minimize Risk",
       description:
@@ -568,7 +712,7 @@ const ExpandedBlog = () => {
           <h1
             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 
                           font-bold leading-tight sm:leading-tight md:leading-tight lg:leading-tight
-                          text-white lg:text-inherit tracking-wide
+                          text-white tracking-wide
                           main-heading font-1"
           >
             Your One Stop{" "}
@@ -580,8 +724,8 @@ const ExpandedBlog = () => {
           <p
             className="text-sm sm:text-base md:text-lg lg:text-xl
                          leading-relaxed sm:leading-relaxed md:leading-relaxed
-                         text-white lg:text-white
-                         paragraph !text-white
+                         text-white
+                         paragraph
                          max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0 font-2"
           >
             Empowering Businesses through Comprehensive Solutions From Fund

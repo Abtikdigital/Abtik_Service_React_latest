@@ -7,8 +7,17 @@ import Image3 from "../assets/NewBlog/Image2.jpg";
 import Image4 from "../assets/NewBlog/BussinessWomen.jpg";
 import Image5 from "../assets/NewBlog/SmallSizeBusinessRegistrationMadeSimple.jpg";
 import Image6 from "../assets/NewBlog/Article2.jpg";
+import Image7 from "../assets/NewBlog/TrademarkIpImage.jpg"
 
 const blogs = [
+    {
+    title:
+    "Protecting Your Business Assets: The Ultimate Guide to Trademark & IP for Indian MSMEs",
+    description:
+    "Your brand name, logo, and innovative ideas are worth millions – but are they legally protected? Every day,",
+    img: Image7,
+    slug: "Protecting-Your-Business-Assets-Trademark-IP-Guide-Indian-MSMEs",
+  },
   {
     title:
     "Unlocking Growth: A Complete Guide to Funding Solutions for Indian MSMEs in 2025",
