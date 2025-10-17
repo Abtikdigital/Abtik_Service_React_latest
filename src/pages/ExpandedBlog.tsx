@@ -39,7 +39,7 @@ const ExpandedBlog = () => {
       description: "Your brand name, logo, and innovative ideas are worth millions – but are they legally protected? Every day, Indian businesses lose crores of rupees due to trademark infringement and intellectual property theft. Yet, 80% of MSMEs operate without proper IP protection, unknowingly putting their most valuable assets at risk. If you've built a recognizable brand or developed innovative solutions, this article could save your business from costly legal battles and revenue loss.",
       img: Image7, // Using existing image - can be replaced with specific IP/trademark image
       slug: "Protecting-Your-Business-Assets-Trademark-IP-Guide-Indian-MSMEs",
-      date: "December 15, 2024",
+      date: "October 15, 2025",
       readTime: "12 min read",
       category: "Legal",
       list: [
