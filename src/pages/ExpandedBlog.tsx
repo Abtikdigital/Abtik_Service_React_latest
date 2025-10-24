@@ -40,7 +40,7 @@ const ExpandedBlog = () => {
   description: "Did you know that having the right certificates and licenses can unlock benefits worth lakhs of rupees for your MSME? Yet, 60% of Indian MSMEs operate without essential certifications, missing out on government schemes, tax benefits, easier loans, and market opportunities that could transform their business trajectory. If you're an MSME owner wondering which certificates matter for your business, this comprehensive guide will save you time, money, and unlock hidden opportunities you never knew existed.",
   img: Image8, // Replace with relevant certificate/license-related image
   slug: "the-msme-certificate-license-roadmap",
-  date: "October 18, 2025",
+  date: "October 24, 2025",
   readTime: "14 min read",
   category: "Business Growth",
   list: [
