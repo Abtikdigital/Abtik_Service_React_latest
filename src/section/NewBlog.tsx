@@ -8,8 +8,18 @@ import Image4 from "../assets/NewBlog/BussinessWomen.jpg";
 import Image5 from "../assets/NewBlog/SmallSizeBusinessRegistrationMadeSimple.jpg";
 import Image6 from "../assets/NewBlog/Article2.jpg";
 import Image7 from "../assets/NewBlog/TrademarkIpImage.jpg"
+import Image8 from "../assets/NewBlog/Article8.jpeg"
+
 
 const blogs = [
+      {
+    title:
+    "The MSME Certificate & License Roadmap: Your Gateway to Government Benefits & Business Growth",
+    description:
+    "Did you know that having the right certificates and licenses can unlock benefits worth lakhs of rupees for your MSME? Yet, ",
+    img: Image8,
+    slug: "the-msme-certificate-license-roadmap",
+  },
     {
     title:
     "Protecting Your Business Assets: The Ultimate Guide to Trademark & IP for Indian MSMEs",
