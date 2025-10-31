@@ -8,9 +8,9 @@ import Image3 from "../assets/NewBlog/Image2.jpg";
 import Image4 from "../assets/NewBlog/BussinessWomen.jpg";
 import Image5 from "../assets/NewBlog/BusinessRegistrationMadeSimple.jpg";
 import Image6 from "../assets/NewBlog/Article2.jpg";
-import Image7 from "../assets/NewBlog/TrademarkIpImage.jpg"
-import Image8 from "../assets/NewBlog/Article8.jpeg"
-import Image9 from "../assets/NewBlog/Article9.jpg"
+import Image7 from "../assets/NewBlog/TrademarkIpImage.jpg";
+import Image8 from "../assets/NewBlog/Article8.jpeg";
+import Image9 from "../assets/NewBlog/Article9.jpg";
 import { useDispatch } from "react-redux";
 
 interface BlogListItem {
@@ -114,8 +114,7 @@ const ExpandedBlog = () => {
           lists: [
             "A ₹2 crore MSME can lose ₹3–5 lakhs annually in penalties and interest",
           ],
-          description:
-            "That’s before counting lost focus and credibility.",
+          description: "That’s before counting lost focus and credibility.",
         },
         {
           title: "Your 90-Day Compliance Transformation Plan",
@@ -172,7 +171,8 @@ const ExpandedBlog = () => {
             "Your structure shapes taxes, risk, growth options, and perception in the market.",
         },
         {
-          title: "Option 1: Sole Proprietorship — The Individual Entrepreneur’s Choice",
+          title:
+            "Option 1: Sole Proprietorship — The Individual Entrepreneur’s Choice",
           lists: [
             "Best for: Consultants, freelancers, small retail, low-risk pilots",
             "Benefits: Minimal paperwork, full control, quick start, low cost",
@@ -196,7 +196,8 @@ const ExpandedBlog = () => {
             "Balances flexibility with liability protection; suitable for service and professional firms.",
         },
         {
-          title: "Option 3: Private Limited Company — The Growth-Oriented Structure",
+          title:
+            "Option 3: Private Limited Company — The Growth-Oriented Structure",
           lists: [
             "Best for: Funding, manufacturing, tech startups, rapid scale",
             "Benefits: Full liability protection, investor friendly, high credibility, easy transferability",
@@ -334,180 +335,201 @@ const ExpandedBlog = () => {
       ],
     },
     {
-  title: "The MSME Certificate & License Roadmap: Your Gateway to Government Benefits & Business Growth",
-  description: "Did you know that having the right certificates and licenses can unlock benefits worth lakhs of rupees for your MSME? Yet, 60% of Indian MSMEs operate without essential certifications, missing out on government schemes, tax benefits, easier loans, and market opportunities that could transform their business trajectory. If you're an MSME owner wondering which certificates matter for your business, this comprehensive guide will save you time, money, and unlock hidden opportunities you never knew existed.",
-  img: Image8, // Replace with relevant certificate/license-related image
-  slug: "the-msme-certificate-license-roadmap",
-  date: "October 24, 2025",
-  readTime: "14 min read",
-  category: "Business Growth",
-  list: [
-    {
-      title: "The Hidden Cost of Operating Without Proper Certifications",
-      lists: [
-        "Real Impact Story: Ramesh Kumar's manufacturing unit in Coimbatore was eligible for a ₹50 lakh government subsidy. However, his application was rejected because he lacked MSME registration and ISO certification.",
-        "By the time he obtained these certificates, the scheme had closed — costing his business ₹50 lakhs in missed opportunities."
+      title:
+        "The MSME Certificate & License Roadmap: Your Gateway to Government Benefits & Business Growth",
+      description:
+        "Did you know that having the right certificates and licenses can unlock benefits worth lakhs of rupees for your MSME? Yet, 60% of Indian MSMEs operate without essential certifications, missing out on government schemes, tax benefits, easier loans, and market opportunities that could transform their business trajectory. If you're an MSME owner wondering which certificates matter for your business, this comprehensive guide will save you time, money, and unlock hidden opportunities you never knew existed.",
+      img: Image8, // Replace with relevant certificate/license-related image
+      slug: "the-msme-certificate-license-roadmap",
+      date: "October 24, 2025",
+      readTime: "14 min read",
+      category: "Business Growth",
+      list: [
+        {
+          title: "The Hidden Cost of Operating Without Proper Certifications",
+          lists: [
+            "Real Impact Story: Ramesh Kumar's manufacturing unit in Coimbatore was eligible for a ₹50 lakh government subsidy. However, his application was rejected because he lacked MSME registration and ISO certification.",
+            "By the time he obtained these certificates, the scheme had closed — costing his business ₹50 lakhs in missed opportunities.",
+          ],
+          description:
+            "Operating without proper certifications can lead to missed financial opportunities, scheme disqualifications, and loss of market credibility.",
+        },
+        {
+          title:
+            "Why Certificates & Licenses Are Your Business Growth Multipliers",
+          lists: [
+            "Government Scheme Access: Most benefits require specific certifications.",
+            "Enhanced Credibility: Certificates build trust among customers and investors.",
+            "Market Access: Many tenders and contracts mandate certifications.",
+            "Financial Benefits: Lower interest rates, tax exemptions, and subsidies.",
+            "Competitive Advantage: Certified businesses win more contracts.",
+            "Risk Mitigation: Ensures legal compliance and protects your business.",
+          ],
+          description:
+            "Certifications are not just compliance tools — they are business growth multipliers offering financial, strategic, and reputational benefits.",
+        },
+        {
+          title: "The Essential Certificate Portfolio Every MSME Needs",
+          lists: [
+            "Foundation Level: Must-have registrations for all MSMEs.",
+            "Growth Level: Specialized certifications for scaling businesses.",
+            "Quality & Safety Level: Market access and compliance certifications.",
+            "Operational Level: Business-specific licenses.",
+            "Sector-Specific: Industry-targeted certifications for manufacturing, food, technology, and services.",
+          ],
+          description:
+            "Every MSME should have a combination of foundational, growth-oriented, and industry-specific certifications to ensure long-term success.",
+        },
+        {
+          title: "Foundation Level: Must-Have Registrations",
+          lists: [
+            "Startup India Recognition: Offers 3-year tax exemption, 80% patent fee reduction, and access to a ₹10,000 crore fund.",
+            "Tax Exemption Certificate: Enables Section 80-IAC benefits, angel tax exemptions, and export incentives.",
+          ],
+          description:
+            "Foundational certifications establish your business legally and open doors to multiple government programs.",
+        },
+        {
+          title: "Growth Level: Specialized Certifications",
+          lists: [
+            "MSME Registration (Udyam): Provides access to loans, subsidies, and delayed payment protection.",
+            "Make In India Certificate: Enhances credibility and provides preference in government tenders.",
+          ],
+          description:
+            "These certifications unlock financial benefits and recognition that boost your market presence and competitiveness.",
+        },
+        {
+          title: "Quality & Safety Level: Market Access Certifications",
+          lists: [
+            "FSSAI License: Mandatory for all food businesses; enables legal compliance and export eligibility.",
+            "ZED Certificate (Zero Defect Zero Effect): Improves quality, efficiency, and environmental responsibility.",
+            "ISO Certifications: Includes ISO 9001, 14001, 45001, and 27001 for quality, safety, environment, and data security.",
+          ],
+          description:
+            "Quality certifications enhance operational excellence, trust, and access to both domestic and global markets.",
+        },
+        {
+          title: "Operational Level: Business-Specific Licenses",
+          lists: [
+            "Trade License: Legal authorization to operate from commercial premises.",
+            "Municipal and Pollution Board Clearances: Required for compliance and sustainability.",
+            "Sector-Specific Licenses: Vary by industry — from factory licenses to STPI registrations.",
+          ],
+          description:
+            "These licenses ensure that your business operates within local, state, and national legal frameworks.",
+        },
+        {
+          title: "Sector-Specific Certifications",
+          lists: [
+            "Manufacturing: Factory License, Pollution Control Clearance, Boiler Registration.",
+            "Food & Agriculture: Organic Certification, AGMARK, Spice Board Registration.",
+            "Technology: STPI Registration, Data Protection, Cyber Security Certifications.",
+            "Services: SEPC Registration, Professional Tax, and Service Tax Registration.",
+          ],
+          description:
+            "Sector-specific certifications ensure compliance and help tap into specialized markets and export opportunities.",
+        },
+        {
+          title: "The MSME Advantage: Special Benefits You Can Claim",
+          lists: [
+            "Free MSME registration through Udyam portal.",
+            "Up to 75% reimbursement for ISO certifications.",
+            "Fast-track processing for MSME applications.",
+            "Subsidized consultancy and training programs.",
+            "Cluster-based certification support for reduced costs.",
+          ],
+          description:
+            "Government incentives and financial assistance make it easier and more affordable for MSMEs to get certified.",
+        },
+        {
+          title: "The Certification Roadmap: Phased Approach",
+          lists: [
+            "Phase 1 (Month 1-2): MSME Registration, Trade License, Startup India recognition.",
+            "Phase 2 (Month 3-6): FSSAI, Tax Exemption, Make In India certifications.",
+            "Phase 3 (Month 6-12): ISO and ZED certifications for advanced growth.",
+          ],
+          description:
+            "A structured, phased certification plan helps MSMEs build credibility and access benefits progressively.",
+        },
+        {
+          title: "Success Story: The Transformation Power of Certifications",
+          lists: [
+            "'Our small electronics unit was struggling for contracts. After obtaining MSME, ISO 9001, and Make In India certifications, we started receiving government and corporate orders. Our turnover tripled in 18 months.' – Anjali Patel, Electronics Manufacturer, Pune",
+          ],
+          description:
+            "Real-world success stories show that strategic certifications can directly lead to business growth and higher revenue.",
+        },
+        {
+          title: "Common Mistakes That Cost MSMEs Dearly",
+          lists: [
+            "Mistake #1: Applying randomly without strategy – Plan based on business goals.",
+            "Mistake #2: DIY approach causing rejections – Seek professional help.",
+            "Mistake #3: Ignoring renewals – Set reminders for timely updates.",
+            "Mistake #4: Getting irrelevant certificates – Align with business benefits.",
+            "Mistake #5: Not leveraging certificates – Use them in marketing and tenders.",
+          ],
+          description:
+            "Avoiding these mistakes ensures your certification investments yield tangible business benefits.",
+        },
+        {
+          title: "Red Flags: When You Need Immediate Action",
+          lists: [
+            "You're missing out on tenders or bank loans.",
+            "Customers question your credentials.",
+            "Competitors are winning contracts using certifications.",
+            "You're expanding into new markets or exports.",
+          ],
+          description:
+            "If any of these apply to your business, it’s time to prioritize certification immediately.",
+        },
+        {
+          title: "The Professional Advantage: Why Expert Help Matters",
+          lists: [
+            "DIY Challenges: Complex procedures, risk of rejections, missed renewals.",
+            "Professional Benefits: Expert documentation, strategic guidance, and compliance monitoring for maximum ROI.",
+          ],
+          description:
+            "Hiring experts streamlines the certification journey and ensures long-term compliance and success.",
+        },
+        {
+          title: "Your Certification Action Plan",
+          lists: [
+            "Step 1: Assessment (Week 1) – Identify relevant certifications and benefits.",
+            "Step 2: Planning (Week 2) – Set timelines, budgets, and expert support.",
+            "Step 3: Implementation (Month 1–12) – Acquire certifications in phases.",
+            "Step 4: Optimization (Ongoing) – Maintain compliance and renew regularly.",
+          ],
+          description:
+            "A step-by-step approach ensures systematic certification progress and sustained business advantages.",
+        },
+        {
+          title: "Investment vs. Returns: The Numbers Game",
+          lists: [
+            "Foundation Level: ₹30,000 - ₹50,000 | Growth Level: ₹50,000 - ₹1,00,000 | Advanced Level: ₹1,00,000 - ₹5,00,000.",
+            "Professional Support: ₹25,000 - ₹75,000.",
+            "Potential Returns: ₹5,00,000 - ₹50,00,000+ from government schemes and opportunities.",
+            "ROI: Every ₹1 invested in certifications can yield ₹10–₹50 in returns.",
+          ],
+          description:
+            "The ROI on certifications far exceeds the cost — making them one of the smartest investments for MSMEs.",
+        },
+        {
+          title: "The Bottom Line",
+          lists: [
+            "Certificates and licenses are strategic business assets, not just compliance documents.",
+            "They unlock funding, contracts, credibility, and long-term growth.",
+            "In today’s market, the real question is not whether you need certifications — but which ones you need first.",
+          ],
+          description:
+            "Strategic certifications can transform your MSME into a growth-ready, opportunity-rich enterprise.",
+        },
       ],
-      description: "Operating without proper certifications can lead to missed financial opportunities, scheme disqualifications, and loss of market credibility."
     },
     {
-      title: "Why Certificates & Licenses Are Your Business Growth Multipliers",
-      lists: [
-        "Government Scheme Access: Most benefits require specific certifications.",
-        "Enhanced Credibility: Certificates build trust among customers and investors.",
-        "Market Access: Many tenders and contracts mandate certifications.",
-        "Financial Benefits: Lower interest rates, tax exemptions, and subsidies.",
-        "Competitive Advantage: Certified businesses win more contracts.",
-        "Risk Mitigation: Ensures legal compliance and protects your business."
-      ],
-      description: "Certifications are not just compliance tools — they are business growth multipliers offering financial, strategic, and reputational benefits."
-    },
-    {
-      title: "The Essential Certificate Portfolio Every MSME Needs",
-      lists: [
-        "Foundation Level: Must-have registrations for all MSMEs.",
-        "Growth Level: Specialized certifications for scaling businesses.",
-        "Quality & Safety Level: Market access and compliance certifications.",
-        "Operational Level: Business-specific licenses.",
-        "Sector-Specific: Industry-targeted certifications for manufacturing, food, technology, and services."
-      ],
-      description: "Every MSME should have a combination of foundational, growth-oriented, and industry-specific certifications to ensure long-term success."
-    },
-    {
-      title: "Foundation Level: Must-Have Registrations",
-      lists: [
-        "Startup India Recognition: Offers 3-year tax exemption, 80% patent fee reduction, and access to a ₹10,000 crore fund.",
-        "Tax Exemption Certificate: Enables Section 80-IAC benefits, angel tax exemptions, and export incentives."
-      ],
-      description: "Foundational certifications establish your business legally and open doors to multiple government programs."
-    },
-    {
-      title: "Growth Level: Specialized Certifications",
-      lists: [
-        "MSME Registration (Udyam): Provides access to loans, subsidies, and delayed payment protection.",
-        "Make In India Certificate: Enhances credibility and provides preference in government tenders."
-      ],
-      description: "These certifications unlock financial benefits and recognition that boost your market presence and competitiveness."
-    },
-    {
-      title: "Quality & Safety Level: Market Access Certifications",
-      lists: [
-        "FSSAI License: Mandatory for all food businesses; enables legal compliance and export eligibility.",
-        "ZED Certificate (Zero Defect Zero Effect): Improves quality, efficiency, and environmental responsibility.",
-        "ISO Certifications: Includes ISO 9001, 14001, 45001, and 27001 for quality, safety, environment, and data security."
-      ],
-      description: "Quality certifications enhance operational excellence, trust, and access to both domestic and global markets."
-    },
-    {
-      title: "Operational Level: Business-Specific Licenses",
-      lists: [
-        "Trade License: Legal authorization to operate from commercial premises.",
-        "Municipal and Pollution Board Clearances: Required for compliance and sustainability.",
-        "Sector-Specific Licenses: Vary by industry — from factory licenses to STPI registrations."
-      ],
-      description: "These licenses ensure that your business operates within local, state, and national legal frameworks."
-    },
-    {
-      title: "Sector-Specific Certifications",
-      lists: [
-        "Manufacturing: Factory License, Pollution Control Clearance, Boiler Registration.",
-        "Food & Agriculture: Organic Certification, AGMARK, Spice Board Registration.",
-        "Technology: STPI Registration, Data Protection, Cyber Security Certifications.",
-        "Services: SEPC Registration, Professional Tax, and Service Tax Registration."
-      ],
-      description: "Sector-specific certifications ensure compliance and help tap into specialized markets and export opportunities."
-    },
-    {
-      title: "The MSME Advantage: Special Benefits You Can Claim",
-      lists: [
-        "Free MSME registration through Udyam portal.",
-        "Up to 75% reimbursement for ISO certifications.",
-        "Fast-track processing for MSME applications.",
-        "Subsidized consultancy and training programs.",
-        "Cluster-based certification support for reduced costs."
-      ],
-      description: "Government incentives and financial assistance make it easier and more affordable for MSMEs to get certified."
-    },
-    {
-      title: "The Certification Roadmap: Phased Approach",
-      lists: [
-        "Phase 1 (Month 1-2): MSME Registration, Trade License, Startup India recognition.",
-        "Phase 2 (Month 3-6): FSSAI, Tax Exemption, Make In India certifications.",
-        "Phase 3 (Month 6-12): ISO and ZED certifications for advanced growth."
-      ],
-      description: "A structured, phased certification plan helps MSMEs build credibility and access benefits progressively."
-    },
-    {
-      title: "Success Story: The Transformation Power of Certifications",
-      lists: [
-        "'Our small electronics unit was struggling for contracts. After obtaining MSME, ISO 9001, and Make In India certifications, we started receiving government and corporate orders. Our turnover tripled in 18 months.' – Anjali Patel, Electronics Manufacturer, Pune"
-      ],
-      description: "Real-world success stories show that strategic certifications can directly lead to business growth and higher revenue."
-    },
-    {
-      title: "Common Mistakes That Cost MSMEs Dearly",
-      lists: [
-        "Mistake #1: Applying randomly without strategy – Plan based on business goals.",
-        "Mistake #2: DIY approach causing rejections – Seek professional help.",
-        "Mistake #3: Ignoring renewals – Set reminders for timely updates.",
-        "Mistake #4: Getting irrelevant certificates – Align with business benefits.",
-        "Mistake #5: Not leveraging certificates – Use them in marketing and tenders."
-      ],
-      description: "Avoiding these mistakes ensures your certification investments yield tangible business benefits."
-    },
-    {
-      title: "Red Flags: When You Need Immediate Action",
-      lists: [
-        "You're missing out on tenders or bank loans.",
-        "Customers question your credentials.",
-        "Competitors are winning contracts using certifications.",
-        "You're expanding into new markets or exports."
-      ],
-      description: "If any of these apply to your business, it’s time to prioritize certification immediately."
-    },
-    {
-      title: "The Professional Advantage: Why Expert Help Matters",
-      lists: [
-        "DIY Challenges: Complex procedures, risk of rejections, missed renewals.",
-        "Professional Benefits: Expert documentation, strategic guidance, and compliance monitoring for maximum ROI."
-      ],
-      description: "Hiring experts streamlines the certification journey and ensures long-term compliance and success."
-    },
-    {
-      title: "Your Certification Action Plan",
-      lists: [
-        "Step 1: Assessment (Week 1) – Identify relevant certifications and benefits.",
-        "Step 2: Planning (Week 2) – Set timelines, budgets, and expert support.",
-        "Step 3: Implementation (Month 1–12) – Acquire certifications in phases.",
-        "Step 4: Optimization (Ongoing) – Maintain compliance and renew regularly."
-      ],
-      description: "A step-by-step approach ensures systematic certification progress and sustained business advantages."
-    },
-    {
-      title: "Investment vs. Returns: The Numbers Game",
-      lists: [
-        "Foundation Level: ₹30,000 - ₹50,000 | Growth Level: ₹50,000 - ₹1,00,000 | Advanced Level: ₹1,00,000 - ₹5,00,000.",
-        "Professional Support: ₹25,000 - ₹75,000.",
-        "Potential Returns: ₹5,00,000 - ₹50,00,000+ from government schemes and opportunities.",
-        "ROI: Every ₹1 invested in certifications can yield ₹10–₹50 in returns."
-      ],
-      description: "The ROI on certifications far exceeds the cost — making them one of the smartest investments for MSMEs."
-    },
-    {
-      title: "The Bottom Line",
-      lists: [
-        "Certificates and licenses are strategic business assets, not just compliance documents.",
-        "They unlock funding, contracts, credibility, and long-term growth.",
-        "In today’s market, the real question is not whether you need certifications — but which ones you need first."
-      ],
-      description: "Strategic certifications can transform your MSME into a growth-ready, opportunity-rich enterprise."
-    }
-  ]
-}
-,
-    {
-      title: "Protecting Your Business Assets: The Ultimate Guide to Trademark & IP for Indian MSMEs",
-      description: "Your brand name, logo, and innovative ideas are worth millions – but are they legally protected? Every day, Indian businesses lose crores of rupees due to trademark infringement and intellectual property theft. Yet, 80% of MSMEs operate without proper IP protection, unknowingly putting their most valuable assets at risk. If you've built a recognizable brand or developed innovative solutions, this article could save your business from costly legal battles and revenue loss.",
+      title:
+        "Protecting Your Business Assets: The Ultimate Guide to Trademark & IP for Indian MSMEs",
+      description:
+        "Your brand name, logo, and innovative ideas are worth millions – but are they legally protected? Every day, Indian businesses lose crores of rupees due to trademark infringement and intellectual property theft. Yet, 80% of MSMEs operate without proper IP protection, unknowingly putting their most valuable assets at risk. If you've built a recognizable brand or developed innovative solutions, this article could save your business from costly legal battles and revenue loss.",
       img: Image7, // Using existing image - can be replaced with specific IP/trademark image
       slug: "Protecting-Your-Business-Assets-Trademark-IP-Guide-Indian-MSMEs",
       date: "October 15, 2025",
@@ -518,9 +540,10 @@ const ExpandedBlog = () => {
           title: "The Harsh Reality: What Happens Without IP Protection",
           lists: [
             "Case Study: A Bangalore-based software startup spent 3 years building their brand 'TechSolve' only to discover a larger company had registered the same trademark. Result? Complete rebranding costs of ₹15 lakhs and loss of brand recognition.",
-            "Another Example: A Mumbai manufacturer's unique product design was copied by competitors within months of launch. Without design protection, they couldn't take legal action and lost 40% market share."
+            "Another Example: A Mumbai manufacturer's unique product design was copied by competitors within months of launch. Without design protection, they couldn't take legal action and lost 40% market share.",
           ],
-          description: "Real-world examples show how unprotected intellectual property can lead to devastating financial losses and competitive disadvantages."
+          description:
+            "Real-world examples show how unprotected intellectual property can lead to devastating financial losses and competitive disadvantages.",
         },
         {
           title: "Why Trademark & IP Protection is Critical for MSMEs",
@@ -528,18 +551,20 @@ const ExpandedBlog = () => {
             "Brand Protection = Business Protection: Your trademark is your business identity. It's what customers recognize, trust, and choose repeatedly. Without legal protection, anyone can use your brand name, confuse customers, and steal your market share.",
             "Revenue Security: Protected intellectual property can become a revenue stream through licensing, franchising, or sale. Unprotected IP has zero commercial value.",
             "Investor Confidence: Investors and partners prefer businesses with protected IP. It shows professionalism and reduces investment risks.",
-            "Competitive Advantage: Legal protection gives you exclusive rights to your innovations, keeping competitors at bay."
+            "Competitive Advantage: Legal protection gives you exclusive rights to your innovations, keeping competitors at bay.",
           ],
-          description: "IP protection is not just about legal compliance – it's about securing your business future and maximizing your competitive edge."
+          description:
+            "IP protection is not just about legal compliance – it's about securing your business future and maximizing your competitive edge.",
         },
         {
           title: "The 3 Pillars of IP Protection Every MSME Needs",
           lists: [
             "Pillar 1: Trademark Registration - Business name, logos, taglines, product names, service marks",
             "Pillar 2: Copyright Protection - Original content, creative designs, software code, marketing materials",
-            "Pillar 3: Patent Filing - New inventions, unique processes, technical solutions, product improvements"
+            "Pillar 3: Patent Filing - New inventions, unique processes, technical solutions, product improvements",
           ],
-          description: "These three pillars form the foundation of comprehensive IP protection for your business assets."
+          description:
+            "These three pillars form the foundation of comprehensive IP protection for your business assets.",
         },
         {
           title: "Pillar 1: Trademark Registration",
@@ -547,35 +572,39 @@ const ExpandedBlog = () => {
             "What Gets Protected: Business name and brand names, Logos and symbols, Taglines and slogans, Product names, Service marks",
             "Why It Matters: Exclusive usage rights for 10 years (renewable indefinitely), Legal protection against infringement, Pan-India coverage with single registration, Enhanced brand credibility",
             "The Process: Trademark search and availability check, Application filing with classification, Examination by trademark office, Publication in trademark journal, Registration certificate issuance",
-            "Timeline: 12-18 months | Investment: ₹10,000 - ₹25,000 | ROI: Priceless brand protection"
+            "Timeline: 12-18 months | Investment: ₹10,000 - ₹25,000 | ROI: Priceless brand protection",
           ],
-          description: "Trademark registration is your first line of defense in protecting your brand identity and market position."
+          description:
+            "Trademark registration is your first line of defense in protecting your brand identity and market position.",
         },
         {
           title: "Pillar 2: Copyright Protection",
           lists: [
             "What Gets Protected: Original written content (websites, brochures, manuals), Creative designs and artwork, Software code and applications, Marketing materials, Training content",
             "Key Benefits: Automatic protection upon creation, Lifetime + 60 years protection period, Revenue generation through licensing, Legal remedy against copying",
-            "When to Formalize: While copyright exists automatically, formal registration provides stronger legal standing in disputes."
+            "When to Formalize: While copyright exists automatically, formal registration provides stronger legal standing in disputes.",
           ],
-          description: "Copyright protection ensures your creative works remain exclusively yours and can generate additional revenue streams."
+          description:
+            "Copyright protection ensures your creative works remain exclusively yours and can generate additional revenue streams.",
         },
         {
           title: "Pillar 3: Patent Filing",
           lists: [
             "What Gets Protected: New inventions and innovations, Unique manufacturing processes, Technical solutions to problems, Product improvements and modifications",
             "Why Patents Matter: 20-year monopoly on your invention, Licensing opportunities for passive income, Market leadership position, Investor attraction for tech startups",
-            "Types Available: Ordinary patents: Standard 20-year protection, Provisional patents: 12‑month priority window, Design Registration: Protection for ornamental designs"
+            "Types Available: Ordinary patents: Standard 20-year protection, Provisional patents: 12‑month priority window, Design Registration: Protection for ornamental designs",
           ],
-          description: "Patents protect your innovations and can transform them into valuable business assets with licensing potential."
+          description:
+            "Patents protect your innovations and can transform them into valuable business assets with licensing potential.",
         },
         {
           title: "The MSME Advantage: Special Benefits You Can Claim",
           lists: [
             "Government Support for MSMEs: 80% fee reduction on patent filing, 50% discount on trademark registration, Expedited examination on request under Rule 24C, Dedicated MSME desks at IP offices",
-            "Total Savings Example: Regular patent filing fee: ₹1,60,000, MSME discounted fee: ₹32,000, You save: ₹1,28,000 per patent!"
+            "Total Savings Example: Regular patent filing fee: ₹1,60,000, MSME discounted fee: ₹32,000, You save: ₹1,28,000 per patent!",
           ],
-          description: "The Indian government provides significant financial incentives to encourage MSMEs to protect their intellectual property."
+          description:
+            "The Indian government provides significant financial incentives to encourage MSMEs to protect their intellectual property.",
         },
         {
           title: "The Hidden Dangers: Common IP Mistakes MSMEs Make",
@@ -584,31 +613,35 @@ const ExpandedBlog = () => {
             "Mistake #2: 'Our business name registration is enough' - Reality: Business registration doesn't provide trademark protection.",
             "Mistake #3: 'We're too small for anyone to copy us' - Reality: Successful ideas get copied regardless of business size.",
             "Mistake #4: 'IP registration is too expensive' - Reality: IP theft costs much more than protection.",
-            "Mistake #5: 'The process is too complicated' - Reality: Professional help makes it simple and systematic."
+            "Mistake #5: 'The process is too complicated' - Reality: Professional help makes it simple and systematic.",
           ],
-          description: "Avoiding these common mistakes can save your business from costly IP-related problems and missed opportunities."
+          description:
+            "Avoiding these common mistakes can save your business from costly IP-related problems and missed opportunities.",
         },
         {
           title: "The Smart Approach: Why Professional Help Makes Sense",
           lists: [
             "DIY Challenges: Complex legal procedures, Risk of application rejection, Missed deadlines and renewals, Inadequate protection coverage, Time-consuming research and filing",
-            "Professional Benefits: Comprehensive IP audit of your business, Strategic protection planning based on business goals, Expert application preparation with higher success rates, Ongoing monitoring for infringement, Renewal management to maintain protection"
+            "Professional Benefits: Comprehensive IP audit of your business, Strategic protection planning based on business goals, Expert application preparation with higher success rates, Ongoing monitoring for infringement, Renewal management to maintain protection",
           ],
-          description: "Professional IP services ensure comprehensive protection and maximize your chances of successful registration."
+          description:
+            "Professional IP services ensure comprehensive protection and maximize your chances of successful registration.",
         },
         {
           title: "Success Story: How IP Protection Transformed a Business",
           lists: [
-            "'We were a small textile printing company with a unique design technique. After getting our designs copyrighted and process patented, we started licensing our technique to other manufacturers. Today, licensing revenue contributes 30% to our total income.' - Priya Shah, Creative Textiles, Surat"
+            "'We were a small textile printing company with a unique design technique. After getting our designs copyrighted and process patented, we started licensing our technique to other manufacturers. Today, licensing revenue contributes 30% to our total income.' - Priya Shah, Creative Textiles, Surat",
           ],
-          description: "Real success stories demonstrate how proper IP protection can create new revenue streams and business opportunities."
+          description:
+            "Real success stories demonstrate how proper IP protection can create new revenue streams and business opportunities.",
         },
         {
           title: "Red Flags: When You MUST Take Immediate Action",
           lists: [
-            "If any of these apply to you, get IP protection NOW: Competitors are copying your designs/products, You're planning to expand to new markets, Investors are showing interest in your business, You're launching a new product/service, Your business name/logo is becoming recognizable, You've developed unique processes or solutions"
+            "If any of these apply to you, get IP protection NOW: Competitors are copying your designs/products, You're planning to expand to new markets, Investors are showing interest in your business, You're launching a new product/service, Your business name/logo is becoming recognizable, You've developed unique processes or solutions",
           ],
-          description: "Recognizing these warning signs can help you take timely action to protect your valuable business assets."
+          description:
+            "Recognizing these warning signs can help you take timely action to protect your valuable business assets.",
         },
         {
           title: "Your IP Protection Action Plan",
@@ -616,36 +649,40 @@ const ExpandedBlog = () => {
             "Phase 1: Assessment (Week 1) - Identify all protectable assets, Conduct trademark/patent searches, Assess potential infringement risks",
             "Phase 2: Priority Protection (Month 1-2) - File trademark applications for key brands, Register critical copyrights, File provisional patents for innovations",
             "Phase 3: Comprehensive Coverage (Month 3-6) - Complete patent applications, International trademark filing (if needed), Set up monitoring systems",
-            "Phase 4: Maintenance (Ongoing) - Monitor for infringement, Manage renewals, Update protection as business grows"
+            "Phase 4: Maintenance (Ongoing) - Monitor for infringement, Manage renewals, Update protection as business grows",
           ],
-          description: "A structured approach ensures comprehensive IP protection without overwhelming your business operations."
+          description:
+            "A structured approach ensures comprehensive IP protection without overwhelming your business operations.",
         },
         {
           title: "The Investment Reality: Costs vs. Benefits",
           lists: [
             "Typical Investment: Trademark registration: ₹10,000 - ₹25,000, Copyright registration: ₹5,000 - ₹10,000, Patent filing: ₹30,000 - ₹1,00,000, Professional consultation: ₹20,000 - ₹50,000",
             "Potential Savings from One Prevented Infringement: Legal fees: ₹5,00,000+, Revenue loss: ₹10,00,000+, Rebranding costs: ₹5,00,000+, Total risk: ₹20,00,000+",
-            "ROI Analysis: Spending ₹1 lakh on IP protection can save ₹20 lakhs in potential losses."
+            "ROI Analysis: Spending ₹1 lakh on IP protection can save ₹20 lakhs in potential losses.",
           ],
-          description: "The investment in IP protection is minimal compared to the potential losses from IP theft and infringement."
+          description:
+            "The investment in IP protection is minimal compared to the potential losses from IP theft and infringement.",
         },
         {
           title: "Take Action: Your IP Journey Starts Today",
           lists: [
-            "Immediate Steps: Audit your IP assets – What needs protection?, Prioritize based on business risk – What's most valuable?, Get professional consultation – Don't go alone, Start with trademark registration – Protect your brand first, Plan for comprehensive coverage – Build systematic protection"
+            "Immediate Steps: Audit your IP assets – What needs protection?, Prioritize based on business risk – What's most valuable?, Get professional consultation – Don't go alone, Start with trademark registration – Protect your brand first, Plan for comprehensive coverage – Build systematic protection",
           ],
-          description: "Taking immediate action is crucial to protect your business assets before it's too late."
+          description:
+            "Taking immediate action is crucial to protect your business assets before it's too late.",
         },
         {
           title: "Conclusion",
           lists: [
             "Your intellectual property is often your most valuable business asset. In today's competitive market, unprotected IP is like leaving your shop unlocked overnight.",
             "The question isn't whether you can afford IP protection – it's whether you can afford to operate without it.",
-            "Ready to protect your business assets? Don't wait until it's too late. Every day without protection is a day of unnecessary risk."
+            "Ready to protect your business assets? Don't wait until it's too late. Every day without protection is a day of unnecessary risk.",
           ],
-          description: "IP protection is not optional – it's essential for business survival and growth in today's competitive marketplace."
-        }
-      ]
+          description:
+            "IP protection is not optional – it's essential for business survival and growth in today's competitive marketplace.",
+        },
+      ],
     },
 
     {

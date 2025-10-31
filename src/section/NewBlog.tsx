@@ -20,14 +20,7 @@ const blogs = [
     img: Image9,
     slug: "Tax-Compliance-Mastery-for-MSMEs",
   },
-  {
-    title:
-      "Business Registration Made Simple: Choose the Right Structure to Maximize Growth & Minimize Risk",
-    description:
-      "Choose the best structure for taxes, liability, funding, and compliance. Covers Proprietorship, Partnership, LLP, Private Limited, Section 8, Producer Company, with costs, timelines, and a selection framework.",
-    img: Image5,
-    slug: "Business-Registration-Right-Structure-Guide",
-  },
+
   {
     title:
     "The MSME Certificate & License Roadmap: Your Gateway to Government Benefits & Business Growth",
