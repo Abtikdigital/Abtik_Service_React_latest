@@ -9,10 +9,26 @@ import Image5 from "../assets/NewBlog/SmallSizeBusinessRegistrationMadeSimple.jp
 import Image6 from "../assets/NewBlog/Article2.jpg";
 import Image7 from "../assets/NewBlog/TrademarkIpImage.jpg"
 import Image8 from "../assets/NewBlog/Article8.jpeg"
-
+import Image9 from "../assets/NewBlog/Article9.jpg"
 
 const blogs = [
-      {
+  {
+    title:
+      "Tax & Compliance Mastery for MSMEs: Your Complete Guide to Staying Compliant While Maximizing Savings",
+    description:
+      "Avoid penalties and cash-flow shocks with a 3-pillar GST, TDS, and annual compliance framework. Includes calendars, automation tips, and ROI of professional support.",
+    img: Image9,
+    slug: "Tax-Compliance-Mastery-for-MSMEs",
+  },
+  {
+    title:
+      "Business Registration Made Simple: Choose the Right Structure to Maximize Growth & Minimize Risk",
+    description:
+      "Choose the best structure for taxes, liability, funding, and compliance. Covers Proprietorship, Partnership, LLP, Private Limited, Section 8, Producer Company, with costs, timelines, and a selection framework.",
+    img: Image5,
+    slug: "Business-Registration-Right-Structure-Guide",
+  },
+  {
     title:
     "The MSME Certificate & License Roadmap: Your Gateway to Government Benefits & Business Growth",
     description:
