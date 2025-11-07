@@ -15,11 +15,11 @@ import Image10 from "../assets/NewBlog/Fassai.jpg"
 const blogs = [
   {
     title:
-      "Why Every Food Business Needs an FSSAI Licence",
+      "Why Every Food Business Needs an FSSAI License",
     description:
-      "FSSAI registration/licence is mandatory for all Food Business Operators. Learn about Basic, State, and Central licences, the 14-digit FSSAI number, compliance requirements, and why it's critical for trust and market access.",
+      "FSSAI registration/license is mandatory for all Food Business Operators. Learn about Basic, State, and Central licenses, the 14-digit FSSAI number, compliance requirements, and why it's critical for trust and market access.",
     img: Image10,
-    slug: "Why-Every-Food-Business-Needs-FSSAI-Licence",
+    slug: "Why-Every-Food-Business-Needs-FSSAI-License",
   },
   {
     title:
