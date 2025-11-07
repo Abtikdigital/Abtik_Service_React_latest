@@ -10,8 +10,17 @@ import Image6 from "../assets/NewBlog/Article2.jpg";
 import Image7 from "../assets/NewBlog/TrademarkIpImage.jpg"
 import Image8 from "../assets/NewBlog/Article8.jpeg"
 import Image9 from "../assets/NewBlog/Article9.jpg"
+import Image10 from "../assets/NewBlog/Fassai.jpg"
 
 const blogs = [
+  {
+    title:
+      "Why Every Food Business Needs an FSSAI Licence",
+    description:
+      "FSSAI registration/licence is mandatory for all Food Business Operators. Learn about Basic, State, and Central licences, the 14-digit FSSAI number, compliance requirements, and why it's critical for trust and market access.",
+    img: Image10,
+    slug: "Why-Every-Food-Business-Needs-FSSAI-Licence",
+  },
   {
     title:
       "Tax & Compliance Mastery for MSMEs: Your Complete Guide to Staying Compliant While Maximizing Savings",
@@ -20,6 +29,22 @@ const blogs = [
     img: Image9,
     slug: "Tax-Compliance-Mastery-for-MSMEs",
   },
+    {
+    title:
+      "Tax & Compliance Mastery for MSMEs: Your Complete Guide to Staying Compliant While Maximizing Savings",
+    description:
+      "Avoid penalties and cash-flow shocks with a 3-pillar GST, TDS, and annual compliance framework. Includes calendars, automation tips, and ROI of professional support.",
+    img: Image9,
+    slug: "Tax-Compliance-Mastery-for-MSMEs",
+  },  {
+    title:
+      "Tax & Compliance Mastery for MSMEs: Your Complete Guide to Staying Compliant While Maximizing Savings",
+    description:
+      "Avoid penalties and cash-flow shocks with a 3-pillar GST, TDS, and annual compliance framework. Includes calendars, automation tips, and ROI of professional support.",
+    img: Image9,
+    slug: "Tax-Compliance-Mastery-for-MSMEs",
+  },
+
 
   {
     title:

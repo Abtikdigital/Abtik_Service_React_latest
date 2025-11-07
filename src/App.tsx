@@ -13,7 +13,7 @@ const ScrollToUp = lazy(() => import("./section/ScrollToUp"));
 const PageNotFound = lazy(() => import("./pages/PageNotFound"));
 
 // Funding Solution
-const MSMELoans = lazy(() => import("./pages/MSMELoans"))
+const MSMELoans = lazy(() => import("./pages/MSMELoans"));
 const SeedFund = lazy(() => import("./pages/SeedFundService"));
 const PMEGP = lazy(() => import("./pages/PMEGPService"));
 const CMEGP = lazy(() => import("./pages/CMEGPService"));
@@ -22,7 +22,9 @@ const StandUpIndia = lazy(() => import("./pages/StandUpIndiaService"));
 const MudraLoan = lazy(() => import("./pages/MudraLoan"));
 const Udaan = lazy(() => import("./pages/Udaan"));
 const CGTMSE = lazy(() => import("./pages/CGTMSEService"));
-const TaxAssumptionCertificate = lazy(() => import("./pages/TaxExemptionCertificate"))
+const TaxAssumptionCertificate = lazy(
+  () => import("./pages/TaxExemptionCertificate")
+);
 const NAIFF_AIFFService = lazy(() => import("./pages/NAIFF_AIFFService"));
 const AgriSure = lazy(() => import("./pages/AgrisureService"));
 const BusinessLoan = lazy(() => import("./pages/BusinessLoanService"));
@@ -34,9 +36,9 @@ const Sme = lazy(() => import("./pages/SmeService"));
 const TermLoan = lazy(() => import("./pages/TermService"));
 const ProjectFunding = lazy(() => import("./pages/ProjectFunding"));
 const Grants = lazy(() => import("./pages/GrantsService"));
-const AngelInverstor = lazy(() => import("./pages/Angelinverstor"))
-const VCInverstor = lazy(() => import("./pages/VCInvestor"))
-const NBFC = lazy(() => import("./pages/NBFC"))
+const AngelInverstor = lazy(() => import("./pages/Angelinverstor"));
+const VCInverstor = lazy(() => import("./pages/VCInvestor"));
+const NBFC = lazy(() => import("./pages/NBFC"));
 // Trade Mark And Ip
 const TrademarkRegistrationAndFilling = lazy(
   () => import("./pages/TrademarkRegistrationAndFillingService")
@@ -55,7 +57,7 @@ const MakeInIndiaCertificate = lazy(
 const ZEDCertificate = lazy(() => import("./pages/ZedCertificate"));
 const ISOCertificate = lazy(() => import("./pages/IsoCertificate"));
 const TradeLicenseCertificate = lazy(() => import("./pages/TradeLicence"));
-const FSSAILicense = lazy(() => import("./pages/FssaiLiecence"))
+const FSSAILicense = lazy(() => import("./pages/FssaiLiecence"));
 
 // Tax Compliance
 const GSTRegistrationFiling = lazy(
@@ -73,14 +75,13 @@ const Partnership = lazy(() => import("./pages/PartnershipFirm"));
 const ProducerCompany = lazy(() => import("./pages/ProducerCompany"));
 
 // News And Insights
-const EBook=lazy(()=>import("./pages/EBook"))
-const PdfPreview=lazy(()=>import("./pages/PdfPreview"))
+const EBook = lazy(() => import("./pages/EBook"));
+const PdfPreview = lazy(() => import("./pages/PdfPreview"));
 
 // Legal
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 // const RefundPolicy = lazy(() => import("./pages/RefundPolicy"))
 function App() {
-  
   return (
     <BrowserRouter>
       <ScrollToUp />
@@ -92,7 +93,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/news-insights/blogs" element={<Blog />} />
           <Route path="/news-insights/e-books" element={<EBook />} />
-                 <Route path="/files/:fileName" element={<PdfPreview />} />
+          <Route path="/files/:fileName" element={<PdfPreview />} />
 
           <Route path="/expandedBlog/:slug" element={<ExpandedBlog />} />
 
@@ -105,10 +106,7 @@ function App() {
             element={<StandUpIndia />}
           />
           <Route path="/services/funding/grants" element={<Grants />} />
-          <Route
-            path="/services/funding/msme-loans"
-            element={<MSMELoans />}
-          />
+          <Route path="/services/funding/msme-loans" element={<MSMELoans />} />
           <Route
             path="/services/funding/msme-loan/mudra"
             element={<MudraLoan />}
@@ -186,7 +184,6 @@ function App() {
             element={<FSSAILicense />}
           />
 
-
           <Route
             path="/services/certificate/startup-india"
             element={<StartupIndiaCertificate />}
@@ -252,10 +249,7 @@ function App() {
             path="/services/registration/producer"
             element={<ProducerCompany />}
           />
-          <Route
-            path="/legal/privacy-policy"
-            element={<PrivacyPolicy />}
-          />
+          <Route path="/legal/privacy-policy" element={<PrivacyPolicy />} />
           {/* <Route
             path="/legal/refund-policy"
             element={<RefundPolicy />}

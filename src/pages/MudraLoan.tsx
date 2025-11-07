@@ -41,12 +41,12 @@ const MudraLoan = () => {
         {
             question: "1. What is PMMY Mudra Loan?",
             answer:
-                "Pradhan Mantri Mudra Yojana (PMMY) is a flagship scheme providing collateral free loans up to ₹10 lakh to non corporate, non farm micro enterprises engaged in manufacturing, trading, or service sectors including activities allied to agriculture.",
+                "Pradhan Mantri Mudra Yojana (PMMY) is a flagship scheme providing collateral free loans up to ₹20 lakh to non corporate, non farm micro enterprises engaged in manufacturing, trading, or service sectors including activities allied to agriculture. The loan limit has been increased from ₹10 lakh to ₹20 lakh under the Tarun Plus category.",
         },
         {
-            question: "2. What are the three categories of Mudra loans?",
+            question: "2. What are the categories of Mudra loans?",
             answer:
-                "Mudra loans are categorized into three types: Shishu (up to ₹50,000), Kishore (₹50,000 to ₹5 lakh), and Tarun (₹5 lakh to ₹10 lakh), signifying different stages of business growth and funding requirements.",
+                "Mudra loans are categorized into four types: Shishu (up to ₹50,000), Kishore (₹50,000 to ₹5 lakh), Tarun (₹5 lakh to ₹10 lakh), and Tarun Plus (₹10 lakh to ₹20 lakh). Tarun Plus is for entrepreneurs who have successfully repaid previous Tarun category loans, signifying different stages of business growth and funding requirements.",
         },
         {
             question: "3. Who is eligible for Mudra loans?",
@@ -167,9 +167,9 @@ const MudraLoan = () => {
     const benefitsData = [
         {
             icon: IndianRupee ,
-            title: "Up to ₹10 Lakh Loan",
+            title: "Up to ₹20 Lakh Loan",
             description:
-                "Access collateral free loans ranging from ₹50,000 to ₹10 lakh across Shishu, Kishore, and Tarun categories for your micro enterprise needs.",
+                "Access collateral free loans ranging from ₹50,000 to ₹20 lakh across Shishu, Kishore, Tarun, and Tarun Plus categories for your micro enterprise needs.",
         },
         {
             icon: TrendingUp,
@@ -246,14 +246,15 @@ const MudraLoan = () => {
                         <p
                             className="text-sm sm:text-base md:text-lg lg:text-xl
                          leading-relaxed sm:leading-relaxed md:leading-relaxed
-                         text-white lg:text-white
-                         paragraph !text-white
+                         text-white
+                         paragraph
                          max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0 font-2"
                             
                         >
                             Fund your micro enterprise dreams with PMMY Mudra loans.
-                            Get collateral free loans up to ₹10 lakh for manufacturing,
+                            Get collateral free loans up to ₹20 lakh for manufacturing,
                             trading, and service businesses under the flagship government scheme.
+                            New Tarun Plus category offers enhanced credit limit for successful entrepreneurs.
                         </p>
                         <div className="pt-2 sm:pt-4">
                             <button
@@ -386,7 +387,8 @@ const MudraLoan = () => {
                      
                         >
                             Pradhan Mantri Mudra Yojana (PMMY) is a flagship scheme launched by the Government of India
-                            to provide collateral free loans up to ₹10 lakh to noncorporate, non farm micro enterprises.
+                            to provide collateral free loans up to ₹20 lakh to noncorporate, non farm micro enterprises.
+                            The loan limit has been increased from ₹10 lakh to ₹20 lakh with the introduction of Tarun Plus category.
                             The scheme supports millions of proprietorship and partnership firms in manufacturing, service,
                             and trading sectors, helping entrepreneurs access formal banking credit that was previously
                             unavailable through traditional channels.
@@ -409,7 +411,7 @@ const MudraLoan = () => {
                     </h2>
 
                     <div className="mt-8 bg-white rounded-4xl p-4 md:p-8 shadow-md">
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                             {/* Shishu Card */}
                             <motion.div
                                 initial={{ y: 50, opacity: 0 }}
@@ -541,6 +543,49 @@ const MudraLoan = () => {
                                     </li>
                                 </ul>
                             </motion.div>
+
+                            {/* Tarun Plus Card */}
+                            <motion.div
+                                initial={{ y: 50, opacity: 0 }}
+                                animate={isInViewFundingStructure ? { y: 0, opacity: 1 } : {}}
+                                transition={{ duration: 0.5, delay: 1.1 }}
+                                className="bg-gradient-to-br from-blue-50 to-white p-6 rounded-3xl border-2 border-blue-100 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+                            >
+                                <div className="flex items-center justify-center mb-4">
+                                    <div className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
+                                        <TrendingUp className="w-8 h-8 text-white" />
+                                    </div>
+                                </div>
+                                <div className="text-center mb-4">
+                                    <h3
+                                        className="text-xl font-2 font-bold text-gray-800 mb-3"
+                                    >
+                                        Tarun Plus
+                                    </h3>
+                                    <div className="bg-gradient-to-r font-3 from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
+                                        <p className="text-2xl font-bold">₹10L to ₹20L</p>
+                                        <p className="text-xs opacity-90">Loan amount</p>
+                                    </div>
+                                </div>
+                                <ul className="space-y-2 text-xs font-3 text-gray-700">
+                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                        <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                        <span>New category for successful Tarun repayers</span>
+                                    </li>
+                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                        <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                        <span>Must have repaid Tarun loan (₹5L–₹10L)</span>
+                                    </li>
+                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                        <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                        <span>CGFMU guarantee up to ₹20 lakh</span>
+                                    </li>
+                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                        <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                        <span>Enhanced credit limit for growth</span>
+                                    </li>
+                                </ul>
+                            </motion.div>
                         </div>
                     </div>
                 </motion.section>
@@ -636,6 +681,161 @@ const MudraLoan = () => {
                                     </li>
                                 </ul>
                             </motion.div>
+                        </div>
+                    </div>
+                </motion.section>
+
+                {/* Tarun Plus Documentation Section */}
+                <motion.section
+                    ref={refMudraLoanBenefits}
+                    initial={{ y: 100, opacity: 0 }}
+                    animate={isInViewMudraLoanBenefits ? { y: 0, opacity: 1 } : {}}
+                    transition={{ duration: 0.5 }}
+                    className="px-7 md:px-14 bg-[#f7f7f7] py-8"
+                >
+                    <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
+                    >
+                        Tarun Plus: Official Documentation Requirements
+                    </h2>
+                    <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
+                        <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-6 rounded-3xl border-l-4 border-[#3CA2E2]">
+                            <h3 className="text-xl font-2 font-bold text-gray-800 mb-3">
+                                What is Tarun Plus?
+                            </h3>
+                            <p className="text-sm md:text-base font-3 text-gray-700 mb-4">
+                                Tarun Plus is the new category under PMMY for loans above ₹10 lakh and up to ₹20 lakh. 
+                                The loan limit has been increased from ₹10 lakh to ₹20 lakh. This category is applicable 
+                                only for entrepreneurs who have availed and successfully repaid previous loans under the 
+                                'Tarun' category (₹5 lakh–₹10 lakh band).
+                            </p>
+                            <p className="text-sm md:text-base font-3 text-gray-700">
+                                The guarantee coverage under the Credit Guarantee Fund for Micro Units (CGFMU) has been 
+                                extended to cover loans up to ₹20 lakh under PMMY.
+                            </p>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <motion.div
+                                initial={{ y: 50, opacity: 0 }}
+                                animate={isInViewMudraLoanBenefits ? { y: 0, opacity: 1 } : {}}
+                                transition={{ duration: 0.5, delay: 0.5 }}
+                                className="space-y-4"
+                            >
+                                <h3 className="text-lg font-2 font-semibold text-gray-800">
+                                    Eligibility for Tarun Plus
+                                </h3>
+                                <ul className="space-y-2 text-sm font-3 text-gray-600">
+                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                        <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                        <span>Must have availed Tarun category loan (₹5L–₹10L)</span>
+                                    </li>
+                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                        <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                        <span>Successfully repaid previous Tarun loan</span>
+                                    </li>
+                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                        <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                        <span>No default history in any category</span>
+                                    </li>
+                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                        <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                        <span>Business should be in operation for minimum period</span>
+                                    </li>
+                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                        <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                        <span>Satisfactory credit track record maintained</span>
+                                    </li>
+                                </ul>
+                            </motion.div>
+
+                            <motion.div
+                                initial={{ y: 50, opacity: 0 }}
+                                animate={isInViewMudraLoanBenefits ? { y: 0, opacity: 1 } : {}}
+                                transition={{ duration: 0.5, delay: 0.7 }}
+                                className="space-y-4"
+                            >
+                                <h3 className="text-lg font-2 font-semibold text-gray-800">
+                                    Official Documents Required
+                                </h3>
+                                <ul className="space-y-2 text-sm font-3 text-gray-600">
+                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                        <FileText className="w-5 h-5 text-[#3CA2E2]" />
+                                        <span>Previous Tarun loan repayment certificate</span>
+                                    </li>
+                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                        <FileText className="w-5 h-5 text-[#3CA2E2]" />
+                                        <span>Loan account statement showing successful closure</span>
+                                    </li>
+                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                        <FileText className="w-5 h-5 text-[#3CA2E2]" />
+                                        <span>Updated project report for expansion</span>
+                                    </li>
+                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                        <FileText className="w-5 h-5 text-[#3CA2E2]" />
+                                        <span>Financial statements (last 2-3 years)</span>
+                                    </li>
+                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                        <FileText className="w-5 h-5 text-[#3CA2E2]" />
+                                        <span>ITR returns for last 2-3 years</span>
+                                    </li>
+                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                        <FileText className="w-5 h-5 text-[#3CA2E2]" />
+                                        <span>Bank statements (last 12 months)</span>
+                                    </li>
+                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                        <FileText className="w-5 h-5 text-[#3CA2E2]" />
+                                        <span>KYC documents (Aadhaar, PAN, Address proof)</span>
+                                    </li>
+                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                        <FileText className="w-5 h-5 text-[#3CA2E2]" />
+                                        <span>Business registration certificates</span>
+                                    </li>
+                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                        <FileText className="w-5 h-5 text-[#3CA2E2]" />
+                                        <span>GST registration and returns (if applicable)</span>
+                                    </li>
+                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                        <FileText className="w-5 h-5 text-[#3CA2E2]" />
+                                        <span>MSME/Udyam Registration certificate</span>
+                                    </li>
+                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                        <FileText className="w-5 h-5 text-[#3CA2E2]" />
+                                        <span>Property documents (if margin money involves property)</span>
+                                    </li>
+                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                        <FileText className="w-5 h-5 text-[#3CA2E2]" />
+                                        <span>Photographs and signature of applicant</span>
+                                    </li>
+                                </ul>
+                            </motion.div>
+                        </div>
+
+                        <div className="bg-blue-50 p-6 rounded-3xl border-l-4 border-[#3CA2E2] mt-6">
+                            <h3 className="text-lg font-2 font-semibold text-gray-800 mb-3">
+                                Key Features of Tarun Plus
+                            </h3>
+                            <ul className="space-y-2 text-sm font-3 text-gray-700">
+                                <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                    <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                    <span><strong>Loan Amount:</strong> ₹10 lakh to ₹20 lakh</span>
+                                </li>
+                                <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                    <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                    <span><strong>CGFMU Coverage:</strong> Credit guarantee extended up to ₹20 lakh</span>
+                                </li>
+                                <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                    <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                    <span><strong>Margin Money:</strong> Minimum 15% as per bank guidelines</span>
+                                </li>
+                                <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                    <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                    <span><strong>Purpose:</strong> Business expansion, scaling operations, and growth</span>
+                                </li>
+                                <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                    <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                    <span><strong>Processing:</strong> Through JanSamarth portal or bank branches</span>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </motion.section>

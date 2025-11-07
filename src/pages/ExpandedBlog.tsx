@@ -11,6 +11,7 @@ import Image6 from "../assets/NewBlog/Article2.jpg";
 import Image7 from "../assets/NewBlog/TrademarkIpImage.jpg";
 import Image8 from "../assets/NewBlog/Article8.jpeg";
 import Image9 from "../assets/NewBlog/Article9.jpg";
+import Image10 from "../assets/NewBlog/Fassai.jpg";
 import { useDispatch } from "react-redux";
 
 interface BlogListItem {
@@ -36,6 +37,97 @@ const ExpandedBlog = () => {
     dispatch({ type: "open" });
   };
   const blogsData: BlogData[] = [
+    {
+      title: "Why Every Food Business Needs an FSSAI Licence",
+      description:
+        "India's food industry is one of the fastest growing sectors driving the nation's economy. But here's the reality: in this competitive market, trust isn't optional, it's essential. Every Food Business Operator (FBO) is legally required to obtain FSSAI registration/licence under the Food Safety and Standards Act, 2006. Whether you're launching a cloud kitchen, a packaged snack brand, or a food tech startup, your customers expect one thing above all: quality and safety. The FSSAI registration/licence isn't just a piece of paper—it's a trust badge that proves your business cares about consumer health and operates with integrity.",
+      img: Image10,
+      slug: "Why-Every-Food-Business-Needs-FSSAI-Licence",
+      date: "November 5, 2024",
+      readTime: "8 min read",
+      category: "Compliance",
+      list: [
+        {
+          title: "What is an FSSAI Licence?",
+          lists: [
+            "The Food Safety and Standards Authority of India (FSSAI) regulates food quality standards across the country",
+            "Every Food Business Operator must be registered/licensed under the Food Safety and Standards Act, 2006",
+            "This isn't optional—FSSAI registration/licence under the FSS Act, 2006 is mandatory and forms the foundation of brand credibility",
+            "You are allotted a 14-digit FSSAI number that must be displayed on labels and at the premises, and quoted on invoices/receipts where applicable",
+          ],
+          description:
+            "FSSAI compliance is the legal foundation that ensures food safety and builds consumer trust in your brand.",
+        },
+        {
+          title: "Types of FSSAI Registration/Licence: Which One Do You Need?",
+          lists: [
+            "Basic FSSAI Registration: For annual turnover up to ₹12 lakh. Ideal for home kitchens, small traders, petty manufacturers. Simple online registration with 14-digit FSSAI number",
+            "State FSSAI Licence: For annual turnover ₹12 lakh to ₹20 crore. Ideal for mid-scale manufacturers, distributors operating within one state",
+            "Central FSSAI Licence: For annual turnover above ₹20 crore. Ideal for multi-state operations, large manufacturers, exporters/importers",
+            "Central Licence is compulsory regardless of turnover for: importers/exporters, e-commerce food operators, multi-state head offices, and catering units at airports/railways/seaports",
+          ],
+          description:
+            "Choose the right category based on your turnover and business operations to ensure proper compliance.",
+        },
+        {
+          title: "Why FSSAI Matters More Than You Think",
+          lists: [
+            "Market Access: Major retailers, online food platforms, and distributors won't work with you without FSSAI certification. Period.",
+            "Consumer Trust: The FSSAI logo on your packaging tells customers 'This brand cares about my health.' In a market flooded with options, that trust is your differentiator. The 14-digit number should also appear on bills/receipts where applicable",
+            "Growth Opportunities: Want to expand to multiple states? Apply for government funding? Export your products? FSSAI is your ticket",
+            "Legal Protection: Operating without required FSSAI registration/licence can lead to prosecution and penalties. Under Section 63, this can include imprisonment up to six months and a fine up to ₹5 lakh",
+          ],
+          description:
+            "FSSAI isn't just compliance—it's your gateway to market access, consumer trust, and business growth.",
+        },
+        {
+          title: "The Process: Simplified",
+          lists: [
+            "Step 1: Consultation - We assess your business and recommend the right licence category",
+            "Step 2: Documentation - We handle all paperwork (business proof, premises proof, product list, NOC, etc.)",
+            "Step 3: Online Filing - We submit your application on the FoSCoS portal, error-free",
+            "Step 4: Inspection (if required) & Approval - After approval, you receive your 14-digit FSSAI number; display it on product labels and at your premises as applicable",
+            "Step 5: Ongoing Support - Licence/registration validity ranges from 1 to 5 years. Apply for renewal in advance on the portal; late renewals close to expiry can attract ₹100 per day late fee as per the portal workflow",
+          ],
+          description:
+            "A systematic approach ensures smooth FSSAI licensing and ongoing compliance management.",
+        },
+        {
+          title: "Common Mistakes to Avoid",
+          lists: [
+            "Choosing the wrong licence category (leads to rejection)",
+            "Incomplete or incorrect documentation",
+            "Missing renewal deadlines (hello, penalties!)",
+            "Not understanding product classification",
+          ],
+          description:
+            "With the right guidance, these mistakes are 100% avoidable and can save you time and money.",
+        },
+        {
+          title: "Why Work with Abtik Services?",
+          lists: [
+            "Expert guidance tailored to your business",
+            "100% online process for convenience",
+            "Affordable pricing for startups and MSMEs",
+            "Post-registration compliance support",
+            "One-stop solution for FSSAI, GST, Udyam, and more",
+            "We handle category mapping per FoSCoS rules, complete documentation, renewal reminders, and correct 14-digit number display compliance end-to-end",
+          ],
+          description:
+            "We've helped hundreds of food startups and MSMEs get their FSSAI licences fast, accurately, and stress-free.",
+        },
+        {
+          title: "Conclusion",
+          lists: [
+            "Getting an FSSAI licence isn't just about ticking a regulatory box",
+            "It's about building credibility, earning consumer trust, and positioning your brand for long-term success",
+            "If you're in the food business or planning to start, don't wait. Get compliant. Get credible. Get Growing.",
+          ],
+          description:
+            "FSSAI compliance is your foundation for building a trusted, successful food business in India's competitive market.",
+        },
+      ],
+    },
     {
       title:
         "Tax & Compliance Mastery for MSMEs: Your Complete Guide to Staying Compliant While Maximizing Savings",
