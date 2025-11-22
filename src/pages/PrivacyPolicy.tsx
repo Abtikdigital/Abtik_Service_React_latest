@@ -207,30 +207,7 @@ const PrivacyPolicy = () => {
                     </ul>
                   </div>
 
-                  <div>
-                    <h3
-                      className="text-xl font-semibold font-2 text-gray-800 mb-3"
-
-                    >
-                      1.2 Automatically Collected Information
-                    </h3>
-                    <p
-                      className="text-gray-700 font-3 leading-relaxed mb-4"
-
-                    >
-                      When you visit our website, we may automatically collect:
-                    </p>
-                    <ul
-                      className="list-disc pl-6 font-3 text-gray-700 space-y-2"
-
-                    >
-                      <li>IP address and device information</li>
-                      <li>Browser type and version</li>
-                      <li>Pages visited and time spent on our website</li>
-                      <li>Referring website information</li>
-                      <li>Cookies and similar tracking technologies</li>
-                    </ul>
-                  </div>
+             
                 </div>
               </div>
 
@@ -498,8 +475,7 @@ const PrivacyPolicy = () => {
                   complies with applicable data protection regulations including
                   the Information Technology Act, 2000 and the Personal Data
                   Protection Bill. Any disputes arising from this policy will be
-                  subject to the exclusive jurisdiction of the courts in [Your
-                  City], India.
+                  subject to the exclusive jurisdiction of the courts in Ahmedabad, State of Gujarat, India.
                 </p>
               </div>
             </div>

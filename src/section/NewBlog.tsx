@@ -29,21 +29,7 @@ const blogs = [
     img: Image9,
     slug: "Tax-Compliance-Mastery-for-MSMEs",
   },
-    {
-    title:
-      "Tax & Compliance Mastery for MSMEs: Your Complete Guide to Staying Compliant While Maximizing Savings",
-    description:
-      "Avoid penalties and cash-flow shocks with a 3-pillar GST, TDS, and annual compliance framework. Includes calendars, automation tips, and ROI of professional support.",
-    img: Image9,
-    slug: "Tax-Compliance-Mastery-for-MSMEs",
-  },  {
-    title:
-      "Tax & Compliance Mastery for MSMEs: Your Complete Guide to Staying Compliant While Maximizing Savings",
-    description:
-      "Avoid penalties and cash-flow shocks with a 3-pillar GST, TDS, and annual compliance framework. Includes calendars, automation tips, and ROI of professional support.",
-    img: Image9,
-    slug: "Tax-Compliance-Mastery-for-MSMEs",
-  },
+
 
 
   {

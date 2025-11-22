@@ -160,6 +160,20 @@ const Footer = () => {
           </div>
         </div>
       </section>
+      <section className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] text-white px-7 md:px-14 py-6 md:py-8">
+        <div className="space-y-4 text-center">
+          <div>
+            <p className="text-sm md:text-base">
+              <span className="font-bold">Note :</span> Payments only accepted in our company account; personal account payments are not our responsibility.
+            </p>
+          </div>
+          <div className="border-t border-white/20 pt-4">
+            <p className="text-sm md:text-base">
+              <span className="font-bold">Disclaimer :</span> Please note that although we offer consulting, approval is subject to the terms and conditions of the scheme or programme.
+            </p>
+          </div>
+        </div>
+      </section>
     </>
   );
 };

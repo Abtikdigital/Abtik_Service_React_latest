@@ -226,6 +226,7 @@ const ExpandedBlog = () => {
             "Adopt systems now to prevent penalties and unlock growth.",
         },
       ],
+      
     },
     {
       title:
