@@ -113,7 +113,7 @@ const OurService = () => {
       transition={{ duration: 0.5 }}
       className="flex justify-center items-center bg-[#f7f7f7] px-5 sm:px-7 md:px-12 lg:px-14 py-8 md:py-16"
     >
-      <div className="w-full space-y-6">
+      <div className="w-full max-w-[1920px] mx-auto space-y-6">
         <h2
           className="sub-heading text-center bg-clip-text bg-gradient-to-b from-[#052EAA] to-[#3CA2E2] text-transparent font-1"
         
@@ -136,11 +136,13 @@ const OurService = () => {
               transition={{ duration: 0.5, delay: getDelay(index) }}
               className="space-y-4"
             >
-              <img
-                src={service.img}
-                className="w-full rounded-xl hover:scale-105 transition-all duration-300 cursor-pointer max-h-46"
-                alt={service.title}
-              />
+              <div className="w-full aspect-[4/3] rounded-xl overflow-hidden">
+                <img
+                  src={service.img}
+                  className="w-full h-full object-cover hover:scale-105 transition-all duration-300 cursor-pointer"
+                  alt={service.title}
+                />
+              </div>
               <h2 className="text-center text-xl text-[#3CA2E2] font-semibold font-4">
                 {service?.title}
               </h2>

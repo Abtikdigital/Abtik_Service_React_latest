@@ -215,6 +215,7 @@ const Contact = (props: any) => {
 
   return (
     <section className="px-7 md:px-14 py-6 md:py-16 bg-[#f7f7f7] space-y-6">
+      <div className="w-full max-w-[1920px] mx-auto space-y-6">
       <div className="flex gap-6 lg:space-x-6 justify-center items-center w-full">
         <div className="space-y-6 flex flex-col justify-center w-2xl">
           <h2 className="sub-heading to-[#052EAA] text-center bg-gradient-to-t from-[#3CA2E2] bg-clip-text text-transparent font-1">
@@ -399,6 +400,7 @@ const Contact = (props: any) => {
           </div>
         </div>
       )}
+      </div>
     </section>
   );
 };

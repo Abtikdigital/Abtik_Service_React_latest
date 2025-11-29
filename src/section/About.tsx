@@ -37,7 +37,7 @@ const About = () => {
 
   return (
     <>
-      <div className="grid md:grid-cols-2 bg-[#f7f7f7] px-7 md:px-14 py-6 gap-6 items-center">
+      <div className="grid md:grid-cols-2 bg-[#f7f7f7] px-7 md:px-14 py-6 gap-6 items-center w-full max-w-[1920px] mx-auto">
         {/* Text Section */}
         <div
           className={`space-y-10 transition-all duration-800 ease-out ${visibleElements.text
@@ -77,45 +77,48 @@ const About = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* First Image - Top Row */}
           <div
-            className={`transition-all duration-800 ease-out ${visibleElements.topRowImages
-              ? 'opacity-100 translate-y-0'
-              : 'opacity-0 translate-y-12'
-              }`}
+            className={`transition-all duration-800 ease-out ${
+              visibleElements.topRowImages
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-12"
+            }`}
           >
             <img
               src={Image1}
-              className="rounded-4xl w-full max-h-48"
+              className="rounded-4xl w-full h-auto"
               alt="Team working"
-              loading='lazy'
+              loading="lazy"
             />
           </div>
 
           {/* Second Image - Top Row */}
           <div
-            className={`transition-all duration-800 ease-out ${visibleElements.topRowImages
-              ? 'opacity-100 translate-y-0'
-              : 'opacity-0 translate-y-12'
-              }`}
+            className={`transition-all duration-800 ease-out ${
+              visibleElements.topRowImages
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-12"
+            }`}
           >
             <img
               src={Image3}
-              className="rounded-4xl w-full max-h-48"
-              loading='lazy'
+              className="rounded-4xl w-full h-auto"
+              loading="lazy"
               alt="Team collaboration"
             />
           </div>
 
           {/* Third Image - Bottom Row (Full Width) */}
           <div
-            className={`md:col-span-2 transition-all duration-800 ease-out ${visibleElements.bottomImage
-              ? 'opacity-100 translate-y-0'
-              : 'opacity-0 translate-y-12'
-              }`}
+            className={`md:col-span-2 transition-all duration-800 ease-out ${
+              visibleElements.bottomImage
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-12"
+            }`}
           >
             <img
               src={Image2}
-              loading='lazy'
-              className="rounded-4xl max-h-48 w-full"
+              loading="lazy"
+              className="rounded-4xl w-full h-auto"
               alt="Professional workspace"
             />
           </div>

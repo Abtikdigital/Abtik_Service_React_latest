@@ -108,22 +108,21 @@ const Recommended = () => {
       initial={{ y: 100, opacity: 0 }}
       animate={isInView ? { y: 0, opacity: 1 } : {}}
       transition={{ duration: 0.5 }}
-      className="bg-[#f7f7f7] px-5 sm:px-7 md:px-12 lg:px-14 space-y-6 py-8 md:py-16"
+      className="bg-[#f7f7f7] px-5 sm:px-7 md:px-12 lg:px-14 py-8 md:py-16"
     >
-      <h2
-        className="sub-heading bg-clip-text text-center font-1 text-transparent bg-gradient-to-t from-[#3CA2E2] to-[#052EAA] font-1"
-      
-      >
-        Recommended For You
-      </h2>
-      <p
-        className="paragraph text-center font-2"
-  
-      >
-        Top picked services for your business goals get exactly what you need,
-        when you need it.
-      </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-6">
+      <div className="w-full max-w-[1920px] mx-auto space-y-6">
+        <h2
+          className="sub-heading bg-clip-text text-center font-1 text-transparent bg-gradient-to-t from-[#3CA2E2] to-[#052EAA] font-1"
+        >
+          Recommended For You
+        </h2>
+        <p
+          className="paragraph text-center font-2"
+        >
+          Top picked services for your business goals get exactly what you need,
+          when you need it.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-6">
         {recommendedData.slice(0, visibleCount).map((data: any, index) => (
           <motion.div
             key={index}
@@ -151,18 +150,19 @@ const Recommended = () => {
             </p>
           </motion.div>
         ))}
-      </div>
-      {canLoadMore && (
-        <div className="flex justify-center mt-12">
-          <button
-            className="custom-btn font-2 w-full max-w-[120px] !py-3 mx-auto font-2"
-            type="button"
-            onClick={() => setVisibleCount((r) => r + 4)}
-          >
-            Load More
-          </button>
         </div>
-      )}
+        {canLoadMore && (
+          <div className="flex justify-center mt-12">
+            <button
+              className="custom-btn font-2 w-full max-w-[120px] !py-3 mx-auto font-2"
+              type="button"
+              onClick={() => setVisibleCount((r) => r + 4)}
+            >
+              Load More
+            </button>
+          </div>
+        )}
+      </div>
     </motion.section>
   );
 };

@@ -44,9 +44,7 @@ const FaqSection = () => {
         Frequently Asked Questions
       </h1>
 
-      <div className="px-6  md:px-24 space-y-4  font-2"
-     
-      >
+      <div className="px-6  md:px-24 space-y-4  font-2 w-full max-w-[1920px] mx-auto">
         {faq.map((data, index) => (
           <div
             key={index}

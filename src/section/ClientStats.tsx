@@ -46,7 +46,7 @@ const ClientStats = () => {
 
   return (
     <section className="px-7 py-6  md:py-16  md:px-14 bg-[#f7f7f7] " ref={ref}>
-      <div className="bg-gradient-to-r  from-[#3CA2E2]/10 to-[#052EAA]/10  rounded-2xl p-4 sm:p-6 flex flex-wrap justify-around gap-4 sm:gap-6">
+      <div className="w-full max-w-[1920px] mx-auto bg-gradient-to-r  from-[#3CA2E2]/10 to-[#052EAA]/10  rounded-2xl p-4 sm:p-6 flex flex-wrap justify-around gap-4 sm:gap-6">
         {stats.map((stat, index) => (
           <motion.div
             key={stat.label}

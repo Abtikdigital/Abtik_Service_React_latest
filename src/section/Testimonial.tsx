@@ -419,49 +419,51 @@ const TestimonialMarquee: React.FC = () => {
   const marqueeTestimonials = [...testimonials, ...testimonials];
 
   return (
-    <section className="flex flex-col items-center py-8 space-y-8 bg-[#f7f7f7] w-full min-h-[340px]">
-      <h2 className="sub-heading bg-clip-text text-transparent bg-gradient-to-t from-[#3CA2E2] to-[#052EAA] px-4">
-        Testimonials
-      </h2>
+    <section className="flex flex-col items-center py-8 bg-[#f7f7f7] w-full min-h-[340px]">
+      <div className="w-full max-w-[1920px] mx-auto flex flex-col items-center space-y-8">
+        <h2 className="sub-heading bg-clip-text text-transparent bg-gradient-to-t from-[#3CA2E2] to-[#052EAA] px-4">
+          Testimonials
+        </h2>
 
-      {isMobile ? (
-        // Mobile: snapping + card-by-card
-        <div
-          ref={wrapperRef}
-          className="relative w-full overflow-x-auto overflow-y-hidden flex"
-          style={{
-            WebkitOverflowScrolling: "touch",
-            scrollbarWidth: "none",
-            msOverflowStyle: "none",
-            scrollSnapType: "x mandatory",
-          }}
-        >
-          {testimonials.map((testimonial, idx) => (
-            <Card testimonial={testimonial} key={`m-${idx}`} />
-          ))}
-        </div>
-      ) : (
-        // Desktop: continuous marquee with hover pause
-        <div className="relative w-full overflow-hidden">
+        {isMobile ? (
+          // Mobile: snapping + card-by-card
           <div
-            className="flex items-center testimonial-marquee"
+            ref={wrapperRef}
+            className="relative w-full overflow-x-auto overflow-y-hidden flex"
             style={{
-              animation: "testimonial-marquee-keyframes 38s linear infinite",
-              animationDirection: "reverse",
-            }}
-            onMouseEnter={(e) => {
-              (e.currentTarget as HTMLDivElement).style.animationPlayState = "paused";
-            }}
-            onMouseLeave={(e) => {
-              (e.currentTarget as HTMLDivElement).style.animationPlayState = "running";
+              WebkitOverflowScrolling: "touch",
+              scrollbarWidth: "none",
+              msOverflowStyle: "none",
+              scrollSnapType: "x mandatory",
             }}
           >
-            {marqueeTestimonials.map((testimonial, idx) => (
-              <Card testimonial={testimonial} key={`d-${idx}-${testimonial.name}`} />
+            {testimonials.map((testimonial, idx) => (
+              <Card testimonial={testimonial} key={`m-${idx}`} />
             ))}
           </div>
-        </div>
-      )}
+        ) : (
+          // Desktop: continuous marquee with hover pause
+          <div className="relative w-full overflow-hidden">
+            <div
+              className="flex items-center testimonial-marquee"
+              style={{
+                animation: "testimonial-marquee-keyframes 38s linear infinite",
+                animationDirection: "reverse",
+              }}
+              onMouseEnter={(e) => {
+                (e.currentTarget as HTMLDivElement).style.animationPlayState = "paused";
+              }}
+              onMouseLeave={(e) => {
+                (e.currentTarget as HTMLDivElement).style.animationPlayState = "running";
+              }}
+            >
+              {marqueeTestimonials.map((testimonial, idx) => (
+                <Card testimonial={testimonial} key={`d-${idx}-${testimonial.name}`} />
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
 
       {/* Keep the style tag content as a single template literal */}
       <style>{`
