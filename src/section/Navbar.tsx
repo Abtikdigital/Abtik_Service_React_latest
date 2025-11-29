@@ -517,7 +517,7 @@ const DesktopNavbar = () => {
   }, [hoverTimeout, clearSubmenuTimeout]);
 
   return (
-    <div className="hidden xl:block container mx-auto px-4 lg:px-8 xl:px-14 py-2">
+    <div className="hidden xl:block w-full max-w-[1920px] mx-auto px-4 lg:px-8 xl:px-14 py-2">
       <div className="flex items-center justify-between">
         <div className="flex-shrink-0">
           <img src={Logo} alt="Logo" className="h-12 lg:h-14" />
@@ -619,9 +619,9 @@ const DesktopNavbar = () => {
                     <div
                       ref={megaMenuRef}
                       className={`
-                        absolute left-0 top-full mt-1.5 bg-white text-gray-800 rounded-xl shadow-2xl
-                        w-[95vw] lg:w-[97vw] mx-2 lg:mx-4 overflow-hidden
-                        transform transition-all duration-300 z-40 border border-gray-300
+                        absolute left-1/2 top-full mt-1.5 bg-white text-gray-800 rounded-xl shadow-2xl
+                        w-full max-w-[1920px] mx-auto overflow-hidden
+                        transform -translate-x-1/2 transition-all duration-300 z-40 border border-gray-300
                         font-1
                         ${
                           megaMenuVisible
@@ -865,7 +865,7 @@ const MobileNavbar = () => {
 
   return (
     <div className="xl:hidden relative bg-white">
-      <div className="container mx-auto py-3 flex px-4 h-18 lg:h-20 items-center justify-between">
+      <div className="w-full max-w-[1920px] mx-auto py-3 flex px-4 h-18 lg:h-20 items-center justify-between">
         <img src={Logo} alt="Logo" className="h-10 lg:h-12" />
         <button
           className="p-2 rounded-md border border-[#A4A4A4] hover:bg-[#f5f5f5] transition-colors duration-300"

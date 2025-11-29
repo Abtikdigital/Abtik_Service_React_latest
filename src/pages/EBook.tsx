@@ -420,7 +420,7 @@ const Ebook: React.FC = () => {
       <MainLayout>
         <motion.section
           ref={refHero}
-          className="flex justify-center items-center h-[70vh] sm:h-[80vh] lg:h-[85vh] xl:h-screen lg:justify-end bg-center bg-cover px-4 sm:px-6 md:px-8 lg:px-12 xl:px-14 relative overflow-hidden"
+          className="flex justify-center items-center h-[70vh] sm:h-[80vh] lg:h-[85vh] xl:h-[80vh] 2xl:h-[75vh] lg:justify-end bg-center bg-cover w-full max-w-[1920px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-14 relative overflow-hidden"
           style={{ backgroundImage: `url(${BgImage})` }}
         >
           <div className="absolute inset-0 bg-black/20 lg:bg-transparent"></div>
