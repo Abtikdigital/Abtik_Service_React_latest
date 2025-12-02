@@ -402,7 +402,7 @@ const MSMELoans = () => {
           </h2>
 
           <div className="mt-8 bg-white rounded-4xl p-4 md:p-8 shadow-md">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* CGTMSE Loans Card */}
               <motion.div
                 initial={{ y: 50, opacity: 0 }}
@@ -626,7 +626,7 @@ const MSMELoans = () => {
           <h2 className="sub-heading text-center font-2 bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]">
             Our Simple MSME Loan Process
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
             {processData?.map((process, index) => (
               <motion.div
                 key={index}
@@ -658,7 +658,7 @@ const MSMELoans = () => {
           <h2 className="sub-heading text-center font-2 bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]">
             Why Choose Abtik for MSME Loans
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
             {benefitsData?.map((benefit, index) => (
               <motion.div
                 key={index}

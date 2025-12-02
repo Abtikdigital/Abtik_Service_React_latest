@@ -217,8 +217,6 @@ const Career = () => {
   //       );
   //     }
   //   } catch (error: any) {
-  //     console.error("Submission error:", error);
-  //     console.error("Error response:", error.response?.data);
 
   //     const errorMessage =
   //       error.response?.data?.message ||
@@ -322,9 +320,6 @@ const Career = () => {
         );
       }
     } catch (error: any) {
-      console.error("Submission error:", error);
-      console.error("Error response:", error.response?.data);
-
       closeModal()
       const errorMessage =
         error.response?.data?.message ||
@@ -452,44 +447,42 @@ const Career = () => {
           initial={{ y: 100, opacity: 0 }}
           animate={isInViewCareerOpp ? { y: 0, opacity: 1 } : {}}
           transition={{ duration: 0.5 }}
-          className="grid md:grid-cols-2 bg-[#f7f7f7] px-7 md:px-14 py-12 gap-8 items-center"
+          className="bg-[#f7f7f7] px-7 md:px-14 py-12"
         >
-          {[0, 1].map((index) => (
-            <motion.div
-              key={index}
-              initial={{ y: 50, opacity: 0 }}
-              animate={isInViewCareerOpp ? { y: 0, opacity: 1 } : {}}
-              transition={{ duration: 0.5, delay: getDelay(index, 2) }}
-              className={index === 0 ? "space-y-6" : "grid grid-cols-1 gap-6"}
-            >
-              {index === 0 ? (
-                <>
-                  <h2
-                    className="sub-heading text-center md:text-left bg-clip-text bg-gradient-to-t text-transparent from-[#3CA2E2] to-[#052EAA] font-2"
-
-                  >
-                    Career Opportunities at <br />
-                    Abtik Services
-                  </h2>
-                  <p
-                    className="paragraph text-center md:text-left font-3"
-
-                  >
-                    Kickstart your growth with abtik services, where creativity runs new opportunities in business. We create exciting career opportunities for growth, learning and meaningful effects. In Abtik, we value talent, encourage new ideas, and provide a supportive, collaborative workplace where your skills and ambitions can actually thrive.
-                  </p>
-                </>
-              ) : (
-                <div className="overflow-hidden rounded-2xl shadow-lg">
-                  <img
-                    loading="lazy"
-                    src={Image1}
-                    className="w-full h-full object-cover"
-                    alt="Career opportunities"
-                  />
-                </div>
-              )}
-            </motion.div>
-          ))}
+          <div className="grid md:grid-cols-2 gap-8 items-center w-full max-w-[1920px] mx-auto">
+            {[0, 1].map((index) => (
+              <motion.div
+                key={index}
+                initial={{ y: 50, opacity: 0 }}
+                animate={isInViewCareerOpp ? { y: 0, opacity: 1 } : {}}
+                transition={{ duration: 0.5, delay: getDelay(index, 2) }}
+                className={index === 0 ? "space-y-6" : "grid grid-cols-1 gap-6"}
+              >
+                {index === 0 ? (
+                  <>
+                    <h2
+                      className="sub-heading text-center md:text-left bg-clip-text bg-gradient-to-t text-transparent from-[#3CA2E2] to-[#052EAA] font-2"
+                    >
+                      Career Opportunities at <br />
+                      Abtik Services
+                    </h2>
+                    <p className="paragraph text-center md:text-left font-3">
+                      Kickstart your growth with abtik services, where creativity runs new opportunities in business. We create exciting career opportunities for growth, learning and meaningful effects. In Abtik, we value talent, encourage new ideas, and provide a supportive, collaborative workplace where your skills and ambitions can actually thrive.
+                    </p>
+                  </>
+                ) : (
+                  <div className="overflow-hidden rounded-2xl shadow-lg">
+                    <img
+                      loading="lazy"
+                      src={Image1}
+                      className="w-full h-auto"
+                      alt="Career opportunities"
+                    />
+                  </div>
+                )}
+              </motion.div>
+            ))}
+          </div>
         </motion.section>
 
         {/* Job Openings */}
@@ -500,15 +493,14 @@ const Career = () => {
           transition={{ duration: 0.5 }}
           className="px-7 md:px-14 py-12 bg-gradient-to-b from-[#f7f7f7] to-white font-3"
         >
-          <div>
+          <div className="w-full max-w-[1920px] mx-auto">
             <h2
               className="sub-heading bg-clip-text text-center bg-gradient-to-t text-transparent from-[#052EAA] to-[#3CA2E2] mb-12 font-1"
-
             >
               Job Openings At Abtik
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 justify-center items-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center items-center">
               {jobOpenings?.map((job, index) => (
                 <motion.div
                   key={index}

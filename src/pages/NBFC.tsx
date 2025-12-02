@@ -599,7 +599,7 @@ const NBFC = () => {
                     >
                         How Abtik Helps You Secure NBFC Funding
                     </h2>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
                         {processData?.map((process, index) => (
                             <motion.div
                                 key={index}
@@ -636,7 +636,7 @@ const NBFC = () => {
                     >
                         Why Choose Abtik for NBFC
                     </h2>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
                         {benefitsData?.map((benefit, index) => (
                             <motion.div
                                 key={index}

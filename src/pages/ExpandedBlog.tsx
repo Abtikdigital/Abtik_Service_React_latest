@@ -1349,8 +1349,9 @@ const ExpandedBlog = () => {
       </section>
 
       {/* Detailed Blog Section - Enhanced */}
-      <section className="px-4 sm:px-7 md:px-14 py-6 md:py-12 bg-[#f7f7f7] min-h-screen">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-8 max-w-7xl mx-auto">
+      <section className="py-6 md:py-12 bg-[#f7f7f7] min-h-screen">
+        <div className="w-full max-w-[1920px] mx-auto px-4 sm:px-7 md:px-14">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-8">
           {/* Left Part - Main Content */}
           <div className="lg:col-span-2 space-y-4 md:space-y-8">
             {/* Blog Image with Overlay Info */}
@@ -1539,6 +1540,7 @@ const ExpandedBlog = () => {
                 </div>
               </div>
             </div>
+          </div>
           </div>
         </div>
       </section>

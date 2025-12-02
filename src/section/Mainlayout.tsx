@@ -11,6 +11,7 @@ import Offer from "./Offer";
 import { addContact } from "../api/contactApis";
 import isValidIndianNumber from "../utils/validation/isGenuineNumber";
 import { useLocation } from "react-router-dom";
+import SeoSchema from "./SeoSchema";
 
 
 // Define FormData interface
@@ -156,7 +157,7 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
   const isOpen = useSelector((state: RootState) => state.isContactFormOpen);
   const dispatch = useDispatch();
 
-  const {pathname}=useLocation()
+  const { pathname } = useLocation();
 
 
   const {
@@ -295,6 +296,7 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
 
   return (
     <div className="">
+      <SeoSchema />
       <Offer />
       <Navbar />
       {children}

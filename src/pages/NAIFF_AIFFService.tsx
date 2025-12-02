@@ -272,80 +272,84 @@ const NAIFFAIFF = () => {
                     </motion.div>
                 </section>
 
-                {/* Get In Touch Section */}
-                <motion.section
-                    ref={refTouch}
-                    initial={{ y: 100, opacity: 0 }}
-                    animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
-                    transition={{ duration: 0.5 }}
-                    className="flex flex-col md:flex-row gap-8 bg-[#f7f7f7] py-16 px-7 md:px-14"
-                >
+            {/* Get In Touch Section */}
+            <motion.section
+                ref={refTouch}
+                initial={{ y: 100, opacity: 0 }}
+                animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
+                transition={{ duration: 0.5 }}
+                className="bg-[#f7f7f7] py-16"
+            >
+                <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14 flex flex-col md:flex-row gap-8 box-border">
                     <motion.div
                         initial={{ y: 50, opacity: 0 }}
                         animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
                         transition={{ duration: 0.5, delay: getTouchDelay(0) }}
-                        className="w-full md:w-[320px] flex-shrink-0 bg-gradient-to-br from-blue-100 to-blue-200 p-6 rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
+                        className="w-full md:w-[320px] flex-shrink-0 bg-gradient-to-br from-blue-100 to-blue-200 p-6 rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 box-border"
                     >
                         <h3
                             className="text-lg sm:text-xl font-semibold text-gray-800 mb-4 font-2"
-                          
                         >
                             Get in Touch
                         </h3>
-                       <div className="space-y-4">
-                        <a
-                            href=""
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
-                            aria-label="Visit us at 123 Business Hub, New Delhi, India"
-                        >
-                            <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
-                                <User className="w-5 h-5 text-white" />
-                            </span>
-                            <div>
-                                <p className="text-base text-gray-700 font-semibold font-3">
-                                    Arissit Thackar
-
-                                </p>
-                                <p className="text-xs text-gray-600 font-3">
-                                    NBFC-HOD
-                                    <br />
-
-                                </p>
-                            </div>
-                        </a>
-                        <a
-                            href="tel:+916357369191"
-                            className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
-                            aria-label="Call us at +91 98765 43210"
-                        >
-                            <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
-                                <Phone className="w-5 h-5 text-white" />
-                            </span>
-                            <div>
-                                <p className="text-base text-gray-700 font-semibold font-3">
-                                    Call Anytime
-                                </p>
-                                <p className="text-xs text-gray-600 font-3"><a href="tel:+917486 952 087">+91 6357 369 191</a></p>
-                            </div>
-                        </a>
-                        <a
-                            href="mailto:Abtik.funding@abtikservices.in"
-                            className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
-                            aria-label="Email us at info@abtik.com"
-                        >
-                            <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
-                                <Mail className="w-5 h-5 text-white" />
-                            </span>
-                            <div>
-                                <p className="text-base text-gray-700 font-semibold font-3">
-                                    Write Email
-                                </p>
-                                <p className="text-xs text-gray-600 font-3"><a href="mailto:Abtik.funding@abtikservices.in">Abtik.funding@abtikservices.in</a></p>
-                            </div>
-                        </a>
-                    </div>
+                        <div className="space-y-4">
+                            <a
+                                href=""
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
+                                aria-label="Visit us at 123 Business Hub, New Delhi, India"
+                            >
+                                <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
+                                    <User className="w-5 h-5 text-white" />
+                                </span>
+                                <div>
+                                    <p className="text-base text-gray-700 font-semibold font-3">
+                                        Arissit Thackar
+                                    </p>
+                                    <p className="text-xs text-gray-600 font-3">
+                                        NBFC-HOD
+                                        <br />
+                                    </p>
+                                </div>
+                            </a>
+                            <a
+                                href="tel:+916357369191"
+                                className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
+                                aria-label="Call us at +91 98765 43210"
+                            >
+                                <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
+                                    <Phone className="w-5 h-5 text-white" />
+                                </span>
+                                <div>
+                                    <p className="text-base text-gray-700 font-semibold font-3">
+                                        Call Anytime
+                                    </p>
+                                    <p className="text-xs text-gray-600 font-3">
+                                        <a href="tel:+917486 952 087">+91 6357 369 191</a>
+                                    </p>
+                                </div>
+                            </a>
+                            <a
+                                href="mailto:Abtik.funding@abtikservices.in"
+                                className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
+                                aria-label="Email us at info@abtik.com"
+                            >
+                                <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
+                                    <Mail className="w-5 h-5 text-white" />
+                                </span>
+                                <div>
+                                    <p className="text-base text-gray-700 font-semibold font-3">
+                                        Write Email
+                                    </p>
+                                    <p className="text-xs text-gray-600 font-3">
+                                        <a href="mailto:Abtik.funding@abtikservices.in">
+                                            Abtik.funding@abtikservices.in
+                                        </a>
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
                     </motion.div>
                     <motion.div
                         initial={{ y: 50, opacity: 0 }}
@@ -363,10 +367,11 @@ const NAIFFAIFF = () => {
                             </p>
                         </div>
                         <div className="p-2 bg-white rounded-4xl box-border grid h-full ">
-                            <img src={Image1} className="rounded-3xl w-full h-64  " loading="lazy" />
+                            <img src={Image1} className="rounded-3xl w-full h-64" loading="lazy" />
                         </div>
                     </motion.div>
-                </motion.section>
+                </div>
+            </motion.section>
 
                 {/* What is NAIFF/AIFF */}
                 <motion.section
@@ -401,16 +406,15 @@ const NAIFFAIFF = () => {
                     initial={{ y: 100, opacity: 0 }}
                     animate={isInViewInvestmentStructure ? { y: 0, opacity: 1 } : {}}
                     transition={{ duration: 0.5 }}
-                    className="px-7 md:px-14 bg-[#f7f7f7] py-8"
+                    className="bg-[#f7f7f7] py-8"
                 >
-                    <h2 className="sub-heading text-center font-2 bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                      
-                    >
-                        NAIFF/AIFF Investment Structure
-                    </h2>
+                    <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14">
+                        <h2 className="sub-heading text-center font-2 bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]">
+                            NAIFF/AIFF Investment Structure
+                        </h2>
 
-                    <div className="mt-8 bg-white rounded-4xl p-4 md:p-8 shadow-md">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div className="mt-8 bg-white rounded-4xl p-4 md:p-8 shadow-md">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             {/* Early Stage Investment Card */}
                             <motion.div
                                 initial={{ y: 50, opacity: 0 }}
@@ -455,7 +459,7 @@ const NAIFFAIFF = () => {
                                 </ul>
                             </motion.div>
 
-                            {/* Growth Stage Investment Card */}
+                                {/* Growth Stage Investment Card */}
                             <motion.div
                                 initial={{ y: 50, opacity: 0 }}
                                 animate={isInViewInvestmentStructure ? { y: 0, opacity: 1 } : {}}
@@ -497,7 +501,8 @@ const NAIFFAIFF = () => {
                                         <span>Strategic partnerships and networks</span>
                                     </li>
                                 </ul>
-                            </motion.div>
+                                </motion.div>
+                            </div>
                         </div>
                     </div>
                 </motion.section>
@@ -508,91 +513,87 @@ const NAIFFAIFF = () => {
                     initial={{ y: 100, opacity: 0 }}
                     animate={isInViewNAIFFAIFFBenefits ? { y: 0, opacity: 1 } : {}}
                     transition={{ duration: 0.5 }}
-                    className="px-7 md:px-14 bg-[#f7f7f7] py-8"
+                    className="bg-[#f7f7f7] py-8"
                 >
-                    <h2 className="sub-heading text-center font-2 bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                      
-                    >
-                        NAIFF/AIFF Benefits & Requirements
-                    </h2>
-                    <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
-                        <p className="text-sm md:text-base font-3 text-gray-600 text-center"
-                            
-                        >
-                            NAIFF/AIFF investments provide not just capital but strategic value addition through expertise,
-                            networks, and guidance to accelerate business growth and market penetration.
-                        </p>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <motion.div
-                                initial={{ y: 50, opacity: 0 }}
-                                animate={isInViewNAIFFAIFFBenefits ? { y: 0, opacity: 1 } : {}}
-                                transition={{ duration: 0.5, delay: 0.5 }}
-                                className="space-y-4"
-                            >
-                                <h3
-                                    className="text-lg font-2 font-semibold text-gray-800"
-                                   
+                    <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14">
+                        <h2 className="sub-heading text-center font-2 bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]">
+                            NAIFF/AIFF Benefits & Requirements
+                        </h2>
+                        <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
+                            <p className="text-sm md:text-base font-3 text-gray-600 text-center">
+                                NAIFF/AIFF investments provide not just capital but strategic value addition through expertise,
+                                networks, and guidance to accelerate business growth and market penetration.
+                            </p>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <motion.div
+                                    initial={{ y: 50, opacity: 0 }}
+                                    animate={isInViewNAIFFAIFFBenefits ? { y: 0, opacity: 1 } : {}}
+                                    transition={{ duration: 0.5, delay: 0.5 }}
+                                    className="space-y-4"
                                 >
-                                    Key Benefits
-                                </h3>
-                                <ul className="space-y-2 text-sm text-gray-600 font-3">
-                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
-                                        <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                        <span>Substantial equity funding for growth scaling.</span>
-                                    </li>
-                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
-                                        <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                        <span>Strategic guidance and industry expertise.</span>
-                                    </li>
-                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
-                                        <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                        <span>Access to extensive business networks.</span>
-                                    </li>
-                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
-                                        <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                        <span>Board representation and mentorship.</span>
-                                    </li>
-                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
-                                        <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                        <span>Follow-on investment opportunities.</span>
-                                    </li>
-                                </ul>
-                            </motion.div>
-                            <motion.div
-                                initial={{ y: 50, opacity: 0 }}
-                                animate={isInViewNAIFFAIFFBenefits ? { y: 0, opacity: 1 } : {}}
-                                transition={{ duration: 0.5, delay: 0.7 }}
-                                className="space-y-4"
-                            >
-                                <h3
-                                    className="text-lg font-semibold text-gray-800 font-2"
-                                    
+                                    <h3
+                                        className="text-lg font-2 font-semibold text-gray-800"
+                                    >
+                                        Key Benefits
+                                    </h3>
+                                    <ul className="space-y-2 text-sm text-gray-600 font-3">
+                                        <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                            <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                            <span>Substantial equity funding for growth scaling.</span>
+                                        </li>
+                                        <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                            <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                            <span>Strategic guidance and industry expertise.</span>
+                                        </li>
+                                        <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                            <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                            <span>Access to extensive business networks.</span>
+                                        </li>
+                                        <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                            <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                            <span>Board representation and mentorship.</span>
+                                        </li>
+                                        <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                            <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                            <span>Follow-on investment opportunities.</span>
+                                        </li>
+                                    </ul>
+                                </motion.div>
+                                <motion.div
+                                    initial={{ y: 50, opacity: 0 }}
+                                    animate={isInViewNAIFFAIFFBenefits ? { y: 0, opacity: 1 } : {}}
+                                    transition={{ duration: 0.5, delay: 0.7 }}
+                                    className="space-y-4"
                                 >
-                                    Investment Requirements
-                                </h3>
-                                <ul className="space-y-2 text-sm text-gray-600 font-3">
-                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
-                                        <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                        <span>Scalable business model with high growth potential.</span>
-                                    </li>
-                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
-                                        <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                        <span>Strong management team with relevant experience.</span>
-                                    </li>
-                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
-                                        <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                        <span>Clear market opportunity and competitive advantage.</span>
-                                    </li>
-                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
-                                        <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                        <span>Demonstrable traction and financial metrics.</span>
-                                    </li>
-                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
-                                        <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                        <span>Exit strategy alignment and growth roadmap.</span>
-                                    </li>
-                                </ul>
-                            </motion.div>
+                                    <h3
+                                        className="text-lg font-semibold text-gray-800 font-2"
+                                    >
+                                        Investment Requirements
+                                    </h3>
+                                    <ul className="space-y-2 text-sm text-gray-600 font-3">
+                                        <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                            <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                            <span>Scalable business model with high growth potential.</span>
+                                        </li>
+                                        <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                            <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                            <span>Strong management team with relevant experience.</span>
+                                        </li>
+                                        <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                            <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                            <span>Clear market opportunity and competitive advantage.</span>
+                                        </li>
+                                        <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                            <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                            <span>Demonstrable traction and financial metrics.</span>
+                                        </li>
+                                        <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                            <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                            <span>Exit strategy alignment and growth roadmap.</span>
+                                        </li>
+                                    </ul>
+                                </motion.div>
+                            </div>
                         </div>
                     </div>
                 </motion.section>
@@ -603,34 +604,33 @@ const NAIFFAIFF = () => {
                     initial={{ y: 100, opacity: 0 }}
                     animate={isInViewProcess ? { y: 0, opacity: 1 } : {}}
                     transition={{ duration: 0.5 }}
-                    className="px-7 md:px-14 bg-[#f7f7f7] py-8"
+                    className="bg-[#f7f7f7] py-8"
                 >
-                    <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                       
-                    >
-                        How Abtik Helps You Secure NAIFF/AIFF Investment
-                    </h2>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-                        {processData?.map((process, index) => (
-                            <motion.div
-                                key={index}
-                                initial={{ y: 50, opacity: 0 }}
-                                animate={isInViewProcess ? { y: 0, opacity: 1 } : {}}
-                                transition={{ duration: 0.5, delay: getProcessDelay(index) }}
-                                className="bg-white p-6 rounded-4xl shadow-md text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
-                            >
-                                <div className="mb-4 inline-block p-3 bg-gradient-to-r from-blue-100 to-blue-200 rounded-full">
-                                    <process.icon className="w-8 h-8" />
-                                </div>
-                                <h3
-                                    className="text-lg font-2 font-semibold text-gray-800 mb-2"
-                                  
+                    <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14">
+                        <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]">
+                            How Abtik Helps You Secure NAIFF/AIFF Investment
+                        </h2>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+                            {processData?.map((process, index) => (
+                                <motion.div
+                                    key={index}
+                                    initial={{ y: 50, opacity: 0 }}
+                                    animate={isInViewProcess ? { y: 0, opacity: 1 } : {}}
+                                    transition={{ duration: 0.5, delay: getProcessDelay(index) }}
+                                    className="bg-white p-6 rounded-4xl shadow-md text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
                                 >
-                                    {process.title}
-                                </h3>
-                                <p className="text-sm text-gray-600 font-3">{process.description}</p>
-                            </motion.div>
-                        ))}
+                                    <div className="mb-4 inline-block p-3 bg-gradient-to-r from-blue-100 to-blue-200 rounded-full">
+                                        <process.icon className="w-8 h-8" />
+                                    </div>
+                                    <h3
+                                        className="text-lg font-2 font-semibold text-gray-800 mb-2"
+                                    >
+                                        {process.title}
+                                    </h3>
+                                    <p className="text-sm text-gray-600 font-3">{process.description}</p>
+                                </motion.div>
+                            ))}
+                        </div>
                     </div>
                 </motion.section>
 
@@ -640,34 +640,33 @@ const NAIFFAIFF = () => {
                     initial={{ y: 100, opacity: 0 }}
                     animate={isInViewBenefits ? { y: 0, opacity: 1 } : {}}
                     transition={{ duration: 0.5 }}
-                    className="px-7 md:px-14 bg-[#f7f7f7] py-8 "
+                    className="bg-[#f7f7f7] py-8 "
                 >
-                    <h2 className="sub-heading text-center font-2 bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-             
-                    >
-                        Why Choose Abtik for NAIFF/AIFF
-                    </h2>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-                        {benefitsData?.map((benefit, index) => (
-                            <motion.div
-                                key={index}
-                                initial={{ y: 50, opacity: 0 }}
-                                animate={isInViewBenefits ? { y: 0, opacity: 1 } : {}}
-                                transition={{ duration: 0.5, delay: getBenefitsDelay(index) }}
-                                className="bg-white p-6 rounded-4xl shadow-md text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
-                            >
-                                <div className="mb-4 inline-block p-3 bg-gradient-to-r from-blue-100 to-blue-200 rounded-full">
-                                    <benefit.icon className="w-8 h-8" />
-                                </div>
-                                <h3
-                                    className="text-lg font-2 font-semibold text-gray-800 mb-2"
-                                  
+                    <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14">
+                        <h2 className="sub-heading text-center font-2 bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]">
+                            Why Choose Abtik for NAIFF/AIFF
+                        </h2>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+                            {benefitsData?.map((benefit, index) => (
+                                <motion.div
+                                    key={index}
+                                    initial={{ y: 50, opacity: 0 }}
+                                    animate={isInViewBenefits ? { y: 0, opacity: 1 } : {}}
+                                    transition={{ duration: 0.5, delay: getBenefitsDelay(index) }}
+                                    className="bg-white p-6 rounded-4xl shadow-md text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
                                 >
-                                    {benefit.title}
-                                </h3>
-                                <p className="text-sm font-3 text-gray-600">{benefit.description}</p>
-                            </motion.div>
-                        ))}
+                                    <div className="mb-4 inline-block p-3 bg-gradient-to-r from-blue-100 to-blue-200 rounded-full">
+                                        <benefit.icon className="w-8 h-8" />
+                                    </div>
+                                    <h3
+                                        className="text-lg font-2 font-semibold text-gray-800 mb-2"
+                                    >
+                                        {benefit.title}
+                                    </h3>
+                                    <p className="text-sm font-3 text-gray-600">{benefit.description}</p>
+                                </motion.div>
+                            ))}
+                        </div>
                     </div>
                 </motion.section>
 

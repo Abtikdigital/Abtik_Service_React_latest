@@ -266,9 +266,10 @@ const TDCompliance = () => {
           initial={{ y: 100, opacity: 0 }}
           animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
           transition={{ duration: 0.5 }}
-          className="flex flex-col md:flex-row gap-8 bg-[#f7f7f7] py-16 px-7 md:px-14"
+          className="bg-[#f7f7f7] py-16"
         >
-          <motion.div
+          <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14 flex flex-col md:flex-row gap-8 items-stretch">
+            <motion.div
             initial={{ y: 50, opacity: 0 }}
             animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
             transition={{ duration: 0.5, delay: getTouchDelay(0) }}
@@ -358,6 +359,7 @@ const TDCompliance = () => {
               <img src={Image1} className="rounded-3xl w-full h-64  " loading="lazy" />
             </div>
           </motion.div>
+          </div>
         </motion.section>
 
         {/* What is TDS Compliance */}
@@ -366,24 +368,26 @@ const TDCompliance = () => {
           initial={{ y: 100, opacity: 0 }}
           animate={isInViewAbout ? { y: 0, opacity: 1 } : {}}
           transition={{ duration: 0.5 }}
-          className="px-7 md:px-14 bg-[#f7f7f7] py-8"
+          className="bg-[#f7f7f7] py-8"
         >
-          <div className="bg-gradient-to-t from-[#3CA2E2] to-[#052EAA] rounded-4xl p-8 md:p-12 space-y-4 text-center">
-            <h2
-              className="sub-heading text-white text-left font-2"
+          <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14">
+            <div className="bg-gradient-to-t from-[#3CA2E2] to-[#052EAA] rounded-4xl p-8 md:p-12 space-y-4 text-center">
+              <h2
+                className="sub-heading text-white text-left font-2"
 
-            >
-              What Is TDS Compliance?
-            </h2>
-            <p
-              className="paragraph !text-white mx-auto text-left font-3"
+              >
+                What Is TDS Compliance?
+              </h2>
+              <p
+                className="paragraph !text-white mx-auto text-left font-3"
 
-            >
-              TDS compliance means deducting the right tax at source, depositing
-              it on time, filing quarterly returns, and providing TDS
-              certificates to payees ensuring you meet all requirements under
-              the Income Tax Act and avoid penalties.
-            </p>
+              >
+                TDS compliance means deducting the right tax at source, depositing
+                it on time, filing quarterly returns, and providing TDS
+                certificates to payees ensuring you meet all requirements under
+                the Income Tax Act and avoid penalties.
+              </p>
+            </div>
           </div>
         </motion.section>
 
@@ -393,15 +397,16 @@ const TDCompliance = () => {
           initial={{ y: 100, opacity: 0 }}
           animate={isInViewEligibility ? { y: 0, opacity: 1 } : {}}
           transition={{ duration: 0.5 }}
-          className="px-7 md:px-14 bg-[#f7f7f7] py-8"
+          className="bg-[#f7f7f7] py-8"
         >
-          <h2
-            className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
+          <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14">
+            <h2
+              className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
 
-          >
-            Who Needs TDS Compliance?
-          </h2>
-          <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
+            >
+              Who Needs TDS Compliance?
+            </h2>
+            <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
             <p
               className="text-sm md:text-base font-3 text-gray-600 text-center"
 
@@ -488,6 +493,7 @@ const TDCompliance = () => {
               </motion.div>
             </div>
           </div>
+          </div>
         </motion.section>
 
         {/* Abtik Process Section */}
@@ -496,15 +502,16 @@ const TDCompliance = () => {
           initial={{ y: 100, opacity: 0 }}
           animate={isInViewProcess ? { y: 0, opacity: 1 } : {}}
           transition={{ duration: 0.5 }}
-          className="px-7 md:px-14 bg-[#f7f7f7] py-8"
+          className="bg-[#f7f7f7] py-8"
         >
-          <h2
-            className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
+          <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14">
+            <h2
+              className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
 
-          >
-            How Abtik Simplifies Your TDS Compliance
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+            >
+              How Abtik Simplifies Your TDS Compliance
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
             {processData.map((process, index) => (
               <motion.div
                 key={index}
@@ -525,6 +532,7 @@ const TDCompliance = () => {
                 <p className="text-sm text-gray-600 font-3">{process.description}</p>
               </motion.div>
             ))}
+            </div>
           </div>
         </motion.section>
 
@@ -534,35 +542,37 @@ const TDCompliance = () => {
           initial={{ y: 100, opacity: 0 }}
           animate={isInViewBenefits ? { y: 0, opacity: 1 } : {}}
           transition={{ duration: 0.5 }}
-          className="px-7 md:px-14 bg-[#f7f7f7] py-8 "
+          className="bg-[#f7f7f7] py-8"
         >
-          <h2
-            className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
+          <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14">
+            <h2
+              className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
 
-          >
-            Why TDS Compliance Matters
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-            {benefitsData.map((benefit, index) => (
-              <motion.div
-                key={index}
-                initial={{ y: 50, opacity: 0 }}
-                animate={isInViewBenefits ? { y: 0, opacity: 1 } : {}}
-                transition={{ duration: 0.5, delay: getBenefitsDelay(index) }}
-                className="bg-white p-6 rounded-4xl shadow-md text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
-              >
-                <div className="mb-4 inline-block p-3 bg-gradient-to-r from-blue-100 to-blue-200 rounded-full">
-                  <benefit.icon className="w-8 h-8" />
-                </div>
-                <h3
-                  className="text-lg font-2 font-semibold text-gray-800 mb-2"
-
+            >
+              Why TDS Compliance Matters
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+              {benefitsData.map((benefit, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ y: 50, opacity: 0 }}
+                  animate={isInViewBenefits ? { y: 0, opacity: 1 } : {}}
+                  transition={{ duration: 0.5, delay: getBenefitsDelay(index) }}
+                  className="bg-white p-6 rounded-4xl shadow-md text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
                 >
-                  {benefit.title}
-                </h3>
-                <p className="text-sm font-3 text-gray-600">{benefit.description}</p>
-              </motion.div>
-            ))}
+                  <div className="mb-4 inline-block p-3 bg-gradient-to-r from-blue-100 to-blue-200 rounded-full">
+                    <benefit.icon className="w-8 h-8" />
+                  </div>
+                  <h3
+                    className="text-lg font-2 font-semibold text-gray-800 mb-2"
+
+                  >
+                    {benefit.title}
+                  </h3>
+                  <p className="text-sm font-3 text-gray-600">{benefit.description}</p>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </motion.section>
 
@@ -572,19 +582,20 @@ const TDCompliance = () => {
           initial={{ y: 100, opacity: 0 }}
           animate={isInViewFAQ ? { y: 0, opacity: 1 } : {}}
           transition={{ duration: 0.5 }}
-          className="bg-[#f7f7f7] py-8 md:py-16 space-y-6"
+          className="bg-[#f7f7f7] py-8 md:py-16"
         >
-          <h1
-            className="sub-heading font-2 bg-gradient-to-t text-center bg-clip-text from-[#3CA2E2] to-[#052EAA] text-transparent"
+          <div className="w-full max-w-[1920px] mx-auto space-y-6">
+            <h1
+              className="sub-heading font-2 bg-gradient-to-t text-center bg-clip-text from-[#3CA2E2] to-[#052EAA] text-transparent"
 
-          >
-            Frequently Asked Questions
-          </h1>
-          <div
-            className="px-6  md:px-24 space-y-4 font-3"
+            >
+              Frequently Asked Questions
+            </h1>
+            <div
+              className="px-6  md:px-24 space-y-4 font-3"
 
-          >
-            {faq.map((data, index) => (
+            >
+              {faq.map((data, index) => (
               <motion.div
                 key={index}
                 initial={{ y: 50, opacity: 0 }}
@@ -620,6 +631,7 @@ const TDCompliance = () => {
                 </div>
               </motion.div>
             ))}
+            </div>
           </div>
         </motion.section>
 

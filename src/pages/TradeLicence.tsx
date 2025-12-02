@@ -265,13 +265,15 @@ const TradeLicenseCertificate = () => {
           initial={{ y: 100, opacity: 0 }}
           animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
           transition={{ duration: 0.5 }}
-          className="flex flex-col md:flex-row gap-8 bg-[#f7f7f7] py-16 px-7 md:px-14"
+          className="bg-[#f7f7f7] py-16"
         >
+          <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14">
+            <div className="flex flex-col md:flex-row gap-8 items-stretch">
           <motion.div
             initial={{ y: 50, opacity: 0 }}
             animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
             transition={{ duration: 0.5, delay: getTouchDelay(0) }}
-            className="w-full md:w-[320px] flex-shrink-0 bg-gradient-to-br from-blue-100 to-blue-200 p-6 rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
+            className="w-full md:w-[320px] flex-shrink-0 bg-gradient-to-br from-blue-100 to-blue-200 p-6 rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 flex flex-col"
           >
             <h3
               className="text-lg font-2 sm:text-xl font-semibold text-gray-800 mb-4"
@@ -279,7 +281,7 @@ const TradeLicenseCertificate = () => {
             >
               Get in Touch
             </h3>
-            <div className="space-y-4">
+            <div className="flex flex-col justify-evenly flex-grow">
               <a
                 href=""
                 target="_blank"
@@ -342,7 +344,7 @@ const TradeLicenseCertificate = () => {
             initial={{ y: 50, opacity: 0 }}
             animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
             transition={{ duration: 0.5, delay: getTouchDelay(1) }}
-            className="flex-grow grid md:grid-cols-2 h-full bg-gradient-to-r  from-[#3CA2E2] to-[#052EAA] p-4 rounded-4xl box-border"
+            className="flex-grow grid grid-cols-1 lg:grid-cols-2 h-full bg-gradient-to-r  from-[#3CA2E2] to-[#052EAA] p-4 rounded-4xl box-border"
           >
             <div className="flex flex-col justify-evenly p-4 box-border">
               <h2 className="sub-heading text-white font-1">
@@ -353,10 +355,12 @@ const TradeLicenseCertificate = () => {
                 Management to Legal Empowering.
               </p>
             </div>
-            <div className="p-2 bg-white rounded-4xl box-border grid h-full ">
-              <img src={Image1} className="rounded-3xl w-full h-64  " loading="lazy" />
+            <div className="w-full h-full aspect-[4/3] rounded-3xl overflow-hidden">
+              <img src={Image1} className="w-full h-full object-cover" loading="lazy" />
             </div>
           </motion.div>
+            </div>
+          </div>
         </motion.section>
 
         {/* What is Trade License */}
@@ -365,8 +369,9 @@ const TradeLicenseCertificate = () => {
           initial={{ y: 100, opacity: 0 }}
           animate={isInViewAbout ? { y: 0, opacity: 1 } : {}}
           transition={{ duration: 0.5 }}
-          className="px-7 md:px-14 bg-[#f7f7f7] py-8"
+          className="bg-[#f7f7f7] py-8"
         >
+          <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14">
           <div className="bg-gradient-to-t from-[#3CA2E2] to-[#052EAA] rounded-4xl p-8 md:p-12 space-y-4 text-center">
             <h2
               className="sub-heading font-2 text-white text-left"
@@ -381,8 +386,9 @@ const TradeLicenseCertificate = () => {
               Trade License is a legal requirement enforced by municipal bodies,
               granting permission to businesses to carry on commercial
               activities within city limits ensuring your establishment is safe,
-              compliant, and recognized under local laws.
+              compliant, and               recognized under local laws.
             </p>
+          </div>
           </div>
         </motion.section>
 
@@ -392,8 +398,9 @@ const TradeLicenseCertificate = () => {
           initial={{ y: 100, opacity: 0 }}
           animate={isInViewEligibility ? { y: 0, opacity: 1 } : {}}
           transition={{ duration: 0.5 }}
-          className="px-7 md:px-14 bg-[#f7f7f7] py-8"
+          className="bg-[#f7f7f7] py-8"
         >
+          <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14">
           <h2
             className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
 
@@ -478,6 +485,7 @@ const TradeLicenseCertificate = () => {
               </motion.div>
             </div>
           </div>
+          </div>
         </motion.section>
 
         {/* Abtik Process Section */}
@@ -486,15 +494,16 @@ const TradeLicenseCertificate = () => {
           initial={{ y: 100, opacity: 0 }}
           animate={isInViewProcess ? { y: 0, opacity: 1 } : {}}
           transition={{ duration: 0.5 }}
-          className="px-7 md:px-14 bg-[#f7f7f7] py-8"
+          className="bg-[#f7f7f7] py-8"
         >
+          <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14">
           <h2
             className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
 
           >
             How Abtik Gets You Licensed
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
             {processData.map((process, index) => (
               <motion.div
                 key={index}
@@ -516,6 +525,7 @@ const TradeLicenseCertificate = () => {
               </motion.div>
             ))}
           </div>
+          </div>
         </motion.section>
 
         {/* Benefits Section */}
@@ -524,15 +534,16 @@ const TradeLicenseCertificate = () => {
           initial={{ y: 100, opacity: 0 }}
           animate={isInViewBenefits ? { y: 0, opacity: 1 } : {}}
           transition={{ duration: 0.5 }}
-          className="px-7 md:px-14 bg-[#f7f7f7] py-8 "
+          className="bg-[#f7f7f7] py-8"
         >
+          <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14">
           <h2
             className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
 
           >
             Trade License Benefits
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
             {benefitsData.map((benefit, index) => (
               <motion.div
                 key={index}
@@ -554,6 +565,7 @@ const TradeLicenseCertificate = () => {
               </motion.div>
             ))}
           </div>
+          </div>
         </motion.section>
 
         {/* FAQ Section */}
@@ -562,18 +574,19 @@ const TradeLicenseCertificate = () => {
           initial={{ y: 100, opacity: 0 }}
           animate={isInViewFAQ ? { y: 0, opacity: 1 } : {}}
           transition={{ duration: 0.5 }}
-          className="bg-[#f7f7f7] py-8 md:py-16 space-y-6"
+          className="bg-[#f7f7f7] py-8 md:py-16"
         >
-          <h1
-            className="sub-heading bg-gradient-to-t font-2 text-center bg-clip-text from-[#3CA2E2] to-[#052EAA] text-transparent"
+          <div className="w-full max-w-[1920px] mx-auto space-y-6">
+            <h1
+              className="sub-heading bg-gradient-to-t font-2 text-center bg-clip-text from-[#3CA2E2] to-[#052EAA] text-transparent"
 
-          >
-            Frequently Asked Questions
-          </h1>
-          <div
-            className="px-6  md:px-24 space-y-4 font-3"
+            >
+              Frequently Asked Questions
+            </h1>
+            <div
+              className="px-6  md:px-24 space-y-4 font-3"
 
-          >
+            >
             {faq.map((data, index) => (
               <motion.div
                 key={index}

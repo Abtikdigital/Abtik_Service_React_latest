@@ -219,42 +219,41 @@ const About = () => {
           initial={{ y: 100, opacity: 0 }}
           animate={isInViewVisionMission ? { y: 0, opacity: 1 } : {}}
           transition={{ duration: 0.5 }}
-          className="grid md:grid-cols-2 bg-[#f7f7f7] px-7 md:px-14 py-6 gap-6 items-center"
+          className="bg-[#f7f7f7] px-7 md:px-14 py-6"
         >
-          {[0, 1].map((index) => (
-            <motion.div
-              key={index}
-              initial={{ y: 50, opacity: 0 }}
-              animate={isInViewVisionMission ? { y: 0, opacity: 1 } : {}}
-              transition={{ duration: 0.5, delay: getVisionDelay(index) }}
-              className="space-y-10"
-            >
-              <h2
-                className="sub-heading text-center  bg-clip-text bg-gradient-to-t text-transparent
+          <div className="grid md:grid-cols-2 gap-6 items-center w-full max-w-[1920px] mx-auto">
+            {[0, 1].map((index) => (
+              <motion.div
+                key={index}
+                initial={{ y: 50, opacity: 0 }}
+                animate={isInViewVisionMission ? { y: 0, opacity: 1 } : {}}
+                transition={{ duration: 0.5, delay: getVisionDelay(index) }}
+                className="space-y-10"
+              >
+                <h2
+                  className="sub-heading text-center  bg-clip-text bg-gradient-to-t text-transparent
           from-[#3CA2E2]
           to-[#052EAA] font-2
           "
-              
-              >
-                {index === 0 ? "Our Vision" : "Our Mission"}
-              </h2>
-              <p
-                className="paragraph  font-3"
-            
-              >{
-                index==0?
                 
-                "Our vision is to engage with every startup, growing venture, and business driving the future enabling possibilities, unlocking opportunities, and delivering meaningful transformations. We are committed to reaching farther, fostering progress, and empowering enterprises to succeed in an ever evolving business environment."
-                :"Our mission is to raise awareness, share knowledge, and create access to opportunities that help businesses grow and adapt. We work alongside startups, emerging ventures, and established enterprises guiding them with the right insights, timely support, and meaningful connections to succeed in today’s fast changing business world."
-              }
-              </p>
-              <div>
-            { index== 0?  <img loading="lazy" src={Image2} className="rounded-4xl max-h-96 w-full" />:
-            <img loading="lazy" src={Image3} className="rounded-4xl max-h-96 w-full" />
-            }
-              </div>
-            </motion.div>
-          ))}
+                >
+                  {index === 0 ? "Our Vision" : "Our Mission"}
+                </h2>
+                <p className="paragraph font-3">
+                  {index == 0
+                    ? "Our vision is to engage with every startup, growing venture, and business driving the future enabling possibilities, unlocking opportunities, and delivering meaningful transformations. We are committed to reaching farther, fostering progress, and empowering enterprises to succeed in an ever evolving business environment."
+                    : "Our mission is to raise awareness, share knowledge, and create access to opportunities that help businesses grow and adapt. We work alongside startups, emerging ventures, and established enterprises guiding them with the right insights, timely support, and meaningful connections to succeed in today’s fast changing business world."}
+                </p>
+                <div>
+                  {index == 0 ? (
+                    <img loading="lazy" src={Image2} className="rounded-4xl max-h-96 w-full" />
+                  ) : (
+                    <img loading="lazy" src={Image3} className="rounded-4xl max-h-96 w-full" />
+                  )}
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </motion.section>
         {/* Why Choose Us */}
         <motion.section
@@ -262,67 +261,60 @@ const About = () => {
           initial={{ y: 100, opacity: 0 }}
           animate={isInViewWhyChoose ? { y: 0, opacity: 1 } : {}}
           transition={{ duration: 0.5 }}
-          className="grid md:grid-cols-2 bg-[#f7f7f7] px-7 md:px-14 py-6 gap-6 items-center"
+          className="bg-[#f7f7f7] px-7 md:px-14 py-6"
         >
-          {[0, 1].map((index) => (
-            <motion.div
-              key={index}
-              initial={{ y: 50, opacity: 0 }}
-              animate={isInViewWhyChoose ? { y: 0, opacity: 1 } : {}}
-              transition={{ duration: 0.5, delay: getWhyChooseDelay(index) }}
-              className={
-                index === 0
-                  ? "space-y-10"
-                  : "grid grid-cols-1 md:grid-cols-2  gap-6"
-              }
-            >
-              {index === 0 ? (
-                <>
-                  <h2
-                    className="sub-heading text-center bg-clip-text bg-gradient-to-t text-transparent
+          <div className="grid md:grid-cols-2 gap-6 items-center w-full max-w-[1920px] mx-auto">
+            {[0, 1].map((index) => (
+              <motion.div
+                key={index}
+                initial={{ y: 50, opacity: 0 }}
+                animate={isInViewWhyChoose ? { y: 0, opacity: 1 } : {}}
+                transition={{ duration: 0.5, delay: getWhyChooseDelay(index) }}
+                className={
+                  index === 0
+                    ? "space-y-10"
+                    : "grid grid-cols-1 md:grid-cols-2  gap-6"
+                }
+              >
+                {index === 0 ? (
+                  <>
+                    <h2
+                      className="sub-heading text-center bg-clip-text bg-gradient-to-t text-transparent
           from-[#3CA2E2]
           to-[#052EAA] font-2
           "
-            
-                  >
-                    Why Choose Abtik
-                  </h2>
-                  <p
-                    className="paragraph  font-3"
-                   
-                  >
-                   At Abtik, we believe true success is built together. Our team blends seamless collaboration, proven expertise, and tailored solutions that align with your vision. Every product and service we deliver is designed to be relevant, reliable, and create a lasting impact for your business.
-                  </p>
-                      <p
-                    className="paragraph  font-3"
-               
-                  >
-                       <p
-                    className="paragraph  font-3"
-     
-                  >
-                   We are by your side at every stage with dedicated support, responses, and an unwavering commitment to trust. From strategy to execution, we make your journey smoother, faster, and more rewarding ensuring every step brings you closer to your goals.
-                  </p>
-                  </p>
-                  {/* <div>
-                    <button className="custom-btn">Explore</button>
-                  </div> */}
-                </>
-              ) : (
-                <>
-                  <div>
-                    <img loading="lazy" src={WhychooseImage1} className="rounded-4xl w-full max-h-48" />
-                  </div>
-                  <div>
-                    <img loading="lazy" src={WhychooseImage2} className="rounded-4xl  w-full max-h-48" />
-                  </div>
-                  <div className="md:col-span-2">
-                    <img loading="lazy" src={WhychooseImage3} className="rounded-4xl max-h-48 w-full" />
-                  </div>
-                </>
-              )}
-            </motion.div>
-          ))}
+                      
+                    >
+                      Why Choose Abtik
+                    </h2>
+                    <p className="paragraph font-3">
+                      At Abtik, we believe true success is built together. Our team blends seamless collaboration, proven expertise, and tailored solutions that align with your vision. Every product and service we deliver is designed to be relevant, reliable, and create a lasting impact for your business.
+                    </p>
+                    <p className="paragraph font-3">
+                      <p className="paragraph  font-3">
+                        We are by your side at every stage with dedicated support, responses, and an unwavering commitment to trust. From strategy to execution, we make your journey smoother, faster, and more rewarding ensuring every step brings you closer to your goals.
+                      </p>
+                    </p>
+                    {/* <div>
+                      <button className="custom-btn">Explore</button>
+                    </div> */}
+                  </>
+                ) : (
+                  <>
+                    <div>
+                      <img loading="lazy" src={WhychooseImage1} className="rounded-4xl w-full h-auto" />
+                    </div>
+                    <div>
+                      <img loading="lazy" src={WhychooseImage2} className="rounded-4xl w-full h-auto" />
+                    </div>
+                    <div className="md:col-span-2">
+                      <img loading="lazy" src={WhychooseImage3} className="rounded-4xl w-full h-auto" />
+                    </div>
+                  </>
+                )}
+              </motion.div>
+            ))}
+          </div>
         </motion.section>
         {/* Meet Our Expert */}
         {/* <motion.section

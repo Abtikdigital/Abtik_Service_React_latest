@@ -247,10 +247,9 @@ const MudraLoan = () => {
                         <p
                             className="text-sm sm:text-base md:text-lg lg:text-xl
                          leading-relaxed sm:leading-relaxed md:leading-relaxed
-                         text-white
-                         paragraph
+                         text-white lg:text-white
+                         paragraph !text-white
                          max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0 font-2"
-                            
                         >
                             Fund your micro enterprise dreams with PMMY Mudra loans.
                             Get collateral free loans up to ₹20 lakh for manufacturing,
@@ -279,94 +278,99 @@ const MudraLoan = () => {
                     initial={{ y: 100, opacity: 0 }}
                     animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
                     transition={{ duration: 0.5 }}
-                    className="flex flex-col md:flex-row gap-8 bg-[#f7f7f7] py-16 px-7 md:px-14"
+                    className="bg-[#f7f7f7] py-16"
                 >
-                    <motion.div
-                        initial={{ y: 50, opacity: 0 }}
-                        animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
-                        transition={{ duration: 0.5, delay: getTouchDelay(0) }}
-                        className="w-full md:w-[320px] flex-shrink-0 bg-gradient-to-br from-blue-100 to-blue-200 p-6 rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
-                    >
-                        <h3
-                            className="text-lg sm:text-xl font-semibold text-gray-800 mb-4 font-2"
-                          
+                    <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14 flex flex-col md:flex-row gap-8 box-border">
+                        <motion.div
+                            initial={{ y: 50, opacity: 0 }}
+                            animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
+                            transition={{ duration: 0.5, delay: getTouchDelay(0) }}
+                            className="w-full md:w-[320px] flex-shrink-0 bg-gradient-to-br from-blue-100 to-blue-200 p-6 rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 box-border"
                         >
-                            Get in Touch
-                        </h3>
-                        <div className="space-y-4">
-                            <a
-                                href=""
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
-                                aria-label="Visit us at 123 Business Hub, New Delhi, India"
+                            <h3
+                                className="text-lg sm:text-xl font-semibold text-gray-800 mb-4 font-2"
                             >
-                                <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
-                                    <User className="w-5 h-5 text-white" />
-                                </span>
-                                <div>
-                                    <p className="text-base text-gray-700 font-semibold  font-3">
-                                        Manish Kumar
-
-                                    </p>
-                                    <p className="text-xs text-gray-600 font-3">
-                                        Head Of Finance Department
-                                        <br />
-
-                                    </p>
-                                </div>
-                            </a>
-                            <a
-                                href="tel:+917486952086"
-                                className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
-                                aria-label="Call us at +917486952086"
-                            >
-                                <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
-                                    <Phone className="w-5 h-5 text-white" />
-                                </span>
-                                <div>
-                                    <p className="text-base text-gray-700 font-semibold font-3">
-                                        Call Anytime
-                                    </p>
-                                    <p className="text-xs text-gray-600 font-3"><a href="tel:+917486952086">+91 7486 952 086</a></p>
-                                </div>
-                            </a>
-                            <a
-                                href="mailto:manish.kumar@abtikservices.co.in"
-                                className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
-                                aria-label="Email us at info@abtik.com"
-                            >
-                                <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
-                                    <Mail className="w-5 h-5 text-white" />
-                                </span>
-                                <div>
-                                    <p className="text-base text-gray-700 font-semibold font-3">
-                                        Write Email
-                                    </p>
-                                    <p className="text-xs text-gray-600 font-3"><a href="mailto:manish.kumar@abtikservices.co.in">manish.kumar@abtikservices.co.in</a></p>
-                                </div>
-                            </a>
-                        </div>
-                    </motion.div>
-                   <motion.div
-                        initial={{ y: 50, opacity: 0 }}
-                        animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
-                        transition={{ duration: 0.5, delay: getTouchDelay(1) }}
-                        className="flex-grow grid md:grid-cols-2 h-full bg-gradient-to-r  from-[#3CA2E2] to-[#052EAA] p-4 rounded-4xl box-border"
-                    >
-                        <div className="flex flex-col justify-evenly p-4 box-border">
-                            <h2 className="sub-heading text-white font-1">
-                                Mudra Loan
-                            </h2>
-                            <p className="font-3 text-white">
-                                Empowering Businesses through Comprehensive Solutions From Fund
-                                Management to Legal Empowering.
-                            </p>
-                        </div>
-                        <div className="p-2 bg-white rounded-4xl box-border grid h-full ">
-                            <img src={Image1} className="rounded-3xl w-full h-64  " loading="lazy" />
-                        </div>
-                    </motion.div>
+                                Get in Touch
+                            </h3>
+                            <div className="space-y-4">
+                                <a
+                                    href=""
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
+                                    aria-label="Visit us at 123 Business Hub, New Delhi, India"
+                                >
+                                    <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
+                                        <User className="w-5 h-5 text-white" />
+                                    </span>
+                                    <div>
+                                        <p className="text-base text-gray-700 font-semibold font-3">
+                                            Manish Kumar
+                                        </p>
+                                        <p className="text-xs text-gray-600 font-3">
+                                            Head Of Finance Department
+                                            <br />
+                                        </p>
+                                    </div>
+                                </a>
+                                <a
+                                    href="tel:+917486952086"
+                                    className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
+                                    aria-label="Call us at +917486952086"
+                                >
+                                    <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
+                                        <Phone className="w-5 h-5 text-white" />
+                                    </span>
+                                    <div>
+                                        <p className="text-base text-gray-700 font-semibold font-3">
+                                            Call Anytime
+                                        </p>
+                                        <p className="text-xs text-gray-600 font-3">
+                                            <a href="tel:+917486952086">+91 7486 952 086</a>
+                                        </p>
+                                    </div>
+                                </a>
+                                <a
+                                    href="mailto:manish.kumar@abtikservices.co.in"
+                                    className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
+                                    aria-label="Email us at info@abtik.com"
+                                >
+                                    <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
+                                        <Mail className="w-5 h-5 text-white" />
+                                    </span>
+                                    <div>
+                                        <p className="text-base text-gray-700 font-semibold font-3">
+                                            Write Email
+                                        </p>
+                                        <p className="text-xs text-gray-600 font-3">
+                                            <a href="mailto:manish.kumar@abtikservices.co.in">
+                                                manish.kumar@abtikservices.co.in
+                                            </a>
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                        </motion.div>
+                        <motion.div
+                            initial={{ y: 50, opacity: 0 }}
+                            animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
+                            transition={{ duration: 0.5, delay: getTouchDelay(1) }}
+                            className="flex-grow grid md:grid-cols-2 h-full bg-gradient-to-r  from-[#3CA2E2] to-[#052EAA] p-4 rounded-4xl box-border"
+                        >
+                            <div className="flex flex-col justify-evenly p-4 box-border">
+                                <h2 className="sub-heading text-white font-1">
+                                    Mudra Loan
+                                </h2>
+                                <p className="font-3 text-white">
+                                    Empowering Businesses through Comprehensive Solutions From Fund
+                                    Management to Legal Empowering.
+                                </p>
+                            </div>
+                            <div className="p-2 bg-white rounded-4xl box-border grid h-full ">
+                                <img src={Image1} className="rounded-3xl w-full h-64" loading="lazy" />
+                            </div>
+                        </motion.div>
+                    </div>
                 </motion.section>
 
                 {/* What is Mudra Loan */}
@@ -375,25 +379,24 @@ const MudraLoan = () => {
                     initial={{ y: 100, opacity: 0 }}
                     animate={isInViewMudraLoan ? { y: 0, opacity: 1 } : {}}
                     transition={{ duration: 0.5 }}
-                    className="px-7 md:px-14 bg-[#f7f7f7] py-8"
+                    className="bg-[#f7f7f7] py-8"
                 >
-                    <div className="bg-gradient-to-t from-[#3CA2E2] to-[#052EAA] rounded-4xl p-8 md:p-12 space-y-4 text-center">
-                        <h2
-                            className="sub-heading text-white text-left font-2"
-                        
-                        >
-                            What Is PMMY Mudra Loan?
-                        </h2>
-                        <p className="paragraph !text-white mx-auto text-left font-3"
-                     
-                        >
-                            Pradhan Mantri Mudra Yojana (PMMY) is a flagship scheme launched by the Government of India
-                            to provide collateral free loans up to ₹20 lakh to noncorporate, non farm micro enterprises.
-                            The loan limit has been increased from ₹10 lakh to ₹20 lakh with the introduction of Tarun Plus category.
-                            The scheme supports millions of proprietorship and partnership firms in manufacturing, service,
-                            and trading sectors, helping entrepreneurs access formal banking credit that was previously
-                            unavailable through traditional channels.
-                        </p>
+                    <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14">
+                        <div className="bg-gradient-to-t from-[#3CA2E2] to-[#052EAA] rounded-4xl p-8 md:p-12 space-y-4 text-center">
+                            <h2
+                                className="sub-heading text-white text-left font-2"
+                            >
+                                What Is PMMY Mudra Loan?
+                            </h2>
+                            <p className="paragraph !text-white mx-auto text-left font-3">
+                                Pradhan Mantri Mudra Yojana (PMMY) is a flagship scheme launched by the Government of India
+                                to provide collateral free loans up to ₹20 lakh to noncorporate, non farm micro enterprises.
+                                The loan limit has been increased from ₹10 lakh to ₹20 lakh with the introduction of Tarun Plus category.
+                                The scheme supports millions of proprietorship and partnership firms in manufacturing, service,
+                                and trading sectors, helping entrepreneurs access formal banking credit that was previously
+                                unavailable through traditional channels.
+                            </p>
+                        </div>
                     </div>
                 </motion.section>
 
@@ -403,16 +406,15 @@ const MudraLoan = () => {
                     initial={{ y: 100, opacity: 0 }}
                     animate={isInViewFundingStructure ? { y: 0, opacity: 1 } : {}}
                     transition={{ duration: 0.5 }}
-                    className="px-7 md:px-14 bg-[#f7f7f7] py-8"
+                    className="bg-[#f7f7f7] py-8"
                 >
-                    <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                        
-                    >
-                        Mudra Loan Categories
-                    </h2>
+                    <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14">
+                        <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]">
+                            Mudra Loan Categories
+                        </h2>
 
-                    <div className="mt-8 bg-white rounded-4xl p-4 md:p-8 shadow-md">
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <div className="mt-8 bg-white rounded-4xl p-4 md:p-8 shadow-md">
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                             {/* Shishu Card */}
                             <motion.div
                                 initial={{ y: 50, opacity: 0 }}
@@ -545,7 +547,7 @@ const MudraLoan = () => {
                                 </ul>
                             </motion.div>
 
-                            {/* Tarun Plus Card */}
+                                {/* Tarun Plus Card */}
                             <motion.div
                                 initial={{ y: 50, opacity: 0 }}
                                 animate={isInViewFundingStructure ? { y: 0, opacity: 1 } : {}}
@@ -586,7 +588,8 @@ const MudraLoan = () => {
                                         <span>Enhanced credit limit for growth</span>
                                     </li>
                                 </ul>
-                            </motion.div>
+                                </motion.div>
+                            </div>
                         </div>
                     </div>
                 </motion.section>
@@ -597,21 +600,18 @@ const MudraLoan = () => {
                     initial={{ y: 100, opacity: 0 }}
                     animate={isInViewMudraLoanBenefits ? { y: 0, opacity: 1 } : {}}
                     transition={{ duration: 0.5 }}
-                    className="px-7 md:px-14 bg-[#f7f7f7] py-8"
+                    className="bg-[#f7f7f7] py-8"
                 >
-                    <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                       
-                    >
-                        Mudra Loan Benefits & Eligibility
-                    </h2>
-                    <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
-                        <p className="text-sm md:text-base font-3 text-gray-600 text-center"
-                       
-                        >
-                            PMMY Mudra loans provide comprehensive financial support to micro enterprises with collateral free
-                            credit, enabling millions of entrepreneurs to access formal banking and grow their businesses.
-                        </p>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14">
+                        <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]">
+                            Mudra Loan Benefits & Eligibility
+                        </h2>
+                        <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
+                            <p className="text-sm md:text-base font-3 text-gray-600 text-center">
+                                PMMY Mudra loans provide comprehensive financial support to micro enterprises with collateral free
+                                credit, enabling millions of entrepreneurs to access formal banking and grow their businesses.
+                            </p>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <motion.div
                                 initial={{ y: 50, opacity: 0 }}
                                 animate={isInViewMudraLoanBenefits ? { y: 0, opacity: 1 } : {}}
@@ -620,7 +620,6 @@ const MudraLoan = () => {
                             >
                                 <h3
                                     className="text-lg font-semibold font-2 text-gray-800"
-                                   
                                 >
                                     Key Benefits
                                 </h3>
@@ -655,7 +654,6 @@ const MudraLoan = () => {
                             >
                                 <h3
                                     className="text-lg font-2 font-semibold text-gray-800"
-                                 
                                 >
                                     Eligibility Criteria
                                 </h3>
@@ -684,6 +682,7 @@ const MudraLoan = () => {
                             </motion.div>
                         </div>
                     </div>
+                </div>
                 </motion.section>
 
                 {/* Abtik Process Section */}
@@ -692,34 +691,33 @@ const MudraLoan = () => {
                     initial={{ y: 100, opacity: 0 }}
                     animate={isInViewProcess ? { y: 0, opacity: 1 } : {}}
                     transition={{ duration: 0.5 }}
-                    className="px-7 md:px-14 bg-[#f7f7f7] py-8"
+                    className="bg-[#f7f7f7] py-8"
                 >
-                    <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                      
-                    >
-                        How Abtik Helps You Get Mudra Loan
-                    </h2>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-                        {processData?.map((process, index) => (
-                            <motion.div
-                                key={index}
-                                initial={{ y: 50, opacity: 0 }}
-                                animate={isInViewProcess ? { y: 0, opacity: 1 } : {}}
-                                transition={{ duration: 0.5, delay: getProcessDelay(index) }}
-                                className="bg-white p-6 rounded-4xl shadow-md text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
-                            >
-                                <div className="mb-4 inline-block p-3 bg-gradient-to-r from-blue-100 to-blue-200 rounded-full">
-                                    <process.icon className="w-8 h-8" />
-                                </div>
-                                <h3
-                                    className="text-lg font-2 font-semibold text-gray-800 mb-2"
-                               
+                    <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14">
+                        <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]">
+                            How Abtik Helps You Get Mudra Loan
+                        </h2>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+                            {processData?.map((process, index) => (
+                                <motion.div
+                                    key={index}
+                                    initial={{ y: 50, opacity: 0 }}
+                                    animate={isInViewProcess ? { y: 0, opacity: 1 } : {}}
+                                    transition={{ duration: 0.5, delay: getProcessDelay(index) }}
+                                    className="bg-white p-6 rounded-4xl shadow-md text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
                                 >
-                                    {process.title}
-                                </h3>
-                                <p className="text-sm text-gray-600 font-3">{process.description}</p>
-                            </motion.div>
-                        ))}
+                                    <div className="mb-4 inline-block p-3 bg-gradient-to-r from-blue-100 to-blue-200 rounded-full">
+                                        <process.icon className="w-8 h-8" />
+                                    </div>
+                                    <h3
+                                        className="text-lg font-2 font-semibold text-gray-800 mb-2"
+                                    >
+                                        {process.title}
+                                    </h3>
+                                    <p className="text-sm text-gray-600 font-3">{process.description}</p>
+                                </motion.div>
+                            ))}
+                        </div>
                     </div>
                 </motion.section>
 
@@ -729,34 +727,33 @@ const MudraLoan = () => {
                     initial={{ y: 100, opacity: 0 }}
                     animate={isInViewBenefits ? { y: 0, opacity: 1 } : {}}
                     transition={{ duration: 0.5 }}
-                    className="px-7 md:px-14 bg-[#f7f7f7] py-8 "
+                    className="bg-[#f7f7f7] py-8 "
                 >
-                    <h2 className="sub-heading text-center font-2 bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                      
-                    >
-                        Why Choose Abtik for Mudra Loan
-                    </h2>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-                        {benefitsData?.map((benefit, index) => (
-                            <motion.div
-                                key={index}
-                                initial={{ y: 50, opacity: 0 }}
-                                animate={isInViewBenefits ? { y: 0, opacity: 1 } : {}}
-                                transition={{ duration: 0.5, delay: getBenefitsDelay(index) }}
-                                className="bg-white p-6 rounded-4xl shadow-md text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
-                            >
-                                <div className="mb-4 inline-block p-3 bg-gradient-to-r from-blue-100 to-blue-200 rounded-full">
-                                    <benefit.icon className="w-8 h-8" />
-                                </div>
-                                <h3
-                                    className="text-lg font-semibold font-2 text-gray-800 mb-2"
-                                   
+                    <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14">
+                        <h2 className="sub-heading text-center font-2 bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]">
+                            Why Choose Abtik for Mudra Loan
+                        </h2>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+                            {benefitsData?.map((benefit, index) => (
+                                <motion.div
+                                    key={index}
+                                    initial={{ y: 50, opacity: 0 }}
+                                    animate={isInViewBenefits ? { y: 0, opacity: 1 } : {}}
+                                    transition={{ duration: 0.5, delay: getBenefitsDelay(index) }}
+                                    className="bg-white p-6 rounded-4xl shadow-md text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
                                 >
-                                    {benefit.title}
-                                </h3>
-                                <p className="text-sm font-3 text-gray-600">{benefit.description}</p>
-                            </motion.div>
-                        ))}
+                                    <div className="mb-4 inline-block p-3 bg-gradient-to-r from-blue-100 to-blue-200 rounded-full">
+                                        <benefit.icon className="w-8 h-8" />
+                                    </div>
+                                    <h3
+                                        className="text-lg font-semibold font-2 text-gray-800 mb-2"
+                                    >
+                                        {benefit.title}
+                                    </h3>
+                                    <p className="text-sm font-3 text-gray-600">{benefit.description}</p>
+                                </motion.div>
+                            ))}
+                        </div>
                     </div>
                 </motion.section>
 
@@ -766,53 +763,52 @@ const MudraLoan = () => {
                     initial={{ y: 100, opacity: 0 }}
                     animate={isInViewFAQ ? { y: 0, opacity: 1 } : {}}
                     transition={{ duration: 0.5 }}
-                    className="bg-[#f7f7f7]  py-8 md:py-16 space-y-6"
+                    className="bg-[#f7f7f7]  py-8 md:py-16"
                 >
-                    <h1 className="sub-heading bg-gradient-to-t font-2 text-center  bg-clip-text from-[#3CA2E2] to-[#052EAA] text-transparent"
-                       
-                    >
-                        Frequently Asked Questions
-                    </h1>
-                    <div
-                        className="px-6  md:px-24 space-y-4  font-3"
-                       
-                    >
-                        {faq.map((data, index) => (
-                            <motion.div
-                                key={index}
-                                initial={{ y: 50, opacity: 0 }}
-                                animate={isInViewFAQ ? { y: 0, opacity: 1 } : {}}
-                                transition={{ duration: 0.1, delay: getFaqDelay(index) }}
-                                className="bg-white rounded-lg shadow-sm border border-gray-100 transition-all duration-300"
-                            >
-                                <h2
-                                    className={`p-2.5 px-4 relative cursor-pointer flex items-center justify-between  text-base font-medium ${isExpanded.isOpen && isExpanded.index === index
-                                        ? "border-b border-gray-200"
-                                        : ""
-                                        }`}
-                                    onClick={() => toggleIsExpanded(index)}
+                    <div className="w-full max-w-[1920px] mx-auto space-y-6">
+                        <h1 className="sub-heading bg-gradient-to-t font-2 text-center  bg-clip-text from-[#3CA2E2] to-[#052EAA] text-transparent">
+                            Frequently Asked Questions
+                        </h1>
+                        <div
+                            className="px-6  md:px-24 space-y-4  font-3"
+                        >
+                            {faq.map((data, index) => (
+                                <motion.div
+                                    key={index}
+                                    initial={{ y: 50, opacity: 0 }}
+                                    animate={isInViewFAQ ? { y: 0, opacity: 1 } : {}}
+                                    transition={{ duration: 0.1, delay: getFaqDelay(index) }}
+                                    className="bg-white rounded-lg shadow-sm border border-gray-100 transition-all duration-300"
                                 >
-                                    <span>{data.question}</span>
-                                    <button className="border-2 p-1 transition-all duration-300 hover:scale-105 h-8 w-8 flex justify-center items-center border-[#052EAA] rounded-lg text-[#052EAA]">
-                                        {isExpanded.isOpen && isExpanded.index === index ? (
-                                            <ArrowRight className="w-5 h-5" />
-                                        ) : (
-                                            <ArrowUpRight className="w-5 h-5" />
-                                        )}
-                                    </button>
-                                </h2>
-                                <div
-                                    className={`overflow-hidden transition-all duration-500 ease-in-out ${isExpanded.isOpen && isExpanded.index === index
-                                        ? "max-h-96 opacity-100"
-                                        : "max-h-0 opacity-0"
-                                        }`}
-                                >
-                                    <p className="p-4 bg-gradient-to-t rounded-b-lg from-[#052EAA] to-[#3CA2E2] text-white">
-                                        {data.answer}
-                                    </p>
-                                </div>
-                            </motion.div>
-                        ))}
+                                    <h2
+                                        className={`p-2.5 px-4 relative cursor-pointer flex items-center justify-between  text-base font-medium ${isExpanded.isOpen && isExpanded.index === index
+                                            ? "border-b border-gray-200"
+                                            : ""
+                                            }`}
+                                        onClick={() => toggleIsExpanded(index)}
+                                    >
+                                        <span>{data.question}</span>
+                                        <button className="border-2 p-1 transition-all duration-300 hover:scale-105 h-8 w-8 flex justify-center items-center border-[#052EAA] rounded-lg text-[#052EAA]">
+                                            {isExpanded.isOpen && isExpanded.index === index ? (
+                                                <ArrowRight className="w-5 h-5" />
+                                            ) : (
+                                                <ArrowUpRight className="w-5 h-5" />
+                                            )}
+                                        </button>
+                                    </h2>
+                                    <div
+                                        className={`overflow-hidden transition-all duration-500 ease-in-out ${isExpanded.isOpen && isExpanded.index === index
+                                            ? "max-h-96 opacity-100"
+                                            : "max-h-0 opacity-0"
+                                            }`}
+                                    >
+                                        <p className="p-4 bg-gradient-to-t rounded-b-lg from-[#052EAA] to-[#3CA2E2] text-white">
+                                            {data.answer}
+                                        </p>
+                                    </div>
+                                </motion.div>
+                            ))}
+                        </div>
                     </div>
                 </motion.section>
 

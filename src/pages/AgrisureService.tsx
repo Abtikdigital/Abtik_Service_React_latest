@@ -197,14 +197,15 @@ const AgriSURE = () => {
     const refContact = useRef(null);
     const isInViewContact = useInView(refContact, { once: true, amount: 0.4 });
 
-    return (<>
-        <HeadProvider>
-            <Title>{seoData?.agrisureService?.title}</Title>
-            <Meta name="description" content={seoData?.agrisureService?.description} />
-            <Meta name="keywords" content={seoData?.agrisureService?.keyword} />
-            <Meta name="robots" content={seoData?.agrisureService?.robots} />
-        </HeadProvider>
-        <Mainlayout>
+    return (
+        <>
+            <HeadProvider>
+                <Title>{seoData?.agrisureService?.title}</Title>
+                <Meta name="description" content={seoData?.agrisureService?.description} />
+                <Meta name="keywords" content={seoData?.agrisureService?.keyword} />
+                <Meta name="robots" content={seoData?.agrisureService?.robots} />
+            </HeadProvider>
+            <Mainlayout>
             {/* Hero Section */}
             <section
                 ref={refHero}
@@ -276,94 +277,97 @@ const AgriSURE = () => {
                 initial={{ y: 100, opacity: 0 }}
                 animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
                 transition={{ duration: 0.5 }}
-                className="flex flex-col md:flex-row gap-8 bg-[#f7f7f7] py-16 px-7 md:px-14"
+                className="bg-[#f7f7f7] py-16"
             >
-                <motion.div
-                    initial={{ y: 50, opacity: 0 }}
-                    animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
-                    transition={{ duration: 0.5, delay: getTouchDelay(0) }}
-                    className="w-full md:w-[320px] flex-shrink-0 bg-gradient-to-br from-blue-100 to-blue-200 p-6 rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
-                >
-                    <h3
-                        className="text-lg font-2 sm:text-xl font-semibold text-gray-800 mb-4"
-
-                    >
-                        Get in Touch
-                    </h3>
-                    <div className="space-y-4">
-                        <a
-                            href=""
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
-                            aria-label="Visit us at 123 Business Hub, New Delhi, India"
+                <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14 flex flex-col md:flex-row gap-8 box-border">
+                        <motion.div
+                            initial={{ y: 50, opacity: 0 }}
+                            animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
+                            transition={{ duration: 0.5, delay: getTouchDelay(0) }}
+                            className="w-full md:w-[320px] flex-shrink-0 bg-gradient-to-br from-blue-100 to-blue-200 p-6 rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 flex flex-col"
                         >
-                            <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
-                                <User className="w-5 h-5 text-white" />
-                            </span>
-                            <div>
-                                <p className="text-base font-2 text-gray-700 font-semibold ">
-                                    Sumit Radadiya
+                            <h3
+                                className="text-lg font-2 sm:text-xl font-semibold text-gray-800 mb-4"
 
-                                </p>
-                                <p className="text-xs font-2 text-gray-600">
-                                    HOD-Sales Department
-                                    <br />
+                            >
+                                Get in Touch
+                            </h3>
+                            <div className="flex flex-col justify-evenly flex-grow">
+                                <a
+                                    href=""
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
+                                    aria-label="Visit us at 123 Business Hub, New Delhi, India"
+                                >
+                                    <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
+                                        <User className="w-5 h-5 text-white" />
+                                    </span>
+                                    <div>
+                                        <p className="text-base font-2 text-gray-700 font-semibold ">
+                                            Sumit Radadiya
 
+                                        </p>
+                                        <p className="text-xs font-2 text-gray-600">
+                                            HOD-Sales Department
+                                            <br />
+
+                                        </p>
+                                    </div>
+                                </a>
+                                <a
+                                    href="tel:+916358169584"
+                                    className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
+                                    aria-label="Call us at +91 98765 43210"
+                                >
+                                    <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
+                                        <Phone className="w-5 h-5 text-white" />
+                                    </span>
+                                    <div>
+                                        <p className="text-base font-2 text-gray-700 font-semibold">
+                                            Call Anytime
+                                        </p>
+                                        <p className="text-xs font-2 text-gray-600"><a href="tel:+917486 952 087">+91 6358 169 584</a></p>
+                                    </div>
+                                </a>
+                                <a
+                                    href="mailto:sumitradadiya@abtikservices.in"
+                                    className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
+                                    aria-label="Email us at info@abtik.com"
+                                >
+                                    <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
+                                        <Mail className="w-5 h-5 text-white" />
+                                    </span>
+                                    <div>
+                                        <p className="text-base font-2 text-gray-700 font-semibold">
+                                            Write Email
+                                        </p>
+                                        <p className="text-xs font-2 text-gray-600"><a href="mailto:sumitradadiya@abtikservices.in">sumitradadiya@abtikservices.in</a></p>
+                                    </div>
+                                </a>
+                            </div>
+                        </motion.div>
+                        <motion.div
+                            initial={{ y: 50, opacity: 0 }}
+                            animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
+                            transition={{ duration: 0.5, delay: getTouchDelay(1) }}
+                            className="flex-grow grid md:grid-cols-2 h-full bg-gradient-to-r  from-[#3CA2E2] to-[#052EAA] p-4 rounded-4xl box-border"
+                        >
+                            <div className="flex flex-col justify-evenly p-4 box-border">
+                                <h2 className="sub-heading text-white font-1">
+                                    Agrisure
+                                </h2>
+                                <p className="font-3 text-white">
+                                    Empowering Businesses through Comprehensive Solutions From Fund
+                                    Management to Legal Empowering.
                                 </p>
                             </div>
-                        </a>
-                        <a
-                            href="tel:+916358169584"
-                            className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
-                            aria-label="Call us at +91 98765 43210"
-                        >
-                            <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
-                                <Phone className="w-5 h-5 text-white" />
-                            </span>
-                            <div>
-                                <p className="text-base font-2 text-gray-700 font-semibold">
-                                    Call Anytime
-                                </p>
-                                <p className="text-xs font-2 text-gray-600"><a href="tel:+917486 952 087">+91 6358 169 584</a></p>
+                            <div className="p-2 bg-white rounded-4xl box-border grid h-full ">
+                                <img src={Image1} className="rounded-3xl w-full h-64" loading="lazy" />
                             </div>
-                        </a>
-                        <a
-                            href="mailto:sumitradadiya@abtikservices.in"
-                            className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
-                            aria-label="Email us at info@abtik.com"
-                        >
-                            <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
-                                <Mail className="w-5 h-5 text-white" />
-                            </span>
-                            <div>
-                                <p className="text-base font-2 text-gray-700 font-semibold">
-                                    Write Email
-                                </p>
-                                <p className="text-xs font-2 text-gray-600"><a href="mailto:sumitradadiya@abtikservices.in">sumitradadiya@abtikservices.in</a></p>
-                            </div>
-                        </a>
+                        </motion.div>
                     </div>
-                </motion.div>
-               <motion.div
-            initial={{ y: 50, opacity: 0 }}
-            animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
-            transition={{ duration: 0.5, delay: getTouchDelay(1) }}
-            className="flex-grow grid md:grid-cols-2 h-full bg-gradient-to-r  from-[#3CA2E2] to-[#052EAA] p-4 rounded-4xl box-border"
-          >
-            <div className="flex flex-col justify-evenly p-4 box-border">
-              <h2 className="sub-heading text-white font-1">
-                Agrisure
-              </h2>
-              <p className="font-3 text-white">
-                Empowering Businesses through Comprehensive Solutions From Fund
-                Management to Legal Empowering.
-              </p>
-            </div>
-            <div className="p-2 bg-white rounded-4xl box-border grid h-full ">
-              <img src={Image1} className="rounded-3xl w-full h-64  " loading="lazy" />
-            </div>
-          </motion.div>
+             
             </motion.section>
 
             {/* What is AgriSURE */}
@@ -372,25 +376,27 @@ const AgriSURE = () => {
                 initial={{ y: 100, opacity: 0 }}
                 animate={isInViewAgriSURE ? { y: 0, opacity: 1 } : {}}
                 transition={{ duration: 0.5 }}
-                className="px-7 md:px-14 bg-[#f7f7f7] py-8"
+                className="bg-[#f7f7f7] py-8"
             >
-                <div className="bg-gradient-to-t from-[#3CA2E2] to-[#052EAA] rounded-4xl p-8 md:p-12 space-y-4 text-center">
-                    <h2
-                        className="sub-heading font-2 text-white text-left"
+                <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14">
+                    <div className="bg-gradient-to-t from-[#3CA2E2] to-[#052EAA] rounded-4xl p-8 md:p-12 space-y-4 text-center">
+                        <h2
+                            className="sub-heading font-2 text-white text-left"
 
-                    >
-                        What Is AgriSURE Fund?
-                    </h2>
-                    <p className="paragraph font-3 !text-white mx-auto text-left"
+                        >
+                            What Is AgriSURE Fund?
+                        </h2>
+                        <p className="paragraph font-3 !text-white mx-auto text-left"
 
-                    >
-                        AgriSURE (Agri Fund for Startups & Rural Enterprises) is a pioneering ₹750 crore
-                        Category,II Alternative Investment Fund launched by the Government of India and NABARD
-                        to revolutionize the agricultural landscape. This innovative fund focuses on supporting
-                        technology driven, high risk, high impact ventures in agriculture and allied sectors,
-                        providing both equity and debt financing to fuel growth and foster innovation in the
-                        agricultural and rural startup ecosystem.
-                    </p>
+                        >
+                            AgriSURE (Agri Fund for Startups & Rural Enterprises) is a pioneering ₹750 crore
+                            Category,II Alternative Investment Fund launched by the Government of India and NABARD
+                            to revolutionize the agricultural landscape. This innovative fund focuses on supporting
+                            technology driven, high risk, high impact ventures in agriculture and allied sectors,
+                            providing both equity and debt financing to fuel growth and foster innovation in the
+                            agricultural and rural startup ecosystem.
+                        </p>
+                    </div>
                 </div>
             </motion.section>
 
@@ -400,15 +406,16 @@ const AgriSURE = () => {
                 initial={{ y: 100, opacity: 0 }}
                 animate={isInViewInvestmentStructure ? { y: 0, opacity: 1 } : {}}
                 transition={{ duration: 0.5 }}
-                className="px-7 md:px-14 bg-[#f7f7f7] py-8"
+                className="bg-[#f7f7f7] py-8"
             >
-                <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
+                <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14">
+                    <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
 
-                >
-                    AgriSURE Investment Structure
-                </h2>
+                    >
+                        AgriSURE Investment Structure
+                    </h2>
 
-                <div className="mt-8 bg-white rounded-4xl p-4 md:p-8 shadow-md">
+                    <div className="mt-8 bg-white rounded-4xl p-4 md:p-8 shadow-md">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {/* AgriSURE-FoF Card */}
                         <motion.div
@@ -499,6 +506,7 @@ const AgriSURE = () => {
                         </motion.div>
                     </div>
                 </div>
+                </div>
             </motion.section>
 
             {/* AgriSURE Benefits Section */}
@@ -507,14 +515,15 @@ const AgriSURE = () => {
                 initial={{ y: 100, opacity: 0 }}
                 animate={isInViewAgriSUREBenefits ? { y: 0, opacity: 1 } : {}}
                 transition={{ duration: 0.5 }}
-                className="px-7 md:px-14 bg-[#f7f7f7] py-8"
+                className="bg-[#f7f7f7] py-8"
             >
-                <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
+                <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14">
+                    <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
 
-                >
-                    AgriSURE Benefits & Eligibility
-                </h2>
-                <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
+                    >
+                        AgriSURE Benefits & Eligibility
+                    </h2>
+                    <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
                     <p className="text-sm font-3 md:text-base text-gray-600 text-center"
 
                     >
@@ -522,7 +531,7 @@ const AgriSURE = () => {
                         through substantial funding, strategic guidance, and access to agricultural value chains
                         for transforming India's agricultural landscape.[22]
                     </p>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <motion.div
                             initial={{ y: 50, opacity: 0 }}
                             animate={isInViewAgriSUREBenefits ? { y: 0, opacity: 1 } : {}}
@@ -595,6 +604,7 @@ const AgriSURE = () => {
                         </motion.div>
                     </div>
                 </div>
+                </div>
             </motion.section>
 
             {/* Abtik Process Section */}
@@ -603,14 +613,15 @@ const AgriSURE = () => {
                 initial={{ y: 100, opacity: 0 }}
                 animate={isInViewProcess ? { y: 0, opacity: 1 } : {}}
                 transition={{ duration: 0.5 }}
-                className="px-7 md:px-14 bg-[#f7f7f7] py-8"
+                className="bg-[#f7f7f7] py-8"
             >
-                <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
+                <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14">
+                    <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
 
-                >
-                    How Abtik Helps You Secure AgriSURE Funding
-                </h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                    >
+                        How Abtik Helps You Secure AgriSURE Funding
+                    </h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
                     {processData?.map((process, index) => (
                         <motion.div
                             key={index}
@@ -632,6 +643,7 @@ const AgriSURE = () => {
                         </motion.div>
                     ))}
                 </div>
+                </div>
             </motion.section>
 
             {/* Benefits Section */}
@@ -640,14 +652,15 @@ const AgriSURE = () => {
                 initial={{ y: 100, opacity: 0 }}
                 animate={isInViewBenefits ? { y: 0, opacity: 1 } : {}}
                 transition={{ duration: 0.5 }}
-                className="px-7 md:px-14 bg-[#f7f7f7] py-8 "
+                className="bg-[#f7f7f7] py-8"
             >
-                <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
+                <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14">
+                    <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
 
-                >
-                    Why Choose Abtik for AgriSURE
-                </h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                    >
+                        Why Choose Abtik for AgriSURE
+                    </h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
                     {benefitsData?.map((benefit, index) => (
                         <motion.div
                             key={index}
@@ -669,6 +682,7 @@ const AgriSURE = () => {
                         </motion.div>
                     ))}
                 </div>
+                </div>
             </motion.section>
 
             {/* FAQ Section */}
@@ -677,17 +691,18 @@ const AgriSURE = () => {
                 initial={{ y: 100, opacity: 0 }}
                 animate={isInViewFAQ ? { y: 0, opacity: 1 } : {}}
                 transition={{ duration: 0.5 }}
-                className="bg-[#f7f7f7]  py-8 md:py-16 space-y-6"
+                className="bg-[#f7f7f7] py-8 md:py-16"
             >
-                <h1 className="sub-heading font-2 bg-gradient-to-t text-center  bg-clip-text from-[#3CA2E2] to-[#052EAA] text-transparent"
+                <div className="w-full max-w-[1920px] mx-auto space-y-6">
+                    <h1 className="sub-heading font-2 bg-gradient-to-t text-center  bg-clip-text from-[#3CA2E2] to-[#052EAA] text-transparent"
 
-                >
-                    Frequently Asked Questions
-                </h1>
-                <div
-                    className="px-6  md:px-24 space-y-4 font-3"
+                    >
+                        Frequently Asked Questions
+                    </h1>
+                    <div
+                        className="px-6 md:px-24 space-y-4 font-3"
 
-                >
+                    >
                     {faq.map((data, index) => (
                         <motion.div
                             key={index}
@@ -725,6 +740,7 @@ const AgriSURE = () => {
                         </motion.div>
                     ))}
                 </div>
+                </div>
             </motion.section>
 
             {/* Contact Section */}
@@ -737,7 +753,7 @@ const AgriSURE = () => {
                 <Contact />
             </motion.section>
         </Mainlayout>
-    </>
+        </>
     );
 };
 

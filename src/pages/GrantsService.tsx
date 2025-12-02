@@ -277,75 +277,80 @@ const Grants = () => {
                 initial={{ y: 100, opacity: 0 }}
                 animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
                 transition={{ duration: 0.5 }}
-                className="flex flex-col md:flex-row gap-8 bg-[#f7f7f7] py-16 px-7 md:px-14"
+                className="bg-[#f7f7f7] py-16"
             >
-                <motion.div
-                    initial={{ y: 50, opacity: 0 }}
-                    animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
-                    transition={{ duration: 0.5, delay: getTouchDelay(0) }}
-                    className="w-full md:w-[320px] flex-shrink-0 bg-gradient-to-br from-blue-100 to-blue-200 p-6 rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
-                >
-                    <h3
-                        className="text-lg sm:text-xl font-semibold text-gray-800 mb-4 font-2"
-
+                <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14 flex flex-col md:flex-row gap-8 box-border">
+                    <motion.div
+                        initial={{ y: 50, opacity: 0 }}
+                        animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
+                        transition={{ duration: 0.5, delay: getTouchDelay(0) }}
+                        className="w-full md:w-[320px] flex-shrink-0 bg-gradient-to-br from-blue-100 to-blue-200 p-6 rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 box-border"
                     >
-                        Get in Touch
-                    </h3>
-                    <div className="space-y-4">
-                        <a
-                            href=""
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
-                            aria-label="Visit us at 123 Business Hub, New Delhi, India"
+                        <h3
+                            className="text-lg sm:text-xl font-semibold text-gray-800 mb-4 font-2"
                         >
-                            <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
-                                <User className="w-5 h-5 text-white" />
-                            </span>
-                            <div>
-                                <p className="text-base text-gray-700 font-semibold font-3 ">
-                                    Bharat Barot
-                                </p>
-                                <p className="text-xs text-gray-600 font-3">
-                                    Vice President
-                                    <br />
-
-                                </p>
-                            </div>
-                        </a>
-                        <a
-                            href="tel:+91 7486 952 087"
-                            className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
-                            aria-label="Call us at +91 98765 43210"
-                        >
-                            <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
-                                <Phone className="w-5 h-5 text-white" />
-                            </span>
-                            <div>
-                                <p className="text-base text-gray-700 font-semibold font-3">
-                                    Call Anytime
-                                </p>
-                                <p className="text-xs text-gray-600 font-3"><a href="tel:+917486 952 087">+91 7486 952 087</a></p>
-                            </div>
-                        </a>
-                        <a
-                            href="mailto:bharat@abtikservices.com"
-                            className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
-                            aria-label="Email us at info@abtik.com"
-                        >
-                            <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
-                                <Mail className="w-5 h-5 text-white" />
-                            </span>
-                            <div>
-                                <p className="text-base text-gray-700 font-semibold font-3">
-                                    Write Email
-                                </p>
-                                <p className="text-xs text-gray-600 font-3"><a href="mailto:bharat@abtikservices.com">bharat@abtikservices.com</a></p>
-                            </div>
-                        </a>
-                    </div>
-                </motion.div>
-                 <motion.div
+                            Get in Touch
+                        </h3>
+                        <div className="space-y-4">
+                            <a
+                                href=""
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
+                                aria-label="Visit us at 123 Business Hub, New Delhi, India"
+                            >
+                                <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
+                                    <User className="w-5 h-5 text-white" />
+                                </span>
+                                <div>
+                                    <p className="text-base text-gray-700 font-semibold font-3 ">
+                                        Bharat Barot
+                                    </p>
+                                    <p className="text-xs text-gray-600 font-3">
+                                        Vice President
+                                        <br />
+                                    </p>
+                                </div>
+                            </a>
+                            <a
+                                href="tel:+91 7486 952 087"
+                                className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
+                                aria-label="Call us at +91 98765 43210"
+                            >
+                                <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
+                                    <Phone className="w-5 h-5 text-white" />
+                                </span>
+                                <div>
+                                    <p className="text-base text-gray-700 font-semibold font-3">
+                                        Call Anytime
+                                    </p>
+                                    <p className="text-xs text-gray-600 font-3">
+                                        <a href="tel:+917486 952 087">+91 7486 952 087</a>
+                                    </p>
+                                </div>
+                            </a>
+                            <a
+                                href="mailto:bharat@abtikservices.com"
+                                className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
+                                aria-label="Email us at info@abtik.com"
+                            >
+                                <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
+                                    <Mail className="w-5 h-5 text-white" />
+                                </span>
+                                <div>
+                                    <p className="text-base text-gray-700 font-semibold font-3">
+                                        Write Email
+                                    </p>
+                                    <p className="text-xs text-gray-600 font-3">
+                                        <a href="mailto:bharat@abtikservices.com">
+                                            bharat@abtikservices.com
+                                        </a>
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    </motion.div>
+                    <motion.div
                         initial={{ y: 50, opacity: 0 }}
                         animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
                         transition={{ duration: 0.5, delay: getTouchDelay(1) }}
@@ -361,9 +366,10 @@ const Grants = () => {
                             </p>
                         </div>
                         <div className="p-2 bg-white rounded-4xl box-border grid h-full ">
-                            <img src={Image1} className="rounded-3xl w-full h-64  " loading="lazy" />
+                            <img src={Image1} className="rounded-3xl w-full h-64" loading="lazy" />
                         </div>
                     </motion.div>
+                </div>
             </motion.section>
 
             {/* What are Government Grants */}
@@ -372,24 +378,23 @@ const Grants = () => {
                 initial={{ y: 100, opacity: 0 }}
                 animate={isInViewGrantsInfo ? { y: 0, opacity: 1 } : {}}
                 transition={{ duration: 0.5 }}
-                className="px-7 md:px-14 bg-[#f7f7f7] py-8"
+                className="bg-[#f7f7f7] py-8"
             >
-                <div className="bg-gradient-to-t from-[#3CA2E2] to-[#052EAA] rounded-4xl p-8 md:p-12 space-y-4 text-center">
-                    <h2
-                        className="sub-heading text-white text-left font-2"
-
-                    >
-                        What Are Government Grants?
-                    </h2>
-                    <p className="paragraph !text-white mx-auto text-left font-3"
-
-                    >
-                        Government grants are financial assistance programs provided by central and state
-                        governments to support businesses, startups, research institutions, and individuals
-                        in achieving specific objectives. These non repayable funds are designed to promote
-                        innovation, economic growth, social development, and technological advancement across
-                        various sectors including agriculture, manufacturing, IT, healthcare, and renewable energy.
-                    </p>
+                <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14">
+                    <div className="bg-gradient-to-t from-[#3CA2E2] to-[#052EAA] rounded-4xl p-8 md:p-12 space-y-4 text-center">
+                        <h2
+                            className="sub-heading text-white text-left font-2"
+                        >
+                            What Are Government Grants?
+                        </h2>
+                        <p className="paragraph !text-white mx-auto text-left font-3">
+                            Government grants are financial assistance programs provided by central and state
+                            governments to support businesses, startups, research institutions, and individuals
+                            in achieving specific objectives. These non repayable funds are designed to promote
+                            innovation, economic growth, social development, and technological advancement across
+                            various sectors including agriculture, manufacturing, IT, healthcare, and renewable energy.
+                        </p>
+                    </div>
                 </div>
             </motion.section>
 
@@ -399,15 +404,14 @@ const Grants = () => {
                 initial={{ y: 100, opacity: 0 }}
                 animate={isInViewGrantCategories ? { y: 0, opacity: 1 } : {}}
                 transition={{ duration: 0.5 }}
-                className="px-7 md:px-14 bg-[#f7f7f7] py-8"
+                className="bg-[#f7f7f7] py-8"
             >
-                <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-
-                >
-                    Types of Government Grants
-                </h2>
-                <div className="mt-8 bg-white rounded-4xl p-4 md:p-8 shadow-md">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14">
+                    <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]">
+                        Types of Government Grants
+                    </h2>
+                    <div className="mt-8 bg-white rounded-4xl p-4 md:p-8 shadow-md">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {/* Startup Grants Card */}
                         <motion.div
                             initial={{ y: 50, opacity: 0 }}
@@ -496,7 +500,7 @@ const Grants = () => {
                             </ul>
                         </motion.div>
 
-                        {/* Sector Specific Grants Card */}
+                            {/* Sector Specific Grants Card */}
                         <motion.div
                             initial={{ y: 50, opacity: 0 }}
                             animate={isInViewGrantCategories ? { y: 0, opacity: 1 } : {}}
@@ -538,7 +542,8 @@ const Grants = () => {
                                     <span>Healthcare and pharmaceutical schemes</span>
                                 </li>
                             </ul>
-                        </motion.div>
+                            </motion.div>
+                        </div>
                     </div>
                 </div>
             </motion.section>
@@ -549,92 +554,84 @@ const Grants = () => {
                 initial={{ y: 100, opacity: 0 }}
                 animate={isInViewGrantBenefits ? { y: 0, opacity: 1 } : {}}
                 transition={{ duration: 0.5 }}
-                className="px-7 md:px-14 bg-[#f7f7f7] py-8"
+                className="bg-[#f7f7f7] py-8"
             >
-                <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-
-                >
-                    Government Grant Benefits & Features
-                </h2>
-                <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
-                    <p className="text-sm md:text-base font-3 text-gray-600 text-center"
-
-                    >
-                        Government grants provide non-repayable financial assistance to eligible
-                        businesses and organizations, enabling growth, innovation, and social impact
-                        without the burden of debt repayment.
-                    </p>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <motion.div
-                            initial={{ y: 50, opacity: 0 }}
-                            animate={isInViewGrantBenefits ? { y: 0, opacity: 1 } : {}}
-                            transition={{ duration: 0.5, delay: 0.5 }}
-                            className="space-y-4"
-                        >
-                            <h3
-                                className="text-lg font-semibold text-gray-800 font-2"
-
+                <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14">
+                    <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]">
+                        Government Grant Benefits & Features
+                    </h2>
+                    <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
+                        <p className="text-sm md:text-base font-3 text-gray-600 text-center">
+                            Government grants provide non-repayable financial assistance to eligible
+                            businesses and organizations, enabling growth, innovation, and social impact
+                            without the burden of debt repayment.
+                        </p>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <motion.div
+                                initial={{ y: 50, opacity: 0 }}
+                                animate={isInViewGrantBenefits ? { y: 0, opacity: 1 } : {}}
+                                transition={{ duration: 0.5, delay: 0.5 }}
+                                className="space-y-4"
                             >
-                                Key Advantages
-                            </h3>
-                            <ul className="space-y-2 text-sm text-gray-600 font-3">
-                                <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
-                                    <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>No repayment required if conditions are met.</span>
-                                </li>
-                                <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
-                                    <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>Substantial funding for business expansion.</span>
-                                </li>
-                                <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
-                                    <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>Government credibility and validation.</span>
-                                </li>
-                                <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
-                                    <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>Access to government networks and resources.</span>
-                                </li>
-                                <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
-                                    <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>Support for innovative and social projects.</span>
-                                </li>
-                            </ul>
-                        </motion.div>
-                        <motion.div
-                            initial={{ y: 50, opacity: 0 }}
-                            animate={isInViewGrantBenefits ? { y: 0, opacity: 1 } : {}}
-                            transition={{ duration: 0.5, delay: 0.7 }}
-                            className="space-y-4"
-                        >
-                            <h3
-                                className="text-lg font-semibold text-gray-800 font-2"
-
+                                <h3 className="text-lg font-semibold text-gray-800 font-2">
+                                    Key Advantages
+                                </h3>
+                                <ul className="space-y-2 text-sm text-gray-600 font-3">
+                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                        <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                        <span>No repayment required if conditions are met.</span>
+                                    </li>
+                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                        <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                        <span>Substantial funding for business expansion.</span>
+                                    </li>
+                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                        <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                        <span>Government credibility and validation.</span>
+                                    </li>
+                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                        <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                        <span>Access to government networks and resources.</span>
+                                    </li>
+                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                        <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                        <span>Support for innovative and social projects.</span>
+                                    </li>
+                                </ul>
+                            </motion.div>
+                            <motion.div
+                                initial={{ y: 50, opacity: 0 }}
+                                animate={isInViewGrantBenefits ? { y: 0, opacity: 1 } : {}}
+                                transition={{ duration: 0.5, delay: 0.7 }}
+                                className="space-y-4"
                             >
-                                Application Process
-                            </h3>
-                            <ul className="space-y-2 text-sm text-gray-600 font-3">
-                                <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
-                                    <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>Detailed project proposal preparation required.</span>
-                                </li>
-                                <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
-                                    <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>Thorough documentation and compliance needed.</span>
-                                </li>
-                                <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
-                                    <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>Multi-stage evaluation and approval process.</span>
-                                </li>
-                                <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
-                                    <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>Regular progress reporting and monitoring.</span>
-                                </li>
-                                <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
-                                    <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                                    <span>Milestone based fund disbursement system.</span>
-                                </li>
-                            </ul>
-                        </motion.div>
+                                <h3 className="text-lg font-semibold text-gray-800 font-2">
+                                    Application Process
+                                </h3>
+                                <ul className="space-y-2 text-sm text-gray-600 font-3">
+                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                        <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                        <span>Detailed project proposal preparation required.</span>
+                                    </li>
+                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                        <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                        <span>Thorough documentation and compliance needed.</span>
+                                    </li>
+                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                        <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                        <span>Multi-stage evaluation and approval process.</span>
+                                    </li>
+                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                        <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                        <span>Regular progress reporting and monitoring.</span>
+                                    </li>
+                                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                                        <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                                        <span>Milestone based fund disbursement system.</span>
+                                    </li>
+                                </ul>
+                            </motion.div>
+                        </div>
                     </div>
                 </div>
             </motion.section>
@@ -645,34 +642,31 @@ const Grants = () => {
                 initial={{ y: 100, opacity: 0 }}
                 animate={isInViewProcess ? { y: 0, opacity: 1 } : {}}
                 transition={{ duration: 0.5 }}
-                className="px-7 md:px-14 bg-[#f7f7f7] py-8"
+                className="bg-[#f7f7f7] py-8"
             >
-                <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-
-                >
-                    How Abtik Helps You Secure Grants
-                </h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-                    {processData?.map((process, index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ y: 50, opacity: 0 }}
-                            animate={isInViewProcess ? { y: 0, opacity: 1 } : {}}
-                            transition={{ duration: 0.5, delay: getProcessDelay(index) }}
-                            className="bg-white p-6 rounded-4xl shadow-md text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
-                        >
-                            <div className="mb-4 inline-block p-3 bg-gradient-to-r from-blue-100 to-blue-200 rounded-full">
-                                <process.icon className="w-8 h-8" />
-                            </div>
-                            <h3
-                                className="text-lg font-semibold text-gray-800 mb-2 font-2"
-
+                <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14">
+                    <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]">
+                        How Abtik Helps You Secure Grants
+                    </h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+                        {processData?.map((process, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ y: 50, opacity: 0 }}
+                                animate={isInViewProcess ? { y: 0, opacity: 1 } : {}}
+                                transition={{ duration: 0.5, delay: getProcessDelay(index) }}
+                                className="bg-white p-6 rounded-4xl shadow-md text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
                             >
-                                {process.title}
-                            </h3>
-                            <p className="text-sm text-gray-600 font-3">{process.description}</p>
-                        </motion.div>
-                    ))}
+                                <div className="mb-4 inline-block p-3 bg-gradient-to-r from-blue-100 to-blue-200 rounded-full">
+                                    <process.icon className="w-8 h-8" />
+                                </div>
+                                <h3 className="text-lg font-semibold text-gray-800 mb-2 font-2">
+                                    {process.title}
+                                </h3>
+                                <p className="text-sm text-gray-600 font-3">{process.description}</p>
+                            </motion.div>
+                        ))}
+                    </div>
                 </div>
             </motion.section>
 
@@ -682,34 +676,31 @@ const Grants = () => {
                 initial={{ y: 100, opacity: 0 }}
                 animate={isInViewBenefits ? { y: 0, opacity: 1 } : {}}
                 transition={{ duration: 0.5 }}
-                className="px-7 md:px-14 bg-[#f7f7f7] py-8 "
+                className="bg-[#f7f7f7] py-8 "
             >
-                <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-
-                >
-                    Why Choose Abtik for Grant Applications
-                </h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-                    {benefitsData?.map((benefit, index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ y: 50, opacity: 0 }}
-                            animate={isInViewBenefits ? { y: 0, opacity: 1 } : {}}
-                            transition={{ duration: 0.5, delay: getBenefitsDelay(index) }}
-                            className="bg-white p-6 rounded-4xl shadow-md text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
-                        >
-                            <div className="mb-4 inline-block p-3 bg-gradient-to-r from-blue-100 to-blue-200 rounded-full">
-                                <benefit.icon className="w-8 h-8" />
-                            </div>
-                            <h3
-                                className="text-lg font-2 font-semibold text-gray-800 mb-2"
-
+                <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14">
+                    <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]">
+                        Why Choose Abtik for Grant Applications
+                    </h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+                        {benefitsData?.map((benefit, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ y: 50, opacity: 0 }}
+                                animate={isInViewBenefits ? { y: 0, opacity: 1 } : {}}
+                                transition={{ duration: 0.5, delay: getBenefitsDelay(index) }}
+                                className="bg-white p-6 rounded-4xl shadow-md text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
                             >
-                                {benefit.title}
-                            </h3>
-                            <p className="text-sm font-3 text-gray-600">{benefit.description}</p>
-                        </motion.div>
-                    ))}
+                                <div className="mb-4 inline-block p-3 bg-gradient-to-r from-blue-100 to-blue-200 rounded-full">
+                                    <benefit.icon className="w-8 h-8" />
+                                </div>
+                                <h3 className="text-lg font-2 font-semibold text-gray-800 mb-2">
+                                    {benefit.title}
+                                </h3>
+                                <p className="text-sm font-3 text-gray-600">{benefit.description}</p>
+                            </motion.div>
+                        ))}
+                    </div>
                 </div>
             </motion.section>
 
@@ -719,53 +710,52 @@ const Grants = () => {
                 initial={{ y: 100, opacity: 0 }}
                 animate={isInViewFAQ ? { y: 0, opacity: 1 } : {}}
                 transition={{ duration: 0.5 }}
-                className="bg-[#f7f7f7]  py-8 md:py-16 space-y-6"
+                className="bg-[#f7f7f7] py-8 md:py-16"
             >
-                <h1 className="sub-heading font-2 bg-gradient-to-t text-center  bg-clip-text from-[#3CA2E2] to-[#052EAA] text-transparent"
-
-                >
-                    Frequently Asked Questions
-                </h1>
-                <div
-                    className="px-6  md:px-24 space-y-4 font-3"
-
-                >
-                    {faq.map((data, index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ y: 50, opacity: 0 }}
-                            animate={isInViewFAQ ? { y: 0, opacity: 1 } : {}}
-                            transition={{ duration: 0.1, delay: getFaqDelay(index) }}
-                            className="bg-white rounded-lg shadow-sm border border-gray-100 transition-all duration-300"
-                        >
-                            <h2
-                                className={`p-2.5 px-4 relative cursor-pointer flex items-center justify-between  text-base font-medium ${isExpanded.isOpen && isExpanded.index === index
-                                    ? "border-b border-gray-200"
-                                    : ""
-                                    }`}
-                                onClick={() => toggleIsExpanded(index)}
+                <div className="w-full max-w-[1920px] mx-auto space-y-6">
+                    <h1 className="sub-heading font-2 bg-gradient-to-t text-center bg-clip-text from-[#3CA2E2] to-[#052EAA] text-transparent">
+                        Frequently Asked Questions
+                    </h1>
+                    <div className="px-6 md:px-24 space-y-4 font-3">
+                        {faq.map((data, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ y: 50, opacity: 0 }}
+                                animate={isInViewFAQ ? { y: 0, opacity: 1 } : {}}
+                                transition={{ duration: 0.1, delay: getFaqDelay(index) }}
+                                className="bg-white rounded-lg shadow-sm border border-gray-100 transition-all duration-300"
                             >
-                                <span>{data.question}</span>
-                                <button className="border-2 p-1 transition-all duration-300 hover:scale-105 h-8 w-8 flex justify-center items-center border-[#052EAA] rounded-lg text-[#052EAA]">
-                                    {isExpanded.isOpen && isExpanded.index === index ? (
-                                        <ArrowRight className="w-5 h-5" />
-                                    ) : (
-                                        <ArrowUpRight className="w-5 h-5" />
-                                    )}
-                                </button>
-                            </h2>
-                            <div
-                                className={`overflow-hidden transition-all duration-500 ease-in-out ${isExpanded.isOpen && isExpanded.index === index
-                                    ? "max-h-96 opacity-100"
-                                    : "max-h-0 opacity-0"
+                                <h2
+                                    className={`p-2.5 px-4 relative cursor-pointer flex items-center justify-between text-base font-medium ${
+                                        isExpanded.isOpen && isExpanded.index === index
+                                            ? "border-b border-gray-200"
+                                            : ""
                                     }`}
-                            >
-                                <p className="p-4 bg-gradient-to-t rounded-b-lg from-[#052EAA] to-[#3CA2E2] text-white">
-                                    {data.answer}
-                                </p>
-                            </div>
-                        </motion.div>
-                    ))}
+                                    onClick={() => toggleIsExpanded(index)}
+                                >
+                                    <span>{data.question}</span>
+                                    <button className="border-2 p-1 transition-all duration-300 hover:scale-105 h-8 w-8 flex justify-center items-center border-[#052EAA] rounded-lg text-[#052EAA]">
+                                        {isExpanded.isOpen && isExpanded.index === index ? (
+                                            <ArrowRight className="w-5 h-5" />
+                                        ) : (
+                                            <ArrowUpRight className="w-5 h-5" />
+                                        )}
+                                    </button>
+                                </h2>
+                                <div
+                                    className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                                        isExpanded.isOpen && isExpanded.index === index
+                                            ? "max-h-96 opacity-100"
+                                            : "max-h-0 opacity-0"
+                                    }`}
+                                >
+                                    <p className="p-4 bg-gradient-to-t rounded-b-lg from-[#052EAA] to-[#3CA2E2] text-white">
+                                        {data.answer}
+                                    </p>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
                 </div>
             </motion.section>
 

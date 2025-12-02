@@ -127,9 +127,10 @@ const PrivacyPolicy = () => {
           initial={{ y: 100, opacity: 0 }}
           animate={isInViewPrivacyContent ? { y: 0, opacity: 1 } : {}}
           transition={{ duration: 0.5 }}
-          className="py-16 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-14 bg-gray-50"
+          className="bg-gray-50 py-16"
         >
-          <div className="max-w-4xl mx-auto">
+          <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14">
+            <div className="max-w-4xl mx-auto">
             {/* Effective Date */}
             <div className="text-center mb-12">
               <div className="inline-flex items-center bg-white px-8 py-4 rounded-full shadow-sm border">
@@ -494,6 +495,7 @@ const PrivacyPolicy = () => {
                 </p>
               </div>
             </div>
+          </div>
           </div>
         </motion.section>
 

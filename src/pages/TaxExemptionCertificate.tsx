@@ -258,22 +258,23 @@ const TaxExemptionCertificate = () => {
 
             {/* Get In Touch Section */}
             <motion.section
-                ref={refTouch}
-                initial={{ y: 100, opacity: 0 }}
-                animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
-                transition={{ duration: 0.5 }}
-                className="flex flex-col md:flex-row gap-8 bg-[#f7f7f7] py-16 px-7 md:px-14"
+            ref={refTouch}
+            initial={{ y: 100, opacity: 0 }}
+            animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
+            transition={{ duration: 0.5 }}
+            className="bg-[#f7f7f7] py-16"
             >
-          <motion.div
+                <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14 flex flex-col md:flex-row gap-8 items-stretch">
+                <motion.div
             initial={{ y: 50, opacity: 0 }}
             animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
             transition={{ duration: 0.5, delay: getTouchDelay(0) }}
-            className="w-full md:w-[320px]    flex-shrink-0 bg-gradient-to-br from-blue-100 to-blue-200 p-6 rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 box-border"
+            className="w-full md:w-[320px]    flex-shrink-0 bg-gradient-to-br from-blue-100 to-blue-200 p-6 rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 box-border flex flex-col"
           >
             <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-4 font-2">
               Get in Touch
             </h3>
-            <div className="space-y-4">
+            <div className="flex flex-col justify-evenly flex-grow">
               <a
                 href=""
                 target="_blank"
@@ -351,16 +352,18 @@ const TaxExemptionCertificate = () => {
                         <img src={Image1} className="rounded-3xl w-full h-64" loading="lazy" alt="Tax Services" />
                     </div>
                 </motion.div>
+                </div>
             </motion.section>
 
             {/* What is Tax Exemption  Certificate */}
             <motion.section
-                ref={refTaxCertInfo}
-                initial={{ y: 100, opacity: 0 }}
-                animate={isInViewTaxCertInfo ? { y: 0, opacity: 1 } : {}}
-                transition={{ duration: 0.5 }}
-                className="px-7 md:px-14 bg-[#f7f7f7] py-8"
+            ref={refTaxCertInfo}
+            initial={{ y: 100, opacity: 0 }}
+            animate={isInViewTaxCertInfo ? { y: 0, opacity: 1 } : {}}
+            transition={{ duration: 0.5 }}
+            className="bg-[#f7f7f7] py-8"
             >
+                <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14">
                 <div className="bg-gradient-to-t from-[#3CA2E2] to-[#052EAA] rounded-4xl p-8 md:p-12 space-y-4 text-center">
                     <h2
                         className="sub-heading text-white text-left font-2"
@@ -372,16 +375,18 @@ const TaxExemptionCertificate = () => {
                         A Tax Exemption  Certificate is a crucial document that provides official verification that all outstanding tax liabilities on an asset (like property or a business) have been paid or are legally assumed by a new owner. This protects buyers from inheriting hidden tax debts and ensures a clean, transparent transaction, fostering trust and security for everyone involved.
                     </p>
                 </div>
+                </div>
             </motion.section>
 
             {/* Key Features Section */}
             <motion.section
-                ref={refFeatures}
-                initial={{ y: 100, opacity: 0 }}
-                animate={isInViewFeatures ? { y: 0, opacity: 1 } : {}}
-                transition={{ duration: 0.5 }}
-                className="px-7 md:px-14 bg-[#f7f7f7] py-8"
+            ref={refFeatures}
+            initial={{ y: 100, opacity: 0 }}
+            animate={isInViewFeatures ? { y: 0, opacity: 1 } : {}}
+            transition={{ duration: 0.5 }}
+            className="bg-[#f7f7f7] py-8"
             >
+                <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14">
                 <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
                 >
                     Key Features of Our Certificate Service
@@ -468,16 +473,18 @@ const TaxExemptionCertificate = () => {
                         </motion.div>
                     </div>
                 </div>
+                </div>
             </motion.section>
 
             {/* Benefits & Use Cases Section */}
             <motion.section
-                ref={refBenefitsUseCases}
-                initial={{ y: 100, opacity: 0 }}
-                animate={isInViewBenefitsUseCases ? { y: 0, opacity: 1 } : {}}
-                transition={{ duration: 0.5 }}
-                className="px-7 md:px-14 bg-[#f7f7f7] py-8"
+            ref={refBenefitsUseCases}
+            initial={{ y: 100, opacity: 0 }}
+            animate={isInViewBenefitsUseCases ? { y: 0, opacity: 1 } : {}}
+            transition={{ duration: 0.5 }}
+            className="bg-[#f7f7f7] py-8"
             >
+                <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14">
                 <h2 className="sub-heading text-center font-2 bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
                 >
                     Benefits & Common Use Cases
@@ -550,21 +557,23 @@ const TaxExemptionCertificate = () => {
                         </motion.div>
                     </div>
                 </div>
+                </div>
             </motion.section>
 
             {/* Abtik Process Section */}
             <motion.section
-                ref={refProcess}
-                initial={{ y: 100, opacity: 0 }}
-                animate={isInViewProcess ? { y: 0, opacity: 1 } : {}}
-                transition={{ duration: 0.5 }}
-                className="px-7 md:px-14 bg-[#f7f7f7] py-8"
+            ref={refProcess}
+            initial={{ y: 100, opacity: 0 }}
+            animate={isInViewProcess ? { y: 0, opacity: 1 } : {}}
+            transition={{ duration: 0.5 }}
+            className="bg-[#f7f7f7] py-8"
             >
+                <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14">
                 <h2 className="sub-heading text-center font-2 bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
                 >
                     Our Simple 3 Step Certification Process
                 </h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
                     {processData?.map((process, index) => (
                         <motion.div
                             key={index}
@@ -585,21 +594,23 @@ const TaxExemptionCertificate = () => {
                         </motion.div>
                     ))}
                 </div>
+                </div>
             </motion.section>
 
             {/* Why Choose Abtik Section */}
             <motion.section
-                ref={refWhyChoose}
-                initial={{ y: 100, opacity: 0 }}
-                animate={isInViewWhyChoose ? { y: 0, opacity: 1 } : {}}
-                transition={{ duration: 0.5 }}
-                className="px-7 md:px-14 bg-[#f7f7f7] py-8 "
+            ref={refWhyChoose}
+            initial={{ y: 100, opacity: 0 }}
+            animate={isInViewWhyChoose ? { y: 0, opacity: 1 } : {}}
+            transition={{ duration: 0.5 }}
+            className="bg-[#f7f7f7] py-8 "
             >
+                <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14">
                 <h2 className="sub-heading text-center font-2 bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
                 >
                     Why Choose Abtik for Your Tax Certificate
                 </h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
                     {benefitsData?.map((benefit, index) => (
                         <motion.div
                             key={index}
@@ -620,16 +631,18 @@ const TaxExemptionCertificate = () => {
                         </motion.div>
                     ))}
                 </div>
+                </div>
             </motion.section>
 
             {/* FAQ Section */}
             <motion.section
-                ref={refFAQ}
-                initial={{ y: 100, opacity: 0 }}
-                animate={isInViewFAQ ? { y: 0, opacity: 1 } : {}}
-                transition={{ duration: 0.5 }}
-                className="bg-[#f7f7f7]  py-8 md:py-16 space-y-6"
+            ref={refFAQ}
+            initial={{ y: 100, opacity: 0 }}
+            animate={isInViewFAQ ? { y: 0, opacity: 1 } : {}}
+            transition={{ duration: 0.5 }}
+            className="bg-[#f7f7f7]  py-8 md:py-16"
             >
+                <div className="w-full max-w-[1920px] mx-auto space-y-6">
                 <h1 className="sub-heading bg-gradient-to-t font-2 text-center  bg-clip-text from-[#3CA2E2] to-[#052EAA] text-transparent"
                 >
                     Frequently Asked Questions
@@ -673,6 +686,7 @@ const TaxExemptionCertificate = () => {
                             </div>
                         </motion.div>
                     ))}
+                </div>
                 </div>
             </motion.section>
 

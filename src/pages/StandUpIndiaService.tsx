@@ -277,76 +277,80 @@ const StandUpIndia = () => {
                 initial={{ y: 100, opacity: 0 }}
                 animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
                 transition={{ duration: 0.5 }}
-                className="flex flex-col md:flex-row gap-8 bg-[#f7f7f7] py-16 px-7 md:px-14"
+                className="bg-[#f7f7f7] py-16"
             >
-                <motion.div
-                    initial={{ y: 50, opacity: 0 }}
-                    animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
-                    transition={{ duration: 0.5, delay: getTouchDelay(0) }}
-                    className="w-full md:w-[320px] flex-shrink-0 bg-gradient-to-br from-blue-100 to-blue-200 p-6 rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
-                >
-                    <h3
-                        className="text-lg sm:text-xl font-semibold text-gray-800 mb-4 font-2"
-                     
+                <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14 flex flex-col md:flex-row gap-8 box-border">
+                    <motion.div
+                        initial={{ y: 50, opacity: 0 }}
+                        animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
+                        transition={{ duration: 0.5, delay: getTouchDelay(0) }}
+                        className="w-full md:w-[320px] flex-shrink-0 bg-gradient-to-br from-blue-100 to-blue-200 p-6 rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 box-border"
                     >
-                        Get in Touch
-                    </h3>
-                    <div className="space-y-4">
-                        <a
-                            href=""
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
-                            aria-label="Visit us at 123 Business Hub, New Delhi, India"
+                        <h3
+                            className="text-lg sm:text-xl font-semibold text-gray-800 mb-4 font-2"
                         >
-                            <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
-                                <User className="w-5 h-5 text-white" />
-                            </span>
-                            <div>
-                                <p className="text-base text-gray-700 font-semibold  font-3">
-                                    Arissit Thackar
-
-                                </p>
-                                <p className="text-xs text-gray-600 font-3">
-                                    NBFC-HOD
-                                    <br />
-
-                                </p>
-                            </div>
-                        </a>
-                        <a
-                            href="tel:+916357369191"
-                            className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
-                            aria-label="Call us at +91 98765 43210"
-                        >
-                            <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
-                                <Phone className="w-5 h-5 text-white" />
-                            </span>
-                            <div>
-                                <p className="text-base text-gray-700 font-semibold font-3">
-                                    Call Anytime
-                                </p>
-                                <p className="text-xs text-gray-600 font-3"><a href="tel:+917486 952 087">+91 6357 369 191</a></p>
-                            </div>
-                        </a>
-                        <a
-                            href="mailto:Abtik.funding@abtikservices.in"
-                            className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
-                            aria-label="Email us at info@abtik.com"
-                        >
-                            <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
-                                <Mail className="w-5 h-5 text-white" />
-                            </span>
-                            <div>
-                                <p className="text-base text-gray-700 font-semibold font-3">
-                                    Write Email
-                                </p>
-                                <p className="text-xs text-gray-600 font-3"><a href="mailto:Abtik.funding@abtikservices.in">Abtik.funding@abtikservices.in</a></p>
-                            </div>
-                        </a>
-                    </div>
-                </motion.div>
-                 <motion.div
+                            Get in Touch
+                        </h3>
+                        <div className="space-y-4">
+                            <a
+                                href=""
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
+                                aria-label="Visit us at 123 Business Hub, New Delhi, India"
+                            >
+                                <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
+                                    <User className="w-5 h-5 text-white" />
+                                </span>
+                                <div>
+                                    <p className="text-base text-gray-700 font-semibold font-3">
+                                        Arissit Thackar
+                                    </p>
+                                    <p className="text-xs text-gray-600 font-3">
+                                        NBFC-HOD
+                                        <br />
+                                    </p>
+                                </div>
+                            </a>
+                            <a
+                                href="tel:+916357369191"
+                                className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
+                                aria-label="Call us at +91 98765 43210"
+                            >
+                                <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
+                                    <Phone className="w-5 h-5 text-white" />
+                                </span>
+                                <div>
+                                    <p className="text-base text-gray-700 font-semibold font-3">
+                                        Call Anytime
+                                    </p>
+                                    <p className="text-xs text-gray-600 font-3">
+                                        <a href="tel:+917486 952 087">+91 6357 369 191</a>
+                                    </p>
+                                </div>
+                            </a>
+                            <a
+                                href="mailto:Abtik.funding@abtikservices.in"
+                                className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
+                                aria-label="Email us at info@abtik.com"
+                            >
+                                <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
+                                    <Mail className="w-5 h-5 text-white" />
+                                </span>
+                                <div>
+                                    <p className="text-base text-gray-700 font-semibold font-3">
+                                        Write Email
+                                    </p>
+                                    <p className="text-xs text-gray-600 font-3">
+                                        <a href="mailto:Abtik.funding@abtikservices.in">
+                                            Abtik.funding@abtikservices.in
+                                        </a>
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    </motion.div>
+                    <motion.div
                         initial={{ y: 50, opacity: 0 }}
                         animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
                         transition={{ duration: 0.5, delay: getTouchDelay(1) }}
@@ -361,10 +365,15 @@ const StandUpIndia = () => {
                                 Management to Legal Empowering.
                             </p>
                         </div>
-                        <div className="p-2 bg-white rounded-4xl box-border grid h-full ">
-                            <img src={Image1} className="rounded-3xl w-full h-64  " loading="lazy" />
+                        <div className="p-2 bg-white rounded-4xl box-border grid h-full">
+                            <img
+                                src={Image1}
+                                className="w-full h-64 rounded-3xl"
+                                loading="lazy"
+                            />
                         </div>
                     </motion.div>
+                </div>
             </motion.section>
 
             {/* What is Stand-Up India */}
@@ -373,8 +382,9 @@ const StandUpIndia = () => {
                 initial={{ y: 100, opacity: 0 }}
                 animate={isInViewStandUpIndia ? { y: 0, opacity: 1 } : {}}
                 transition={{ duration: 0.5 }}
-                className="px-7 md:px-14 bg-[#f7f7f7] py-8"
+                className="bg-[#f7f7f7] py-8"
             >
+                <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14">
                 <div className="bg-gradient-to-t from-[#3CA2E2] to-[#052EAA] rounded-4xl p-8 md:p-12 space-y-4 text-center">
                     <h2
                         className="sub-heading text-white text-left font-2"
@@ -392,6 +402,7 @@ const StandUpIndia = () => {
                         per bank branch benefits from this empowering program.
                     </p>
                 </div>
+                </div>
             </motion.section>
 
             {/* Stand-Up India Funding Structure Section */}
@@ -400,8 +411,9 @@ const StandUpIndia = () => {
                 initial={{ y: 100, opacity: 0 }}
                 animate={isInViewFundingStructure ? { y: 0, opacity: 1 } : {}}
                 transition={{ duration: 0.5 }}
-                className="px-7 md:px-14 bg-[#f7f7f7] py-8"
+                className="bg-[#f7f7f7] py-8"
             >
+                <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14">
                 <h2 className="sub-heading text-center font-2 bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
                     
                 >
@@ -499,6 +511,7 @@ const StandUpIndia = () => {
                         </motion.div>
                     </div>
                 </div>
+                </div>
             </motion.section>
 
             {/* Stand-Up India Benefits Section */}
@@ -507,8 +520,9 @@ const StandUpIndia = () => {
                 initial={{ y: 100, opacity: 0 }}
                 animate={isInViewStandUpIndiaBenefits ? { y: 0, opacity: 1 } : {}}
                 transition={{ duration: 0.5 }}
-                className="px-7 md:px-14 bg-[#f7f7f7] py-8"
+                className="bg-[#f7f7f7] py-8"
             >
+                <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14">
                 <h2 className="sub-heading text-center font-2 bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
                
                 >
@@ -594,6 +608,7 @@ const StandUpIndia = () => {
                         </motion.div>
                     </div>
                 </div>
+                </div>
             </motion.section>
 
             {/* Abtik Process Section */}
@@ -602,14 +617,15 @@ const StandUpIndia = () => {
                 initial={{ y: 100, opacity: 0 }}
                 animate={isInViewProcess ? { y: 0, opacity: 1 } : {}}
                 transition={{ duration: 0.5 }}
-                className="px-7 md:px-14 bg-[#f7f7f7] py-8"
+                className="bg-[#f7f7f7] py-8"
             >
+                <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14">
                 <h2 className="sub-heading text-center font-2 bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
                     
                 >
                     How Abtik Helps You Get Stand Up India Loan
                 </h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
                     {processData?.map((process, index) => (
                         <motion.div
                             key={index}
@@ -631,6 +647,7 @@ const StandUpIndia = () => {
                         </motion.div>
                     ))}
                 </div>
+                    </div>
             </motion.section>
 
             {/* Benefits Section */}
@@ -639,34 +656,31 @@ const StandUpIndia = () => {
                 initial={{ y: 100, opacity: 0 }}
                 animate={isInViewBenefits ? { y: 0, opacity: 1 } : {}}
                 transition={{ duration: 0.5 }}
-                className="px-7 md:px-14 bg-[#f7f7f7] py-8 "
+                className="bg-[#f7f7f7] py-8"
             >
-                <h2 className="sub-heading text-center font-2 bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-                  
-                >
-                    Why Choose Abtik for Stand Up India
-                </h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-                    {benefitsData?.map((benefit, index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ y: 50, opacity: 0 }}
-                            animate={isInViewBenefits ? { y: 0, opacity: 1 } : {}}
-                            transition={{ duration: 0.5, delay: getBenefitsDelay(index) }}
-                            className="bg-white p-6 rounded-4xl shadow-md text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
-                        >
-                            <div className="mb-4 inline-block p-3 bg-gradient-to-r from-blue-100 to-blue-200 rounded-full">
-                                <benefit.icon className="w-8 h-8" />
-                            </div>
-                            <h3
-                                className="text-lg font-semibold text-gray-800 mb-2 font-2"
-                          
+                <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14">
+                    <h2 className="sub-heading text-center font-2 bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]">
+                        Why Choose Abtik for Stand Up India
+                    </h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+                        {benefitsData?.map((benefit, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ y: 50, opacity: 0 }}
+                                animate={isInViewBenefits ? { y: 0, opacity: 1 } : {}}
+                                transition={{ duration: 0.5, delay: getBenefitsDelay(index) }}
+                                className="bg-white p-6 rounded-4xl shadow-md text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
                             >
-                                {benefit.title}
-                            </h3>
-                            <p className="text-sm text-gray-600 font-3">{benefit.description}</p>
-                        </motion.div>
-                    ))}
+                                <div className="mb-4 inline-block p-3 bg-gradient-to-r from-blue-100 to-blue-200 rounded-full">
+                                    <benefit.icon className="w-8 h-8" />
+                                </div>
+                                <h3 className="text-lg font-semibold text-gray-800 mb-2 font-2">
+                                    {benefit.title}
+                                </h3>
+                                <p className="text-sm text-gray-600 font-3">{benefit.description}</p>
+                            </motion.div>
+                        ))}
+                    </div>
                 </div>
             </motion.section>
 
@@ -676,53 +690,52 @@ const StandUpIndia = () => {
                 initial={{ y: 100, opacity: 0 }}
                 animate={isInViewFAQ ? { y: 0, opacity: 1 } : {}}
                 transition={{ duration: 0.5 }}
-                className="bg-[#f7f7f7]  py-8 md:py-16 space-y-6"
+                className="bg-[#f7f7f7] py-8 md:py-16"
             >
-                <h1 className="sub-heading bg-gradient-to-t text-center font-1  bg-clip-text from-[#3CA2E2] to-[#052EAA] text-transparent"
-                
-                >
-                    Frequently Asked Questions
-                </h1>
-                <div
-                    className="px-6  md:px-24 space-y-4  font-3"
-                 
-                >
-                    {faq.map((data, index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ y: 50, opacity: 0 }}
-                            animate={isInViewFAQ ? { y: 0, opacity: 1 } : {}}
-                            transition={{ duration: 0.1, delay: getFaqDelay(index) }}
-                            className="bg-white rounded-lg shadow-sm border border-gray-100 transition-all duration-300"
-                        >
-                            <h2
-                                className={`p-2.5 px-4 relative cursor-pointer flex items-center justify-between  text-base font-medium ${isExpanded.isOpen && isExpanded.index === index
-                                    ? "border-b border-gray-200"
-                                    : ""
-                                    }`}
-                                onClick={() => toggleIsExpanded(index)}
+                <div className="w-full max-w-[1920px] mx-auto space-y-6">
+                    <h1 className="sub-heading bg-gradient-to-t text-center font-1 bg-clip-text from-[#3CA2E2] to-[#052EAA] text-transparent">
+                        Frequently Asked Questions
+                    </h1>
+                    <div className="px-6 md:px-24 space-y-4 font-3">
+                        {faq.map((data, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ y: 50, opacity: 0 }}
+                                animate={isInViewFAQ ? { y: 0, opacity: 1 } : {}}
+                                transition={{ duration: 0.1, delay: getFaqDelay(index) }}
+                                className="bg-white rounded-lg shadow-sm border border-gray-100 transition-all duration-300"
                             >
-                                <span>{data.question}</span>
-                                <button className="border-2 p-1 transition-all duration-300 hover:scale-105 h-8 w-8 flex justify-center items-center border-[#052EAA] rounded-lg text-[#052EAA]">
-                                    {isExpanded.isOpen && isExpanded.index === index ? (
-                                        <ArrowRight className="w-5 h-5" />
-                                    ) : (
-                                        <ArrowUpRight className="w-5 h-5" />
-                                    )}
-                                </button>
-                            </h2>
-                            <div
-                                className={`overflow-hidden transition-all duration-500 ease-in-out ${isExpanded.isOpen && isExpanded.index === index
-                                    ? "max-h-96 opacity-100"
-                                    : "max-h-0 opacity-0"
+                                <h2
+                                    className={`p-2.5 px-4 relative cursor-pointer flex items-center justify-between text-base font-medium ${
+                                        isExpanded.isOpen && isExpanded.index === index
+                                            ? "border-b border-gray-200"
+                                            : ""
                                     }`}
-                            >
-                                <p className="p-4 bg-gradient-to-t rounded-b-lg from-[#052EAA] to-[#3CA2E2] text-white">
-                                    {data.answer}
-                                </p>
-                            </div>
-                        </motion.div>
-                    ))}
+                                    onClick={() => toggleIsExpanded(index)}
+                                >
+                                    <span>{data.question}</span>
+                                    <button className="border-2 p-1 transition-all duration-300 hover:scale-105 h-8 w-8 flex justify-center items-center border-[#052EAA] rounded-lg text-[#052EAA]">
+                                        {isExpanded.isOpen && isExpanded.index === index ? (
+                                            <ArrowRight className="w-5 h-5" />
+                                        ) : (
+                                            <ArrowUpRight className="w-5 h-5" />
+                                        )}
+                                    </button>
+                                </h2>
+                                <div
+                                    className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                                        isExpanded.isOpen && isExpanded.index === index
+                                            ? "max-h-96 opacity-100"
+                                            : "max-h-0 opacity-0"
+                                    }`}
+                                >
+                                    <p className="p-4 bg-gradient-to-t rounded-b-lg from-[#052EAA] to-[#3CA2E2] text-white">
+                                        {data.answer}
+                                    </p>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
                 </div>
             </motion.section>
 

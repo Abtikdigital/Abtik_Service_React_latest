@@ -268,8 +268,9 @@ const ZEDCertificate = () => {
                     initial={{ y: 100, opacity: 0 }}
                     animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
                     transition={{ duration: 0.5 }}
-                    className="flex flex-col md:flex-row gap-8 bg-[#f7f7f7] py-16 px-7 md:px-14"
+                    className="bg-[#f7f7f7] py-16"
                 >
+                    <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14 flex flex-col md:flex-row gap-8 items-stretch">
                     <motion.div
                         initial={{ y: 50, opacity: 0 }}
                         animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
@@ -355,6 +356,7 @@ const ZEDCertificate = () => {
                             <img src={Image1} className="rounded-3xl w-full h-64  " loading="lazy" />
                         </div>
                     </motion.div>
+                    </div>
                 </motion.section>
 
                 {/* About ZED Certificate */}
@@ -363,8 +365,9 @@ const ZEDCertificate = () => {
                     initial={{ y: 100, opacity: 0 }}
                     animate={isInViewAbout ? { y: 0, opacity: 1 } : {}}
                     transition={{ duration: 0.5 }}
-                    className="px-7 md:px-14 bg-[#f7f7f7] py-8"
+                    className="bg-[#f7f7f7] py-8"
                 >
+                    <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14">
                     <div className="bg-gradient-to-t from-[#3CA2E2] to-[#052EAA] rounded-4xl p-8 md:p-12 space-y-4 text-center">
                         <h2
                             className="sub-heading font-2 text-white text-left"
@@ -383,6 +386,7 @@ const ZEDCertificate = () => {
                             in global supply chains and domestic tenders.
                         </p>
                     </div>
+                    </div>
                 </motion.section>
 
                 {/* Eligibility & Key Features */}
@@ -391,8 +395,9 @@ const ZEDCertificate = () => {
                     initial={{ y: 100, opacity: 0 }}
                     animate={isInViewEligibility ? { y: 0, opacity: 1 } : {}}
                     transition={{ duration: 0.5 }}
-                    className="px-7 md:px-14 bg-[#f7f7f7] py-8"
+                    className="bg-[#f7f7f7] py-8"
                 >
+                    <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14">
                     <h2
                         className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
 
@@ -485,6 +490,7 @@ const ZEDCertificate = () => {
                             </motion.div>
                         </div>
                     </div>
+                    </div>
                 </motion.section>
 
                 {/* ZED Process Section */}
@@ -493,8 +499,9 @@ const ZEDCertificate = () => {
                     initial={{ y: 100, opacity: 0 }}
                     animate={isInViewProcess ? { y: 0, opacity: 1 } : {}}
                     transition={{ duration: 0.5 }}
-                    className="px-7 md:px-14 bg-[#f7f7f7] py-8"
+                    className="bg-[#f7f7f7] py-8"
                 >
+                    <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14">
                     <h2
                         className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
 
@@ -523,6 +530,7 @@ const ZEDCertificate = () => {
                             </motion.div>
                         ))}
                     </div>
+                    </div>
                 </motion.section>
 
                 {/* Benefits Section */}
@@ -531,8 +539,9 @@ const ZEDCertificate = () => {
                     initial={{ y: 100, opacity: 0 }}
                     animate={isInViewBenefits ? { y: 0, opacity: 1 } : {}}
                     transition={{ duration: 0.5 }}
-                    className="px-7 md:px-14 bg-[#f7f7f7] py-8 "
+                    className="bg-[#f7f7f7] py-8"
                 >
+                    <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14">
                     <h2
                         className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
 
@@ -561,6 +570,7 @@ const ZEDCertificate = () => {
                             </motion.div>
                         ))}
                     </div>
+                    </div>
                 </motion.section>
 
                 {/* FAQ Section */}
@@ -569,18 +579,19 @@ const ZEDCertificate = () => {
                     initial={{ y: 100, opacity: 0 }}
                     animate={isInViewFAQ ? { y: 0, opacity: 1 } : {}}
                     transition={{ duration: 0.5 }}
-                    className="bg-[#f7f7f7] py-8 md:py-16 space-y-6"
+                    className="bg-[#f7f7f7] py-8 md:py-16"
                 >
-                    <h1
-                        className="sub-heading font-2 bg-gradient-to-t text-center bg-clip-text from-[#3CA2E2] to-[#052EAA] text-transparent"
+                    <div className="w-full max-w-[1920px] mx-auto space-y-6">
+                        <h1
+                            className="sub-heading font-2 bg-gradient-to-t text-center bg-clip-text from-[#3CA2E2] to-[#052EAA] text-transparent"
 
-                    >
-                        Frequently Asked Questions
-                    </h1>
-                    <div
-                        className="px-6  md:px-24 space-y-4 font-3 "
+                        >
+                            Frequently Asked Questions
+                        </h1>
+                        <div
+                            className="px-6  md:px-24 space-y-4 font-3 "
 
-                    >
+                        >
                         {faq.map((data, index) => (
                             <motion.div
                                 key={index}
@@ -617,6 +628,7 @@ const ZEDCertificate = () => {
                                 </div>
                             </motion.div>
                         ))}
+                        </div>
                     </div>
                 </motion.section>
 
