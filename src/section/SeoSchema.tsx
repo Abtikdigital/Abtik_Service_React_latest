@@ -103,7 +103,12 @@ const SeoSchema = () => {
     seoConfig?.description ||
     "Abtik Services LLP helps startups and MSMEs across India with funding, registration, compliance and growth services.";
 
-  const canonicalUrl = seoConfig?.canonical || pageUrl;
+  // Use canonical from config only if it's a full URL, otherwise fall back to pageUrl
+  const canonicalFromConfig = seoConfig?.canonical;
+  const canonicalUrl =
+    canonicalFromConfig && /^https?:\/\//.test(canonicalFromConfig)
+      ? canonicalFromConfig
+      : pageUrl;
 
   const organizationSchema = {
     "@context": "https://schema.org",
