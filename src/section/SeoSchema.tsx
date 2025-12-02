@@ -1,4 +1,5 @@
 import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import seoData from "../data/seoData.json";
 
 const BASE_URL = "https://www.abtikservices.com";
@@ -102,6 +103,8 @@ const SeoSchema = () => {
     seoConfig?.description ||
     "Abtik Services LLP helps startups and MSMEs across India with funding, registration, compliance and growth services.";
 
+  const canonicalUrl = seoConfig?.canonical || pageUrl;
+
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -160,25 +163,43 @@ const SeoSchema = () => {
     },
   };
 
-  const safeJson = (data: unknown) =>
-    JSON.stringify(data).replace(/</g, "\\u003c");
+  useEffect(() => {
+    // Remove any existing schema scripts to avoid duplicates
+    const existingSchemas = document.querySelectorAll('script[type="application/ld+json"]');
+    existingSchemas.forEach(script => script.remove());
 
-  return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: safeJson(organizationSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: safeJson(webSiteSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: safeJson(webPageSchema) }}
-      />
-    </>
-  );
+    const safeJson = (data: unknown) =>
+      JSON.stringify(data).replace(/</g, "\\u003c");
+
+    // Inject canonical link
+    const existingCanonical = document.querySelector('link[rel="canonical"]');
+    if (existingCanonical) {
+      existingCanonical.setAttribute('href', canonicalUrl);
+    } else {
+      const canonicalLink = document.createElement('link');
+      canonicalLink.rel = 'canonical';
+      canonicalLink.href = canonicalUrl;
+      document.head.appendChild(canonicalLink);
+    }
+
+    // Inject schema scripts
+    const schemas = [organizationSchema, webSiteSchema, webPageSchema];
+
+    schemas.forEach(schema => {
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.textContent = safeJson(schema);
+      document.head.appendChild(script);
+    });
+
+    // Cleanup function
+    return () => {
+      const schemaScripts = document.querySelectorAll('script[type="application/ld+json"]');
+      schemaScripts.forEach(script => script.remove());
+    };
+  }, [pathname, canonicalUrl]);
+
+  return null; // Return null since we're injecting directly into head
 };
 
 export default SeoSchema;
