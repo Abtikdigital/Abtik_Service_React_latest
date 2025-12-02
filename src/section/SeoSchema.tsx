@@ -2,7 +2,7 @@ import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import seoData from "../data/seoData.json";
 
-const BASE_URL = "https://www.abtikservices.com";
+const BASE_URL = "https://abtikservices.com";
 
 // Map exact routes to seoData keys
 const pathToSeoKey: Record<string, keyof typeof seoData> = {
