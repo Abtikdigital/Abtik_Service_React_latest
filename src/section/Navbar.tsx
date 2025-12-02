@@ -927,13 +927,24 @@ const MobileNavbar = () => {
                                   <li key={`${subItem.name}-${itemIndex}`}>
                                     <div className="space-y-1">
                                       <div className="flex items-center justify-between">
-                                        <Link
-                                          to={subItem?.path}
-                                          onClick={toggleMobileView}
-                                          className="flex-1 hover:text-[#010574] transition py-2 px-3 lg:px-4 rounded-md hover:bg-[#f5f5f5] text-[#6B7280]"
-                                        >
-                                          {subItem.name}
-                                        </Link>
+                                        {subItem.subServices ? (
+                                          <button
+                                            onClick={() =>
+                                              toggleSubService(`${subItem.name}-${itemIndex}`)
+                                            }
+                                            className="flex-1 text-left hover:text-[#010574] transition py-2 px-3 lg:px-4 rounded-md hover:bg-[#f5f5f5] text-[#6B7280]"
+                                          >
+                                            {subItem.name}
+                                          </button>
+                                        ) : (
+                                          <Link
+                                            to={subItem?.path}
+                                            onClick={toggleMobileView}
+                                            className="flex-1 hover:text-[#010574] transition py-2 px-3 lg:px-4 rounded-md hover:bg-[#f5f5f5] text-[#6B7280]"
+                                          >
+                                            {subItem.name}
+                                          </Link>
+                                        )}
                                         {subItem.subServices && (
                                           <button
                                             onClick={() =>
