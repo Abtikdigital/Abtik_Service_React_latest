@@ -623,6 +623,7 @@ const TradeLicenseCertificate = () => {
                 </div>
               </motion.div>
             ))}
+            </div>
           </div>
         </motion.section>
 
