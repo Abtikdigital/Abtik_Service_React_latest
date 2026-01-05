@@ -1,4 +1,4 @@
-import { motion, useInView } from "framer-motion";
+﻿import { motion, useInView } from "framer-motion";
 import { memo, useRef } from "react";
 import { HeadProvider, Meta, Title } from "react-head";
 import Mainlayout from "../section/Mainlayout";
@@ -33,20 +33,20 @@ const PrivacyPolicy = () => {
       <HeadProvider>
         <Title>
           {seoData?.privacyPolicy?.title ||
-            "Privacy Policy - Abtik Startup Advisor Private Limited"}
+            "Privacy Policy - Abtik Services"}
         </Title>
         <Meta
           name="description"
           content={
             seoData?.privacyPolicy?.description ||
-            "Learn how Abtik Startup Advisor Private Limited collects, uses, and protects your personal information."
+            "Learn how Abtik Services collects, uses, and protects your personal information."
           }
         />
         <Meta
           name="keywords"
           content={
             seoData?.privacyPolicy?.keyword ||
-            "privacy policy, data protection, personal information, Abtik Startup Advisor"
+            "privacy policy, data protection, personal information, Abtik Services"
           }
         />
         <Meta
@@ -103,7 +103,7 @@ const PrivacyPolicy = () => {
             >
               Your privacy is important to us. Learn how we collect, use, and
               protect your personal information with transparency and security
-              at Abtik Startup Advisor Private Limited.
+              at Abtik Services.
             </p>
             <div className="pt-2 sm:pt-4">
               <button
@@ -157,7 +157,7 @@ const PrivacyPolicy = () => {
 
               >
                 Welcome to{" "}
-                <strong>Abtik Startup Advisor Private Limited</strong> ("we,"
+                <strong>Abtik Services</strong> ("we,"
                 "our," or "us"). We are committed to protecting your privacy and
                 ensuring the security of your personal information. This Privacy
                 Policy explains how we collect, use, disclose, and safeguard
@@ -437,7 +437,7 @@ const PrivacyPolicy = () => {
                       className="text-gray-700 font-semibold font-3"
 
                     >
-                      <strong>Abtik Startup Advisor Private Limited</strong>
+                      <strong>Abtik Services</strong>
                     </p>
                     <p
                       className="text-gray-700 font-3"

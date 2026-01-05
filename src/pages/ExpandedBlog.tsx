@@ -1330,7 +1330,7 @@ const ExpandedBlog = () => {
           >
             Empowering Businesses through Comprehensive Solutions From Fund
             Management to Legal Compliance, We've Got You Covered at Abtik
-            Startup Advisor Private Limited
+            Services
           </p>
           <div className="pt-2 sm:pt-4">
             <button

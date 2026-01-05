@@ -1,4 +1,4 @@
-import { motion, useInView } from "framer-motion";
+﻿import { motion, useInView } from "framer-motion";
 import { memo, useRef } from "react";
 import { HeadProvider, Meta, Title } from "react-head";
 import Mainlayout from "../section/Mainlayout";
@@ -33,20 +33,20 @@ const RefundPolicy = () => {
       <HeadProvider>
         <Title>
           {seoData?.refundPolicy?.title ||
-            "Refund Policy - Abtik Startup Advisor Private Limited"}
+            "Refund Policy - Abtik Services"}
         </Title>
         <Meta
           name="description"
           content={
             seoData?.refundPolicy?.description ||
-            "Learn about our refund policy at Abtik Startup Advisor Private Limited. Understand the terms and conditions for refunds and cancellations."
+            "Learn about our refund policy at Abtik Services. Understand the terms and conditions for refunds and cancellations."
           }
         />
         <Meta
           name="keywords"
           content={
             seoData?.refundPolicy?.keyword ||
-            "refund policy, cancellation, money back guarantee, Abtik Startup Advisor"
+            "refund policy, cancellation, money back guarantee, Abtik Services"
           }
         />
         <Meta
@@ -104,7 +104,7 @@ const RefundPolicy = () => {
           
             >
               We are committed to your satisfaction. Learn about our refund
-              policy and the terms for cancellations at Abtik Startup Advisor
+              policy and the terms for cancellations at Abtik Services
               Private Limited.
             </p>
             <div className="pt-2 sm:pt-4">
@@ -157,7 +157,7 @@ const RefundPolicy = () => {
                 className="text-lg font-3 text-gray-700 leading-relaxed text-center max-w-3xl mx-auto"
               
               >
-                At <strong>Abtik Startup Advisor Private Limited</strong>, we
+                At <strong>Abtik Services</strong>, we
                 strive to ensure complete customer satisfaction with our
                 services. This Refund Policy outlines the terms and conditions
                 under which refunds may be provided for our business advisory
