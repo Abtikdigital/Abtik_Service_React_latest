@@ -177,6 +177,12 @@ const Footer = () => {
                 >
                   Privacy Policy
                 </Link>
+                <Link
+                  to={"/legal/terms-and-conditions"}
+                  className="text-sm font-semibold text-[#4D4D4D] hover:underline hover:text-gray-950 cursor-pointer duration-300"
+                >
+                  Terms & Conditions
+                </Link>
                 {/* <Link
                   to={"/legal/refund-policy"}
                   className="text-sm font-semibold text-[#4D4D4D] hover:underline hover:text-gray-950 cursor-pointer duration-300"

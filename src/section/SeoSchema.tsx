@@ -68,6 +68,7 @@ const pathToSeoKey: Record<string, keyof typeof seoData> = {
 
   // Legal pages
   "/legal/privacy-policy": "privacyPolicy",
+  "/legal/terms-and-conditions": "terms",
 };
 
 const resolveSeoConfig = (pathname: string) => {

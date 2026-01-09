@@ -349,6 +349,13 @@
     "canonical": "",
     "robots": ""
   },
+  "terms": {
+    "title": "Terms & Conditions - Abtik Services",
+    "description": "Read the Terms and Conditions governing the use of Abtik Services LLP website and services.",
+    "keyword": "terms and conditions, Abtik Services, legal terms, service terms",
+    "canonical": "https://abtikservices.com/legal/terms-and-conditions",
+    "robots": "index, follow"
+  },
   "fssaiLicenseService": {
     "title": "",
     "description": "",
