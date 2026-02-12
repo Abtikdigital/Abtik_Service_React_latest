@@ -13,7 +13,6 @@ import isValidIndianNumber from "../utils/validation/isGenuineNumber";
 import { useLocation } from "react-router-dom";
 import SeoSchema from "./SeoSchema";
 
-
 // Define FormData interface
 interface FormData {
   name: string;
@@ -159,7 +158,6 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
 
   const { pathname } = useLocation();
 
-
   const {
     register,
     handleSubmit,
@@ -189,14 +187,23 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
   const validationRules = {
     name: {
       required: "* Name is required",
-      minLength: { value: 2, message: "* Name must be at least 2 characters long" },
+      minLength: {
+        value: 2,
+        message: "* Name must be at least 2 characters long",
+      },
       maxLength: { value: 50, message: "* Name cannot exceed 50 characters" },
-      pattern: { value: /^[a-zA-Z\s]+$/, message: "Name can only contain letters and spaces" },
+      pattern: {
+        value: /^[a-zA-Z\s]+$/,
+        message: "Name can only contain letters and spaces",
+      },
     },
     serviceType: { required: "* Please select a service" },
     email: {
       required: "* Email is required",
-      pattern: { value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i, message: "Please enter a valid email address" },
+      pattern: {
+        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+        message: "Please enter a valid email address",
+      },
     },
     phone: {
       required: "* Phone number is required",
@@ -204,7 +211,9 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
       validate: {
         validIndianNumber: (value: string | number) => {
           const isValid = isValidIndianNumber(String(value));
-          return isValid || "Please enter a valid 10-digit Indian mobile number";
+          return (
+            isValid || "Please enter a valid 10-digit Indian mobile number"
+          );
         },
       },
     },
@@ -232,7 +241,8 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
         await showSwal({
           icon: "success",
           title: "Thank You For Contacting Us!",
-          text: res?.data?.message || "Your message has been sent successfully.",
+          text:
+            res?.data?.message || "Your message has been sent successfully.",
           confirmButtonColor: "#052EAA",
           scrollbarPadding: false,
         });
@@ -242,7 +252,9 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
         await showSwal({
           icon: "error",
           title: "Error",
-          text: res?.data?.message || "Could not send your message. Please try again.",
+          text:
+            res?.data?.message ||
+            "Could not send your message. Please try again.",
           confirmButtonColor: "#052EAA",
           scrollbarPadding: false,
         });
@@ -257,7 +269,6 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
       });
     }
   };
-
 
   const closeModal = () => {
     dispatch({ type: "close" });
@@ -286,68 +297,72 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
   }, []);
 
   useEffect(() => {
-    if(pathname!="/news-insights/e-books"){
+    if (pathname === "/news-insights/e-books") return;
 
-      setTimeout(() => {
-        dispatch({ type: "open" });
-      }, 6000);
-    }
-  }, []);
+    const t = window.setTimeout(() => {
+      dispatch({ type: "open" });
+    }, 6000);
+
+    return () => window.clearTimeout(t);
+  }, [dispatch, pathname]);
+
 
   return (
-    <div className="">
-      <SeoSchema />
-      <Offer />
-      <Navbar />
-      {children}
-      <Footer />
-      <AnimatePresence mode="wait">
-        {isOpen && (
-          <motion.div
-            className="fixed inset-0 flex w-screen h-screen items-center justify-center bg-black/60 md:p-4"
-            style={{ zIndex: 9999999999 }}
-            variants={backdropVariants}
-            initial="hidden"
-            animate="visible"
-            exit="hidden"
-            onClick={handleBackdropClick}
-          >
+    <>
+  
+      <div className="">
+        <SeoSchema />
+        <Offer />
+        <Navbar />
+        {children}
+        <Footer />
+        <AnimatePresence mode="wait">
+          {isOpen && (
             <motion.div
-              className="relative bg-white rounded-lg shadow-xl w-full max-w-4xl flex flex-col max-h-[100vh] md:max-h-[90vh]"
-              variants={modalVariants}
+              className="fixed inset-0 flex w-screen h-screen items-center justify-center bg-black/60 md:p-4"
+              style={{ zIndex: 2147483647 }}
+              variants={backdropVariants}
               initial="hidden"
               animate="visible"
-              exit="exit"
-              onClick={(e) => e.stopPropagation()}
+              exit="hidden"
+              onClick={handleBackdropClick}
             >
-              <div className="bg-gradient-to-r text-white font-3 heading from-[#052EAA] to-[#3CA2E2] p-4 flex items-center justify-center w-full rounded-t-lg flex-shrink-0">
-                Get In Touch
-              </div>
+              <motion.div
+                className="relative bg-white rounded-lg shadow-xl w-full max-w-4xl flex flex-col max-h-[100vh] md:max-h-[90vh]"
+                variants={modalVariants}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <div className="bg-gradient-to-r text-white font-3 heading from-[#052EAA] to-[#3CA2E2] p-4 flex items-center justify-center w-full rounded-t-lg flex-shrink-0">
+                  Get In Touch
+                </div>
 
-              <div className="absolute right-3 top-4 z-20">
-                <X
-                  className="p-1 w-7 h-7 bg-white rounded-md cursor-pointer hover:ring-2 ring-gray-200 hover:bg-gray-100 shadow-sm transition-colors"
-                  onClick={closeModal}
-                />
-              </div>
-
-              <div className="flex flex-col md:flex-row flex-1 overflow-hidden">
-                <div className="md:w-1/2 w-full p-4 bg-gray-50 flex items-center justify-center">
-                  <img
-                    src={Image}
-                    alt="Contact Visual"
-                    className="rounded-xl max-w-full md:h-full max-h-[200px] md:max-h-[200px] md:max-w-[200px]"
+                <div className="absolute right-3 top-4 z-20">
+                  <X
+                    className="p-1 w-7 h-7 bg-white rounded-md cursor-pointer hover:ring-2 ring-gray-200 hover:bg-gray-100 shadow-sm transition-colors"
+                    onClick={closeModal}
                   />
                 </div>
 
-                <div className="md:w-1/2 w-full flex flex-col overflow-y-auto">
-                  <div className="p-4 md:p-6">
-                    <form
-                      onSubmit={handleSubmit(onSubmit)}
-                      className="flex flex-col gap-5 font-3"
-                    >
-                         <div className="flex flex-col gap-1">
-                           <label
+                <div className="flex flex-col md:flex-row flex-1 overflow-hidden">
+                  <div className="md:w-1/2 w-full p-4 bg-gray-50 flex items-center justify-center">
+                    <img
+                      src={Image}
+                      alt="Contact Visual"
+                      className="rounded-xl max-w-full md:h-full max-h-[200px] md:max-h-[200px] md:max-w-[200px]"
+                    />
+                  </div>
+
+                  <div className="md:w-1/2 w-full flex flex-col overflow-y-auto">
+                    <div className="p-4 md:p-6">
+                      <form
+                        onSubmit={handleSubmit(onSubmit)}
+                        className="flex flex-col gap-5 font-3"
+                      >
+                        <div className="flex flex-col gap-1">
+                          <label
                             htmlFor="name"
                             className="text-sm font-medium text-gray-700"
                           >
@@ -383,8 +398,7 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
                             htmlFor="companyname"
                             className="text-sm font-medium text-gray-700"
                           >
-                            Company Name{" "}
-                            <span className="text-red-500">*</span>
+                            Company Name <span className="text-red-500">*</span>
                           </label>
                           <div className="relative">
                             <Building
@@ -394,7 +408,7 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
                             <input
                               {...register(
                                 "companyname",
-                                validationRules.companyname
+                                validationRules.companyname,
                               )}
                               id="companyname"
                               type="text"
@@ -467,7 +481,7 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
                               maxLength={10}
                               placeholder="Enter your phone number"
                               onKeyPress={(
-                                e: React.KeyboardEvent<HTMLInputElement>
+                                e: React.KeyboardEvent<HTMLInputElement>,
                               ) => {
                                 if (!/[0-9]/.test(e.key)) e.preventDefault();
                               }}
@@ -491,8 +505,7 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
                             htmlFor="serviceType"
                             className="text-sm font-medium text-gray-700"
                           >
-                            Service Type{" "}
-                            <span className="text-red-500">*</span>
+                            Service Type <span className="text-red-500">*</span>
                           </label>
                           <div className="relative">
                             <Building
@@ -577,14 +590,15 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
                           </button>
                         </div>
                       </form>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
+          )}
+        </AnimatePresence>
+      </div>
+    </>
   );
 };
 

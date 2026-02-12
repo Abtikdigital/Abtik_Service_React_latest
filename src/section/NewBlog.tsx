@@ -1,104 +1,13 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect, useState, memo } from "react";
 import { useNavigate } from "react-router-dom";
-import Image1 from "../assets/NewBlog/Budget1.jpg";
-import Image2 from "../assets/NewBlog/Startup.jpg";
-import Image3 from "../assets/NewBlog/Image2.jpg";
-import Image4 from "../assets/NewBlog/BussinessWomen.jpg";
-import Image5 from "../assets/NewBlog/SmallSizeBusinessRegistrationMadeSimple.jpg";
-import Image6 from "../assets/NewBlog/Article2.jpg";
-import Image7 from "../assets/NewBlog/TrademarkIpImage.jpg"
-import Image8 from "../assets/NewBlog/Article8.jpeg"
-import Image9 from "../assets/NewBlog/Article9.jpg"
-import Image10 from "../assets/NewBlog/Fassai.jpg"
-
-const blogs = [
-  {
-    title:
-      "Why Every Food Business Needs an FSSAI License",
-    description:
-      "FSSAI registration/license is mandatory for all Food Business Operators. Learn about Basic, State, and Central licenses, the 14-digit FSSAI number, compliance requirements, and why it's critical for trust and market access.",
-    img: Image10,
-    slug: "Why-Every-Food-Business-Needs-FSSAI-License",
-  },
-  {
-    title:
-      "Tax & Compliance Mastery for MSMEs: Your Complete Guide to Staying Compliant While Maximizing Savings",
-    description:
-      "Avoid penalties and cash-flow shocks with a 3-pillar GST, TDS, and annual compliance framework. Includes calendars, automation tips, and ROI of professional support.",
-    img: Image9,
-    slug: "Tax-Compliance-Mastery-for-MSMEs",
-  },
-
-
-
-  {
-    title:
-    "The MSME Certificate & License Roadmap: Your Gateway to Government Benefits & Business Growth",
-    description:
-    "Did you know that having the right certificates and licenses can unlock benefits worth lakhs of rupees for your MSME? Yet, ",
-    img: Image8,
-    slug: "the-msme-certificate-license-roadmap",
-  },
-    {
-    title:
-    "Protecting Your Business Assets: The Ultimate Guide to Trademark & IP for Indian MSMEs",
-    description:
-    "Your brand name, logo, and innovative ideas are worth millions – but are they legally protected? Every day,",
-    img: Image7,
-    slug: "Protecting-Your-Business-Assets-Trademark-IP-Guide-Indian-MSMEs",
-  },
-  {
-    title:
-    "Unlocking Growth: A Complete Guide to Funding Solutions for Indian MSMEs in 2025",
-    description:
-    "Are you an MSME owner struggling to secure the right funding for your...",
-    img: Image6,
-    slug: "Unlocking-Growth-Funding-Solutions-for-Indian-MSMEs-2025",
-  },
-  {
-    title: "Business Registration Made Simple",
-    description:
-      "Beyond big cities and large companies, Budget 2025 has acknowledged...",
-    img: Image5,
-    slug: "Business-Registration-Made-Simple",
-  },
-  {
-    title: "Budget 2025: A Strategic Shift for MSMEs",
-    description: "India’s Union Budget 2025 has set",
-    img: Image1,
-    slug: "Budget-2025-A-Strategic-Shift-for-MSMEs",
-  },
-
-  {
-    title: "India’s Startups Get a Boost: Budget 2025 Unlocks New Pathways",
-    description: "First time entrepreneurs are front",
-    img: Image2,
-    slug: "Indias-Startups-Get-a-Boost-Budget-2025-Unlocks-New-Pathways",
-  },
-  {
-    title: " Budget 2025 Simplifies the Journey for New Founders",
-    description: "For first time entrepreneurs, Budget",
-    img: Image3,
-    slug: "Budget-2025-Simplifies-the-Journey-for-New-Founders",
-  },
-
-  {
-    title:
-      "A Budget That Strengthens Local Industries and Women-Led Enterprises",
-    description:
-      "Beyond big cities and large companies, Budget 2025 has acknowledged the power of local, women-led, and artisan-driven enterprises. Targeted investments in tribal crafts, khadi clusters, and agri-based businesses highlight the government’s commitment to inclusive economic growth.",
-    img: Image4,
-    slug: "A-Budget-That-Strengthens-Local-Industries-and-Women-Led-Enterprises",
-  },
-
-  // (add all your blog objects as above)
-];
+import { blogsData } from "../data/blogsData";
 
 const BlogSection = () => {
   const nav = useNavigate();
   const refBlog = useRef(null);
   const isInViewBlog = useInView(refBlog, { once: true, amount: 0.1 });
+  const blogs = blogsData.filter((b) => b.showInNewBlogList !== false);
 
   // Responsive cols: 1 / 2 / 3 / 4 (same pattern as OurService & Recommended)
   const getCols = () => {
@@ -162,7 +71,7 @@ const BlogSection = () => {
           >
             <div className="w-full aspect-[4/3] rounded-xl overflow-hidden">
               <img
-                src={blog?.img}
+                src={blog?.cardImg ?? blog?.img}
                 alt={blog?.title}
                 loading="lazy"
                 className="w-full h-full object-cover cursor-pointer hover:scale-105 duration-300"
@@ -171,7 +80,9 @@ const BlogSection = () => {
             <h2 className="text-xl text-[#3CA2E2] font-semibold line-clamp-1 font-4">
               {blog?.title}
             </h2>
-            <p className="paragraph line-clamp-1 font-4">{blog?.description}</p>
+            <p className="paragraph line-clamp-1 font-4">
+              {blog?.cardDescription ?? blog?.description}
+            </p>
             <div>
               <button
                 className="custom-btn font-2 w-full max-w-[120px] !py-3 mx-auto font-2"
