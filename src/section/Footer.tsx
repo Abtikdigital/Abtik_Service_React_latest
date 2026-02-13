@@ -84,12 +84,25 @@ const Footer = () => {
               <li className="flex gap-3 items-center ">
                 <MapPin className="hover:from-[#2178B5] text-white min-h-8 min-w-8 hover:bg-gradient-to-tl hover:to-[#021E6B] cursor-pointer bg-gradient-to-tr from-[#3CA2E2] to-[#052EAA] p-1.5 rounded-lg" />
                 <a
-                  href="https://maps.app.goo.gl/Ft1bFj9a5NQEXo5R7"
-                  target="_balnk"
+                  href="https://maps.app.goo.gl/Mu76k61nJaZzH38P8"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-sm font-semibold text-[#4D4D4D] hover:underline hover:text-gray-950 cursor-pointer duration-300"
                 >
                   313, Patel Ave, Sarkhej - Gandhinagar Hwy, Thaltej, Ahmedabad,
                   Gujarat 380054
+                </a>
+              </li>
+              <li className="flex gap-3 items-center ">
+                <MapPin className="hover:from-[#2178B5] text-white min-h-8 min-w-8 hover:bg-gradient-to-tl hover:to-[#021E6B] cursor-pointer bg-gradient-to-tr from-[#3CA2E2] to-[#052EAA] p-1.5 rounded-lg" />
+                <a
+                  href="https://maps.app.goo.gl/Mu76k61nJaZzH38P8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-semibold text-[#4D4D4D] hover:underline hover:text-gray-950 cursor-pointer duration-300"
+                >
+                  B-209 Shilp Corporate Park, Rajpath Rangoli Rd, Thaltej,
+                  Ahmedabad, Gujarat - 380054
                 </a>
               </li>
             </ul>

@@ -1535,8 +1535,7 @@ const Navbar = () => {
               </div>
             )}
           </section>
-
-        </SheetContent>
+       </SheetContent>
       </Sheet>
     </>
   );

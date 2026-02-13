@@ -119,15 +119,24 @@ const SeoSchema = () => {
     description:
       "Abtik Services LLP is a business consultancy helping startups and MSMEs with loans, subsidies, registrations and compliance.",
     email: "info@abtikservices.com",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress:
-        "313, Patel Ave, Sarkhej - Gandhinagar Hwy, Thaltej",
-      addressLocality: "Ahmedabad",
-      addressRegion: "Gujarat",
-      postalCode: "380054",
-      addressCountry: "IN",
-    },
+    address: [
+      {
+        "@type": "PostalAddress",
+        streetAddress: "313, Patel Ave, Sarkhej - Gandhinagar Hwy, Thaltej",
+        addressLocality: "Ahmedabad",
+        addressRegion: "Gujarat",
+        postalCode: "380054",
+        addressCountry: "IN",
+      },
+      {
+        "@type": "PostalAddress",
+        streetAddress: "B-209 Shilp Corporate Park, Rajpath Rangoli Rd, Thaltej",
+        addressLocality: "Ahmedabad",
+        addressRegion: "Gujarat",
+        postalCode: "380054",
+        addressCountry: "IN",
+      },
+    ],
     sameAs: [
       "https://www.facebook.com/share/1aKQvTf7NU/",
       "https://www.linkedin.com/company/abtik-services/",

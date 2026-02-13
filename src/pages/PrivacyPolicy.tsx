@@ -1,4 +1,4 @@
-﻿import { motion, useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { memo, useRef } from "react";
 import { HeadProvider, Meta, Title } from "react-head";
 import Mainlayout from "../section/Mainlayout";
@@ -455,7 +455,7 @@ const PrivacyPolicy = () => {
                       className="text-gray-700 font-3"
 
                     >
-                      <strong>Address:</strong> <a href="https://maps.app.goo.gl/Ft1bFj9a5NQEXo5R7">       313, Patel Ave, Sarkhej - Gandhinagar Hwy, Thaltej, Ahmedabad, Gujarat 380054</a>
+                      <strong>Address:</strong> <a href="https://maps.app.goo.gl/Mu76k61nJaZzH38P8" target="_blank" rel="noopener noreferrer">313, Patel Ave, Sarkhej - Gandhinagar Hwy, Thaltej, Ahmedabad, Gujarat 380054</a>
                     </p>
                   </div>
                 </div>
