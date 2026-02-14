@@ -4,6 +4,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { useForm, Controller } from "react-hook-form";
 import Swal from "sweetalert2";
 import Image from "../assets/Logo/Newlogo.jpg";
+// Black Day tribute video - use in dialog left side; revert to Image after this day
+import BlackDayVideo from "../assets/offerAssets/Blakc-day.mp4";
 import { X, User, Mail, Phone, MessageSquare, Building } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { memo, useState, useRef, useEffect } from "react";
@@ -319,7 +321,7 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
         <AnimatePresence mode="wait">
           {isOpen && (
             <motion.div
-              className="fixed inset-0 flex w-screen h-screen items-center justify-center bg-black/60 md:p-4"
+              className="fixed inset-0 flex w-screen h-screen items-center justify-center bg-black/60 p-2"
               style={{ zIndex: 2147483647 }}
               variants={backdropVariants}
               initial="hidden"
@@ -327,36 +329,49 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
               exit="hidden"
               onClick={handleBackdropClick}
             >
+              {/* Small + tablet: modal scrolls (header + video + form), video full width. lg+: desktop, form scrolls. Modal full width tablet+. */}
               <motion.div
-                className="relative bg-white rounded-lg shadow-xl w-full max-w-4xl flex flex-col max-h-[100vh] md:max-h-[90vh]"
+                className="relative bg-gradient-to-r from-[#FFE0B2] via-white to-[#A5D6A7] rounded-lg shadow-xl w-full max-w-[calc(100vw-1rem)] lg:max-w-6xl flex flex-col max-h-[100vh] lg:max-h-[90vh] overflow-y-auto lg:overflow-hidden border-2 border-[#138808]"
                 variants={modalVariants}
                 initial="hidden"
                 animate="visible"
                 exit="exit"
                 onClick={(e) => e.stopPropagation()}
               >
-                <div className="bg-gradient-to-r text-white font-3 heading from-[#052EAA] to-[#3CA2E2] p-4 flex items-center justify-center w-full rounded-t-lg flex-shrink-0">
+                <div className="sticky top-0 z-10 bg-gradient-to-r from-[#FF9933] via-white to-[#138808] text-[#138808] font-3 heading p-4 flex items-center justify-center w-full rounded-t-lg flex-shrink-0 font-semibold shadow-sm relative">
                   Get In Touch
-                </div>
-
-                <div className="absolute right-3 top-4 z-20">
-                  <X
-                    className="p-1 w-7 h-7 bg-white rounded-md cursor-pointer hover:ring-2 ring-gray-200 hover:bg-gray-100 shadow-sm transition-colors"
+                  <button
+                    type="button"
                     onClick={closeModal}
-                  />
+                    className="absolute right-3 top-1/2 -translate-y-1/2 p-1 w-7 h-7 bg-white rounded-md cursor-pointer hover:ring-2 ring-[#FF9933]/50 hover:bg-[#FF9933]/10 shadow-sm transition-colors text-gray-700 flex items-center justify-center"
+                    aria-label="Close"
+                  >
+                    <X className="w-4 h-4" />
+                  </button>
                 </div>
 
-                <div className="flex flex-col md:flex-row flex-1 overflow-hidden">
-                  <div className="md:w-1/2 w-full p-4 bg-gray-50 flex items-center justify-center">
+                <div className="flex flex-col lg:flex-row flex-none lg:flex-1 min-h-0 overflow-hidden">
+                  {/* Left side: Black Day video. Full width on small/tablet (object-cover fills width). After this day, comment out video and uncomment logo below. */}
+                  <div className="lg:w-1/2 w-full min-w-0 flex-shrink-0 lg:flex-shrink lg:min-h-0 p-0 lg:p-4 overflow-hidden">
+                    <video
+                      src={BlackDayVideo}
+                      className="w-full h-auto min-w-full max-w-full object-contain lg:object-cover lg:h-full lg:min-h-[300px]"
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                    />
+                    {/* ----- Previous logo (reuse after this day): uncomment below and remove video above -----
                     <img
                       src={Image}
                       alt="Contact Visual"
                       className="rounded-xl max-w-full md:h-full max-h-[200px] md:max-h-[200px] md:max-w-[200px]"
                     />
+                    ----- */}
                   </div>
 
-                  <div className="md:w-1/2 w-full flex flex-col overflow-y-auto">
-                    <div className="p-4 md:p-6">
+                  <div className="lg:w-1/2 w-full flex flex-col overflow-hidden lg:overflow-y-auto min-h-0">
+                    <div className="p-4 lg:p-6">
                       <form
                         onSubmit={handleSubmit(onSubmit)}
                         className="flex flex-col gap-5 font-3"
