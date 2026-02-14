@@ -3,8 +3,7 @@ import Footer from "./Footer";
 import { useSelector, useDispatch } from "react-redux";
 import { useForm, Controller } from "react-hook-form";
 import Swal from "sweetalert2";
-import Image from "../assets/Logo/Newlogo.jpg";
-// Black Day tribute video - use in dialog left side; revert to Image after this day
+// import Image from "../assets/Logo/Newlogo.jpg"; // Uncomment when reverting to logo after this day
 import BlackDayVideo from "../assets/offerAssets/Blakc-day.mp4";
 import { X, User, Mail, Phone, MessageSquare, Building } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
