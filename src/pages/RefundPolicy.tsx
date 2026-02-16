@@ -531,6 +531,8 @@ const RefundPolicy = () => {
                     
                     >
                       <strong>Address:</strong> <a href="https://maps.app.goo.gl/Mu76k61nJaZzH38P8" target="_blank" rel="noopener noreferrer">313, Patel Ave, Sarkhej - Gandhinagar Hwy, Thaltej, Ahmedabad, Gujarat 380054</a>
+                      <br />
+                      <a href="https://maps.app.goo.gl/Mu76k61nJaZzH38P8" target="_blank" rel="noopener noreferrer">B-209 Shilp Corporate Park, Rajpath Rangoli Rd, Thaltej, Ahmedabad, Gujarat - 380054</a>
                     </p>
                   </div>
                 </div>

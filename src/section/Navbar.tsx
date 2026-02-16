@@ -1,11 +1,4 @@
-import {
-  ChevronDown,
-  Menu,
-  X,
-  ChevronRight,
-  Search,
-  Loader2,
-} from "lucide-react";
+import { ChevronDown, Menu, X, ChevronRight, Search, Loader2 } from "lucide-react";
 import Logo from "../assets/Logo/NewLatestLogo.png";
 import { useEffect, useMemo, useState, useRef, memo } from "react";
 import { Link, useLocation } from "react-router-dom";
@@ -1285,7 +1278,7 @@ const Navbar = () => {
   const menuLinks = useMemo(() => flattenMenuToLinks(menuItems), []);
   const listedBlogs = useMemo(
     () => blogsData.filter((b) => b.showInNewBlogList !== false),
-    [],
+    []
   );
 
   const pageResults = useMemo(() => {
@@ -1294,10 +1287,7 @@ const Navbar = () => {
     return menuLinks
       .map((l) => ({
         link: l,
-        rank: getSearchRank(
-          `${l.name} ${l.context ?? ""} ${l.description ?? ""}`,
-          q,
-        ),
+        rank: getSearchRank(`${l.name} ${l.context ?? ""} ${l.description ?? ""}`, q),
       }))
       .filter((x) => x.rank >= 0)
       .sort((a, b) => b.rank - a.rank)
@@ -1313,7 +1303,7 @@ const Navbar = () => {
         blog: b,
         rank: getSearchRank(
           `${b.title} ${b.category} ${b.cardDescription ?? ""} ${b.description} ${b.slug}`,
-          q,
+          q
         ),
       }))
       .filter((x) => x.rank >= 0)
@@ -1350,26 +1340,20 @@ const Navbar = () => {
 
   return (
     <>
-      {/* For this day only: sticky removed so height/dialog fit better. After this day, restore: className="sticky top-0 left-0 w-full z-50 bg-white shadow-xl" */}
       <nav
-        className="relative w-full z-50 bg-white shadow-xl"
+        className="sticky top-0 left-0 w-full z-50 bg-white shadow-xl"
         style={{ fontFamily: "Montserrat Alternates" }}
       >
         <DesktopNavbar setOpen={setOpen} />
         <MobileNavbar onOpenSearch={() => handleSearchSheetOpenChange(true)} />
       </nav>
 
-      <Sheet
-        open={open}
-        onOpenChange={handleSearchSheetOpenChange}
-        modal={false}
-      >
+      <Sheet open={open} onOpenChange={handleSearchSheetOpenChange} modal={false}>
         <SheetContent
           side="top"
           className="p-0 w-full max-w-none overflow-y-auto overscroll-contain touch-pan-y gap-0 bottom-0 h-[100dvh] sm:bottom-auto sm:h-auto sm:max-h-[90dvh]"
         >
-          {/* For this day only: sticky removed. After this day, restore: className="sticky top-0 z-10 bg-white/95 backdrop-blur border-b border-gray-100" */}
-          <div className="relative z-10 bg-white/95 backdrop-blur border-b border-gray-100">
+          <div className="sticky top-0 z-10 bg-white/95 backdrop-blur border-b border-gray-100">
             <div className="px-4 pt-6">
               <SheetHeader className="flex justify-center items-center">
                 <SheetTitle className="text-2xl font-bold">Search</SheetTitle>
@@ -1551,7 +1535,7 @@ const Navbar = () => {
               </div>
             )}
           </section>
-        </SheetContent>
+       </SheetContent>
       </Sheet>
     </>
   );
