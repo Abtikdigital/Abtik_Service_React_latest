@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Logo from "../assets/Logo/NewLatestLogo.png";
 import { MapPin } from "lucide-react";
+import OptimizedImage from "@/components/OptimizedImage";
 import { Phone } from "lucide-react";
 import { Mail } from "lucide-react";
 import {
@@ -18,7 +19,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 lg:grid-cols-4 font-3 space-y-5 px-7 md:px-14 py-6 md:py-10 w-full max-w-[1920px] mx-auto">
           <div className="space-y-5">
             <div>
-              <img src={Logo} className="h-14" />
+              <OptimizedImage src={Logo} alt="Abtik Services" width={160} height={56} className="h-14 w-auto" />
             </div>
             <h2 className="paragraph">
               © 2022 abtikservices - All rights reserved.
@@ -27,6 +28,7 @@ const Footer = () => {
               <a
                 href="https://www.facebook.com/share/1aKQvTf7NU/"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="hover:from-[#2178B5] hover:bg-gradient-to-tl hover:to-[#021E6B] cursor-pointer bg-gradient-to-tr from-[#3CA2E2] to-[#052EAA] p-1.5 rounded-lg "
               >
                 <FontAwesomeIcon
@@ -38,6 +40,7 @@ const Footer = () => {
               <a
                 href="https://www.linkedin.com/company/abtik-services/"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="hover:from-[#2178B5] hover:bg-gradient-to-tl hover:to-[#021E6B] cursor-pointer bg-gradient-to-tr from-[#3CA2E2] to-[#052EAA] p-1.5 rounded-lg "
               >
                 <FontAwesomeIcon
@@ -49,6 +52,7 @@ const Footer = () => {
               <a
                 href="https://www.instagram.com/abtikservices?igsh=MTk3cWxteWswbTFidQ=="
                 target="_blank"
+                rel="noopener noreferrer"
                 className="hover:from-[#2178B5] hover:bg-gradient-to-tl hover:to-[#021E6B] cursor-pointer bg-gradient-to-tr from-[#3CA2E2] to-[#052EAA] p-1.5 rounded-lg "
               >
                 <FontAwesomeIcon

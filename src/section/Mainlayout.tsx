@@ -12,6 +12,7 @@ import { addContact } from "../api/contactApis";
 import isValidIndianNumber from "../utils/validation/isGenuineNumber";
 import { useLocation } from "react-router-dom";
 import SeoSchema from "./SeoSchema";
+// import ChatbotWidget from "./ChatbotWidget";
 
 // Define FormData interface
 interface FormData {
@@ -309,13 +310,13 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
 
   return (
     <>
-  
       <div className="">
         <SeoSchema />
         <Offer />
         <Navbar />
         {children}
         <Footer />
+        {/* <ChatbotWidget /> */}
         <AnimatePresence mode="wait">
           {isOpen && (
             <motion.div
@@ -328,14 +329,14 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
               onClick={handleBackdropClick}
             >
               <motion.div
-                className="relative bg-white rounded-lg shadow-xl w-full max-w-4xl flex flex-col max-h-[100vh] md:max-h-[90vh]"
+                className="relative bg-white rounded-lg shadow-xl w-full max-w-4xl flex flex-col max-h-screen md:max-h-[90vh]"
                 variants={modalVariants}
                 initial="hidden"
                 animate="visible"
                 exit="exit"
                 onClick={(e) => e.stopPropagation()}
               >
-                <div className="bg-gradient-to-r text-white font-3 heading from-[#052EAA] to-[#3CA2E2] p-4 flex items-center justify-center w-full rounded-t-lg flex-shrink-0">
+                <div className="bg-linear-to-r text-white font-3 heading from-[#052EAA] to-[#3CA2E2] p-4 flex items-center justify-center w-full rounded-t-lg shrink-0">
                   Get In Touch
                 </div>
 
@@ -570,14 +571,14 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
                           <button
                             type="button"
                             onClick={closeModal}
-                            className="w-full md:w-1/2 font-3 cursor-pointer bg-gray-200 text-gray-800 font-medium rounded-full hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400 transition-all duration-200 !py-3"
+                            className="w-full md:w-1/2 font-3 cursor-pointer bg-gray-200 text-gray-800 font-medium rounded-full hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400 transition-all duration-200 py-3!"
                           >
                             Cancel
                           </button>
                           <button
                             type="submit"
                             disabled={isSubmitting}
-                            className="w-full md:w-1/2 font-3 disabled:opacity-50 disabled:cursor-not-allowed custom-btn !py-3"
+                            className="w-full md:w-1/2 font-3 disabled:opacity-50 disabled:cursor-not-allowed custom-btn py-3!"
                           >
                             {isSubmitting ? (
                               <div className="flex items-center justify-center">
