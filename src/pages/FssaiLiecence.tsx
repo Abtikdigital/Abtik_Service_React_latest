@@ -326,9 +326,9 @@ const FSSAILicense = () => {
                                 </div>
                             </a>
                             <a
-                                href="tel:+916358169584"
+                                href="tel:+91 84888 00910"
                                 className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
-                                aria-label="Call us at +91 6358 169 584"
+                                aria-label="Call us at +91 84888 00910"
                             >
                                 <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
                                     <Phone className="w-5 h-5 text-white" />
@@ -338,14 +338,14 @@ const FSSAILicense = () => {
                                         Call Anytime
                                     </p>
                                     <p className="text-xs font-3 text-gray-600">
-                                        <a href="tel:+916358169584">+91 6358 169 584</a>
+                                        <a href="tel:+91 84888 00910">+91 84888 00910</a>
                                     </p>
                                 </div>
                             </a>
                             <a
-                                href="mailto:sumitradadiya@abtikservices.in"
+                                href="mailto:info@abtikservices.com"
                                 className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
-                                aria-label="Email us at sumitradadiya@abtikservices.in"
+                                aria-label="Email us at info@abtikservices.com"
                             >
                                 <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
                                     <Mail className="w-5 h-5 text-white" />
@@ -355,8 +355,8 @@ const FSSAILicense = () => {
                                         Write Email
                                     </p>
                                     <p className="text-xs font-3 text-gray-600">
-                                        <a href="mailto:sumitradadiya@abtikservices.in">
-                                            sumitradadiya@abtikservices.in
+                                        <a href="mailto:info@abtikservices.com">
+                                            info@abtikservices.com
                                         </a>
                                     </p>
                                 </div>

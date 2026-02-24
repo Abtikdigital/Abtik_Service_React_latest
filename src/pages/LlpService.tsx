@@ -292,7 +292,7 @@ const LLPRegistration = () => {
                 </span>
                 <div>
                   <p className="text-base font-3 text-gray-700 font-semibold ">
-                    Heer Songhela
+                    Abtik Services Team
                   </p>
                   <p className="text-xs font-3 text-gray-600">
                     Head Of Finance Department
@@ -301,9 +301,9 @@ const LLPRegistration = () => {
                 </div>
               </a>
               <a
-                href="tel:+91 98980 43284"
+                href="tel:+91 84888 00910"
                 className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
-                aria-label="Call us at +91 98980 43284"
+                aria-label="Call us at +91 84888 00910"
               >
                 <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
                   <Phone className="w-5 h-5 text-white" />
@@ -313,14 +313,14 @@ const LLPRegistration = () => {
                     Call Anytime
                   </p>
                   <p className="text-xs font-3 text-gray-600">
-                    <a href="tel:+9898043284">+91 9898 043 284</a>
+                    <a href="tel:+91 84888 00910">+91 84888 00910</a>
                   </p>
                 </div>
               </a>
               <a
-                href="heer@abtikservices.co.in"
+                href="mailto:info@abtikservices.com"
                 className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
-                aria-label="Email us at info@abtik.com"
+                aria-label="Email us at info@abtikservices.com"
               >
                 <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
                   <Mail className="w-5 h-5 text-white" />
@@ -330,8 +330,8 @@ const LLPRegistration = () => {
                     Write Email
                   </p>
                   <p className="text-xs text-gray-600 font-3">
-                    <a href="mailto:heer@abtikservices.co.in">
-                      heer@abtikservices.co.in
+                    <a href="mailto:info@abtikservices.com">
+                      info@abtikservices.com
                     </a>
                   </p>
                 </div>

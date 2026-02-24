@@ -497,7 +497,7 @@ const Ebook: React.FC = () => {
                 </span>
                 <div>
                   <p className="text-base text-gray-700 font-semibold font-2">
-                    Manish Kumar
+                    Abtik Services
                   </p>
                   <p className="text-xs text-gray-600 font-2">
                     Head Of Finance Department
@@ -505,9 +505,9 @@ const Ebook: React.FC = () => {
                 </div>
               </a>
               <a
-                href="tel:+917486952086"
+                href="tel:+91 84888 00910"
                 className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg"
-                aria-label="Call us at +917486952086"
+                aria-label="Call us at +91 84888 00910"
               >
                 <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
                   <Phone className="w-5 h-5 text-white" />
@@ -517,14 +517,14 @@ const Ebook: React.FC = () => {
                     Call Anytime
                   </p>
                   <p className="text-xs font-2 text-gray-600">
-                    <a href="tel:+917486952086">+91 7486 952 086</a>
+                    <a href="tel:+91 84888 00910">+91 84888 00910</a>
                   </p>
                 </div>
               </a>
               <a
-                href="mailto:manish.kumar@abtikservices.co.in"
+                href="mailto:info@abtikservices.com"
                 className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg"
-                aria-label="Email us at info@abtik.com"
+                aria-label="Email us at info@abtikservices.com"
               >
                 <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
                   <Mail className="w-5 h-5 text-white" />
@@ -534,8 +534,8 @@ const Ebook: React.FC = () => {
                     Write Email
                   </p>
                   <p className="text-xs font-2 text-gray-600">
-                    <a href="mailto:manish.kumar@abtikservices.co.in">
-                      manish.kumar@abtikservices.co.in
+                    <a href="mailto:info@abtikservices.com">
+                      info@abtikservices.com
                     </a>
                   </p>
                 </div>
@@ -835,7 +835,7 @@ const Ebook: React.FC = () => {
                               {...register("email", validationRules.email)}
                               id="email"
                               type="email"
-                              placeholder="your.email@example.com"
+                              placeholder="info@abtikservices.com"
                               className={`w-full pl-10 pr-4 py-2 border ${
                                 errors.email
                                   ? "border-red-500"
