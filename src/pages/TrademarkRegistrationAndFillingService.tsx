@@ -308,7 +308,7 @@ const TrademarkFiling = () => {
                                         Abtik Services Team
                                     </p>
                                     <p className="text-xs font-3 text-gray-600">
-                                        Head Of Finance Department
+                                        Abtik Services Team
                                         <br />
                                     </p>
                                 </div>

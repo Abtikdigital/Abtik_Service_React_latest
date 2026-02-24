@@ -303,7 +303,7 @@ const MSMELoans = () => {
                     Abtik Services Team
                   </p>
                   <p className="text-xs text-gray-600 font-3">
-                    Vice President
+                    Abtik Services Team
                     <br />
                   </p>
                 </div>

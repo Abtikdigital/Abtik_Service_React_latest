@@ -307,7 +307,7 @@ const CGTMSE = () => {
                                         Abtik Services
                                     </p>
                                     <p className="text-xs text-gray-600 font-2">
-                                        Head Of Finance Department
+                                        Abtik Services Team
                                         <br />
                                     </p>
                                 </div>

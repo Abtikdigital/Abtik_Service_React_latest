@@ -500,7 +500,7 @@ const Ebook: React.FC = () => {
                     Abtik Services
                   </p>
                   <p className="text-xs text-gray-600 font-2">
-                    Head Of Finance Department
+                    Abtik Services Team
                   </p>
                 </div>
               </a>

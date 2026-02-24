@@ -307,7 +307,7 @@ const UdyamRegistration = () => {
                                         Abtik Services
                                     </p>
                                     <p className="text-xs text-gray-600 font-3">
-                                        Head Of Finance Department
+                                        Abtik Services Team
                                         <br />
                                     </p>
                                 </div>

@@ -299,7 +299,7 @@ const MSMECertificate = () => {
                     Abtik Services
                   </p>
                   <p className="text-xs font-3 text-gray-600">
-                    Branch Manager
+                    Abtik Services Team
                     <br />
                   </p>
                 </div>

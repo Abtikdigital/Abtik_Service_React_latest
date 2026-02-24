@@ -297,7 +297,7 @@ const TradeLicenseCertificate = () => {
                     Abtik Services Team
                   </p>
                   <p className="text-xs font-3 text-gray-600">
-                    Vice President
+                    Abtik Services Team
                     <br />
                   </p>
                 </div>
