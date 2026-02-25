@@ -305,11 +305,11 @@ const AgriSURE = () => {
                                     </span>
                                     <div>
                                         <p className="text-base font-2 text-gray-700 font-semibold ">
-                                            Sumit Radadiya
+                                            Abtik Services Team
 
                                         </p>
                                         <p className="text-xs font-2 text-gray-600">
-                                            HOD-Sales Department
+                                            Abtik Services Team
                                             <br />
 
                                         </p>

@@ -295,11 +295,11 @@ const StartupIndiaCertificate = () => {
                             </span>
                             <div>
                                 <p className="text-base text-gray-700 font-semibold font-3">
-                                    Sumit Radadiya
+                                    Abtik Services Team
 
                                 </p>
                                 <p className="text-xs text-gray-600 font-3">
-                                    HOD-Sales Department
+                                    Abtik Services Team
                                     <br />
 
                                 </p>

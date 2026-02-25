@@ -27,7 +27,7 @@ const About = () => {
   // const TeamData = [
   //   {
   //     img: Image1,
-  //     name: "Abinav Thakker",
+  //     name: "Abtik Services Team",
   //     position: "Director",
   //     instagram: "",
   //     facebook: "",

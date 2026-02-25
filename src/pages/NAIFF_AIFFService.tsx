@@ -305,10 +305,10 @@ const NAIFFAIFF = () => {
                                 </span>
                                 <div>
                                     <p className="text-base text-gray-700 font-semibold font-3">
-                                        Arissit Thackar
+                                        Abtik Services Team
                                     </p>
                                     <p className="text-xs text-gray-600 font-3">
-                                        NBFC-HOD
+                                        Abtik Services Team
                                         <br />
                                     </p>
                                 </div>

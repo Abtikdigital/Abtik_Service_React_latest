@@ -317,10 +317,10 @@ const FSSAILicense = () => {
                                 </span>
                                 <div>
                                     <p className="text-base font-3 text-gray-700 font-semibold">
-                                        Sumit Radadiya
+                                        Abtik Services Team
                                     </p>
                                     <p className="text-xs font-3 text-gray-600">
-                                        HOD-Sales Department
+                                        Abtik Services Team
                                         <br />
                                     </p>
                                 </div>
