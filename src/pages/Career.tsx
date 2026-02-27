@@ -347,7 +347,7 @@ const Career = () => {
     amount: 0.4,
   });
 
-  const refContact = useRef(null);
+  // const refContact = useRef(null);
   // const isInViewContact = useInView(refContact, { once: true, amount: 0.4 });
 
   // Simplified delay calculation
