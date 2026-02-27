@@ -298,7 +298,7 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
   }, []);
 
   useEffect(() => {
-    if (pathname === "/news-insights/e-books") return;
+    if (pathname === "/news-insights/e-books"|| pathname==="/career") return;
 
     const t = window.setTimeout(() => {
       dispatch({ type: "open" });

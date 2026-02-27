@@ -2,7 +2,7 @@ import { memo, useState } from "react";
 import Mainlayout from "../section/Mainlayout";
 import BgImage from "../assets/Career/bgImg.svg";
 import Image1 from "../assets/Career/Career.jpg";
-import Contact from "../section/Contact";
+// import Contact from "../section/Contact";
 import Logo from "../assets/Logo/Newlogo.jpg";
 // import CareerImage from "../assets/Hero/bgImg.svg";
 import { addApplication } from "../api/careerApi";
@@ -18,6 +18,7 @@ import {
   Briefcase,
   Calendar,
   DollarSign,
+  IndianRupee,
 } from "lucide-react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import { useForm } from "react-hook-form";
@@ -37,6 +38,15 @@ const Career = () => {
   // Only essential states
   const [isOpen, setIsOpen] = useState(false);
   const [selectedJob, setSelectedJob] = useState<any>(null);
+  const [expandedSkills, setExpandedSkills] = useState<number[]>([]);
+
+  const toggleSkills = (cardIndex: number) => {
+    setExpandedSkills((prev) =>
+      prev.includes(cardIndex)
+        ? prev.filter((item) => item !== cardIndex)
+        : [...prev, cardIndex]
+    );
+  };
 
   const jobOpenings = [
     {
@@ -44,33 +54,12 @@ const Career = () => {
       position: "Business Development Executive",
       description:
         "We’re hiring a BDE to connect with leads, pitch services, and support sales growth through smart communication and follow ups.",
+      salary: "₹15k fixed with performance-based incentives of up to 25%.",
       vacancy: 30,
       experience: "Fresher",
       location: "Ahmedabad, India",
       type: "Full time",
       skills: ["Cold Calling", "CRM", " Presentation Skills", " Client Follow up", " Communication"],
-    },
-    {
-      title: "BDM",
-      position: "Business Development Manager",
-      description:
-        "We are looking for a results driven BDM to lead client acquisition and drive business growth through strategic partnerships and high value deals.",
-      vacancy: 7,
-      experience: "1to2 years",
-      location: "Ahmedabad, India",
-      type: "Full time",
-      skills: ["Sales Strategy", "Negotiation", "CRM Tools", "Lead Generation"],
-    },
-    {
-      title: "HR Executive",
-      position: "HR Executive",
-      description:
-        "Kickstart your career in HR! You'll manage hiring, onboarding, and internal coordination to support a growing team.",
-      vacancy: 2,
-      experience: "Fresher",
-      location: "Ahmedabad, India",
-      type: "Full time",
-      skills: ["Recruitment","Coordination","MS Office", " Coordination", " Time Management"],
     },
   ];
 
@@ -359,7 +348,7 @@ const Career = () => {
   });
 
   const refContact = useRef(null);
-  const isInViewContact = useInView(refContact, { once: true, amount: 0.4 });
+  // const isInViewContact = useInView(refContact, { once: true, amount: 0.4 });
 
   // Simplified delay calculation
   const getDelay = (index: number, cols: number) =>
@@ -500,7 +489,7 @@ const Career = () => {
               Job Openings At Abtik
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center items-center">
+            <div className="grid grid-cols-1 gap-6 max-w-xl mx-auto">
               {jobOpenings?.map((job, index) => (
                 <motion.div
                   key={index}
@@ -539,9 +528,15 @@ const Career = () => {
                     </div>
                     <div className="flex items-center gap-2 text-sm text-gray-600">
                       <Clock className="w-4 h-4 text-[#3CA2E2]" />
-                      <span>
-                        {job.type} • {job.experience}
-                      </span>
+                      <span>{job.type}</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-sm text-gray-600">
+                      <Calendar className="w-4 h-4 text-[#3CA2E2]" />
+                      <span>{job.experience}</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-sm text-gray-600">
+                      <IndianRupee className="w-4 h-4 text-[#3CA2E2]" />
+                      <span>Salary: {job.salary}</span>
                     </div>
                   </div>
 
@@ -556,7 +551,10 @@ const Career = () => {
                       Required Skills:
                     </h4>
                     <div className="flex flex-wrap gap-2">
-                      {job.skills.slice(0, 3).map((skill, skillIndex) => (
+                      {(expandedSkills.includes(index)
+                        ? job.skills
+                        : job.skills.slice(0, 3)
+                      ).map((skill, skillIndex) => (
                         <span
                           key={skillIndex}
                           className="text-xs text-gray-600 bg-gray-200 px-2 py-1 rounded-full"
@@ -565,9 +563,15 @@ const Career = () => {
                         </span>
                       ))}
                       {job.skills.length > 3 && (
-                        <span className="text-xs bg-blue-50 text-[#3CA2E2] px-2 py-1 rounded-full">
-                          +{job.skills.length - 3} more
-                        </span>
+                        <button
+                          type="button"
+                          onClick={() => toggleSkills(index)}
+                          className="text-xs bg-blue-50 text-[#3CA2E2] px-2 py-1 rounded-full cursor-pointer"
+                        >
+                          {expandedSkills.includes(index)
+                            ? "Show less"
+                            : `+${job.skills.length - 3} more`}
+                        </button>
                       )}
                     </div>
                   </div>
@@ -1004,14 +1008,14 @@ const Career = () => {
         </AnimatePresence>
 
         {/* Contact Section */}
-        <motion.section
+        {/* <motion.section
           ref={refContact}
           initial={{ y: 100, opacity: 0 }}
           animate={isInViewContact ? { y: 0, opacity: 1 } : {}}
           transition={{ duration: 0.5 }}
         >
           <Contact />
-        </motion.section>
+        </motion.section> */}
       </Mainlayout>
     </>
   );
