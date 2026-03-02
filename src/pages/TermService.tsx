@@ -306,10 +306,10 @@ const TermLoan = () => {
                             </span>
                             <div>
                                 <p className="text-base font-3 text-gray-700 font-semibold ">
-                                    Abtik Services Team
+                                    Abtik Startup Advisor pvt ltd Team
                                 </p>
                                 <p className="text-xs font-3 text-gray-600">
-                                    Abtik Services Team
+                                    Abtik Startup Advisor pvt ltd Team
                                     <br />
 
                                 </p>

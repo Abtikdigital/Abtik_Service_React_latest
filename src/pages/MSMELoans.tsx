@@ -293,17 +293,17 @@ const MSMELoans = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
-                aria-label="Contact Abtik Services Team"
+                aria-label="Contact Abtik Startup Advisor pvt ltd Team"
               >
                 <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
                   <User className="w-5 h-5 text-white" />
                 </span>
                 <div>
                   <p className="text-base text-gray-700 font-semibold font-2">
-                    Abtik Services Team
+                    Abtik Startup Advisor pvt ltd Team
                   </p>
                   <p className="text-xs text-gray-600 font-3">
-                    Abtik Services Team
+                    Abtik Startup Advisor pvt ltd Team
                     <br />
                   </p>
                 </div>

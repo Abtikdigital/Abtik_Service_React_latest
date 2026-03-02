@@ -304,10 +304,10 @@ const StandUpIndia = () => {
                                 </span>
                                 <div>
                                     <p className="text-base text-gray-700 font-semibold font-3">
-                                        Abtik Services Team
+                                        Abtik Startup Advisor pvt ltd Team
                                     </p>
                                     <p className="text-xs text-gray-600 font-3">
-                                        Abtik Services Team
+                                        Abtik Startup Advisor pvt ltd Team
                                         <br />
                                     </p>
                                 </div>

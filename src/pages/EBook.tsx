@@ -396,7 +396,7 @@ const Ebook: React.FC = () => {
   return (
     <HeadProvider>
       <Title>
-        {seoData?.eBooks?.title || "Download Our Free eBooks  Abtik Services"}
+        {seoData?.eBooks?.title || "Download Our Free eBooks  Abtik Startup Advisor pvt ltd"}
       </Title>
       <Meta
         name="description"
@@ -409,7 +409,7 @@ const Ebook: React.FC = () => {
         name="keywords"
         content={
           seoData?.eBooks?.keyword ||
-          "ebooks, business financing, CGTMSE, startup growth, loan applications, Abtik Services"
+          "ebooks, business financing, CGTMSE, startup growth, loan applications, Abtik Startup Advisor pvt ltd"
         }
       />
       <Meta
@@ -497,10 +497,10 @@ const Ebook: React.FC = () => {
                 </span>
                 <div>
                   <p className="text-base text-gray-700 font-semibold font-2">
-                    Abtik Services
+                    Abtik Startup Advisor pvt ltd
                   </p>
                   <p className="text-xs text-gray-600 font-2">
-                    Abtik Services Team
+                    Abtik Startup Advisor pvt ltd Team
                   </p>
                 </div>
               </a>

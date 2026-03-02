@@ -7,7 +7,7 @@ type ChatbotStatus = "idle" | "loading" | "error";
 const initialAssistantMessage: ChatMessage = {
   role: "assistant",
   content:
-    "Hi! I'm your Abtik Services assistant. Ask me anything about our services, funding options, or registration and compliance.",
+    "Hi! I'm your Abtik Startup Advisor pvt ltd assistant. Ask me anything about our services, funding options, or registration and compliance.",
 };
 
 const ChatbotWidget = () => {

@@ -253,11 +253,11 @@ const firmTemplate = (userInfo) => {
       </head>
       <body>
         <div class="email-wrapper">
-          <div class="header">Abtik Services</div>
+          <div class="header">Abtik Startup Advisor pvt ltd</div>
           <div class="header-divider"></div>
           <div class="content">
             <h2><span class="emoji">📋</span> New Career Application Submission</h2>
-            <p class="highlight">A candidate has submitted an application via the Abtik Services website. Please review their details below and respond promptly.</p>
+            <p class="highlight">A candidate has submitted an application via the Abtik Startup Advisor pvt ltd website. Please review their details below and respond promptly.</p>
             <table>
               <tr>
                 <th>Full Name</th>
@@ -320,7 +320,7 @@ const userTemplate = (userInfo) => {
       <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Thank You for Applying to Abtik Services</title>
+        <title>Thank You for Applying to Abtik Startup Advisor pvt ltd</title>
         <style>
           body, html {
             margin: 0;
@@ -453,11 +453,11 @@ const userTemplate = (userInfo) => {
       </head>
       <body>
         <div class="email-wrapper">
-          <div class="header">Abtik Services</div>
+          <div class="header">Abtik Startup Advisor pvt ltd</div>
           <div class="header-divider"></div>
           <div class="content">
-            <h2><span class="emoji">✅</span> Thank You for Applying to Abtik Services</h2>
-            <p class="highlight">Dear ${fullName}, thank you for applying to Abtik Services!</p>
+            <h2><span class="emoji">✅</span> Thank You for Applying to Abtik Startup Advisor pvt ltd</h2>
+            <p class="highlight">Dear ${fullName}, thank you for applying to Abtik Startup Advisor pvt ltd!</p>
             <p>We have received your career application, and our team will review it shortly.</p>
             <div class="message-box">
               <h3>What happens next?</h3>
@@ -474,8 +474,8 @@ const userTemplate = (userInfo) => {
               <a href="#">Instagram</a> • 
               <a href="#">Facebook</a>
             </div>
-            Thank you for choosing Abtik Services.
-            <span class="footer-note">© 2025 Abtik Services. All rights reserved.</span>
+            Thank you for choosing Abtik Startup Advisor pvt ltd.
+            <span class="footer-note">© 2025 Abtik Startup Advisor pvt ltd. All rights reserved.</span>
           </div>
         </div>
       </body>
@@ -617,7 +617,7 @@ const handler = async (req, res) => {
         sendMail(
           SMTP_MAIL,
           formData.email,
-          "Thank You for Applying to Abtik Services",
+          "Thank You for Applying to Abtik Startup Advisor pvt ltd",
           userTemplate(formData)
         ),
       ]);

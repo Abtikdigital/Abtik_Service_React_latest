@@ -260,7 +260,7 @@ const firmTemplate = (data) => {
       <body>
         <div class="email-wrapper">
           <div class="header">
-            Abtik Services
+            Abtik Startup Advisor pvt ltd
           </div>
           <div class="header-divider"></div>
           <div class="content">
@@ -437,7 +437,7 @@ const userTemplate = (data) => {
       <body>
         <div class="email-wrapper">
           <div class="header">
-            Abtik Services
+            Abtik Startup Advisor pvt ltd
           </div>
           <div class="header-divider"></div>
           <div class="content">
@@ -465,8 +465,8 @@ const userTemplate = (data) => {
               <a href="#">Instagram</a> • 
               <a href="#">LinkedIn</a>
             </div>
-            Thank you for choosing Abtik Services.
-            <span class="footer-note">© 2025 Abtik Services. All rights reserved.</span>
+            Thank you for choosing Abtik Startup Advisor pvt ltd.
+            <span class="footer-note">© 2025 Abtik Startup Advisor pvt ltd. All rights reserved.</span>
           </div>
         </div>
       </body>
@@ -521,7 +521,7 @@ const handler = async (req, res) => {
         sendMail(
           SMTP_MAIL,
           email,
-          "Thanks for Contacting Abtik Services",
+          "Thanks for Contacting Abtik Startup Advisor pvt ltd",
           userTemplate({ name, email, message })
         ),
         sendMail(
