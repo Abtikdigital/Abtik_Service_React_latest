@@ -408,11 +408,10 @@ const Career = () => {
                          text-white lg:text-white
                          paragraph !text-white
                          max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0 font-2"
-
             >
               Empowering Businesses through Comprehensive Solutions From Fund
               Management to Legal Compliance, We've Got You Covered at Abtik
-              Services
+              Startup Advisor pvt ltd
             </p>
             <div className="pt-2 sm:pt-4">
               <button
@@ -453,10 +452,10 @@ const Career = () => {
                       className="sub-heading text-center md:text-left bg-clip-text bg-gradient-to-t text-transparent from-[#3CA2E2] to-[#052EAA] font-2"
                     >
                       Career Opportunities at <br />
-                      Abtik Services
+                      Abtik Startup Advisor pvt ltd
                     </h2>
                     <p className="paragraph text-center md:text-left font-3">
-                      Kickstart your growth with abtik services, where creativity runs new opportunities in business. We create exciting career opportunities for growth, learning and meaningful effects. In Abtik, we value talent, encourage new ideas, and provide a supportive, collaborative workplace where your skills and ambitions can actually thrive.
+                      Kickstart your growth with Abtik Startup Advisor pvt ltd, where creativity runs new opportunities in business. We create exciting career opportunities for growth, learning and meaningful effects. In Abtik, we value talent, encourage new ideas, and provide a supportive, collaborative workplace where your skills and ambitions can actually thrive.
                     </p>
                   </>
                 ) : (
@@ -486,7 +485,7 @@ const Career = () => {
             <h2
               className="sub-heading bg-clip-text text-center bg-gradient-to-t text-transparent from-[#052EAA] to-[#3CA2E2] mb-12 font-1"
             >
-              Job Openings At Abtik
+              Job Openings at Abtik Startup Advisor pvt ltd
             </h2>
 
             <div className="grid grid-cols-1 gap-6 max-w-xl mx-auto">

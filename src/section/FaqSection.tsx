@@ -9,9 +9,9 @@ const FaqSection = () => {
 
   const faq = [
     {
-      question: "1. Who is Abtik Services?",
+      question: "1. Who is Abtik Startup Advisor pvt ltd?",
       answer:
-        "Abtik Services is a Start up India recognized consultancy helping MSMEs and startups grow with expert support in funding, branding, legal compliance, and government schemes all under one roof.",
+        "Abtik Startup Advisor pvt ltd is a Start up India recognized consultancy helping MSMEs and startups grow with expert support in funding, branding, legal compliance, and government schemes all under one roof.",
     },
     {
       question: "2. What makes Abtik different from others?",

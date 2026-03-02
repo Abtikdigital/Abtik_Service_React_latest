@@ -30,20 +30,20 @@ const TermsConditions = () => {
     <>
       <HeadProvider>
         <Title>
-          {seoData?.terms?.title || "Terms & Conditions - Abtik Services"}
+          {seoData?.terms?.title || "Terms & Conditions - Abtik Startup Advisor pvt ltd"}
         </Title>
         <Meta
           name="description"
           content={
             seoData?.terms?.description ||
-            "Read the Terms and Conditions governing the use of Abtik Services LLP website and services."
+            "Read the Terms and Conditions governing the use of Abtik Startup Advisor pvt ltd website and services."
           }
         />
         <Meta
           name="keywords"
           content={
             seoData?.terms?.keyword ||
-            "terms and conditions, Abtik Services, legal terms, service terms"
+            "terms and conditions, Abtik Startup Advisor pvt ltd, legal terms, service terms"
           }
         />
         <Meta
@@ -78,7 +78,7 @@ const TermsConditions = () => {
             </h1>
             <p className="text-lg text-white font-3">
               Please read these terms carefully before using our website or
-              availing any services from Abtik Services LLP.
+              availing any services from Abtik Startup Advisor pvt ltd.
             </p>
             <button
               onClick={handleOpenDialog}
@@ -102,7 +102,7 @@ const TermsConditions = () => {
             {/* Introduction */}
             <div className="bg-white p-8 rounded-2xl shadow-sm">
               <p className="text-gray-700 font-3 leading-relaxed">
-                Welcome to <strong>Abtik Services LLP</strong> (“Abtik Services”,
+                Welcome to <strong>Abtik Startup Advisor pvt ltd</strong> (“Abtik Startup Advisor pvt ltd”,
                 “we”, “our”, or “us”). These Terms and Conditions govern your
                 access to and use of our website, services, and any interaction
                 with us. By accessing our website or availing our services, you
@@ -113,7 +113,7 @@ const TermsConditions = () => {
 
             {/* Sections */}
             {[
-              ["1. About Abtik Services LLP",
+              ["1. About Abtik Startup Advisor pvt ltd",
                 "We provide professional business consulting and advisory services including business advisory, government schemes consultancy, MSME and Startup India support, trademark, ISO, ZED compliance, funding advisory, and legal documentation support. We act only as consultants; final approvals are governed by respective authorities."
               ],
               ["2. Acceptance of Terms",
@@ -126,7 +126,7 @@ const TermsConditions = () => {
                 "You must provide accurate information, valid documents, timely responses, and comply with applicable laws. Client-side delays may impact outcomes."
               ],
               ["5. Payments and Transactions",
-                "Payments are accepted only in the official company bank account of Abtik Services LLP. Payments made to personal accounts are not our responsibility."
+                "Payments are accepted only in the official company bank account of Abtik Startup Advisor pvt ltd. Payments made to personal accounts are not our responsibility."
               ],
               ["6. Disclaimer on Approvals",
                 "We do not guarantee approvals, certifications, funding, or outcomes. Decisions are solely at the discretion of respective authorities."
@@ -138,7 +138,7 @@ const TermsConditions = () => {
                 "Client information is kept confidential unless required by law, shared with trusted partners, or consented by the client."
               ],
               ["9. Intellectual Property",
-                "All website content is the intellectual property of Abtik Services LLP and may not be used without written permission."
+                "All website content is the intellectual property of Abtik Startup Advisor pvt ltd and may not be used without written permission."
               ],
               ["10. Limitation of Liability",
                 "Liability is limited to fees paid for the specific service. We are not responsible for third-party decisions."
@@ -162,7 +162,7 @@ const TermsConditions = () => {
             {/* Contact */}
             <div className="bg-white p-8 rounded-2xl shadow-sm text-center">
               <h2 className="text-2xl font-bold font-2 mb-4">Contact Information</h2>
-              <p className="font-3 mb-4">Abtik Services LLP</p>
+              <p className="font-3 mb-4">Abtik Startup Advisor pvt ltd</p>
               <div className="flex flex-col items-center space-y-3">
                 <div className="flex items-center gap-3">
                   <MapPin className="text-[#3CA2E2] min-h-5 min-w-5" />
@@ -170,7 +170,7 @@ const TermsConditions = () => {
                 </div>
                 <div className="flex items-center gap-3">
                   <Phone className="text-[#3CA2E2] min-h-5 min-w-5" />
-                  <a href="tel:+91 89281 38434" className="font-3 hover:underline">+91 89281 38434</a>
+                  <a href="tel:+918488800910" className="font-3 hover:underline">+91 84888 00910</a>
                 </div>
                 <div className="flex items-center gap-3">
                   <Mail className="text-[#3CA2E2] min-h-5 min-w-5" />

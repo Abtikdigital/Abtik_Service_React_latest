@@ -98,11 +98,11 @@ const SeoSchema = () => {
 
   const title =
     seoConfig?.title ||
-    "Abtik Services LLP | Business & MSME Loan and Compliance Services";
+    "Abtik Startup Advisor pvt ltd | Business & MSME Loan and Compliance Services";
 
   const description =
     seoConfig?.description ||
-    "Abtik Services LLP helps startups and MSMEs across India with funding, registration, compliance and growth services.";
+    "Abtik Startup Advisor pvt ltd helps startups and MSMEs across India with funding, registration, compliance and growth services.";
 
   // Use canonical from config only if it's a full URL, otherwise fall back to pageUrl
   const canonicalFromConfig = seoConfig?.canonical;
@@ -114,10 +114,10 @@ const SeoSchema = () => {
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "Abtik Services LLP",
+    name: "Abtik Startup Advisor pvt ltd",
     url: BASE_URL,
     description:
-      "Abtik Services LLP is a business consultancy helping startups and MSMEs with loans, subsidies, registrations and compliance.",
+      "Abtik Startup Advisor pvt ltd is a business consultancy helping startups and MSMEs with loans, subsidies, registrations and compliance.",
     email: "info@abtikservices.com",
     address: [
       {
@@ -146,7 +146,7 @@ const SeoSchema = () => {
       {
         "@type": "ContactPoint",
         contactType: "customer support",
-        telephone: "+91 89281 38434",
+        telephone: "+91 84888 00910",
         availableLanguage: ["en", "hi"],
       },
     ],
@@ -156,7 +156,7 @@ const SeoSchema = () => {
     "@context": "https://schema.org",
     "@type": "WebSite",
     url: BASE_URL,
-    name: "Abtik Services LLP",
+    name: "Abtik Startup Advisor pvt ltd",
     potentialAction: {
       "@type": "SearchAction",
       target: `${BASE_URL}/search?q={search_term_string}`,
@@ -174,7 +174,7 @@ const SeoSchema = () => {
     isPartOf: {
       "@type": "WebSite",
       url: BASE_URL,
-      name: "Abtik Services LLP",
+      name: "Abtik Startup Advisor pvt ltd",
     },
   };
 

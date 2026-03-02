@@ -54,7 +54,7 @@ const About = () => {
           <p className="paragraph font-2"
 
           >
-            At Abtik Services, we connect ambition with opportunity, bringing together expert strategy, government backed funding, and complete business support under one roof. From the first spark of an idea to a fully established brand, we’re the partner that turns vision into measurable growth.
+            At Abtik Startup Advisor pvt ltd, we connect ambition with opportunity, bringing together expert strategy, government backed funding, and complete business support under one roof. From the first spark of an idea to a fully established brand, we’re the partner that turns vision into measurable growth.
           </p>
           <p className="paragraph font-2"
 

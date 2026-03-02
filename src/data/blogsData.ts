@@ -119,7 +119,7 @@ export const blogsData: BlogData[] = [
         description: "The good news? With the right guidance, these are 100% avoidable.",
       },
       {
-        title: "Why Work with Abtik Services?",
+        title: "Why Work with Abtik Startup Advisor pvt ltd?",
         lists: [
           "Expert guidance tailored to your business",
           "100% online process",
