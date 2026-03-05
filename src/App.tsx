@@ -81,7 +81,7 @@ const PdfPreview = lazy(() => import("./pages/PdfPreview"));
 // Legal
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const TermsConditions = lazy(() => import("./pages/TermsAndCondition"));
-// const RefundPolicy = lazy(() => import("./pages/RefundPolicy"))
+const RefundPolicy = lazy(() => import("./pages/RefundPolicy"))
 function App() {
   return (
     <BrowserRouter>
@@ -252,10 +252,10 @@ function App() {
           />
           <Route path="/legal/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/legal/terms-and-conditions" element={<TermsConditions />} />
-          {/* <Route
+           <Route
             path="/legal/refund-policy"
             element={<RefundPolicy />}
-          /> */}
+          /> 
 
           <Route path="*" element={<PageNotFound />} />
         </Routes>
