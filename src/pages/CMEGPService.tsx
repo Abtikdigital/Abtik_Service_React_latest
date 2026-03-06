@@ -111,7 +111,7 @@ const CMEGP = () => {
     const refCMEGPBenefits = useRef(null);
     const isInViewCMEGPBenefits = useInView(refCMEGPBenefits, { once: true, amount: 0.1 });
 
-    // Abtik Process
+    // Abtik Startup Advisor pvt ltd Process
     const refProcess = useRef(null);
     const isInViewProcess = useInView(refProcess, { once: true, amount: 0.1 });
     const [processCols, setProcessCols] = useState(1);
@@ -303,18 +303,18 @@ const CMEGP = () => {
                                 </span>
                                 <div>
                                     <p className="text-base text-gray-700 font-semibold font-3">
-                                        Abtik Startup Advisor pvt ltd Team
+                                        Arissit Thackar
                                     </p>
                                     <p className="text-xs text-gray-600 font-3">
-                                        Abtik Startup Advisor pvt ltd Team
+                                        NBFC-HOD
                                         <br />
                                     </p>
                                 </div>
                             </a>
                             <a
-                                href="tel:+91 84888 00910"
+                                href="tel:+91 89281 38434"
                                 className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
-                                aria-label="Call us at +91 84888 00910"
+                                aria-label="Call us at +91 89281 38434"
                             >
                                 <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
                                     <Phone className="w-5 h-5 text-white" />
@@ -324,14 +324,14 @@ const CMEGP = () => {
                                         Call Anytime
                                     </p>
                                     <p className="text-xs text-gray-600 font-3">
-                                        <a href="tel:+91 84888 00910">+91 84888 00910</a>
+                                        <a href="tel:+91 89281 38434">+91 89281 38434</a>
                                     </p>
                                 </div>
                             </a>
                             <a
-                                href="mailto:info@abtikservices.com"
+                                href="mailto:info@Abtik Startup Advisor pvt ltdservices.com"
                                 className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
-                                aria-label="Email us at info@abtikservices.com"
+                                aria-label="Email us at info@Abtik Startup Advisor pvt ltdservices.com"
                             >
                                 <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
                                     <Mail className="w-5 h-5 text-white" />
@@ -341,8 +341,8 @@ const CMEGP = () => {
                                         Write Email
                                     </p>
                                     <p className="text-xs text-gray-600 font-3">
-                                        <a href="mailto:info@abtikservices.com">
-                                            info@abtikservices.com
+                                        <a href="mailto:info@Abtik Startup Advisor pvt ltdservices.com">
+                                            info@Abtik Startup Advisor pvt ltdservices.com
                                         </a>
                                     </p>
                                 </div>
@@ -610,7 +610,7 @@ const CMEGP = () => {
                 </div>
             </motion.section>
 
-            {/* Abtik Process Section */}
+            {/* Abtik Startup Advisor pvt ltd Process Section */}
             <motion.section
                 ref={refProcess}
                 initial={{ y: 100, opacity: 0 }}
@@ -622,7 +622,7 @@ const CMEGP = () => {
                 <h2 className="sub-heading text-center font-2 bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
                    
                 >
-                    How Abtik Helps You Get CMEGP Subsidy
+                    How Abtik Startup Advisor pvt ltd Helps You Get CMEGP Subsidy
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
                     {processData?.map((process, index) => (
@@ -661,7 +661,7 @@ const CMEGP = () => {
                 <h2 className="sub-heading text-center font-2 bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
                     
                 >
-                    Why Choose Abtik for CMEGP
+                    Why Choose Abtik Startup Advisor pvt ltd for CMEGP
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
                     {benefitsData?.map((benefit, index) => (

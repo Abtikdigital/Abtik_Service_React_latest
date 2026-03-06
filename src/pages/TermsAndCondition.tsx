@@ -170,7 +170,7 @@ const TermsConditions = () => {
                 </div>
                 <div className="flex items-center gap-3">
                   <Phone className="text-[#3CA2E2] min-h-5 min-w-5" />
-                  <a href="tel:+918488800910" className="font-3 hover:underline">+91 84888 00910</a>
+                  <a href="tel:+918488800910" className="font-3 hover:underline">+91 89281 38434</a>
                 </div>
                 <div className="flex items-center gap-3">
                   <Mail className="text-[#3CA2E2] min-h-5 min-w-5" />

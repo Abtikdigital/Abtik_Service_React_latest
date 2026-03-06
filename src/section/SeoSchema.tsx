@@ -146,7 +146,7 @@ const SeoSchema = () => {
       {
         "@type": "ContactPoint",
         contactType: "customer support",
-        telephone: "+91 84888 00910",
+        telephone: "+91 89281 38434",
         availableLanguage: ["en", "hi"],
       },
     ],

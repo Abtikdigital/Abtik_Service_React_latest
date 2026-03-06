@@ -127,7 +127,7 @@ const FSSAILicense = () => {
         return 0.5 + row * 0.5;
     };
 
-    // Why Choose Abtik
+    // Why Choose Abtik Startup Advisor pvt ltd
     const refWhyChoose = useRef(null);
     const isInViewWhyChoose = useInView(refWhyChoose, {
         once: true,
@@ -179,7 +179,7 @@ const FSSAILicense = () => {
         },
     ];
 
-    // === Why Choose Abtik Cards ===
+    // === Why Choose Abtik Startup Advisor pvt ltd Cards ===
     const whyChooseData = [
         {
             icon: Shield,
@@ -207,13 +207,13 @@ const FSSAILicense = () => {
             <HeadProvider>
                 <Title>
                     {seoData?.fssaiLicenseService?.title ||
-                        "FSSAI License Registration  Get Food License Online | Abtik"}
+                        "FSSAI License Registration  Get Food License Online | Abtik Startup Advisor pvt ltd"}
                 </Title>
                 <Meta
                     name="description"
                     content={
                         seoData?.fssaiLicenseService?.description ||
-                        "Get FSSAI License registration online with Abtik. Expert assistance for Basic Registration, State License & Central License. Fast approval, complete documentation support."
+                        "Get FSSAI License registration online with Abtik Startup Advisor pvt ltd. Expert assistance for Basic Registration, State License & Central License. Fast approval, complete documentation support."
                     }
                 />
                 <Meta
@@ -317,18 +317,18 @@ const FSSAILicense = () => {
                                 </span>
                                 <div>
                                     <p className="text-base font-3 text-gray-700 font-semibold">
-                                        Abtik Startup Advisor pvt ltd Team
+                                        Sumit Radadiya
                                     </p>
                                     <p className="text-xs font-3 text-gray-600">
-                                        Abtik Startup Advisor pvt ltd Team
+                                        HOD-Sales Department
                                         <br />
                                     </p>
                                 </div>
                             </a>
                             <a
-                                href="tel:+91 84888 00910"
+                                href="tel:+91 89281 38434"
                                 className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
-                                aria-label="Call us at +91 84888 00910"
+                                aria-label="Call us at +91 89281 38434"
                             >
                                 <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
                                     <Phone className="w-5 h-5 text-white" />
@@ -338,14 +338,14 @@ const FSSAILicense = () => {
                                         Call Anytime
                                     </p>
                                     <p className="text-xs font-3 text-gray-600">
-                                        <a href="tel:+91 84888 00910">+91 84888 00910</a>
+                                        <a href="tel:+91 89281 38434">+91 89281 38434</a>
                                     </p>
                                 </div>
                             </a>
                             <a
-                                href="mailto:info@abtikservices.com"
+                                href="mailto:info@Abtik Startup Advisor pvt ltdservices.com"
                                 className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
-                                aria-label="Email us at info@abtikservices.com"
+                                aria-label="Email us at info@Abtik Startup Advisor pvt ltdservices.com"
                             >
                                 <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
                                     <Mail className="w-5 h-5 text-white" />
@@ -355,8 +355,8 @@ const FSSAILicense = () => {
                                         Write Email
                                     </p>
                                     <p className="text-xs font-3 text-gray-600">
-                                        <a href="mailto:info@abtikservices.com">
-                                            info@abtikservices.com
+                                        <a href="mailto:info@Abtik Startup Advisor pvt ltdservices.com">
+                                            info@Abtik Startup Advisor pvt ltdservices.com
                                         </a>
                                     </p>
                                 </div>
@@ -404,7 +404,7 @@ const FSSAILicense = () => {
                             ensures compliance with food safety standards and regulations.
                             Whether you're running a restaurant, manufacturing food products,
                             or selling food items, FSSAI registration is legally required. Let
-                            Abtik handle your FSSAI license application process with expert
+                            Abtik Startup Advisor pvt ltd handle your FSSAI license application process with expert
                             guidance and complete documentation support.
                         </p>
                     </div>
@@ -641,7 +641,7 @@ const FSSAILicense = () => {
                     </div>
                 </motion.section>
 
-                {/* Abtik Process Section */}
+                {/* Abtik Startup Advisor pvt ltd Process Section */}
                 <motion.section
                     ref={refProcess}
                     initial={{ y: 100, opacity: 0 }}
@@ -651,7 +651,7 @@ const FSSAILicense = () => {
                 >
                     <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14">
                     <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]">
-                        How Abtik Helps with FSSAI License
+                        How Abtik Startup Advisor pvt ltd Helps with FSSAI License
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
                         {processData?.map((process, index) => (
@@ -677,7 +677,7 @@ const FSSAILicense = () => {
                     </div>
                 </motion.section>
 
-                {/* Why Choose Abtik Section */}
+                {/* Why Choose Abtik Startup Advisor pvt ltd Section */}
                 <motion.section
                     ref={refWhyChoose}
                     initial={{ y: 100, opacity: 0 }}
@@ -687,7 +687,7 @@ const FSSAILicense = () => {
                 >
                     <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14">
                     <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]">
-                        Why Choose Abtik for FSSAI License
+                        Why Choose Abtik Startup Advisor pvt ltd for FSSAI License
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
                         {whyChooseData?.map((benefit, index) => (

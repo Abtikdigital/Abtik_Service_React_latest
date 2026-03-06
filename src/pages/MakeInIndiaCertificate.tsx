@@ -247,7 +247,7 @@ const MakeInIndiaCertificate = () => {
 
             >
               Prove your products are truly Indian, access special incentives,
-              and get preference in public procurement, Abtik makes certification
+              and get preference in public procurement, Abtik Startup Advisor pvt ltd makes certification
               simple, fast, and 100% Compliant.
             </p>
             <div className="pt-2 sm:pt-4">
@@ -295,18 +295,18 @@ const MakeInIndiaCertificate = () => {
                 </span>
                 <div>
                   <p className="text-base text-gray-700 font-semibold  font-3">
-                    Abtik Startup Advisor pvt ltd Team
+                    Sumit Radadiya
                   </p>
                   <p className="text-xs text-gray-600 font-3">
-                    Abtik Startup Advisor pvt ltd Team
+                    HOD-Sales Department
                     <br />
                   </p>
                 </div>
               </a>
               <a
-                href="tel:+91 84888 00910"
+                href="tel:+91 89281 38434"
                 className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
-                aria-label="Call us at +91 84888 00910"
+                aria-label="Call us at +91 89281 38434"
               >
                 <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
                   <Phone className="w-5 h-5 text-white" />
@@ -316,14 +316,14 @@ const MakeInIndiaCertificate = () => {
                     Call Anytime
                   </p>
                   <p className="text-xs text-gray-600 font-3">
-                    <a href="tel:+91 84888 00910">+91 84888 00910</a>
+                    <a href="tel:+91 89281 38434">+91 89281 38434</a>
                   </p>
                 </div>
               </a>
               <a
-                href="mailto:info@abtikservices.com"
+                href="mailto:info@Abtik Startup Advisor pvt ltdservices.com"
                 className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
-                aria-label="Email us at info@abtikservices.com"
+                aria-label="Email us at info@Abtik Startup Advisor pvt ltdservices.com"
               >
                 <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
                   <Mail className="w-5 h-5 text-white" />
@@ -333,8 +333,8 @@ const MakeInIndiaCertificate = () => {
                     Write Email
                   </p>
                   <p className="text-xs font-3 text-gray-600">
-                    <a href="mailto:info@abtikservices.com">
-                      info@abtikservices.com
+                    <a href="mailto:info@Abtik Startup Advisor pvt ltdservices.com">
+                      info@Abtik Startup Advisor pvt ltdservices.com
                     </a>
                   </p>
                 </div>
@@ -490,7 +490,7 @@ const MakeInIndiaCertificate = () => {
           </div>
         </motion.section>
 
-        {/* Abtik Process Section */}
+        {/* Abtik Startup Advisor pvt ltd Process Section */}
         <motion.section
           ref={refProcess}
           initial={{ y: 100, opacity: 0 }}
@@ -503,7 +503,7 @@ const MakeInIndiaCertificate = () => {
             className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
 
           >
-            How Abtik Gets Your MII Certification
+            How Abtik Startup Advisor pvt ltd Gets Your MII Certification
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
             {processData.map((process, index) => (

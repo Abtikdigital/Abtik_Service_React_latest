@@ -316,9 +316,9 @@ const ProjectFunding = () => {
                             </div>
                         </a>
                         <a
-                            href="tel:+91 84888 00910"
+                            href="tel:+91 89281 38434"
                             className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
-                            aria-label="Call us at +91 84888 00910"
+                            aria-label="Call us at +91 89281 38434"
                         >
                             <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
                                 <Phone className="w-5 h-5 text-white" />
@@ -327,7 +327,7 @@ const ProjectFunding = () => {
                                 <p className="text-base font-3 text-gray-700 font-semibold">
                                     Call Anytime
                                 </p>
-                                <p className="text-xs font-3 text-gray-600">+91 84888 00910</p>
+                                <p className="text-xs font-3 text-gray-600">+91 89281 38434</p>
                             </div>
                         </a>
                         <a
