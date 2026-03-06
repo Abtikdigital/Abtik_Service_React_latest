@@ -23,7 +23,7 @@ const MudraLoan = lazy(() => import("./pages/MudraLoan"));
 const Udaan = lazy(() => import("./pages/Udaan"));
 const CGTMSE = lazy(() => import("./pages/CGTMSEService"));
 const TaxAssumptionCertificate = lazy(
-  () => import("./pages/TaxExemptionCertificate")
+  () => import("./pages/TaxExemptionCertificate"),
 );
 const NAIFF_AIFFService = lazy(() => import("./pages/NAIFF_AIFFService"));
 const AgriSure = lazy(() => import("./pages/AgrisureService"));
@@ -41,18 +41,18 @@ const VCInverstor = lazy(() => import("./pages/VCInvestor"));
 const NBFC = lazy(() => import("./pages/NBFC"));
 // Trade Mark And Ip
 const TrademarkRegistrationAndFilling = lazy(
-  () => import("./pages/TrademarkRegistrationAndFillingService")
+  () => import("./pages/TrademarkRegistrationAndFillingService"),
 );
 const CopyRight = lazy(() => import("./pages/CopyRightService"));
 const PatentFiling = lazy(() => import("./pages/PatentFilingService"));
 
 // Certificate
 const StartupIndiaCertificate = lazy(
-  () => import("./pages/StartupIndiaCertificate")
+  () => import("./pages/StartupIndiaCertificate"),
 );
 const MSMECertificate = lazy(() => import("./pages/MSMECertificate"));
 const MakeInIndiaCertificate = lazy(
-  () => import("./pages/MakeInIndiaCertificate")
+  () => import("./pages/MakeInIndiaCertificate"),
 );
 const ZEDCertificate = lazy(() => import("./pages/ZedCertificate"));
 const ISOCertificate = lazy(() => import("./pages/IsoCertificate"));
@@ -61,7 +61,7 @@ const FSSAILicense = lazy(() => import("./pages/FssaiLiecence"));
 
 // Tax Compliance
 const GSTRegistrationFiling = lazy(
-  () => import("./pages/GstRegistration_Filling")
+  () => import("./pages/GstRegistration_Filling"),
 );
 const TdsCompliance = lazy(() => import("./pages/TdsCompliance"));
 const AnnualCompliance = lazy(() => import("./pages/AnnualComplaince"));
@@ -81,7 +81,7 @@ const PdfPreview = lazy(() => import("./pages/PdfPreview"));
 // Legal
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const TermsConditions = lazy(() => import("./pages/TermsAndCondition"));
-const RefundPolicy = lazy(() => import("./pages/RefundPolicy"))
+const RefundPolicy = lazy(() => import("./pages/RefundPolicy"));
 function App() {
   return (
     <BrowserRouter>
@@ -234,28 +234,13 @@ function App() {
             element={<PrivateLimited />}
           />
           <Route path="/services/registration/llp" element={<Llp />} />
-          <Route
-            path="/services/registration/proprietorship"
-            element={<SoleProprietor />}
-          />
-          <Route
-            path="/services/registration/partnership"
-            element={<Partnership />}
-          />
-          <Route
-            path="/services/registration/section8company"
-            element={<Section8Company />}
-          />
-          <Route
-            path="/services/registration/producer"
-            element={<ProducerCompany />}
-          />
+          <Route path="/services/registration/proprietorship" element={<SoleProprietor />}/>
+          <Route path="/services/registration/partnership" element={<Partnership />}/>
+          <Route path="/services/registration/section8company" element={<Section8Company />} />
+          <Route path="/services/registration/producer" element={<ProducerCompany />}/>
           <Route path="/legal/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="/legal/terms-and-conditions" element={<TermsConditions />} />
-           <Route
-            path="/legal/refund-policy"
-            element={<RefundPolicy />}
-          /> 
+          <Route path="/legal/terms-and-conditions" element={<TermsConditions />}/>
+          <Route path="/legal/refund-policy" element={<RefundPolicy />} />
 
           <Route path="*" element={<PageNotFound />} />
         </Routes>

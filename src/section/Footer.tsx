@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Logo from "../assets/Logo/NewLatestLogo.png";
+import Logo from "../assets/Logo/NewTmLogo.png";
 import { MapPin } from "lucide-react";
 import OptimizedImage from "@/components/OptimizedImage";
 import { Phone } from "lucide-react";

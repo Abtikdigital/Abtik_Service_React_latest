@@ -3,7 +3,7 @@ import Mainlayout from "../section/Mainlayout";
 import BgImage from "../assets/Career/bgImg.svg";
 import Image1 from "../assets/Career/Career.jpg";
 // import Contact from "../section/Contact";
-import Logo from "../assets/Logo/Newlogo.jpg";
+import Logo from "../assets/Logo/LogoWithoutBelowContent.png";
 // import CareerImage from "../assets/Hero/bgImg.svg";
 import { addApplication } from "../api/careerApi";
 import {

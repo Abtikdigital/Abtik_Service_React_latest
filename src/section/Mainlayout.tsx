@@ -3,7 +3,7 @@ import Footer from "./Footer";
 import { useSelector, useDispatch } from "react-redux";
 import { useForm, Controller } from "react-hook-form";
 import Swal from "sweetalert2";
-import Image from "../assets/Logo/Newlogo.jpg";
+import Image from "../assets/Logo/LogoWithoutBelowContent.png";
 import { X, User, Mail, Phone, MessageSquare, Building } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { memo, useState, useRef, useEffect } from "react";
