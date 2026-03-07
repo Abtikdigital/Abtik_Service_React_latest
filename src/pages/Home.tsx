@@ -183,16 +183,6 @@ const Home = () => {
           <Recommended />
         </motion.section>
 
-        {/* Testimonial */}
-        <motion.section
-          ref={refTestimonial}
-          initial={{ y: 100, opacity: 0 }}
-          animate={isInViewTestimonial ? { y: 0, opacity: 1 } : {}}
-          transition={{ duration: 0.5 }}
-        >
-          <Testimonial />
-        </motion.section>
-
         {/* Video Testimonial */}
         <motion.section
           ref={refVideoTestimonial}
@@ -201,6 +191,16 @@ const Home = () => {
           transition={{ duration: 0.5 }}
         >
           <VideoTestimonial />
+        </motion.section>
+
+        {/* Testimonial */}
+        <motion.section
+          ref={refTestimonial}
+          initial={{ y: 100, opacity: 0 }}
+          animate={isInViewTestimonial ? { y: 0, opacity: 1 } : {}}
+          transition={{ duration: 0.5 }}
+        >
+          <Testimonial />
         </motion.section>
 
         {/* New Blog */}
