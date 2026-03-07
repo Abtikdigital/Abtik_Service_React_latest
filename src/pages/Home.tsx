@@ -6,6 +6,7 @@ import Mainlayout from "../section/Mainlayout";
 import OurService from "../section/OurService";
 import NewBlog from "../section/NewBlog";
 import Testimonial from "../section/Testimonial";
+import VideoTestimonial from "../section/VideoTestimonial";
 import Recommended from "../section/Recommended";
 import About from "../section/About";
 import { useDispatch } from "react-redux";
@@ -45,6 +46,13 @@ const Home = () => {
   // Testimonial
   const refTestimonial = useRef(null);
   const isInViewTestimonial = useInView(refTestimonial, {
+    once: true,
+    amount: 0.1,
+  });
+
+  // Video Testimonial
+  const refVideoTestimonial = useRef(null);
+  const isInViewVideoTestimonial = useInView(refVideoTestimonial, {
     once: true,
     amount: 0.1,
   });
@@ -183,6 +191,16 @@ const Home = () => {
           transition={{ duration: 0.5 }}
         >
           <Testimonial />
+        </motion.section>
+
+        {/* Video Testimonial */}
+        <motion.section
+          ref={refVideoTestimonial}
+          initial={{ y: 100, opacity: 0 }}
+          animate={isInViewVideoTestimonial ? { y: 0, opacity: 1 } : {}}
+          transition={{ duration: 0.5 }}
+        >
+          <VideoTestimonial />
         </motion.section>
 
         {/* New Blog */}
