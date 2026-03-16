@@ -53,14 +53,76 @@ const Career = () => {
       title: "BDE",
       position: "Business Development Executive",
       description:
-        "We’re hiring a BDE to connect with leads, pitch services, and support sales growth through smart communication and follow ups.",
-      salary: "₹15k fixed with performance-based incentives of up to 25%.",
-      vacancy: 30,
+        "We are hiring a BDE to identify new leads, communicate with prospects, and help grow the company through effective sales conversations and follow-ups.",
+      salary: "₹20k fixed with performance-based incentives.",
+      vacancy: 20,
       experience: "Fresher",
       location: "Ahmedabad, India",
       type: "Full time",
-      skills: ["Cold Calling", "CRM", " Presentation Skills", " Client Follow up", " Communication"],
+      skills: ["Lead Generation", "Cold Calling", "CRM", "Client Follow up", "Communication"],
     },
+        {
+      title: "Sr BDE",
+      position: "Sr. Business Development Executive",
+      description:
+        "Looking for a Senior BDE who can convert high-quality leads, manage key accounts, and guide junior executives to achieve sales targets.",
+      salary: "₹20k-25k",
+      vacancy: 10,
+      experience: "2+ Years",
+      location: "Ahmedabad, India",
+      type: "Full time",
+      skills: ["Advanced Sales", "Lead Conversion", "Client Negotiation", "Account Management", "Market Research"],
+    },
+    {
+      title: "Team Leader",
+      position: "Team Leader",
+      description:
+        "We are looking for a Team Leader to guide and support the team, monitor daily performance, ensure targets are achieved, and maintain smooth coordination between management and team members.",
+      salary: "₹40k-50k",
+      vacancy: 4,
+      experience: "1–2 Years",
+      location: "Ahmedabad, India",
+      type: "Full time",
+      skills: ["Team Management", "Leadership", "Performance Monitoring", "Communication", "Problem Solving"],
+    },
+    {
+      title: "Branch Manager",
+      position: "Branch Manager",
+      description:
+        "We are looking for a Branch Manager to oversee branch operations, manage the sales team, ensure business targets are achieved, and maintain strong relationships with clients and partners.",
+      salary: "₹50k-70k",
+      vacancy: 2,
+      experience: "5+ Years",
+      location: "Ahmedabad, India",
+      type: "Full time",
+      skills: ["Team Leadership", "Sales Management", "Business Strategy", "Client Relationship", "Decision Making"],
+    },
+
+    {
+      title: "Operations",
+      position: "Operation Executive",
+      description:
+        "We are looking for an Operation Executive to manage daily operational processes, coordinate between teams, and ensure smooth workflow within the organization.",
+      salary: "₹14k-17k",
+      vacancy: 3,
+      experience: "Fresher",
+      location: "Ahmedabad, India",
+      type: "Full time",
+      skills: ["Process Management", "Reporting", "Coordination", "Problem Solving", "Operations Handling"],
+    },
+    {
+      title: "RM",
+      position: "Relationship Manager",
+      description:
+        "Hiring a Relationship Manager to maintain strong client relationships, resolve queries, and ensure long-term customer satisfaction and retention.",
+      salary: "₹14k-17k",
+      vacancy: 2,
+      experience: "Fresher",
+      location: "Ahmedabad, India",
+      type: "Full time",
+      skills: ["Client Relationship", "Communication", "Customer Support", "Account Handling", "Problem Solving"],
+    },
+
   ];
 
   // Form setup with all configurations
@@ -488,13 +550,13 @@ const Career = () => {
               Job Openings at Abtik Startup Advisor pvt ltd
             </h2>
 
-            <div className="grid grid-cols-1 gap-6 max-w-xl mx-auto">
+            <div className="grid grid-cols-3 gap-6  mx-auto">
               {jobOpenings?.map((job, index) => (
                 <motion.div
                   key={index}
-                  initial={{ y: 50, opacity: 0 }}
+                  initial={{ y: 10, opacity: 0 }}
                   animate={isInViewJobOpenings ? { y: 0, opacity: 1 } : {}}
-                  transition={{ duration: 0.5, delay: getDelay(index, 3) }}
+                  transition={{ duration: 0.1, delay: getDelay(index, 3) }}
                   className="bg-white border-1 hover:border-gray-300 cursor-pointer border-gray-200 rounded-4xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 group"
                 >
                   {/* Job Header */}
