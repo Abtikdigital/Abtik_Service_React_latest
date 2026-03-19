@@ -6,12 +6,16 @@ import Video1 from "../assets/ClientVideoTestimonials/Video1.mp4";
 import Video2 from "../assets/ClientVideoTestimonials/Video2.mp4";
 import Video3 from "../assets/ClientVideoTestimonials/Video3.mp4";
 import Video4 from "../assets/ClientVideoTestimonials/Video4.mp4";
+import Video5 from "../assets/ClientVideoTestimonials/Video5.mp4"
 
 const videos = [
   { id: 1, src: Video1 },
   { id: 2, src: Video2 },
   { id: 3, src: Video3 },
   { id: 4, src: Video4 },
+  {
+    id:5,src:Video5
+  }
 ];
 
 const HIDE_DELAY = 2800;
