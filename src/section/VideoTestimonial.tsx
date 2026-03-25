@@ -1,132 +1,180 @@
-import React, { useRef, useState, useCallback, useEffect } from "react";
+import React, { useRef, useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-/* ─── Assets ─── */
 import Video1 from "../assets/ClientVideoTestimonials/Video1.mp4";
 import Video2 from "../assets/ClientVideoTestimonials/Video2.mp4";
 import Video3 from "../assets/ClientVideoTestimonials/Video3.mp4";
 import Video4 from "../assets/ClientVideoTestimonials/Video4.mp4";
-import Video5 from "../assets/ClientVideoTestimonials/Video5.mp4"
+import Video5 from "../assets/ClientVideoTestimonials/Video5.mp4";
 
 const videos = [
   { id: 1, src: Video1 },
   { id: 2, src: Video2 },
   { id: 3, src: Video3 },
   { id: 4, src: Video4 },
-  {
-    id:5,src:Video5
-  }
+  { id: 5, src: Video5 },
 ];
 
-const HIDE_DELAY = 2800;
+const HIDE_DELAY    = 2800;
 const VIDEOS_PER_PAGE = 3;
+const AUTO_ADVANCE  = 7000; 
 
-/* ─── Icons ─── */
+
 const PlayIcon = () => (
-  <svg width="28" height="28" fill="white" viewBox="0 0 24 24" style={{ marginLeft: 3 }}>
+  <svg width="30" height="30" fill="white" viewBox="0 0 24 24" style={{ marginLeft: 4 }}>
     <polygon points="5,3 19,12 5,21" />
   </svg>
 );
-
 const PauseIcon = () => (
-  <svg width="28" height="28" fill="white" viewBox="0 0 24 24">
+  <svg width="30" height="30" fill="white" viewBox="0 0 24 24">
     <rect x="6" y="4" width="4" height="16" rx="1" />
     <rect x="14" y="4" width="4" height="16" rx="1" />
   </svg>
 );
-
+const SoundOffIcon = () => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
+    <path d="M16.5 12A4.5 4.5 0 0 0 14 7.97v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51A8.796 8.796 0 0 0 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3 3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06a8.99 8.99 0 0 0 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4 9.91 6.09 12 8.18V4z"/>
+  </svg>
+);
+const SoundOnIcon = () => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
+    <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0 0 14 7.97v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+  </svg>
+);
 const ChevronLeft = () => (
-  <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth={3} viewBox="0 0 24 24">
+  <svg width="22" height="22" fill="none" stroke="currentColor" strokeWidth={3} viewBox="0 0 24 24">
     <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
   </svg>
 );
-
 const ChevronRight = () => (
-  <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth={3} viewBox="0 0 24 24">
+  <svg width="22" height="22" fill="none" stroke="currentColor" strokeWidth={3} viewBox="0 0 24 24">
     <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
   </svg>
 );
 
-/* ─── Video Card Component ─── */
+
 interface CardProps {
   src: string;
   isPlaying: boolean;
-  onToggle: () => void;
+  isMuted: boolean;
+  onPlayToggle: () => void;
+  onMuteToggle: () => void;
   onEnded: () => void;
 }
 
-const VideoCard: React.FC<CardProps> = ({ src, isPlaying, onToggle, onEnded }) => {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [showControls, setShowControls] = useState(true);
-  const hideTimer = useRef<NodeJS.Timeout | null>(null);
+const VideoCard: React.FC<CardProps> = ({
+  src,
+  isPlaying,
+  isMuted,
+  onPlayToggle,
+  onMuteToggle,
+  onEnded,
+}) => {
+  const videoRef   = useRef<HTMLVideoElement>(null);
+  const [showCtrl, setShowCtrl] = useState(true);
+  const hideRef    = useRef<NodeJS.Timeout | null>(null);
 
-  const resetHideTimer = useCallback(() => {
-    if (hideTimer.current) clearTimeout(hideTimer.current);
+  
+  const resetHide = useCallback(() => {
+    if (hideRef.current) clearTimeout(hideRef.current);
     if (isPlaying) {
-      hideTimer.current = setTimeout(() => setShowControls(false), HIDE_DELAY);
+      hideRef.current = setTimeout(() => setShowCtrl(false), HIDE_DELAY);
     }
   }, [isPlaying]);
 
+  useEffect(() => {
+    setShowCtrl(true);
+    resetHide();
+    return () => { if (hideRef.current) clearTimeout(hideRef.current); };
+  }, [isPlaying, resetHide]);
+
+  /* ── Play / Pause ──
+     React's `autoPlay` prop is unreliable for programmatic control.
+     We drive everything through the imperative DOM API.
+  */
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
 
     if (isPlaying) {
-      video.play().catch(() => {
-        video.muted = true;
-        video.play();
-      });
+      video.currentTime = 0;
+
+      const doPlay = () => {
+        video.play().catch((e) => console.warn("play() blocked:", e));
+      };
+
+      if (video.readyState >= 2) {       // HAVE_CURRENT_DATA or better → play now
+        doPlay();
+      } else {
+        video.addEventListener("loadeddata", doPlay, { once: true });
+        return () => video.removeEventListener("loadeddata", doPlay);
+      }
     } else {
       video.pause();
+      video.currentTime = 0;
     }
   }, [isPlaying]);
 
+  /* ── Muted ──
+     React does NOT update the `muted` DOM property after first render (known bug).
+     We always sync it imperatively via a separate effect.
+  */
   useEffect(() => {
-    setShowControls(true);
-    resetHideTimer();
-    return () => { if (hideTimer.current) clearTimeout(hideTimer.current); };
-  }, [isPlaying, resetHideTimer]);
+    const video = videoRef.current;
+    if (video) video.muted = isMuted;
+  }, [isMuted]);
 
   return (
     <div
-      className="relative w-full rounded-2xl overflow-hidden shadow-2xl bg-black cursor-pointer group select-none"
+      className="relative w-full rounded-2xl overflow-hidden shadow-2xl bg-black select-none"
       style={{ aspectRatio: "9/16" }}
-      onMouseMove={() => { setShowControls(true); resetHideTimer(); }}
-      onTouchStart={() => { setShowControls(true); resetHideTimer(); }}
-      onClick={onToggle}
+      onMouseMove={() => { setShowCtrl(true); resetHide(); }}
+      onTouchStart={() => { setShowCtrl(true); resetHide(); }}
     >
+      {/* Video element — always muted in markup so the first autoplay is allowed;
+          actual muted state is controlled imperatively above */}
       <video
         ref={videoRef}
         src={src}
         playsInline
-        preload="metadata"
-        className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 "
+        muted          /* ← keeps the HTML attribute; overridden by the effect */
+        preload="auto"
+        loop={false}
+        className="absolute inset-0 w-full h-full object-cover"
         onEnded={onEnded}
       />
 
+      {/* Dark overlay */}
       <motion.div
         className="absolute inset-0 z-10 bg-black/40 pointer-events-none"
-        animate={{ opacity: !isPlaying || showControls ? 1 : 0 }}
+        animate={{ opacity: !isPlaying || showCtrl ? 1 : 0 }}
         transition={{ duration: 0.4 }}
       />
 
+      {/* Full-card click → play/pause */}
+      <div
+        className="absolute inset-0 z-20 cursor-pointer"
+        onClick={onPlayToggle}
+      />
+
+      {/* Centre play/pause button */}
       <AnimatePresence>
-        {(!isPlaying || showControls) && (
+        {(!isPlaying || showCtrl) && (
           <motion.div
+            key="ctrl"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}
-            className="absolute inset-0 z-20 flex items-center justify-center pointer-events-none"
+            className="absolute inset-0 z-30 flex items-center justify-center pointer-events-none"
           >
-            {/* Updated Play/Pause Button to Black/40 */}
-            <div className="w-20 h-20 rounded-full bg-black/40 backdrop-blur-sm border border-white/20 flex items-center justify-center shadow-2xl">
+            <div className="w-20 h-20 rounded-full bg-black/50 backdrop-blur-sm border border-white/20 flex items-center justify-center shadow-2xl">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={isPlaying ? "pause" : "play"}
                   initial={{ opacity: 0, scale: 0.5 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.5 }}
-                  transition={{ duration: 0.2 }}
+                  transition={{ duration: 0.15 }}
                 >
                   {isPlaying ? <PauseIcon /> : <PlayIcon />}
                 </motion.div>
@@ -135,24 +183,86 @@ const VideoCard: React.FC<CardProps> = ({ src, isPlaying, onToggle, onEnded }) =
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* Mute / Unmute button — top-right corner, always visible */}
+      <motion.button
+        className="absolute top-3 right-3 z-40 w-9 h-9 rounded-full bg-black/60 backdrop-blur-sm border border-white/20 flex items-center justify-center hover:bg-black/80 transition-colors"
+        onClick={(e) => { e.stopPropagation(); onMuteToggle(); }}
+        whileTap={{ scale: 0.85 }}
+        title={isMuted ? "Unmute" : "Mute"}
+      >
+        {isMuted ? <SoundOffIcon /> : <SoundOnIcon />}
+      </motion.button>
     </div>
   );
 };
 
-/* ─── Main Section Component ─── */
+/* ─── Main Component ─── */
 const VideoTestimonial: React.FC = () => {
-  const [playingIndex, setPlayingIndex] = useState<number | null>(null);
+  const [currentIdx, setCurrentIdx] = useState(0);
+  const [isPaused,   setIsPaused]   = useState(false);
+  const [isMuted,    setIsMuted]    = useState(true);   // muted until user opts in
   const [desktopPage, setDesktopPage] = useState(0);
+
+  // Keep a ref so async callbacks (onEnded) always see the latest index
+  const currentIdxRef = useRef(0);
+  useEffect(() => { currentIdxRef.current = currentIdx; }, [currentIdx]);
 
   const totalPages = Math.ceil(videos.length / VIDEOS_PER_PAGE);
 
-  const handlePageChange = (newPage: number) => {
-    setPlayingIndex(null);
-    setDesktopPage(newPage);
+  /* ── Navigate to a specific index ── */
+  const goTo = useCallback((idx: number, mute = true) => {
+    setCurrentIdx(idx);
+    setDesktopPage(Math.floor(idx / VIDEOS_PER_PAGE));
+    if (mute) setIsMuted(true);
+  }, []);
+
+  /* ── Auto-advance effect ──
+     Runs whenever currentIdx changes OR isPaused flips.
+     Schedules the next advance after AUTO_ADVANCE ms.
+     Cleanup cancels the pending timer if anything changes sooner.
+  */
+  useEffect(() => {
+    if (isPaused) return;                          // user paused → don't advance
+
+    const timer = setTimeout(() => {
+      const next = (currentIdx + 1) % videos.length;
+      goTo(next, true);                            // auto-advance keeps muted
+    }, AUTO_ADVANCE);
+
+    return () => clearTimeout(timer);
+  }, [currentIdx, isPaused, goTo]);
+
+  /* ── When video ends naturally → advance immediately (don't wait for timer) ── */
+  const handleVideoEnd = useCallback(() => {
+    const next = (currentIdxRef.current + 1) % videos.length;
+    goTo(next, true);
+    setIsPaused(false);
+  }, [goTo]);
+
+  /* ── User clicks a card ── */
+  const handlePlayToggle = (idx: number) => {
+    if (idx !== currentIdx) {
+      // Switch to the clicked video → unmute so they can hear it
+      goTo(idx, false);
+      setIsMuted(false);
+      setIsPaused(false);
+    } else {
+      // Toggle pause on the current video
+      setIsPaused((prev) => !prev);
+    }
   };
 
-  const handleToggle = (index: number) => {
-    setPlayingIndex(prev => (prev === index ? null : index));
+  /* ── Mute / Unmute button ── */
+  const handleMuteToggle = () => setIsMuted((prev) => !prev);
+
+  /* ── Page navigation arrows / dots ── */
+  const handlePageChange = (page: number) => {
+    const firstOnPage = page * VIDEOS_PER_PAGE;
+    setDesktopPage(page);
+    setCurrentIdx(firstOnPage);
+    setIsMuted(true);
+    setIsPaused(false);
   };
 
   return (
@@ -162,7 +272,7 @@ const VideoTestimonial: React.FC = () => {
           Hear From Our Successful Clients
         </h2>
 
-        {/* Desktop Layout */}
+        {/* ── Desktop ── */}
         <div className="hidden md:block">
           <AnimatePresence mode="wait">
             <motion.div
@@ -175,8 +285,8 @@ const VideoTestimonial: React.FC = () => {
             >
               {videos
                 .slice(desktopPage * VIDEOS_PER_PAGE, (desktopPage + 1) * VIDEOS_PER_PAGE)
-                .map((video, idx) => {
-                  const globalIdx = desktopPage * VIDEOS_PER_PAGE + idx;
+                .map((video, i) => {
+                  const globalIdx = desktopPage * VIDEOS_PER_PAGE + i;
                   return (
                     <motion.div
                       key={video.id}
@@ -185,9 +295,11 @@ const VideoTestimonial: React.FC = () => {
                     >
                       <VideoCard
                         src={video.src}
-                        isPlaying={playingIndex === globalIdx}
-                        onToggle={() => handleToggle(globalIdx)}
-                        onEnded={() => setPlayingIndex(null)}
+                        isPlaying={currentIdx === globalIdx && !isPaused}
+                        isMuted={isMuted}
+                        onPlayToggle={() => handlePlayToggle(globalIdx)}
+                        onMuteToggle={handleMuteToggle}
+                        onEnded={handleVideoEnd}
                       />
                     </motion.div>
                   );
@@ -195,10 +307,25 @@ const VideoTestimonial: React.FC = () => {
             </motion.div>
           </AnimatePresence>
 
-          {/* Desktop Pagination Navigation */}
+          {/* Progress dots — one per video */}
+          <div className="flex items-center justify-center gap-2 mt-8">
+            {videos.map((_, i) => (
+              <motion.button
+                key={i}
+                className="h-1.5 rounded-full"
+                animate={{
+                  backgroundColor: currentIdx === i ? "#052EAA" : "#d1d5db",
+                  width: currentIdx === i ? 32 : 10,
+                }}
+                transition={{ duration: 0.4 }}
+                onClick={() => { goTo(i, true); setIsPaused(false); }}
+              />
+            ))}
+          </div>
+
+          {/* Page arrows */}
           {totalPages > 1 && (
-            <div className="flex items-center justify-center gap-8 mt-16">
-              {/* Left Button with Gradient */}
+            <div className="flex items-center justify-center gap-8 mt-6">
               <motion.button
                 onClick={() => handlePageChange(desktopPage - 1)}
                 disabled={desktopPage === 0}
@@ -207,7 +334,6 @@ const VideoTestimonial: React.FC = () => {
               >
                 <ChevronLeft />
               </motion.button>
-
               <div className="flex gap-4">
                 {Array.from({ length: totalPages }).map((_, p) => (
                   <button
@@ -219,8 +345,6 @@ const VideoTestimonial: React.FC = () => {
                   />
                 ))}
               </div>
-
-              {/* Right Button with Gradient */}
               <motion.button
                 onClick={() => handlePageChange(desktopPage + 1)}
                 disabled={desktopPage === totalPages - 1}
@@ -233,15 +357,17 @@ const VideoTestimonial: React.FC = () => {
           )}
         </div>
 
-        {/* Mobile Layout */}
+        {/* ── Mobile ── */}
         <div className="md:hidden flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-10">
           {videos.map((video, i) => (
             <div key={video.id} className="snap-center min-w-[85vw] max-w-[320px]">
               <VideoCard
                 src={video.src}
-                isPlaying={playingIndex === i}
-                onToggle={() => handleToggle(i)}
-                onEnded={() => setPlayingIndex(null)}
+                isPlaying={currentIdx === i && !isPaused}
+                isMuted={isMuted}
+                onPlayToggle={() => handlePlayToggle(i)}
+                onMuteToggle={handleMuteToggle}
+                onEnded={handleVideoEnd}
               />
             </div>
           ))}

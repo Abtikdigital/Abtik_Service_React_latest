@@ -14,7 +14,10 @@ import { motion, useInView } from "framer-motion";
 import { memo, useRef } from "react";
 import { HeadProvider, Meta, Title } from "react-head";
 import seoData from "../data/seoData.json";
+
+
 const Home = () => {
+
   const dispatch = useDispatch();
   const handleOpenDialog = () => {
     dispatch({ type: "open" });

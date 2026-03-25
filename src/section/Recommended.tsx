@@ -1,10 +1,11 @@
-import Image1 from "../assets/Recommended/starup.jpg";
-import Image2 from "../assets/Recommended/seed.jpeg";
-import Image3 from "../assets/Recommended/msme.jpeg";
-import Image4 from "../assets/Recommended/nbfc.jpeg";
-import Image5 from "../assets/Recommended/pmegp.jpeg";
-import Image6 from "../assets/Recommended/naiif.jpeg";
-import Image7 from "../assets/Recommended/gst tax.jpg";
+import Image1 from "../assets/Services/StartupIndia.webp";
+import Image2 from "../assets/Services/SeedFund.webp";
+import Image3 from "../assets/Services/MsmeLoan.webp";
+import Image4 from "../assets/Services/NbfcLoan.webp";
+import Image5 from "../assets/Services/PmegpLoan.webp";
+import Image6 from "../assets/Services/NaifLoan.webp";
+import Image7 from "../assets/Services/Gst&Compliance.webp";
+import Image8 from "../assets/Services/MsmeCertificate.webp"
 
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect, useState, memo } from "react";
@@ -63,7 +64,7 @@ const recommendedData = [
   },
   {
     title: "MSME Certificate",
-    img: Image1,
+    img: Image8,
     description:
       "MSME Certificate is a government issued proof that your business is registered as a Micro, Small, or Medium Enterprise in India.",
     path: "/services/certificate/msme",
