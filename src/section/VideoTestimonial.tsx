@@ -17,8 +17,7 @@ const videos = [
 
 const HIDE_DELAY    = 2800;
 const VIDEOS_PER_PAGE = 3;
-const AUTO_ADVANCE  = 7000; 
-
+// Sequential progress now handles autoplay one-by-one.
 
 const PlayIcon = () => (
   <svg width="30" height="30" fill="white" viewBox="0 0 24 24" style={{ marginLeft: 4 }}>
@@ -97,13 +96,20 @@ const VideoCard: React.FC<CardProps> = ({
     if (!video) return;
 
     if (isPlaying) {
-      video.currentTime = 0;
-
       const doPlay = () => {
-        video.play().catch((e) => console.warn("play() blocked:", e));
+        video.play().catch((err) => {
+          // If unmuted play is blocked, try muted as a fallback
+          if (!video.muted) {
+            console.warn("Unmuted play blocked, falling back to muted:", err);
+            video.muted = true;
+            video.play().catch((e2) => console.error("Muted play also blocked:", e2));
+          } else {
+            console.error("Muted play blocked:", err);
+          }
+        });
       };
 
-      if (video.readyState >= 2) {       // HAVE_CURRENT_DATA or better → play now
+      if (video.readyState >= 2) {
         doPlay();
       } else {
         video.addEventListener("loadeddata", doPlay, { once: true });
@@ -111,7 +117,6 @@ const VideoCard: React.FC<CardProps> = ({
       }
     } else {
       video.pause();
-      video.currentTime = 0;
     }
   }, [isPlaying]);
 
@@ -121,7 +126,10 @@ const VideoCard: React.FC<CardProps> = ({
   */
   useEffect(() => {
     const video = videoRef.current;
-    if (video) video.muted = isMuted;
+    if (video) {
+      video.muted = isMuted;
+      video.volume = 1.0; // Ensure full volume when unmuted
+    }
   }, [isMuted]);
 
   return (
@@ -201,8 +209,9 @@ const VideoCard: React.FC<CardProps> = ({
 const VideoTestimonial: React.FC = () => {
   const [currentIdx, setCurrentIdx] = useState(0);
   const [isPaused,   setIsPaused]   = useState(false);
-  const [isMuted,    setIsMuted]    = useState(true);   // muted until user opts in
+  const [isMuted,    setIsMuted]    = useState(false);  // Unmuted by default as per user request
   const [desktopPage, setDesktopPage] = useState(0);
+  const mobileScrollRef = useRef<HTMLDivElement>(null);
 
   // Keep a ref so async callbacks (onEnded) always see the latest index
   const currentIdxRef = useRef(0);
@@ -211,10 +220,10 @@ const VideoTestimonial: React.FC = () => {
   const totalPages = Math.ceil(videos.length / VIDEOS_PER_PAGE);
 
   /* ── Navigate to a specific index ── */
-  const goTo = useCallback((idx: number, mute = true) => {
+  const goTo = useCallback((idx: number, shouldMute?: boolean) => {
     setCurrentIdx(idx);
     setDesktopPage(Math.floor(idx / VIDEOS_PER_PAGE));
-    if (mute) setIsMuted(true);
+    if (typeof shouldMute === "boolean") setIsMuted(shouldMute);
   }, []);
 
   /* ── Auto-advance effect ──
@@ -222,23 +231,26 @@ const VideoTestimonial: React.FC = () => {
      Schedules the next advance after AUTO_ADVANCE ms.
      Cleanup cancels the pending timer if anything changes sooner.
   */
+  // AUTO ADVANCE TIMER REMOVED: 
+  // We now rely on handleVideoEnd (onEnded) for the "one-by-one" experience.
+  // This prevents the 7s cutoff for longer testimonials.
+
+  /* ── Sync mobile scroll to active card ── */
   useEffect(() => {
-    if (isPaused) return;                          // user paused → don't advance
-
-    const timer = setTimeout(() => {
-      const next = (currentIdx + 1) % videos.length;
-      goTo(next, true);                            // auto-advance keeps muted
-    }, AUTO_ADVANCE);
-
-    return () => clearTimeout(timer);
-  }, [currentIdx, isPaused, goTo]);
+    if (window.innerWidth < 768 && mobileScrollRef.current) {
+      const activeCard = mobileScrollRef.current.children[currentIdx] as HTMLElement;
+      if (activeCard) {
+        activeCard.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+      }
+    }
+  }, [currentIdx]);
 
   /* ── When video ends naturally → advance immediately (don't wait for timer) ── */
   const handleVideoEnd = useCallback(() => {
     const next = (currentIdxRef.current + 1) % videos.length;
-    goTo(next, true);
+    goTo(next, isMuted);
     setIsPaused(false);
-  }, [goTo]);
+  }, [goTo, isMuted]);
 
   /* ── User clicks a card ── */
   const handlePlayToggle = (idx: number) => {
@@ -259,9 +271,8 @@ const VideoTestimonial: React.FC = () => {
   /* ── Page navigation arrows / dots ── */
   const handlePageChange = (page: number) => {
     const firstOnPage = page * VIDEOS_PER_PAGE;
-    setDesktopPage(page);
-    setCurrentIdx(firstOnPage);
-    setIsMuted(true);
+    // Preserving isMuted state for a smoother experience
+    goTo(firstOnPage, isMuted);
     setIsPaused(false);
   };
 
@@ -358,7 +369,10 @@ const VideoTestimonial: React.FC = () => {
         </div>
 
         {/* ── Mobile ── */}
-        <div className="md:hidden flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-10">
+        <div 
+          ref={mobileScrollRef}
+          className="md:hidden flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-10"
+        >
           {videos.map((video, i) => (
             <div key={video.id} className="snap-center min-w-[85vw] max-w-[320px]">
               <VideoCard
