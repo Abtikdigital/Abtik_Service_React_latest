@@ -1,7 +1,7 @@
 import Mainlayout from "../section/Mainlayout";
 import BgImage from "../assets/Hero/bgImg.svg"; // Assuming a similar background image for Angel Investor
 import Contact from "../section/Contact";
-import Image1 from "../assets/AngelInvestor/Image1.png"; // Assuming a similar image for Angel Investor
+import Image1 from "../assets/Services/Angel Investors.webp"; // Assuming a similar image for Angel Investor
 import {
     Mail,
     User,

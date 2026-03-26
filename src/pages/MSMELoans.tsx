@@ -1,7 +1,7 @@
 import Mainlayout from "../section/Mainlayout";
 import BgImage from "../assets/Hero/bgImg.svg";
 import Contact from "../section/Contact";
-import Image1 from "../assets/About/bgImg.svg"; // Add your MSME image here
+import Image1 from "../assets/Services/MsmeLoan.webp";
 import {
   Mail,
   User,

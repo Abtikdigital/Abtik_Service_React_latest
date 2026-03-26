@@ -1,7 +1,7 @@
 import Mainlayout from "../section/Mainlayout";
 import BgImage from "../assets/Hero/bgImg.svg";
 import Contact from "../section/Contact";
-import Image1 from "../assets/MakeInIndia/Image1.png";
+import Image1 from "../assets/Services/MakeInIndia.webp";
 import {
   Mail,
   User,

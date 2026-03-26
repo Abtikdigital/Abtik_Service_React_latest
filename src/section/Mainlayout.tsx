@@ -76,17 +76,14 @@ const ShadcnDropdown = ({
         type="button"
         onClick={() => !disabled && setIsOpen(!isOpen)}
         disabled={disabled}
-        className={`w-full pl-10 pr-4 py-2 border ${
-          error ? "border-red-500" : "border-gray-300"
-        } rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[#052EAA] focus:border-transparent h-[38px] transition-all duration-200 ${
-          disabled ? "cursor-not-allowed opacity-50" : ""
-        } flex justify-between items-center text-left`}
+        className={`w-full pl-10 pr-4 py-2 border ${error ? "border-red-500" : "border-gray-300"
+          } rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[#052EAA] focus:border-transparent h-[38px] transition-all duration-200 ${disabled ? "cursor-not-allowed opacity-50" : ""
+          } flex justify-between items-center text-left`}
       >
         <span className="text-sm">{selectedLabel}</span>
         <svg
-          className={`fill-current h-4 w-4 text-gray-700 transform transition-transform duration-200 ${
-            isOpen ? "rotate-180" : ""
-          }`}
+          className={`fill-current h-4 w-4 text-gray-700 transform transition-transform duration-200 ${isOpen ? "rotate-180" : ""
+            }`}
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
         >
@@ -298,7 +295,7 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
   }, []);
 
   useEffect(() => {
-    if (pathname === "/news-insights/e-books"|| pathname==="/career") return;
+    if (pathname === "/news-insights/e-books" || pathname === "/career") return;
 
     const t = window.setTimeout(() => {
       dispatch({ type: "open" });
@@ -379,11 +376,10 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
                               id="name"
                               type="text"
                               placeholder="Enter your full name"
-                              className={`w-full pl-10 pr-4 py-2 border ${
-                                errors.name
-                                  ? "border-red-500"
-                                  : "border-gray-300"
-                              } rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[#052EAA] focus:border-transparent h-[38px] transition-all duration-200`}
+                              className={`w-full pl-10 pr-4 py-2 border ${errors.name
+                                ? "border-red-500"
+                                : "border-gray-300"
+                                } rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[#052EAA] focus:border-transparent h-[38px] transition-all duration-200`}
                               disabled={isSubmitting}
                             />
                           </div>
@@ -414,11 +410,10 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
                               id="companyname"
                               type="text"
                               placeholder="Enter your company name"
-                              className={`w-full pl-10 pr-4 py-2 border ${
-                                errors.companyname
-                                  ? "border-red-500"
-                                  : "border-gray-300"
-                              } rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[#052EAA] focus:border-transparent h-[38px] transition-all duration-200`}
+                              className={`w-full pl-10 pr-4 py-2 border ${errors.companyname
+                                ? "border-red-500"
+                                : "border-gray-300"
+                                } rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[#052EAA] focus:border-transparent h-[38px] transition-all duration-200`}
                               disabled={isSubmitting}
                             />
                           </div>
@@ -447,11 +442,10 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
                               id="email"
                               type="email"
                               placeholder="your.email@example.com"
-                              className={`w-full pl-10 pr-4 py-2 border ${
-                                errors.email
-                                  ? "border-red-500"
-                                  : "border-gray-300"
-                              } rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[#052EAA] focus:border-transparent h-[38px] transition-all duration-200`}
+                              className={`w-full pl-10 pr-4 py-2 border ${errors.email
+                                ? "border-red-500"
+                                : "border-gray-300"
+                                } rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[#052EAA] focus:border-transparent h-[38px] transition-all duration-200`}
                               disabled={isSubmitting}
                             />
                           </div>
@@ -486,11 +480,10 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
                               ) => {
                                 if (!/[0-9]/.test(e.key)) e.preventDefault();
                               }}
-                              className={`w-full pl-10 pr-4 py-2 border ${
-                                errors.phone
-                                  ? "border-red-500"
-                                  : "border-gray-300"
-                              } rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[#052EAA] focus:border-transparent h-[38px] transition-all duration-200`}
+                              className={`w-full pl-10 pr-4 py-2 border ${errors.phone
+                                ? "border-red-500"
+                                : "border-gray-300"
+                                } rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[#052EAA] focus:border-transparent h-[38px] transition-all duration-200`}
                               disabled={isSubmitting}
                             />
                           </div>
@@ -552,11 +545,10 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
                               {...register("message")}
                               id="message"
                               placeholder="Enter your message"
-                              className={`w-full pl-10 pr-4 py-2 border ${
-                                errors.message
-                                  ? "border-red-500"
-                                  : "border-gray-300"
-                              } rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[#052EAA] focus:border-transparent min-h-[100px] transition-all duration-200 resize-vertical`}
+                              className={`w-full pl-10 pr-4 py-2 border ${errors.message
+                                ? "border-red-500"
+                                : "border-gray-300"
+                                } rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[#052EAA] focus:border-transparent min-h-[100px] transition-all duration-200 resize-vertical`}
                               disabled={isSubmitting}
                             />
                           </div>

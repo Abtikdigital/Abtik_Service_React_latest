@@ -1,7 +1,7 @@
 import Mainlayout from "../section/Mainlayout";
 import BgImage from "../assets/Hero/bgImg.svg"; // Assuming a similar background image for Venture Capital
 import Contact from "../section/Contact";
-import Image1 from "../assets/VentureCapital/Image1.png"; // Assuming a similar image for Venture Capital
+import Image1 from "../assets/Services/Venture Capital.webp"; // Assuming a similar image for Venture Capital
 import {
     Mail,
     User,

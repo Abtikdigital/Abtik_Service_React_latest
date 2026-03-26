@@ -1,7 +1,7 @@
 import Mainlayout from "../section/Mainlayout";
 import BgImage from "../assets/Hero/bgImg.svg";
 import Contact from "../section/Contact";
-import Image1 from "../assets/SeedFund/Image1.png";
+import Image1 from "../assets/Services/SeedFund.webp";
 import {
   Mail,
   User,

@@ -1,12 +1,16 @@
 import { useNavigate } from "react-router-dom";
-import Image1 from "../assets/Grants/goverment grants.jpg";
-import Image2 from "../assets/StartUpIndia/startupindia1.png";
-import Image3 from "../assets/MSMECertificate/msme1.png";
-import Image4 from "../assets/OurService/seed.jpeg";
-import Image5 from "../assets/TradeMark/Trademark.jpg";
-import Image6 from "../assets/OurService/iso.png";
-import Image7 from "../assets/OurService/zed.jpeg";
-import Image8 from "../assets/OurService/pmegp.jpeg";
+import Image1 from "../assets/Services/Grants.webp";
+import Image2 from "../assets/Services/StartupIndia.webp";
+import Image3 from "../assets/Services/MsmeCertificate.webp";
+import Image4 from "../assets/Services/SeedFund.webp";
+import Image5 from "../assets/Services/TrademarkRegistration.webp";
+import Image6 from "../assets/Services/IsoCertificate.webp";
+import Image7 from "../assets/Services/ZedCertificate.webp";
+import Image8 from "../assets/Services/PmegpLoan.webp";
+import Image9 from "../assets/Services/Gst&Compliance.webp";
+import Image10 from "../assets/Services/MsmeLoan.webp";
+import Image11 from "../assets/Services/NaifLoan.webp";
+import Image12 from "../assets/Services/NbfcLoan.webp";
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect, useState, memo } from "react";
 
@@ -66,6 +70,34 @@ const services = [
       "Start your venture with up to ₹25 lakh via PMEGP, where we streamline applications for government loans and subsidies to ease the process.",
     img: Image8,
     path: "/services/funding/subsidy/pmegp",
+  },
+  {
+    title: "GST & Compliance",
+    description:
+      "Streamline your tax processes with our comprehensive GST registration and compliance services, ensuring your business stays updated with legal requirements.",
+    img: Image9,
+    path: "/services/tax/gst-filing",
+  },
+  {
+    title: "MSME Loan",
+    description:
+      "Fuel your small business growth with specialized MSME loans, offering competitive interest rates and flexible terms to meet your capital needs.",
+    img: Image10,
+    path: "/services/funding/msme-loans",
+  },
+  {
+    title: "NAIFF/AIFF Loan",
+    description:
+      "Scale your innovative business with strategic equity investments and loans from NAIFF/AIFF funds, customized for growth-stage companies.",
+    img: Image11,
+    path: "/services/funding/agriculture/naiff-aiff",
+  },
+  {
+    title: "NBFC Loan",
+    description:
+      "Secure business funding through Non-Banking Financial Companies (NBFCs) with faster processing and customized loan options for your unique requirements.",
+    img: Image12,
+    path: "/services/funding/private-funding/nbfc",
   },
 ];
 
@@ -134,28 +166,30 @@ const OurService = () => {
               initial={{ y: 50, opacity: 0 }}
               animate={isInView ? { y: 0, opacity: 1 } : {}}
               transition={{ duration: 0.5, delay: getDelay(index) }}
-              className="space-y-4"
+              onClick={() => HandleClick(service?.path)}
+              className="bg-white cursor-pointer p-2.5 pb-6 shadow-lg rounded-4xl space-y-4 duration-300 transition-all hover:scale-105"
             >
-              <div className="w-full aspect-[4/3] rounded-xl overflow-hidden">
+              <div className="w-full overflow-hidden rounded-t-3xl">
                 <img
                   src={service.img}
-                  className="w-full h-full object-cover hover:scale-105 transition-all duration-300 cursor-pointer"
+                  className="w-full h-full object-cover transition-all duration-300"
                   alt={service.title}
                 />
               </div>
-              <h2 className="text-center text-xl text-[#3CA2E2] font-semibold font-4">
-                {service?.title}
-              </h2>
-              <p className="text-center paragraph line-clamp-3 font-4">
-                {service?.description}
-              </p>
-              <div className="text-center">
-                <button
-                  onClick={() => HandleClick(service?.path)}
-                  className="custom-btn w-full max-w-[120px] !py-3 mx-auto font-2"
-                >
-                  Explore
-                </button>
+              <div className="space-y-3 px-3">
+                <h2 className="text-center text-xl text-[#3CA2E2] font-semibold font-4 line-clamp-2">
+                  {service?.title}
+                </h2>
+                <p className="text-center paragraph line-clamp-3 font-4">
+                  {service?.description}
+                </p>
+                <div className="text-center pt-2">
+                  <button
+                    className="custom-btn w-full max-w-[120px] !py-3 mx-auto font-2"
+                  >
+                    Explore
+                  </button>
+                </div>
               </div>
             </motion.div>
           ))}
