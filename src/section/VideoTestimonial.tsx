@@ -128,9 +128,15 @@ const VideoCard: React.FC<CardProps> = ({
     const video = videoRef.current;
     if (video) {
       video.muted = isMuted;
-      video.volume = 1.0; // Ensure full volume when unmuted
+      video.volume = 1.0;
+      // If the video is supposed to be playing but was muted, 
+      // unmuting it (via user gesture) should re-trigger the play() call 
+      // as browsers now allow it.
+      if (!isMuted && isPlaying) {
+        video.play().catch((e) => console.warn("Unmuted play re-trigger failed:", e));
+      }
     }
-  }, [isMuted]);
+  }, [isMuted, isPlaying]);
 
   return (
     <div
@@ -209,13 +215,29 @@ const VideoCard: React.FC<CardProps> = ({
 const VideoTestimonial: React.FC = () => {
   const [currentIdx, setCurrentIdx] = useState(0);
   const [isPaused,   setIsPaused]   = useState(false);
-  const [isMuted,    setIsMuted]    = useState(false);  // Unmuted by default as per user request
+  const [isMuted,    setIsMuted]    = useState(true);   // Start muted for safe autoplay; interaction listener will unmute it.
   const [desktopPage, setDesktopPage] = useState(0);
   const mobileScrollRef = useRef<HTMLDivElement>(null);
 
   // Keep a ref so async callbacks (onEnded) always see the latest index
   const currentIdxRef = useRef(0);
   useEffect(() => { currentIdxRef.current = currentIdx; }, [currentIdx]);
+
+  useEffect(() => {
+    // Browsers block unmuted autoplay until a user gesture.
+    // We add a one-time global listener to "unlock" audio for the site as soon as the user interacts.
+    const unlockAudio = () => {
+      setIsMuted(false);
+      window.removeEventListener("mouseup", unlockAudio);
+      window.removeEventListener("touchend", unlockAudio);
+    };
+    window.addEventListener("mouseup", unlockAudio);
+    window.addEventListener("touchend", unlockAudio);
+    return () => {
+      window.removeEventListener("mouseup", unlockAudio);
+      window.removeEventListener("touchend", unlockAudio);
+    };
+  }, []);
 
   const totalPages = Math.ceil(videos.length / VIDEOS_PER_PAGE);
 
