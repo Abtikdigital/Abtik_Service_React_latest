@@ -217,7 +217,17 @@ const VideoTestimonial: React.FC = () => {
   const [isPaused,   setIsPaused]   = useState(false);
   const [isMuted,    setIsMuted]    = useState(true);   // Start muted for safe autoplay; interaction listener will unmute it.
   const [desktopPage, setDesktopPage] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
   const mobileScrollRef = useRef<HTMLDivElement>(null);
+
+  // Viewport detection to prevent duplicate playing
+  useEffect(() => {
+    const mql = window.matchMedia("(max-width: 767px)");
+    const handler = (e: MediaQueryListEvent | MediaQueryList) => setIsMobile(e.matches);
+    handler(mql);
+    mql.addEventListener("change", handler);
+    return () => mql.removeEventListener("change", handler);
+  }, []);
 
   // Keep a ref so async callbacks (onEnded) always see the latest index
   const currentIdxRef = useRef(0);
@@ -328,7 +338,7 @@ const VideoTestimonial: React.FC = () => {
                     >
                       <VideoCard
                         src={video.src}
-                        isPlaying={currentIdx === globalIdx && !isPaused}
+                        isPlaying={!isMobile && currentIdx === globalIdx && !isPaused}
                         isMuted={isMuted}
                         onPlayToggle={() => handlePlayToggle(globalIdx)}
                         onMuteToggle={handleMuteToggle}
@@ -399,7 +409,7 @@ const VideoTestimonial: React.FC = () => {
             <div key={video.id} className="snap-center min-w-[85vw] max-w-[320px]">
               <VideoCard
                 src={video.src}
-                isPlaying={currentIdx === i && !isPaused}
+                isPlaying={isMobile && currentIdx === i && !isPaused}
                 isMuted={isMuted}
                 onPlayToggle={() => handlePlayToggle(i)}
                 onMuteToggle={handleMuteToggle}
