@@ -54,7 +54,7 @@ const Career = () => {
       position: "Business Development Executive",
       description:
         "We are hiring a BDE to identify new leads, communicate with prospects, and help grow the company through effective sales conversations and follow-ups.",
-      salary: "₹20k fixed with performance-based incentives.",
+      salary: "₹15k fixed with performance-based incentives.",
       vacancy: 20,
       experience: "Fresher",
       location: "Ahmedabad, India",
