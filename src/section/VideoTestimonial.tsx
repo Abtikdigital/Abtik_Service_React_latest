@@ -8,11 +8,14 @@ import Video4 from "../assets/ClientVideoTestimonials/Video4.mp4";
 import Video5 from "../assets/ClientVideoTestimonials/Video5.mp4";
 
 const videos = [
-  { id: 1, src: Video1 },
-  { id: 2, src: Video2 },
-  { id: 3, src: Video3 },
-  { id: 4, src: Video4 },
-  { id: 5, src: Video5 },
+  { id: 1, src: Video1, type: "local" },
+  { id: 2, src: Video2, type: "local" },
+  { id: 3, src: Video3, type: "local" },
+  { id: 4, src: Video4, type: "local" },
+  { id: 5, src: Video5, type: "local" },
+  { id: 6, src: "https://www.youtube.com/embed/eun3ivAfHaM?si=RKRV12txHBOfujYj", type: "youtube" },
+  { id: 7, src: "https://www.youtube.com/embed/CAUS5rvlP4E?si=a1ijBJMhBB9GIV-t", type: "youtube" },
+  { id: 8, src: "https://www.youtube.com/embed/-Tw9AASdK-A?si=2PIf8ni3mLprpPld", type: "youtube" },
 ];
 
 const HIDE_DELAY    = 2800;
@@ -54,6 +57,7 @@ const ChevronRight = () => (
 
 interface CardProps {
   src: string;
+  type?: string;
   isPlaying: boolean;
   isMuted: boolean;
   onPlayToggle: () => void;
@@ -63,6 +67,7 @@ interface CardProps {
 
 const VideoCard: React.FC<CardProps> = ({
   src,
+  type = "local",
   isPlaying,
   isMuted,
   onPlayToggle,
@@ -87,18 +92,15 @@ const VideoCard: React.FC<CardProps> = ({
     return () => { if (hideRef.current) clearTimeout(hideRef.current); };
   }, [isPlaying, resetHide]);
 
-  /* ── Play / Pause ──
-     React's `autoPlay` prop is unreliable for programmatic control.
-     We drive everything through the imperative DOM API.
-  */
+  /* ── Local Video Sync ── */
   useEffect(() => {
+    if (type !== "local") return;
     const video = videoRef.current;
     if (!video) return;
 
     if (isPlaying) {
       const doPlay = () => {
         video.play().catch((err) => {
-          // If unmuted play is blocked, try muted as a fallback
           if (!video.muted) {
             console.warn("Unmuted play blocked, falling back to muted:", err);
             video.muted = true;
@@ -118,25 +120,19 @@ const VideoCard: React.FC<CardProps> = ({
     } else {
       video.pause();
     }
-  }, [isPlaying]);
+  }, [isPlaying, type]);
 
-  /* ── Muted ──
-     React does NOT update the `muted` DOM property after first render (known bug).
-     We always sync it imperatively via a separate effect.
-  */
   useEffect(() => {
+    if (type !== "local") return;
     const video = videoRef.current;
     if (video) {
       video.muted = isMuted;
       video.volume = 1.0;
-      // If the video is supposed to be playing but was muted, 
-      // unmuting it (via user gesture) should re-trigger the play() call 
-      // as browsers now allow it.
       if (!isMuted && isPlaying) {
         video.play().catch((e) => console.warn("Unmuted play re-trigger failed:", e));
       }
     }
-  }, [isMuted, isPlaying]);
+  }, [isMuted, isPlaying, type]);
 
   return (
     <div
@@ -145,68 +141,74 @@ const VideoCard: React.FC<CardProps> = ({
       onMouseMove={() => { setShowCtrl(true); resetHide(); }}
       onTouchStart={() => { setShowCtrl(true); resetHide(); }}
     >
-      {/* Video element — always muted in markup so the first autoplay is allowed;
-          actual muted state is controlled imperatively above */}
-      <video
-        ref={videoRef}
-        src={src}
-        playsInline
-        muted          /* ← keeps the HTML attribute; overridden by the effect */
-        preload="auto"
-        loop={false}
-        className="absolute inset-0 w-full h-full object-cover"
-        onEnded={onEnded}
-      />
+      {type === "youtube" ? (
+        <iframe
+          src={`${src}${src.includes("?") ? "&" : "?"}autoplay=${isPlaying ? 1 : 0}&mute=${isMuted ? 1 : 0}`}
+          title="YouTube video player"
+          className="absolute inset-0 w-full h-full border-0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+        />
+      ) : (
+        <>
+          <video
+            ref={videoRef}
+            src={src}
+            playsInline
+            muted
+            preload="auto"
+            loop={false}
+            className="absolute inset-0 w-full h-full object-cover"
+            onEnded={onEnded}
+          />
 
-      {/* Dark overlay */}
-      <motion.div
-        className="absolute inset-0 z-10 bg-black/40 pointer-events-none"
-        animate={{ opacity: !isPlaying || showCtrl ? 1 : 0 }}
-        transition={{ duration: 0.4 }}
-      />
-
-      {/* Full-card click → play/pause */}
-      <div
-        className="absolute inset-0 z-20 cursor-pointer"
-        onClick={onPlayToggle}
-      />
-
-      {/* Centre play/pause button */}
-      <AnimatePresence>
-        {(!isPlaying || showCtrl) && (
           <motion.div
-            key="ctrl"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.8 }}
-            className="absolute inset-0 z-30 flex items-center justify-center pointer-events-none"
-          >
-            <div className="w-20 h-20 rounded-full bg-black/50 backdrop-blur-sm border border-white/20 flex items-center justify-center shadow-2xl">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={isPlaying ? "pause" : "play"}
-                  initial={{ opacity: 0, scale: 0.5 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.5 }}
-                  transition={{ duration: 0.15 }}
-                >
-                  {isPlaying ? <PauseIcon /> : <PlayIcon />}
-                </motion.div>
-              </AnimatePresence>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            className="absolute inset-0 z-10 bg-black/40 pointer-events-none"
+            animate={{ opacity: !isPlaying || showCtrl ? 1 : 0 }}
+            transition={{ duration: 0.4 }}
+          />
 
-      {/* Mute / Unmute button — top-right corner, always visible */}
-      <motion.button
-        className="absolute top-3 right-3 z-40 w-9 h-9 rounded-full bg-black/60 backdrop-blur-sm border border-white/20 flex items-center justify-center hover:bg-black/80 transition-colors"
-        onClick={(e) => { e.stopPropagation(); onMuteToggle(); }}
-        whileTap={{ scale: 0.85 }}
-        title={isMuted ? "Unmute" : "Mute"}
-      >
-        {isMuted ? <SoundOffIcon /> : <SoundOnIcon />}
-      </motion.button>
+          <div
+            className="absolute inset-0 z-20 cursor-pointer"
+            onClick={onPlayToggle}
+          />
+
+          <AnimatePresence>
+            {(!isPlaying || showCtrl) && (
+              <motion.div
+                key="ctrl"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.8 }}
+                className="absolute inset-0 z-30 flex items-center justify-center pointer-events-none"
+              >
+                <div className="w-20 h-20 rounded-full bg-black/50 backdrop-blur-sm border border-white/20 flex items-center justify-center shadow-2xl">
+                  <AnimatePresence mode="wait">
+                    <motion.div
+                      key={isPlaying ? "pause" : "play"}
+                      initial={{ opacity: 0, scale: 0.5 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 0.5 }}
+                      transition={{ duration: 0.15 }}
+                    >
+                      {isPlaying ? <PauseIcon /> : <PlayIcon />}
+                    </motion.div>
+                  </AnimatePresence>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+
+          <motion.button
+            className="absolute top-3 right-3 z-40 w-9 h-9 rounded-full bg-black/60 backdrop-blur-sm border border-white/20 flex items-center justify-center hover:bg-black/80 transition-colors"
+            onClick={(e) => { e.stopPropagation(); onMuteToggle(); }}
+            whileTap={{ scale: 0.85 }}
+            title={isMuted ? "Unmute" : "Mute"}
+          >
+            {isMuted ? <SoundOffIcon /> : <SoundOnIcon />}
+          </motion.button>
+        </>
+      )}
     </div>
   );
 };
@@ -215,12 +217,11 @@ const VideoCard: React.FC<CardProps> = ({
 const VideoTestimonial: React.FC = () => {
   const [currentIdx, setCurrentIdx] = useState(0);
   const [isPaused,   setIsPaused]   = useState(false);
-  const [isMuted,    setIsMuted]    = useState(true);   // Start muted for safe autoplay; interaction listener will unmute it.
+  const [isMuted,    setIsMuted]    = useState(true);   
   const [desktopPage, setDesktopPage] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
   const mobileScrollRef = useRef<HTMLDivElement>(null);
 
-  // Viewport detection to prevent duplicate playing
   useEffect(() => {
     const mql = window.matchMedia("(max-width: 767px)");
     const handler = (e: MediaQueryListEvent | MediaQueryList) => setIsMobile(e.matches);
@@ -229,13 +230,10 @@ const VideoTestimonial: React.FC = () => {
     return () => mql.removeEventListener("change", handler);
   }, []);
 
-  // Keep a ref so async callbacks (onEnded) always see the latest index
   const currentIdxRef = useRef(0);
   useEffect(() => { currentIdxRef.current = currentIdx; }, [currentIdx]);
 
   useEffect(() => {
-    // Browsers block unmuted autoplay until a user gesture.
-    // We add a one-time global listener to "unlock" audio for the site as soon as the user interacts.
     const unlockAudio = () => {
       setIsMuted(false);
       window.removeEventListener("mouseup", unlockAudio);
@@ -251,23 +249,12 @@ const VideoTestimonial: React.FC = () => {
 
   const totalPages = Math.ceil(videos.length / VIDEOS_PER_PAGE);
 
-  /* ── Navigate to a specific index ── */
   const goTo = useCallback((idx: number, shouldMute?: boolean) => {
     setCurrentIdx(idx);
     setDesktopPage(Math.floor(idx / VIDEOS_PER_PAGE));
     if (typeof shouldMute === "boolean") setIsMuted(shouldMute);
   }, []);
 
-  /* ── Auto-advance effect ──
-     Runs whenever currentIdx changes OR isPaused flips.
-     Schedules the next advance after AUTO_ADVANCE ms.
-     Cleanup cancels the pending timer if anything changes sooner.
-  */
-  // AUTO ADVANCE TIMER REMOVED: 
-  // We now rely on handleVideoEnd (onEnded) for the "one-by-one" experience.
-  // This prevents the 7s cutoff for longer testimonials.
-
-  /* ── Sync mobile scroll to active card ── */
   useEffect(() => {
     if (window.innerWidth < 768 && mobileScrollRef.current) {
       const activeCard = mobileScrollRef.current.children[currentIdx] as HTMLElement;
@@ -277,33 +264,26 @@ const VideoTestimonial: React.FC = () => {
     }
   }, [currentIdx]);
 
-  /* ── When video ends naturally → advance immediately (don't wait for timer) ── */
   const handleVideoEnd = useCallback(() => {
     const next = (currentIdxRef.current + 1) % videos.length;
     goTo(next, isMuted);
     setIsPaused(false);
   }, [goTo, isMuted]);
 
-  /* ── User clicks a card ── */
   const handlePlayToggle = (idx: number) => {
     if (idx !== currentIdx) {
-      // Switch to the clicked video → unmute so they can hear it
       goTo(idx, false);
       setIsMuted(false);
       setIsPaused(false);
     } else {
-      // Toggle pause on the current video
       setIsPaused((prev) => !prev);
     }
   };
 
-  /* ── Mute / Unmute button ── */
   const handleMuteToggle = () => setIsMuted((prev) => !prev);
 
-  /* ── Page navigation arrows / dots ── */
   const handlePageChange = (page: number) => {
     const firstOnPage = page * VIDEOS_PER_PAGE;
-    // Preserving isMuted state for a smoother experience
     goTo(firstOnPage, isMuted);
     setIsPaused(false);
   };
@@ -338,6 +318,7 @@ const VideoTestimonial: React.FC = () => {
                     >
                       <VideoCard
                         src={video.src}
+                        type={video.type}
                         isPlaying={!isMobile && currentIdx === globalIdx && !isPaused}
                         isMuted={isMuted}
                         onPlayToggle={() => handlePlayToggle(globalIdx)}
@@ -350,7 +331,6 @@ const VideoTestimonial: React.FC = () => {
             </motion.div>
           </AnimatePresence>
 
-          {/* Progress dots — one per video */}
           <div className="flex items-center justify-center gap-2 mt-8">
             {videos.map((_, i) => (
               <motion.button
@@ -366,7 +346,6 @@ const VideoTestimonial: React.FC = () => {
             ))}
           </div>
 
-          {/* Page arrows */}
           {totalPages > 1 && (
             <div className="flex items-center justify-center gap-8 mt-6">
               <motion.button
@@ -409,6 +388,7 @@ const VideoTestimonial: React.FC = () => {
             <div key={video.id} className="snap-center min-w-[85vw] max-w-[320px]">
               <VideoCard
                 src={video.src}
+                type={video.type}
                 isPlaying={isMobile && currentIdx === i && !isPaused}
                 isMuted={isMuted}
                 onPlayToggle={() => handlePlayToggle(i)}
@@ -424,3 +404,4 @@ const VideoTestimonial: React.FC = () => {
 };
 
 export default VideoTestimonial;
+

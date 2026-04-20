@@ -169,10 +169,10 @@ const OurService = () => {
               onClick={() => HandleClick(service?.path)}
               className="bg-white cursor-pointer p-2.5 pb-6 shadow-lg rounded-4xl space-y-4 duration-300 transition-all hover:scale-105"
             >
-              <div className="w-full overflow-hidden rounded-t-3xl">
+              <div className="w-full flex items-center justify-center p-2">
                 <img
                   src={service.img}
-                  className="w-full h-full object-cover transition-all duration-300"
+                  className="w-full h-48 object-contain rounded-4xl bg-gray-50 shadow-inner transition-all duration-300"
                   alt={service.title}
                 />
               </div>
