@@ -22,6 +22,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
 import { HeadProvider, Meta, Title } from "react-head";
 import seoData from "../data/seoData.json";
+
 const AnnualCompliance = () => {
  const dispatch = useDispatch();
  const handleOpenDialog = () => {
@@ -271,8 +272,7 @@ const AnnualCompliance = () => {
      transition={{ duration: 0.5 }}
      className="bg-[#f7f7f7] py-16"
     >
-     <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14">
-      <div className="flex flex-col md:flex-row gap-8 items-stretch">
+     <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14 flex flex-col md:flex-row gap-8 items-stretch">
        <motion.div
         initial={{ y: 50, opacity: 0 }}
         animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
@@ -350,9 +350,9 @@ const AnnualCompliance = () => {
         transition={{ duration: 0.5, delay: getTouchDelay(1) }}
         className="flex-grow grid grid-cols-1 lg:grid-cols-2 bg-gradient-to-r from-[#3CA2E2] to-[#052EAA] rounded-4xl overflow-hidden"
        >
-        <div className="flex flex-col justify-center p-4 box-border">
+        <div className="flex flex-col justify-center p-8 md:p-12 box-border">
          <h2 className="sub-heading text-white font-1">
-          Annual Complaince
+          Annual Compliance
          </h2>
          <p className="font-3 text-white">
           Empowering Businesses through Comprehensive Solutions From Fund
@@ -361,14 +361,12 @@ const AnnualCompliance = () => {
         </div>
         <div className="w-full h-full flex items-center justify-center p-8">
               <img src={Image1} className="w-full h-auto rounded-4xl object-contain shadow-2xl" loading="lazy" />
-            </div>
         </div>
        </motion.div>
-      </div>
      </div>
     </motion.section>
 
-    {/* What is Annual Compliance */}
+    {/* What Is Company/LLP Annual Compliance? */}
     <motion.section
      ref={refAbout}
      initial={{ y: 100, opacity: 0 }}
@@ -395,7 +393,7 @@ const AnnualCompliance = () => {
      </div>
     </motion.section>
 
-    {/* Eligibility & Key Features */}
+    {/* Who Must Do Annual Compliance? */}
     <motion.section
      ref={refEligibility}
      initial={{ y: 100, opacity: 0 }}
@@ -594,7 +592,7 @@ const AnnualCompliance = () => {
        Frequently Asked Questions
       </h1>
       <div
-       className="px-6 md:px-24 space-y-4 font-3 "
+       className="px-6 md:px-24 space-y-4 font-3"
 
       >
       {faq.map((data, index) => (
