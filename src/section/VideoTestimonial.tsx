@@ -16,15 +16,15 @@ import NewVideo5 from "../assets/Video/From Vision to Reality_ Meet Mr.Rajan Sha
 
 const videos = [
   { id: 1, src: Video1 },
-  { id: 2, src: NewVideo5 },
-  { id: 3, src: NewVideo4 },
+  { id: 2, src: Video5 },
+  { id: 3, src: Video2 },
   { id: 4, src: NewVideo1 },
   { id: 5, src: NewVideo2 },
   { id: 6, src: NewVideo3 },
-  { id: 7, src: Video2 },
+  { id: 7, src: NewVideo4 },
   { id: 8, src: Video3 },
   { id: 9, src: Video4 },
-  { id: 10, src: Video5 },
+  { id: 10, src: NewVideo5 },
 ];
 
 const HIDE_DELAY    = 2800;
