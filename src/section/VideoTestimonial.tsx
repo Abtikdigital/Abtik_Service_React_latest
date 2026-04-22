@@ -7,15 +7,24 @@ import Video3 from "../assets/ClientVideoTestimonials/Video3.mp4";
 import Video4 from "../assets/ClientVideoTestimonials/Video4.mp4";
 import Video5 from "../assets/ClientVideoTestimonials/Video5.mp4";
 
+// New Testimonials
+import NewVideo1 from "../assets/Video/At Abtik Services  Hyperspace Technologies, Sucess Story (1).mp4";
+import NewVideo2 from "../assets/Video/At Abtik Services  Sai Diagnostic, Success Story.mp4";
+import NewVideo3 from "../assets/Video/At Abtik Services Precast india connections private limited Sucess (1).mp4";
+import NewVideo4 from "../assets/Video/Client Sucess Of Bharat Capital (1).mp4";
+import NewVideo5 from "../assets/Video/From Vision to Reality_ Meet Mr.Rajan Sharma Founder of Infinito Comics Pvt Ltd with Abtik Services. (1).mp4";
+
 const videos = [
-  { id: 1, src: Video1, type: "local" },
-  { id: 2, src: Video2, type: "local" },
-  { id: 3, src: Video3, type: "local" },
-  { id: 4, src: Video4, type: "local" },
-  { id: 5, src: Video5, type: "local" },
-  { id: 6, src: "https://www.youtube.com/embed/eun3ivAfHaM?si=RKRV12txHBOfujYj", type: "youtube" },
-  { id: 7, src: "https://www.youtube.com/embed/CAUS5rvlP4E?si=a1ijBJMhBB9GIV-t", type: "youtube" },
-  { id: 8, src: "https://www.youtube.com/embed/-Tw9AASdK-A?si=2PIf8ni3mLprpPld", type: "youtube" },
+  { id: 1, src: NewVideo1 },
+  { id: 2, src: NewVideo2 },
+  { id: 3, src: NewVideo3 },
+  { id: 4, src: NewVideo4 },
+  { id: 5, src: NewVideo5 },
+  { id: 6, src: Video1 },
+  { id: 7, src: Video2 },
+  { id: 8, src: Video3 },
+  { id: 9, src: Video4 },
+  { id: 10, src: Video5 },
 ];
 
 const HIDE_DELAY    = 2800;
@@ -57,7 +66,6 @@ const ChevronRight = () => (
 
 interface CardProps {
   src: string;
-  type?: string;
   isPlaying: boolean;
   isMuted: boolean;
   onPlayToggle: () => void;
@@ -67,7 +75,6 @@ interface CardProps {
 
 const VideoCard: React.FC<CardProps> = ({
   src,
-  type = "local",
   isPlaying,
   isMuted,
   onPlayToggle,
@@ -94,7 +101,6 @@ const VideoCard: React.FC<CardProps> = ({
 
   /* ── Local Video Sync ── */
   useEffect(() => {
-    if (type !== "local") return;
     const video = videoRef.current;
     if (!video) return;
 
@@ -120,10 +126,9 @@ const VideoCard: React.FC<CardProps> = ({
     } else {
       video.pause();
     }
-  }, [isPlaying, type]);
+  }, [isPlaying]);
 
   useEffect(() => {
-    if (type !== "local") return;
     const video = videoRef.current;
     if (video) {
       video.muted = isMuted;
@@ -132,7 +137,7 @@ const VideoCard: React.FC<CardProps> = ({
         video.play().catch((e) => console.warn("Unmuted play re-trigger failed:", e));
       }
     }
-  }, [isMuted, isPlaying, type]);
+  }, [isMuted, isPlaying]);
 
   return (
     <div
@@ -141,74 +146,62 @@ const VideoCard: React.FC<CardProps> = ({
       onMouseMove={() => { setShowCtrl(true); resetHide(); }}
       onTouchStart={() => { setShowCtrl(true); resetHide(); }}
     >
-      {type === "youtube" ? (
-        <iframe
-          src={`${src}${src.includes("?") ? "&" : "?"}autoplay=${isPlaying ? 1 : 0}&mute=${isMuted ? 1 : 0}`}
-          title="YouTube video player"
-          className="absolute inset-0 w-full h-full border-0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowFullScreen
-        />
-      ) : (
-        <>
-          <video
-            ref={videoRef}
-            src={src}
-            playsInline
-            muted
-            preload="auto"
-            loop={false}
-            className="absolute inset-0 w-full h-full object-cover"
-            onEnded={onEnded}
-          />
+      <video
+        ref={videoRef}
+        src={src}
+        playsInline
+        muted
+        preload="auto"
+        loop={false}
+        className="absolute inset-0 w-full h-full object-cover"
+        onEnded={onEnded}
+      />
 
+      <motion.div
+        className="absolute inset-0 z-10 bg-black/40 pointer-events-none"
+        animate={{ opacity: !isPlaying || showCtrl ? 1 : 0 }}
+        transition={{ duration: 0.4 }}
+      />
+
+      <div
+        className="absolute inset-0 z-20 cursor-pointer"
+        onClick={onPlayToggle}
+      />
+
+      <AnimatePresence>
+        {(!isPlaying || showCtrl) && (
           <motion.div
-            className="absolute inset-0 z-10 bg-black/40 pointer-events-none"
-            animate={{ opacity: !isPlaying || showCtrl ? 1 : 0 }}
-            transition={{ duration: 0.4 }}
-          />
-
-          <div
-            className="absolute inset-0 z-20 cursor-pointer"
-            onClick={onPlayToggle}
-          />
-
-          <AnimatePresence>
-            {(!isPlaying || showCtrl) && (
-              <motion.div
-                key="ctrl"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.8 }}
-                className="absolute inset-0 z-30 flex items-center justify-center pointer-events-none"
-              >
-                <div className="w-20 h-20 rounded-full bg-black/50 backdrop-blur-sm border border-white/20 flex items-center justify-center shadow-2xl">
-                  <AnimatePresence mode="wait">
-                    <motion.div
-                      key={isPlaying ? "pause" : "play"}
-                      initial={{ opacity: 0, scale: 0.5 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      exit={{ opacity: 0, scale: 0.5 }}
-                      transition={{ duration: 0.15 }}
-                    >
-                      {isPlaying ? <PauseIcon /> : <PlayIcon />}
-                    </motion.div>
-                  </AnimatePresence>
-                </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
-
-          <motion.button
-            className="absolute top-3 right-3 z-40 w-9 h-9 rounded-full bg-black/60 backdrop-blur-sm border border-white/20 flex items-center justify-center hover:bg-black/80 transition-colors"
-            onClick={(e) => { e.stopPropagation(); onMuteToggle(); }}
-            whileTap={{ scale: 0.85 }}
-            title={isMuted ? "Unmute" : "Mute"}
+            key="ctrl"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.8 }}
+            className="absolute inset-0 z-30 flex items-center justify-center pointer-events-none"
           >
-            {isMuted ? <SoundOffIcon /> : <SoundOnIcon />}
-          </motion.button>
-        </>
-      )}
+            <div className="w-20 h-20 rounded-full bg-black/50 backdrop-blur-sm border border-white/20 flex items-center justify-center shadow-2xl">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={isPlaying ? "pause" : "play"}
+                  initial={{ opacity: 0, scale: 0.5 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.5 }}
+                  transition={{ duration: 0.15 }}
+                >
+                  {isPlaying ? <PauseIcon /> : <PlayIcon />}
+                </motion.div>
+              </AnimatePresence>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      <motion.button
+        className="absolute top-3 right-3 z-40 w-9 h-9 rounded-full bg-black/60 backdrop-blur-sm border border-white/20 flex items-center justify-center hover:bg-black/80 transition-colors"
+        onClick={(e) => { e.stopPropagation(); onMuteToggle(); }}
+        whileTap={{ scale: 0.85 }}
+        title={isMuted ? "Unmute" : "Mute"}
+      >
+        {isMuted ? <SoundOffIcon /> : <SoundOnIcon />}
+      </motion.button>
     </div>
   );
 };
@@ -318,7 +311,6 @@ const VideoTestimonial: React.FC = () => {
                     >
                       <VideoCard
                         src={video.src}
-                        type={video.type}
                         isPlaying={!isMobile && currentIdx === globalIdx && !isPaused}
                         isMuted={isMuted}
                         onPlayToggle={() => handlePlayToggle(globalIdx)}
@@ -388,7 +380,6 @@ const VideoTestimonial: React.FC = () => {
             <div key={video.id} className="snap-center min-w-[85vw] max-w-[320px]">
               <VideoCard
                 src={video.src}
-                type={video.type}
                 isPlaying={isMobile && currentIdx === i && !isPaused}
                 isMuted={isMuted}
                 onPlayToggle={() => handlePlayToggle(i)}
