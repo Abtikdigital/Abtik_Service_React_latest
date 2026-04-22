@@ -15,12 +15,12 @@ import NewVideo4 from "../assets/Video/Client Sucess Of Bharat Capital (1).mp4";
 import NewVideo5 from "../assets/Video/From Vision to Reality_ Meet Mr.Rajan Sharma Founder of Infinito Comics Pvt Ltd with Abtik Services. (1).mp4";
 
 const videos = [
-  { id: 1, src: NewVideo1 },
-  { id: 2, src: NewVideo2 },
-  { id: 3, src: NewVideo3 },
-  { id: 4, src: NewVideo4 },
-  { id: 5, src: NewVideo5 },
-  { id: 6, src: Video1 },
+  { id: 1, src: Video1 },
+  { id: 2, src: NewVideo5 },
+  { id: 3, src: NewVideo4 },
+  { id: 4, src: NewVideo1 },
+  { id: 5, src: NewVideo2 },
+  { id: 6, src: NewVideo3 },
   { id: 7, src: Video2 },
   { id: 8, src: Video3 },
   { id: 9, src: Video4 },
@@ -323,20 +323,7 @@ const VideoTestimonial: React.FC = () => {
             </motion.div>
           </AnimatePresence>
 
-          <div className="flex items-center justify-center gap-2 mt-8">
-            {videos.map((_, i) => (
-              <motion.button
-                key={i}
-                className="h-1.5 rounded-full"
-                animate={{
-                  backgroundColor: currentIdx === i ? "#052EAA" : "#d1d5db",
-                  width: currentIdx === i ? 32 : 10,
-                }}
-                transition={{ duration: 0.4 }}
-                onClick={() => { goTo(i, true); setIsPaused(false); }}
-              />
-            ))}
-          </div>
+
 
           {totalPages > 1 && (
             <div className="flex items-center justify-center gap-8 mt-6">
@@ -348,17 +335,6 @@ const VideoTestimonial: React.FC = () => {
               >
                 <ChevronLeft />
               </motion.button>
-              <div className="flex gap-4">
-                {Array.from({ length: totalPages }).map((_, p) => (
-                  <button
-                    key={p}
-                    onClick={() => handlePageChange(p)}
-                    className={`h-3 rounded-full transition-all duration-500 ${
-                      p === desktopPage ? "bg-[#052EAA] w-10" : "bg-gray-300 w-3 hover:bg-gray-400"
-                    }`}
-                  />
-                ))}
-              </div>
               <motion.button
                 onClick={() => handlePageChange(desktopPage + 1)}
                 disabled={desktopPage === totalPages - 1}
