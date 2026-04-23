@@ -20,8 +20,7 @@ import { memo, useState } from "react";
 import { useDispatch } from "react-redux";
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
-import { HeadProvider, Meta, Title } from "react-head";
-import seoData from "../data/seoData.json";
+import SEO from "../components/SEO";
 const PvtLtdRegistration = () => {
   const dispatch = useDispatch();
   const handleOpenDialog = () => {
@@ -194,16 +193,42 @@ const PvtLtdRegistration = () => {
 
   return (
     <>
-      <HeadProvider>
-        <Title>{seoData?.privatelimitedService?.title}</Title>
-        <Meta
-          name="description"
-          content={seoData?.privatelimitedService?.description}
-        />
-        <Meta name="keywords" content={seoData?.privatelimitedService?.keyword} />
-        <Meta name="robots" content={seoData?.privatelimitedService?.robots} />
-        <link rel="canonical" href={seoData?.privatelimitedService?.canonical} />
-      </HeadProvider>
+      <SEO 
+        title="Business Registration Services in India | Abtik"
+        description="Get expert business registration services in India. We specialize in Private Limited Company, LLP, and Partnership firm registration. Fast & compliant setup!"
+        canonical="https://abtikservices.com/registration/"
+        schema={[
+          {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Business Registration Services",
+            "description": "Expert business registration services in India. We specialize in Private Limited Company registration, LLP, and Partnership firm setup.",
+            "provider": {
+              "@type": "FinancialService",
+              "name": "Abtik Startup Advisor Pvt Ltd"
+            },
+            "areaServed": "IN"
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://abtikservices.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Business Registration",
+                "item": "https://abtikservices.com/registration/"
+              }
+            ]
+          }
+        ]}
+      />
       <Mainlayout>
         {/* Hero Section */}
         <section
@@ -233,11 +258,7 @@ const PvtLtdRegistration = () => {
              text-white lg:text-inherit tracking-wide
              main-heading font-1"
             >
-                            Business Registration Services {" "}
-              <span className="text-[#3CA2E2] font-extrabold block sm:inline">
-                In India
-              </span>
-
+              Business Registration Services in India
             </h1>
             <p
               className="text-sm sm:text-base md:text-lg lg:text-xl
@@ -359,7 +380,7 @@ const PvtLtdRegistration = () => {
               </p>
             </div>
             <div className="w-full flex items-center justify-center p-8">
-              <img src={Image1} className="w-full h-auto rounded-4xl object-contain shadow-2xl" loading="lazy" />
+              <img src={Image1} alt="Private Limited Company Registration in India" className="w-full h-auto rounded-4xl object-contain shadow-2xl" loading="lazy" />
             </div>
           </motion.div>
             </div>

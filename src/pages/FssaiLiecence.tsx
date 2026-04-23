@@ -19,8 +19,7 @@ import { memo, useState } from "react";
 import { useDispatch } from "react-redux";
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
-import { HeadProvider, Meta, Title } from "react-head";
-import seoData from "../data/seoData.json";
+import SEO from "../components/SEO";
 
 const FssaiLiecence = () => {
   const dispatch = useDispatch();
@@ -186,13 +185,42 @@ const FssaiLiecence = () => {
   // === Main JSX ===
   return (
     <>
-      <HeadProvider>
-        <Title>{seoData?.fssaiLicenseService?.title}</Title>
-        <Meta name="description" content={seoData?.fssaiLicenseService?.description} />
-        <Meta name="keywords" content={seoData?.fssaiLicenseService?.keyword} />
-        <Meta name="robots" content={seoData?.fssaiLicenseService?.robots} />
-        <link rel="canonical" href={seoData?.fssaiLicenseService?.canonical} />
-      </HeadProvider>
+      <SEO 
+        title="FSSAI Food License Registration Online | Abtik"
+        description="Apply for FSSAI Food License registration online with Abtik. Expert support for Basic, State, and Central FSSAI licenses for food businesses in India. Fast & reliable!"
+        canonical="https://abtikservices.com/fssai-registration/"
+        schema={[
+          {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "FSSAI Food License Registration Online",
+            "description": "Apply for FSSAI Food License registration online. Expert support for Basic, State, and Central FSSAI licenses for all food businesses in India.",
+            "provider": {
+              "@type": "FinancialService",
+              "name": "Abtik Startup Advisor Pvt Ltd"
+            },
+            "areaServed": "IN"
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://abtikservices.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "FSSAI Registration",
+                "item": "https://abtikservices.com/fssai-registration/"
+              }
+            ]
+          }
+        ]}
+      />
 
       <Mainlayout>
         {/* Hero Section */}
@@ -225,10 +253,7 @@ const FssaiLiecence = () => {
              text-white lg:text-inherit tracking-wide
              main-heading font-1"
             >
-              FSSAI Food License {" "}
-              <span className="text-[#3CA2E2] font-extrabold block sm:inline">
-                Registration Online
-              </span>
+              FSSAI Food License Registration Online
             </h1>
             <p
               className="text-sm sm:text-base md:text-lg lg:text-xl

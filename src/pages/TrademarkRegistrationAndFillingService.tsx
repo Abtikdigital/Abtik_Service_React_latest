@@ -361,7 +361,7 @@ const TrademarkFiling = () => {
               </p>
             </div>
             <div className="w-full flex items-center justify-center p-8">
-              <img src={Image1} className="w-full h-auto rounded-4xl object-contain shadow-2xl" loading="lazy" />
+              <img src={Image1} alt="Trademark Registration Illustration" className="w-full h-auto rounded-4xl object-contain shadow-2xl" loading="lazy" />
             </div>
           </motion.div>
         </div>

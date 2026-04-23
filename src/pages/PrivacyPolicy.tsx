@@ -1,11 +1,10 @@
 import { motion, useInView } from "framer-motion";
 import { memo, useRef } from "react";
-import { HeadProvider, Meta, Title } from "react-head";
+import SEO from "../components/SEO";
 import Mainlayout from "../section/Mainlayout";
 import BgImage from "../assets/Hero/bgImg.svg";
 import Contact from "../section/Contact";
 import { useDispatch } from "react-redux";
-import seoData from "../data/seoData.json";
 
 const PrivacyPolicy = () => {
  const dispatch = useDispatch();
@@ -30,14 +29,17 @@ const PrivacyPolicy = () => {
 
  return (
   <>
-   <HeadProvider>
-    <Title>{seoData?.privacyPolicy?.title}</Title>
-    <Meta name="description" content={seoData?.privacyPolicy?.description} />
-    <Meta name="keywords" content={seoData?.privacyPolicy?.keyword} />
-    <Meta name="robots" content={seoData?.privacyPolicy?.robots} />
-    <link rel="canonical" href={seoData?.privacyPolicy?.canonical} />
-   </HeadProvider>
-
+   <SEO 
+     title="Privacy Policy | Abtik Startup Advisor Pvt Ltd"
+     description="Read the Privacy Policy of Abtik Startup Advisor Pvt Ltd. Learn how we collect, use, and protect your personal information with transparency and security."
+     canonical="https://abtikservices.com/privacy-policy"
+     schema={{
+       "@context": "https://schema.org",
+       "@type": "WebPage",
+       "name": "Privacy Policy",
+       "description": "Read the Privacy Policy of Abtik Startup Advisor Pvt Ltd."
+     }}
+   />
    <Mainlayout>
     {/* Hero Section */}
     <section

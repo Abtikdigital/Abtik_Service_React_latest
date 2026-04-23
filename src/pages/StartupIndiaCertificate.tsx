@@ -20,8 +20,7 @@ import { memo, useState } from "react";
 import { useDispatch } from "react-redux";
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
-import { HeadProvider, Meta, Title } from "react-head";
-import seoData from "../data/seoData.json";
+import SEO from "../components/SEO";
 
 const StartupIndiaCertificate = () => {
   const dispatch = useDispatch();
@@ -192,13 +191,42 @@ const StartupIndiaCertificate = () => {
   // === Main JSX ===
   return (
     <>
-      <HeadProvider>
-        <Title>{seoData?.startupIndiaRegistrationService?.title}</Title>
-        <Meta name="description" content={seoData?.startupIndiaRegistrationService?.description} />
-        <Meta name="keywords" content={seoData?.startupIndiaRegistrationService?.keyword} />
-        <Meta name="robots" content={seoData?.startupIndiaRegistrationService?.robots} />
-        <link rel="canonical" href={seoData?.startupIndiaRegistrationService?.canonical} />
-      </HeadProvider>
+      <SEO 
+        title="Startup India DPIIT Recognition Online | Abtik"
+        description="Get DPIIT recognition for your startup online with Abtik. Unlock tax benefits, patent rebates, and easier compliance under the Startup India initiative. Apply now!"
+        canonical="https://abtikservices.com/startup-india-registration/"
+        schema={[
+          {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Startup India Registration",
+            "description": "Get DPIIT recognition for your startup under the Startup India initiative. Unlock tax benefits, patent rebates, and easier compliance.",
+            "provider": {
+              "@type": "FinancialService",
+              "name": "Abtik Startup Advisor Pvt Ltd"
+            },
+            "areaServed": "IN"
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://abtikservices.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Startup India Registration",
+                "item": "https://abtikservices.com/startup-india-registration/"
+              }
+            ]
+          }
+        ]}
+      />
 
       <Mainlayout>
         {/* Hero Section */}
@@ -229,10 +257,7 @@ const StartupIndiaCertificate = () => {
               className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 
              font-bold leading-tight text-white font-1 lg:text-inherit tracking-wide main-heading"
             >
-            Startup India Registration {" "}
-            <span className="text-[#3CA2E2] font-extrabold block sm:inline">
-              DPIIT Recognition
-            </span>
+              Startup India Registration — DPIIT Recognition
             </h1>
             <p
               className="text-sm sm:text-base md:text-lg lg:text-xl

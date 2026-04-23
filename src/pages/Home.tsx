@@ -12,8 +12,7 @@ import About from "../section/About";
 import { useDispatch } from "react-redux";
 import { motion, useInView } from "framer-motion";
 import { memo, useRef } from "react";
-import { HeadProvider, Meta, Title } from "react-head";
-import seoData from "../data/seoData.json";
+import SEO from "../components/SEO";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -72,12 +71,39 @@ const Home = () => {
 
   return (
     <>
-      <HeadProvider>
-        <Title>{seoData?.homepage?.title}</Title>
-        <Meta name="description" content={seoData?.homepage?.description} />
-        <Meta name="keywords" content={seoData?.homepage?.keyword} />
-        <Meta name="robots" content={seoData?.homepage?.robots} />
-      </HeadProvider>
+      <SEO 
+        title="MSME & Business Loan Consultancy in India | Abtik"
+        description="Expert MSME & business loan consultancy in India. Get support for Startup India, FSSAI, and government grants. Apply now for financial growth!"
+        canonical="https://abtikservices.com/"
+        schema={[
+          {
+            "@context": "https://schema.org",
+            "@type": "FinancialService",
+            "name": "Abtik Startup Advisor Pvt Ltd",
+            "description": "Leading MSME & Business Loan Consultancy in India. Expert support for Startup India registration, FSSAI, and government grants.",
+            "url": "https://abtikservices.com",
+            "telephone": "+918928138434",
+            "email": "info@abtikservices.com",
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "IN"
+            },
+            "areaServed": "IN"
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Abtik",
+            "url": "https://abtikservices.com",
+            "logo": "https://abtikservices.com/assets/Logo/LogoWithoutBelowContent.png",
+            "sameAs": [
+              "https://www.facebook.com/abtikservices",
+              "https://www.instagram.com/abtikservices",
+              "https://www.linkedin.com/company/abtikservices"
+            ]
+          }
+        ]}
+      />
       <Mainlayout>
         {/* Hero Section */}
         <section
@@ -112,7 +138,7 @@ const Home = () => {
              main-heading font-1"
 
           >
-            Your One Stop Solution For All Business Needs
+            MSME & Business Loan Consultancy in India
           </h1>
             <p
               className="text-sm sm:text-base md:text-lg lg:text-xl

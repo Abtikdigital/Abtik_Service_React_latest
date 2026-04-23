@@ -22,8 +22,7 @@ import { memo, useState } from "react";
 import { useDispatch } from "react-redux";
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
-import { HeadProvider, Meta, Title } from "react-head";
-import seoData from "../data/seoData.json";
+import SEO from "../components/SEO";
 const SeedFund = () => {
  const dispatch = useDispatch();
  const handleOpenDialog = () => {
@@ -203,16 +202,42 @@ const SeedFund = () => {
 
  return (
   <>
-   <HeadProvider>
-    <Title>{seoData?.seedFundService?.title}</Title>
-    <Meta
-     name="description"
-     content={seoData?.seedFundService?.description}
+   <SEO 
+      title="Startup India Seed Fund Scheme | Apply with Abtik"
+      description="Apply for Startup India Seed Fund Scheme with Abtik's expert support. Get up to ₹50 Lakhs debt and ₹20 Lakhs grant for your startup today!"
+      canonical="https://abtikservices.com/startup-india-seed-fund/"
+      schema={[
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Startup India Seed Fund Scheme",
+          "description": "Apply for Startup India Seed Fund Scheme with Abtik's expert support. Get up to ₹50 Lakhs debt and ₹20 Lakhs grant.",
+          "provider": {
+            "@type": "FinancialService",
+            "name": "Abtik Startup Advisor Pvt Ltd"
+          },
+          "areaServed": "IN"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://abtikservices.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Startup India Seed Fund Scheme",
+              "item": "https://abtikservices.com/startup-india-seed-fund/"
+            }
+          ]
+        }
+      ]}
     />
-    <Meta name="keywords" content={seoData?.seedFundService?.keyword} />
-    <Meta name="robots" content={seoData?.seedFundService?.robots} />
-    <link rel="canonical" href={seoData?.seedFundService?.canonical} />
-   </HeadProvider>
 
    <Mainlayout>
     {/* Hero Section */}
@@ -245,7 +270,7 @@ const SeedFund = () => {
              text-white lg:text-inherit tracking-wide
              main-heading font-1"
       >
-       Startup India Seed Fund Scheme
+        Startup India Seed Fund Scheme — Application Support
       </h1>
       <p
        className="text-sm sm:text-base md:text-lg lg:text-xl

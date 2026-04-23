@@ -21,8 +21,7 @@ import { memo, useState } from "react";
 import { useDispatch } from "react-redux";
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
-import { HeadProvider, Meta, Title } from "react-head";
-import seoData from "../data/seoData.json";
+import SEO from "../components/SEO";
 
 const TaxExemptionCertificate = () => {
   const dispatch = useDispatch();
@@ -188,13 +187,42 @@ const TaxExemptionCertificate = () => {
   const isInViewContact = useInView(refContact, { once: true, amount: 0.4 });
 
   return (<>
-    <HeadProvider>
-      <Title>{seoData?.startupCertificationService?.title}</Title>
-      <Meta name="description" content={seoData?.startupCertificationService?.description} />
-      <Meta name="keywords" content={seoData?.startupCertificationService?.keyword} />
-      <Meta name="robots" content={seoData?.startupCertificationService?.robots} />
-      <link rel="canonical" href={seoData?.startupCertificationService?.canonical} />
-    </HeadProvider>
+    <SEO 
+      title="Startup India Certification Assistance | Abtik"
+      description="Expert assistance for Startup India Certification (80-IAC) to get 3 years of income tax exemption. Secure your startup's financial future with Abtik's guidance today!"
+      canonical="https://abtikservices.com/startup-india-certification/"
+      schema={[
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Startup India Certification Assistance",
+          "description": "Expert assistance for Startup India Certification (80-IAC) to get 3 years of income tax exemption. Secure your startup's financial future.",
+          "provider": {
+            "@type": "FinancialService",
+            "name": "Abtik Startup Advisor Pvt Ltd"
+          },
+          "areaServed": "IN"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://abtikservices.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Startup India Certification",
+              "item": "https://abtikservices.com/startup-india-certification/"
+            }
+          ]
+        }
+      ]}
+    />
     <Mainlayout>
       {/* Hero Section */}
       <section
@@ -226,10 +254,7 @@ const TaxExemptionCertificate = () => {
                   text-white lg:text-inherit tracking-wide
                   main-heading font-1"
           >
-            Startup India Certification {" "}
-            <span className="text-[#3CA2E2] font-extrabold block sm:inline">
-              Assistance
-            </span>
+            Startup India Certification Assistance
           </h1>
           <p
             className="text-sm sm:text-base md:text-lg lg:text-xl

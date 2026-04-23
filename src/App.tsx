@@ -1,6 +1,6 @@
 import "./App.css";
 import { lazy, Suspense } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Loader from "./section/Loader";
 
 const Home = lazy(() => import("./pages/Home"));
@@ -84,7 +84,7 @@ const TermsConditions = lazy(() => import("./pages/TermsAndCondition"));
 // const RefundPolicy = lazy(() => import("./pages/RefundPolicy"));
 function App() {
   return (
-    <BrowserRouter>
+    <>
       <ScrollToUp />
       <Suspense fallback={<Loader />}>
         <Routes>
@@ -253,7 +253,7 @@ function App() {
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </Suspense>
-    </BrowserRouter>
+    </>
   );
 }
 

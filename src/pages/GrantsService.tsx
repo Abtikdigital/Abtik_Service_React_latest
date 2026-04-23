@@ -25,8 +25,7 @@ import { memo, useState } from "react";
 import { useDispatch } from "react-redux";
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
-import { HeadProvider, Meta, Title } from "react-head";
-import seoData from "../data/seoData.json";
+import SEO from "../components/SEO";
 const Grants = () => {
   const dispatch = useDispatch();
   const handleOpenDialog = () => {
@@ -198,13 +197,42 @@ const Grants = () => {
   const isInViewContact = useInView(refContact, { once: true, amount: 0.4 });
 
   return (<>
-    <HeadProvider>
-      <Title>{seoData?.grantsService?.title}</Title>
-      <Meta name="description" content={seoData?.grantsService?.description} />
-      <Meta name="keywords" content={seoData?.grantsService?.keyword} />
-      <Meta name="robots" content={seoData?.grantsService?.robots} />
-      <link rel="canonical" href={seoData?.grantsService?.canonical} />
-    </HeadProvider>
+    <SEO 
+      title="Government Grants & Funding for MSMEs | Abtik"
+      description="Get expert support for securing government grants and funding for Indian startups and MSMEs. Unlock financial assistance for your innovative projects today with Abtik!"
+      canonical="https://abtikservices.com/government-grants-funding/"
+      schema={[
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Government Grants & Funding",
+          "description": "Expert support for securing government grants and funding for Indian startups and MSMEs. Unlock financial assistance for your innovative projects.",
+          "provider": {
+            "@type": "FinancialService",
+            "name": "Abtik Startup Advisor Pvt Ltd"
+          },
+          "areaServed": "IN"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://abtikservices.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Government Grants & Funding",
+              "item": "https://abtikservices.com/government-grants-funding/"
+            }
+          ]
+        }
+      ]}
+    />
 
     <Mainlayout>
       {/* Hero Section */}
@@ -238,10 +266,7 @@ const Grants = () => {
              main-heading font-1"
 
           >
-            Government Grants & Funding {" "}
-            <span className="text-[#3CA2E2] font-extrabold block sm:inline">
-              for Indian Startups & MSMEs
-            </span>
+            Government Grants & Funding for Indian Startups & MSMEs
           </h1>
           <p
             className="text-sm sm:text-base md:text-lg lg:text-xl
