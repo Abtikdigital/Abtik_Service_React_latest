@@ -7,7 +7,6 @@ import {
   User,
   Phone,
   Package,
-  Headset,
   ArrowUpRight,
   ArrowRight,
   CheckCircle,
@@ -177,6 +176,18 @@ const StartupIndiaCertificate = () => {
       description: "Self certify under 6 labor & 3 environmental laws for easier business compliance.",
     },
   ];
+
+  // FAQ
+  const refFAQ = useRef(null);
+  const isInViewFAQ = useInView(refFAQ, { once: true, amount: 0.4 });
+  const getFaqDelay = (index: number) => {
+    const row = Math.floor(index / 1);
+    return 0.2 + row * 0.1;
+  };
+
+  // Contact
+  const refContact = useRef(null);
+  const isInViewContact = useInView(refContact, { once: true, amount: 0.4 });
 
   // === Main JSX ===
   return (

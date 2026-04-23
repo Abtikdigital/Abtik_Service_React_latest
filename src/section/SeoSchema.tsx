@@ -228,7 +228,7 @@ const SeoSchema = () => {
     }
 
     // Inject schema scripts
-    const schemas = [organizationSchema, webSiteSchema, webPageSchema, breadcrumbSchema];
+    const schemas: any[] = [organizationSchema, webSiteSchema, webPageSchema, breadcrumbSchema];
     if (faqSchema) schemas.push(faqSchema);
 
     schemas.forEach(schema => {

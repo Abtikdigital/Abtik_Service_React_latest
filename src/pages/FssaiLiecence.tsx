@@ -7,10 +7,8 @@ import {
   User,
   Phone,
   Package,
-  Headset,
   ArrowUpRight,
   ArrowRight,
-  CheckCircle,
   FileText,
   Clock,
   Shield,
@@ -100,10 +98,6 @@ const FssaiLiecence = () => {
   const refFssaiInfo = useRef(null);
   const isInViewFssaiInfo = useInView(refFssaiInfo, { once: true, amount: 0.1 });
 
-  // License Types
-  const refTypes = useRef(null);
-  const isInViewTypes = useInView(refTypes, { once: true, amount: 0.1 });
-
   // Process Steps
   const refProcess = useRef(null);
   const isInViewProcess = useInView(refProcess, { once: true, amount: 0.1 });
@@ -176,6 +170,18 @@ const FssaiLiecence = () => {
       description: "Ensure your food business is 100% compliant with Indian food safety laws and avoid heavy penalties.",
     },
   ];
+
+  // FAQ
+  const refFAQ = useRef(null);
+  const isInViewFAQ = useInView(refFAQ, { once: true, amount: 0.4 });
+  const getFaqDelay = (index: number) => {
+    const row = Math.floor(index / 1);
+    return 0.2 + row * 0.1;
+  };
+
+  // Contact
+  const refContact = useRef(null);
+  const isInViewContact = useInView(refContact, { once: true, amount: 0.4 });
 
   // === Main JSX ===
   return (
