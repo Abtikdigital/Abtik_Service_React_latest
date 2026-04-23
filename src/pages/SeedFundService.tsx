@@ -245,7 +245,7 @@ const SeedFund = () => {
              text-white lg:text-inherit tracking-wide
              main-heading font-1"
       >
-       Startup India Seed Fund Scheme — Application Support
+       Startup India Seed Fund Scheme
       </h1>
       <p
        className="text-sm sm:text-base md:text-lg lg:text-xl
@@ -367,7 +367,7 @@ const SeedFund = () => {
         </p>
        </div>
        <div className="w-full h-full flex items-center justify-center p-8">
-              <img src={Image1} className="w-full h-auto rounded-4xl object-contain shadow-2xl" loading="lazy" />
+              <img src={Image1} alt="Startup India Seed Fund Scheme Illustration" className="w-full h-auto rounded-4xl object-contain shadow-2xl" loading="lazy" />
             </div>
       </motion.div>
      </div>

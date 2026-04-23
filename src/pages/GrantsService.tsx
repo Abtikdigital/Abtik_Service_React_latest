@@ -238,7 +238,10 @@ const Grants = () => {
              main-heading font-1"
 
           >
-            Government Grants & Funding for Indian Startups & MSMEs
+            Government Grants & Funding {" "}
+            <span className="text-[#3CA2E2] font-extrabold block sm:inline">
+              for Indian Startups & MSMEs
+            </span>
           </h1>
           <p
             className="text-sm sm:text-base md:text-lg lg:text-xl
@@ -363,7 +366,7 @@ const Grants = () => {
               </p>
             </div>
             <div className="w-full flex items-center justify-center p-8">
-              <img src={Image1} className="w-full h-auto rounded-4xl object-contain shadow-2xl" loading="lazy" />
+              <img src={Image1} alt="Government Grants and Funding for Startups" className="w-full h-auto rounded-4xl object-contain shadow-2xl" loading="lazy" />
             </div>
           </motion.div>
         </div>

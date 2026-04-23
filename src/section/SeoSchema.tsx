@@ -69,6 +69,15 @@ const pathToSeoKey: Record<string, keyof typeof seoData> = {
   // Legal pages
   "/legal/privacy-policy": "privacyPolicy",
   "/legal/terms-and-conditions": "terms",
+
+  // SEO Friendly Routes
+  "/startup-india-seed-fund": "seedFundService",
+  "/registration": "privatelimitedService",
+  "/startup-india-registration": "startupIndiaRegistrationService",
+  "/startup-india-certification": "startupCertificationService",
+  "/fssai-registration": "fssaiLicenseService",
+  "/government-grants-funding": "grantsService",
+  "/privacy-policy": "privacyPolicy",
 };
 
 const resolveSeoConfig = (pathname: string) => {
@@ -111,37 +120,28 @@ const SeoSchema = () => {
       ? canonicalFromConfig
       : pageUrl;
 
-  const organizationSchema = {
+  const financialServiceSchema = {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    "@type": "FinancialService",
     name: "Abtik Startup Advisor pvt ltd",
     url: BASE_URL,
-    logo: `${BASE_URL}/logo.png`, // Added logo
-    description:
-      "Abtik Startup Advisor pvt ltd is a business consultancy helping startups and MSMEs with loans, subsidies, registrations and compliance.",
+    logo: `${BASE_URL}/logo.png`,
+    description: "MSME loans, working capital, and government funding consultancy.",
+    telephone: "+91 89281 38434",
     email: "info@abtikservices.com",
-    address: [
-      {
-        "@type": "PostalAddress",
-        streetAddress: "313, Patel Ave, Sarkhej - Gandhinagar Hwy, Thaltej",
-        addressLocality: "Ahmedabad",
-        addressRegion: "Gujarat",
-        postalCode: "380054",
-        addressCountry: "IN",
-      },
-    ],
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "313, Patel Ave, Sarkhej - Gandhinagar Hwy, Thaltej",
+      addressLocality: "Ahmedabad",
+      addressRegion: "Gujarat",
+      postalCode: "380054",
+      addressCountry: "IN",
+    },
+    areaServed: "IN",
     sameAs: [
       "https://www.facebook.com/share/1aKQvTf7NU/",
       "https://www.linkedin.com/company/abtik-services/",
       "https://www.instagram.com/abtikservices?igsh=MTk3cWxteWswbTFidQ==",
-    ],
-    contactPoint: [
-      {
-        "@type": "ContactPoint",
-        contactType: "customer support",
-        telephone: "+91 89281 38434",
-        availableLanguage: ["en", "hi"],
-      },
     ],
   };
 
@@ -194,6 +194,19 @@ const SeoSchema = () => {
     itemListElement: breadcrumbItems,
   };
 
+  // Service Schema (Dynamic)
+  const serviceSchema = pathname.includes("/services/") ? {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": title,
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Abtik Startup Advisor pvt ltd",
+      "url": BASE_URL
+    },
+    "description": description
+  } : null;
+
   // FAQ Schema
   const faqSchema = seoConfig?.faq && seoConfig.faq.length > 0 ? {
     "@context": "https://schema.org",
@@ -228,8 +241,9 @@ const SeoSchema = () => {
     }
 
     // Inject schema scripts
-    const schemas: any[] = [organizationSchema, webSiteSchema, webPageSchema, breadcrumbSchema];
+    const schemas: any[] = [financialServiceSchema, webSiteSchema, webPageSchema, breadcrumbSchema];
     if (faqSchema) schemas.push(faqSchema);
+    if (serviceSchema) schemas.push(serviceSchema);
 
     schemas.forEach(schema => {
       const script = document.createElement('script');

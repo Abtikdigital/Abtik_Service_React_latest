@@ -240,7 +240,15 @@ function App() {
           <Route path="/services/registration/producer" element={<ProducerCompany />}/>
           <Route path="/legal/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/legal/terms-and-conditions" element={<TermsConditions />}/>
-          {/* <Route path="/legal/refund-policy" element={<RefundPolicy />} /> */}
+
+          {/* SEO Friendly Routes */}
+          <Route path="/startup-india-seed-fund" element={<SeedFund />} />
+          <Route path="/registration" element={<PrivateLimited />} />
+          <Route path="/startup-india-registration" element={<StartupIndiaCertificate />} />
+          <Route path="/startup-india-certification" element={<TaxAssumptionCertificate />} />
+          <Route path="/fssai-registration" element={<FSSAILicense />} />
+          <Route path="/government-grants-funding" element={<Grants />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
 
           <Route path="*" element={<PageNotFound />} />
         </Routes>

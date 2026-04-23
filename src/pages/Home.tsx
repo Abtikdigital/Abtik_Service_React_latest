@@ -112,7 +112,7 @@ const Home = () => {
              main-heading font-1"
 
           >
-            MSME & Business Loan Consultancy in India
+            Your One Stop Solution For All Business Needs
           </h1>
             <p
               className="text-sm sm:text-base md:text-lg lg:text-xl

@@ -225,7 +225,10 @@ const FssaiLiecence = () => {
              text-white lg:text-inherit tracking-wide
              main-heading font-1"
             >
-              FSSAI Food License Registration Online
+              FSSAI Food License {" "}
+              <span className="text-[#3CA2E2] font-extrabold block sm:inline">
+                Registration Online
+              </span>
             </h1>
             <p
               className="text-sm sm:text-base md:text-lg lg:text-xl
@@ -341,7 +344,7 @@ const FssaiLiecence = () => {
                 </p>
               </div>
               <div className="w-full flex items-center justify-center p-8">
-                <img src={Image1} className="w-full h-auto rounded-4xl object-contain shadow-2xl" loading="lazy" />
+                <img src={Image1} alt="FSSAI Food License Registration Service" className="w-full h-auto rounded-4xl object-contain shadow-2xl" loading="lazy" />
               </div>
             </motion.div>
           </div>

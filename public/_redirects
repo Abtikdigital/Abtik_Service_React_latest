@@ -1,6 +1,14 @@
-# Let Google read robots.txt and sitemap.xml directly
-/robots.txt   /robots.txt   200
-/sitemap.xml  /sitemap.xml  200
+# Redirect misspelled URL
+/stratup-india-registration/ /startup-india-registration 301
 
-# SPA fallback for React
-/*  /index.html  200
+# Redirect old paths to new SEO friendly paths
+/services/funding/seed-fund /startup-india-seed-fund 301
+/services/registration/private-limited /registration 301
+/services/certificate/startup-india /startup-india-registration 301
+/services/certificate/tax-exemption-certificate /startup-india-certification 301
+/services/certificate/fssai-licence /fssai-registration 301
+/services/funding/grants /government-grants-funding 301
+/legal/privacy-policy /privacy-policy 301
+
+# SPA fallback
+/* /index.html 200

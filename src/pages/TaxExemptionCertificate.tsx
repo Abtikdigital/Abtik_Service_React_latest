@@ -226,7 +226,10 @@ const TaxExemptionCertificate = () => {
                   text-white lg:text-inherit tracking-wide
                   main-heading font-1"
           >
-            Startup India Certification Assistance
+            Startup India Certification {" "}
+            <span className="text-[#3CA2E2] font-extrabold block sm:inline">
+              Assistance
+            </span>
           </h1>
           <p
             className="text-sm sm:text-base md:text-lg lg:text-xl
@@ -347,7 +350,7 @@ const TaxExemptionCertificate = () => {
             </p>
           </div>
           <div className="w-full flex items-center justify-center p-8">
-              <img src={Image1} className="w-full h-auto rounded-4xl object-contain shadow-2xl" loading="lazy" />
+              <img src={Image1} alt="Startup India Tax Exemption 80-IAC Certificate" className="w-full h-auto rounded-4xl object-contain shadow-2xl" loading="lazy" />
             </div>
         </motion.div>
         </div>

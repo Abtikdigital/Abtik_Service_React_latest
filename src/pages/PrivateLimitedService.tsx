@@ -233,7 +233,11 @@ const PvtLtdRegistration = () => {
              text-white lg:text-inherit tracking-wide
              main-heading font-1"
             >
-              Business Registration Services in India
+                            Business Registration Services {" "}
+              <span className="text-[#3CA2E2] font-extrabold block sm:inline">
+                In India
+              </span>
+
             </h1>
             <p
               className="text-sm sm:text-base md:text-lg lg:text-xl
