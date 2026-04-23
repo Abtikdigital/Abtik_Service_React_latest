@@ -1,3 +1,4 @@
+"use client";
 import Mainlayout from "../section/Mainlayout";
 import BgImage from "../assets/Hero/bgImg.svg";
 import Contact from "../section/Contact";
@@ -20,7 +21,7 @@ import { memo, useState } from "react";
 import { useDispatch } from "react-redux";
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
-import { HeadProvider, Meta, Title } from "react-head";
+
 import seoData from "../data/seoData.json";
 const ZEDCertificate = () => {
   const dispatch = useDispatch();
@@ -193,18 +194,7 @@ const ZEDCertificate = () => {
 
   return (
     <>
-      <HeadProvider>
-        <Title>{seoData?.zedCertificateService?.title}</Title>
-        <Meta
-          name="description"
-          content={seoData?.zedCertificateService?.description}
-        />
-        <Meta
-          name="keywords"
-          content={seoData?.zedCertificateService?.keyword}
-        />
-        <Meta name="robots" content={seoData?.zedCertificateService?.robots} />
-      </HeadProvider>
+      
       <Mainlayout>
         {/* Hero Section */}
         <section

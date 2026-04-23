@@ -1,3 +1,4 @@
+"use client";
 import { motion, useInView, type Variants } from "framer-motion";
 import { useRef, useEffect, memo } from "react";
 import React from "react";

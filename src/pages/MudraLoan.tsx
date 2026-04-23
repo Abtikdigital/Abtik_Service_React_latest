@@ -1,3 +1,4 @@
+"use client";
 import Mainlayout from "../section/Mainlayout";
 import BgImage from "../assets/Hero/bgImg.svg";
 import Contact from "../section/Contact";
@@ -25,7 +26,7 @@ import { memo, useState } from "react";
 import { useDispatch } from "react-redux";
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
-import { HeadProvider, Meta, Title } from "react-head";
+
 import seoData from "../data/seoData.json";
 const MudraLoan = () => {
   const dispatch = useDispatch();
@@ -199,12 +200,7 @@ const MudraLoan = () => {
 
   return (
     <>
-      <HeadProvider>
-        <Title>{seoData?.mudraloanService?.title}</Title>
-        <Meta name="description" content={seoData?.mudraloanService?.description} />
-        <Meta name="keywords" content={seoData?.mudraloanService?.keyword} />
-        <Meta name="robots" content={seoData?.mudraloanService?.robots} />
-      </HeadProvider>
+      
 
       <Mainlayout>
         {/* Hero Section */}

@@ -1,3 +1,4 @@
+"use client";
 import Mainlayout from "../section/Mainlayout";
 import BgImage from "../assets/Hero/bgImg.svg";
 import Contact from "../section/Contact";
@@ -20,7 +21,7 @@ import { memo, useState } from "react";
 import { useDispatch } from "react-redux";
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
-import { HeadProvider, Meta, Title } from "react-head";
+
 import seoData from "../data/seoData.json";
 const Section8CompanyRegistration = () => {
  const dispatch = useDispatch();
@@ -193,15 +194,7 @@ const Section8CompanyRegistration = () => {
 
  return (
   <>
-   <HeadProvider>
-    <Title>{seoData?.section8Company?.title}</Title>
-    <Meta
-     name="description"
-     content={seoData?.section8Company?.description}
-    />
-    <Meta name="keywords" content={seoData?.section8Company?.keyword} />
-    <Meta name="robots" content={seoData?.section8Company?.robots} />
-   </HeadProvider>
+   
 
    <Mainlayout>
     {/* Hero Section */}

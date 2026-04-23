@@ -1,4 +1,5 @@
-import { useNavigate } from "react-router-dom";
+"use client";
+import { useNavigate } from "@/utils/hooks/useNavigate";;
 import Image1 from "../assets/Services/Grants.webp";
 import Image2 from "../assets/Services/StartupIndia.webp";
 import Image3 from "../assets/Services/MsmeCertificate.webp";

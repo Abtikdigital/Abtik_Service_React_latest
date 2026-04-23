@@ -1,4 +1,5 @@
-import { useParams } from "react-router-dom";
+"use client";
+import { useParams } from "next/navigation";;
 
 const PdfPreview = () => {
  const { fileName } = useParams();

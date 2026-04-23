@@ -1,3 +1,4 @@
+"use client";
 import Mainlayout from "../section/Mainlayout";
 import BgImage from "../assets/Hero/bgImg.svg";
 import Contact from "../section/Contact";
@@ -25,7 +26,7 @@ import { memo, useState } from "react";
 import { useDispatch } from "react-redux";
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
-import { HeadProvider, Meta, Title } from "react-head";
+
 import seoData from "../data/seoData.json";
 const TrademarkFiling = () => {
   const dispatch = useDispatch();
@@ -198,12 +199,7 @@ const TrademarkFiling = () => {
   const isInViewContact = useInView(refContact, { once: true, amount: 0.1 });
 
   return (<>
-    <HeadProvider>
-      <Title>{seoData?.trademarkService?.title}</Title>
-      <Meta name="description" content={seoData?.trademarkService?.description} />
-      <Meta name="keywords" content={seoData?.trademarkService?.keyword} />
-      <Meta name="robots" content={seoData?.trademarkService?.robots} />
-    </HeadProvider>
+    
 
     <Mainlayout>
       {/* Hero Section */}

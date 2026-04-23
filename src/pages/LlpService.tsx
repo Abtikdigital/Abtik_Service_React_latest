@@ -1,3 +1,4 @@
+"use client";
 import Mainlayout from "../section/Mainlayout";
 import BgImage from "../assets/Hero/bgImg.svg";
 import Contact from "../section/Contact";
@@ -20,7 +21,7 @@ import { memo, useState } from "react";
 import { useDispatch } from "react-redux";
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
-import { HeadProvider, Meta, Title } from "react-head";
+
 import seoData from "../data/seoData.json";
 const LLPRegistration = () => {
  const dispatch = useDispatch();
@@ -194,12 +195,7 @@ const LLPRegistration = () => {
 
  return (
   <>
-   <HeadProvider>
-    <Title>{seoData?.llpService?.title}</Title>
-    <Meta name="description" content={seoData?.llpService?.description} />
-    <Meta name="keywords" content={seoData?.llpService?.keyword} />
-    <Meta name="robots" content={seoData?.llpService?.robots} />
-   </HeadProvider>
+   
 
    <Mainlayout>
     {/* Hero Section */}

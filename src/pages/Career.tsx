@@ -1,3 +1,4 @@
+"use client";
 import { memo, useState } from "react";
 import Mainlayout from "../section/Mainlayout";
 import BgImage from "../assets/Career/bgImg.svg";
@@ -24,7 +25,7 @@ import { motion, AnimatePresence, useInView } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import { useRef } from "react";
-import { HeadProvider, Meta, Title } from "react-head";
+
 import seoData from "../data/seoData.json";
 // import axios from "axios";
 import Swal from "sweetalert2";
@@ -418,12 +419,7 @@ const Career = () => {
 
  return (
   <>
-   <HeadProvider>
-    <Title>{seoData?.careerPage?.title}</Title>
-    <Meta name="description" content={seoData?.careerPage?.description} />
-    <Meta name="keywords" content={seoData?.careerPage?.keyword} />
-    <Meta name="robots" content={seoData?.careerPage?.robots} />
-   </HeadProvider>
+   
 
    <Mainlayout>
     {/* Hero Section */}

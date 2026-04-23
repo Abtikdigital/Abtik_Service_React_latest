@@ -1,69 +1,32 @@
-# React + TypeScript + Vite
+# Abtik Services - Next.js Migration
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project has been migrated from Vite to Next.js (App Router) to provide better SEO, performance, and scalability.
 
-Currently, two official plugins are available:
+## Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+First, run the development server:
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Scripts
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- `npm run dev`: Starts the Next.js development server.
+- `npm run build`: Creates an optimized production build of the application.
+- `npm run start`: Starts the production server.
+- `npm run lint`: Runs ESLint for code quality checks.
+
+## Key Changes in Migration
+
+1.  **App Router**: Moved from `react-router-dom` to the Next.js App Router for file-based routing.
+2.  **Metadata API**: Integrated `seoData.json` with Next.js's native Metadata API for improved SEO.
+3.  **Redux Integration**: State management is handled through a `Providers` wrapper in `src/app/layout.tsx`.
+4.  **Optimized Fonts**: Integrated Google Fonts (Inter & Bricolage Grotesque) using `next/font`.
+
+## Environment Variables
+
+The project uses `NEXT_PUBLIC_` prefixed environment variables for client-side access.
+Example: `NEXT_PUBLIC_BACK_END_URL`

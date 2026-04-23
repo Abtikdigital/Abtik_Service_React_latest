@@ -9,7 +9,7 @@ import {
   faInstagram,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
-import { Link } from "react-router-dom";
+import Link from "next/link";;
 import { memo } from "react";
 
 const Footer = () => {
@@ -116,20 +116,17 @@ const Footer = () => {
             <div className="space-y-3">
               <h2 className="heading">Company</h2>
               <ul className="flex flex-col space-y-3">
-                <Link
-                  to={"/"}
+                <Link  href={"/"}
                   className="text-sm text-[#4D4D4D] font-semibold hover:underline hover:text-gray-950 cursor-pointer duration-300"
                 >
                   Home
                 </Link>
-                <Link
-                  to={"/about"}
+                <Link  href={"/about"}
                   className="text-sm font-semibold text-[#4D4D4D] hover:underline hover:text-gray-950 cursor-pointer duration-300"
                 >
                   About
                 </Link>
-                <Link
-                  to={"/contact"}
+                <Link  href={"/contact"}
                   className="text-sm font-semibold text-[#4D4D4D] hover:underline hover:text-gray-950 cursor-pointer duration-300"
                 >
                   Contact
@@ -140,44 +137,37 @@ const Footer = () => {
             <div className="space-y-3">
               <h2 className="heading">Our Popular Services</h2>
               <ul className="flex flex-col space-y-3">
-                <Link
-                  to={"/services/funding/grants"}
+                <Link  href={"/services/funding/grants"}
                   className="text-sm font-semibold text-[#4D4D4D] hover:underline hover:text-gray-950 cursor-pointer duration-300"
                 >
                   Grants
                 </Link>
-                <Link
-                  to={"/services/certificate/startup-india"}
+                <Link  href={"/services/certificate/startup-india"}
                   className="text-sm font-semibold text-[#4D4D4D] hover:underline hover:text-gray-950 cursor-pointer duration-300"
                 >
                   StartUp India Certificate
                 </Link>
-                <Link
-                  to={"/services/certificate/msme"}
+                <Link  href={"/services/certificate/msme"}
                   className="text-sm font-semibold text-[#4D4D4D] hover:underline hover:text-gray-950 cursor-pointer duration-300"
                 >
                   Msme Certificate
                 </Link>
-                <Link
-                  to={"/services/funding/seed-fund"}
+                <Link  href={"/services/funding/seed-fund"}
                   className="text-sm font-semibold text-[#4D4D4D] hover:underline hover:text-gray-950 cursor-pointer duration-300"
                 >
                   Seed Fund
                 </Link>
-                <Link
-                  to={"/services/legal/trademark-registration"}
+                <Link  href={"/services/legal/trademark-registration"}
                   className="text-sm font-semibold text-[#4D4D4D] hover:underline hover:text-gray-950 cursor-pointer duration-300"
                 >
                   Trade Mark Registration
                 </Link>
-                <Link
-                  to={"/services/certificate/iso"}
+                <Link  href={"/services/certificate/iso"}
                   className="text-sm font-semibold text-[#4D4D4D] hover:underline hover:text-gray-950 cursor-pointer duration-300"
                 >
                   ISO Certificate
                 </Link>
-                <Link
-                  to={"/services/certificate/zed"}
+                <Link  href={"/services/certificate/zed"}
                   className="text-sm font-semibold  text-[#4D4D4D] hover:underline hover:text-gray-950 cursor-pointer duration-300"
                 >
                   ZED Certificate
@@ -188,20 +178,17 @@ const Footer = () => {
             <div className="space-y-3">
               <h2 className="heading">Legal</h2>
               <ul className="flex flex-col space-y-3">
-                <Link
-                  to={"/legal/privacy-policy"}
+                <Link  href={"/legal/privacy-policy"}
                   className="text-sm font-semibold text-[#4D4D4D] hover:underline hover:text-gray-950 cursor-pointer duration-300"
                 >
                   Privacy Policy
                 </Link>
-                <Link
-                  to={"/legal/terms-and-conditions"}
+                <Link  href={"/legal/terms-and-conditions"}
                   className="text-sm font-semibold text-[#4D4D4D] hover:underline hover:text-gray-950 cursor-pointer duration-300"
                 >
                   Terms & Conditions
                 </Link>
-                {/* <Link
-                  to={"/legal/refund-policy"}
+                {/* <Link  href={"/legal/refund-policy"}
                   className="text-sm font-semibold text-[#4D4D4D] hover:underline hover:text-gray-950 cursor-pointer duration-300"
                 >
                   Cancellation & Refund Policy

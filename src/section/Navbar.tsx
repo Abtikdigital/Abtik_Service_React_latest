@@ -1,7 +1,9 @@
+"use client";
 import { ChevronDown, Menu, X, ChevronRight, Search, Loader2 } from "lucide-react";
 import Logo from "../assets/Logo/NewTmLogo.png";
 import { useEffect, useMemo, useState, useRef, memo } from "react";
-import { Link, useLocation } from "react-router-dom";
+import Link from "next/link";
+import { usePathname as useLocation } from "next/navigation";;
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -404,7 +406,7 @@ function flattenMenuToLinks(menu: Menu[]): SearchLink[] {
 }
 
 const DesktopNavbar = ({ setOpen }: any) => {
-  const location = useLocation();
+  const pathname = useLocation();
   const [hoverTimeout, setHoverTimeout] = useState<any | null>(null);
   const [clearSubmenuTimeout, setClearSubmenuTimeout] = useState<any | null>(
     null,
@@ -642,18 +644,18 @@ const DesktopNavbar = ({ setOpen }: any) => {
         <div ref={menuWrapperRef}>
           <ul className="flex gap-4 lg:gap-6 xl:gap-8 font-medium items-center text-sm lg:text-base font-1">
             {menuItems.map((item) => {
-              const isActive = item.path && location.pathname === item.path;
+              const isActive = item.path && pathname === item.path;
               const isServicesPage =
                 item.name === "Services" &&
-                (location.pathname.startsWith("/services") ||
-                  location.pathname.startsWith("/funding") ||
-                  location.pathname.startsWith("/ip") ||
-                  location.pathname.startsWith("/certificate") ||
-                  location.pathname.startsWith("/tax") ||
-                  location.pathname.startsWith("/registration"));
+                (pathname.startsWith("/services") ||
+                  pathname.startsWith("/funding") ||
+                  pathname.startsWith("/ip") ||
+                  pathname.startsWith("/certificate") ||
+                  pathname.startsWith("/tax") ||
+                  pathname.startsWith("/registration"));
               const isNewsPage =
                 item.name === "News & Insights" &&
-                location.pathname.startsWith("/news");
+                pathname.startsWith("/news");
 
               return (
                 <li
@@ -689,8 +691,7 @@ const DesktopNavbar = ({ setOpen }: any) => {
                   }
                 >
                   {item.path ? (
-                    <Link
-                      to={item.path}
+                    <Link  href={item.path}
                       className="flex items-center gap-1 relative group py-2"
                       onMouseEnter={() =>
                         handleMenuItemEnter(
@@ -809,10 +810,9 @@ const DesktopNavbar = ({ setOpen }: any) => {
                                             : undefined
                                         }
                                       >
-                                        <Link
-                                          to={subItem.path}
+                                        <Link  href={subItem.path}
                                           className={`flex items-center justify-between text-xs font-normal p-3 rounded-lg transition-all duration-300 transform hover:scale-[1.02] min-h-[50px] group ${
-                                            location.pathname === subItem.path
+                                            pathname === subItem.path
                                               ? "bg-[#e8f3ff] text-[#010574] shadow-sm"
                                               : "bg-gray-50 hover:bg-[#e0f0ff] hover:text-[#010574] text-gray-800 hover:shadow-sm"
                                           }`}
@@ -820,7 +820,7 @@ const DesktopNavbar = ({ setOpen }: any) => {
                                           <div className="flex-1">
                                             <span
                                               className={`block text-sm font-medium leading-tight ${
-                                                location.pathname ===
+                                                pathname ===
                                                 subItem.path
                                                   ? "font-semibold text-[#010574]"
                                                   : "text-gray-900"
@@ -876,11 +876,10 @@ const DesktopNavbar = ({ setOpen }: any) => {
                                               <div className="py-2 max-h-80 overflow-y-auto">
                                                 {subItem.subServices.map(
                                                   (subService: any) => (
-                                                    <Link
-                                                      key={subService.name}
-                                                      to={subService.path}
+                                                    <Link key={subService.name}
+                                                      href={subService.path}
                                                       className={`block px-4 py-3 text-sm transition-all duration-200 ${
-                                                        location.pathname ===
+                                                        pathname ===
                                                         subService.path
                                                           ? "bg-blue-50 text-blue-700 border-r-2 border-blue-500"
                                                           : "text-gray-700 hover:bg-blue-50 hover:text-blue-700 hover:border-r-2 hover:border-blue-300"
@@ -933,11 +932,10 @@ const DesktopNavbar = ({ setOpen }: any) => {
                       </div>
                       <div className="py-2 max-h-80 overflow-y-auto">
                         {item.subServices.map((subService) => (
-                          <Link
-                            key={subService.name}
-                            to={subService.path}
+                          <Link key={subService.name}
+                            href={subService.path}
                             className={`block px-4 py-3 text-sm transition-all duration-200 ${
-                              location.pathname === subService.path
+                              pathname === subService.path
                                 ? "bg-blue-50 text-blue-700 border-r-2 border-blue-500"
                                 : "text-gray-700 hover:bg-blue-50 hover:text-blue-700 hover:border-r-2 hover:border-blue-300"
                             }`}
@@ -987,7 +985,7 @@ const MobileNavbar = ({ onOpenSearch }: { onOpenSearch: () => void }) => {
   const [isMobileNewsOpen, setIsMobileNewsOpen] = useState(false);
   const [openSection, setOpenSection] = useState<string | null>(null);
   const [openSubService, setOpenSubService] = useState<string | null>(null);
-  const location = useLocation();
+  const pathname = useLocation();
 
   const toggleMobileView = () => {
     setIsMobileViewOpen(!isMobileViewOpen);
@@ -1126,8 +1124,7 @@ const MobileNavbar = ({ onOpenSearch }: { onOpenSearch: () => void }) => {
                                                 {subItem.name}
                                               </button>
                                             ) : (
-                                              <Link
-                                                to={subItem?.path}
+                                              <Link  href={subItem?.path}
                                                 onClick={toggleMobileView}
                                                 className="flex-1 hover:text-[#010574] transition py-2 px-3 lg:px-4 rounded-md hover:bg-[#f5f5f5] text-[#6B7280]"
                                               >
@@ -1162,13 +1159,12 @@ const MobileNavbar = ({ onOpenSearch }: { onOpenSearch: () => void }) => {
                                                 {subItem.subServices.map(
                                                   (subService: any) => (
                                                     <li key={subService.name}>
-                                                      <Link
-                                                        to={subService.path}
+                                                      <Link  href={subService.path}
                                                         onClick={
                                                           toggleMobileView
                                                         }
                                                         className={`block transition py-2 px-3 rounded-md text-xs ${
-                                                          location.pathname ===
+                                                          pathname ===
                                                           subService.path
                                                             ? "text-[#010574] bg-[#e8f3ff] font-semibold"
                                                             : "text-[#8B8B8B] hover:text-[#010574] hover:bg-[#f5f5f5]"
@@ -1212,11 +1208,10 @@ const MobileNavbar = ({ onOpenSearch }: { onOpenSearch: () => void }) => {
                         <ul className="mt-2 space-y-1 pl-4 lg:pl-8 border-l-2 border-gray-200">
                           {item.subServices.map((subService: any) => (
                             <li key={subService.name}>
-                              <Link
-                                to={subService.path}
+                              <Link  href={subService.path}
                                 onClick={toggleMobileView}
                                 className={`block transition py-2 px-3 rounded-md text-xs ${
-                                  location.pathname === subService.path
+                                  pathname === subService.path
                                     ? "text-[#010574] bg-[#e8f3ff] font-semibold"
                                     : "text-[#8B8B8B] hover:text-[#010574] hover:bg-[#f5f5f5]"
                                 }`}
@@ -1231,11 +1226,10 @@ const MobileNavbar = ({ onOpenSearch }: { onOpenSearch: () => void }) => {
                       )}
                     </>
                   ) : (
-                    <Link
-                      to={item.path}
+                    <Link  href={item.path}
                       onClick={toggleMobileView}
                       className={`block transition px-3 lg:px-4 py-2 lg:py-3 rounded-md hover:bg-[#f5f5f5] ${
-                        location.pathname === item.path
+                        pathname === item.path
                           ? "text-[#052EAA] font-bold"
                           : "text-[#A4A4A4] hover:text-[#010574]"
                       }`}
@@ -1422,9 +1416,8 @@ const Navbar = () => {
                     ) : (
                       <div className="grid grid-cols-1 lg:grid-cols-2 gap-2">
                         {pageResults.map((r) => (
-                          <Link
-                            key={`${r.name}-${r.path}`}
-                            to={r.path}
+                          <Link key={`${r.name}-${r.path}`}
+                            href={r.path}
                             onClick={() => setOpen(false)}
                             className="block rounded-lg px-3 py-3 hover:bg-gray-50 transition-colors border border-transparent hover:border-gray-200"
                           >
@@ -1485,9 +1478,8 @@ const Navbar = () => {
                     ) : (
                       <div className="grid grid-cols-1 lg:grid-cols-2 gap-2">
                         {blogResults.map((b) => (
-                          <Link
-                            key={b.slug}
-                            to={`/expandedBlog/${b.slug}`}
+                          <Link key={b.slug}
+                            href={`/expandedBlog/${b.slug}`}
                             onClick={() => setOpen(false)}
                             className="block rounded-lg px-3 py-3 hover:bg-gray-50 transition-colors border border-transparent hover:border-gray-200"
                           >
@@ -1522,8 +1514,7 @@ const Navbar = () => {
                       </div>
                     )}
                     <div className="px-2 pt-2">
-                      <Link
-                        to="/news-insights/blogs"
+                      <Link  href="/news-insights/blogs"
                         onClick={() => setOpen(false)}
                         className="block text-center text-sm font-semibold text-[#3CA2E2] hover:underline py-2"
                       >

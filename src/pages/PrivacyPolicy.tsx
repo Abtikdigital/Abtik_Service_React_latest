@@ -1,6 +1,10 @@
 import { motion, useInView } from "framer-motion";
 import { memo, useRef } from "react";
+<<<<<<< Updated upstream
 import SEO from "../components/SEO";
+=======
+
+>>>>>>> Stashed changes
 import Mainlayout from "../section/Mainlayout";
 import BgImage from "../assets/Hero/bgImg.svg";
 import Contact from "../section/Contact";
@@ -29,6 +33,7 @@ const PrivacyPolicy = () => {
 
  return (
   <>
+<<<<<<< Updated upstream
    <SEO 
      title="Privacy Policy | Abtik Startup Advisor Pvt Ltd"
      description="Read the Privacy Policy of Abtik Startup Advisor Pvt Ltd. Learn how we collect, use, and protect your personal information with transparency and security."
@@ -40,6 +45,10 @@ const PrivacyPolicy = () => {
        "description": "Read the Privacy Policy of Abtik Startup Advisor Pvt Ltd."
      }}
    />
+=======
+   
+
+>>>>>>> Stashed changes
    <Mainlayout>
     {/* Hero Section */}
     <section

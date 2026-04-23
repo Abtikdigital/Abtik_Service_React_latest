@@ -1,4 +1,5 @@
-import { useLocation } from "react-router-dom";
+"use client";
+import { usePathname as useLocation } from "next/navigation";;
 import { useEffect } from "react";
 import seoData from "../data/seoData.json";
 
@@ -97,8 +98,8 @@ const resolveSeoConfig = (pathname: string) => {
 };
 
 const SeoSchema = () => {
-  const location = useLocation();
-  const pathname = location.pathname || "/";
+  const pathname = useLocation();
+  const pathname = pathname || "/";
 
   const seoConfig = resolveSeoConfig(pathname);
 

@@ -1,3 +1,4 @@
+"use client";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { useSelector, useDispatch } from "react-redux";
@@ -10,7 +11,7 @@ import { memo, useState, useRef, useEffect } from "react";
 import Offer from "./Offer";
 import { addContact } from "../api/contactApis";
 import isValidIndianNumber from "../utils/validation/isGenuineNumber";
-import { useLocation } from "react-router-dom";
+import { usePathname as useLocation } from "next/navigation";;
 import SeoSchema from "./SeoSchema";
 // import ChatbotWidget from "./ChatbotWidget";
 
@@ -154,7 +155,7 @@ const Mainlayout = ({ children }: MainlayoutProps) => {
   const isOpen = useSelector((state: RootState) => state.isContactFormOpen);
   const dispatch = useDispatch();
 
-  const { pathname } = useLocation();
+  const pathname = useLocation();
 
   const {
     register,

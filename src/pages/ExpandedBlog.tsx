@@ -1,5 +1,7 @@
+"use client";
 import { memo, useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import Link from "next/link";
+import { useParams } from "next/navigation";;
 import Mainlayout from "../section/Mainlayout";
 import BgImage from "../assets/ExpandedBlog/bgImg.svg";
 import { useDispatch } from "react-redux";
@@ -39,8 +41,7 @@ const ExpandedBlog = () => {
        The blog post you&apos;re looking for doesn&apos;t exist or has
        been moved. Please check the URL or browse our other articles.
       </p>
-      <Link
-       to="/blogs"
+      <Link  href="/blogs"
        className="inline-block mt-6 px-8 py-3 bg-gradient-to-r from-[#3CA2E2] to-[#052EAA] text-white rounded-lg font-semibold hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300"
       >
        Back to All Blogs
@@ -240,9 +241,8 @@ const ExpandedBlog = () => {
         </div>
         <div className="p-4 md:p-6 space-y-4 md:space-y-6">
          {listedBlogs.slice(0, 5).map((blog, index) => (
-          <Link
-           key={index}
-           to={blog.slug ? `/expandedBlog/${blog.slug}` : "/"}
+          <Link key={index}
+           href={blog.slug ? `/expandedBlog/${blog.slug}` : "/"}
            className="group block hover:bg-gray-50 p-2 md:p-3 rounded-lg md:rounded-xl transition-all duration-300 border border-transparent hover:border-gray-200"
           >
            <div className="grid grid-cols-4 gap-2 md:gap-3">

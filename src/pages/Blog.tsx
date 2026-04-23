@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 import { motion, useInView } from "framer-motion";
 import { useRef, memo } from "react";
 import NewBlog from "../section/NewBlog";
-import { HeadProvider, Meta, Title } from "react-head";
+
 import seoData from "../data/seoData.json";
 const Blog = () => {
  const dispatch = useDispatch();
@@ -21,12 +21,7 @@ const Blog = () => {
 
  return (
   <>
-   <HeadProvider>
-    <Title>{seoData?.blog?.title}</Title>
-    <Meta name="description" content={seoData?.blog?.description} />
-    <Meta name="keywords" content={seoData?.blog?.keyword} />
-    <Meta name="robots" content={seoData?.blog?.robots} />
-   </HeadProvider>
+   
    <Mainlayout>
     {/* Hero Section */}
     <section

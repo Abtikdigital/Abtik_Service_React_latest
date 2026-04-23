@@ -1,3 +1,4 @@
+"use client";
 import Mainlayout from "../section/Mainlayout";
 import BgImage from "../assets/Hero/bgImg.svg";
 import Contact from "../section/Contact";
@@ -20,7 +21,7 @@ import { memo, useState } from "react";
 import { useDispatch } from "react-redux";
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
-import { HeadProvider, Meta, Title } from "react-head";
+
 import seoData from "../data/seoData.json";
 const TDCompliance = () => {
  const dispatch = useDispatch();
@@ -193,15 +194,7 @@ const TDCompliance = () => {
 
  return (
   <>
-   <HeadProvider>
-    <Title>{seoData?.tdsComplianceService?.title}</Title>
-    <Meta
-     name="description"
-     content={seoData?.tdsComplianceService?.description}
-    />
-    <Meta name="keywords" content={seoData?.tdsComplianceService?.keyword} />
-    <Meta name="robots" content={seoData?.tdsComplianceService?.robots} />
-   </HeadProvider>
+   
    <Mainlayout>
     {/* Hero Section */}
     <section

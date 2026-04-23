@@ -1,3 +1,4 @@
+"use client";
 import Mainlayout from "../section/Mainlayout";
 import BgImage from "../assets/Hero/bgImg.svg"; // Assuming a similar background image for Venture Capital
 import Contact from "../section/Contact";
@@ -22,7 +23,7 @@ import { memo, useState } from "react";
 import { useDispatch } from "react-redux";
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
-import { HeadProvider, Meta, Title } from "react-head";
+
 import seoData from "../data/seoData.json";
 
 const VentureCapital = () => {
@@ -197,12 +198,7 @@ const VentureCapital = () => {
 
   return (
     <>
-      <HeadProvider>
-        <Title>{seoData?.ventureCapitalService?.title}</Title> {/* Assuming SEO data for Venture Capital */}
-        <Meta name="description" content={seoData?.ventureCapitalService?.description} />
-        <Meta name="keywords" content={seoData?.ventureCapitalService?.keyword} />
-        <Meta name="robots" content={seoData?.ventureCapitalService?.robots} />
-      </HeadProvider>
+      
       <Mainlayout>
         {/* Hero Section */}
         <section

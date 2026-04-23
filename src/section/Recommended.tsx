@@ -1,3 +1,4 @@
+"use client";
 import Image1 from "../assets/Services/StartupIndia.webp";
 import Image2 from "../assets/Services/SeedFund.webp";
 import Image3 from "../assets/Services/MsmeLoan.webp";
@@ -9,7 +10,7 @@ import Image8 from "../assets/Services/MsmeCertificate.webp"
 
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect, useState, memo } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "@/utils/hooks/useNavigate";;
 
 const recommendedData = [
   {

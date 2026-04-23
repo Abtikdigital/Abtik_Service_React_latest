@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { memo, useRef } from "react";
-import { HeadProvider, Meta, Title } from "react-head";
+
 import Mainlayout from "../section/Mainlayout";
 import BgImage from "../assets/Hero/bgImg.svg";
 import Contact from "../section/Contact";
@@ -28,29 +28,7 @@ const TermsConditions = () => {
 
  return (
   <>
-   <HeadProvider>
-    <Title>
-     {seoData?.terms?.title || "Terms & Conditions - Abtik Startup Advisor pvt ltd Team"}
-    </Title>
-    <Meta
-     name="description"
-     content={
-      seoData?.terms?.description ||
-      "Read the Terms and Conditions governing the use of Abtik Startup Advisor pvt ltd Team website and services."
-     }
-    />
-    <Meta
-     name="keywords"
-     content={
-      seoData?.terms?.keyword ||
-      "terms and conditions, Abtik Startup Advisor pvt ltd Team, legal terms, service terms"
-     }
-    />
-    <Meta
-     name="robots"
-     content={seoData?.terms?.robots || "index, follow"}
-    />
-   </HeadProvider>
+   
 
    <Mainlayout>
     {/* Hero Section */}

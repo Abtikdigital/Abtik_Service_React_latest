@@ -1,5 +1,7 @@
+"use client";
 import { memo } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import Link from "next/link";
+import { useNavigate } from "@/utils/hooks/useNavigate";;
 
 const PageNotFound = () => {
  const nav = useNavigate();
@@ -36,9 +38,8 @@ const PageNotFound = () => {
      <p className="text-sm font-semibold text-[#4D4D4D] mb-3">Explore our site</p>
      <nav className="flex flex-wrap justify-center gap-4" aria-label="Helpful links">
       {helpfulLinks.map(({ to, label }) => (
-       <Link
-        key={to}
-        to={to}
+       <Link key={to}
+        href={to}
         className="text-sm font-semibold text-[#3CA2E2] hover:text-[#052EAA] hover:underline transition-colors"
        >
         {label}

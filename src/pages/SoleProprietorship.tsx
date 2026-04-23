@@ -1,3 +1,4 @@
+"use client";
 import Mainlayout from "../section/Mainlayout";
 import BgImage from "../assets/Hero/bgImg.svg";
 import Contact from "../section/Contact";
@@ -20,7 +21,7 @@ import { memo, useState } from "react";
 import { useDispatch } from "react-redux";
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
-import { HeadProvider, Meta, Title } from "react-head";
+
 import seoData from "../data/seoData.json";
 const SoleProprietorRegistration = () => {
  const dispatch = useDispatch();
@@ -193,21 +194,7 @@ const SoleProprietorRegistration = () => {
 
  return (
   <>
-   <HeadProvider>
-    <Title>{seoData?.soleproprietorshipService?.title}</Title>
-    <Meta
-     name="description"
-     content={seoData?.soleproprietorshipService?.description}
-    />
-    <Meta
-     name="keywords"
-     content={seoData?.soleproprietorshipService?.keyword}
-    />
-    <Meta
-     name="robots"
-     content={seoData?.soleproprietorshipService?.robots}
-    />
-   </HeadProvider>
+   
    <Mainlayout>
     {/* Hero Section */}
     <section

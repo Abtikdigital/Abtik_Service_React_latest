@@ -1,3 +1,4 @@
+"use client";
 import Mainlayout from "../section/Mainlayout";
 import BgImage from "../assets/Hero/bgImg.svg";
 import Contact from "../section/Contact";
@@ -25,7 +26,7 @@ import { memo, useState } from "react";
 import { useDispatch } from "react-redux";
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
-import { HeadProvider, Meta, Title } from "react-head";
+
 import seoData from "../data/seoData.json";
 const Overdraft = () => {
   const dispatch = useDispatch();
@@ -199,12 +200,7 @@ const Overdraft = () => {
 
   return (
     <>
-      <HeadProvider>
-        <Title>{seoData?.overdraftService?.title}</Title>
-        <Meta name="description" content={seoData?.overdraftService?.description} />
-        <Meta name="keywords" content={seoData?.overdraftService?.keyword} />
-        <Meta name="robots" content={seoData?.overdraftService?.robots} />
-      </HeadProvider>
+      
 
       <Mainlayout>
         {/* Hero Section */}

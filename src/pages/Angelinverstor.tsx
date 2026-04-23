@@ -1,3 +1,4 @@
+"use client";
 import Mainlayout from "../section/Mainlayout";
 import BgImage from "../assets/Hero/bgImg.svg"; // Assuming a similar background image for Angel Investor
 import Contact from "../section/Contact";
@@ -22,7 +23,7 @@ import { memo, useState } from "react";
 import { useDispatch } from "react-redux";
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
-import { HeadProvider, Meta, Title } from "react-head";
+
 import seoData from "../data/seoData.json";
 
 const AngelInvestor = () => {
@@ -204,16 +205,7 @@ const AngelInvestor = () => {
 
   return (
     <>
-      <HeadProvider>
-        <Title>{seoData?.angelInvestorService?.title}</Title>{" "}
-        {/* Assuming SEO data for Angel Investor */}
-        <Meta
-          name="description"
-          content={seoData?.angelInvestorService?.description}
-        />
-        <Meta name="keywords" content={seoData?.angelInvestorService?.keyword} />
-        <Meta name="robots" content={seoData?.angelInvestorService?.robots} />
-      </HeadProvider>
+      
       <Mainlayout>
         {/* Hero Section */}
         <section

@@ -1,6 +1,7 @@
+"use client";
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect, useState, memo } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "@/utils/hooks/useNavigate";;
 import { blogsData } from "../data/blogsData";
 
 const BlogSection = () => {

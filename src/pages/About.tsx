@@ -1,3 +1,4 @@
+"use client";
 import Mainlayout from "../section/Mainlayout";
 import BgImage from "../assets/About/bgImg.svg";
 import ClientStats from "../section/ClientStats";
@@ -17,7 +18,7 @@ import WhychooseImage3 from "../assets/AboutSection/silhouette-confident-busines
 import { useDispatch } from "react-redux";
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect, useState, memo } from "react";
-import { HeadProvider, Meta, Title } from "react-head";
+
 import seoData from "../data/seoData.json";
 const About = () => {
  const dispatch = useDispatch();
@@ -131,12 +132,7 @@ const About = () => {
 
  return (
   <>
-   <HeadProvider>
-    <Title>{seoData?.aboutPage?.title}</Title>
-    <Meta name="description" content={seoData?.aboutPage?.description} />
-    <Meta name="keywords" content={seoData?.aboutPage?.keyword} />
-    <Meta name="robots" content={seoData?.aboutPage?.robots} />
-   </HeadProvider>
+   
    <Mainlayout>
     {/* Hero Section */}
     <section

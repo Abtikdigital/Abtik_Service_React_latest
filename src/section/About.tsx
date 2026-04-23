@@ -1,8 +1,9 @@
+"use client";
 import { useState, useEffect, memo } from 'react';
 import Image1 from '../assets/AboutSection/business-people-talking-each-other (1).jpg';
 import Image2 from "../assets/AboutSection/silhouette-confident-businesspeople.jpg"
 import Image3 from "../assets/AboutSection/modern-equipped-computer-lab.jpg"
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "@/utils/hooks/useNavigate";;
 
 const About = () => {
   const nav = useNavigate()

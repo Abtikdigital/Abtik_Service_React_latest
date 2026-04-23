@@ -1,3 +1,4 @@
+"use client";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { memo, useState } from "react";
 

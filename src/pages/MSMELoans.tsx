@@ -1,3 +1,4 @@
+"use client";
 import Mainlayout from "../section/Mainlayout";
 import BgImage from "../assets/Hero/bgImg.svg";
 import Contact from "../section/Contact";
@@ -25,9 +26,9 @@ import { memo, useState } from "react";
 import { useDispatch } from "react-redux";
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
-import { HeadProvider, Meta, Title } from "react-head";
+
 import seoData from "../data/seoData.json";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "@/utils/hooks/useNavigate";;
 
 const MSMELoans = () => {
  const dispatch = useDispatch();
@@ -202,12 +203,7 @@ const MSMELoans = () => {
 
  return (
   <>
-   <HeadProvider>
-    <Title>{seoData?.msmeLoans?.title || "MSME Loans - CGTMSE, Udyam & Mudra Loans"}</Title>
-    <Meta name="description" content={seoData?.msmeLoans?.description || "Get MSME loans including CGTMSE, Udyam, and Mudra loans with Abtik's expert assistance."} />
-    <Meta name="keywords" content={seoData?.msmeLoans?.keyword || "MSME loans, CGTMSE, Udyam registration, Mudra loans, business loans"} />
-    <Meta name="robots" content={seoData?.msmeLoans?.robots || "index, follow"} />
-   </HeadProvider>
+   
    <Mainlayout>
     {/* Hero Section */}
     <section

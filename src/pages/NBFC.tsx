@@ -1,3 +1,4 @@
+"use client";
 import Mainlayout from "../section/Mainlayout";
 import BgImage from "../assets/Hero/bgImg.svg"; // Assuming a similar background image for NBFC
 import Contact from "../section/Contact";
@@ -22,7 +23,7 @@ import { memo, useState } from "react";
 import { useDispatch } from "react-redux";
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
-import { HeadProvider, Meta, Title } from "react-head";
+
 import seoData from "../data/seoData.json";
 
 const NBFC = () => {
@@ -197,12 +198,7 @@ const NBFC = () => {
 
   return (
     <>
-      <HeadProvider>
-        <Title>{seoData?.nbfcService?.title}</Title>
-        <Meta name="description" content={seoData?.nbfcService?.description} />
-        <Meta name="keywords" content={seoData?.nbfcService?.keyword} />
-        <Meta name="robots" content={seoData?.nbfcService?.robots} />
-      </HeadProvider>
+      
       <Mainlayout>
         {/* Hero Section */}
         <section

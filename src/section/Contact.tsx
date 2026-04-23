@@ -1,3 +1,4 @@
+"use client";
 import { useForm, Controller } from "react-hook-form";
 import Swal from "sweetalert2";
 import { memo, useState, useRef, useEffect } from "react";

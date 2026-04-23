@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { memo, useRef } from "react";
-import { HeadProvider, Meta, Title } from "react-head";
+
 import Mainlayout from "../section/Mainlayout";
 import BgImage from "../assets/Hero/bgImg.svg";
 import Contact from "../section/Contact";
@@ -30,30 +30,7 @@ const RefundPolicy = () => {
 
  return (
   <>
-   <HeadProvider>
-    <Title>
-     {seoData?.refundPolicy?.title ||
-      "Refund Policy - Abtik Startup Advisor pvt ltd Team"}
-    </Title>
-    <Meta
-     name="description"
-     content={
-      seoData?.refundPolicy?.description ||
-      "Learn about our refund policy at Abtik Startup Advisor pvt ltd Team. Understand the terms and conditions for refunds and cancellations."
-     }
-    />
-    <Meta
-     name="keywords"
-     content={
-      seoData?.refundPolicy?.keyword ||
-      "refund policy, cancellation, money back guarantee, Abtik Startup Advisor pvt ltd Team"
-     }
-    />
-    <Meta
-     name="robots"
-     content={seoData?.refundPolicy?.robots || "index, follow"}
-    />
-   </HeadProvider>
+   
 
    <Mainlayout>
     {/* Hero Section */}

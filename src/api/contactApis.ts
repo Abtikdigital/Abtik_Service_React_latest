@@ -1,5 +1,5 @@
 import axios from "axios";
-const back_end_url = import.meta.env.VITE_BACK_END_URL
+const back_end_url = process.env.NEXT_PUBLIC_BACK_END_URL
 
 export const addContact = async (formData:any) => {
     try {

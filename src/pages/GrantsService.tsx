@@ -1,3 +1,4 @@
+"use client";
 import Mainlayout from "../section/Mainlayout";
 import BgImage from "../assets/Hero/bgImg.svg";
 import Contact from "../section/Contact";
@@ -26,6 +27,7 @@ import { useDispatch } from "react-redux";
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
 import SEO from "../components/SEO";
+
 const Grants = () => {
   const dispatch = useDispatch();
   const handleOpenDialog = () => {
@@ -794,8 +796,7 @@ const Grants = () => {
         <Contact />
       </motion.section>
     </Mainlayout>
-  </>
-  );
+  </>);
 };
 
 export default memo(Grants);
