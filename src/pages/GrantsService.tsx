@@ -203,6 +203,7 @@ const Grants = () => {
       <Meta name="description" content={seoData?.grantsService?.description} />
       <Meta name="keywords" content={seoData?.grantsService?.keyword} />
       <Meta name="robots" content={seoData?.grantsService?.robots} />
+      <link rel="canonical" href={seoData?.grantsService?.canonical} />
     </HeadProvider>
 
     <Mainlayout>
@@ -237,11 +238,7 @@ const Grants = () => {
              main-heading font-1"
 
           >
-            Secure{" "}
-            <span className="text-[#3CA2E2] font-extrabold block sm:inline">
-              Government Grants
-            </span>{" "}
-            for Your Business
+            Government Grants & Funding for Indian Startups & MSMEs
           </h1>
           <p
             className="text-sm sm:text-base md:text-lg lg:text-xl

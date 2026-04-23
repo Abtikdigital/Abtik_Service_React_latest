@@ -1,353 +1,413 @@
 {
   "homepage": {
-    "title": "Abtik Startup Advisor pvt ltd LLP | Business and MSME Loan Consultancy Short-Term Capital Solutions ",
-    "description": "Get expert help on MSME loans, short-term capital, and government funding—trusted by 50,000+ businesses across India.",
-    "keyword": "abtik loan, startup loan, msme loan, msme business loan, company loan, working capital business loan, business loan consultant, msme loan apply, private business loan, unsecured business loan, private funding, long term business loan. ",
+    "title": "MSME & Business Loan Consultancy in India | Abtik Services",
+    "description": "Abtik Services is India's leading MSME & Business Loan consultancy. We help startups and businesses with funding, registration, and compliance services.",
+    "keyword": "MSME Loan, Business Loan India, Startup Funding, Business Consultancy India, Abtik Services",
     "canonical": "https://abtikservices.com/",
-    "robots": "index, follow"
+    "robots": "index, follow",
+    "faqs": [
+      {
+        "question": "What services does Abtik Services provide?",
+        "answer": "Abtik Services provides MSME loans, business loans, startup registration, government grants, and compliance services for Indian businesses."
+      },
+      {
+        "question": "How can I apply for a business loan through Abtik?",
+        "answer": "You can apply by contacting our expert consultants through the website or by scheduling a call for a personalized consultation."
+      }
+    ]
   },
   "aboutPage": {
     "title": "About us | Providing Business loans for startup ahmedabad",
     "description": "Helping startups in Ahmedabad access the right business loans, funding support, and expert guidance to grow fast and fearlessly.",
     "keyword": "startup loan, msme loan, working capital business loan, private loan, abtik startup advisor pvt ltd, unsecured loan.",
-    "canonical": "Abtik Startup Advisor pvt ltd",
-    "robots": ""
+    "canonical": "https://abtikservices.com/about",
+    "robots": "index, follow"
   },
   "contactPage": {
     "title": "Apply for Business Loans with Abtik – Contact Us Today",
     "description": "Need fast and reliable funding? Reach out to Abtik for MSME loans, startup support, and capital guidance tailored to you.",
     "keyword": "Abtik Startup Advisor pvt ltd",
-    "canonical": "Abtik Startup Advisor pvt ltd",
-    "robots": ""
+    "canonical": "https://abtikservices.com/contact",
+    "robots": "index, follow"
   },
     "eBooks": {
-    "title": "Apply for Business Loans with Abtik – Contact Us Today",
-    "description": "Need fast and reliable funding? Reach out to Abtik for MSME loans, startup support, and capital guidance tailored to you.",
+    "title": "E-Books & Resources | Abtik Startup Advisor",
+    "description": "Download free e-books and resources on business registration, funding, and growth from Abtik Startup Advisor. Empower your business journey today!",
     "keyword": "Abtik Startup Advisor pvt ltd",
-    "canonical": "Abtik Startup Advisor pvt ltd",
-    "robots": ""
+    "canonical": "https://abtikservices.com/news-insights/e-books",
+    "robots": "index, follow"
   },
   "copyrightService": {
     "title": "Abtik Startup Advisor pvt ltd",
     "description": "Abtik Startup Advisor pvt ltd",
     "keyword": "Abtik Startup Advisor pvt ltd",
-    "canonical": "Abtik Startup Advisor pvt ltd",
-    "robots": ""
+    "canonical": "https://abtikservices.com/services/legal/copyright-protection",
+    "robots": "index, follow"
   },
   "angelInvestorService": {
     "title": "Abtik Startup Advisor pvt ltd",
     "description": "Abtik Startup Advisor pvt ltd",
     "keyword": "Abtik Startup Advisor pvt ltd",
-    "canonical": "Abtik Startup Advisor pvt ltd",
-    "robots": ""
+    "canonical": "https://abtikservices.com/services/funding/private-funding/angel-investor",
+    "robots": "index, follow"
   },
   "ventureCapitalService": {
     "title": "Abtik Startup Advisor pvt ltd",
     "description": "Abtik Startup Advisor pvt ltd",
     "keyword": "Abtik Startup Advisor pvt ltd",
-    "canonical": "Abtik Startup Advisor pvt ltd",
-    "robots": ""
+    "canonical": "https://abtikservices.com/services/funding/private-funding/venture-capital",
+    "robots": "index, follow"
   },
   "nbfcService": {
     "title": "Abtik Startup Advisor pvt ltd",
     "description": "Abtik Startup Advisor pvt ltd",
     "keyword": "Abtik Startup Advisor pvt ltd",
-    "canonical": "Abtik Startup Advisor pvt ltd",
-    "robots": ""
+    "canonical": "https://abtikservices.com/services/funding/private-funding/nbfc",
+    "robots": "index, follow"
   },
   "careerPage": {
     "title": "Join Abtik – Build Your Career & Future with Us",
     "description": "Looking for growth, purpose, and a passionate team? Join Abtik and turn your career into something meaningful and impactful.",
     "keyword": "Abtik Startup Advisor pvt ltd",
-    "canonical": "Abtik Startup Advisor pvt ltd",
-    "robots": ""
+    "canonical": "https://abtikservices.com/career",
+    "robots": "index, follow"
   },
   "blog": {
     "title": "Abtik Blog : News, Insight and business growth tips",
     "description": "Explore funding insights, startup stories, expert tips, and real success hacks to grow your business the smart way.",
     "keyword": "Abtik Startup Advisor pvt ltd",
-    "canonical": "Abtik Startup Advisor pvt ltd",
-    "robots": ""
+    "canonical": "https://abtikservices.com/news-insights/blogs",
+    "robots": "index, follow"
   },
   "msmeLoans":{
    "title": "Abtik Startup Advisor pvt ltd",
     "description": "Abtik Startup Advisor pvt ltd",
     "keyword": "msme loan, msme loan in ahmedabad, msme loan services, msme loan consultants, msme financial assistance, Apply for msme loan ",
-    "canonical": "Abtik Startup Advisor pvt ltd",
-    "robots": ""
+    "canonical": "https://abtikservices.com/services/funding/msme-loans",
+    "robots": "index, follow"
   },
   "agrisureService": {
     "title": "Abtik Startup Advisor pvt ltd",
     "description": "Abtik Startup Advisor pvt ltd",
     "keyword": "Abtik Startup Advisor pvt ltd",
-    "canonical": "Abtik Startup Advisor pvt ltd",
-    "robots": ""
+    "canonical": "https://abtikservices.com/services/funding/agriculture/agrisure",
+    "robots": "index, follow"
   },
   "annualComplainceService": {
     "title": "Abtik Startup Advisor pvt ltd",
     "description": "Abtik Startup Advisor pvt ltd",
     "keyword": "Abtik Startup Advisor pvt ltd",
-    "canonical": "Abtik Startup Advisor pvt ltd",
-    "robots": ""
+    "canonical": "https://abtikservices.com/services/tax/annual-compliance",
+    "robots": "index, follow"
   },
   "businessLoanService": {
     "title": "Abtik Startup Advisor pvt ltd",
     "description": "Abtik Startup Advisor pvt ltd",
     "keyword": "Abtik Startup Advisor pvt ltd",
-    "canonical": "Abtik Startup Advisor pvt ltd",
-    "robots": ""
+    "canonical": "https://abtikservices.com/services/funding/loans/business-loan",
+    "robots": "index, follow"
   },
   "cashCreditService": {
     "title": "Abtik Startup Advisor pvt ltd",
     "description": "Abtik Startup Advisor pvt ltd",
     "keyword": "Abtik Startup Advisor pvt ltd",
-    "canonical": "Abtik Startup Advisor pvt ltd",
-    "robots": ""
+    "canonical": "https://abtikservices.com/services/funding/loans/cash-credit",
+    "robots": "index, follow"
   },
   "cgtmseSerivce": {
     "title": "Abtik Startup Advisor pvt ltd",
     "description": "Abtik Startup Advisor pvt ltd",
     "keyword": "apply cgtmse scheme ahmedabad, cgtmse subsidy loan ahmedabad, business loan under cgtmse ahmedabad, cgtmse registration consultant ahmedabad",
-    "canonical": "Abtik Startup Advisor pvt ltd",
-    "robots": ""
+    "canonical": "https://abtikservices.com/services/funding/msme-loan/cgtmse",
+    "robots": "index, follow"
   },
   "cmegpService": {
     "title": "Abtik Startup Advisor pvt ltd",
     "description": "Abtik Startup Advisor pvt ltd",
     "keyword": "Abtik Startup Advisor pvt ltd",
-    "canonical": "Abtik Startup Advisor pvt ltd",
-    "robots": ""
+    "canonical": "https://abtikservices.com/services/funding/subsidy/cmegp",
+    "robots": "index, follow"
   },
   "droplineodService": {
     "title": "Abtik Startup Advisor pvt ltd",
     "description": "Abtik Startup Advisor pvt ltd",
     "keyword": "Abtik Startup Advisor pvt ltd",
-    "canonical": "Abtik Startup Advisor pvt ltd",
-    "robots": ""
+    "canonical": "https://abtikservices.com/services/funding/loans/dropline-od",
+    "robots": "index, follow"
   },
   "grantsService": {
-    "title": "Abtik Startup Advisor pvt ltd",
-    "description": "Abtik Startup Advisor pvt ltd",
-    "keyword": "government grants for startups, Startup funding schemes, seed funding for startups, government loan schemes, startup business grants",
-    "canonical": "Abtik Startup Advisor pvt ltd",
-    "robots": ""
+    "title": "Government Grants & Funding for Indian Startups & MSMEs | Abtik",
+    "description": "Unlock government grants and funding for your startup or MSME. Abtik helps you identify and apply for various central and state grant schemes.",
+    "keyword": "Government Grants India, Startup Funding Schemes, MSME Grants, MSME Funding, Abtik Services",
+    "canonical": "https://abtikservices.com/services/funding/grants/",
+    "robots": "index, follow",
+    "faqs": [
+      {
+        "question": "What kind of government grants are available for startups?",
+        "answer": "Grants are available for R&D, prototype development, market entry, and technology adoption across various sectors like agriculture, biotech, and IT."
+      },
+      {
+        "question": "Does Abtik help in grant proposal writing?",
+        "answer": "Yes, we provide end-to-end support including scheme identification, proposal drafting, and application filing."
+      }
+    ]
   },
   "gstRegistration_fillingService": {
     "title": "Abtik Startup Advisor pvt ltd", 
     "description": "Abtik Startup Advisor pvt ltd",
     "keyword": "GST registration, GST registration services, GST registration in India, GST for businesses.",
-    "canonical": "Abtik Startup Advisor pvt ltd",
-    "robots": ""
+    "canonical": "https://abtikservices.com/services/tax/gst-filing",
+    "robots": "index, follow"
   },
   "isoCertificateService": {
     "title": "Abtik Startup Advisor pvt ltd",
     "description": "Abtik Startup Advisor pvt ltd",
     "keyword": "iso certification for startup , ISO certification for business, ISO certification in India.",
-    "canonical": "Abtik Startup Advisor pvt ltd",
-    "robots": ""
+    "canonical": "https://abtikservices.com/services/certificate/iso",
+    "robots": "index, follow"
   },
-  "taxAssumptionCertificate":{
-        "title": "Abtik Startup Advisor pvt ltd",
-    "description": "Abtik Startup Advisor pvt ltd",
-    "keyword": "Tax Exemption Certificate, Tax Exemption Certificate Registration, Tax Exemption Certificate, Tax Exemption Registration Process, Tax Exemption Benefits, What Is Tax Exemption, How to Apply for Tax Exemption, Eligibility for Tax Exemption, Nonprofit Tax Exemption.",
-    "canonical": "Abtik Startup Advisor pvt ltd",
-    "robots": ""
-},
+  "startupCertificationService": {
+    "title": "Startup India Certification Assistance — 80-IAC | Abtik",
+    "description": "Expert assistance for Startup India Certification (80-IAC) to get 3 years of income tax exemption. Secure your startup's financial future.",
+    "keyword": "Startup India Certification, 80-IAC Tax Exemption, Startup Tax Holiday, Income Tax Exemption India, Abtik Services",
+    "canonical": "https://abtikservices.com/services/certificate/tax-exemption-certificate/",
+    "robots": "index, follow",
+    "faqs": [
+      {
+        "question": "What is the 80-IAC tax exemption?",
+        "answer": "It is a 3-year income tax holiday provided to recognized startups under Section 80-IAC of the Income Tax Act."
+      },
+      {
+        "question": "How do I apply for 80-IAC certification?",
+        "answer": "Recognized startups can apply through the Startup India portal by providing detailed innovation briefs and financial justifications."
+      }
+    ]
+  },
   "lapService": {
     "title": "Abtik Startup Advisor pvt ltd",
     "description": "Abtik Startup Advisor pvt ltd",
     "keyword": "Abtik Startup Advisor pvt ltd",
-    "canonical": "Abtik Startup Advisor pvt ltd",
-    "robots": ""
+    "canonical": "https://abtikservices.com/services/funding/loans/lap",
+    "robots": "index, follow"
   },
   "llpService": {
     "title": "Abtik Startup Advisor pvt ltd",
     "description": "Abtik Startup Advisor pvt ltd",
     "keyword": "Abtik Startup Advisor pvt ltd",
-    "canonical": "Abtik Startup Advisor pvt ltd",
-    "robots": ""
+    "canonical": "https://abtikservices.com/services/registration/llp",
+    "robots": "index, follow"
   },
   "makeinindiaService": {
     "title": "Abtik Startup Advisor pvt ltd",
     "description": "Abtik Startup Advisor pvt ltd",
     "keyword": "Abtik Startup Advisor pvt ltd",
-    "canonical": "Abtik Startup Advisor pvt ltd",
-    "robots": ""
+    "canonical": "https://abtikservices.com/services/certificate/make-in-india",
+    "robots": "index, follow"
   },
   "msmeCertificateService": {
     "title": "Abtik Startup Advisor pvt ltd",
     "description": "Abtik Startup Advisor pvt ltd",
     "keyword": "Abtik Startup Advisor pvt ltd, msme loan, msme registration for Startup, udyam registration, msme certificate benefits, msme registration eligibility, msme certification application.",
-    "canonical": "Abtik Startup Advisor pvt ltd",
-    "robots": ""
+    "canonical": "https://abtikservices.com/services/certificate/msme",
+    "robots": "index, follow"
   },
   "mudraloanService": {
     "title": "Abtik Startup Advisor pvt ltd",
     "description": "Abtik Startup Advisor pvt ltd",
     "keyword": "Abtik Startup Advisor pvt ltd",
-    "canonical": "Abtik Startup Advisor pvt ltd",
-    "robots": ""
+    "canonical": "https://abtikservices.com/services/funding/msme-loan/mudra",
+    "robots": "index, follow"
   },
   "naiff_aiffService": {
     "title": "Abtik Startup Advisor pvt ltd",
     "description": "Abtik Startup Advisor pvt ltd",
     "keyword": "Abtik Startup Advisor pvt ltd",
-    "canonical": "Abtik Startup Advisor pvt ltd",
-    "robots": ""
+    "canonical": "https://abtikservices.com/services/funding/agriculture/naiff-aiff",
+    "robots": "index, follow"
   },
   "overdraftService": {
     "title": "Abtik Startup Advisor pvt ltd",
     "description": "Abtik Startup Advisor pvt ltd",
     "keyword": "Abtik Startup Advisor pvt ltd",
-    "canonical": "Abtik Startup Advisor pvt ltd",
-    "robots": ""
+    "canonical": "https://abtikservices.com/services/funding/loans/overdraft",
+    "robots": "index, follow"
   },
   "partnershipService": {
     "title": "Abtik Startup Advisor pvt ltd",
     "description": "Abtik Startup Advisor pvt ltd",
     "keyword": "Partnership,Partnership Firm Registration,Partnership Agreements,Partnership deed registraion,Partnership Company,Partnership firm Registration online,what is partnership Firm,Partnership contract,Partnership firm Registration Fees.",
-    "canonical": "Abtik Startup Advisor pvt ltd",
-    "robots": ""
+    "canonical": "https://abtikservices.com/services/registration/partnership",
+    "robots": "index, follow"
   },
   "patentfillingService": {
     "title": "Abtik Startup Advisor pvt ltd",
     "description": "Abtik Startup Advisor pvt ltd",
     "keyword": "Abtik Startup Advisor pvt ltd",
-    "canonical": "Abtik Startup Advisor pvt ltd",
-    "robots": ""
+    "canonical": "https://abtikservices.com/services/legal/patent-filing",
+    "robots": "index, follow"
   },
   "pmegpService": {
     "title": "Abtik Startup Advisor pvt ltd",
     "description": "Abtik Startup Advisor pvt ltd",
     "keyword": "pmegp loan ahmedabad, pmegp loan Process ahmedabad, pmegp loan consultants ahmedabad, pmegp loan assistance ahmedabad, pmegp loan services ahmedabad",
-    "canonical": "Abtik Startup Advisor pvt ltd",
-    "robots": ""
+    "canonical": "https://abtikservices.com/services/funding/subsidy/pmegp",
+    "robots": "index, follow"
   },
   "pmfmeService": {
     "title": "Abtik Startup Advisor pvt ltd",
     "description": "Abtik Startup Advisor pvt ltd",
     "keyword": "Abtik Startup Advisor pvt ltd",
-    "canonical": "Abtik Startup Advisor pvt ltd",
-    "robots": ""
+    "canonical": "https://abtikservices.com/services/funding/subsidy/pmfme",
+    "robots": "index, follow"
   },
   "privatelimitedService": {
-    "title": "Abtik Startup Advisor pvt ltd",
-    "description": "Abtik Startup Advisor pvt ltd",
-    "keyword": "Abtik Startup Advisor pvt ltd",
-    "canonical": "Abtik Startup Advisor pvt ltd",
-    "robots": ""
+    "title": "Business Registration Services in India | Pvt Ltd | Abtik",
+    "description": "Get expert business registration services in India. We specialize in Private Limited Company registration, LLP, and Partnership firm setup.",
+    "keyword": "Business Registration, Company Registration India, Pvt Ltd Registration, LLP Registration, Abtik Services",
+    "canonical": "https://abtikservices.com/services/registration/private-limited/",
+    "robots": "index, follow",
+    "faqs": [
+      {
+        "question": "What is a Private Limited Company?",
+        "answer": "A Private Limited Company is a privately held small business entity which is one of the most highly recommended ways to start a business in India."
+      },
+      {
+        "question": "How long does it take to register a company in India?",
+        "answer": "Typically, it takes 10-15 working days to complete the registration process, subject to government approval and document availability."
+      }
+    ]
   },
   "producerCompanyService": {
     "title": "Abtik Startup Advisor pvt ltd",
     "description": "Abtik Startup Advisor pvt ltd",
     "keyword": "Abtik Startup Advisor pvt ltd",
-    "canonical": "Abtik Startup Advisor pvt ltd",
-    "robots": ""
+    "canonical": "https://abtikservices.com/services/registration/producer",
+    "robots": "index, follow"
   },
   "projectfundingService": {
     "title": "Abtik Startup Advisor pvt ltd",
     "description": "Abtik Startup Advisor pvt ltd",
     "keyword": "Abtik Startup Advisor pvt ltd",
-    "canonical": "Abtik Startup Advisor pvt ltd",
-    "robots": ""
+    "canonical": "https://abtikservices.com/services/funding/loans/project-funding",
+    "robots": "index, follow"
   },
   "section8Company": {
     "title": "Abtik Startup Advisor pvt ltd",
     "description": "Abtik Startup Advisor pvt ltd",
     "keyword": "Abtik Startup Advisor pvt ltd",
-    "canonical": "Abtik Startup Advisor pvt ltd",
-    "robots": ""
+    "canonical": "https://abtikservices.com/services/registration/section8company",
+    "robots": "index, follow"
   },
   "seedFundService": {
-    "title": "Startup India Seed fund Scheme | Abtik Startup Advisor pvt ltd",
-    "description": " Guiding startups to secure Seed Fund support under Startup India for early-stage growth.",
-    "keyword": "Abtik Startup Advisor pvt ltd",
-    "canonical": "Abtik Startup Advisor pvt ltd",
-    "robots": ""
+    "title": "Startup India Seed Fund Scheme Application Support | Abtik",
+    "description": "Apply for Startup India Seed Fund Scheme with Abtik's expert support. Get up to ₹50 Lakhs debt and ₹20 Lakhs grant for your innovative startup.",
+    "keyword": "Startup India Seed Fund, Seed Fund Scheme, Startup Funding India, Seed Capital, Abtik Services",
+    "canonical": "https://abtikservices.com/services/funding/seed-fund/",
+    "robots": "index, follow",
+    "faqs": [
+      {
+        "question": "What is the Startup India Seed Fund Scheme?",
+        "answer": "It is a government initiative to provide financial assistance to startups for proof of concept, prototype development, product trials, market entry, and commercialization."
+      },
+      {
+        "question": "How much funding can a startup get under this scheme?",
+        "answer": "Startups can get up to ₹20 Lakhs as a grant for validation of Proof of Concept/prototype development and up to ₹50 Lakhs for market entry/commercialization through debt-linked instruments."
+      }
+    ]
   },
   "smeService": {
     "title": "Abtik Startup Advisor pvt ltd",
     "description": "Abtik Startup Advisor pvt ltd",
     "keyword": "Abtik Startup Advisor pvt ltd",
-    "canonical": "Abtik Startup Advisor pvt ltd",
-    "robots": ""
+    "canonical": "https://abtikservices.com/services/funding/loans/sme",
+    "robots": "index, follow"
   },
   "soleproprietorshipService": {
     "title": "Abtik Startup Advisor pvt ltd",
     "description": "Abtik Startup Advisor pvt ltd",
     "keyword": "Abtik Startup Advisor pvt ltd",
-    "canonical": "Abtik Startup Advisor pvt ltd",
-    "robots": ""
+    "canonical": "https://abtikservices.com/services/registration/proprietorship",
+    "robots": "index, follow"
   },
   "standupIndiaService": {
     "title": "Abtik Startup Advisor pvt ltd",
     "description": "Abtik Startup Advisor pvt ltd",
     "keyword": "Abtik Startup Advisor pvt ltd",
-    "canonical": "Abtik Startup Advisor pvt ltd",
-    "robots": ""
+    "canonical": "https://abtikservices.com/services/funding/subsidy/stand-up-india",
+    "robots": "index, follow"
   },
-  "startupIndisCertificateService": {
-    "title": "Abtik Startup Advisor pvt ltd",
-    "description": "Abtik Startup Advisor pvt ltd",
-    "keyword": "Abtik Startup, Startup India, business registration, innovative startups, Startup India innovation Scheme, Startup India certification, Startup India certificate, startup certification, startup certificate, DPIIT certificate.",
-    "canonical": "Abtik Startup Advisor pvt ltd",
-    "robots": ""
+  "startupIndiaRegistrationService": {
+    "title": "Startup India Registration — DPIIT Recognition | Abtik",
+    "description": "Get DPIIT recognition for your startup under the Startup India initiative. Unlock tax benefits, patent rebates, and easier compliance.",
+    "keyword": "Startup India Registration, DPIIT Recognition, Startup India Certificate, Tax Benefits for Startups, Abtik Services",
+    "canonical": "https://abtikservices.com/services/certificate/startup-india/",
+    "robots": "index, follow",
+    "faqs": [
+      {
+        "question": "What is DPIIT Recognition?",
+        "answer": "DPIIT Recognition is a certification from the Department for Promotion of Industry and Internal Trade that validates a business as a startup under the Startup India initiative."
+      },
+      {
+        "question": "What are the benefits of Startup India Registration?",
+        "answer": "Benefits include self-certification, tax exemptions, patent application fast-tracking, and access to the Startup India Seed Fund Scheme."
+      }
+    ]
   },
   "tdsComplianceService": {
     "title": "Abtik Startup Advisor pvt ltd",
     "description": "Abtik Startup Advisor pvt ltd",
     "keyword": "Abtik Startup Advisor pvt ltd",
-    "canonical": "Abtik Startup Advisor pvt ltd",
-    "robots": ""
+    "canonical": "https://abtikservices.com/services/tax/tds-compliance",
+    "robots": "index, follow"
   },
   "termService": {
     "title": "Abtik Startup Advisor pvt ltd",
     "description": "Abtik Startup Advisor pvt ltd",
     "keyword": "Abtik Startup Advisor pvt ltd",
-    "canonical": "Abtik Startup Advisor pvt ltd",
-    "robots": ""
+    "canonical": "https://abtikservices.com/services/funding/loans/term-loan",
+    "robots": "index, follow"
   },
   "tradeLicenceService": {
     "title": "Abtik Startup Advisor pvt ltd",
     "description": "Abtik Startup Advisor pvt ltd",
     "keyword": "Abtik Startup Advisor pvt ltd",
-    "canonical": "Abtik Startup Advisor pvt ltd",
-    "robots": ""
+    "canonical": "https://abtikservices.com/services/certificate/trade-licence",
+    "robots": "index, follow"
   },
   "trademarkService": {
     "title": "Abtik Startup Advisor pvt ltd",
     "description": "Abtik Startup Advisor pvt ltd",
     "keyword": "Trademark registration, trademark services, trademark registration in India, trademark filing services.",
-    "canonical": "Abtik Startup Advisor pvt ltd",
-    "robots": ""
+    "canonical": "https://abtikservices.com/services/legal/trademark-registration",
+    "robots": "index, follow"
   },
   "udaanService": {
     "title": "Abtik Startup Advisor pvt ltd",
     "description": "Abtik Startup Advisor pvt ltd",
     "keyword": "Abtik Startup Advisor pvt ltd",
-    "canonical": "Abtik Startup Advisor pvt ltd",
-    "robots": ""
+    "canonical": "https://abtikservices.com/services/funding/msme-loan/udaan",
+    "robots": "index, follow"
   },
   "zedCertificateService": {
     "title": "Abtik Startup Advisor pvt ltd",
     "description": "Abtik Startup Advisor pvt ltd",
     "keyword": "ZED Certification, ZED Certificate Registration, Zed Certificate Registration Online, ZED Certification Fees, How To Get ZED Certified, ZED Certification Process, ZED Certification Benefits, ZED Certificate Registration Form, Zero Effect Zero Defect Procedure.",
-    "canonical": "Abtik Startup Advisor pvt ltd",
-    "robots": ""
+    "canonical": "https://abtikservices.com/services/certificate/zed",
+    "robots": "index, follow"
   },
   "privacyPolicy": {
-    "title": "",
-    "description": "",
-    "keyword": "",
-    "canonical": "",
-    "robots": ""
+    "title": "Privacy Policy | Abtik Services",
+    "description": "Read the Privacy Policy of Abtik Services to understand how we collect, use, and protect your personal and business information.",
+    "keyword": "Privacy Policy, Data Protection, Abtik Services, Business Privacy",
+    "canonical": "https://abtikservices.com/legal/privacy-policy/",
+    "robots": "index, follow"
   },
   "refundPolicy": {
-    "title": "",
-    "description": "",
-    "keyword": "",
-    "canonical": "",
-    "robots": ""
+    "title": "Refund Policy | Abtik Startup Advisor Pvt Ltd",
+    "description": "Review the Refund Policy of Abtik Startup Advisor Pvt Ltd. Understand the terms for service cancellations and refund requests.",
+    "keyword": "Abtik Startup Advisor pvt ltd, refund policy",
+    "canonical": "https://abtikservices.com/legal/refund-policy",
+    "robots": "index, follow"
   },
   "terms": {
     "title": "Terms & Conditions - Abtik Startup Advisor pvt ltd",
@@ -357,10 +417,21 @@
     "robots": "index, follow"
   },
   "fssaiLicenseService": {
-    "title": "",
-    "description": "",
-    "keyword": "",
-    "canonical": "",
-    "robots": ""
+    "title": "FSSAI Food License Registration Online | Abtik Services",
+    "description": "Apply for FSSAI Food License registration online. Expert support for Basic, State, and Central FSSAI licenses for all food businesses in India.",
+    "keyword": "FSSAI Registration, Food License India, FSSAI Online, Food Safety Certificate, Abtik Services",
+    "canonical": "https://abtikservices.com/services/certificate/fssai-licence/",
+    "robots": "index, follow",
+    "faqs": [
+      {
+        "question": "Is FSSAI license mandatory for home-based food businesses?",
+        "answer": "Yes, any person or entity involved in food handling, processing, or selling must have an FSSAI license or registration."
+      },
+      {
+        "question": "What is the difference between FSSAI registration and license?",
+        "answer": "Registration is for small food businesses with turnover up to ₹12 lakhs, while State and Central licenses are for businesses with higher turnovers."
+      }
+    ]
   }
 }
+

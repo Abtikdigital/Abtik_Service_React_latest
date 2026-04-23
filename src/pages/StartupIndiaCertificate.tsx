@@ -6,16 +6,16 @@ import {
   Mail,
   User,
   Phone,
+  Package,
+  Headset,
   ArrowUpRight,
   ArrowRight,
   CheckCircle,
   FileText,
-  IndianRupee ,
-  TrendingUp,
-  Users,
+  Clock,
   Shield,
-  Award,
-  BookOpen,
+  Briefcase,
+  Zap,
 } from "lucide-react";
 import { memo, useState } from "react";
 import { useDispatch } from "react-redux";
@@ -23,6 +23,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
 import { HeadProvider, Meta, Title } from "react-head";
 import seoData from "../data/seoData.json";
+
 const StartupIndiaCertificate = () => {
   const dispatch = useDispatch();
   const handleOpenDialog = () => {
@@ -35,46 +36,45 @@ const StartupIndiaCertificate = () => {
 
   const faq = [
     {
-      question: "1. What is the Startup India Certificate?",
+      question: "1. What is Startup India registration?",
       answer:
-        "It's official recognition by DPIIT (Department for Promotion of Industry and Internal Trade) that your business qualifies as a startup, making you eligible for government incentives, tax benefits, and special support programs.",
+        "Startup India registration is a government initiative to recognize and support startups in India. It provides various benefits including tax exemptions, easier compliance, and access to funding and networking opportunities.",
     },
     {
-      question: "2. Who can apply for DPIIT Startup India recognition?",
+      question: "2. Who is eligible for Startup India registration?",
       answer:
-        "Any Private Limited, LLP, or Partnership firm incorporated in India within the last 10 years with turnover not exceeding ₹100 crore in any financial year can apply.",
+        "An entity shall be considered a startup if it's incorporated as a private limited company, partnership firm, or limited liability partnership in India, is less than 10 years old, and has an annual turnover not exceeding ₹100 crores.",
     },
     {
-      question: "3. What documents do I need?",
+      question: "3. What are the tax benefits of Startup India registration?",
       answer:
-        "You need Certificate of Incorporation/Partnership, PAN, brief on innovation or uniqueness, ID/Address proof of founders, and company website or deck if available.",
+        "Registered startups can apply for income tax exemption for 3 consecutive years and exemption on capital gains. They also get easier access to government tenders and funding through various schemes.",
     },
     {
-      question: "4. What are the main benefits after recognition?",
+      question: "4. What documents are required for registration?",
       answer:
-        "Benefits include 3 years of income tax exemption, easier access to government and VC funding, up to 80% rebate on patent/trademark fees, tender eligibility, and self certification for labor and environmental compliance.",
+        "Key documents include certificate of incorporation, brief description of business innovation, founders' details, pitch deck or business plan, and proof of innovation or scalability.",
     },
     {
-      question: "5. How is the application filed and processed?",
+      question: "5. How long does the registration process take?",
       answer:
-        "You or your consulting partner files the DPIIT recognition application online at the Startup India portal. After document checks and approval (typically 2to4 weeks), you can download the certificate.",
+        "The DPIIT recognition process typically takes 10 to 15 working days once the application is submitted with all required documents and details correctly.",
     },
     {
-      question: "6. How do I check or share my certificate?",
+      question:
+        "6. Is it mandatory to have a recommendation letter for registration?",
       answer:
-        "After approval, your DPIIT certificate is downloadable from the Startup India portal and can be validated or shared through DigiLocker.",
+        "No, as per latest guidelines, a recommendation letter from an incubator or industry association is no longer mandatory for Startup India registration.",
     },
   ];
 
-  const toggleIsExpanded = (index: any) => {
+  const toggleIsExpanded = (index: number) => {
     setIsExpanded((prev) =>
       prev.index === index && prev.isOpen
         ? { isOpen: false, index: -1 }
         : { isOpen: true, index }
     );
   };
-
-  // Hooks and layout structure as per your Stand-Up India code
 
   // Hero
   const refHero = useRef(null);
@@ -85,106 +85,91 @@ const StartupIndiaCertificate = () => {
   const isInViewTouch = useInView(refTouch, { once: true, amount: 0.1 });
   const [touchCols, setTouchCols] = useState(1);
   useEffect(() => {
-    const updateCols = () => setTouchCols(window.innerWidth >= 768 ? 2 : 1);
+    const updateCols = () => {
+      setTouchCols(window.innerWidth >= 768 ? 2 : 1);
+    };
     updateCols();
     window.addEventListener("resize", updateCols);
     return () => window.removeEventListener("resize", updateCols);
   }, []);
-  const getTouchDelay = (index: any) => {
+  const getTouchDelay = (index: number) => {
     const row = Math.floor(index / touchCols);
     return 0.5 + row * 0.5;
   };
 
-  // About
-  const refAbout = useRef(null);
-  const isInViewAbout = useInView(refAbout, { once: true, amount: 0.1 });
+  // What is Startup India
+  const refStartupInfo = useRef(null);
+  const isInViewStartupInfo = useInView(refStartupInfo, { once: true, amount: 0.1 });
 
-  // Eligibility & Benefits
-  const refEligibility = useRef(null);
-  const isInViewEligibility = useInView(refEligibility, { once: true, amount: 0.1 });
+  // DPIIT Benefits
+  const refBenefits = useRef(null);
+  const isInViewBenefits = useInView(refBenefits, { once: true, amount: 0.1 });
 
-  // DPIIT Application Steps (like process section)
+  // Process Steps
   const refProcess = useRef(null);
   const isInViewProcess = useInView(refProcess, { once: true, amount: 0.1 });
   const [processCols, setProcessCols] = useState(1);
   useEffect(() => {
-    const updateCols = () => setProcessCols(window.innerWidth >= 768 ? 3 : 1);
+    const updateCols = () => {
+      setProcessCols(window.innerWidth >= 768 ? 3 : 1);
+    };
     updateCols();
     window.addEventListener("resize", updateCols);
     return () => window.removeEventListener("resize", updateCols);
   }, []);
-  const getProcessDelay = (index: any) => {
+  const getProcessDelay = (index: number) => {
     const row = Math.floor(index / processCols);
     return 0.5 + row * 0.5;
   };
 
-  // Benefits Section (carousel)
-  const refBenefits = useRef(null);
-  const isInViewBenefits = useInView(refBenefits, { once: true, amount: 0.1 });
-  const [benefitsCols, setBenefitsCols] = useState(1);
+  const processData = [
+    {
+      icon: FileText,
+      title: "Document Preparation",
+      description:
+        "Gather required documents including COI, innovation brief, and founder details for DPIIT recognition application.",
+    },
+    {
+      icon: Briefcase,
+      title: "Online Application Filing",
+      description:
+        "Expert filing of Startup India application on the official portal with proper innovation highlights and business plan.",
+    },
+    {
+      icon: Zap,
+      title: "Recognition & Certificate",
+      description:
+        "Successful DPIIT recognition and issuance of Startup India certificate to unlock all government benefits.",
+    },
+  ];
+
+  // Key Features
+  const refFeatures = useRef(null);
+  const isInViewFeatures = useInView(refFeatures, { once: true, amount: 0.1 });
+  const [featuresCols, setFeaturesCols] = useState(1);
   useEffect(() => {
-    const updateCols = () => setBenefitsCols(window.innerWidth >= 768 ? 3 : 1);
+    const updateCols = () => {
+      setFeaturesCols(window.innerWidth >= 768 ? 3 : 1);
+    };
     updateCols();
     window.addEventListener("resize", updateCols);
     return () => window.removeEventListener("resize", updateCols);
   }, []);
-  const getBenefitsDelay = (index: any) => {
-    const row = Math.floor(index / benefitsCols);
+  const getFeaturesDelay = (index: number) => {
+    const row = Math.floor(index / featuresCols);
     return 0.5 + row * 0.5;
   };
 
-  // FAQ
-  const refFAQ = useRef(null);
-  const isInViewFAQ = useInView(refFAQ, { once: true, amount: 0.1 });
-  const getFaqDelay = (index: any) => {
-    const row = Math.floor(index / 1);
-    return 0.2 + row * 0.1;
-  };
-
-  // Contact
-  const refContact = useRef(null);
-  const isInViewContact = useInView(refContact, { once: true, amount: 0.1 });
-
-  // === Process Step Cards ===
-  const processData = [
+  const featuresData = [
     {
-      icon: FileText,
-      title: "Company Incorporation",
-      description: "Register your Company/LLP/Partnership and gather all basic statutory documents and business information.",
+      icon: Clock,
+      title: "Easy & Fast Registration",
+      description: "Quick online process for DPIIT recognition with expert assistance for smooth certificate issuance.",
     },
     {
-      icon: BookOpen,
-      title: "DPIIT Application Filing",
-      description: "Apply for Startup India DPIIT recognition via the online portal, preparing your innovative brief, proofs, and all uploads.",
-    },
-    {
-      icon: Shield,
-      title: "Get Certified & Avail Benefits",
-      description: "Track application status, download your official Startup India Certificate, and get guidance to claim all benefits.",
-    },
-  ];
-
-  // === Benefits Cards ===
-  const benefitsData = [
-    {
-      icon: IndianRupee ,
-      title: "Tax Exemption",
-      description: "3 year income tax holiday and capital gains exemptions for eligible recognized startups.",
-    },
-    {
-      icon: Award,
-      title: "IPR & Patent Rebate",
-      description: "Up to 80% fee reduction in government patent and trademark filing charges & facilitation.",
-    },
-    {
-      icon: TrendingUp,
-      title: "Easy Funding",
-      description: "Priority access to government Fund of Funds, venture funding, angel networks, and startup events.",
-    },
-    {
-      icon: Users,
-      title: "Tender & Govt Schemes",
-      description: "Eligible for public procurement, government tenders, and exclusive startup programs.",
+      icon: Package,
+      title: "Access to Funding",
+      description: "Unlock eligibility for Startup India Seed Fund Scheme and other government funding opportunities.",
     },
     {
       icon: Shield,
@@ -197,10 +182,11 @@ const StartupIndiaCertificate = () => {
   return (
     <>
       <HeadProvider>
-        <Title>{seoData?.startupIndisCertificateService?.title}</Title>
-        <Meta name="description" content={seoData?.startupIndisCertificateService?.description} />
-        <Meta name="keywords" content={seoData?.startupIndisCertificateService?.keyword} />
-        <Meta name="robots" content={seoData?.startupIndisCertificateService?.robots} />
+        <Title>{seoData?.startupIndiaRegistrationService?.title}</Title>
+        <Meta name="description" content={seoData?.startupIndiaRegistrationService?.description} />
+        <Meta name="keywords" content={seoData?.startupIndiaRegistrationService?.keyword} />
+        <Meta name="robots" content={seoData?.startupIndiaRegistrationService?.robots} />
+        <link rel="canonical" href={seoData?.startupIndiaRegistrationService?.canonical} />
       </HeadProvider>
 
       <Mainlayout>
@@ -231,12 +217,8 @@ const StartupIndiaCertificate = () => {
             <h1
               className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 
              font-bold leading-tight text-white font-1 lg:text-inherit tracking-wide main-heading"
-             
             >
-              Power Your Startup Journey with{" "}
-              <span className="text-[#3CA2E2] font-extrabold block sm:inline">
-                Startup India Certificate
-              </span>
+              Startup India Registration — DPIIT Recognition
             </h1>
             <p
               className="text-sm sm:text-base md:text-lg lg:text-xl
@@ -244,17 +226,16 @@ const StartupIndiaCertificate = () => {
              text-white lg:text-white
              paragraph !text-white
              max-w-none sm:max-w-lg font-3 md:max-w-xl lg:max-w-none mx-auto lg:mx-0"
-
-              
             >
-              Get DPIIT Startup India recognition, tax holidays, investor preference, patent rebates, and a gateway to exclusive government incentives with Abtik’s expert assistance.
+              Get DPIIT recognized and unlock a world of government benefits, tax exemptions,
+              and funding opportunities for your startup with Abtik Startup Advisor pvt ltd Team's expert assistance.
             </p>
             <div className="pt-2 sm:pt-4">
               <button
                 onClick={handleOpenDialog}
                 className="custom-btn text-sm sm:text-base md:text-lg px-6 sm:px-8 md:px-10 lg:px-12 py-3 sm:py-3.5 md:py-4 transition-transform duration-300 shadow-lg hover:shadow-xl"
               >
-                Apply for Startup Certificate
+                Register Your Startup
               </button>
             </div>
           </motion.div>
@@ -268,222 +249,236 @@ const StartupIndiaCertificate = () => {
           transition={{ duration: 0.5 }}
           className="bg-[#f7f7f7] py-16"
         >
-          <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14">
-            <div className="flex flex-col md:flex-row gap-8 items-stretch">
-          <motion.div
-            initial={{ y: 50, opacity: 0 }}
-            animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
-            transition={{ duration: 0.5, delay: getTouchDelay(0) }}
-            className="w-full md:w-[320px] flex-shrink-0 bg-gradient-to-br from-blue-100 to-blue-200 p-6 rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 flex flex-col"
-          >
-            <h3
-              className="text-lg font-2 sm:text-xl font-semibold text-gray-800 mb-4"
-              
+          <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14 flex flex-col md:flex-row gap-8 box-border">
+            <motion.div
+              initial={{ y: 50, opacity: 0 }}
+              animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
+              transition={{ duration: 0.5, delay: getTouchDelay(0) }}
+              className="w-full md:w-[320px] flex-shrink-0 bg-gradient-to-br from-blue-100 to-blue-200 p-6 rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 box-border"
             >
-              Get in Touch
-            </h3>
-             <div className="flex flex-col justify-evenly flex-grow">
-            <a
-              href=""
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
-              aria-label="Visit us at 123 Business Hub, New Delhi, India"
+              <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-4 font-2">
+                Get in Touch
+              </h3>
+              <div className="space-y-4">
+                <a
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
+                  aria-label="Visit us at 123 Business Hub, New Delhi, India"
+                >
+                  <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
+                    <User className="w-5 h-5 text-white" />
+                  </span>
+                  <div>
+                    <p className="text-base text-gray-700 font-semibold font-2">
+                      Abtik Startup Advisor pvt ltd Team
+                    </p>
+                    <p className="text-xs text-gray-600 font-3">
+                      Abtik Startup Advisor pvt ltd Team
+                      <br />
+                    </p>
+                  </div>
+                </a>
+                <a
+                  href="tel:+91 89281 38434"
+                  className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
+                  aria-label="Call us at +91 89281 38434"
+                >
+                  <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
+                    <Phone className="w-5 h-5 text-white" />
+                  </span>
+                  <div>
+                    <p className="text-base text-gray-700 font-semibold font-2">
+                      Call Anytime
+                    </p>
+                    <p className="text-xs text-gray-600 font-3">
+                      <a href="tel:+91 89281 38434">+91 89281 38434</a>
+                    </p>
+                  </div>
+                </a>
+                <a
+                  href="mailto:info@abtikservices.com"
+                  className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
+                  aria-label="Email us at info@abtikservices.com"
+                >
+                  <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
+                    <Mail className="w-5 h-5 text-white" />
+                  </span>
+                  <div>
+                    <p className="text-base text-gray-700 font-semibold font-2">
+                      Write Email
+                    </p>
+                    <p className="text-xs text-gray-600 font-3">
+                      <a href="mailto:info@abtikservices.com">
+                        info@abtikservices.com
+                      </a>
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </motion.div>
+            <motion.div
+              initial={{ y: 50, opacity: 0 }}
+              animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
+              transition={{ duration: 0.5, delay: getTouchDelay(1) }}
+              className="flex-grow grid grid-cols-1 lg:grid-cols-2 bg-gradient-to-r from-[#3CA2E2] to-[#052EAA] rounded-4xl overflow-hidden"
             >
-              <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
-                <User className="w-5 h-5 text-white" />
-              </span>
-              <div>
-                <p className="text-base text-gray-700 font-semibold font-3">
-                  Abtik Startup Advisor pvt ltd Team
-
-                </p>
-                <p className="text-xs text-gray-600 font-3">
-                  Abtik Startup Advisor pvt ltd Team
-                  <br />
-
+              <div className="flex flex-col justify-evenly p-8 md:p-12 box-border">
+                <h2 className="sub-heading text-white font-1">
+                  Startup India Registration
+                </h2>
+                <p className="font-3 text-white">
+                  Empowering Businesses through Comprehensive Solutions From Fund
+                  Management to Legal Empowering.
                 </p>
               </div>
-            </a>
-            <a
-              href="tel:+91 89281 38434"
-              className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
-              aria-label="Call us at +91 89281 38434"
-            >
-              <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
-                <Phone className="w-5 h-5 text-white" />
-              </span>
-              <div>
-                <p className="text-base text-gray-700 font-semibold font-3">
-                  Call Anytime
-                </p>
-                <p className="text-xs text-gray-600 font-3"><a href="tel:+91 89281 38434">+91 89281 38434</a></p>
+              <div className="w-full flex items-center justify-center p-8">
+                <img src={Image1} className="w-full h-auto rounded-4xl object-contain shadow-2xl" loading="lazy" />
               </div>
-            </a>
-            <a
-              href="mailto:info@abtikservices.com"
-              className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
-              aria-label="Email us at info@abtikservices.com"
-            >
-              <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
-                <Mail className="w-5 h-5 text-white" />
-              </span>
-              <div>
-                <p className="text-base text-gray-700 font-semibold font-3">
-                  Write Email
-                </p>
-                <p className="text-xs text-gray-600 font-3"><a href="mailto:info@abtikservices.com">info@abtikservices.com</a></p>
-              </div>
-            </a>
+            </motion.div>
           </div>
-          </motion.div>
-         <motion.div
-            initial={{ y: 50, opacity: 0 }}
-            animate={isInViewTouch ? { y: 0, opacity: 1 } : {}}
-            transition={{ duration: 0.5, delay: getTouchDelay(1) }}
-            className="flex-grow grid grid-cols-1 lg:grid-cols-2 bg-gradient-to-r from-[#3CA2E2] to-[#052EAA] rounded-4xl overflow-hidden"
-          >
-            <div className="flex flex-col justify-evenly p-8 md:p-12 box-border">
-              <h2 className="sub-heading text-white font-1">
-                StartUp India
+        </motion.section>
+
+        {/* What is Startup India */}
+        <motion.section
+          ref={refStartupInfo}
+          initial={{ y: 100, opacity: 0 }}
+          animate={isInViewStartupInfo ? { y: 0, opacity: 1 } : {}}
+          transition={{ duration: 0.5 }}
+          className="bg-[#f7f7f7] py-8"
+        >
+          <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14">
+            <div className="bg-gradient-to-t from-[#3CA2E2] to-[#052EAA] rounded-4xl p-8 md:p-12 space-y-4 text-center">
+              <h2 className="sub-heading font-2 text-white text-left">
+                What Is Startup India Registration?
               </h2>
-              <p className="font-3 text-white">
-                Empowering Businesses through Comprehensive Solutions From Fund
-                Management to Legal Empowering.
+              <p className="paragraph font-3 !text-white mx-auto text-left">
+                Startup India is a flagship initiative of the Government of India, intended to
+                build a strong ecosystem that is conducive for the growth of startup businesses,
+                to drive sustainable economic growth and generate large scale employment opportunities.
+                Recognition by the Department for Promotion of Industry and Internal Trade (DPIIT)
+                allows startups to access tax benefits, easier compliance, intellectual property protection,
+                and easier access to funding.
               </p>
             </div>
-            <div className="w-full h-full flex items-center justify-center p-8">
-              <img src={Image1} className="w-full h-auto rounded-4xl object-contain shadow-2xl" loading="lazy" />
-            </div>
-          </motion.div>
-            </div>
           </div>
         </motion.section>
 
-        {/* What is Startup India Certificate */}
+        {/* Features Section */}
         <motion.section
-          ref={refAbout}
+          ref={refFeatures}
           initial={{ y: 100, opacity: 0 }}
-          animate={isInViewAbout ? { y: 0, opacity: 1 } : {}}
+          animate={isInViewFeatures ? { y: 0, opacity: 1 } : {}}
           transition={{ duration: 0.5 }}
           className="bg-[#f7f7f7] py-8"
         >
           <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14">
-          <div className="bg-gradient-to-t from-[#3CA2E2] to-[#052EAA] rounded-4xl p-8 md:p-12 space-y-4 text-center">
-            <h2
-              className="sub-heading font-2 text-white text-left"
-              
-            >
-              What Is Startup India Certificate?
+            <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]">
+              Key Features of Startup India Recognition
             </h2>
-            <p className="paragraph font-3 !text-white mx-auto text-left"
-             
-            >
-              The Startup India Certificate is an official DPIIT recognition for innovative businesses under 10 years old in India.
-              With this certificate, startups enjoy tax breaks, IP fee rebates, funding access, government tenders, and easier statutory compliance. Let Abtik guide your recognition and unlock every benefit.
-            </p>
-          </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+              {featuresData?.map((feature, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ y: 50, opacity: 0 }}
+                  animate={isInViewFeatures ? { y: 0, opacity: 1 } : {}}
+                  transition={{ duration: 0.5, delay: getFeaturesDelay(index) }}
+                  className="bg-white p-6 rounded-4xl shadow-md text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
+                >
+                  <div className="mb-4 inline-block p-3 bg-gradient-to-r from-blue-100 to-blue-200 rounded-full">
+                    <feature.icon className="w-8 h-8" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-2 font-2">
+                    {feature.title}
+                  </h3>
+                  <p className="text-sm font-3 text-gray-600">{feature.description}</p>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </motion.section>
 
-        {/* Eligibility & Key Benefits */}
+        {/* DPIIT Benefits Section */}
         <motion.section
-          ref={refEligibility}
+          ref={refBenefits}
           initial={{ y: 100, opacity: 0 }}
-          animate={isInViewEligibility ? { y: 0, opacity: 1 } : {}}
+          animate={isInViewBenefits ? { y: 0, opacity: 1 } : {}}
           transition={{ duration: 0.5 }}
           className="bg-[#f7f7f7] py-8"
         >
           <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14">
-          <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-            
-          >
-            Eligibility & Key Features
-          </h2>
-          <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
-            <p className="text-sm md:text-base font-3 text-gray-600 text-center"
-             
-            >
-              To be considered for Startup India DPIIT recognition, your business must meet the following requirements.
-              Official recognition brings a host of strategic and financial advantages, powering your growth story.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <motion.div
-                initial={{ y: 50, opacity: 0 }}
-                animate={isInViewEligibility ? { y: 0, opacity: 1 } : {}}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                className="space-y-4"
-              >
-                <h3
-                  className="text-lg font-semibold font-2 text-gray-800"
-                  
+            <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]">
+              DPIIT Recognition Benefits
+            </h2>
+            <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
+              <p className="text-sm md:text-base font-3 text-gray-600 text-center">
+                Recognition by DPIIT unlocks a plethora of benefits for startups, enabling them to
+                save costs, access capital, and focus on innovation and growth.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <motion.div
+                  initial={{ y: 50, opacity: 0 }}
+                  animate={isInViewBenefits ? { y: 0, opacity: 1 } : {}}
+                  transition={{ duration: 0.5, delay: 0.5 }}
+                  className="space-y-4"
                 >
-                  Who Can Apply?
-                </h3>
-                <ul className="space-y-2 text-sm font-3 text-gray-600">
-                  <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
-                    <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                    <span>Private Limited, LLP, or Registered Partnership</span>
-                  </li>
-                  <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
-                    <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                    <span>Incorporated within last 10 years</span>
-                  </li>
-                  <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
-                    <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                    <span>Turnover &lt; ₹100 Cr in any year since incorporation</span>
-                  </li>
-                  <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
-                    <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                    <span>Innovative/Unique product or scalable model</span>
-                  </li>
-                  <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
-                    <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                    <span>Should not be formed by splitting/merger of existing business</span>
-                  </li>
-                </ul>
-              </motion.div>
-              <motion.div
-                initial={{ y: 50, opacity: 0 }}
-                animate={isInViewEligibility ? { y: 0, opacity: 1 } : {}}
-                transition={{ duration: 0.5, delay: 0.7 }}
-                className="space-y-4"
-              >
-                <h3
-                  className="text-lg font-2 font-semibold text-gray-800"
-                  
+                  <h3 className="text-lg font-semibold text-gray-800 font-2">
+                    Tax & Financial Benefits
+                  </h3>
+                  <ul className="space-y-2 text-sm text-gray-600 font-3">
+                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                      <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                      <span>3 years income tax holiday (80-IAC)</span>
+                    </li>
+                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                      <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                      <span>Exemption from Angel Tax (Section 56)</span>
+                    </li>
+                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                      <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                      <span>Up to 80% rebate on patent filings</span>
+                    </li>
+                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                      <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                      <span>Access to ₹10,000 Cr Fund of Funds</span>
+                    </li>
+                  </ul>
+                </motion.div>
+                <motion.div
+                  initial={{ y: 50, opacity: 0 }}
+                  animate={isInViewBenefits ? { y: 0, opacity: 1 } : {}}
+                  transition={{ duration: 0.5, delay: 0.7 }}
+                  className="space-y-4"
                 >
-                  Certificate Highlights
-                </h3>
-                <ul className="space-y-2 text-sm font-3 text-gray-600">
-                  <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
-                    <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                    <span>Downloadable government certificate</span>
-                  </li>
-                  <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
-                    <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                    <span>Required for tax holiday and patent benefits</span>
-                  </li>
-                  <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
-                    <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                    <span>Gives access to exclusive startup tenders & events</span>
-                  </li>
-                  <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
-                    <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                    <span>Makes your startup trusted for investors/grants</span>
-                  </li>
-                  <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
-                    <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                    <span>Can be linked to DigiLocker for easy sharing</span>
-                  </li>
-                </ul>
-              </motion.div>
+                  <h3 className="text-lg font-semibold text-gray-800 font-2">
+                    Ease of Compliance
+                  </h3>
+                  <ul className="space-y-2 text-sm text-gray-600 font-3">
+                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                      <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                      <span>Self certification under labor & env laws</span>
+                    </li>
+                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                      <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                      <span>No inspection for first 3 years</span>
+                    </li>
+                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                      <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                      <span>Easier winding up in 90 days</span>
+                    </li>
+                    <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
+                      <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
+                      <span>Priority in government procurement (GeM)</span>
+                    </li>
+                  </ul>
+                </motion.div>
+              </div>
             </div>
-          </div>
           </div>
         </motion.section>
 
-        {/* Abtik Process Section */}
+        {/* Process Section */}
         <motion.section
           ref={refProcess}
           initial={{ y: 100, opacity: 0 }}
@@ -492,72 +487,28 @@ const StartupIndiaCertificate = () => {
           className="bg-[#f7f7f7] py-8"
         >
           <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14">
-          <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-           
-          >
-            How Abtik Gets You DPIIT Certified
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-            {processData.map((process, index) => (
-              <motion.div
-                key={index}
-                initial={{ y: 50, opacity: 0 }}
-                animate={isInViewProcess ? { y: 0, opacity: 1 } : {}}
-                transition={{ duration: 0.5, delay: getProcessDelay(index) }}
-                className="bg-white p-6 rounded-4xl shadow-md text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
-              >
-                <div className="mb-4 inline-block p-3 bg-gradient-to-r from-blue-100 to-blue-200 rounded-full">
-                  <process.icon className="w-8 h-8" />
-                </div>
-                <h3
-                  className="text-lg font-2 font-semibold text-gray-800 mb-2"
-                 
+            <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]">
+              Our Process for Startup India Registration
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+              {processData?.map((process, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ y: 50, opacity: 0 }}
+                  animate={isInViewProcess ? { y: 0, opacity: 1 } : {}}
+                  transition={{ duration: 0.5, delay: getProcessDelay(index) }}
+                  className="bg-white p-6 rounded-4xl shadow-md text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
                 >
-                  {process.title}
-                </h3>
-                <p className="text-sm text-gray-600 font-3">{process.description}</p>
-              </motion.div>
-            ))}
-          </div>
-          </div>
-        </motion.section>
-
-        {/* Benefits Section */}
-        <motion.section
-          ref={refBenefits}
-          initial={{ y: 100, opacity: 0 }}
-          animate={isInViewBenefits ? { y: 0, opacity: 1 } : {}}
-          transition={{ duration: 0.5 }}
-          className="bg-[#f7f7f7] py-8 "
-        >
-          <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14">
-          <h2 className="sub-heading font-1 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
-          
-          >
-            Startup India Benefits For You
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-            {benefitsData.map((benefit, index) => (
-              <motion.div
-                key={index}
-                initial={{ y: 50, opacity: 0 }}
-                animate={isInViewBenefits ? { y: 0, opacity: 1 } : {}}
-                transition={{ duration: 0.5, delay: getBenefitsDelay(index) }}
-                className="bg-white p-6 rounded-4xl shadow-md text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
-              >
-                <div className="mb-4 inline-block p-3 bg-gradient-to-r from-blue-100 to-blue-200 rounded-full">
-                  <benefit.icon className="w-8 h-8" />
-                </div>
-                <h3
-                  className="text-lg font-2 font-semibold text-gray-800 mb-2"
-                  
-                >
-                  {benefit.title}
-                </h3>
-                <p className="text-sm font-3 text-gray-600">{benefit.description}</p>
-              </motion.div>
-            ))}
-          </div>
+                  <div className="mb-4 inline-block p-3 bg-gradient-to-r from-blue-100 to-blue-200 rounded-full">
+                    <process.icon className="w-8 h-8" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-2 font-2">
+                    {process.title}
+                  </h3>
+                  <p className="text-sm font-3 text-gray-600">{process.description}</p>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </motion.section>
 
@@ -570,52 +521,49 @@ const StartupIndiaCertificate = () => {
           className="bg-[#f7f7f7] py-8 md:py-16"
         >
           <div className="w-full max-w-[1920px] mx-auto space-y-6">
-          <h1 className="sub-heading font-2 bg-gradient-to-t text-center bg-clip-text from-[#3CA2E2] to-[#052EAA] text-transparent"
-            
-          >
-            Frequently Asked Questions
-          </h1>
-          <div
-            className="px-6 md:px-24 space-y-4 font-3"
-          
-          >
-            {faq.map((data, index) => (
-              <motion.div
-                key={index}
-                initial={{ y: 50, opacity: 0 }}
-                animate={isInViewFAQ ? { y: 0, opacity: 1 } : {}}
-                transition={{ duration: 0.1, delay: getFaqDelay(index) }}
-                className="bg-white rounded-lg shadow-sm border border-gray-100 transition-all duration-300"
-              >
-                <h2
-                  className={`p-2.5 px-4 relative cursor-pointer flex items-center justify-between text-base font-medium ${isExpanded.isOpen && isExpanded.index === index
-                    ? "border-b border-gray-200"
-                    : ""
-                    }`}
-                  onClick={() => toggleIsExpanded(index)}
+            <h1 className="sub-heading font-2 bg-gradient-to-t text-center bg-clip-text from-[#3CA2E2] to-[#052EAA] text-transparent">
+              Frequently Asked Questions
+            </h1>
+            <div className="px-6 md:px-24 space-y-4 font-3">
+              {faq.map((data, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ y: 50, opacity: 0 }}
+                  animate={isInViewFAQ ? { y: 0, opacity: 1 } : {}}
+                  transition={{ duration: 0.1, delay: getFaqDelay(index) }}
+                  className="bg-white rounded-lg shadow-sm border border-gray-100 transition-all duration-300"
                 >
-                  <span>{data.question}</span>
-                  <button className="border-2 p-1 transition-all duration-300 hover:scale-105 h-8 w-8 flex justify-center items-center border-[#052EAA] rounded-lg text-[#052EAA]">
-                    {isExpanded.isOpen && isExpanded.index === index ? (
-                      <ArrowRight className="w-5 h-5" />
-                    ) : (
-                      <ArrowUpRight className="w-5 h-5" />
-                    )}
-                  </button>
-                </h2>
-                <div
-                  className={`overflow-hidden transition-all duration-500 ease-in-out ${isExpanded.isOpen && isExpanded.index === index
-                    ? "max-h-96 opacity-100"
-                    : "max-h-0 opacity-0"
+                  <h2
+                    className={`p-2.5 px-4 relative cursor-pointer flex items-center justify-between text-base font-medium ${
+                      isExpanded.isOpen && isExpanded.index === index
+                        ? "border-b border-gray-200"
+                        : ""
                     }`}
-                >
-                  <p className="p-4 bg-gradient-to-t rounded-b-lg from-[#052EAA] to-[#3CA2E2] text-white">
-                    {data.answer}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+                    onClick={() => toggleIsExpanded(index)}
+                  >
+                    <span>{data.question}</span>
+                    <button className="border-2 p-1 transition-all duration-300 hover:scale-105 h-8 w-8 flex justify-center items-center border-[#052EAA] rounded-lg text-[#052EAA]">
+                      {isExpanded.isOpen && isExpanded.index === index ? (
+                        <ArrowRight className="w-5 h-5" />
+                      ) : (
+                        <ArrowUpRight className="w-5 h-5" />
+                      )}
+                    </button>
+                  </h2>
+                  <div
+                    className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                      isExpanded.isOpen && isExpanded.index === index
+                        ? "max-h-96 opacity-100"
+                        : "max-h-0 opacity-0"
+                    }`}
+                  >
+                    <p className="p-4 bg-gradient-to-t rounded-b-lg from-[#052EAA] to-[#3CA2E2] text-white">
+                      {data.answer}
+                    </p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </motion.section>
 

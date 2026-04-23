@@ -211,6 +211,7 @@ const SeedFund = () => {
     />
     <Meta name="keywords" content={seoData?.seedFundService?.keyword} />
     <Meta name="robots" content={seoData?.seedFundService?.robots} />
+    <link rel="canonical" href={seoData?.seedFundService?.canonical} />
    </HeadProvider>
 
    <Mainlayout>
@@ -244,11 +245,7 @@ const SeedFund = () => {
              text-white lg:text-inherit tracking-wide
              main-heading font-1"
       >
-       Secure{" "}
-       <span className="text-[#3CA2E2] font-extrabold block sm:inline">
-        Seed Funding
-       </span>{" "}
-       for Your Startup
+       Startup India Seed Fund Scheme — Application Support
       </h1>
       <p
        className="text-sm sm:text-base md:text-lg lg:text-xl

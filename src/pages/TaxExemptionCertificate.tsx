@@ -22,7 +22,7 @@ import { useDispatch } from "react-redux";
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
 import { HeadProvider, Meta, Title } from "react-head";
-import seoData from "../data/seoData.json"; // Assuming this file will have a key for taxAssumptionCertificate
+import seoData from "../data/seoData.json";
 
 const TaxExemptionCertificate = () => {
   const dispatch = useDispatch();
@@ -37,34 +37,34 @@ const TaxExemptionCertificate = () => {
 
   const faq = [
     {
-      question: "1. What is a Tax Exemption Certificate?",
+      question: "1. What is the 80-IAC tax exemption?",
       answer:
-        "A Tax Exemption Certificate is an official document verifying that all tax liabilities related to a specific asset or transaction have been settled or formally assumed by another party. It provides legal assurance to all parties involved.",
+        "It is a 3-year income tax holiday provided to recognized startups under Section 80-IAC of the Income Tax Act.",
     },
     {
-      question: "2. When is a Tax Exemption Certificate required?",
+      question: "2. How do I apply for 80-IAC certification?",
       answer:
-        "It is commonly required during major financial transactions like real estate sales, business mergers or acquisitions, and the transfer of inherited assets to ensure a clean transfer of ownership without hidden tax liabilities.",
+        "Recognized startups can apply through the Startup India portal by providing detailed innovation briefs and financial justifications.",
     },
     {
-      question: "3. Who issues the Tax Exemption Certificate?",
+      question: "3. What are the eligibility criteria for 80-IAC?",
       answer:
-        "The certificate is issued by a certified financial or legal services firm after a thorough due diligence process, which includes reviewing financial records, assessing tax liabilities, and confirming payment or transfer of obligations.",
+        "The startup must be a recognized private limited company or LLP, incorporated on or after April 1st, 2016, and working towards innovation or improvement of products/services.",
     },
     {
-      question: "4. What documents are needed to apply for the certificate?",
+      question: "4. What documents are needed for tax exemption application?",
       answer:
-        "Required documents typically include proof of identity, transaction agreements (e.g., sales deeds), recent financial statements, tax payment records, and any other documents relevant to the asset or transaction.",
+        "Key documents include the Certificate of Incorporation, DPIIT Recognition Certificate, annual reports, and a detailed project report highlighting innovation.",
     },
     {
-      question: "5. How long is the certificate valid?",
+      question: "5. How long is the tax holiday valid?",
       answer:
-        "The certificate is specific to the transaction for which it is issued. Its validity is tied to the completion of that transaction, confirming that tax obligations were settled at that point in time.",
+        "The 80-IAC tax exemption is valid for any 3 consecutive financial years out of the first 10 years of a startup's incorporation.",
     },
     {
       question: "6. Can this certificate prevent future tax disputes?",
       answer:
-        "Yes, a primary benefit of the certificate is to minimize the risk of future tax disputes related to the transaction by creating a clear, legally-recognized record of settled tax liabilities.",
+        "Yes, it provides a legal framework for tax exemptions, reducing the risk of disputes related to income tax liabilities for the exempted period.",
     },
   ];
 
@@ -125,19 +125,19 @@ const TaxExemptionCertificate = () => {
       icon: FileText,
       title: "Document Submission & Review",
       description:
-        "We guide you in collecting and submitting all necessary financial and transactional documents for a comprehensive review.",
+        "We guide you in collecting and submitting all necessary financial and innovation documents for a comprehensive review.",
     },
     {
       icon: Banknote,
       title: "Tax Liability Assessment",
       description:
-        "Our experts conduct a thorough due diligence to assess and verify all tax liabilities associated with the asset or transaction.",
+        "Our experts conduct a thorough due diligence to verify eligibility for the 80-IAC tax holiday under the Startup India initiative.",
     },
     {
       icon: Award,
       title: "Certificate Issuance",
       description:
-        "Upon successful verification, we issue a legally sound Tax Exemption Certificate to secure your transaction.",
+        "Upon successful verification, we assist in securing your 80-IAC Tax Exemption Certificate to protect your startup's finances.",
     },
   ];
 
@@ -161,19 +161,19 @@ const TaxExemptionCertificate = () => {
       icon: Shield,
       title: "Legal Protection",
       description:
-        "Gain peace of mind with a certificate that provides robust legal protection against unforeseen tax claims post transaction.",
+        "Gain peace of mind with a certificate that provides robust tax protection for your startup during its growth phase.",
     },
     {
       icon: IndianRupee ,
       title: "Enhance Credibility",
       description:
-        "Boost the confidence of buyers, investors, and financial institutions by demonstrating complete fiscal transparency.",
+        "Boost the confidence of investors and financial institutions by demonstrating your recognized status and tax efficiency.",
     },
     {
       icon: BookMarked,
       title: "Simplify Due Diligence",
       description:
-        "Streamline the due diligence process for all parties, enabling faster and smoother transaction closures.",
+        "Streamline the due diligence process for future funding rounds, enabling faster and smoother transaction closures.",
     },
   ];
 
@@ -189,10 +189,11 @@ const TaxExemptionCertificate = () => {
 
   return (<>
     <HeadProvider>
-      <Title>{seoData?.taxAssumptionCertificate?.title || "Tax Exemption Certificate Service"}</Title>
-      <Meta name="description" content={seoData?.taxAssumptionCertificate?.description || "Secure your financial transactions with a Tax Exemption Certificate."} />
-      <Meta name="keywords" content={seoData?.taxAssumptionCertificate?.keyword || "Tax Exemption , tax certificate, financial due diligence"} />
-      <Meta name="robots" content={seoData?.taxAssumptionCertificate?.robots || "index, follow"} />
+      <Title>{seoData?.startupCertificationService?.title}</Title>
+      <Meta name="description" content={seoData?.startupCertificationService?.description} />
+      <Meta name="keywords" content={seoData?.startupCertificationService?.keyword} />
+      <Meta name="robots" content={seoData?.startupCertificationService?.robots} />
+      <link rel="canonical" href={seoData?.startupCertificationService?.canonical} />
     </HeadProvider>
     <Mainlayout>
       {/* Hero Section */}
@@ -225,10 +226,7 @@ const TaxExemptionCertificate = () => {
                   text-white lg:text-inherit tracking-wide
                   main-heading font-1"
           >
-            Secure Your Transactions with a {" "}
-            <span className="text-[#3CA2E2] font-extrabold block sm:inline">
-              Tax Exemption Certificate
-            </span>{" "}
+            Startup India Certification Assistance
           </h1>
           <p
             className="text-sm sm:text-base md:text-lg lg:text-xl
@@ -237,8 +235,8 @@ const TaxExemptionCertificate = () => {
                   paragraph !text-white
                   max-w-none sm:max-w-lg md:max-w-xl font-2 lg:max-w-none mx-auto lg:mx-0"
           >
-            Ensure seamless asset and business transfers with a certificate that verifies all tax liabilities are settled.
-            Protect your investments and simplify due diligence with our expert certification service.
+            Secure your 80-IAC tax exemption and unlock 3 years of income tax holiday.
+            Abtik helps you navigate the complex certification process to protect your startup's capital.
           </p>
           <div className="pt-2 sm:pt-4">
             <button
@@ -250,7 +248,7 @@ const TaxExemptionCertificate = () => {
                     transition-transform duration-300
                    shadow-lg hover:shadow-xl"
             >
-              Get Your Certificate
+              Get Certified Now
             </button>
           </div>
         </motion.div>
@@ -341,7 +339,7 @@ const TaxExemptionCertificate = () => {
         >
           <div className="flex flex-col justify-evenly p-8 md:p-12 box-border">
             <h2 className="sub-heading text-white font-1">
-              Tax Exemption Certificate
+              80-IAC Certification
             </h2>
             <p className="font-3 text-white">
               Empowering Businesses through Comprehensive Solutions From Fund
@@ -355,7 +353,7 @@ const TaxExemptionCertificate = () => {
         </div>
       </motion.section>
 
-      {/* What is Tax Exemption Certificate */}
+      {/* What is Startup Certification */}
       <motion.section
       ref={refTaxCertInfo}
       initial={{ y: 100, opacity: 0 }}
@@ -368,11 +366,15 @@ const TaxExemptionCertificate = () => {
           <h2
             className="sub-heading text-white text-left font-2"
           >
-            What Is a Tax Exemption Certificate?
+            What Is Startup India Certification (80-IAC)?
           </h2>
           <p className="paragraph !text-white mx-auto text-left font-3"
           >
-            A Tax Exemption Certificate is a crucial document that provides official verification that all outstanding tax liabilities on an asset (like property or a business) have been paid or are legally assumed by a new owner. This protects buyers from inheriting hidden tax debts and ensures a clean, transparent transaction, fostering trust and security for everyone involved.
+            The 80-IAC Tax Exemption is a special provision under the Income Tax Act that allows
+            DPIIT-recognized startups to claim a 100% tax holiday for 3 consecutive financial years.
+            This certification is crucial for startups to reinvest their profits into growth and innovation
+            rather than tax liabilities. It requires separate approval from the Inter-Ministerial Board
+            and a strong demonstration of innovation and scalability.
           </p>
         </div>
         </div>
@@ -389,12 +391,12 @@ const TaxExemptionCertificate = () => {
         <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14">
         <h2 className="sub-heading font-2 text-center bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
         >
-          Key Features of Our Certificate Service
+          Key Features of 80-IAC Certification
         </h2>
 
         <div className="mt-8 bg-white rounded-4xl p-4 md:p-8 shadow-md">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* For Asset Sales Card */}
+            {/* Tax holiday Card */}
             <motion.div
               initial={{ y: 50, opacity: 0 }}
               animate={isInViewFeatures ? { y: 0, opacity: 1 } : {}}
@@ -410,30 +412,30 @@ const TaxExemptionCertificate = () => {
                 <h3
                   className="text-xl font-bold text-gray-800 mb-3 font-2"
                 >
-                  For Asset Sales
+                  Tax Holiday Period
                 </h3>
                 <div className="bg-gradient-to-r font-3 from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
-                  <p className="text-2xl font-bold">Full Liability Coverage</p>
-                  <p className="text-xs opacity-90">Real Estate & Valuables</p>
+                  <p className="text-2xl font-bold">3 Consecutive Years</p>
+                  <p className="text-xs opacity-90">100% Tax Exemption</p>
                 </div>
               </div>
               <ul className="space-y-2 text-xs text-gray-700 font-3">
                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                   <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                  <span>Verifies clearance of property and capital gains taxes.</span>
+                  <span>Available within the first 10 years of incorporation.</span>
                 </li>
                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                   <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                  <span>Provides assurance for buyers and lenders.</span>
+                  <span>Significant reduction in operational costs.</span>
                 </li>
                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                   <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                  <span>Facilitates smooth title and ownership transfer.</span>
+                  <span>Boosts available capital for scaling operations.</span>
                 </li>
               </ul>
             </motion.div>
 
-            {/* For Business Transfers Card */}
+            {/* Strategic Value Card */}
             <motion.div
               initial={{ y: 50, opacity: 0 }}
               animate={isInViewFeatures ? { y: 0, opacity: 1 } : {}}
@@ -449,25 +451,25 @@ const TaxExemptionCertificate = () => {
                 <h3
                   className="text-xl font-bold text-gray-800 mb-3 font-2"
                 >
-                  For Business Transfers
+                  Strategic Value
                 </h3>
                 <div className="bg-gradient-to-r font-3 from-[#052EAA] to-[#3CA2E2] text-white p-3 rounded-xl">
-                  <p className="text-2xl font-bold">Comprehensive Audit</p>
-                  <p className="text-xs opacity-90">Mergers & Acquisitions</p>
+                  <p className="text-2xl font-bold">Investor Confidence</p>
+                  <p className="text-xs opacity-90">Validated Innovation</p>
                 </div>
               </div>
               <ul className="space-y-2 text-xs text-gray-700 font-3">
                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                   <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                  <span>Covers corporate, payroll, and sales taxes.</span>
+                  <span>Official validation of your business innovation.</span>
                 </li>
                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                   <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                  <span>Crucial for M&A due diligence processes.</span>
+                  <span>Increased appeal to venture capital and angel investors.</span>
                 </li>
                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                   <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                  <span>Protects new owners from previous liabilities.</span>
+                  <span>Enhanced market positioning and brand authority.</span>
                 </li>
               </ul>
             </motion.div>
@@ -487,12 +489,13 @@ const TaxExemptionCertificate = () => {
         <div className="w-full max-w-[1920px] mx-auto px-7 md:px-14">
         <h2 className="sub-heading text-center font-2 bg-gradient-to-t text-transparent bg-clip-text from-[#3CA2E2] to-[#052EAA]"
         >
-          Benefits & Common Use Cases
+          Benefits of 80-IAC Certification
         </h2>
         <div className="mt-8 bg-white rounded-4xl p-4 md:p-12 space-y-6 shadow-md">
           <p className="text-sm md:text-base text-gray-600 text-center font-3"
           >
-            Our Tax Exemption Certificate provides critical assurance across a range of high stakes financial scenarios, ensuring every transaction is secure and transparent.
+            Securing the 80-IAC certification is a milestone for any startup, providing the financial
+            freedom to focus on innovation and market expansion without the burden of income tax.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <motion.div
@@ -504,24 +507,24 @@ const TaxExemptionCertificate = () => {
               <h3
                 className="text-lg font-semibold text-gray-800 font-2"
               >
-                Key Benefits
+                Financial Advantages
               </h3>
               <ul className="space-y-2 text-sm text-gray-600 font-3">
                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                   <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                  <span>Prevents financial losses from hidden tax debts.</span>
+                  <span>Complete tax exemption on all business income.</span>
                 </li>
                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                   <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                  <span>Accelerates transaction closing times.</span>
+                  <span>Better cash flow management for R&D.</span>
                 </li>
                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                   <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                  <span>Provides indisputable proof for legal and financial records.</span>
+                  <span>Higher ROI for stakeholders and founders.</span>
                 </li>
                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                   <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                  <span>Increases buyer and investor confidence.</span>
+                  <span>Capital preservation for market entry.</span>
                 </li>
               </ul>
             </motion.div>
@@ -534,24 +537,24 @@ const TaxExemptionCertificate = () => {
               <h3
                 className="text-lg font-semibold text-gray-800 font-2"
               >
-                Common Use Cases
+                Growth Opportunities
               </h3>
               <ul className="space-y-2 text-sm text-gray-600 font-3">
                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                   <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                  <span>Real Estate Transactions.</span>
+                  <span>Priority in government schemes and tenders.</span>
                 </li>
                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                   <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                  <span>Mergers and Acquisitions (M&A).</span>
+                  <span>Enhanced credibility with institutional investors.</span>
                 </li>
                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                   <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                  <span>Inheritance and Estate Settlements.</span>
+                  <span>Access to a network of elite recognized startups.</span>
                 </li>
                 <li className="grid grid-cols-[20px_1fr] gap-2 items-start">
                   <CheckCircle className="w-5 h-5 text-[#3CA2E2]" />
-                  <span>Corporate Restructuring and Asset Sales.</span>
+                  <span>Long-term fiscal stability and sustainability.</span>
                 </li>
               </ul>
             </motion.div>

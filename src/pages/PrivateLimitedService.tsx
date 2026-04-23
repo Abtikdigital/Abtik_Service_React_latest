@@ -200,11 +200,9 @@ const PvtLtdRegistration = () => {
           name="description"
           content={seoData?.privatelimitedService?.description}
         />
-        <Meta
-          name="keywords"
-          content={seoData?.privatelimitedService?.keyword}
-        />
+        <Meta name="keywords" content={seoData?.privatelimitedService?.keyword} />
         <Meta name="robots" content={seoData?.privatelimitedService?.robots} />
+        <link rel="canonical" href={seoData?.privatelimitedService?.canonical} />
       </HeadProvider>
       <Mainlayout>
         {/* Hero Section */}
@@ -230,13 +228,12 @@ const PvtLtdRegistration = () => {
             className="relative z-10 w-full max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-none lg:w-1/2 space-y-4 sm:space-y-5 md:space-y-6 lg:space-y-8 text-center lg:text-left"
           >
             <h1
-              className="text-2xl font-1 sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-white lg:text-inherit tracking-wide main-heading"
-
+             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 
+             font-bold leading-tight sm:leading-tight md:leading-tight lg:leading-tight
+             text-white lg:text-inherit tracking-wide
+             main-heading font-1"
             >
-              Start with Confidence:{" "}
-              <span className="text-[#3CA2E2] font-extrabold block sm:inline">
-                Pvt Ltd Business Registration
-              </span>
+              Business Registration Services in India
             </h1>
             <p
               className="text-sm sm:text-base md:text-lg lg:text-xl

@@ -31,28 +31,11 @@ const PrivacyPolicy = () => {
  return (
   <>
    <HeadProvider>
-    <Title>
-     {seoData?.privacyPolicy?.title ||
-      "Privacy Policy - Abtik Startup Advisor pvt ltd Team"}
-    </Title>
-    <Meta
-     name="description"
-     content={
-      seoData?.privacyPolicy?.description ||
-      "Learn how Abtik Startup Advisor pvt ltd Team collects, uses, and protects your personal information."
-     }
-    />
-    <Meta
-     name="keywords"
-     content={
-      seoData?.privacyPolicy?.keyword ||
-      "privacy policy, data protection, personal information, Abtik Startup Advisor pvt ltd Team"
-     }
-    />
-    <Meta
-     name="robots"
-     content={seoData?.privacyPolicy?.robots || "index, follow"}
-    />
+    <Title>{seoData?.privacyPolicy?.title}</Title>
+    <Meta name="description" content={seoData?.privacyPolicy?.description} />
+    <Meta name="keywords" content={seoData?.privacyPolicy?.keyword} />
+    <Meta name="robots" content={seoData?.privacyPolicy?.robots} />
+    <link rel="canonical" href={seoData?.privacyPolicy?.canonical} />
    </HeadProvider>
 
    <Mainlayout>
@@ -88,11 +71,7 @@ const PrivacyPolicy = () => {
              text-white lg:text-inherit tracking-wide
              main-heading font-1"
       >
-       Privacy{" "}
-       <span className="text-[#3CA2E2] font-extrabold block sm:inline">
-        Policy
-       </span>{" "}
-       & Data Protection
+       Privacy Policy
       </h1>
       <p
        className="text-sm sm:text-base md:text-lg lg:text-xl
@@ -327,7 +306,7 @@ const PrivacyPolicy = () => {
          <li>Regular security assessments and updates</li>
          <li>Access controls and employee training</li>
          <li>Secure data storage and backup systems</li>
-        </ul>
+         </ul>
        </div>
 
        {/* Your Rights */}

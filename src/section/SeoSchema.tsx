@@ -45,8 +45,8 @@ const pathToSeoKey: Record<string, keyof typeof seoData> = {
 
   // Certificates
   "/services/certificate/fssai-licence": "fssaiLicenseService",
-  "/services/certificate/startup-india": "startupIndisCertificateService",
-  "/services/certificate/tax-exemption-certificate": "taxAssumptionCertificate",
+  "/services/certificate/startup-india": "startupIndiaRegistrationService",
+  "/services/certificate/tax-exemption-certificate": "startupCertificationService",
   "/services/certificate/msme": "msmeCertificateService",
   "/services/certificate/make-in-india": "makeinindiaService",
   "/services/certificate/zed": "zedCertificateService",
@@ -116,6 +116,7 @@ const SeoSchema = () => {
     "@type": "Organization",
     name: "Abtik Startup Advisor pvt ltd",
     url: BASE_URL,
+    logo: `${BASE_URL}/logo.png`, // Added logo
     description:
       "Abtik Startup Advisor pvt ltd is a business consultancy helping startups and MSMEs with loans, subsidies, registrations and compliance.",
     email: "info@abtikservices.com",
@@ -123,14 +124,6 @@ const SeoSchema = () => {
       {
         "@type": "PostalAddress",
         streetAddress: "313, Patel Ave, Sarkhej - Gandhinagar Hwy, Thaltej",
-        addressLocality: "Ahmedabad",
-        addressRegion: "Gujarat",
-        postalCode: "380054",
-        addressCountry: "IN",
-      },
-      {
-        "@type": "PostalAddress",
-        streetAddress: "B-209 Shilp Corporate Park, Rajpath Rangoli Rd, Thaltej",
         addressLocality: "Ahmedabad",
         addressRegion: "Gujarat",
         postalCode: "380054",
@@ -178,6 +171,43 @@ const SeoSchema = () => {
     },
   };
 
+  // Breadcrumb Schema
+  const pathSegments = pathname.split("/").filter(Boolean);
+  const breadcrumbItems = [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: BASE_URL,
+    },
+    ...pathSegments.map((segment, index) => ({
+      "@type": "ListItem",
+      position: index + 2,
+      name: segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, " "),
+      item: `${BASE_URL}/${pathSegments.slice(0, index + 1).join("/")}`,
+    })),
+  ];
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: breadcrumbItems,
+  };
+
+  // FAQ Schema
+  const faqSchema = seoConfig?.faq && seoConfig.faq.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: seoConfig.faq.map((f: { question: string; answer: string }) => ({
+      "@type": "Question",
+      name: f.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: f.answer,
+      },
+    })),
+  } : null;
+
   useEffect(() => {
     // Remove any existing schema scripts to avoid duplicates
     const existingSchemas = document.querySelectorAll('script[type="application/ld+json"]');
@@ -198,7 +228,8 @@ const SeoSchema = () => {
     }
 
     // Inject schema scripts
-    const schemas = [organizationSchema, webSiteSchema, webPageSchema];
+    const schemas = [organizationSchema, webSiteSchema, webPageSchema, breadcrumbSchema];
+    if (faqSchema) schemas.push(faqSchema);
 
     schemas.forEach(schema => {
       const script = document.createElement('script');
@@ -212,11 +243,9 @@ const SeoSchema = () => {
       const schemaScripts = document.querySelectorAll('script[type="application/ld+json"]');
       schemaScripts.forEach(script => script.remove());
     };
-  }, [pathname, canonicalUrl]);
+  }, [pathname, canonicalUrl, seoConfig]);
 
   return null; // Return null since we're injecting directly into head
 };
 
 export default SeoSchema;
-
-
