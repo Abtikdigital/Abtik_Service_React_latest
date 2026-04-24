@@ -9,8 +9,8 @@ export async function generateMetadata(): Promise<Metadata> {
   const canonicalUrl = `${protocol}://${host}/`;
 
   return {
-    title: "MSME & Business Loan Consultancy in India | Abtik",
-    description: "Expert MSME & business loan consultancy in India. Get professional support for Startup India registration, FSSAI licensing, government grants, and business funding solutions. Apply now for financial growth and take your business to the next level with Abtik!",
+    title: "Expert MSME & Business Loan Consultant in India | Abtik",
+    description: "Expert MSME & business loan consultancy in India. Get Startup India registration, FSSAI licensing, and government grant support. Apply now for financial growth!",
     alternates: {
       canonical: canonicalUrl,
     },
