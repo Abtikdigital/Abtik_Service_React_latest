@@ -230,17 +230,6 @@ const SeoSchema = () => {
     const safeJson = (data: unknown) =>
       JSON.stringify(data).replace(/</g, "\\u003c");
 
-    // Inject canonical link
-    const existingCanonical = document.querySelector('link[rel="canonical"]');
-    if (existingCanonical) {
-      existingCanonical.setAttribute('href', canonicalUrl);
-    } else {
-      const canonicalLink = document.createElement('link');
-      canonicalLink.rel = 'canonical';
-      canonicalLink.href = canonicalUrl;
-      document.head.appendChild(canonicalLink);
-    }
-
     // Inject schema scripts
     const schemas: any[] = [financialServiceSchema, webSiteSchema, webPageSchema, breadcrumbSchema];
     if (faqSchema) schemas.push(faqSchema);

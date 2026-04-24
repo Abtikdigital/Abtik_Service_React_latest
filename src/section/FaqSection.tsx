@@ -51,7 +51,7 @@ const FaqSection = () => {
             key={index}
             className="bg-white rounded-lg shadow-sm border border-gray-100 transition-all duration-300"
           >
-            <h2
+            <div
               className={`p-2.5 px-4 relative cursor-pointer flex items-center justify-between  text-base font-medium ${
                 isExpanded.isOpen && isExpanded.index === index
                   ? "border-b border-gray-200"
@@ -67,7 +67,7 @@ const FaqSection = () => {
                   <ArrowUpRight className="w-5 h-5" />
                 )}
               </button>
-            </h2>
+            </div>
 
             <div
               className={`overflow-hidden transition-all duration-500 ease-in-out ${

@@ -21,21 +21,23 @@ export async function generateMetadata(): Promise<Metadata> {
   const protocol = host.includes("localhost") ? "http" : "https";
   const baseUrl = `${protocol}://${host}`;
 
+  const desc = "Get expert help on MSME loans, short-term capital, and government funding. Trusted by 50,000+ businesses across India. We offer Startup India registration, FSSAI licensing, grants, and comprehensive business consultancy services.";
+
   return {
     title: "Abtik Startup Advisor pvt ltd | Business & MSME Loan Consultancy",
-    description: "Get expert help on MSME loans, short-term capital, and government funding—trusted by 50,000+ businesses across India.",
+    description: desc,
     metadataBase: new URL(baseUrl),
     openGraph: {
       type: "website",
       url: baseUrl,
       title: "Abtik Startup Advisor pvt ltd | Business & MSME Loan Consultancy",
-      description: "Get expert help on MSME loans, short-term capital, and government funding—trusted by 50,000+ businesses across India.",
+      description: desc,
       images: [`${baseUrl}/logo.png`],
     },
     twitter: {
       card: "summary_large_image",
       title: "Abtik Startup Advisor pvt ltd | Business & MSME Loan Consultancy",
-      description: "Get expert help on MSME loans, short-term capital, and government funding—trusted by 50,000+ businesses across India.",
+      description: desc,
       images: [`${baseUrl}/logo.png`],
     },
     icons: {

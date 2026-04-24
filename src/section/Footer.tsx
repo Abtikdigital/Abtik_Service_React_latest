@@ -21,9 +21,9 @@ const Footer = () => {
             <div>
               <OptimizedImage src={Logo.src} alt="Abtik Startup Advisor pvt ltd" width={160} height={56} className="h-14 w-auto" />
             </div>
-            <h2 className="paragraph">
-              © 2022 Abtik Startup Advisor pvt ltd - All rights reserved.
-            </h2>
+            <p className="paragraph">
+              © 2025 Abtik Startup Advisor pvt ltd - All rights reserved.
+            </p>
             <div className="flex gap-2">
               <a
                 href="https://www.facebook.com/share/1aKQvTf7NU/"
@@ -65,7 +65,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h2 className="heading">Contact Info</h2>
+            <p className="heading">Contact Info</p>
             <ul className="space-y-3 py-1.5">
               <li className="flex gap-3 items-center">
                 <Phone className="hover:from-[#2178B5] hover:bg-gradient-to-tl text-white min-h-8 min-w-8 hover:to-[#021E6B] cursor-pointer bg-gradient-to-tr from-[#3CA2E2] to-[#052EAA] p-1.5 rounded-lg" />
@@ -79,10 +79,10 @@ const Footer = () => {
               <li className="flex gap-3 items-center">
                 <Mail className="hover:from-[#2178B5] hover:bg-gradient-to-tl text-white min-h-8 min-w-8 hover:to-[#021E6B] cursor-pointer bg-gradient-to-tr from-[#3CA2E2] to-[#052EAA] p-1.5 rounded-lg" />
                 <a
-                  href="mailto:info@abtikservices.com"
+                  href="mailto:info&#64;abtikservices&#46;com"
                   className="text-sm text-[#4D4D4D] font-semibold hover:underline hover:text-gray-950 cursor-pointer duration-300"
                 >
-                  info@abtikservices.com
+                  info&#64;abtikservices&#46;com
                 </a>
               </li>
               <li className="flex gap-3 items-center ">
@@ -114,7 +114,7 @@ const Footer = () => {
 
           <div className="grid grid-cols-1 space-y-5 md:grid-cols-3 lg:col-span-2">
             <div className="space-y-3">
-              <h2 className="heading">Company</h2>
+              <p className="heading">Company</p>
               <ul className="flex flex-col space-y-3">
               <Link  href={"/"}
                   className="text-sm text-[#4D4D4D] font-semibold hover:underline hover:text-gray-950 cursor-pointer duration-300"
@@ -135,7 +135,7 @@ const Footer = () => {
             </div>
 
             <div className="space-y-3">
-              <h2 className="heading">Our Popular Services</h2>
+              <p className="heading">Our Popular Services</p>
               <ul className="flex flex-col space-y-3">
                 <Link  href={"/services/funding/grants"}
                   className="text-sm font-semibold text-[#4D4D4D] hover:underline hover:text-gray-950 cursor-pointer duration-300"
@@ -176,7 +176,7 @@ const Footer = () => {
             </div>
 
             <div className="space-y-3">
-              <h2 className="heading">Legal</h2>
+              <p className="heading">Legal</p>
               <ul className="flex flex-col space-y-3">
                 <Link  href={"/legal/privacy-policy"}
                   className="text-sm font-semibold text-[#4D4D4D] hover:underline hover:text-gray-950 cursor-pointer duration-300"
