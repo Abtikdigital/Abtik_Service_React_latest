@@ -638,7 +638,7 @@ const DesktopNavbar = ({ setOpen }: any) => {
     <div className="hidden xl:block w-full max-w-[1920px] mx-auto px-4 lg:px-8 xl:px-14 py-2">
       <div className="flex items-center justify-between">
         <div className="flex-shrink-0">
-          <img src={Logo.src} alt="Logo" className="h-12 lg:h-14" />
+          <img src={Logo.src} alt="Abtik Startup Advisor" width={180} height={56} className="h-12 lg:h-14 w-auto" />
         </div>
 
         <div ref={menuWrapperRef}>
@@ -1061,7 +1061,7 @@ const MobileNavbar = ({ onOpenSearch }: { onOpenSearch: () => void }) => {
     <>
       <div className="xl:hidden relative bg-white">
         <div className="w-full max-w-[1920px] mx-auto py-3 flex px-4 h-18 lg:h-20 items-center justify-between">
-          <img src={Logo.src} alt="Logo" className="h-10 lg:h-12" />
+          <img src={Logo.src} alt="Abtik Startup Advisor" width={160} height={48} className="h-10 lg:h-12 w-auto" />
           <div className="flex items-center gap-2">
             <button
               type="button"

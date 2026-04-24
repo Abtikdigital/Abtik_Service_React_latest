@@ -170,8 +170,11 @@ const OurService = () => {
               <div className="w-full flex items-center justify-center p-2">
                 <img
                   src={service.img}
+                  width={400}
+                  height={192}
                   className="w-full h-48 object-contain rounded-4xl bg-gray-50 shadow-inner transition-all duration-300"
                   alt={service.title}
+                  loading="lazy"
                 />
               </div>
               <div className="space-y-3 px-3">

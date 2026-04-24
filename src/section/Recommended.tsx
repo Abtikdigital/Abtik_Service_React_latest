@@ -144,7 +144,10 @@ const Recommended = () => {
             <img
               src={data?.img}
               alt={data?.title}
-              className="w-full rounded-t-3xl"
+              width={400}
+              height={240}
+              loading="lazy"
+              className="w-full rounded-t-3xl aspect-[5/3] object-cover"
             />
             <h2
               className="text-xl font-2 text-[#3CA2E2] font-semibold text-center line-clamp-2 font-4"
