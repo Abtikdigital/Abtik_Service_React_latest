@@ -320,12 +320,9 @@ const SeedFund = () => {
         Get in Touch
        </h3>
        <div className="space-y-4">
-        <a
-         href=""
-         target="_blank"
-         rel="noopener noreferrer"
-         className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
-         aria-label="Visit us at 123 Business Hub, New Delhi, India"
+        <div
+         className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition cursor-default"
+         aria-label="Visit us at Abtik Startup Advisor pvt ltd Team"
         >
          <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
           <User className="w-5 h-5 text-white" />
@@ -339,10 +336,9 @@ const SeedFund = () => {
            <br />
           </p>
          </div>
-        </a>
-        <a
-         href="tel:+91 89281 38434"
-         className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
+        </div>
+        <div
+         className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition cursor-default"
          aria-label="Call us at +91 89281 38434"
         >
          <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
@@ -353,13 +349,12 @@ const SeedFund = () => {
            Call Anytime
           </p>
           <p className="text-xs text-gray-600 font-3">
-           <a href="tel:+91 89281 38434">+91 89281 38434</a>
+           <a href="tel:+91 89281 38434" className="hover:underline">+91 89281 38434</a>
           </p>
          </div>
-        </a>
-        <a
-         href="mailto:info@abtikservices.com"
-         className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition"
+        </div>
+        <div
+         className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-lg transition cursor-default"
          aria-label="Email us at info@abtikservices.com"
         >
          <span className="bg-gradient-to-r from-[#052EAA] to-[#3CA2E2] p-3 rounded-full">
@@ -370,12 +365,12 @@ const SeedFund = () => {
            Write Email
           </p>
           <p className="text-xs text-gray-600 font-3">
-           <a href="mailto:info@abtikservices.com">
+           <a href="mailto:info@abtikservices.com" className="hover:underline">
             info@abtikservices.com
            </a>
           </p>
          </div>
-        </a>
+        </div>
        </div>
       </motion.div>
       <motion.div
