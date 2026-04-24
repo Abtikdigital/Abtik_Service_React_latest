@@ -133,18 +133,17 @@ const Home = () => {
             text-center lg:text-left"
           >
             <h1
-             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 
-              font-bold leading-tight sm:leading-tight md:leading-tight lg:leading-tight
-              text-white lg:text-inherit tracking-wide
-              main-heading font-1"
- 
-           >
-             Your One Stop{" "}
-             <span className="text-[#3CA2E2] font-extrabold block sm:inline">
-               Solution
-             </span>{" "}
-             for all Business Needs
-           </h1>
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 
+               font-bold leading-tight sm:leading-tight md:leading-tight lg:leading-tight
+               text-white lg:text-inherit tracking-wide
+               main-heading font-1"
+            >
+              Your One Stop{" "}
+              <span className="text-[#3CA2E2] font-extrabold block sm:inline">
+                Solution
+              </span>{" "}
+              for MSME & Business Loan Consultancy in India
+            </h1>
             <p
               className="text-sm sm:text-base md:text-lg lg:text-xl
              leading-relaxed sm:leading-relaxed md:leading-relaxed

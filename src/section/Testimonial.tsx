@@ -459,7 +459,9 @@ const TestimonialMarquee: React.FC = () => {
               }}
             >
               {marqueeTestimonials.map((testimonial, idx) => (
-                <Card testimonial={testimonial} key={`d-${idx}-${testimonial.name}`} />
+                <div key={`d-${idx}-${testimonial.name}`} aria-hidden={idx >= testimonials.length ? "true" : undefined}>
+                  <Card testimonial={testimonial} />
+                </div>
               ))}
             </div>
           </div>

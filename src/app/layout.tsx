@@ -33,6 +33,7 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: "/Favicon.png",
+    apple: "/Favicon.png",
   },
 };
 
