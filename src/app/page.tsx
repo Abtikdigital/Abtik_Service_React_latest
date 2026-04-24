@@ -12,5 +12,42 @@ export const metadata: Metadata = {
 const PageComponent = dynamic(() => import('@/components/pages_legacy/Home'));
 
 export default function Page() {
-  return <PageComponent />;
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "FinancialService",
+      "name": "Abtik Startup Advisor Pvt Ltd",
+      "description": "Leading MSME & Business Loan Consultancy in India. Expert support for Startup India registration, FSSAI, and government grants.",
+      "url": "https://abtikservices.com",
+      "telephone": "+918928138434",
+      "email": "info@abtikservices.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "IN"
+      },
+      "areaServed": "IN"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Abtik",
+      "url": "https://abtikservices.com",
+      "logo": "https://abtikservices.com/assets/Logo/LogoWithoutBelowContent.png",
+      "sameAs": [
+        "https://www.facebook.com/abtikservices",
+        "https://www.instagram.com/abtikservices",
+        "https://www.linkedin.com/company/abtikservices"
+      ]
+    }
+  ];
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <PageComponent />
+    </>
+  );
 }

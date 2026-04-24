@@ -664,11 +664,11 @@ const NBFC = () => {
           transition={{ duration: 0.5 }}
           className="bg-[#f7f7f7] py-8 md:py-16 space-y-6"
         >
-          <h1 className="sub-heading font-3 bg-gradient-to-t text-center bg-clip-text from-[#3CA2E2] to-[#052EAA] text-transparent"
+          <h2 className="sub-heading font-3 bg-gradient-to-t text-center bg-clip-text from-[#3CA2E2] to-[#052EAA] text-transparent"
             
           >
             Frequently Asked Questions
-          </h1>
+          </h2>
           <div
             className="px-6 md:px-24 space-y-4 font-3"
            
