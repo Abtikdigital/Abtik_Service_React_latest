@@ -116,20 +116,20 @@ const Footer = () => {
             <div className="space-y-3">
               <h2 className="heading">Company</h2>
               <ul className="flex flex-col space-y-3">
-                <Link  href={"/"}
+              <Link  href={"/"}
                   className="text-sm text-[#4D4D4D] font-semibold hover:underline hover:text-gray-950 cursor-pointer duration-300"
                 >
-                  Home
+                  Homepage
                 </Link>
                 <Link  href={"/about"}
                   className="text-sm font-semibold text-[#4D4D4D] hover:underline hover:text-gray-950 cursor-pointer duration-300"
                 >
-                  About
+                  About Us
                 </Link>
                 <Link  href={"/contact"}
                   className="text-sm font-semibold text-[#4D4D4D] hover:underline hover:text-gray-950 cursor-pointer duration-300"
                 >
-                  Contact
+                  Contact Abtik
                 </Link>
               </ul>
             </div>
@@ -140,37 +140,37 @@ const Footer = () => {
                 <Link  href={"/services/funding/grants"}
                   className="text-sm font-semibold text-[#4D4D4D] hover:underline hover:text-gray-950 cursor-pointer duration-300"
                 >
-                  Grants
+                  Government Grants
                 </Link>
                 <Link  href={"/services/certificate/startup-india"}
                   className="text-sm font-semibold text-[#4D4D4D] hover:underline hover:text-gray-950 cursor-pointer duration-300"
                 >
-                  StartUp India Certificate
+                  Startup India Certification
                 </Link>
                 <Link  href={"/services/certificate/msme"}
                   className="text-sm font-semibold text-[#4D4D4D] hover:underline hover:text-gray-950 cursor-pointer duration-300"
                 >
-                  Msme Certificate
+                  MSME Certificate Registration
                 </Link>
                 <Link  href={"/services/funding/seed-fund"}
                   className="text-sm font-semibold text-[#4D4D4D] hover:underline hover:text-gray-950 cursor-pointer duration-300"
                 >
-                  Seed Fund
+                  Startup Seed Funding
                 </Link>
                 <Link  href={"/services/legal/trademark-registration"}
                   className="text-sm font-semibold text-[#4D4D4D] hover:underline hover:text-gray-950 cursor-pointer duration-300"
                 >
-                  Trade Mark Registration
+                  Trademark Registration Service
                 </Link>
                 <Link  href={"/services/certificate/iso"}
                   className="text-sm font-semibold text-[#4D4D4D] hover:underline hover:text-gray-950 cursor-pointer duration-300"
                 >
-                  ISO Certificate
+                  ISO Certification
                 </Link>
                 <Link  href={"/services/certificate/zed"}
                   className="text-sm font-semibold  text-[#4D4D4D] hover:underline hover:text-gray-950 cursor-pointer duration-300"
                 >
-                  ZED Certificate
+                  ZED Certification
                 </Link>
               </ul>
             </div>

@@ -3,6 +3,7 @@ import "./globals.css";
 import { Inter, Bricolage_Grotesque } from "next/font/google";
 import { Providers } from "./providers";
 import Script from "next/script";
+import { headers } from "next/headers";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -14,28 +15,35 @@ const bricolage = Bricolage_Grotesque({
   variable: "--font-bricolage",
 });
 
-export const metadata: Metadata = {
-  title: "Abtik Startup Advisor pvt ltd | Business & MSME Loan Consultancy",
-  description: "Get expert help on MSME loans, short-term capital, and government funding—trusted by 50,000+ businesses across India.",
-  metadataBase: new URL("https://abtikservices.com/"),
-  openGraph: {
-    type: "website",
-    url: "https://abtikservices.com/",
+export async function generateMetadata(): Promise<Metadata> {
+  const headersList = await headers();
+  const host = headersList.get("host") || "abtikservices.com";
+  const protocol = host.includes("localhost") ? "http" : "https";
+  const baseUrl = `${protocol}://${host}`;
+
+  return {
     title: "Abtik Startup Advisor pvt ltd | Business & MSME Loan Consultancy",
     description: "Get expert help on MSME loans, short-term capital, and government funding—trusted by 50,000+ businesses across India.",
-    images: ["/logo.png"],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Abtik Startup Advisor pvt ltd | Business & MSME Loan Consultancy",
-    description: "Get expert help on MSME loans, short-term capital, and government funding—trusted by 50,000+ businesses across India.",
-    images: ["/logo.png"],
-  },
-  icons: {
-    icon: "/Favicon.png",
-    apple: "/Favicon.png",
-  },
-};
+    metadataBase: new URL(baseUrl),
+    openGraph: {
+      type: "website",
+      url: baseUrl,
+      title: "Abtik Startup Advisor pvt ltd | Business & MSME Loan Consultancy",
+      description: "Get expert help on MSME loans, short-term capital, and government funding—trusted by 50,000+ businesses across India.",
+      images: [`${baseUrl}/logo.png`],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Abtik Startup Advisor pvt ltd | Business & MSME Loan Consultancy",
+      description: "Get expert help on MSME loans, short-term capital, and government funding—trusted by 50,000+ businesses across India.",
+      images: [`${baseUrl}/logo.png`],
+    },
+    icons: {
+      icon: "/Favicon.png",
+      apple: "/Favicon.png",
+    },
+  };
+}
 
 import ScrollToUp from "@/section/ScrollToUp";
 

@@ -1,13 +1,21 @@
 import { Metadata } from "next";
 import dynamic from 'next/dynamic';
+import { headers } from "next/headers";
 
-export const metadata: Metadata = {
-  title: "MSME & Business Loan Consultancy in India | Abtik",
-  description: "Expert MSME & business loan consultancy in India. Get support for Startup India, FSSAI, and government grants. Apply now for financial growth!",
-  alternates: {
-    canonical: "https://abtikservices.com/",
-  },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const headersList = await headers();
+  const host = headersList.get("host") || "abtikservices.com";
+  const protocol = host.includes("localhost") ? "http" : "https";
+  const canonicalUrl = `${protocol}://${host}/`;
+
+  return {
+    title: "MSME & Business Loan Consultancy in India | Abtik",
+    description: "Expert MSME & business loan consultancy in India. Get support for Startup India, FSSAI, and government grants. Apply now for financial growth!",
+    alternates: {
+      canonical: canonicalUrl,
+    },
+  };
+}
 
 const PageComponent = dynamic(() => import('@/components/pages_legacy/Home'));
 

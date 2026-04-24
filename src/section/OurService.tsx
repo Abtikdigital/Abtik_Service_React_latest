@@ -31,7 +31,7 @@ const services = [
     path: "/services/certificate/startup-india",
   },
   {
-    title: "MSME Certificate",
+    title: "MSME Certificate Registration",
     description:
       "Register as an MSME to access subsidies, priority loans, and various government schemes that support small business growth effectively.",
     img: Image3.src,
@@ -94,7 +94,7 @@ const services = [
     path: "/services/funding/agriculture/naiff-aiff",
   },
   {
-    title: "NBFC Loan",
+    title: "NBFC Business Loan",
     description:
       "Secure business funding through Non-Banking Financial Companies (NBFCs) with faster processing and customized loan options for your unique requirements.",
     img: Image12.src,
@@ -178,9 +178,9 @@ const OurService = () => {
                 />
               </div>
               <div className="space-y-3 px-3">
-                <h2 className="text-center text-xl text-[#3CA2E2] font-semibold font-4 line-clamp-2">
+                <p className="text-center text-xl text-[#3CA2E2] font-semibold font-4 line-clamp-2">
                   {service?.title}
-                </h2>
+                </p>
                 <p className="text-center paragraph line-clamp-3 font-4">
                   {service?.description}
                 </p>

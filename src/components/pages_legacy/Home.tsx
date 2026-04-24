@@ -151,9 +151,10 @@ const Home = () => {
              paragraph !text-white
              max-w-none sm:max-w-lg md:max-w-xl lg:max-w-none mx-auto lg:mx-0 font-2"
             >
-              Empowering Businesses through Comprehensive Solutions From Fund
-              Management to Legal Compliance, We've Got You Covered at Abtik
-              Startup Advisor pvt ltd
+              Abtik Startup Advisor pvt ltd is your one stop solution for MSME
+              and business loan consultancy in India. We empower businesses
+              through comprehensive solutions from fund management to legal
+              compliance, helping you grow with confidence.
             </p>
             <div className="pt-2 sm:pt-4">
               <button

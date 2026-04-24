@@ -2,6 +2,20 @@
   command = "npm run build"
   publish = ".next"
 
+# Force non-www for custom domain
+[[redirects]]
+  from = "https://www.abtikservices.com/*"
+  to = "https://abtikservices.com/:splat"
+  status = 301
+  force = true
+
+# Force non-www for Netlify deploy URL
+[[redirects]]
+  from = "https://www.exquisite-pixie-f377e3.netlify.app/*"
+  to = "https://exquisite-pixie-f377e3.netlify.app/:splat"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "/stratup-india-registration/"
   to = "/startup-india-registration"

@@ -84,9 +84,9 @@ const BlogSection = () => {
                 className="w-full h-full object-cover cursor-pointer hover:scale-105 duration-300"
               />
             </div>
-            <h2 className="text-xl text-[#3CA2E2] font-semibold line-clamp-1 font-4">
+            <p className="text-xl text-[#3CA2E2] font-semibold line-clamp-1 font-4">
               {blog?.title}
-            </h2>
+            </p>
             <p className="paragraph line-clamp-1 font-4">
               {blog?.cardDescription ?? blog?.description}
             </p>

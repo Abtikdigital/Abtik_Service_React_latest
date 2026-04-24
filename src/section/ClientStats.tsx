@@ -57,13 +57,13 @@ const ClientStats = () => {
             variants={numberVariants}
             className="text-center min-w-[120px] flex-1  "
           >
-            <h2 className="text-xl sm:text-2xl md:text-3xl text-[#052EAA] font-bold">
+            <p className="text-xl sm:text-2xl md:text-3xl text-[#052EAA] font-bold">
               <CountUp end={stat.value} />
               {stat.suffix}
-            </h2>
-            <h3 className="text-lg sm:text-xl md:text-2xl text-[#052EAA] font-semibold mt-1">
+            </p>
+            <p className="text-lg sm:text-xl md:text-2xl text-[#052EAA] font-semibold mt-1">
               {stat.label}
-            </h3>
+            </p>
           </motion.div>
         ))}
       </div>

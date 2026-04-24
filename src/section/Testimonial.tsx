@@ -416,9 +416,6 @@ const TestimonialMarquee: React.FC = () => {
     };
   }, [isMobile]);
 
-  // Desktop duplicates for marquee
-  const marqueeTestimonials = [...testimonials, ...testimonials];
-
   return (
     <section className="flex flex-col items-center py-8 bg-[#f7f7f7] w-full min-h-[340px]">
       <div className="w-full max-w-[1920px] mx-auto flex flex-col items-center space-y-8">
@@ -426,70 +423,28 @@ const TestimonialMarquee: React.FC = () => {
           Testimonials
         </h2>
 
-        {isMobile ? (
-          // Mobile: snapping + card-by-card
-          <div
-            ref={wrapperRef}
-            className="relative w-full overflow-x-auto overflow-y-hidden flex"
-            style={{
-              WebkitOverflowScrolling: "touch",
-              scrollbarWidth: "none",
-              msOverflowStyle: "none",
-              scrollSnapType: "x mandatory",
-            }}
-          >
-            {testimonials.map((testimonial, idx) => (
-              <Card testimonial={testimonial} key={`m-${idx}`} />
-            ))}
-          </div>
-        ) : (
-          // Desktop: continuous marquee with hover pause
-          <div className="relative w-full overflow-hidden">
-            <div
-              className="flex items-center testimonial-marquee"
-              style={{
-                animation: "testimonial-marquee-keyframes 38s linear infinite",
-                animationDirection: "reverse",
-              }}
-              onMouseEnter={(e) => {
-                (e.currentTarget as HTMLDivElement).style.animationPlayState = "paused";
-              }}
-              onMouseLeave={(e) => {
-                (e.currentTarget as HTMLDivElement).style.animationPlayState = "running";
-              }}
-            >
-              {marqueeTestimonials.map((testimonial, idx) => (
-                <div key={`d-${idx}-${testimonial.name}`} aria-hidden={idx >= testimonials.length ? "true" : undefined}>
-                  <Card testimonial={testimonial} />
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
+        <div
+          ref={wrapperRef}
+          className="relative w-full overflow-x-auto overflow-y-hidden flex"
+          style={{
+            WebkitOverflowScrolling: "touch",
+            scrollbarWidth: "none",
+            msOverflowStyle: "none",
+            scrollSnapType: "x mandatory",
+          }}
+        >
+          {testimonials.map((testimonial, idx) => (
+            <Card testimonial={testimonial} key={`t-${idx}`} />
+          ))}
+        </div>
       </div>
 
-      {/* Keep the style tag content as a single template literal */}
       <style>{`
-        @keyframes testimonial-marquee-keyframes {
-          0%   { transform: translateX(0%); }
-          100% { transform: translateX(-50%); }
-        }
-        .testimonial-marquee { will-change: transform; }
-
-        /* Hide scrollbars but allow scrolling on mobile container */
-     
         .line-clamp-6 {
           display: -webkit-box;
           -webkit-line-clamp: 6;
           -webkit-box-orient: vertical;
           overflow: hidden;
-        }
-
-        /* Optional: slower on small screens if desktop is visible for any reason */
-        @media (max-width: 640px) {
-          .testimonial-marquee {
-            animation-duration: 68s !important;
-          }
         }
       `}</style>
     </section>

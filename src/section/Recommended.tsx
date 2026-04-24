@@ -64,7 +64,7 @@ const recommendedData = [
     path: "/services/tax/gst-filing",
   },
   {
-    title: "MSME Certificate",
+    title: "MSME Certificate Registration",
     img: Image8.src,
     description:
       "MSME Certificate is a government issued proof that your business is registered as a Micro, Small, or Medium Enterprise in India.",
@@ -149,12 +149,9 @@ const Recommended = () => {
               loading="lazy"
               className="w-full rounded-t-3xl aspect-[5/3] object-cover"
             />
-            <h2
-              className="text-xl font-2 text-[#3CA2E2] font-semibold text-center line-clamp-2 font-4"
-            
-            >
+            <p className="text-xl font-2 text-[#3CA2E2] font-semibold text-center line-clamp-2 font-4">
               {data?.title}
-            </h2>
+            </p>
             <p className="paragraph font-3 text-center line-clamp-3 font-4 px-3 ">
               {data?.description}
             </p>
