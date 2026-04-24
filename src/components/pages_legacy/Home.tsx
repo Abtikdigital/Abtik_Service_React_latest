@@ -1,5 +1,6 @@
 "use client";
 import BgImage from "../../assets/Hero/bgImg.svg";
+import Image from "next/image";
 import ClientStats from "../../section/ClientStats";
 import Contact from "../../section/Contact";
 import FaqSection from "../../section/FaqSection";
@@ -109,18 +110,19 @@ const Home = () => {
         {/* Hero Section */}
         <section
           ref={refHero}
-          className="flex justify-center items-center h-[70vh] sm:h-[80vh] lg:h-[85vh] xl:h-[80vh] 2xl:h-[75vh]
-          lg:justify-end lg:items-center bg-center bg-cover 
+          className="relative flex justify-center items-center h-[70vh] sm:h-[80vh] lg:h-[85vh] xl:h-[80vh] 2xl:h-[75vh]
+          lg:justify-end lg:items-center
           w-full max-w-[1920px] mx-auto
           px-4 sm:px-6 md:px-8 lg:px-12 xl:px-14
-          relative overflow-hidden"
-          style={{
-            backgroundImage: `url(${ BgImage.src })`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-          }}
+          overflow-hidden bg-[#052EAA]"
         >
+          <Image
+            src={BgImage}
+            alt="Abtik Hero Background"
+            fill
+            className="object-cover object-center -z-0"
+            priority
+          />
           {/* Overlay for better text readability on tablets */}
           <div className="absolute inset-0 bg-black/20 lg:bg-transparent"></div>
 

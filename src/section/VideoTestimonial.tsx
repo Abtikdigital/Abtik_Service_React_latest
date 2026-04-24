@@ -34,7 +34,7 @@ const VIDEOS_PER_PAGE = 3;
 // Sequential progress now handles autoplay one-by-one.
 
 const PlayIcon = () => (
-  <svg width="30" height="30" fill="white" viewBox="0 0 24 24" style={{ marginLeft: 4 }}>
+  <svg width="30" height="30" fill="white" viewBox="0 0 24 24" className="ml-1">
     <polygon points="5,3 19,12 5,21" />
   </svg>
 );
