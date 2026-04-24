@@ -12,14 +12,20 @@ const BlogSection = () => {
 
   // Responsive cols: 1 / 2 / 3 / 4 (same pattern as OurService & Recommended)
   const getCols = () => {
+    if (typeof window === 'undefined') return 1;
     const width = window.innerWidth;
     if (width >= 1280) return 4;
     else if (width >= 1024) return 3;
     else if (width >= 768) return 2;
     return 1;
   };
-  const [cols, setCols] = useState(getCols());
+
+  const [cols, setCols] = useState(1); // Default to 1 for SSR
   const [rows, setRows] = useState(1);
+
+  useEffect(() => {
+    setCols(getCols());
+  }, []);
 
   // Update cols on resize, and ensure correct visible blogs if cols change
   useEffect(() => {

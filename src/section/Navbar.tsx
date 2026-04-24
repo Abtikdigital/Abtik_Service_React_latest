@@ -638,7 +638,7 @@ const DesktopNavbar = ({ setOpen }: any) => {
     <div className="hidden xl:block w-full max-w-[1920px] mx-auto px-4 lg:px-8 xl:px-14 py-2">
       <div className="flex items-center justify-between">
         <div className="flex-shrink-0">
-          <img src={Logo} alt="Logo" className="h-12 lg:h-14" />
+          <img src={Logo.src} alt="Logo" className="h-12 lg:h-14" />
         </div>
 
         <div ref={menuWrapperRef}>
@@ -810,36 +810,58 @@ const DesktopNavbar = ({ setOpen }: any) => {
                                             : undefined
                                         }
                                       >
-                                        <Link  href={subItem.path}
-                                          className={`flex items-center justify-between text-xs font-normal p-3 rounded-lg transition-all duration-300 transform hover:scale-[1.02] min-h-[50px] group ${
-                                            pathname === subItem.path
-                                              ? "bg-[#e8f3ff] text-[#010574] shadow-sm"
-                                              : "bg-gray-50 hover:bg-[#e0f0ff] hover:text-[#010574] text-gray-800 hover:shadow-sm"
-                                          }`}
-                                        >
-                                          <div className="flex-1">
-                                            <span
-                                              className={`block text-sm font-medium leading-tight ${
-                                                pathname ===
-                                                subItem.path
-                                                  ? "font-semibold text-[#010574]"
-                                                  : "text-gray-900"
-                                              }`}
-                                            >
-                                              {subItem.name}
-                                            </span>
-                                            <p className="text-xs text-gray-500 mt-1 leading-relaxed">
-                                              {subItem.description ||
-                                                "Professional services"}
-                                            </p>
+                                        {subItem.path ? (
+                                          <Link  href={subItem.path}
+                                            className={`flex items-center justify-between text-xs font-normal p-3 rounded-lg transition-all duration-300 transform hover:scale-[1.02] min-h-[50px] group ${
+                                              pathname === subItem.path
+                                                ? "bg-[#e8f3ff] text-[#010574] shadow-sm"
+                                                : "bg-gray-50 hover:bg-[#e0f0ff] hover:text-[#010574] text-gray-800 hover:shadow-sm"
+                                            }`}
+                                          >
+                                            <div className="flex-1">
+                                              <span
+                                                className={`block text-sm font-medium leading-tight ${
+                                                  pathname ===
+                                                  subItem.path
+                                                    ? "font-semibold text-[#010574]"
+                                                    : "text-gray-900"
+                                                }`}
+                                              >
+                                                {subItem.name}
+                                              </span>
+                                              <p className="text-xs text-gray-500 mt-1 leading-relaxed">
+                                                {subItem.description ||
+                                                  "Professional services"}
+                                              </p>
+                                            </div>
+                                            {subItem.subServices && (
+                                              <ChevronRight
+                                                size={14}
+                                                className="ml-2 text-gray-400 group-hover:text-[#010574] transition-colors flex-shrink-0"
+                                              />
+                                            )}
+                                          </Link>
+                                        ) : (
+                                          <div
+                                            className={`flex items-center justify-between text-xs font-normal p-3 rounded-lg transition-all duration-300 transform min-h-[50px] group bg-gray-50 text-gray-800`}
+                                          >
+                                            <div className="flex-1">
+                                              <span className="block text-sm font-medium leading-tight text-gray-900">
+                                                {subItem.name}
+                                              </span>
+                                              <p className="text-xs text-gray-500 mt-1 leading-relaxed">
+                                                {subItem.description ||
+                                                  "Professional services"}
+                                              </p>
+                                            </div>
+                                            {subItem.subServices && (
+                                              <ChevronRight
+                                                size={14}
+                                                className="ml-2 text-gray-400 group-hover:text-[#010574] transition-colors flex-shrink-0"
+                                              />
+                                            )}
                                           </div>
-                                          {subItem.subServices && (
-                                            <ChevronRight
-                                              size={14}
-                                              className="ml-2 text-gray-400 group-hover:text-[#010574] transition-colors flex-shrink-0"
-                                            />
-                                          )}
-                                        </Link>
+                                        )}
 
                                         {subItem.subServices &&
                                           hoveredService ===
@@ -1039,7 +1061,7 @@ const MobileNavbar = ({ onOpenSearch }: { onOpenSearch: () => void }) => {
     <>
       <div className="xl:hidden relative bg-white">
         <div className="w-full max-w-[1920px] mx-auto py-3 flex px-4 h-18 lg:h-20 items-center justify-between">
-          <img src={Logo} alt="Logo" className="h-10 lg:h-12" />
+          <img src={Logo.src} alt="Logo" className="h-10 lg:h-12" />
           <div className="flex items-center gap-2">
             <button
               type="button"
@@ -1124,12 +1146,18 @@ const MobileNavbar = ({ onOpenSearch }: { onOpenSearch: () => void }) => {
                                                 {subItem.name}
                                               </button>
                                             ) : (
-                                              <Link  href={subItem?.path}
+                                            subItem.path ? (
+                                              <Link  href={subItem.path}
                                                 onClick={toggleMobileView}
                                                 className="flex-1 hover:text-[#010574] transition py-2 px-3 lg:px-4 rounded-md hover:bg-[#f5f5f5] text-[#6B7280]"
                                               >
                                                 {subItem.name}
                                               </Link>
+                                            ) : (
+                                              <span className="flex-1 transition py-2 px-3 lg:px-4 rounded-md text-[#6B7280]">
+                                                {subItem.name}
+                                              </span>
+                                            )
                                             )}
                                             {subItem.subServices && (
                                               <button

@@ -15,7 +15,7 @@ import { useNavigate } from "@/utils/hooks/useNavigate";;
 const recommendedData = [
   {
     title: "Start Up India Registration",
-    img: Image1,
+    img: Image1.src,
     description:
       "A DPIIT recognized government program that enables eligible startups to access tax exemptions, self certification, and other incentives for rapid growth and compliance.",
 
@@ -23,49 +23,49 @@ const recommendedData = [
   },
   {
     title: "Seed Fund Scheme",
-    img: Image2,
+    img: Image2.src,
     description:
       "An initiative under Startup India that provides early stage funding through government approved incubators. It helps promising startups access vital capital to scale.",
     path: "/services/funding/seed-fund",
   },
   {
     title: "Msme Loans",
-    img: Image3,
+    img: Image3.src,
     description:
       "Loans provided to Micro, Small, and Medium Enterprises under various central and state government schemes. These help businesses grow and maintain healthy cash flow.",
     path: "/services/funding/msme-loans",
   },
   {
     title: "NBFC Loan",
-    img: Image4,
+    img: Image4.src,
     description:
       "Loans provided by Non Banking Financial Companies with simplified documentation and eligibility. These are tailored for startups and growing enterprises.",
     path: "/services/funding/private-funding/nbfc",
   },
   {
     title: "PMEGP Loan",
-    img: Image5,
+    img: Image5.src,
     description:
       "A credit linked subsidy scheme by the Government of India that supports new micro enterprises in the manufacturing or service sectors, including interest subsidies.",
     path: "/services/funding/subsidy/pmegp",
   },
   {
     title: "NAIIF Loan",
-    img: Image6,
+    img: Image6.src,
     description:
       "Equity based funding made available through SEBI registered Alternative Investment Funds (AIFs) under the National Alternative Investment and Infrastructure Fund (NAIIF).",
     path: "/services/funding/agriculture/naiff-aiff",
   },
   {
     title: "GST & Tax Compliance",
-    img: Image7,
+    img: Image7.src,
     description:
       "GST registration, monthly and annual return filings, income tax filing, TDS management, and audit preparation. Ensures your business always stays compliant.",
     path: "/services/tax/gst-filing",
   },
   {
     title: "MSME Certificate",
-    img: Image8,
+    img: Image8.src,
     description:
       "MSME Certificate is a government issued proof that your business is registered as a Micro, Small, or Medium Enterprise in India.",
     path: "/services/certificate/msme",
@@ -75,6 +75,7 @@ const recommendedData = [
 const Recommended = () => {
   // Responsive cols (xl:4, lg:3, md:2, sm:1)
   const getCols = () => {
+    if (typeof window === 'undefined') return 1;
     const width = window.innerWidth;
     if (width >= 1280) return 4;
     else if (width >= 1024) return 3;
@@ -82,8 +83,12 @@ const Recommended = () => {
     return 1;
   };
 
-  const [cols, setCols] = useState(getCols());
+  const [cols, setCols] = useState(1);
   const [visibleCount, setVisibleCount] = useState(4);
+
+  useEffect(() => {
+    setCols(getCols());
+  }, []);
 
   // Listen for screen resize & update cols (for animation delays)
   useEffect(() => {

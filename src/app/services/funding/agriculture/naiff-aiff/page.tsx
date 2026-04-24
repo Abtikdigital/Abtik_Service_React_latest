@@ -1,14 +1,8 @@
+"use client";
 
-import type { Metadata } from "next";
-import seoData from "@/data/seoData.json";
+import dynamic from 'next/dynamic';
 
-export const metadata: Metadata = {
-  title: seoData.naiff_aiffService.title,
-  description: seoData.naiff_aiffService.description,
-  keywords: seoData.naiff_aiffService.keyword,
-};
-
-import PageComponent from "@/pages/NAIFF_AIFFService";
+const PageComponent = dynamic(() => import('@/components/pages_legacy/NAIFF_AIFFService'));
 
 export default function Page() {
   return <PageComponent />;

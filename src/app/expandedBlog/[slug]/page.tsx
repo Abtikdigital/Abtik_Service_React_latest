@@ -1,4 +1,8 @@
-import PageComponent from "@/pages/ExpandedBlog";
+"use client";
+
+import dynamic from 'next/dynamic';
+
+const PageComponent = dynamic(() => import('@/components/pages_legacy/ExpandedBlog'));
 
 export default function Page() {
   return <PageComponent />;

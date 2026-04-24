@@ -1,14 +1,17 @@
-
-import type { Metadata } from "next";
-import seoData from "@/data/seoData.json";
+import { Metadata } from "next";
+import dynamic from 'next/dynamic';
 
 export const metadata: Metadata = {
-  title: seoData.contactPage.title,
-  description: seoData.contactPage.description,
-  keywords: seoData.contactPage.keyword,
+  title: "Apply for Business Loans with Abtik – Contact Us Today",
+  description: "Need fast and reliable funding? Reach out to Abtik for MSME loans, startup support, and capital guidance tailored to you.",
+  keywords: "Abtik Startup Advisor pvt ltd",
+  alternates: {
+    canonical: "https://abtikservices.com/contact",
+  },
+  robots: "index, follow",
 };
 
-import PageComponent from "@/pages/Contact";
+const PageComponent = dynamic(() => import('@/components/pages_legacy/Contact'));
 
 export default function Page() {
   return <PageComponent />;

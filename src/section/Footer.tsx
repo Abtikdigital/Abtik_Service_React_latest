@@ -19,7 +19,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 lg:grid-cols-4 font-3 space-y-5 px-7 md:px-14 py-6 md:py-10 w-full max-w-[1920px] mx-auto">
           <div className="space-y-5">
             <div>
-              <OptimizedImage src={Logo} alt="Abtik Startup Advisor pvt ltd" width={160} height={56} className="h-14 w-auto" />
+              <OptimizedImage src={Logo.src} alt="Abtik Startup Advisor pvt ltd" width={160} height={56} className="h-14 w-auto" />
             </div>
             <h2 className="paragraph">
               © 2022 Abtik Startup Advisor pvt ltd - All rights reserved.

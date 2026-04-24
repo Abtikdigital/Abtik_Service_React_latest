@@ -1,14 +1,8 @@
+"use client";
 
-import type { Metadata } from "next";
-import seoData from "@/data/seoData.json";
+import dynamic from 'next/dynamic';
 
-export const metadata: Metadata = {
-  title: seoData.mudraloanService.title,
-  description: seoData.mudraloanService.description,
-  keywords: seoData.mudraloanService.keyword,
-};
-
-import PageComponent from "@/pages/MudraLoan";
+const PageComponent = dynamic(() => import('@/components/pages_legacy/MudraLoan'));
 
 export default function Page() {
   return <PageComponent />;

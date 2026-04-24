@@ -2,18 +2,19 @@
 import React, { useRef, useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-import Video1 from "../assets/ClientVideoTestimonials/Video1.mp4";
-import Video2 from "../assets/ClientVideoTestimonials/Video2.mp4";
-import Video3 from "../assets/ClientVideoTestimonials/Video3.mp4";
-import Video4 from "../assets/ClientVideoTestimonials/Video4.mp4";
-import Video5 from "../assets/ClientVideoTestimonials/Video5.mp4";
+const Video1 = "/assets/ClientVideoTestimonials/Video1.mp4";
+const Video2 = "/assets/ClientVideoTestimonials/Video2.mp4";
+const Video3 = "/assets/ClientVideoTestimonials/Video3.mp4";
+const Video4 = "/assets/ClientVideoTestimonials/Video4.mp4";
+const Video5 = "/assets/ClientVideoTestimonials/Video5.mp4";
 
 // New Testimonials
-import NewVideo1 from "../assets/Video/At Abtik Services  Hyperspace Technologies, Sucess Story (1).mp4";
-import NewVideo2 from "../assets/Video/At Abtik Services  Sai Diagnostic, Success Story.mp4";
-import NewVideo3 from "../assets/Video/At Abtik Services Precast india connections private limited Sucess (1).mp4";
-import NewVideo4 from "../assets/Video/Client Sucess Of Bharat Capital (1).mp4";
-import NewVideo5 from "../assets/Video/From Vision to Reality_ Meet Mr.Rajan Sharma Founder of Infinito Comics Pvt Ltd with Abtik Services. (1).mp4";
+const NewVideo1 = "/assets/Video/At Abtik Services  Hyperspace Technologies, Sucess Story (1).mp4";
+const NewVideo2 = "/assets/Video/At Abtik Services  Sai Diagnostic, Success Story.mp4";
+const NewVideo3 = "/assets/Video/At Abtik Services Precast india connections private limited Sucess (1).mp4";
+const NewVideo4 = "/assets/Video/Client Sucess Of Bharat Capital (1).mp4";
+const NewVideo5 = "/assets/Video/From Vision to Reality_ Meet Mr.Rajan Sharma Founder of Infinito Comics Pvt Ltd with Abtik Services. (1).mp4";
+
 
 const videos = [
   { id: 1, src: Video1 },

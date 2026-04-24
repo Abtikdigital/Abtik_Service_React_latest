@@ -20,84 +20,84 @@ const services = [
     title: "Grants",
     description:
       "We assist in finding and applying for suitable government grants, ensuring your business receives deserved financial aid without any stress.",
-    img: Image1,
+    img: Image1.src,
     path: "/services/funding/grants",
   },
   {
     title: "Startup India Certificate",
     description:
       "Gain official startup recognition to access tax benefits, funding opportunities, and credibility via the Startup India initiative.",
-    img: Image2,
+    img: Image2.src,
     path: "/services/certificate/startup-india",
   },
   {
     title: "MSME Certificate",
     description:
       "Register as an MSME to access subsidies, priority loans, and various government schemes that support small business growth effectively.",
-    img: Image3,
+    img: Image3.src,
     path: "/services/certificate/msme",
   },
   {
     title: "Seed Fund",
     description:
       "We provide step by step guidance to secure government seed funding, helping your startup launch with reliable support from the beginning.",
-    img: Image4,
+    img: Image4.src,
     path: "/services/funding/seed-fund",
   },
   {
     title: "Trademark Registration",
     description:
       "Safeguard your brand name, logo, or tagline through trademark registration, ensuring your unique identity remains protected and exclusive.",
-    img: Image5,
+    img: Image5.src,
     path: "/services/legal/trademark-registration",
   },
   {
     title: "ISO Certificate",
     description:
       "Demonstrate quality commitment with ISO certification, which we help obtain to meet global standards and build trust in your operations.",
-    img: Image6,
+    img: Image6.src,
     path: "/services/certificate/iso",
   },
   {
     title: "ZED Certificate",
     description:
       "Obtain Zero Defect Zero Effect certification to ensure high quality, eco friendly practices aligned with recognized government standards.",
-    img: Image7,
+    img: Image7.src,
     path: "/services/certificate/zed",
   },
   {
     title: "PMEGP Loan Scheme",
     description:
       "Start your venture with up to ₹25 lakh via PMEGP, where we streamline applications for government loans and subsidies to ease the process.",
-    img: Image8,
+    img: Image8.src,
     path: "/services/funding/subsidy/pmegp",
   },
   {
     title: "GST & Compliance",
     description:
       "Streamline your tax processes with our comprehensive GST registration and compliance services, ensuring your business stays updated with legal requirements.",
-    img: Image9,
+    img: Image9.src,
     path: "/services/tax/gst-filing",
   },
   {
     title: "MSME Loan",
     description:
       "Fuel your small business growth with specialized MSME loans, offering competitive interest rates and flexible terms to meet your capital needs.",
-    img: Image10,
+    img: Image10.src,
     path: "/services/funding/msme-loans",
   },
   {
     title: "NAIFF/AIFF Loan",
     description:
       "Scale your innovative business with strategic equity investments and loans from NAIFF/AIFF funds, customized for growth-stage companies.",
-    img: Image11,
+    img: Image11.src,
     path: "/services/funding/agriculture/naiff-aiff",
   },
   {
     title: "NBFC Loan",
     description:
       "Secure business funding through Non-Banking Financial Companies (NBFCs) with faster processing and customized loan options for your unique requirements.",
-    img: Image12,
+    img: Image12.src,
     path: "/services/funding/private-funding/nbfc",
   },
 ];
@@ -105,23 +105,20 @@ const services = [
 const OurService = () => {
   const nav = useNavigate();
 
-  // Responsive column tracking (for grid and animation only)
-  const getCols = () => {
-    const width = window.innerWidth;
-    if (width >= 1280) return 4;
-    else if (width >= 1024) return 3;
-    else if (width >= 768) return 2;
-    return 1;
-  };
-
-  const [cols, setCols] = useState(getCols());
+  const [cols, setCols] = useState(4); // Default to 4 or some reasonable fallback
   const [visibleCount, setVisibleCount] = useState(4); // Start with 4 items
 
   // Update columns on resize (no need to adjust visibleCount)
   useEffect(() => {
     const updateCols = () => {
-      setCols(getCols());
+      const width = window.innerWidth;
+      if (width >= 1280) setCols(4);
+      else if (width >= 1024) setCols(3);
+      else if (width >= 768) setCols(2);
+      else setCols(1);
     };
+    
+    updateCols(); // Run once on mount
     window.addEventListener("resize", updateCols);
     return () => window.removeEventListener("resize", updateCols);
   }, []);

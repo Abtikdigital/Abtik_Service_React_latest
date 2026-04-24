@@ -1,14 +1,8 @@
+"use client";
 
-import type { Metadata } from "next";
-import seoData from "@/data/seoData.json";
+import dynamic from 'next/dynamic';
 
-export const metadata: Metadata = {
-  title: seoData.zedCertificateService.title,
-  description: seoData.zedCertificateService.description,
-  keywords: seoData.zedCertificateService.keyword,
-};
-
-import PageComponent from "@/pages/ZedCertificate";
+const PageComponent = dynamic(() => import('@/components/pages_legacy/ZedCertificate'));
 
 export default function Page() {
   return <PageComponent />;

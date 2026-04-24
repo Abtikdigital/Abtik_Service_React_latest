@@ -1,14 +1,8 @@
+"use client";
 
-import type { Metadata } from "next";
-import seoData from "@/data/seoData.json";
+import dynamic from 'next/dynamic';
 
-export const metadata: Metadata = {
-  title: seoData.agrisureService.title,
-  description: seoData.agrisureService.description,
-  keywords: seoData.agrisureService.keyword,
-};
-
-import PageComponent from "@/pages/AgrisureService";
+const PageComponent = dynamic(() => import('@/components/pages_legacy/AgrisureService'));
 
 export default function Page() {
   return <PageComponent />;

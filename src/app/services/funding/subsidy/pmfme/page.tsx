@@ -1,14 +1,8 @@
+"use client";
 
-import type { Metadata } from "next";
-import seoData from "@/data/seoData.json";
+import dynamic from 'next/dynamic';
 
-export const metadata: Metadata = {
-  title: seoData.pmfmeService.title,
-  description: seoData.pmfmeService.description,
-  keywords: seoData.pmfmeService.keyword,
-};
-
-import PageComponent from "@/pages/PMFMEService";
+const PageComponent = dynamic(() => import('@/components/pages_legacy/PMFMEService'));
 
 export default function Page() {
   return <PageComponent />;

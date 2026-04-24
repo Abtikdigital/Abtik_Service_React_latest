@@ -1,14 +1,8 @@
+"use client";
 
-import type { Metadata } from "next";
-import seoData from "@/data/seoData.json";
+import dynamic from 'next/dynamic';
 
-export const metadata: Metadata = {
-  title: seoData.patentfillingService.title,
-  description: seoData.patentfillingService.description,
-  keywords: seoData.patentfillingService.keyword,
-};
-
-import PageComponent from "@/pages/PatentFilingService";
+const PageComponent = dynamic(() => import('@/components/pages_legacy/PatentFilingService'));
 
 export default function Page() {
   return <PageComponent />;

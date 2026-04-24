@@ -1,4 +1,8 @@
-import PageComponent from "@/pages/FssaiLiecence";
+"use client";
+
+import dynamic from 'next/dynamic';
+
+const PageComponent = dynamic(() => import('@/components/pages_legacy/FssaiLiecence'));
 
 export default function Page() {
   return <PageComponent />;

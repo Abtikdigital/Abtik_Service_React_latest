@@ -1,6 +1,6 @@
 [build]
   command = "npm run build"
-  publish = "dist"
+  publish = ".next"
 
 [[redirects]]
   from = "/stratup-india-registration/"
@@ -42,10 +42,7 @@
   to = "/privacy-policy"
   status = 301
 
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+# Next.js handles its own routing, so we don't need the /* /index.html 200 fallback.
 
 [build.processing]
   skip_processing = false
@@ -63,6 +60,3 @@
 [build.processing.js]
   bundle = true
   minify = true
-
-[build.services]
-  prerender = true

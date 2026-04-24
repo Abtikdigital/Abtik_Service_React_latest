@@ -98,8 +98,8 @@ const resolveSeoConfig = (pathname: string) => {
 };
 
 const SeoSchema = () => {
-  const pathname = useLocation();
-  const pathname = pathname || "/";
+  const currentPath = useLocation();
+  const pathname = currentPath || "/";
 
   const seoConfig = resolveSeoConfig(pathname);
 

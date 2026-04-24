@@ -1,14 +1,8 @@
+"use client";
 
-import type { Metadata } from "next";
-import seoData from "@/data/seoData.json";
+import dynamic from 'next/dynamic';
 
-export const metadata: Metadata = {
-  title: seoData.droplineodService.title,
-  description: seoData.droplineodService.description,
-  keywords: seoData.droplineodService.keyword,
-};
-
-import PageComponent from "@/pages/DroplineOdService";
+const PageComponent = dynamic(() => import('@/components/pages_legacy/DroplineOdService'));
 
 export default function Page() {
   return <PageComponent />;

@@ -58,7 +58,7 @@ export const blogsData: BlogData[] = [
       "FSSAI registration/license is mandatory for all Food Business Operators. Learn about Basic, State, and Central licenses, the 14-digit FSSAI number, compliance requirements, and why it's critical for trust and market access.",
     description:
       "India's food industry is one of the fastest-growing sectors, driving the nation's economy. But here's the reality: in this competitive market, trust isn't optional; it's essential. Every Food Business Operator (FBO) is legally required to obtain FSSAI registration/license under the Food Safety and Standards Act, 2006. Whether you're launching a cloud kitchen, a packaged snack brand, or a food tech startup, your customers expect one thing above all: quality and safety. The FSSAI registration/license isn't just a piece of paper. It's a trust badge proof that your business cares about consumer health and operates with integrity.",
-    img: FssaiImg,
+    img: FssaiImg.src,
     slug: "Why-Every-Food-Business-Needs-FSSAI-License",
     date: "November 5, 2024",
     readTime: "8 min read",
@@ -149,7 +149,7 @@ export const blogsData: BlogData[] = [
       "Avoid penalties and cash-flow shocks with a 3-pillar GST, TDS, and annual compliance framework. Includes calendars, automation tips, and ROI of professional support.",
     description:
       "Are you losing sleep over tax deadlines and compliance issues? You’re not alone. Every year, thousands of MSMEs pay heavy penalties due to small filing errors, missed deadlines, and unplanned taxes — all completely avoidable with the right systems.",
-    img: TaxComplianceImg,
+    img: TaxComplianceImg.src,
     slug: "Tax-Compliance-Mastery-for-MSMEs",
     date: "October 31, 2025",
     readTime: "14 min read",
@@ -243,7 +243,7 @@ export const blogsData: BlogData[] = [
     showInNewBlogList: false,
     description:
       "Your business structure decision will impact every aspect of your venture for years to come – yet 70% of entrepreneurs choose without proper guidance. The difference between choosing the right and wrong structure can mean tax savings, liability protection, easier funding, and smoother expansion. This guide helps you choose the best incorporation for your business and avoid costly mistakes.",
-    img: BusinessRegistrationImg,
+    img: BusinessRegistrationImg.src,
     slug: "Business-Registration-Right-Structure-Guide",
     date: "October 31, 2025",
     readTime: "11 min read",
@@ -440,7 +440,7 @@ export const blogsData: BlogData[] = [
       "Did you know that having the right certificates and licenses can unlock benefits worth lakhs of rupees for your MSME? Yet, ",
     description:
       "Did you know that having the right certificates and licenses can unlock benefits worth lakhs of rupees for your MSME? Yet, 60% of Indian MSMEs operate without essential certifications, missing out on government schemes, tax benefits, easier loans, and market opportunities that could transform their business trajectory. If you're an MSME owner wondering which certificates matter for your business, this comprehensive guide will save you time, money, and unlock hidden opportunities you never knew existed.",
-    img: MsmeRoadmapImg,
+    img: MsmeRoadmapImg.src,
     slug: "the-msme-certificate-license-roadmap",
     date: "October 24, 2025",
     readTime: "14 min read",
@@ -632,7 +632,7 @@ export const blogsData: BlogData[] = [
       "Your brand name, logo, and innovative ideas are worth millions – but are they legally protected? Every day,",
     description:
       "Your brand name, logo, and innovative ideas are worth millions – but are they legally protected? Every day, Indian businesses lose crores of rupees due to trademark infringement and intellectual property theft. Yet, 80% of MSMEs operate without proper IP protection, unknowingly putting their most valuable assets at risk. If you've built a recognizable brand or developed innovative solutions, this article could save your business from costly legal battles and revenue loss.",
-    img: TrademarkIpImg,
+    img: TrademarkIpImg.src,
     slug: "Protecting-Your-Business-Assets-Trademark-IP-Guide-Indian-MSMEs",
     date: "October 15, 2025",
     readTime: "12 min read",
@@ -791,7 +791,7 @@ export const blogsData: BlogData[] = [
     cardDescription: "Are you an MSME owner struggling to secure the right funding for your...",
     description:
       "Are you an MSME owner struggling to secure the right funding for your business growth? You're not alone. Over 63 million MSMEs in India contribute nearly 30% to our GDP, yet access to adequate funding remains their biggest challenge. The good news? There are more funding opportunities available today than ever before – you just need to know where to look and how to access them.",
-    img: FundingImg,
+    img: FundingImg.src,
     slug: "Unlocking-Growth-Funding-Solutions-for-Indian-MSMEs-2025",
     date: "October 10, 2025",
     readTime: "9 min read",
@@ -929,7 +929,7 @@ export const blogsData: BlogData[] = [
     cardImg: BusinessRegistrationSmallImg,
     description:
       "Your business structure decision will impact every aspect of your venture for years to come – yet 70% of entrepreneurs choose without proper guidance. The difference between choosing the right and wrong business structure can mean: ₹5-10 lakhs in tax savings annually, personal asset protection worth crores, easier access to funding and investors, and simplified expansion and exit strategies.",
-    img: BusinessRegistrationImg,
+    img: BusinessRegistrationImg.src,
     slug: "Business-Registration-Made-Simple",
     date: "September 03, 2025",
     readTime: "10 min read",
@@ -1160,7 +1160,7 @@ export const blogsData: BlogData[] = [
     title: "Budget 2025: A Strategic Shift for MSMEs",
     cardDescription: "India’s Union Budget 2025 has set",
     description: "India’s Union Budget 2025 has set a bold tone...",
-    img: Budget1Img,
+    img: Budget1Img.src,
     slug: "Budget-2025-A-Strategic-Shift-for-MSMEs",
     date: "July 20, 2024",
     readTime: "5 min read",
@@ -1190,7 +1190,7 @@ export const blogsData: BlogData[] = [
     title: "India’s Startups Get a Boost: Budget 2025 Unlocks New Pathways",
     cardDescription: "First time entrepreneurs are front",
     description: "Startups are no longer fringe players they are now central...",
-    img: StartupImg,
+    img: StartupImg.src,
     slug: "Indias-Startups-Get-a-Boost-Budget-2025-Unlocks-New-Pathways",
     date: "July 18, 2024",
     readTime: "7 min read",
@@ -1221,7 +1221,7 @@ export const blogsData: BlogData[] = [
     title: "Budget 2025 Simplifies the Journey for New Founders",
     cardDescription: "For first time entrepreneurs, Budget",
     description: "First time entrepreneurs are front and center in Budget 2025...",
-    img: Image2Img,
+    img: Image2Img.src,
     slug: "Budget-2025-Simplifies-the-Journey-for-New-Founders",
     date: "July 15, 2024",
     readTime: "6 min read",
@@ -1233,7 +1233,7 @@ export const blogsData: BlogData[] = [
     cardDescription:
       "Beyond big cities and large companies, Budget 2025 has acknowledged the power of local, women-led, and artisan-driven enterprises. Targeted investments in tribal crafts, khadi clusters, and agri-based businesses highlight the government’s commitment to inclusive economic growth.",
     description: "Beyond big cities and large companies, Budget 2025 has acknowledged...",
-    img: BusinessWomenImg,
+    img: BusinessWomenImg.src,
     slug: "A-Budget-That-Strengthens-Local-Industries-and-Women-Led-Enterprises",
     date: "July 15, 2024",
     readTime: "6 min read",

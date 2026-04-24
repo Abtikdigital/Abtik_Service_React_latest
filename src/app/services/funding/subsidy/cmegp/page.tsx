@@ -1,14 +1,8 @@
+"use client";
 
-import type { Metadata } from "next";
-import seoData from "@/data/seoData.json";
+import dynamic from 'next/dynamic';
 
-export const metadata: Metadata = {
-  title: seoData.cmegpService.title,
-  description: seoData.cmegpService.description,
-  keywords: seoData.cmegpService.keyword,
-};
-
-import PageComponent from "@/pages/CMEGPService";
+const PageComponent = dynamic(() => import('@/components/pages_legacy/CMEGPService'));
 
 export default function Page() {
   return <PageComponent />;

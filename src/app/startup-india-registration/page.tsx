@@ -1,14 +1,8 @@
+"use client";
 
-import type { Metadata } from "next";
-import seoData from "@/data/seoData.json";
+import dynamic from 'next/dynamic';
 
-export const metadata: Metadata = {
-  title: seoData.startupIndiaRegistrationService.title,
-  description: seoData.startupIndiaRegistrationService.description,
-  keywords: seoData.startupIndiaRegistrationService.keyword,
-};
-
-import PageComponent from "@/pages/StartupIndiaCertificate";
+const PageComponent = dynamic(() => import('@/components/pages_legacy/StartupIndiaCertificate'));
 
 export default function Page() {
   return <PageComponent />;

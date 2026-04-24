@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "../index.css";
+import "./globals.css";
 import { Inter, Bricolage_Grotesque } from "next/font/google";
 import { Providers } from "./providers";
 import Script from "next/script";
@@ -48,7 +48,7 @@ export default function RootLayout({
       <head>
         <meta name="google-site-verification" content="08VvviZ2xVrLiB0d4AIq8LfYWy1cMPKq2_2iSOkuT_k" />
       </head>
-      <body className={`${inter.variable} ${bricolage.variable} antialiased`}>
+      <body className={`${inter.variable} ${bricolage.variable} antialiased`} suppressHydrationWarning={true}>
         <Providers>
           <ScrollToUp />
           {children}

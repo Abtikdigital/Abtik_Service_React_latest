@@ -1,14 +1,8 @@
+"use client";
 
-import type { Metadata } from "next";
-import seoData from "@/data/seoData.json";
+import dynamic from 'next/dynamic';
 
-export const metadata: Metadata = {
-  title: seoData.nbfcService.title,
-  description: seoData.nbfcService.description,
-  keywords: seoData.nbfcService.keyword,
-};
-
-import PageComponent from "@/pages/NBFC";
+const PageComponent = dynamic(() => import('@/components/pages_legacy/NBFC'));
 
 export default function Page() {
   return <PageComponent />;

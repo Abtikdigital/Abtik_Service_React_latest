@@ -9,6 +9,3 @@
 /services/certificate/fssai-licence /fssai-registration 301
 /services/funding/grants /government-grants-funding 301
 /legal/privacy-policy /privacy-policy 301
-
-# SPA fallback
-/* /index.html 200

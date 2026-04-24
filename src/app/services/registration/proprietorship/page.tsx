@@ -1,14 +1,8 @@
+"use client";
 
-import type { Metadata } from "next";
-import seoData from "@/data/seoData.json";
+import dynamic from 'next/dynamic';
 
-export const metadata: Metadata = {
-  title: seoData.soleproprietorshipService.title,
-  description: seoData.soleproprietorshipService.description,
-  keywords: seoData.soleproprietorshipService.keyword,
-};
-
-import PageComponent from "@/pages/SoleProprietorship";
+const PageComponent = dynamic(() => import('@/components/pages_legacy/SoleProprietorship'));
 
 export default function Page() {
   return <PageComponent />;
